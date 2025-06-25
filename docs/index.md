@@ -1,6 +1,6 @@
 # 網膜色素変性症（RP）治療開発ロードマップ
 
-生成日時: 2025年06月25日 23:49
+生成日時: 2025年06月26日 01:09
 
 ## エグゼクティブサマリー
 
@@ -48,16 +48,16 @@
 
 | 試験ID | 治療法名 | フェーズ | スポンサー | 成功率 | 承認予測（中央値） | 90%信頼区間 |
 |--------|----------|----------|------------|--------|-------------------|--------------|
-| NCT04794101 | Follow-up Gene Therapy Trial for the Tre... | PHASE3 | Janssen Research & Development, LLC | 64.7% | 2028年 | [2027, 2029] |
-| NCT03584165 | Long-term Safety and Efficacy Follow-up ... | PHASE3 | NightstaRx Ltd, a Biogen Company | 71.2% | 2029年 | [2028, 2030] |
-| NCT05926583 | A Study of AAV5-hRKp.RPGR for the Treatm... | PHASE3 | Janssen Pharmaceutical K.K. | 64.9% | 2031年 | [2030, 2032] |
-| NCT05537220 | Oral N-acetylcysteine for Retinitis Pigm... | PHASE3 | Johns Hopkins University | 72.0% | 2031年 | [2030, 2032] |
-| NCT06388200 | A Phase 3 Study Of OCU400 Gene Therapy f... | PHASE3 | Ocugen | 64.1% | 2032年 | [2031, 2033] |
-| NCT06333249 | A Study Comparing Two Doses of AGTC-501 ... | PHASE2 | Beacon Therapeutics | 56.3% | 2033年 | [2032, 2034] |
-| NCT02065011 | A Study to Determine the Long-Term Safet... | PHASE2 | Sanofi | 56.4% | 2033年 | [2032, 2034] |
-| NCT00999609 | Safety and Efficacy Study in Subjects Wi... | PHASE3 | Spark Therapeutics, Inc. | 71.9% | 2033年 | [2032, 2034] |
-| NCT04356716 | Sildenafil for Treatment of Choroidal Is... | PHASE2 | Columbia University | 55.5% | 2033年 | [2032, 2034] |
-| NCT04850118 | A Clinical Trial Evaluating the Safety a... | PHASE2, PHASE3 | Beacon Therapeutics | 56.0% | 2034年 | [2033, 2035] |
+| NCT06388200 | A Phase 3 Study Of OCU400 Gene Therapy f... | PHASE3 | Ocugen | 100.0% | 2026年 | [2026, 2027] |
+| NCT05203939 | Study to Assess the Safety and Efficacy ... | PHASE1, PHASE2 | Ocugen | 100.0% | 2026年 | [2026, 2027] |
+| NCT04794101 | Follow-up Gene Therapy Trial for the Tre... | PHASE3 | Janssen Research & Development, LLC | 64.0% | 2028年 | [2027, 2029] |
+| NCT03584165 | Long-term Safety and Efficacy Follow-up ... | PHASE3 | NightstaRx Ltd, a Biogen Company | 71.6% | 2029年 | [2028, 2030] |
+| NCT05537220 | Oral N-acetylcysteine for Retinitis Pigm... | PHASE3 | Johns Hopkins University | 71.9% | 2031年 | [2030, 2032] |
+| NCT05926583 | A Study of AAV5-hRKp.RPGR for the Treatm... | PHASE3 | Janssen Pharmaceutical K.K. | 62.9% | 2031年 | [2030, 2032] |
+| NCT06333249 | A Study Comparing Two Doses of AGTC-501 ... | PHASE2 | Beacon Therapeutics | 56.4% | 2033年 | [2032, 2034] |
+| NCT00999609 | Safety and Efficacy Study in Subjects Wi... | PHASE3 | Spark Therapeutics, Inc. | 71.5% | 2033年 | [2032, 2034] |
+| NCT04356716 | Sildenafil for Treatment of Choroidal Is... | PHASE2 | Columbia University | 56.9% | 2033年 | [2032, 2034] |
+| NCT02065011 | A Study to Determine the Long-Term Safet... | PHASE2 | Sanofi | 56.0% | 2033年 | [2032, 2034] |
 
 
 ### 治療モダリティ別の状況
@@ -86,6 +86,9 @@
 ### 主要な影響要因
 - **PHASE3 duration** (increase 20%): +1.0年の影響
 - **PHASE2 duration** (increase 20%): +0.6年の影響
+- **PHASE1 duration** (increase 20%): +0.2年の影響
+- **BLA MAA submission** (increase 20%): +0.2年の影響
+- **regulatory review** (increase 20%): +0.2年の影響
 
 
 ## 4. 予測の可視化

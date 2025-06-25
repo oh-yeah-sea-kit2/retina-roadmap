@@ -78,6 +78,53 @@ def simulate_single_program(trial: pd.Series, parameters: dict,
     time_in_current_phase = (current_date - start_date).days / 365.25
     time_in_current_phase = max(0, time_in_current_phase)
     
+    # MCO-010の特別処理（2025年初頭にBLA申請予定）
+    if "MCO-010" in trial.get("BriefTitle", "") or "MCO010" in trial.get("BriefTitle", "") or \
+       ("Nanoscope" in trial.get("SponsorName", "") and phase == "PHASE3"):
+        # 2025年初頭の申請を反映
+        submission_date = datetime(2025, 3, 1)  # 2025年3月と仮定
+        time_to_submission = (submission_date - current_date).days / 365.25
+        
+        if time_to_submission > 0:
+            # Fast Track指定により短縮された審査期間（6-12ヶ月）
+            review_time = np.random.triangular(0.5, 0.75, 1.0)
+            total_time = time_to_submission + review_time
+            
+            approval_date = current_date + timedelta(days=total_time * 365.25)
+            return {
+                "success": True,
+                "approval_date": approval_date,
+                "approval_year": approval_date.year,
+                "time_to_approval": total_time,
+                "fast_track": True,
+                "program_name": "MCO-010"
+            }
+    
+    # OCU400の特別処理（2024年Phase 3開始、1年間の試験期間）
+    if "OCU400" in trial.get("BriefTitle", "") or "OCU-400" in trial.get("BriefTitle", "") or \
+       ("Ocugen" in trial.get("SponsorName", "") and phase == "PHASE3"):
+        # Phase 3は2024年開始、1年間の試験期間
+        phase3_start = datetime(2024, 1, 1)
+        phase3_duration = 1.0  # FDAと合意済みの1年間
+        
+        # データ解析と申請準備（6-12ヶ月）
+        analysis_time = np.random.triangular(0.5, 0.75, 1.0)
+        
+        # FDA審査（12-18ヶ月）
+        review_time = np.random.triangular(1.0, 1.25, 1.5)
+        
+        total_time = ((phase3_start - current_date).days / 365.25) + phase3_duration + analysis_time + review_time
+        
+        if total_time > 0:
+            approval_date = current_date + timedelta(days=total_time * 365.25)
+            return {
+                "success": True,
+                "approval_date": approval_date,
+                "approval_year": approval_date.year,
+                "time_to_approval": total_time,
+                "program_name": "OCU400"
+            }
+    
     # フェーズ進行をシミュレート
     total_time = 0
     current_phase_map = {

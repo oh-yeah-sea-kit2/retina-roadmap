@@ -15,7 +15,6 @@ from sim.bayesian_predictor import BayesianTrialPredictor
 from sim.ml_predictor import MLTrialPredictor, ClinicalTrialFeatureExtractor
 from datetime import datetime
 import matplotlib.pyplot as plt
-import seaborn as sns
 from typing import Dict, List, Tuple
 
 
