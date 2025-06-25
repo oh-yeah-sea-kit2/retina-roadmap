@@ -1,17 +1,17 @@
 parameter,change,base_value,modified_value,impact_years,impact_percent
-PHASE2 duration,increase 20%,2034.6,2035.6,1.0,0.0491497100167109
-PHASE3 duration,decrease 20%,2034.6,2033.6,-1.0,-0.0491497100167109
-PHASE3 duration,increase 20%,2034.6,2035.6,1.0,0.0491497100167109
-PHASE1 duration,increase 20%,2034.6,2034.8,0.20000000000004547,0.009829942003344416
-PHASE2 duration,decrease 20%,2034.6,2034.4,-0.1999999999998181,-0.009829942003333241
-PHASE1 duration,decrease 20%,2034.6,2034.6,0.0,0.0
-PHASE1 success rate,decrease 20%,2034.6,2034.6,0.0,0.0
-PHASE1 success rate,increase 20%,2034.6,2034.6,0.0,0.0
-PHASE2 success rate,decrease 20%,2034.6,2034.6,0.0,0.0
-PHASE2 success rate,increase 20%,2034.6,2034.6,0.0,0.0
-PHASE3 success rate,decrease 20%,2034.6,2034.6,0.0,0.0
-PHASE3 success rate,increase 20%,2034.6,2034.6,0.0,0.0
-BLA MAA submission,decrease 20%,2034.6,2034.6,0.0,0.0
-BLA MAA submission,increase 20%,2034.6,2034.6,0.0,0.0
-regulatory review,decrease 20%,2034.6,2034.6,0.0,0.0
-regulatory review,increase 20%,2034.6,2034.6,0.0,0.0
+PHASE3 duration,decrease 20%,2036.6,2035.4,-1.199999999999818,-0.058921732298920663
+PHASE3 duration,increase 20%,2036.6,2037.6,1.0,0.049101443582441326
+PHASE2 duration,increase 20%,2036.6,2037.2,0.6000000000001364,0.029460866149471493
+PHASE1 duration,decrease 20%,2036.6,2036.2,-0.3999999999998636,-0.019640577432969833
+PHASE2 duration,decrease 20%,2036.6,2036.2,-0.3999999999998636,-0.019640577432969833
+BLA MAA submission,decrease 20%,2036.6,2036.2,-0.3999999999998636,-0.019640577432969833
+regulatory review,decrease 20%,2036.6,2036.2,-0.3999999999998636,-0.019640577432969833
+PHASE1 duration,increase 20%,2036.6,2036.6,0.0,0.0
+PHASE1 success rate,decrease 20%,2036.6,2036.6,0.0,0.0
+PHASE1 success rate,increase 20%,2036.6,2036.6,0.0,0.0
+PHASE2 success rate,decrease 20%,2036.6,2036.6,0.0,0.0
+PHASE2 success rate,increase 20%,2036.6,2036.6,0.0,0.0
+PHASE3 success rate,decrease 20%,2036.6,2036.6,0.0,0.0
+PHASE3 success rate,increase 20%,2036.6,2036.6,0.0,0.0
+BLA MAA submission,increase 20%,2036.6,2036.6,0.0,0.0
+regulatory review,increase 20%,2036.6,2036.6,0.0,0.0

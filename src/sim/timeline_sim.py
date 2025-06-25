@@ -54,10 +54,14 @@ def simulate_phase_duration(phase: str, parameters: dict) -> float:
     )
 
 
-def simulate_phase_success(phase: str, parameters: dict) -> bool:
+def simulate_phase_success(phase: str, parameters: dict, is_gene_therapy: bool = False) -> bool:
     """フェーズの成功/失敗をシミュレート"""
     success_params = parameters["phase_success_rates"].get(phase, {})
     success_rate = success_params.get("success_rate", 0.5)
+    
+    # 遺伝子治療の場合、成功率を少し下げる（新規性が高いため）
+    if is_gene_therapy and phase == "PHASE3":
+        success_rate *= 0.9  # 10%減
     
     return np.random.random() < success_rate
 
@@ -99,14 +103,24 @@ def simulate_single_program(trial: pd.Series, parameters: dict,
         # 最初のフェーズは既に進行中
         if i == 0:
             phase_duration = simulate_phase_duration(phase_name, parameters)
-            remaining_duration = max(0, phase_duration - time_in_current_phase)
+            
+            # 長期実施中の試験に対する処理を改善
+            # Phase 3で既に長期間経過している場合、最低でも1-2年は追加で必要
+            if phase_name == "PHASE3" and time_in_current_phase > phase_duration:
+                # 既に予定期間を超過している場合、追加で1-3年必要と仮定
+                additional_time = np.random.triangular(1.0, 2.0, 3.0)
+                remaining_duration = additional_time
+            else:
+                remaining_duration = max(0.5, phase_duration - time_in_current_phase)
+            
             total_time += remaining_duration
         else:
             phase_duration = simulate_phase_duration(phase_name, parameters)
             total_time += phase_duration
         
-        # 成功判定
-        if not simulate_phase_success(phase_name, parameters):
+        # 成功判定（遺伝子治療かどうかを判定）
+        is_gene_therapy = "gene" in trial.get("BriefTitle", "").lower() or "AAV" in trial.get("BriefTitle", "")
+        if not simulate_phase_success(phase_name, parameters, is_gene_therapy):
             return {
                 "success": False,
                 "failed_at_phase": phase_name,
