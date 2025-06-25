@@ -1,0 +1,112 @@
+[
+    {
+      "order": 10,
+      "id": "bootstrap_repo",
+      "title": "初期ディレクトリ & 依存関係セットアップ",
+      "instructions": [
+        "Create the folder tree exactly as documented in README.md (see prior context).",
+        "Write `requirements.txt` containing: requests pandas numpy scipy matplotlib scikit-learn",
+        "Generate an example `claude_config.json` with {\"python_external_allowed\":true}.",
+        "Commit all with message 'scaffold project'"
+      ],
+      "outputs": ["project tree created"]
+    },
+    {
+      "order": 20,
+      "id": "fetch_clinical_trials",
+      "title": "臨床試験データ取得",
+      "instructions": [
+        "Implement src/fetch_trials.py which calls https://clinicaltrials.gov/api/query/study_fields? (use StudyType=Interventional, Condition=Retinitis+Pigmentosa, Phase=1,2,3)",
+        "Store raw JSON to data/raw/clinical_trials/YYYYMMDD.json",
+        "Extract key fields (NCTId, BriefTitle, Phase, StartDate, CompletionDate, Status, SponsorName) into data/processed/clinical_trials.parquet"
+      ],
+      "outputs": ["data/processed/clinical_trials.parquet"]
+    },
+    {
+      "order": 30,
+      "id": "fetch_literature",
+      "title": "PubMed 文献メタデータ取得",
+      "instructions": [
+        "Create src/fetch_papers.py using the E‑utilities esearch/efetch endpoints with query 'retinitis pigmentosa gene therapy OR cell therapy'.",
+        "Save merged CSV to data/processed/papers.csv with columns: PMID, Year, Title, Journal."
+      ],
+      "outputs": ["data/processed/papers.csv"]
+    },
+    {
+      "order": 40,
+      "id": "estimate_parameters",
+      "title": "治験成功確率と期間パラメータ推定",
+      "instructions": [
+        "Write src/ingest/parameters.py that reads clinical_trials.parquet and computes:",
+        "  • Average duration Phase I→II, II→III, III→BLA/MAA for completed ophthalmology AAV trials.",
+        "  • Empirical success rates (Status==Completed)/(Status in {Completed, Terminated}).",
+        "Persist as parameters.yaml in data/processed/"
+      ],
+      "outputs": ["data/processed/parameters.yaml"]
+    },
+    {
+      "order": 50,
+      "id": "monte_carlo_sim",
+      "title": "蒙テカルロシミュレーション",
+      "instructions": [
+        "Create src/sim/timeline_sim.py.",
+        "For each active RP program (rows in clinical_trials.parquet with Status in {Recruiting, Active, Not yet recruiting}), simulate 10 000 timelines:",
+        "  – Draw phase durations from triangular distribution (min, mode, max) taken from parameters.yaml",
+        "  – Draw pass/fail using success probabilities",
+        "Output forecasts.csv with columns: program, median_approval_year, pct90_low, pct90_high.",
+        "Save figures CDF.png and waterfall.png in results/figs/."
+      ],
+      "outputs": ["results/forecasts.csv", "results/figs/CDF.png"]
+    },
+    {
+      "order": 60,
+      "id": "sensitivity_analysis",
+      "title": "感度分析",
+      "instructions": [
+        "Extend timeline_sim.py with one‑at‑a‑time ±20% perturbations to each parameter.",
+        "Produce tornado.png with parameter impact on median approval year."
+      ],
+      "outputs": ["results/figs/tornado.png"]
+    },
+    {
+      "order": 70,
+      "id": "generate_report",
+      "title": "自動レポート生成",
+      "instructions": [
+        "Implement src/reporting/build_report.py that renders a Markdown report (docs/index.md) combining:",
+        "  – Overview of data sources (n_trials, n_papers)",
+        "  – Key tables from forecasts.csv",
+        "  – Inline images (CDF.png, tornado.png)",
+        "Convert to HTML via `markdown` module; place at docs/index.html."
+      ],
+      "outputs": ["docs/index.md", "docs/index.html"]
+    },
+    {
+      "order": 80,
+      "id": "bottleneck_summary",
+      "title": "開発ボトルネックと一般支援策リストアップ",
+      "instructions": [
+        "Add docs/bottlenecks.md containing:",
+        "  * Patient‑recruitment scarcity (with quantitative trial enrolment stats)",
+        "  * Vector immunogenicity rates",
+        "  * Manufacturing COGs per dose (cite literature)",
+        "  * Regulatory data‑package size",
+        "Provide at least one concrete action item per bottleneck for patients / advocates / engineers."
+      ],
+      "outputs": ["docs/bottlenecks.md"]
+    },
+    {
+      "order": 90,
+      "id": "publish_site",
+      "title": "GitHub Pages デプロイ",
+      "instructions": [
+        "Create .github/workflows/ci.yml that on push to main:",
+        "  – runs `pytest`",
+        "  – runs build_report.py",
+        "  – deploys docs/ to gh‑pages branch via peaceiris/actions-gh-pages",
+        "Commit & push."
+      ],
+      "outputs": ["CI passes, site reachable at <username>.github.io/retina-roadmap"]
+    }
+  ]
+  
