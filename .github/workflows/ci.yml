@@ -1,0 +1,99 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # 毎週月曜日の午前9時（JST）に実行
+    - cron: '0 0 * * 1'
+  workflow_dispatch:  # 手動実行も可能
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Cache dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pytest pytest-cov
+    
+    - name: Run tests
+      run: |
+        # テストがある場合はここで実行
+        # pytest tests/ --cov=src --cov-report=xml
+        echo "Tests would run here when implemented"
+    
+    - name: Fetch latest clinical trials data
+      run: |
+        python src/fetch_trials.py
+      continue-on-error: true  # 外部APIの失敗でCIを止めない
+    
+    - name: Fetch latest literature data
+      run: |
+        python src/fetch_papers.py
+      continue-on-error: true
+    
+    - name: Estimate parameters
+      run: |
+        python src/ingest/parameters.py
+    
+    - name: Run Monte Carlo simulation
+      run: |
+        python src/sim/timeline_sim.py
+    
+    - name: Generate report
+      run: |
+        python src/reporting/build_report.py
+    
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: results
+        path: |
+          results/
+          docs/
+    
+    - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs
+        publish_branch: gh-pages
+        cname: ""  # カスタムドメインがある場合はここに設定
+
+  notify:
+    needs: test-and-build
+    runs-on: ubuntu-latest
+    if: always()
+    
+    steps:
+    - name: Notify success
+      if: needs.test-and-build.result == 'success'
+      run: |
+        echo "✅ Pipeline completed successfully!"
+        echo "View the updated report at: https://${{ github.repository_owner }}.github.io/retina-roadmap/"
+    
+    - name: Notify failure
+      if: needs.test-and-build.result == 'failure'
+      run: |
+        echo "❌ Pipeline failed. Check the logs for details."

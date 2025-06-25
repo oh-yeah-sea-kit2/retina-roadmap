@@ -1,0 +1,5221 @@
+{
+  "studies": [
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03316560",
+          "briefTitle": "Safety and Efficacy of rAAV2tYF-GRK1-RPGR in Subjects With X-linked Retinitis Pigmentosa Caused by RPGR Mutations"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING",
+          "startDateStruct": {
+            "date": "2018-04-16"
+          },
+          "completionDateStruct": {
+            "date": "2025-03"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Beacon Therapeutics"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05841862",
+          "briefTitle": "Intravitreal Quantum Dots (QD) for Advanced Retinitis Pigmentosa (RP) (QUANTUM)"
+        },
+        "statusModule": {
+          "overallStatus": "WITHDRAWN",
+          "startDateStruct": {
+            "date": "2024-03-20"
+          },
+          "completionDateStruct": {
+            "date": "2025-03"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "2C Tech Corp"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06076720",
+          "briefTitle": "Evaluation of New Head-mounted Visual Aids Among Patients With Low Vision"
+        },
+        "statusModule": {
+          "overallStatus": "NOT_YET_RECRUITING",
+          "startDateStruct": {
+            "date": "2023-10-10"
+          },
+          "completionDateStruct": {
+            "date": "2024-10-10"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Zhongshan Ophthalmic Center, Sun Yat-sen University"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06455826",
+          "briefTitle": "MAD of IVT VP-001 in PRPF31 Mutation-Associated Retinal Dystrophy Subjects (Wallaby)"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2024-06-13"
+          },
+          "completionDateStruct": {
+            "date": "2025-11"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "PYC Therapeutics"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02609165",
+          "briefTitle": "Nerve Growth Factor Eye Drops Treatment in Patients With Retinitis Pigmentosa and Cystoid Macular Edema"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2015-05"
+          },
+          "completionDateStruct": {
+            "date": "2017-02"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Ospedale San Raffaele"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02385565",
+          "briefTitle": "Effect Of The System In The Enriched Fat Metabolism Of The Child Reached Mitochondrial Cytopathy"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2004-02"
+          },
+          "completionDateStruct": {
+            "date": "2009-12"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University Hospital, Lille"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01847365",
+          "briefTitle": "TES for the Treatment of RP"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2013-04"
+          },
+          "completionDateStruct": {
+            "date": "2015-02"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of Oxford"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03780257",
+          "briefTitle": "Study to Evaluate Safety and Tolerability of QR-421a in Subjects With RP Due to Mutations in Exon 13 of the USH2A Gene"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2019-03-06"
+          },
+          "completionDateStruct": {
+            "date": "2021-10-14"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "ProQR Therapeutics"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05712148",
+          "briefTitle": "Spheroidal Mesenchymal Stem Cells in Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2019-10-11"
+          },
+          "completionDateStruct": {
+            "date": "2022-06-14"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Acibadem University"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03328130",
+          "briefTitle": "Safety and Efficacy Study in Patients With Retinitis Pigmentosa Due to Mutations in PDE6B Gene"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2017-11-06"
+          },
+          "completionDateStruct": {
+            "date": "2029-12"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "eyeDNA Therapeutics"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01531348",
+          "briefTitle": "Intravitreal Injection of MSCs in Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2012-04"
+          },
+          "completionDateStruct": {
+            "date": "2020-07"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Mahidol University"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04123626",
+          "briefTitle": "A Study to Evaluate the Safety and Tolerability of QR-1123 in Subjects With Autosomal Dominant Retinitis Pigmentosa Due to the P23H Mutation in the RHO Gene"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING",
+          "startDateStruct": {
+            "date": "2019-10-07"
+          },
+          "completionDateStruct": {
+            "date": "2022-06-07"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "ProQR Therapeutics"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02110225",
+          "briefTitle": "A Dose Ranging Study to Evaluate the Safety and Potential Efficacy of rhNGF in Patients With Retinitis Pigmentosa (RP)"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2014-01"
+          },
+          "completionDateStruct": {
+            "date": "2015-11"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Dompé Farmaceutici S.p.A"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03989622",
+          "briefTitle": "Evaluation of the Visual Field on the Ground"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN",
+          "startDateStruct": {
+            "date": "2019-10"
+          },
+          "completionDateStruct": {
+            "date": "2023-06"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University Hospital, Limoges"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05413148",
+          "briefTitle": "The Effect of Stem Cells and Stem Cell Exosomes on Visual Functions in Patients With Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN",
+          "startDateStruct": {
+            "date": "2022-08-05"
+          },
+          "completionDateStruct": {
+            "date": "2023-12-15"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "TC Erciyes University"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2",
+            "PHASE3"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04906135",
+          "briefTitle": "Auditory Neural Function in Implanted Patients With Usher Syndrome"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2021-10-01"
+          },
+          "completionDateStruct": {
+            "date": "2025-03-31"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Ohio State University"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02280135",
+          "briefTitle": "Clinical Trial of Intravitreal Injection of Autologous Bone Marrow Stem Cells in Patients With Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2014-11"
+          },
+          "completionDateStruct": {
+            "date": "2017-03"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Red de Terapia Celular"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06852963",
+          "briefTitle": "A Study of Two Doses of VP-001 Administered Intravitreally in Participants with Confirmed PRPF31 Mutation-Associated Retinal Dystrophy Previously Treated with VP001"
+        },
+        "statusModule": {
+          "overallStatus": "NOT_YET_RECRUITING",
+          "startDateStruct": {
+            "date": "2025-06-01"
+          },
+          "completionDateStruct": {
+            "date": "2027-08-01"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "PYC Therapeutics"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04356716",
+          "briefTitle": "Sildenafil for Treatment of Choroidal Ischemia"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING",
+          "startDateStruct": {
+            "date": "2014-11-11"
+          },
+          "completionDateStruct": {
+            "date": "2024-12"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Columbia University"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04252534",
+          "briefTitle": "Management of Retinitis Pigmentosa Via Electromagnetic Stimulation and Platelet Rich Plasma"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2017-01-01"
+          },
+          "completionDateStruct": {
+            "date": "2019-12-30"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Ankara Universitesi Teknokent"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05194124",
+          "briefTitle": "Phase 3 Crossover Trial of Two Formulations of Setmelanotide in Participants With Specific Gene Defects in the MC4R Pathway"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2021-12-21"
+          },
+          "completionDateStruct": {
+            "date": "2023-10-19"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Rhythm Pharmaceuticals, Inc."
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE3"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04864496",
+          "briefTitle": "Effects of Treatment With N- Acetylcysteine on Visual Outcomes in Patients With Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN",
+          "startDateStruct": {
+            "date": "2021-04-17"
+          },
+          "completionDateStruct": {
+            "date": "2022-12-20"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Shahid Beheshti University of Medical Sciences"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04238858",
+          "briefTitle": "Effects of Subtenon-injected Autologous Platelet-rich Plasma on Visual Functions in Eyes With Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2016-09-01"
+          },
+          "completionDateStruct": {
+            "date": "2018-01-30"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Ankara Universitesi Teknokent"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03406416",
+          "briefTitle": "Study of a Suprachoroidal Retinal Prosthesis"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2018-02-13"
+          },
+          "completionDateStruct": {
+            "date": "2020-12-18"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Mobius Medical Pty Ltd."
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00000116",
+          "briefTitle": "Randomized Trial of DHA for Retinitis Pigmentosa Patients Receiving Vitamin A"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "1996-05"
+          },
+          "completionDateStruct": {
+            "date": "2002-09"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Carol Weigel DiFranco"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE3"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01235624",
+          "briefTitle": "Autosomal Dominant Retinitis Pigmentosa: Prevalence of Known Genes Identification of New Loci / Genes"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2009-03"
+          },
+          "completionDateStruct": {
+            "date": "2013-04"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University Hospital, Montpellier"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03418116",
+          "briefTitle": "Argus II Retinal Prosthesis System - Better Vision RP Study"
+        },
+        "statusModule": {
+          "overallStatus": "WITHDRAWN",
+          "startDateStruct": {
+            "date": "2018-11-01"
+          },
+          "completionDateStruct": {
+            "date": "2021-11"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Second Sight Medical Products"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05158296",
+          "briefTitle": "Study to Evaluate the Efficacy Safety and Tolerability of Ultevursen in Subjects With RP Due to Mutations in Exon 13 of the USH2A Gene (Sirius)"
+        },
+        "statusModule": {
+          "overallStatus": "TERMINATED",
+          "startDateStruct": {
+            "date": "2021-12-08"
+          },
+          "completionDateStruct": {
+            "date": "2022-10-12"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Laboratoires Thea"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2",
+            "PHASE3"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00661479",
+          "briefTitle": "An Exploratory Study to Evaluate the Safety of Brimonidine Intravitreal Implant in Patients With Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2008-07"
+          },
+          "completionDateStruct": {
+            "date": "2010-05"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Allergan"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03998384",
+          "briefTitle": "A New Treatment of Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN",
+          "startDateStruct": {
+            "date": "2020-01-01"
+          },
+          "completionDateStruct": {
+            "date": "2022-12-31"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Aier School of Ophthalmology, Central South University"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03999021",
+          "briefTitle": "FIGHT-RP 1 Extension Study"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING",
+          "startDateStruct": {
+            "date": "2019-06-24"
+          },
+          "completionDateStruct": {
+            "date": "2027-06"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Johns Hopkins University"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03063021",
+          "briefTitle": "The FIGHT-RP1 Study"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2017-02-15"
+          },
+          "completionDateStruct": {
+            "date": "2019-02-11"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Johns Hopkins University"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03184584",
+          "briefTitle": "Open-Label Rollover Study of PBI 4050 in Subjects With Alström Syndrome"
+        },
+        "statusModule": {
+          "overallStatus": "TERMINATED",
+          "startDateStruct": {
+            "date": "2017-10-09"
+          },
+          "completionDateStruct": {
+            "date": "2020-05-08"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Liminal BioSciences Ltd."
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2",
+            "PHASE3"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01835002",
+          "briefTitle": "Transcorneal Electrical Stimulation - Multicenter Safety Study"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2012-09"
+          },
+          "completionDateStruct": {
+            "date": "2015-08"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Okuvision GmbH"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00804102",
+          "briefTitle": "Transcorneal Electrical Stimulation Therapy for Retinal Disease"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2008-01"
+          },
+          "completionDateStruct": {
+            "date": "2011-04"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Okuvision GmbH"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05085964",
+          "briefTitle": "An Open-Label Extension Study to Evaluate Safety & Tolerability of QR-421a in Subjects With Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "TERMINATED",
+          "startDateStruct": {
+            "date": "2021-09-16"
+          },
+          "completionDateStruct": {
+            "date": "2022-10-18"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Laboratoires Thea"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00407602",
+          "briefTitle": "Argus® II Retinal Stimulation System Feasibility Protocol"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2006-09"
+          },
+          "completionDateStruct": {
+            "date": "2019-12-31"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Second Sight Medical Products"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04129021",
+          "briefTitle": "High Resolution, High-speed Multimodal Ophthalmic Imaging"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2019-07-03"
+          },
+          "completionDateStruct": {
+            "date": "2027-07"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Centre Hospitalier National d'Ophtalmologie des Quinze-Vingts"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01497379",
+          "briefTitle": "Safety & Efficacy of Subretinal Implants for Partial Restoration of Vision in Blind Patients"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2011-10"
+          },
+          "completionDateStruct": {
+            "date": "2015-01"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Retina Implant AG"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06627179",
+          "briefTitle": "Study to Evaluate Ultevursen in Subjects With Retinitis Pigmentosa (RP) Due to Mutations in Exon 13 of the USH2A Gene"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2024-12-11"
+          },
+          "completionDateStruct": {
+            "date": "2027-12"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Laboratoires Thea"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05392179",
+          "briefTitle": "A Study in Subjects With Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2022-07-14"
+          },
+          "completionDateStruct": {
+            "date": "2023-06-23"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Aldeyra Therapeutics, Inc."
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06242379",
+          "briefTitle": "Safety and Efficacy of Stem Cell Small Extracellular Vesicles in Patients With Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2024-05-23"
+          },
+          "completionDateStruct": {
+            "date": "2027-12-31"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Mahidol University"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02140164",
+          "briefTitle": "Study of Oral Minocycline in Treating Bilateral Cystoid Macular Edema Associated With Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2014-05"
+          },
+          "completionDateStruct": {
+            "date": "2016-06"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "National Eye Institute (NEI)"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03772938",
+          "briefTitle": "Stem Cells Therapy in Degenerative Diseases of the Retina"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN",
+          "startDateStruct": {
+            "date": "2018-12-13"
+          },
+          "completionDateStruct": {
+            "date": "2020-03-31"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Pomeranian Medical University Szczecin"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01680510",
+          "briefTitle": "The Effect of Oral Administration of 9-cis β Carotene Rich Powder of the Alga Dunaliella Bardawil"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING",
+          "startDateStruct": {
+            "date": "2012-09-01"
+          },
+          "completionDateStruct": {
+            "date": "2025-12-31"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Sheba Medical Center"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04234438",
+          "briefTitle": "Management of Cystoid Macular Edema Secondary to Retinitis Pigmentosa Via Subliminal Micropulse Yellow Laser"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2018-01-01"
+          },
+          "completionDateStruct": {
+            "date": "2019-12-30"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Ankara Universitesi Teknokent"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04359108",
+          "briefTitle": "Environmental Localization Mapping and Guidance for Visual Prosthesis Users"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2021-03-16"
+          },
+          "completionDateStruct": {
+            "date": "2024-09-30"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Johns Hopkins University"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05874310",
+          "briefTitle": "Gene Therapy for Subjects With RPGR Mutation-associated X-linked Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2023-02-01"
+          },
+          "completionDateStruct": {
+            "date": "2027-11-01"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Frontera Therapeutics"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "EARLY_PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06224114",
+          "briefTitle": "Coloured-light in Retinitis Pigmentosa."
+        },
+        "statusModule": {
+          "overallStatus": "NOT_YET_RECRUITING",
+          "startDateStruct": {
+            "date": "2024-03"
+          },
+          "completionDateStruct": {
+            "date": "2024-10"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University College, London"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06292650",
+          "briefTitle": "Safety and Efficacy Study of Novel Gene Therapy ZM-02 for Retinitis Pigmentosa Patients"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2024-02-25"
+          },
+          "completionDateStruct": {
+            "date": "2028-12-25"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Zhongmou Therapeutics"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "EARLY_PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00515814",
+          "briefTitle": "Retina Implant Pilot Trial to Evaluate Safety & Efficacy in Blind Patients Having Degenerated Photo-receptors"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2005-09"
+          },
+          "completionDateStruct": {
+            "date": "2009-12"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Retina Implant AG"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00065455",
+          "briefTitle": "Investigating the Effect of Vitamin A Supplementation on Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2003-07-17"
+          },
+          "completionDateStruct": {
+            "date": "2009-05-06"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "National Eye Institute (NEI)"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01024803",
+          "briefTitle": "Safety and Efficacy of Subretinal Implants for Partial Restoration of Vision in Blind Patients"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2009-12"
+          },
+          "completionDateStruct": {
+            "date": "2018-04"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Retina Implant AG"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04611503",
+          "briefTitle": "PDE6A Gene Therapy for Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING",
+          "startDateStruct": {
+            "date": "2019-09-24"
+          },
+          "completionDateStruct": {
+            "date": "2027-07"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "STZ eyetrial"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02086890",
+          "briefTitle": "Electro-acupuncture and Transcorneal Electrical Stimulation (TES) for Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING",
+          "startDateStruct": {
+            "date": "2014-08"
+          },
+          "completionDateStruct": {
+            "date": "2025-12"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Nova Southeastern University"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06492850",
+          "briefTitle": "Gene Therapy for RPGR Gene Mutation-associated X-linked Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2024-04-01"
+          },
+          "completionDateStruct": {
+            "date": "2026-02-01"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Frontera Therapeutics"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02320812",
+          "briefTitle": "Safety of a Single, Intravitreal Injection of Human Retinal Progenitor Cells (jCell) in Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2015-06"
+          },
+          "completionDateStruct": {
+            "date": "2017-07-19"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "jCyte, Inc"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00000114",
+          "briefTitle": "Randomized Trial of Vitamin A and Vitamin E Supplementation for Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "1984-05"
+          },
+          "completionDateStruct": {
+            "date": "1987-06"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "National Eye Institute (NEI)"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE3"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04763369",
+          "briefTitle": "Investigation of Therapeutic Efficacy and Safety of UMSCs for the Management of Retinitis Pigmentosa (RP)"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN",
+          "startDateStruct": {
+            "date": "2021-02"
+          },
+          "completionDateStruct": {
+            "date": "2022-06"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Jinnah Burn and Reconstructive Surgery Centre, Lahore"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06936787",
+          "briefTitle": "An Open-label, Dose-ascending Study of IGT001 for Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2025-04-20"
+          },
+          "completionDateStruct": {
+            "date": "2027-12-20"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Shanghai General Hospital, Shanghai Jiao Tong University School of Medicine"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03011541",
+          "briefTitle": "Stem Cell Ophthalmology Treatment Study II"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2016-01"
+          },
+          "completionDateStruct": {
+            "date": "2027-07-31"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "MD Stem Cells"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02556736",
+          "briefTitle": "RST-001 Phase I/II Trial for Advanced Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2015-12-14"
+          },
+          "completionDateStruct": {
+            "date": "2024-10-21"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "AbbVie"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02464436",
+          "briefTitle": "Safety and Tolerability of hRPC in Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING",
+          "startDateStruct": {
+            "date": "2015-12"
+          },
+          "completionDateStruct": {
+            "date": "2023-12"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "ReNeuron Limited"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01914913",
+          "briefTitle": "Clinical Study to Evaluate Safety and Efficacy of BMMNC in Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN",
+          "startDateStruct": {
+            "date": "2014-09"
+          },
+          "completionDateStruct": {
+            "date": "2016-11"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Chaitanya Hospital, Pune"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01461213",
+          "briefTitle": "Gene Therapy for Blindness Caused by Choroideremia"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2011-10"
+          },
+          "completionDateStruct": {
+            "date": "2017-10"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of Oxford"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04295304",
+          "briefTitle": "NR600 System Retinal Prosthesis for Patients With Retinal Degenerative Diseases"
+        },
+        "statusModule": {
+          "overallStatus": "TERMINATED",
+          "startDateStruct": {
+            "date": "2020-01-17"
+          },
+          "completionDateStruct": {
+            "date": "2023-03-12"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Nano Retina"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04794101",
+          "briefTitle": "Follow-up Gene Therapy Trial for the Treatment of X-linked Retinitis Pigmentosa Associated With Variants in the RPGR Gene"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING",
+          "startDateStruct": {
+            "date": "2020-12-04"
+          },
+          "completionDateStruct": {
+            "date": "2029-12-19"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Janssen Research & Development, LLC"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE3"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05800301",
+          "briefTitle": "Management of Retinitis Pigmentosa Via Combination of Wharton's Jelly-derived Mesenchymal Stem Cells and Magnovision"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2019-01-01"
+          },
+          "completionDateStruct": {
+            "date": "2022-12-31"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Ankara Universitesi Teknokent"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE3"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01505062",
+          "briefTitle": "Study of SAR421869 in Participants With Retinitis Pigmentosa Associated With Usher Syndrome Type 1B"
+        },
+        "statusModule": {
+          "overallStatus": "TERMINATED",
+          "startDateStruct": {
+            "date": "2012-03-26"
+          },
+          "completionDateStruct": {
+            "date": "2019-08-16"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Sanofi"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02720640",
+          "briefTitle": "Safety and Efficacy of the Alpha AMS Subretinal Implant"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2015-05"
+          },
+          "completionDateStruct": {
+            "date": "2017-10"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of Oxford"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04141891",
+          "briefTitle": "Advancing Understanding of Transportation Options"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2019-12-12"
+          },
+          "completionDateStruct": {
+            "date": "2023-12-21"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of Colorado, Denver"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00447980",
+          "briefTitle": "A Study of Encapsulated Cell Technology (ECT) Implant for Participants With Early Stage Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2007-01-22"
+          },
+          "completionDateStruct": {
+            "date": "2010-04-19"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Neurotech Pharmaceuticals"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00717080",
+          "briefTitle": "The Role of Capsular Tension Ring (CTR) in Anterior Capsular Contraction"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2008-07"
+          },
+          "completionDateStruct": {
+            "date": "2010-06"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Aurolab"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE4"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04448860",
+          "briefTitle": "Validation of Standardized Test Protocols to Assess the Impact of Visual Pathologies in Daily Life Activities"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN",
+          "startDateStruct": {
+            "date": "2019-10-04"
+          },
+          "completionDateStruct": {
+            "date": "2023-10-04"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Centre Hospitalier National d'Ophtalmologie des Quinze-Vingts"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02670980",
+          "briefTitle": "Compensation for Blindness With the Intelligent Retinal Implant System (IRIS V2) in Patients With Retinal Dystrophy"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2016-01"
+          },
+          "completionDateStruct": {
+            "date": "2019-05"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Science Corporation"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00427180",
+          "briefTitle": "IRIS PILOT - Extended Pilot Study With a Retinal Implant System"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN",
+          "startDateStruct": {
+            "date": "2006-12"
+          },
+          "completionDateStruct": {
+            "date": "2010-12"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Intelligent Medical Implants GmbH"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00004827",
+          "briefTitle": "Study of Docosahexaenoic Acid (DHA) Supplementation in Patients With X-Linked Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "1996-03"
+          },
+          "completionDateStruct": {
+            "date": "2002-06"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Retina Foundation of the Southwest"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03368027",
+          "briefTitle": "Effectiveness of a Cognitive-behavioral Program of Coping With Psychological Stress in People With Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2017-06-01"
+          },
+          "completionDateStruct": {
+            "date": "2018-12-03"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Universidad de Granada"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05748873",
+          "briefTitle": "Promising ROd-cone DYstrophy Gene TherapY"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2023-04-12"
+          },
+          "completionDateStruct": {
+            "date": "2029-03"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "SparingVision"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05537220",
+          "briefTitle": "Oral N-acetylcysteine for Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING",
+          "startDateStruct": {
+            "date": "2023-10-11"
+          },
+          "completionDateStruct": {
+            "date": "2029-05"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Johns Hopkins University"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE3"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02709876",
+          "briefTitle": "Autologous Bone Marrow-Derived CD34+, CD133+, and CD271+ Stem Cell Transplantation for Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN",
+          "startDateStruct": {
+            "date": "2014-04"
+          },
+          "completionDateStruct": {
+            "date": "2021-03"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Stem Cells Arabia"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02804360",
+          "briefTitle": "Intravitreal Dexamethasone Implant in Retinitis Pigmentosa-related Macular Edema- a Retrospective Study"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN",
+          "startDateStruct": {
+            "date": "2015-01"
+          },
+          "completionDateStruct": {
+            "date": "2016-12"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Rafic Hariri University Hospital"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04919473",
+          "briefTitle": "Dose-Escalation Study to Evaluate the Safety and Tolerability of Intravitreal vMCO-I in Patients With Advanced Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2019-10-23"
+          },
+          "completionDateStruct": {
+            "date": "2020-10-31"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Nanoscope Therapeutics Inc."
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06787482",
+          "briefTitle": "Evaluating a New Peptide Therapy for Retinal Diseases: AMD, Diabetic Retinopathy, and Dystrophies"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2024-11-12"
+          },
+          "completionDateStruct": {
+            "date": "2025-12"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Ace Cells Lab Limited"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06275620",
+          "briefTitle": "A Study Comparing Two Doses of AGTC-501 in Male Participants With X-linked Retinitis Pigmentosa Caused by RPGR Mutations (DAWN)"
+        },
+        "statusModule": {
+          "overallStatus": "ENROLLING_BY_INVITATION",
+          "startDateStruct": {
+            "date": "2023-11-14"
+          },
+          "completionDateStruct": {
+            "date": "2029-12"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Beacon Therapeutics"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04278131",
+          "briefTitle": "BS01 in Patients With Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2020-02-06"
+          },
+          "completionDateStruct": {
+            "date": "2029-12-30"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Bionic Sight LLC"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03584165",
+          "briefTitle": "Long-term Safety and Efficacy Follow-up of BIIB111 for the Treatment of Choroideremia and BIIB112 for the Treatment of X-Linked Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "ENROLLING_BY_INVITATION",
+          "startDateStruct": {
+            "date": "2018-06-04"
+          },
+          "completionDateStruct": {
+            "date": "2026-06-04"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "NightstaRx Ltd, a Biogen Company"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE3"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00063765",
+          "briefTitle": "Evaluation of Safety of Ciliary Neurotrophic Factor Implants in the Eye"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2003-06"
+          },
+          "completionDateStruct": {
+            "date": "2006-03"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "National Eye Institute (NEI)"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04620876",
+          "briefTitle": "Bimodal and Coaxial High Resolution Ophtalmic Imaging"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN",
+          "startDateStruct": {
+            "date": "2019-10-01"
+          },
+          "completionDateStruct": {
+            "date": "2024-10-15"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Centre Hospitalier National d'Ophtalmologie des Quinze-Vingts"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01603576",
+          "briefTitle": "Pilot Study of a Suprachoroidal Retinal Prosthesis"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2012-05"
+          },
+          "completionDateStruct": {
+            "date": "2014-08"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Center for Eye Research Australia"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06592131",
+          "briefTitle": "BF844 Safety and Pharmacokinetic Study in Healthy Volunteers"
+        },
+        "statusModule": {
+          "overallStatus": "NOT_YET_RECRUITING",
+          "startDateStruct": {
+            "date": "2024-09-09"
+          },
+          "completionDateStruct": {
+            "date": "2025-09-06"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "EyeXCel Pty. Ltd."
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01786395",
+          "briefTitle": "Phase III Efficacy and Safety Clinical Study of UF-021 for Treatment of Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "TERMINATED",
+          "startDateStruct": {
+            "date": "2013-03"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "R-Tech Ueno, Ltd."
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE3"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01482195",
+          "briefTitle": "Trial of Subretinal Injection of (rAAV2-VMD2-hMERTK)"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2011-08"
+          },
+          "completionDateStruct": {
+            "date": "2019-08"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "King Khaled Eye Specialist Hospital"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03326336",
+          "briefTitle": "Dose-escalation Study to Evaluate the Safety and Tolerability of GS030 in Subjects With Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2018-09-26"
+          },
+          "completionDateStruct": {
+            "date": "2025-12"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "GenSight Biologics"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03116113",
+          "briefTitle": "A Clinical Trial of Retinal Gene Therapy for X-linked Retinitis Pigmentosa Using BIIB112"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2017-03-08"
+          },
+          "completionDateStruct": {
+            "date": "2020-11-18"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Biogen"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05285618",
+          "briefTitle": "The Perceptual Experience of Argus II Users"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2022-01-11"
+          },
+          "completionDateStruct": {
+            "date": "2023-08-31"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of California, Santa Barbara"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03490019",
+          "briefTitle": "Treatment of Bardet-Biedl-Syndrome With Metformin for Evaluation of a Possible Visual Improvement"
+        },
+        "statusModule": {
+          "overallStatus": "WITHDRAWN",
+          "startDateStruct": {
+            "date": "2018-04-01"
+          },
+          "completionDateStruct": {
+            "date": "2020-08"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University Hospital Tuebingen"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04850118",
+          "briefTitle": "A Clinical Trial Evaluating the Safety and Efficacy of a Single Subretinal Injection of AGTC-501 in Participants With XLRP"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2024-03-14"
+          },
+          "completionDateStruct": {
+            "date": "2029-10"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Beacon Therapeutics"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2",
+            "PHASE3"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02465749",
+          "briefTitle": "Clinical Trials of Continuous Oxygen Therapy Combined With Blue Light Deprivation in the Treatment of Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN",
+          "startDateStruct": {
+            "date": "2015-05"
+          },
+          "completionDateStruct": {
+            "date": "2025-06"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Sun Yat-sen University"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "EARLY_PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06333249",
+          "briefTitle": "A Study Comparing Two Doses of AGTC-501 in Male Subjects With X-linked Retinitis Pigmentosa Caused by RPGR Mutations (SKYLINE)"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING",
+          "startDateStruct": {
+            "date": "2021-04-13"
+          },
+          "completionDateStruct": {
+            "date": "2027-02"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Beacon Therapeutics"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01543906",
+          "briefTitle": "Oral QLT091001 in Retinitis Pigmentosa (RP) Subjects With an Autosomal Dominant Mutation in Retinal Pigment Epithelial 65 Protein (RPE65)"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2012-02"
+          },
+          "completionDateStruct": {
+            "date": "2014-08"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "QLT Inc."
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04517149",
+          "briefTitle": "4D-125 in Patients With X-Linked Retinitis Pigmentosa (XLRP)"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING",
+          "startDateStruct": {
+            "date": "2020-06-09"
+          },
+          "completionDateStruct": {
+            "date": "2029-05"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "4D Molecular Therapeutics"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02244996",
+          "briefTitle": "Cone Rescue in Retinitis Pigmentosa by the Treatment of Lycium Barbarum"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2014-11"
+          },
+          "completionDateStruct": {
+            "date": "2017-11"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "The Hong Kong Polytechnic University"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00458575",
+          "briefTitle": "A Study to Evaluate the Safety of CNTO 2476 in Patients With Advanced Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "TERMINATED",
+          "startDateStruct": {
+            "date": "2007-04"
+          },
+          "completionDateStruct": {
+            "date": "2013-08"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Centocor, Inc."
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01736059",
+          "briefTitle": "Clinical Trial of Autologous Intravitreal Bone-marrow CD34+ Stem Cells for Retinopathy"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING",
+          "startDateStruct": {
+            "date": "2012-07"
+          },
+          "completionDateStruct": {
+            "date": "2025-10"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of California, Davis"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05176717",
+          "briefTitle": "Study to Evaluate the Efficacy Safety and Tolerability of QR-421a in Subjects With RP Due to Mutations in Exon 13 of the USH2A Gene With Early to Moderate Vision Loss (Celeste)"
+        },
+        "statusModule": {
+          "overallStatus": "TERMINATED",
+          "startDateStruct": {
+            "date": "2021-12-15"
+          },
+          "completionDateStruct": {
+            "date": "2022-08-02"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Laboratoires Thea"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2",
+            "PHASE3"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02739217",
+          "briefTitle": "Safety and Tolerability of PBI-4050 and Its Effects on the Biomarkers in Subjects With Alström Syndrome"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2016-02-22"
+          },
+          "completionDateStruct": {
+            "date": "2018-06-04"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Liminal BioSciences Ltd."
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00345917",
+          "briefTitle": "Safety Study in Retinal Transplantation for Retinitis Pigmentosa."
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2002-02"
+          },
+          "completionDateStruct": {
+            "date": "2012-03"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Radtke, Norman D., M.D."
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01530659",
+          "briefTitle": "Retinal Imaging in CNTF -Releasing Encapsulated Cell Implant Treated Patients for Early-stage Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2012-01"
+          },
+          "completionDateStruct": {
+            "date": "2019-07-01"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Neurotech Pharmaceuticals"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06388200",
+          "briefTitle": "A Phase 3 Study Of OCU400 Gene Therapy for the Treatment Of Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2024-06-18"
+          },
+          "completionDateStruct": {
+            "date": "2026-10-30"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Ocugen"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE3"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01560715",
+          "briefTitle": "Autologous Bone Marrow-Derived Stem Cells Transplantation For Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2011-06"
+          },
+          "completionDateStruct": {
+            "date": "2013-06"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of Sao Paulo"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02909985",
+          "briefTitle": "Visual Activity Evoked by Infrared in Humans After Dark Adaptation"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2015-09"
+          },
+          "completionDateStruct": {
+            "date": "2016-08"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of New Mexico"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01399515",
+          "briefTitle": "Efficacy and Safety of Oral Valproic Acid for Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2011-03"
+          },
+          "completionDateStruct": {
+            "date": "2015-11"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Seoul National University Hospital"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00279500",
+          "briefTitle": "Feasibility Study of a Chronic Retinal Stimulator in Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2002-02-27"
+          },
+          "completionDateStruct": {
+            "date": "2014-12-31"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Second Sight Medical Products"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06891885",
+          "briefTitle": "A Study to Investigate the Safety of DSP-3077 After a Unilateral Eye Injection in Male and Female Participants 18 Years of Age or Older with Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "NOT_YET_RECRUITING",
+          "startDateStruct": {
+            "date": "2025-05-01"
+          },
+          "completionDateStruct": {
+            "date": "2032-10-31"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Sumitomo Pharma America, Inc."
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04419285",
+          "briefTitle": "Mobility Protocol Adapted for Advanced Visually Impaired Subjects"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN",
+          "startDateStruct": {
+            "date": "2020-03-02"
+          },
+          "completionDateStruct": {
+            "date": "2024-06-04"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Centre Hospitalier National d'Ophtalmologie des Quinze-Vingts"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05805007",
+          "briefTitle": "Safety and Tolerability Study of Gene Editing Drug ZVS203e in Participants With Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2023-09-12"
+          },
+          "completionDateStruct": {
+            "date": "2026-04"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Peking University Third Hospital"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "EARLY_PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03078309",
+          "briefTitle": "The Effects of Cannabis on Visual Functions in Healthy and Retinitis Pigmentosa Patients"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN",
+          "startDateStruct": {
+            "date": "2018-09-01"
+          },
+          "completionDateStruct": {
+            "date": "2021-12"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Hadassah Medical Organization"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "EARLY_PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04284293",
+          "briefTitle": "CNS10-NPC for the Treatment of RP"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2021-07-22"
+          },
+          "completionDateStruct": {
+            "date": "2025-11"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Cedars-Sinai Medical Center"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01521793",
+          "briefTitle": "Repeated Treatments of QLT091001 in Subjects With Leber Congenital Amaurosis or Retinitis Pigmentosa (Extension of Study RET IRD 01)"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2012-01"
+          },
+          "completionDateStruct": {
+            "date": "2014-06"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "QLT Inc."
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02661711",
+          "briefTitle": "Aflibercept for Macular Oedema With Underlying Retinitis Pigmentosa (AMOUR) Study"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2016-03"
+          },
+          "completionDateStruct": {
+            "date": "2017-10"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Moorfields Eye Hospital NHS Foundation Trust"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06591793",
+          "briefTitle": "Study of Subretinally Injected AAVB-081 in Patients With Usher Syndrome Type IB (USH1B) Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2024-07-02"
+          },
+          "completionDateStruct": {
+            "date": "2029-07"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "AAVantgarde Bio Srl"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01256697",
+          "briefTitle": "The Effect of Oral Administration of 9-cis Rich Powder of the Alga Dunaliella Bardawil on Visual Functions im Patients With Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2008-08"
+          },
+          "completionDateStruct": {
+            "date": "2011-01"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Sheba Medical Center"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04925687",
+          "briefTitle": "Phase 1 Study of Intravitreal Autologous CD34+ Stem Cell Therapy for Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2021-06-01"
+          },
+          "completionDateStruct": {
+            "date": "2023-11-01"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of California, Davis"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05914233",
+          "briefTitle": "Non-invasive Ultrasound Retinal Stimulation for Vision Restoration"
+        },
+        "statusModule": {
+          "overallStatus": "NOT_YET_RECRUITING",
+          "startDateStruct": {
+            "date": "2024-06-15"
+          },
+          "completionDateStruct": {
+            "date": "2025-07-15"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of Southern California"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00346333",
+          "briefTitle": "Clinical Trial of Lutein for Patients With Retinitis Pigmentosa Receiving Vitamin A"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2003-07"
+          },
+          "completionDateStruct": {
+            "date": "2008-12"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "National Eye Institute (NEI)"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE3"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03073733",
+          "briefTitle": "Safety and Efficacy of Intravitreal Injection of Human Retinal Progenitor Cells in Adults With Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2017-03-01"
+          },
+          "completionDateStruct": {
+            "date": "2020-11-13"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "jCyte, Inc"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06912633",
+          "briefTitle": "Safety of a Single, Intravitreal Injection of 8.8M jCell (Famzeretcel) in Retinitis Pigmentosa (RP)"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2025-06"
+          },
+          "completionDateStruct": {
+            "date": "2026-09"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "jCyte, Inc"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04671433",
+          "briefTitle": "Gene Therapy Trial for the Treatment of X-linked Retinitis Pigmentosa Associated With Variants in the RPGR Gene"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2020-12-04"
+          },
+          "completionDateStruct": {
+            "date": "2024-09-30"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Janssen Research & Development, LLC"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE3"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05203939",
+          "briefTitle": "Study to Assess the Safety and Efficacy of OCU400 for Retinitis Pigmentosa and Leber Congenital Amaurosis"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING",
+          "startDateStruct": {
+            "date": "2022-01-24"
+          },
+          "completionDateStruct": {
+            "date": "2027-03"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Ocugen"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03561922",
+          "briefTitle": "Impact on Daily Life of Patients Using the Subretinal Implant RETINA IMPLANT Alpha AMS"
+        },
+        "statusModule": {
+          "overallStatus": "TERMINATED",
+          "startDateStruct": {
+            "date": "2018-09-04"
+          },
+          "completionDateStruct": {
+            "date": "2019-04-05"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Retina Implant AG"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03746522",
+          "briefTitle": "Setmelanotide (RM-493), Melanocortin-4 Receptor (MC4R) Agonist, in Bardet-Biedl Syndrome (BBS) and Alström Syndrome (AS) Participants With Moderate to Severe Obesity"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2018-11-23"
+          },
+          "completionDateStruct": {
+            "date": "2021-03-08"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Rhythm Pharmaceuticals, Inc."
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE3"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03944239",
+          "briefTitle": "Safety and Efficacy of Subretinal Transplantation of Clinical Human Embryonic Stem Cell Derived Retinal Pigment Epitheliums in Treatment of Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN",
+          "startDateStruct": {
+            "date": "2020-05"
+          },
+          "completionDateStruct": {
+            "date": "2021-12"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Qi Zhou"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01864486",
+          "briefTitle": "Restoring Vision With the Intelligent Retinal Implant System (IRIS V1)in Patients With Retinal Dystrophy"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2013-04"
+          },
+          "completionDateStruct": {
+            "date": "2017-10-13"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Science Corporation"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03374657",
+          "briefTitle": "A First-in-human, Proof of Concept Study of CPK850 in Patients With RLBP1 Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING",
+          "startDateStruct": {
+            "date": "2018-08-22"
+          },
+          "completionDateStruct": {
+            "date": "2026-05-11"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Novartis Pharmaceuticals"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03381235",
+          "briefTitle": "Exercise and RP (AVAMC and Emory)"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2018-02-23"
+          },
+          "completionDateStruct": {
+            "date": "2018-11-28"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Emory University"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06291935",
+          "briefTitle": "Safety and Tolerability of Intravitreal Administration of VG901 in Patients With Retinitis Pigmentosa Due to Mutations in the CNGA1 Gene"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2023-09-01"
+          },
+          "completionDateStruct": {
+            "date": "2026-04"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "ViGeneron GmbH"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00461435",
+          "briefTitle": "Slowing the Degenerative Process, Long Lasting Effect of Hyperbaric Oxygen Therapy in Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Azienda Policlinico Umberto I"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04315025",
+          "briefTitle": "Safety Issues of Peribulbar Injection of UC-MSC in Patients With Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2018-10-07"
+          },
+          "completionDateStruct": {
+            "date": "2019-09-20"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "PT. Prodia Stem Cell Indonesia"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06319872",
+          "briefTitle": "The Effects of Disulfiram (Antabuse®) on Visual Acuity in Patients With Retinal Degeneration"
+        },
+        "statusModule": {
+          "overallStatus": "NOT_YET_RECRUITING",
+          "startDateStruct": {
+            "date": "2025-05-19"
+          },
+          "completionDateStruct": {
+            "date": "2029-05-19"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of Rochester"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05147701",
+          "briefTitle": "Safety of Cultured Allogeneic Adult Umbilical Cord Derived Mesenchymal Stem Cells for NAION"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2022-02-01"
+          },
+          "completionDateStruct": {
+            "date": "2026-01"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "The Foundation for Orthopaedics and Regenerative Medicine"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00029289",
+          "briefTitle": "Effects of Lutein in Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2001-04"
+          },
+          "completionDateStruct": {
+            "date": "2002-10"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "National Center for Complementary and Integrative Health (NCCIH)"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02018692",
+          "briefTitle": "The Effect of Oral Administration of 9-cis Rich Powder of the Alga Dunaliella Bardawil on Visual Functions in Adolescent Patients With Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "NOT_YET_RECRUITING",
+          "startDateStruct": {
+            "date": "2025-03-01"
+          },
+          "completionDateStruct": {
+            "date": "2027-12-31"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Sheba Medical Center"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06646289",
+          "briefTitle": "A Follow-on Study for Second-Eye Treatment for Participants Previously Treated With Gene Therapy for X-Linked Retinitis Pigmentosa (XLRP)"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2024-10-10"
+          },
+          "completionDateStruct": {
+            "date": "2030-10-24"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Janssen Research & Development, LLC"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04355689",
+          "briefTitle": "Safety and Efficacy of NPI-001 Tablets for RP Associated With Usher Syndrome"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING",
+          "startDateStruct": {
+            "date": "2020-09-03"
+          },
+          "completionDateStruct": {
+            "date": "2025-08"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Nacuity Pharmaceuticals, Inc."
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02548572",
+          "briefTitle": "Transcorneal Electrical Stimulation for the Treatment of Retinitis Pigmentosa - a Safety and Efficacy Multicenter Study"
+        },
+        "statusModule": {
+          "overallStatus": "WITHDRAWN",
+          "startDateStruct": {
+            "date": "2019-01"
+          },
+          "completionDateStruct": {
+            "date": "2020-12"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Wills Eye"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06565572",
+          "briefTitle": "Antisense Oligonucleotide Treatment for PCARP Disease Due to Mutation in FLVCR1"
+        },
+        "statusModule": {
+          "overallStatus": "ENROLLING_BY_INVITATION",
+          "startDateStruct": {
+            "date": "2023-08-23"
+          },
+          "completionDateStruct": {
+            "date": "2028-12-31"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of Colorado, Denver"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "EARLY_PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04945772",
+          "briefTitle": "Efficacy and Safety of MCO-010 Optogenetic Therapy in Adults With Retinitis Pigmentosa [RESTORE]"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2021-07-13"
+          },
+          "completionDateStruct": {
+            "date": "2024-01-18"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Nanoscope Therapeutics Inc."
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01920867",
+          "briefTitle": "Stem Cell Ophthalmology Treatment Study"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN",
+          "startDateStruct": {
+            "date": "2012-08"
+          },
+          "completionDateStruct": {
+            "date": "2020-07"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "MD Stem Cells"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02837640",
+          "briefTitle": "Studying a Potential Protective Effect of L-Dopa on Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN",
+          "startDateStruct": {
+            "date": "2016-06"
+          },
+          "completionDateStruct": {
+            "date": "2021-06"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Beirut Eye Specialist Hospital"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04461444",
+          "briefTitle": "COhort for Bardet-Bield Syndrome and Alström Syndrome for Translational Research Monocentric Interventional Study"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2020-06-16"
+          },
+          "completionDateStruct": {
+            "date": "2035-02"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University Hospital, Strasbourg, France"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06460844",
+          "briefTitle": "Study to Evaluate Safety of RTx-015 Injection in Retinitis Pigmentosa or Choroideremia Patients (ENVISION)"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2024-08-27"
+          },
+          "completionDateStruct": {
+            "date": "2030-10"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Ray Therapeutics, Inc."
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01837901",
+          "briefTitle": "Transcorneal Electrostimulation for Therapy of Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2011-07"
+          },
+          "completionDateStruct": {
+            "date": "2014-02"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Okuvision GmbH"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06952842",
+          "briefTitle": "Safety and Efficacy of ZVS203e in the Treatment of Retinitis Pigmentosa Caused by RHO Gene Mutation"
+        },
+        "statusModule": {
+          "overallStatus": "NOT_YET_RECRUITING",
+          "startDateStruct": {
+            "date": "2025-05-18"
+          },
+          "completionDateStruct": {
+            "date": "2045-06-18"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Chigenovo Co., Ltd"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01014052",
+          "briefTitle": "Safety/Proof of Concept Study of Oral QLT091001 in Subjects With Leber Congenital Amaurosis (LCA) or Retinitis Pigmentosa (RP) Due to Retinal Pigment Epithelial 65 Protein (RPE65) or Lecithin:Retinol Acyltransferase (LRAT) Mutations"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2009-11"
+          },
+          "completionDateStruct": {
+            "date": "2012-08"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "QLT Inc."
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05853107",
+          "briefTitle": "Pilot Study of AuTNA I"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2023-05-12"
+          },
+          "completionDateStruct": {
+            "date": "2026-02-28"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Eye & ENT Hospital of Fudan University"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04068207",
+          "briefTitle": "Minocycline Treatment in Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2019-08-25"
+          },
+          "completionDateStruct": {
+            "date": "2023-12-01"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Sun Yat-sen University"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04224207",
+          "briefTitle": "Management of Retinitis Pigmentosa by Mesenchymal Stem Cells by Wharton's Jelly Derived Mesenchymal Stem Cells"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2019-04-01"
+          },
+          "completionDateStruct": {
+            "date": "2020-01-01"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Ankara Universitesi Teknokent"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE3"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04604899",
+          "briefTitle": "Safety of Repeat Intravitreal Injection of Human Retinal Progenitor Cells (jCell) in Adult Subjects With Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2020-12-01"
+          },
+          "completionDateStruct": {
+            "date": "2022-03-22"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "jCyte, Inc"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03629899",
+          "briefTitle": "RETINA IMPLANT Alpha AMS in Blind Patients With Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "WITHDRAWN",
+          "startDateStruct": {
+            "date": "2019-03"
+          },
+          "completionDateStruct": {
+            "date": "2025-07"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Wills Eye"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00999609",
+          "briefTitle": "Safety and Efficacy Study in Subjects With Leber Congenital Amaurosis"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING",
+          "startDateStruct": {
+            "date": "2012-10"
+          },
+          "completionDateStruct": {
+            "date": "2030-01"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Spark Therapeutics, Inc."
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE3"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01604356",
+          "briefTitle": "Acupuncture for the Treatment of Vision Loss Due to Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2012-04"
+          },
+          "completionDateStruct": {
+            "date": "2013-12"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Johns Hopkins University"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04008771",
+          "briefTitle": "Intravitreal Injection of SeeQ CdSe 655 Alt Nanoparticles for Patients With Degenerative Retinal Diseases"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2014-01-06"
+          },
+          "completionDateStruct": {
+            "date": "2014-12-19"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "2C Tech Corp"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01233609",
+          "briefTitle": "Trial of Oral Valproic Acid for Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2010-11"
+          },
+          "completionDateStruct": {
+            "date": "2015-12"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Foundation Fighting Blindness"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04874909",
+          "briefTitle": "Classification, Functional Stratification and Biomarkers in Ciliopathy (CILLICORIRCM)"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN",
+          "startDateStruct": {
+            "date": "2021-11-08"
+          },
+          "completionDateStruct": {
+            "date": "2024-11"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Assistance Publique - Hôpitaux de Paris"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04319809",
+          "briefTitle": "Object Finder for a Retinal Prosthesis"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2017-07-01"
+          },
+          "completionDateStruct": {
+            "date": "2022-08-31"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Minnesota HealthSolutions"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03057496",
+          "briefTitle": "Collision Warning Device for Blind and Visually Impaired"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2018-01-22"
+          },
+          "completionDateStruct": {
+            "date": "2019-12-05"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Massachusetts Eye and Ear Infirmary"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00100230",
+          "briefTitle": "DHA and X-Linked Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2004-09"
+          },
+          "completionDateStruct": {
+            "date": "2014-08"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Retina Foundation of the Southwest"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04966741",
+          "briefTitle": "Setmelanotide in Pediatric Participants With Rare Genetic Diseases of Obesity"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2022-03-08"
+          },
+          "completionDateStruct": {
+            "date": "2024-11-08"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Rhythm Pharmaceuticals, Inc."
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE3"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02614651",
+          "briefTitle": "AUgmented REality for the Visually Impaired - Part 1"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2016-05"
+          },
+          "completionDateStruct": {
+            "date": "2017-05-29"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Centre Hospitalier Universitaire de Nīmes"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03963154",
+          "briefTitle": "Interventional Study of Implantation of hESC-derived RPE in Patients With RP Due to Monogenic Mutation"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING",
+          "startDateStruct": {
+            "date": "2019-08-19"
+          },
+          "completionDateStruct": {
+            "date": "2026-12-15"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Centre d'Etude des Cellules Souches"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05392751",
+          "briefTitle": "Dose Escalation Study to Evaluate the Safety/Tolerability and Efficacy of EA-2353 in Subjects With Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "TERMINATED",
+          "startDateStruct": {
+            "date": "2022-06-02"
+          },
+          "completionDateStruct": {
+            "date": "2024-04-24"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Endogena Therapeutics, Inc"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04285398",
+          "briefTitle": "Prospective Natural History Study of Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING",
+          "startDateStruct": {
+            "date": "2020-02-12"
+          },
+          "completionDateStruct": {
+            "date": "2026-06-30"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "SparingVision"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03635645",
+          "briefTitle": "Experimental and Clinical Studies of Retinal Stimulation"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2017-10-30"
+          },
+          "completionDateStruct": {
+            "date": "2023-10-30"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of Michigan"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06789445",
+          "briefTitle": "A Study to Investigate the Safety of OpCT-001 in Adults Who Have Primary Photoreceptor Disease (CLARICO)"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2025-03-10"
+          },
+          "completionDateStruct": {
+            "date": "2030-10"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "BlueRock Therapeutics"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04909398",
+          "briefTitle": "Pupil Dynamics and Color Vision for the Detection of Eye Diseases"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2018-03-22"
+          },
+          "completionDateStruct": {
+            "date": "2019-05-22"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Centre Hospitalier National d'Ophtalmologie des Quinze-Vingts"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06628947",
+          "briefTitle": "A Phase II Study of Intravitreal KIO-301 in Patients with Late-stage Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "NOT_YET_RECRUITING",
+          "startDateStruct": {
+            "date": "2025-03"
+          },
+          "completionDateStruct": {
+            "date": "2026-05"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Kiora Pharmaceuticals, Inc."
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04636853",
+          "briefTitle": "CB-PRP in Retinitis Pigmentosa and Dry Age-related Macular Degeneration"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2020-12-23"
+          },
+          "completionDateStruct": {
+            "date": "2021-12-02"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Fondazione Policlinico Universitario Agostino Gemelli IRCCS"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE3"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06846151",
+          "briefTitle": "Retinal Investigation Using Optos OCT Device"
+        },
+        "statusModule": {
+          "overallStatus": "NOT_YET_RECRUITING",
+          "startDateStruct": {
+            "date": "2025-05"
+          },
+          "completionDateStruct": {
+            "date": "2026-01"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Optos, PLC"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05282953",
+          "briefTitle": "A Phase I/II Dose-escalating Study of the Safety, Tolerability and Efficacy of KIO-301 Administered Intravitreally to Patients with Retinitis Pigmentosa and Choroideremia (ABACUS)"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2022-11-10"
+          },
+          "completionDateStruct": {
+            "date": "2025-09"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Kiora Pharmaceuticals, Inc."
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01415453",
+          "briefTitle": "Evoked Retinal Response"
+        },
+        "statusModule": {
+          "overallStatus": "TERMINATED",
+          "startDateStruct": {
+            "date": "2011-07"
+          },
+          "completionDateStruct": {
+            "date": "2012-06"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Columbia University"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00433277",
+          "briefTitle": "Autoimmunity in Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN"
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Semmelweis University"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01068561",
+          "briefTitle": "Autologous Bone Marrow-Derived Stem Cells Transplantation For Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2009-05"
+          },
+          "completionDateStruct": {
+            "date": "2010-02"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of Sao Paulo"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00447993",
+          "briefTitle": "A Study of Encapsulated Cell Technology (ECT) Implant for Patients With Late Stage Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2007-01-08"
+          },
+          "completionDateStruct": {
+            "date": "2009-05-26"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Neurotech Pharmaceuticals"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02065011",
+          "briefTitle": "A Study to Determine the Long-Term Safety, Tolerability and Biological Activity of SAR421869 in Patients With Usher Syndrome Type 1B"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING",
+          "startDateStruct": {
+            "date": "2013-09-12"
+          },
+          "completionDateStruct": {
+            "date": "2031-06-13"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Sanofi"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03444961",
+          "briefTitle": "Computer-Assisted Rehabilitation Environment Training After Argus Retinal Prosthesis"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2018-01-30"
+          },
+          "completionDateStruct": {
+            "date": "2018-06-20"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "The Cleveland Clinic"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05926583",
+          "briefTitle": "A Study of AAV5-hRKp.RPGR for the Treatment of Japanese Participants With X-linked Retinitis Pigmentosa"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2023-09-12"
+          },
+          "completionDateStruct": {
+            "date": "2030-11-12"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Janssen Pharmaceutical K.K."
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE3"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03248388",
+          "briefTitle": "Argus II/ORCAM Device Study"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2017-08-31"
+          },
+          "completionDateStruct": {
+            "date": "2020-10-15"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Mayo Clinic"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "NA"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05909488",
+          "briefTitle": "Role of UC-MSC and CM to Inhibit Vision Loss in Retinitis Pigmentosa Phase I/II"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING",
+          "startDateStruct": {
+            "date": "2023-09-01"
+          },
+          "completionDateStruct": {
+            "date": "2025-12-01"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "PT. Prodia Stem Cell Indonesia"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2",
+            "PHASE3"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04120883",
+          "briefTitle": "Oral Hydroxychloroquine (HCQ) for Retinitis Pigmentosa Caused by P23H- Rhodopsin (RHO)"
+        },
+        "statusModule": {
+          "overallStatus": "TERMINATED",
+          "startDateStruct": {
+            "date": "2020-02-25"
+          },
+          "completionDateStruct": {
+            "date": "2024-08-05"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "University of Michigan"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03566147",
+          "briefTitle": "Treatment of RP and LCA by Primary RPE Transplantation"
+        },
+        "statusModule": {
+          "overallStatus": "UNKNOWN",
+          "startDateStruct": {
+            "date": "2018-08-01"
+          },
+          "completionDateStruct": {
+            "date": "2020-03-31"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "Eyecure Therapeutics Inc."
+          }
+        },
+        "designModule": {
+          "phases": [
+            "EARLY_PHASE1"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03252847",
+          "briefTitle": "Gene Therapy for X-linked Retinitis Pigmentosa (XLRP) - Retinitis Pigmentosa GTPase Regulator (RPGR)"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED",
+          "startDateStruct": {
+            "date": "2017-07-31"
+          },
+          "completionDateStruct": {
+            "date": "2021-11-18"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "leadSponsor": {
+            "name": "MeiraGTx UK II Ltd"
+          }
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,5 +1,8 @@
 # retina-roadmap
 
+[![CI/CD Pipeline](https://github.com/KyoheiTakeshita/retina-roadmap/actions/workflows/ci.yml/badge.svg)](https://github.com/KyoheiTakeshita/retina-roadmap/actions/workflows/ci.yml)
+[![Last Updated](https://img.shields.io/badge/Last%20Updated-2025--06--25-blue)](https://kyohei.github.io/retina-roadmap/)
+
 ## 1. リポジトリ設計案（Claude Code 専用・再現性重視）
 
 ```

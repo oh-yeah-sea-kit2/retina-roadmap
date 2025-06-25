@@ -4,3 +4,6 @@ numpy
 scipy
 matplotlib
 scikit-learn
+pyarrow
+pyyaml
+markdown

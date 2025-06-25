@@ -1,0 +1,77 @@
+metadata:
+  generated_date: '2025-06-25T21:06:25.434636'
+  data_source: ClinicalTrials.gov
+  total_trials_analyzed: 127
+  note: Parameters estimated from Retinitis Pigmentosa clinical trials
+phase_durations_years:
+  PHASE1:
+    min: 1.0
+    median: 2.0
+    max: 3.0
+    mean: 2.0
+    std: 0.5
+    count: 0
+  PHASE2:
+    min: 2.0
+    median: 3.0
+    max: 4.0
+    mean: 3.0
+    std: 0.5
+    count: 0
+  PHASE3:
+    min: 3.0
+    median: 4.0
+    max: 5.0
+    mean: 4.0
+    std: 0.5
+    count: 0
+  PHASE1, PHASE2:
+    min: 2.0
+    median: 3.5
+    max: 5.0
+    mean: 3.5
+    std: 0.75
+    count: 0
+  PHASE2, PHASE3:
+    min: 3.0
+    median: 4.5
+    max: 6.0
+    mean: 4.5
+    std: 0.75
+    count: 0
+phase_success_rates:
+  PHASE1:
+    success_rate: 0.8620689655172413
+    success_count: 25
+    total_count: 29
+    confidence: measured
+  PHASE2:
+    success_rate: 0.7837837837837838
+    success_count: 29
+    total_count: 37
+    confidence: measured
+  PHASE3:
+    success_rate: 0.7142857142857143
+    success_count: 10
+    total_count: 14
+    confidence: measured
+regulatory_timelines_years:
+  BLA_MAA_submission:
+    min: 0.5
+    median: 1.0
+    max: 1.5
+    mean: 1.0
+    std: 0.25
+    note: Time from Phase 3 completion to regulatory submission
+  regulatory_review:
+    min: 0.5
+    median: 1.0
+    max: 2.0
+    mean: 1.0
+    std: 0.5
+    note: FDA/EMA review period
+simulation_parameters:
+  n_simulations: 10000
+  random_seed: 42
+  distribution_type: triangular
+  note: Use triangular distribution with (min, mode=median, max)
