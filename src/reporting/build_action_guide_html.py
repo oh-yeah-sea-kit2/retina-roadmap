@@ -73,11 +73,28 @@ def convert_action_guide():
             margin: 20px 0;
             font-size: 16px;
         }
-        ul {
+        ul, ol {
             line-height: 2;
+            margin: 15px 0;
+            padding-left: 30px;
         }
         li {
-            margin: 5px 0;
+            margin: 8px 0;
+        }
+        /* 番号付きリストの改善 */
+        ol li {
+            margin-bottom: 10px;
+        }
+        /* ネストされたリスト */
+        li ul, li ol {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        /* ステップごとの強調表示 */
+        p strong:first-child {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 1.1em;
         }
         /* 絵文字を少し大きく */
         h3 {
@@ -97,6 +114,19 @@ def convert_action_guide():
             border-radius: 8px;
             margin: 20px 0;
         }
+        /* details要素のスタイル */
+        details {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 10px 15px;
+            margin: 15px 0;
+        }
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #3498db;
+        }
     </style>
 </head>
 <body>
@@ -113,9 +143,17 @@ def convert_action_guide():
 </body>
 </html>"""
     
-    # Markdownを変換
-    md = markdown.Markdown(extensions=['tables', 'fenced_code'])
+    # Markdownを変換（改行を適切に処理する拡張機能を追加）
+    md = markdown.Markdown(extensions=['tables', 'fenced_code', 'nl2br', 'extra'])
     html_content = md.convert(md_content)
+    
+    # リストの不適切な処理を修正
+    # 番号付きリストが分割されている場合の修正
+    import re
+    # <ol>タグ内の不要な<p>タグを削除
+    html_content = re.sub(r'</li>\s*</ol>\s*<ol>\s*<li>', '</li>\n<li>', html_content)
+    # コードブロック内の不要な<br>を<pre>に変換
+    html_content = re.sub(r'<code>([^<]+)<br />([^<]+)</code>', r'<pre><code>\1\n\2</code></pre>', html_content, flags=re.DOTALL)
     
     # アクション項目にスタイルを適用
     html_content = html_content.replace('<h3>1. 🧬', '<h3 class="action-item">1. 🧬')

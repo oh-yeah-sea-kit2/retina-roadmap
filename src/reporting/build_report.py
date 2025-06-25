@@ -277,8 +277,8 @@ def convert_to_html(markdown_content, output_file):
 </body>
 </html>"""
     
-    # Markdownを変換
-    md = markdown.Markdown(extensions=['tables', 'fenced_code'])
+    # Markdownを変換（改行処理を改善）
+    md = markdown.Markdown(extensions=['tables', 'fenced_code', 'nl2br', 'extra'])
     html_content = md.convert(markdown_content)
     
     # HTMLテンプレートに挿入（{{と}}をエスケープ）

@@ -145,7 +145,7 @@ def convert_to_html():
 </html>"""
     
     # MarkdownをHTMLに変換
-    md = markdown.Markdown(extensions=['extra', 'toc'])
+    md = markdown.Markdown(extensions=['extra', 'toc', 'nl2br', 'tables'])
     html_content = md.convert(md_content)
     
     # HTMLテンプレートに埋め込み
