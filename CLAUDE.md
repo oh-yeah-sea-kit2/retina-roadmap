@@ -103,6 +103,8 @@ open docs/index.html
 - `README.md`: 包括的なプロジェクト仕様と方法論
 - `SYSTEM.md`: Claude Code操作手順
 - `docs/index.html`: 自動生成されるレポート（ブラウザで閲覧）
+- `docs/reality_and_actions.md`: 予測の現実性と一般人向けアクションガイド（NEW）
+- `docs/reality_and_actions.html`: アクションガイドのHTML版（NEW）
 - `docs/bottlenecks.md`: 開発ボトルネック分析と支援策
 - `.github/workflows/ci.yml`: GitHub Actions CI/CD設定
 
