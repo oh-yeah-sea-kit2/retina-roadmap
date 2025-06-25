@@ -6,6 +6,13 @@
 
 **常に日本語で応答すること。**
 
+**重要: 大きな変更を加えた場合は、必ずCLAUDE.mdファイルも更新すること。特に以下の場合：**
+- 新しいスクリプトやモジュールを追加した場合
+- ディレクトリ構造を変更した場合
+- 新しい開発コマンドを追加した場合
+- アーキテクチャに変更を加えた場合
+- 新しい依存関係を追加した場合
+
 ## プロジェクト概要
 
 網膜色素変性症（RP）の治療法がいつ頃利用可能になるかをモンテカルロシミュレーションで予測する医学研究予測システムです。臨床試験データベースからデータを取得し、処理して確率的予測を生成します。
@@ -17,16 +24,23 @@
 pip install -r requirements.txt
 
 # テストの実行
-pytest
+pytest tests/
 
 # 特定のテストファイルを実行
-pytest tests/test_fetch_clinicaltrials.py
+pytest tests/test_basic.py
 
-# リンティング（設定後）
-# セットアップ後に具体的なリンティングコマンドを追加
+# データ取得から分析まで一連の処理を実行
+python src/fetch_trials.py          # 臨床試験データ取得
+python src/fetch_papers.py          # 文献データ取得
+python src/ingest/parameters.py     # パラメータ推定
+python src/sim/timeline_sim.py      # シミュレーション実行
+python src/reporting/build_report.py # レポート生成
 
-# レポート生成
-python src/reporting/generate_report.py
+# レポートのみ再生成（データ取得なし）
+python src/reporting/build_report.py
+
+# ローカルでHTMLレポートを確認
+open docs/index.html
 ```
 
 ## アーキテクチャ概要
@@ -85,6 +99,28 @@ python src/reporting/generate_report.py
 
 ## 重要なファイル
 
-- `TASK_LIST.json`: 詳細な実装ロードマップ
+- `TASK_LIST.json`: 詳細な実装ロードマップ（完了済み）
 - `README.md`: 包括的なプロジェクト仕様と方法論
 - `SYSTEM.md`: Claude Code操作手順
+- `docs/index.html`: 自動生成されるレポート（ブラウザで閲覧）
+- `docs/bottlenecks.md`: 開発ボトルネック分析と支援策
+- `.github/workflows/ci.yml`: GitHub Actions CI/CD設定
+
+## 完了したタスク（2025年6月25日時点）
+
+1. ✅ 初期ディレクトリ構造の構築
+2. ✅ 臨床試験データ取得機能（ClinicalTrials.gov API v2対応）
+3. ✅ PubMed文献データ取得機能
+4. ✅ 治験パラメータ推定（成功率・期間）
+5. ✅ モンテカルロシミュレーション（10,000回/プログラム）
+6. ✅ 感度分析とトルネード図生成
+7. ✅ 自動レポート生成（Markdown/HTML）
+8. ✅ 開発ボトルネック分析ドキュメント
+9. ✅ GitHub Actions CI/CDパイプライン
+
+## 主な分析結果
+
+- **最速承認予測**: 2027年（BIIB111, Janssen社の遺伝子治療）
+- **全体中央値**: 2034年
+- **Phase別成功率**: Phase 1: 86.2%, Phase 2: 78.4%, Phase 3: 71.4%
+- **アクティブな試験数**: 54件（2025年6月時点）
