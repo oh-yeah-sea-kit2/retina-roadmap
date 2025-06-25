@@ -22,6 +22,26 @@ def convert_action_guide():
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>予測の現実性と私たちにできること - RP治療開発</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://oh-yeah-sea-kit2.github.io/retina-roadmap/docs/reality_and_actions.html">
+    <meta property="og:title" content="予測の現実性と私たちにできること - 網膜色素変性症治療開発">
+    <meta property="og:description" content="網膜色素変性症の治療法開発を加速するために今すぐできる5つのアクション。遺伝子検査、患者レジストリ登録、研究支援など具体的な行動指針を提供。">
+    <meta property="og:image" content="https://oh-yeah-sea-kit2.github.io/retina-roadmap/docs/figs/waterfall.png">
+    <meta property="og:locale" content="ja_JP">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://oh-yeah-sea-kit2.github.io/retina-roadmap/docs/reality_and_actions.html">
+    <meta property="twitter:title" content="予測の現実性と私たちにできること - 網膜色素変性症治療開発">
+    <meta property="twitter:description" content="網膜色素変性症の治療法開発を加速するために今すぐできる5つのアクション。遺伝子検査、患者レジストリ登録、研究支援など具体的な行動指針を提供。">
+    <meta property="twitter:image" content="https://oh-yeah-sea-kit2.github.io/retina-roadmap/docs/figs/waterfall.png">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="description" content="網膜色素変性症の治療法開発を加速するために今すぐできる5つのアクション。遺伝子検査、患者レジストリ登録、研究支援など具体的な行動指針を提供。">
+    <meta name="keywords" content="網膜色素変性症,RP,遺伝子検査,患者レジストリ,JRPS,臨床試験参加,行動指針">
+    <meta name="author" content="網膜色素変性症治療開発予測プロジェクト">
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
