@@ -1,6 +1,6 @@
 # 網膜色素変性症（RP）治療開発ロードマップ
 
-生成日時: 2025年06月25日 12:48
+生成日時: 2025年06月25日 13:23
 
 ## エグゼクティブサマリー
 
@@ -48,16 +48,16 @@
 
 | 試験ID | 治療法名 | フェーズ | スポンサー | 成功率 | 承認予測（中央値） | 90%信頼区間 |
 |--------|----------|----------|------------|--------|-------------------|--------------|
-| NCT03584165 | Long-term Safety and Efficacy Follow-up ... | PHASE3 | NightstaRx Ltd, a Biogen Company | 71.7% | 2027年 | [2027, 2028] |
-| NCT04794101 | Follow-up Gene Therapy Trial for the Tre... | PHASE3 | Janssen Research & Development, LLC | 71.6% | 2027年 | [2027, 2028] |
-| NCT05537220 | Oral N-acetylcysteine for Retinitis Pigm... | PHASE3 | Johns Hopkins University | 71.7% | 2029年 | [2029, 2030] |
-| NCT05926583 | A Study of AAV5-hRKp.RPGR for the Treatm... | PHASE3 | Janssen Pharmaceutical K.K. | 71.6% | 2029年 | [2029, 2030] |
-| NCT06388200 | A Phase 3 Study Of OCU400 Gene Therapy f... | PHASE3 | Ocugen | 71.7% | 2030年 | [2029, 2031] |
-| NCT04356716 | Sildenafil for Treatment of Choroidal Is... | PHASE2 | Columbia University | 55.5% | 2031年 | [2030, 2032] |
-| NCT00999609 | Safety and Efficacy Study in Subjects Wi... | PHASE3 | Spark Therapeutics, Inc. | 71.3% | 2031年 | [2030, 2032] |
-| NCT06333249 | A Study Comparing Two Doses of AGTC-501 ... | PHASE2 | Beacon Therapeutics | 56.5% | 2031年 | [2030, 2032] |
-| NCT02065011 | A Study to Determine the Long-Term Safet... | PHASE2 | Sanofi | 56.0% | 2031年 | [2030, 2032] |
-| NCT05909488 | Role of UC-MSC and CM to Inhibit Vision ... | PHASE2, PHASE3 | PT. Prodia Stem Cell Indonesia | 55.8% | 2032年 | [2031, 2033] |
+| NCT04794101 | Follow-up Gene Therapy Trial for the Tre... | PHASE3 | Janssen Research & Development, LLC | 70.8% | 2027年 | [2027, 2028] |
+| NCT03584165 | Long-term Safety and Efficacy Follow-up ... | PHASE3 | NightstaRx Ltd, a Biogen Company | 72.0% | 2027年 | [2027, 2028] |
+| NCT05926583 | A Study of AAV5-hRKp.RPGR for the Treatm... | PHASE3 | Janssen Pharmaceutical K.K. | 71.2% | 2029年 | [2029, 2030] |
+| NCT05537220 | Oral N-acetylcysteine for Retinitis Pigm... | PHASE3 | Johns Hopkins University | 71.3% | 2029年 | [2029, 2030] |
+| NCT06388200 | A Phase 3 Study Of OCU400 Gene Therapy f... | PHASE3 | Ocugen | 72.2% | 2030年 | [2029, 2031] |
+| NCT04356716 | Sildenafil for Treatment of Choroidal Is... | PHASE2 | Columbia University | 55.1% | 2031年 | [2030, 2032] |
+| NCT06333249 | A Study Comparing Two Doses of AGTC-501 ... | PHASE2 | Beacon Therapeutics | 55.5% | 2031年 | [2030, 2032] |
+| NCT02065011 | A Study to Determine the Long-Term Safet... | PHASE2 | Sanofi | 55.7% | 2031年 | [2030, 2032] |
+| NCT00999609 | Safety and Efficacy Study in Subjects Wi... | PHASE3 | Spark Therapeutics, Inc. | 72.1% | 2031年 | [2030, 2032] |
+| NCT05909488 | Role of UC-MSC and CM to Inhibit Vision ... | PHASE2, PHASE3 | PT. Prodia Stem Cell Indonesia | 55.4% | 2032年 | [2031, 2033] |
 
 
 ### 治療モダリティ別の状況
@@ -84,9 +84,11 @@
 ![トルネード図](figs/tornado.png)
 
 ### 主要な影響要因
-- **PHASE2 duration** (increase 20%): +1.0年の影響
-- **PHASE3 duration** (increase 20%): +1.0年の影響
+- **PHASE3 duration** (increase 20%): +0.8年の影響
+- **PHASE2 duration** (increase 20%): +0.6年の影響
 - **PHASE1 duration** (increase 20%): +0.2年の影響
+- **BLA MAA submission** (increase 20%): +0.2年の影響
+- **regulatory review** (increase 20%): +0.2年の影響
 
 
 ## 4. 予測の可視化
@@ -110,6 +112,8 @@
    - 遺伝子検査を受けて原因遺伝子を特定
    - 患者レジストリへの登録
    - 臨床試験情報の定期的なチェック
+
+📌 **[詳細な行動ガイドはこちら](reality_and_actions.html)** - 予測の現実性と、治療開発を加速するために私たちができる5つの具体的アクション
 
 ### 研究者向け
 1. **成功率の高さ**: RP領域の成功率は他疾患より高い（Phase 3で71%）
