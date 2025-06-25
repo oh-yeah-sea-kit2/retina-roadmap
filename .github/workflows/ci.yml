@@ -91,7 +91,7 @@ jobs:
       if: needs.test-and-build.result == 'success'
       run: |
         echo "✅ Pipeline completed successfully!"
-        echo "View the updated report at: https://${{ github.repository_owner }}.github.io/retina-roadmap/"
+        echo "View the updated report at: https://oh-yeah-sea-kit2.github.io/retina-roadmap/"
     
     - name: Notify failure
       if: needs.test-and-build.result == 'failure'

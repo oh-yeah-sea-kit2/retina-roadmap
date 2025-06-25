@@ -179,7 +179,7 @@ def generate_markdown_report(data):
 ## 7. 更新履歴
 
 本レポートは自動的に生成・更新されます。最新版は以下でご確認ください：
-https://[username].github.io/retina-roadmap/
+https://oh-yeah-sea-kit2.github.io/retina-roadmap/
 
 ---
 *本レポートは研究目的で作成されており、医学的助言ではありません。治療に関する決定は必ず医療専門家にご相談ください。*

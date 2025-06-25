@@ -106,7 +106,7 @@
         "  – deploys docs/ to gh‑pages branch via peaceiris/actions-gh-pages",
         "Commit & push."
       ],
-      "outputs": ["CI passes, site reachable at <username>.github.io/retina-roadmap"]
+      "outputs": ["CI passes, site reachable at oh-yeah-sea-kit2.github.io/retina-roadmap"]
     }
   ]
   
