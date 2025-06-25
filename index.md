@@ -1,6 +1,6 @@
 # 網膜色素変性症（RP）治療開発ロードマップ
 
-生成日時: 2025年06月25日 15:36
+生成日時: 2025年06月25日 16:19
 
 ## エグゼクティブサマリー
 
@@ -48,16 +48,16 @@
 
 | 試験ID | 治療法名 | フェーズ | スポンサー | 成功率 | 承認予測（中央値） | 90%信頼区間 |
 |--------|----------|----------|------------|--------|-------------------|--------------|
+| NCT05203939 | Study to Assess the Safety and Efficacy ... | PHASE1, PHASE2 | Ocugen | 100.0% | 2026年 | [2026, 2027] |
+| NCT06388200 | A Phase 3 Study Of OCU400 Gene Therapy f... | PHASE3 | Ocugen | 100.0% | 2026年 | [2026, 2027] |
+| NCT05926583 | A Study of AAV5-hRKp.RPGR for the Treatm... | PHASE3 | Janssen Pharmaceutical K.K. | 63.1% | 2029年 | [2029, 2030] |
 | NCT04794101 | Follow-up Gene Therapy Trial for the Tre... | PHASE3 | Janssen Research & Development, LLC | 64.1% | 2029年 | [2028, 2030] |
-| NCT05537220 | Oral N-acetylcysteine for Retinitis Pigm... | PHASE3 | Johns Hopkins University | 71.1% | 2029年 | [2029, 2030] |
-| NCT03584165 | Long-term Safety and Efficacy Follow-up ... | PHASE3 | NightstaRx Ltd, a Biogen Company | 71.6% | 2029年 | [2028, 2030] |
-| NCT05926583 | A Study of AAV5-hRKp.RPGR for the Treatm... | PHASE3 | Janssen Pharmaceutical K.K. | 64.5% | 2029年 | [2029, 2030] |
-| NCT06388200 | A Phase 3 Study Of OCU400 Gene Therapy f... | PHASE3 | Ocugen | 63.3% | 2030年 | [2029, 2031] |
-| NCT00999609 | Safety and Efficacy Study in Subjects Wi... | PHASE3 | Spark Therapeutics, Inc. | 71.0% | 2031年 | [2030, 2032] |
-| NCT06333249 | A Study Comparing Two Doses of AGTC-501 ... | PHASE2 | Beacon Therapeutics | 56.3% | 2032年 | [2031, 2032] |
-| NCT04356716 | Sildenafil for Treatment of Choroidal Is... | PHASE2 | Columbia University | 55.6% | 2032年 | [2031, 2032] |
-| NCT05909488 | Role of UC-MSC and CM to Inhibit Vision ... | PHASE2, PHASE3 | PT. Prodia Stem Cell Indonesia | 56.4% | 2032年 | [2031, 2033] |
-| NCT02065011 | A Study to Determine the Long-Term Safet... | PHASE2 | Sanofi | 55.7% | 2032年 | [2031, 2032] |
+| NCT03584165 | Long-term Safety and Efficacy Follow-up ... | PHASE3 | NightstaRx Ltd, a Biogen Company | 71.4% | 2029年 | [2028, 2030] |
+| NCT05537220 | Oral N-acetylcysteine for Retinitis Pigm... | PHASE3 | Johns Hopkins University | 71.5% | 2029年 | [2029, 2030] |
+| NCT00999609 | Safety and Efficacy Study in Subjects Wi... | PHASE3 | Spark Therapeutics, Inc. | 71.1% | 2031年 | [2030, 2032] |
+| NCT06333249 | A Study Comparing Two Doses of AGTC-501 ... | PHASE2 | Beacon Therapeutics | 56.9% | 2032年 | [2031, 2032] |
+| NCT05909488 | Role of UC-MSC and CM to Inhibit Vision ... | PHASE2, PHASE3 | PT. Prodia Stem Cell Indonesia | 56.6% | 2032年 | [2031, 2033] |
+| NCT02065011 | A Study to Determine the Long-Term Safet... | PHASE2 | Sanofi | 56.1% | 2032年 | [2031, 2032] |
 
 
 ### 治療モダリティ別の状況
