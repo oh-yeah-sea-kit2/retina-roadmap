@@ -42,6 +42,8 @@ def convert_action_guide():
     <meta name="description" content="網膜色素変性症の治療法開発を加速するために今すぐできる5つのアクション。遺伝子検査、患者レジストリ登録、研究支援など具体的な行動指針を提供。">
     <meta name="keywords" content="網膜色素変性症,RP,遺伝子検査,患者レジストリ,JRPS,臨床試験参加,行動指針">
     <meta name="author" content="網膜色素変性症治療開発予測プロジェクト">
+    <!-- ナビゲーション -->
+    
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -151,13 +153,28 @@ def convert_action_guide():
 </head>
 <body>
     <div class="container">
+        <!-- ナビゲーション -->
+        <nav style="background: #e8f4f8; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
+            <h3 style="font-size: 1.2em; margin: 0 0 10px 0;">関連ページ</h3>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin: 5px 0;">📊 <a href="index.html">メインレポート</a> - 詳細な予測データ</li>
+                <li style="margin: 5px 0;">🎯 <a href="reality_and_actions.html">現実的なアクションガイド（このページ）</a></li>
+                <li style="margin: 5px 0;">🔊 <a href="accessible_summary.html">音声読み上げ対応版</a> - スクリーンリーダー最適化</li>
+                <li style="margin: 5px 0;">🤖 <a href="ai_acceleration_impact.html">AI活用による開発加速予測</a></li>
+                <li style="margin: 5px 0;">📈 <a href="simulation_methodology.html">シミュレーション方法論</a></li>
+                <li style="margin: 5px 0;">🏥 <a href="for_doctor_checklist.html">医師向けチェックリスト</a></li>
+                <li style="margin: 5px 0;">📄 <a href="executive_summary_for_doctor.html">医師向け要約</a></li>
+                <li style="margin: 5px 0;">🔧 <a href="bottlenecks.html">開発ボトルネック分析</a></li>
+            </ul>
+        </nav>
+        
         <div class="back-link">
             <a href="index.html">← メインレポートに戻る</a>
         </div>
         {content}
         <div class="back-link" style="margin-top: 50px; text-align: center;">
             <a href="index.html">← メインレポートに戻る</a> | 
-            <a href="bottlenecks.md">開発ボトルネック分析 →</a>
+            <a href="bottlenecks.html">開発ボトルネック分析 →</a>
         </div>
     </div>
 </body>
@@ -166,6 +183,11 @@ def convert_action_guide():
     # Markdownを変換（改行を適切に処理する拡張機能を追加）
     md = markdown.Markdown(extensions=['tables', 'fenced_code', 'nl2br', 'extra'])
     html_content = md.convert(md_content)
+    
+    # リンクを修正（.mdを.htmlに変換）
+    html_content = html_content.replace('href="simulation_methodology.md"', 'href="simulation_methodology.html"')
+    html_content = html_content.replace('href="index.md"', 'href="index.html"')
+    html_content = html_content.replace('href="bottlenecks.md"', 'href="bottlenecks.html"')
     
     # リストの不適切な処理を修正
     # 番号付きリストが分割されている場合の修正

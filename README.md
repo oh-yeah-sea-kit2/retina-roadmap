@@ -1,7 +1,29 @@
-# retina-roadmap
+# 網膜色素変性症（RP）治療開発ロードマップ
 
 [![CI/CD Pipeline](https://github.com/oh-yeah-sea-kit2/retina-roadmap/actions/workflows/ci.yml/badge.svg)](https://github.com/oh-yeah-sea-kit2/retina-roadmap/actions/workflows/ci.yml)
-[![Last Updated](https://img.shields.io/badge/Last%20Updated-2025--06--25-blue)](https://oh-yeah-sea-kit2.github.io/retina-roadmap/)
+[![Last Updated](https://img.shields.io/badge/Last%20Updated-2025--06--26-blue)](https://oh-yeah-sea-kit2.github.io/retina-roadmap/)
+
+## 📊 プロジェクト概要
+
+網膜色素変性症（Retinitis Pigmentosa, RP）の治療法がいつ頃利用可能になるかを、公開データに基づいて予測するプロジェクトです。
+
+### 🔊 アクセシビリティ対応
+
+このプロジェクトは網膜色素変性症の患者さんにも利用しやすいよう、以下の配慮をしています：
+
+- **音声読み上げ対応版**: [accessible_summary.html](https://oh-yeah-sea-kit2.github.io/retina-roadmap/docs/accessible_summary.html)
+- スクリーンリーダー対応
+- ハイコントラストモード対応
+- キーボードナビゲーション対応
+- 専門用語への読み仮名付与
+
+### 📈 最新の予測結果
+
+- **最速承認予測**: 2025年後半～2026年（MCO-010）
+- **全体の中央値**: 2036年
+- **AI活用による加速**: 最大45%の開発期間短縮の可能性
+
+詳細は[レポート](https://oh-yeah-sea-kit2.github.io/retina-roadmap/docs/)をご覧ください。
 
 ## 1. リポジトリ設計案（Claude Code 専用・再現性重視）
 

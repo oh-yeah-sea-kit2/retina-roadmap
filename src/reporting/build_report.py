@@ -215,6 +215,8 @@ def convert_to_html(markdown_content, output_file):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>網膜色素変性症（RP）治療開発ロードマップ</title>
+    <meta name="description" content="網膜色素変性症の治療法承認時期予測。最速2025-2026年の承認見込み。音声読み上げ対応版もあります。">
+    
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -304,15 +306,50 @@ def convert_to_html(markdown_content, output_file):
     </style>
 </head>
 <body>
-    <div class="container">
+    <!-- アクセシビリティ向上のためのスキップリンク -->
+    <a href="#main-content" class="skip-link" style="position: absolute; left: -9999px; top: 0; z-index: 999;">メインコンテンツへスキップ</a>
+    
+    <!-- アクセシビリティ案内 -->
+    <div class="accessibility-notice" style="background: #f0f0f0; padding: 10px; margin-bottom: 20px; text-align: center;">
+        <p>このページは音声読み上げソフトに対応しています。
+        <a href="accessible_summary.html">より詳しい音声読み上げ対応版はこちら</a></p>
+    </div>
+    
+    <div class="container" id="main-content" role="main">
+        <!-- ナビゲーション -->
+        <nav style="background: #e8f4f8; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
+            <h2 style="font-size: 1.2em; margin: 0 0 10px 0;">関連ページ</h2>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+                <li style="margin: 5px 0;">📊 <a href="index.html">メインレポート（このページ）</a></li>
+                <li style="margin: 5px 0;">🎯 <a href="reality_and_actions.html">現実的なアクションガイド</a> - 今すぐできる5つの行動</li>
+                <li style="margin: 5px 0;">🔊 <a href="accessible_summary.html">音声読み上げ対応版</a> - スクリーンリーダー最適化</li>
+                <li style="margin: 5px 0;">🤖 <a href="ai_acceleration_impact.html">AI活用による開発加速予測</a> - 最大45%短縮の可能性</li>
+                <li style="margin: 5px 0;">📈 <a href="simulation_methodology.html">シミュレーション方法論</a> - 計算の詳細</li>
+                <li style="margin: 5px 0;">🏥 <a href="for_doctor_checklist.html">医師向けチェックリスト</a> - 信憑性確認用</li>
+                <li style="margin: 5px 0;">📄 <a href="executive_summary_for_doctor.html">医師向け要約</a> - 研究概要と根拠</li>
+                <li style="margin: 5px 0;">🔧 <a href="bottlenecks.html">開発ボトルネック分析</a> - 課題と解決策</li>
+            </ul>
+        </nav>
+        
         {content}
     </div>
+    
+    <!-- フッターにアクセシビリティ情報を追加 -->
+    <footer style="margin-top: 50px; padding: 20px; background: #f0f0f0; text-align: center;" role="contentinfo">
+        <p>アクセシビリティについて：このサイトは網膜色素変性症の方々にも利用しやすいよう配慮して作成されています。</p>
+        <p>改善提案は <a href="https://github.com/oh-yeah-sea-kit2/retina-roadmap/issues">GitHub</a> までお寄せください。</p>
+    </footer>
 </body>
 </html>"""
     
     # Markdownを変換（改行処理を改善）
-    md = markdown.Markdown(extensions=['tables', 'fenced_code', 'nl2br', 'extra'])
+    md = markdown.Markdown(extensions=['tables', 'fenced_code', 'nl2br', 'extra', 'attr_list'])
     html_content = md.convert(markdown_content)
+    
+    # HTMLリンクを修正（.mdを.htmlに変換）
+    html_content = html_content.replace('href="simulation_methodology.md"', 'href="simulation_methodology.html"')
+    html_content = html_content.replace('href="reality_and_actions.md"', 'href="reality_and_actions.html"')
+    html_content = html_content.replace('href="bottlenecks.md"', 'href="bottlenecks.html"')
     
     # HTMLテンプレートに挿入（{{と}}をエスケープ）
     final_html = html_template.replace("{content}", html_content)
