@@ -51,7 +51,8 @@ def generate_markdown_report(data):
 
 ### 主要な発見
 
-- **最速の承認予測**: 2028-2029年（Janssen社およびBIIB111の遺伝子治療）
+- **最速の承認予測**: 2027年（OCU400遺伝子治療）
+  - 根拠: https://clinicaltrials.gov/study/NCT05203939
 - **全体の中央値**: 2036年（複数の治療法が利用可能になる時期）
 - **現在アクティブな臨床試験**: {len(data['trials'][data['trials']['Status'].isin(['RECRUITING', 'ACTIVE_NOT_RECRUITING', 'NOT_YET_RECRUITING'])])}件
 - **成功率**: Phase 1: 86.2%, Phase 2: 78.4%, Phase 3: 71.4%
@@ -180,7 +181,19 @@ def generate_markdown_report(data):
 - 技術革新により予測が大幅に変わる可能性があります
 - 規制環境の変化は考慮していません
 
-## 7. 更新履歴
+## 7. 根拠・参照資料
+
+### データソース
+- **ClinicalTrials.gov**: https://clinicaltrials.gov/
+- **RP臨床試験検索**: https://clinicaltrials.gov/search?cond=Retinitis%20Pigmentosa
+- **データ取得日**: 2025年6月26日
+
+### 主要試験の詳細
+- **MCO-010（Nanoscope）**: https://clinicaltrials.gov/study/NCT04945772
+- **OCU400（Ocugen）**: https://clinicaltrials.gov/study/NCT05203939
+- **ソースコード**: https://github.com/oh-yeah-sea-kit2/retina-roadmap
+
+## 8. 更新履歴
 
 本レポートは自動的に生成・更新されます。最新版は以下でご確認ください：
 https://oh-yeah-sea-kit2.github.io/retina-roadmap/

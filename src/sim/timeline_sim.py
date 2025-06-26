@@ -78,10 +78,10 @@ def simulate_single_program(trial: pd.Series, parameters: dict,
     time_in_current_phase = (current_date - start_date).days / 365.25
     time_in_current_phase = max(0, time_in_current_phase)
     
-    # MCO-010の特別処理（2025年初頭にBLA申請予定）
+    # MCO-010の特別処理（2025年Q1にBLA申請予定）
     if "MCO-010" in trial.get("BriefTitle", "") or "MCO010" in trial.get("BriefTitle", "") or \
        ("Nanoscope" in trial.get("SponsorName", "") and phase == "PHASE3"):
-        # 2025年初頭の申請を反映
+        # 2025年第1四半期の申請を反映
         submission_date = datetime(2025, 3, 1)  # 2025年3月と仮定
         time_to_submission = (submission_date - current_date).days / 365.25
         
@@ -97,20 +97,21 @@ def simulate_single_program(trial: pd.Series, parameters: dict,
                 "approval_year": approval_date.year,
                 "time_to_approval": total_time,
                 "fast_track": True,
-                "program_name": "MCO-010"
+                "program_name": "MCO-010",
+                "confidence": "high"  # RESTORE試験で統計的有意性達成
             }
     
-    # OCU400の特別処理（2024年Phase 3開始、1年間の試験期間）
+    # OCU400の特別処理（2024年6月Phase 3初回投与、2026年BLA申請予定）
     if "OCU400" in trial.get("BriefTitle", "") or "OCU-400" in trial.get("BriefTitle", "") or \
        ("Ocugen" in trial.get("SponsorName", "") and phase == "PHASE3"):
-        # Phase 3は2024年開始、1年間の試験期間
-        phase3_start = datetime(2024, 1, 1)
-        phase3_duration = 1.0  # FDAと合意済みの1年間
+        # Phase 3は2024年6月開始（初回投与）
+        phase3_start = datetime(2024, 6, 1)
+        phase3_duration = 1.5  # 主要評価期間
         
-        # データ解析と申請準備（6-12ヶ月）
-        analysis_time = np.random.triangular(0.5, 0.75, 1.0)
+        # データ解析と申請準備（3-6ヶ月）
+        analysis_time = np.random.triangular(0.25, 0.375, 0.5)
         
-        # FDA審査（12-18ヶ月）
+        # FDA審査（12-18ヶ月）- RMAT指定による迅速審査
         review_time = np.random.triangular(1.0, 1.25, 1.5)
         
         total_time = ((phase3_start - current_date).days / 365.25) + phase3_duration + analysis_time + review_time
@@ -122,7 +123,40 @@ def simulate_single_program(trial: pd.Series, parameters: dict,
                 "approval_date": approval_date,
                 "approval_year": approval_date.year,
                 "time_to_approval": total_time,
-                "program_name": "OCU400"
+                "program_name": "OCU400",
+                "confidence": "high"  # 2年データで100%改善/維持
+            }
+    
+    # Janssen社の遺伝子治療の特別処理（Phase 3で主要評価項目未達成）
+    if "NCT04794101" in trial.get("NCTId", "") or \
+       ("Janssen" in trial.get("SponsorName", "") and "RPGR" in trial.get("BriefTitle", "")):
+        # Phase 3失敗により成功率を大幅に下げる
+        if np.random.random() < 0.2:  # 20%の成功率
+            # 追加試験や規制当局との協議により時間がかかる
+            additional_time = np.random.triangular(2.0, 3.0, 4.0)
+            phase_duration = simulate_phase_duration("PHASE3", parameters)
+            total_time = time_in_current_phase + phase_duration + additional_time
+            
+            # 規制当局承認プロセス
+            submission_time = np.random.triangular(1.0, 1.5, 2.0)
+            review_time = np.random.triangular(1.5, 2.0, 2.5)
+            total_time += submission_time + review_time
+            
+            approval_date = current_date + timedelta(days=total_time * 365.25)
+            return {
+                "success": True,
+                "approval_date": approval_date,
+                "approval_year": approval_date.year,
+                "time_to_approval": total_time,
+                "program_name": "Botaretigene sparoparvovec",
+                "confidence": "low"  # Phase 3で主要評価項目未達成
+            }
+        else:
+            return {
+                "success": False,
+                "failed_at_phase": "PHASE3",
+                "time_to_failure": time_in_current_phase + 1.0,
+                "reason": "Phase 3 primary endpoint not met"
             }
     
     # フェーズ進行をシミュレート
@@ -273,10 +307,14 @@ def create_cdf_plot(results_df: pd.DataFrame, output_dir: Path):
         cdf_values = []
         for year in years:
             # 正規分布のCDF
-            z_score = (year - mean) / std
-            # erfをscipyから使用
-            from scipy.special import erf
-            cdf = 0.5 * (1 + erf(z_score / np.sqrt(2)))
+            if std > 0:
+                z_score = (year - mean) / std
+                # erfをscipyから使用
+                from scipy.special import erf
+                cdf = 0.5 * (1 + erf(z_score / np.sqrt(2)))
+            else:
+                # stdが0の場合（全て同じ年の場合）
+                cdf = 1.0 if year >= mean else 0.0
             cdf_values.append(cdf)
         
         label = f"{program['NCTId']}: {program['BriefTitle'][:30]}..."

@@ -1,6 +1,6 @@
 # 網膜色素変性症（RP）治療開発ロードマップ
 
-生成日時: 2025年06月26日 01:09
+生成日時: 2025年06月26日 11:07
 
 ## エグゼクティブサマリー
 
@@ -8,7 +8,8 @@
 
 ### 主要な発見
 
-- **最速の承認予測**: 2028-2029年（Janssen社およびBIIB111の遺伝子治療）
+- **最速の承認予測**: 2027年（OCU400遺伝子治療）
+  - 根拠: https://clinicaltrials.gov/study/NCT05203939
 - **全体の中央値**: 2036年（複数の治療法が利用可能になる時期）
 - **現在アクティブな臨床試験**: 51件
 - **成功率**: Phase 1: 86.2%, Phase 2: 78.4%, Phase 3: 71.4%
@@ -48,16 +49,16 @@
 
 | 試験ID | 治療法名 | フェーズ | スポンサー | 成功率 | 承認予測（中央値） | 90%信頼区間 |
 |--------|----------|----------|------------|--------|-------------------|--------------|
-| NCT06388200 | A Phase 3 Study Of OCU400 Gene Therapy f... | PHASE3 | Ocugen | 100.0% | 2026年 | [2026, 2027] |
-| NCT05203939 | Study to Assess the Safety and Efficacy ... | PHASE1, PHASE2 | Ocugen | 100.0% | 2026年 | [2026, 2027] |
-| NCT04794101 | Follow-up Gene Therapy Trial for the Tre... | PHASE3 | Janssen Research & Development, LLC | 64.0% | 2028年 | [2027, 2029] |
-| NCT03584165 | Long-term Safety and Efficacy Follow-up ... | PHASE3 | NightstaRx Ltd, a Biogen Company | 71.6% | 2029年 | [2028, 2030] |
-| NCT05537220 | Oral N-acetylcysteine for Retinitis Pigm... | PHASE3 | Johns Hopkins University | 71.9% | 2031年 | [2030, 2032] |
-| NCT05926583 | A Study of AAV5-hRKp.RPGR for the Treatm... | PHASE3 | Janssen Pharmaceutical K.K. | 62.9% | 2031年 | [2030, 2032] |
-| NCT06333249 | A Study Comparing Two Doses of AGTC-501 ... | PHASE2 | Beacon Therapeutics | 56.4% | 2033年 | [2032, 2034] |
-| NCT00999609 | Safety and Efficacy Study in Subjects Wi... | PHASE3 | Spark Therapeutics, Inc. | 71.5% | 2033年 | [2032, 2034] |
-| NCT04356716 | Sildenafil for Treatment of Choroidal Is... | PHASE2 | Columbia University | 56.9% | 2033年 | [2032, 2034] |
-| NCT02065011 | A Study to Determine the Long-Term Safet... | PHASE2 | Sanofi | 56.0% | 2033年 | [2032, 2034] |
+| NCT06388200 | A Phase 3 Study Of OCU400 Gene Therapy f... | PHASE3 | Ocugen | 100.0% | 2027年 | [2027, 2027] |
+| NCT05203939 | Study to Assess the Safety and Efficacy ... | PHASE1, PHASE2 | Ocugen | 100.0% | 2027年 | [2027, 2027] |
+| NCT03584165 | Long-term Safety and Efficacy Follow-up ... | PHASE3 | NightstaRx Ltd, a Biogen Company | 72.4% | 2029年 | [2028, 2030] |
+| NCT05537220 | Oral N-acetylcysteine for Retinitis Pigm... | PHASE3 | Johns Hopkins University | 71.5% | 2031年 | [2030, 2032] |
+| NCT06333249 | A Study Comparing Two Doses of AGTC-501 ... | PHASE2 | Beacon Therapeutics | 56.1% | 2033年 | [2032, 2034] |
+| NCT00999609 | Safety and Efficacy Study in Subjects Wi... | PHASE3 | Spark Therapeutics, Inc. | 71.7% | 2033年 | [2032, 2034] |
+| NCT04356716 | Sildenafil for Treatment of Choroidal Is... | PHASE2 | Columbia University | 56.0% | 2033年 | [2032, 2034] |
+| NCT02065011 | A Study to Determine the Long-Term Safet... | PHASE2 | Sanofi | 56.2% | 2033年 | [2032, 2034] |
+| NCT06275620 | A Study Comparing Two Doses of AGTC-501 ... | PHASE2 | Beacon Therapeutics | 55.6% | 2034年 | [2033, 2035] |
+| NCT05909488 | Role of UC-MSC and CM to Inhibit Vision ... | PHASE2, PHASE3 | PT. Prodia Stem Cell Indonesia | 55.2% | 2034年 | [2033, 2035] |
 
 
 ### 治療モダリティ別の状況
@@ -134,7 +135,19 @@
 - 技術革新により予測が大幅に変わる可能性があります
 - 規制環境の変化は考慮していません
 
-## 7. 更新履歴
+## 7. 根拠・参照資料
+
+### データソース
+- **ClinicalTrials.gov**: https://clinicaltrials.gov/
+- **RP臨床試験検索**: https://clinicaltrials.gov/search?cond=Retinitis%20Pigmentosa
+- **データ取得日**: 2025年6月26日
+
+### 主要試験の詳細
+- **MCO-010（Nanoscope）**: https://clinicaltrials.gov/study/NCT04945772
+- **OCU400（Ocugen）**: https://clinicaltrials.gov/study/NCT05203939
+- **ソースコード**: https://github.com/oh-yeah-sea-kit2/retina-roadmap
+
+## 8. 更新履歴
 
 本レポートは自動的に生成・更新されます。最新版は以下でご確認ください：
 https://oh-yeah-sea-kit2.github.io/retina-roadmap/
