@@ -32,6 +32,18 @@ def get_active_programs(df):
     
     active_trials = df[df["Status"].isin(active_status)].copy()
     
+    # MCO-010とOCU400の特別処理 - COMPLETEDでも重要な試験は含める
+    important_completed = df[
+        (df["Status"] == "COMPLETED") & 
+        (
+            (df["NCTId"].isin(["NCT04945772", "NCT05203939", "NCT06388200"])) |  # MCO-010, OCU400
+            (df["BriefTitle"].str.contains("MCO-010|OCU400|OCU-400", case=False, na=False))
+        )
+    ].copy()
+    
+    # 結合
+    active_trials = pd.concat([active_trials, important_completed], ignore_index=True)
+    
     # 開始日がない場合は現在日付を仮定
     active_trials["StartDate"] = active_trials["StartDate"].fillna(pd.Timestamp.now())
     
@@ -78,16 +90,17 @@ def simulate_single_program(trial: pd.Series, parameters: dict,
     time_in_current_phase = (current_date - start_date).days / 365.25
     time_in_current_phase = max(0, time_in_current_phase)
     
-    # MCO-010の特別処理（2025年Q1にBLA申請予定）
+    # MCO-010の特別処理（2025年6月にBLA申請開始）
     if "MCO-010" in trial.get("BriefTitle", "") or "MCO010" in trial.get("BriefTitle", "") or \
-       ("Nanoscope" in trial.get("SponsorName", "") and phase == "PHASE3"):
-        # 2025年第1四半期の申請を反映
-        submission_date = datetime(2025, 3, 1)  # 2025年3月と仮定
+       "NCT04945772" in trial.get("NCTId", "") or \
+       ("Nanoscope" in trial.get("SponsorName", "") and phase in ["PHASE2", "PHASE3"]):
+        # 2025年6月の段階的BLA申請開始を反映
+        submission_date = datetime(2025, 6, 30)
         time_to_submission = (submission_date - current_date).days / 365.25
         
         if time_to_submission > 0:
-            # Fast Track指定により短縮された審査期間（6-12ヶ月）
-            review_time = np.random.triangular(0.5, 0.75, 1.0)
+            # Fast Track指定により短縮された審査期間（6-10ヶ月）
+            review_time = np.random.triangular(0.5, 0.67, 0.83)
             total_time = time_to_submission + review_time
             
             approval_date = current_date + timedelta(days=total_time * 365.25)
@@ -98,25 +111,24 @@ def simulate_single_program(trial: pd.Series, parameters: dict,
                 "time_to_approval": total_time,
                 "fast_track": True,
                 "program_name": "MCO-010",
-                "confidence": "high"  # RESTORE試験で統計的有意性達成
+                "confidence": "very_high",  # RESTORE試験で統計的有意性達成、スターガルト病への適応拡大も
+                "gene_agnostic": True
             }
     
-    # OCU400の特別処理（2024年6月Phase 3初回投与、2026年BLA申請予定）
+    # OCU400の特別処理（2026年中頃BLA/MAA申請予定）
     if "OCU400" in trial.get("BriefTitle", "") or "OCU-400" in trial.get("BriefTitle", "") or \
+       "NCT05203939" in trial.get("NCTId", "") or \
        ("Ocugen" in trial.get("SponsorName", "") and phase == "PHASE3"):
-        # Phase 3は2024年6月開始（初回投与）
-        phase3_start = datetime(2024, 6, 1)
-        phase3_duration = 1.5  # 主要評価期間
+        # liMeliGhT Phase 3試験実施中、2025年前半に患者登録完了予定
+        # 2026年中頃にBLA/MAA申請
+        bla_submission_date = datetime(2026, 9, 30)  # 2026年中頃
+        time_to_submission = (bla_submission_date - current_date).days / 365.25
         
-        # データ解析と申請準備（3-6ヶ月）
-        analysis_time = np.random.triangular(0.25, 0.375, 0.5)
-        
-        # FDA審査（12-18ヶ月）- RMAT指定による迅速審査
-        review_time = np.random.triangular(1.0, 1.25, 1.5)
-        
-        total_time = ((phase3_start - current_date).days / 365.25) + phase3_duration + analysis_time + review_time
-        
-        if total_time > 0:
+        if time_to_submission > 0:
+            # FDA/EMA審査（10-14ヵ月）- RMAT指定とEMA ATMP分類による迅速審査
+            review_time = np.random.triangular(0.83, 1.0, 1.17)
+            total_time = time_to_submission + review_time
+            
             approval_date = current_date + timedelta(days=total_time * 365.25)
             return {
                 "success": True,
@@ -124,7 +136,9 @@ def simulate_single_program(trial: pd.Series, parameters: dict,
                 "approval_year": approval_date.year,
                 "time_to_approval": total_time,
                 "program_name": "OCU400",
-                "confidence": "high"  # 2年データで100%改善/維持
+                "confidence": "very_high",  # Phase 1/2の2年データで100%改善/維持
+                "gene_agnostic": True,  # 100以上の遺伝子変異に対応
+                "rmat_designated": True
             }
     
     # Janssen社の遺伝子治療の特別処理（Phase 3で主要評価項目未達成）
@@ -157,6 +171,59 @@ def simulate_single_program(trial: pd.Series, parameters: dict,
                 "failed_at_phase": "PHASE3",
                 "time_to_failure": time_in_current_phase + 1.0,
                 "reason": "Phase 3 primary endpoint not met"
+            }
+    
+    # PYC VP-001の特別処理（2025年後半にPhase 2/3開始予定）
+    if "VP-001" in trial.get("BriefTitle", "") or "VP001" in trial.get("BriefTitle", "") or \
+       ("PYC" in trial.get("SponsorName", "") and "RP11" in trial.get("BriefTitle", "")):
+        if phase in ["PHASE1", "PHASE1, PHASE2"]:
+            # 2025年後半のPhase 2/3開始
+            phase23_start = datetime(2025, 10, 1)
+            time_to_phase23 = (phase23_start - current_date).days / 365.25
+            
+            if time_to_phase23 > 0:
+                # Phase 2/3期間（2-3年）
+                phase23_duration = np.random.triangular(2.0, 2.5, 3.0)
+                # データ解析と申請準備
+                analysis_time = np.random.triangular(0.5, 0.75, 1.0)
+                # FDA審査
+                review_time = np.random.triangular(1.0, 1.25, 1.5)
+                
+                total_time = time_to_phase23 + phase23_duration + analysis_time + review_time
+                
+                approval_date = current_date + timedelta(days=total_time * 365.25)
+                return {
+                    "success": True,
+                    "approval_date": approval_date,
+                    "approval_year": approval_date.year,
+                    "time_to_approval": total_time,
+                    "program_name": "VP-001",
+                    "confidence": "medium",
+                    "rna_therapy": True
+                }
+    
+    # Beacon AGTC-501の特別処理（Phase 2/3 VISTA試験実施中）
+    if "AGTC-501" in trial.get("BriefTitle", "") or "AGTC501" in trial.get("BriefTitle", "") or \
+       ("Beacon" in trial.get("SponsorName", "") and "XLRP" in trial.get("BriefTitle", "")):
+        if phase in ["PHASE2", "PHASE3", "PHASE2, PHASE3"]:
+            # Phase 2/3継続期間（1.5-2.5年）
+            phase23_duration = np.random.triangular(1.5, 2.0, 2.5)
+            # データ解析と申請準備
+            analysis_time = np.random.triangular(0.5, 0.75, 1.0)
+            # FDA審査
+            review_time = np.random.triangular(1.0, 1.25, 1.5)
+            
+            total_time = phase23_duration + analysis_time + review_time
+            
+            approval_date = current_date + timedelta(days=total_time * 365.25)
+            return {
+                "success": True,
+                "approval_date": approval_date,
+                "approval_year": approval_date.year,
+                "time_to_approval": total_time,
+                "program_name": "AGTC-501",
+                "confidence": "medium",
+                "xlrp_specific": True
             }
     
     # フェーズ進行をシミュレート
