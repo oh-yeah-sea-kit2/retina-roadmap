@@ -15,14 +15,16 @@
    - これは遺伝子治療技術の成熟と、希少疾患への規制緩和が要因
 
 2. **🎯 最速2025-2026年の承認が現実的に！（最新情報）**
-   - **MCO-010（Nanoscope社）**：2025年初頭にFDA申請、最速2025年後半〜2026年承認見込み
-     - Fast Track指定取得済み、視力が最大50%改善
-     - 変異非依存型で幅広い患者に適用可能
-   - **OCU400（Ocugen社）**：2024年Phase 3開始、2026-2027年承認見込み
-     - FDAと1年間の試験期間で合意済み
+   - **MCO-010（Nanoscope社）**：2025年第1四半期にFDA申請、最速2025年後半〜2026年承認見込み
+     - RESTORE試験で統計的に有意な視力改善を達成（0.337-0.382 LogMAR改善）
+     - Fast Track指定取得済み、患者の最大50%が3行以上の視力改善
+     - 変異非特異的（mutation-agnostic）で幅広い患者に適用可能
+   - **OCU400（Ocugen社）**：2024年6月Phase 3初回投与、2026年BLA/MAA申請予定
+     - 2年間の追跡データで評価可能な9名全員（100%）が視機能改善/維持
+     - FDA RMAT指定、EMA ATMP指定取得済み
      - 遺伝子非依存型アプローチ
-   - Janssen社の遺伝子治療（NCT04794101）：中央値予測2028年
-   - BIIB111（NightstaRx/Biogen）：中央値予測2029年
+   - ~~Janssen社の遺伝子治療（Botaretigene sparoparvovec）~~：Phase 3で主要評価項目未達成（2025年5月発表）
+   - BIIB111/BIIB112（Biogen）：開発中断（Phase 2/3で主要評価項目未達成）
    - 類似の眼科遺伝子治療Luxturnaは2017年に承認済み（前例あり）
 
 3. **複数の有望なプログラム**
@@ -345,6 +347,35 @@
 - [ ] 遺伝子検査の予約を取る
 - [ ] My Retina Tracker（https://www.myretinatracker.org/）に登録
 - [ ] 寄付先を1つ決めて月額設定（1,000円でOK）
+
+## 根拠資料とリンク集
+
+### データソースと方法論
+- **ClinicalTrials.gov（米国政府公式）**: https://clinicaltrials.gov/
+  - RP臨床試験検索: https://clinicaltrials.gov/search?cond=Retinitis%20Pigmentosa
+  - データ取得日: 2025年6月26日
+- **解析方法**: モンテカルロシミュレーション（10,000回/試験）
+- **ソースコード**: https://github.com/oh-yeah-sea-kit2/retina-roadmap
+
+### 主要な治療法の根拠
+1. **MCO-010（Nanoscope）**
+   - 臨床試験: https://clinicaltrials.gov/study/NCT04945772
+   - RESTORE試験結果: https://nanostherapeutics.com/news/
+   - FDA Fast Track: 2023年8月指定
+
+2. **OCU400（Ocugen）**
+   - Phase 3試験: https://clinicaltrials.gov/study/NCT05203939
+   - 2年データ: https://ir.ocugen.com/news-releases/
+   - FDA RMAT指定: 2023年取得
+
+3. **開発中止/遅延**
+   - Janssen Botaretigene: https://clinicaltrials.gov/study/NCT04671433
+   - Biogen BIIB112: 開発中断発表（2021年）
+
+### 日本での情報源
+- **JRPS（日本網膜色素変性症協会）**: https://jrps.org/
+- **jRCT（臨床研究等提出・公開システム）**: https://jrct.niph.go.jp/
+- **PMDA（医薬品医療機器総合機構）**: https://www.pmda.go.jp/
 
 ### 3ヶ月以内にやること
 - [ ] 遺伝子検査結果をクラウドに保存
