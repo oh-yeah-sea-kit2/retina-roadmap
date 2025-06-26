@@ -156,7 +156,11 @@ def main():
         ("for_doctor_checklist.md", "医師向けチェックリスト"),
         ("executive_summary_for_doctor.md", "医師向け要約"),
         ("simulation_methodology.md", "シミュレーション方法論"),
-        ("bottlenecks.md", "開発ボトルネック分析")
+        ("bottlenecks.md", "開発ボトルネック分析"),
+        ("publication_disclaimer.md", "免責事項"),
+        ("publication_checklist.md", "公開前チェックリスト"),
+        ("current_status_facts.md", "網膜色素変性症治療開発の現状"),
+        ("ai_predictions.md", "AI予測による治療承認時期の分析")
     ]
     
     for filename, title in files_to_convert:
