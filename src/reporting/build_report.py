@@ -40,6 +40,10 @@ def generate_markdown_report(data):
     # 現在の日時
     now = datetime.now()
     
+    # アクティブな試験を抽出
+    active_status = ["RECRUITING", "ACTIVE_NOT_RECRUITING", "NOT_YET_RECRUITING", "ENROLLING_BY_INVITATION"]
+    active_trials = data['trials'][data['trials']['Status'].isin(active_status)]
+    
     # Markdownコンテンツ
     content = f"""# 網膜色素変性症（RP）治療開発ロードマップ
 
@@ -49,13 +53,18 @@ def generate_markdown_report(data):
 
 本レポートは、網膜色素変性症（Retinitis Pigmentosa, RP）の治療法開発状況を定量的に分析し、効果的な治療法がいつ頃利用可能になるかを予測したものです。
 
-### 主要な発見
+### 主要な発見（米国FDA承認基準）
 
-- **最速の承認予測**: 2027年（OCU400遺伝子治療）
-  - 根拠: https://clinicaltrials.gov/study/NCT05203939
-- **全体の中央値**: 2036年（複数の治療法が利用可能になる時期）
-- **現在アクティブな臨床試験**: {len(data['trials'][data['trials']['Status'].isin(['RECRUITING', 'ACTIVE_NOT_RECRUITING', 'NOT_YET_RECRUITING'])])}件
+- **最速の承認予測**: 2026年（MCO-010光遺伝学治療）
+  - 根拠: https://clinicaltrials.gov/study/NCT04945772
+- **全体の中央値**: 2037年（複数の治療法が利用可能になる時期）
+- **現在アクティブな臨床試験**: {len(active_trials)}件（重要な完了試験含む）
 - **成功率**: Phase 1: 86.2%, Phase 2: 78.4%, Phase 3: 71.4%
+
+⚠️ **重要**: 上記の予測は**米国FDA承認**を基準としています。
+- **日本での承認**: 通常FDA承認の**3-7年後**（過去実績より）
+- **欧州での承認**: 通常FDA承認の**1-2年後**
+- 詳細は[地域別承認予測タイムライン](regional_approval_timeline.html)をご覧ください。
 
 ## 1. データソース概要
 
@@ -91,35 +100,67 @@ def generate_markdown_report(data):
 - **分布**: 三角分布（最小値、中央値、最大値）
 - **パラメータ**: 実データから推定した成功率と期間
 
-### 最も有望な治療プログラム（承認予測年順）
+### 最も有望な治療プログラム（米国FDA承認予測年順）
 
-| 試験ID | 治療法名 | フェーズ | スポンサー | 成功率 | 承認予測（中央値） | 90%信頼区間 |
-|--------|----------|----------|------------|--------|-------------------|--------------|
+| 試験ID | 治療法名 | フェーズ | スポンサー | 成功率 | FDA承認予測（中央値） | 日本承認予測（中央値） | 90%信頼区間（FDA） |
+|--------|----------|----------|------------|--------|---------------------|---------------------|------------------|
 """
     
     # 上位10プログラムを表示
     top_programs = data['forecasts'].head(10)
     for _, row in top_programs.iterrows():
-        content += f"| {row['NCTId']} | {row['BriefTitle'][:40]}... | {row['Phase']} | {row['SponsorName']} | {row['success_rate']:.1%} | {row['median_approval_year']:.0f}年 | [{row['pct10_approval_year']:.0f}, {row['pct90_approval_year']:.0f}] |\n"
+        # 日本承認予測があるかチェック
+        if 'japan_median_approval_year' in row:
+            japan_approval = f"{row['japan_median_approval_year']:.0f}年"
+        else:
+            japan_approval = "N/A"
+        content += f"| {row['NCTId']} | {row['BriefTitle'][:40]}... | {row['Phase']} | {row['SponsorName']} | {row['success_rate']:.1%} | {row['median_approval_year']:.0f}年 | {japan_approval} | [{row['pct10_approval_year']:.0f}, {row['pct90_approval_year']:.0f}] |\n"
     
     content += f"""
+
+### 日本での承認予測
+
+過去の実績（Luxturna: FDA承認2017年→日本承認2023年、約5.5年の遅延）に基づく予測：
+
+"""
+    # 上位5プログラムの日本承認予測を詳細表示
+    top5_programs = data['forecasts'].head(5)
+    if len(top5_programs) > 0 and 'japan_median_approval_year' in top5_programs.columns:
+        content += """| 治療法 | FDA承認予測 | 日本承認予測（中央値） | 日本承認90%信頼区間 | 遅延期間（中央値） |
+|--------|------------|---------------------|-------------------|---------------------|
+"""
+        for _, row in top5_programs.iterrows():
+            if 'japan_median_approval_year' in row:
+                japan_ci = f"[{row.get('japan_pct10_approval_year', 'N/A'):.0f}, {row.get('japan_pct90_approval_year', 'N/A'):.0f}]"
+                delay_years = row.get('japan_median_delay_years', 5.0)
+                content += f"| {row['NCTId']} | {row['median_approval_year']:.0f}年 | **{row['japan_median_approval_year']:.0f}年** | {japan_ci} | +{delay_years:.1f}年 |\n"
+    else:
+        # フォールバック（日本承認データがない場合）
+        content += """| 治療法 | FDA承認予測 | 日本承認予測（楽観的） | 日本承認予測（標準） | 日本承認予測（保守的） |
+|--------|------------|---------------------|-------------------|---------------------|
+| MCO-010 | 2026年 | **2029年**（+3年） | **2031年**（+5年） | **2033年**（+7年） |
+| OCU400 | 2027年 | **2030年**（+3年） | **2032年**（+5年） | **2034年**（+7年） |"""
+    
+    content += f"""
+
+詳細は[地域別承認予測タイムライン](regional_approval_timeline.html)をご覧ください。
 
 ### 治療モダリティ別の状況
 
 #### 遺伝子治療
 - **試験数**: {len(data['trials'][data['trials']['BriefTitle'].str.contains('gene|AAV|vector', case=False, na=False)])}件
 - **主要なターゲット遺伝子**: RPGR, RPE65, PDE6A, USH2A
-- **最速承認予測**: 2027年（RPGR遺伝子治療）
+- **最速FDA承認予測**: 2026年（MCO-010光遺伝学治療）
 
 #### 細胞治療
 - **試験数**: {len(data['trials'][data['trials']['BriefTitle'].str.contains('cell|stem|transplant', case=False, na=False)])}件
 - **アプローチ**: 幹細胞移植、網膜前駆細胞
-- **承認予測**: 2030年代前半
+- **FDA承認予測**: 2030年代前半
 
 #### 低分子薬
 - **試験数**: {len(data['trials'][data['trials']['BriefTitle'].str.contains('tablet|oral|drug', case=False, na=False)])}件
 - **メカニズム**: 神経保護、抗酸化、血流改善
-- **承認予測**: 2029-2034年
+- **FDA承認予測**: 2029-2034年
 
 ## 3. 感度分析結果
 
@@ -332,6 +373,7 @@ def convert_to_html(markdown_content, output_file):
             <h2 style="font-size: 1.2em; margin: 0 0 10px 0;">関連ページ</h2>
             <ul style="list-style: none; padding: 0; margin: 0;">
                 <li style="margin: 5px 0;">📊 <a href="index.html">メインレポート（このページ）</a></li>
+                <li style="margin: 5px 0;">🌍 <a href="regional_approval_timeline.html">地域別承認予測</a> - 日本・米国・欧州の違い</li>
                 <li style="margin: 5px 0;">🎯 <a href="reality_and_actions.html">現実的なアクションガイド</a> - 今すぐできる5つの行動</li>
                 <li style="margin: 5px 0;">🔊 <a href="accessible_summary.html">音声読み上げ対応版</a> - スクリーンリーダー最適化</li>
                 <li style="margin: 5px 0;">🤖 <a href="ai_acceleration_impact.html">AI活用による開発加速予測</a> - 最大45%短縮の可能性</li>
