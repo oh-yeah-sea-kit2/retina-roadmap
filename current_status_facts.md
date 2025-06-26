@@ -32,19 +32,23 @@
 ## 🧬 最も進んでいる治療法（Phase 3実施中）
 
 ### 1. MCO-010（Nanoscope社）
-- **試験番号**: [NCT04945772](https://clinicaltrials.gov/study/NCT04945772)
-- **現在の状況**: Phase 3完了、データ解析中
+- **試験番号**: [NCT04945772](https://clinicaltrials.gov/study/NCT04945772)（RESTORE試験）
+- **現在の状況**: Phase 3完了、主要評価項目達成、統計的有意性確認
 - **開始日**: 2021年6月
-- **特徴**: 遺伝子型に依存しない光遺伝学的治療
-- **公式発表**: 2025年第1四半期にBLA（生物学的製剤承認申請）予定
+- **特徴**: 遺伝子型に依存しない（gene-agnostic）光遺伝学的治療
+- **FDA申請**: 2025年6月に段階的BLA（生物学的製剤承認申請）開始予定
+- **追加適応症**: スターガルト病にも有望な結果
+- **規制指定**: FDA Fast Track指定、希少疾病用医薬品指定取得
 - **参照**: [Nanoscope社プレスリリース](https://nanostherapeutics.com/2024/11/01/nanoscope-therapeutics-completes-patient-enrollment-in-phase-3-restore-trial/)
 
 ### 2. OCU400（Ocugen社）
-- **試験番号**: [NCT05203939](https://clinicaltrials.gov/study/NCT05203939)
-- **現在の状況**: Phase 3実施中
+- **試験番号**: [NCT05203939](https://clinicaltrials.gov/study/NCT05203939)（liMeliGhT試験）
+- **現在の状況**: Phase 3実施中、2025年前半に患者登録完了予定
 - **開始日**: 2022年9月
-- **特徴**: NR2E3遺伝子置換療法（複数の遺伝子変異に対応）
-- **公式発表**: Phase 1/2で100%の患者が改善または維持
+- **特徴**: NR2E3遺伝子置換療法（100以上の遺伝子変異に対応可能）
+- **最新データ**: Phase 1/2の2年データで100%（9/9）の患者が改善または維持（2025年1月発表）
+- **FDA申請**: 2026年中頃にBLA/MAA申請予定
+- **規制指定**: FDA RMAT指定、希少疾病用医薬品指定、EMA ATMP分類取得
 - **参照**: [Ocugen社発表](https://ocugen.com/gene-therapies/ocu400/)
 
 ### 3. Botaretigene sparoparvovec（Janssen社）
@@ -58,6 +62,26 @@
 - **現在の状況**: Phase 2/3実施中
 - **開始日**: 2020年12月
 - **特徴**: RPGR遺伝子変異に対する遺伝子治療
+
+### 5. VP-001（PYC Therapeutics社）
+- **現在の状況**: Phase 1実施中、2025年後半にPhase 2/3開始予定
+- **特徴**: RP11型向けRNA療法
+- **試験**: WALLABY試験（2025年11月完了予定）
+
+### 6. AGTC-501（Beacon Therapeutics社）
+- **現在の状況**: Phase 2/3 VISTA試験で患者登録中
+- **特徴**: X連鎖性RP（XLRP）向け遺伝子治療
+- **進捗**: Phase 2で良好な結果
+
+### 7. OpCT-001（BlueRock Therapeutics社）
+- **現在の状況**: Phase 1/2a CLARICO試験実施中
+- **特徴**: 光受容体細胞治療
+- **規制指定**: FDA Fast Track指定取得
+
+### 8. NPI-001（Nacuity Pharmaceuticals社）
+- **現在の状況**: 開発中
+- **特徴**: 経口薬（神経保護作用）
+- **規制指定**: FDA Fast Track指定取得
 
 ---
 
@@ -124,13 +148,19 @@
 ## 📅 重要な最新動向（2024-2025年）
 
 ### 2024年
-- 11月: Nanoscope社がMCO-010のPhase 3患者登録完了を発表
+- 11月: Nanoscope社がMCO-010のPhase 3（RESTORE試験）患者登録完了を発表
 - 10月: Ocugen社がOCU400の中間解析で良好な結果を報告
 - 6月: 日本でLuxturnaが保険適用開始
+- 年内: MCO-010のRESTORE試験が主要評価項目を達成、統計的有意性確認
 
 ### 2025年
-- 6月: 複数の企業がARVO 2025で最新データを発表
-- 予定: Nanoscope社がMCO-010のBLA申請（Q1）
+- 6月: Nanoscope社がMCO-010の段階的BLA申請を開始
+- 5月: Ocugen社がEMAからOCU400のATMP分類と中央審査手続き承認取得
+- 1月: Ocugen社がOCU400の2年データで100%改善/維持を発表
+- 年内予定: 
+  - PYC VP-001のPhase 2/3試験開始
+  - OCU400のliMeliGhT Phase 3試験患者登録完了
+  - MCO-010のスターガルト病への適応拡大検討
 
 ---
 
