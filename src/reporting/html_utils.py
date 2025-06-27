@@ -24,33 +24,17 @@ def auto_link_urls(text):
 
 def make_tables_responsive(html_content):
     """テーブルをレスポンシブ対応にする"""
-    # テーブルをラッパーで囲む
-    table_pattern = r'<table[^>]*>.*?</table>'
-    
-    def wrap_table(match):
-        table_html = match.group(0)
-        return f'<div class="table-wrapper">{table_html}</div>'
-    
-    # テーブルをラップ
-    html_content = re.sub(table_pattern, wrap_table, html_content, flags=re.DOTALL)
-    
+    # 現在は何もしない（CSSで対応）
     return html_content
 
 
 def get_responsive_table_css():
     """レスポンシブテーブル用のCSSを返す"""
     return """
-        /* レスポンシブテーブル */
-        .table-wrapper {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            margin: 20px 0;
-        }
-        
+        /* テーブルスタイル */
         table {
             border-collapse: collapse;
             width: 100%;
-            min-width: 600px;
             margin: 20px 0;
         }
         
@@ -64,38 +48,44 @@ def get_responsive_table_css():
             background-color: #3498db;
             color: white;
             font-weight: bold;
-            position: sticky;
-            top: 0;
-            z-index: 10;
         }
         
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
         
-        /* スマホ対応 */
+        /* スマホ対応 - 横スクロール */
         @media screen and (max-width: 768px) {
-            .table-wrapper {
-                border: 1px solid #ddd;
-                border-radius: 4px;
-            }
-            
+            /* テーブルコンテナ */
             table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
                 font-size: 14px;
             }
             
             th, td {
                 padding: 8px;
+                min-width: 100px;
             }
             
-            /* 横スクロール可能であることを示す */
-            .table-wrapper::after {
-                content: "← スクロール可能 →";
-                display: block;
-                text-align: center;
-                color: #666;
-                font-size: 12px;
-                padding: 5px;
+            /* 最初の列を固定 */
+            tbody tr td:first-child,
+            thead tr th:first-child {
+                position: sticky;
+                left: 0;
+                background-color: white;
+                z-index: 1;
+                border-right: 2px solid #3498db;
+            }
+            
+            thead tr th:first-child {
+                background-color: #3498db;
+            }
+            
+            tbody tr:nth-child(even) td:first-child {
+                background-color: #f2f2f2;
             }
         }
         
@@ -107,6 +97,7 @@ def get_responsive_table_css():
             
             th, td {
                 padding: 6px;
+                min-width: 80px;
             }
         }
     """
