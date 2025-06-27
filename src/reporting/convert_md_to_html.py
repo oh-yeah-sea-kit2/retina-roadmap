@@ -5,6 +5,7 @@ MarkdownファイルをHTMLに変換（ナビゲーション付き）
 
 import markdown
 from pathlib import Path
+from html_utils import convert_markdown_to_html, get_responsive_table_css
 
 def convert_with_nav(md_file, title):
     """Markdownファイルをナビゲーション付きHTMLに変換"""
@@ -78,19 +79,24 @@ def convert_with_nav(md_file, title):
         a:hover {{
             text-decoration: underline;
         }}
-        table {{
-            border-collapse: collapse;
-            width: 100%;
-            margin: 20px 0;
+        /* フォーカス時の視認性向上 */
+        a:focus, button:focus, input:focus, select:focus, textarea:focus {{
+            outline: 3px solid #ff6600;
+            outline-offset: 2px;
         }}
-        th, td {{
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
+        /* スキップリンク */
+        .skip-link {{
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            z-index: 999;
         }}
-        th {{
-            background-color: #3498db;
-            color: white;
+        .skip-link:focus {{
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
         }}
         code {{
             background-color: #f4f4f4;
@@ -103,12 +109,16 @@ def convert_with_nav(md_file, title):
             border-radius: 5px;
             overflow-x: auto;
         }}
+        {get_responsive_table_css()}
     </style>
 </head>
 <body>
+    <!-- スキップリンク -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+    
     <div class="container">
         <!-- ナビゲーション -->
-        <nav>
+        <nav role="navigation" aria-label="サイト内ナビゲーション">
             <h3>関連ページ</h3>
             <ul>
                 <li>📊 <a href="index.html">メインレポート</a> - 詳細な予測データ</li>
@@ -121,21 +131,28 @@ def convert_with_nav(md_file, title):
             </ul>
         </nav>
         
-        <!-- Content will be inserted here -->
+        <main id="main-content" role="main">
+            <!-- Content will be inserted here -->
+        </main>
     </div>
+    
+    <footer role="contentinfo" style="margin-top: 50px; padding: 20px; background: #f0f0f0; text-align: center;">
+        <p>アクセシビリティについて：このサイトは網膜色素変性症の方々にも利用しやすいよう配慮して作成されています。</p>
+        <p>改善提案は <a href="https://github.com/oh-yeah-sea-kit2/retina-roadmap/issues">GitHub</a> までお寄せください。</p>
+    </footer>
 </body>
 </html>"""
     
-    # Markdownを変換
-    md = markdown.Markdown(extensions=['tables', 'fenced_code', 'nl2br', 'extra'])
-    html_content = md.convert(md_content)
-    
-    # リンクを修正（.mdを.htmlに変換）
-    html_content = html_content.replace('.md"', '.html"')
-    html_content = html_content.replace('.md#', '.html#')
+    # Markdownを変換（HTML処理も含む）
+    html_content = convert_markdown_to_html(md_content)
     
     # HTMLテンプレートに挿入
     final_html = html_template.replace("<!-- Content will be inserted here -->", html_content)
+    
+    # 見出しにaria-labelを追加（必要に応じて）
+    final_html = final_html.replace('<h1>', '<h1 role="heading" aria-level="1">')
+    final_html = final_html.replace('<h2>', '<h2 role="heading" aria-level="2">')
+    final_html = final_html.replace('<h3>', '<h3 role="heading" aria-level="3">')
     
     # 出力ファイル名を生成
     output_file = md_file.with_suffix('.html')
@@ -160,7 +177,8 @@ def main():
         ("publication_disclaimer.md", "免責事項"),
         ("publication_checklist.md", "公開前チェックリスト"),
         ("current_status_facts.md", "網膜色素変性症治療開発の現状"),
-        ("ai_predictions.md", "AI予測による治療承認時期の分析")
+        ("ai_predictions.md", "AI予測による治療承認時期の分析"),
+        ("regional_approval_timeline.md", "地域別承認予測タイムライン")
     ]
     
     for filename, title in files_to_convert:

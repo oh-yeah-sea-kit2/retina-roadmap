@@ -9,6 +9,7 @@ from pathlib import Path
 from datetime import datetime
 import json
 import yaml
+from html_utils import convert_markdown_to_html, get_responsive_table_css
 
 
 def load_all_data():
@@ -317,29 +318,15 @@ def convert_to_html(markdown_content, output_file):
         h3 {
             color: #7f8c8d;
         }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin: 20px 0;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-        th {
-            background-color: #3498db;
-            color: white;
-        }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
+{get_responsive_table_css()}
         img {
             max-width: 100%;
             height: auto;
             margin: 20px 0;
             border: 1px solid #ddd;
             border-radius: 5px;
+            /* 画像にキャプションを正しく設定 */
+            display: block;
         }
         .summary-box {
             background-color: #e8f4f8;
@@ -355,6 +342,19 @@ def convert_to_html(markdown_content, output_file):
         strong {
             color: #2c3e50;
         }
+        /* フォーカス時の視認性向上 */
+        a:focus, button:focus, input:focus, select:focus, textarea:focus {
+            outline: 3px solid #ff6600;
+            outline-offset: 2px;
+        }
+        /* スキップリンクのスタイル */
+        .skip-link:focus {
+            position: static;
+            background: #000;
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -369,7 +369,7 @@ def convert_to_html(markdown_content, output_file):
     
     <div class="container" id="main-content" role="main">
         <!-- ナビゲーション -->
-        <nav style="background: #e8f4f8; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
+        <nav role="navigation" aria-label="サイト内ナビゲーション" style="background: #e8f4f8; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
             <h2 style="font-size: 1.2em; margin: 0 0 10px 0;">関連ページ</h2>
             <ul style="list-style: none; padding: 0; margin: 0;">
                 <li style="margin: 5px 0;">📊 <a href="index.html">メインレポート（このページ）</a></li>
@@ -395,14 +395,8 @@ def convert_to_html(markdown_content, output_file):
 </body>
 </html>"""
     
-    # Markdownを変換（改行処理を改善）
-    md = markdown.Markdown(extensions=['tables', 'fenced_code', 'nl2br', 'extra', 'attr_list'])
-    html_content = md.convert(markdown_content)
-    
-    # HTMLリンクを修正（.mdを.htmlに変換）
-    html_content = html_content.replace('href="simulation_methodology.md"', 'href="simulation_methodology.html"')
-    html_content = html_content.replace('href="reality_and_actions.md"', 'href="reality_and_actions.html"')
-    html_content = html_content.replace('href="bottlenecks.md"', 'href="bottlenecks.html"')
+    # Markdownを変換（URLリンク化とレスポンシブテーブル対応を含む）
+    html_content = convert_markdown_to_html(markdown_content)
     
     # HTMLテンプレートに挿入（{{と}}をエスケープ）
     final_html = html_template.replace("{content}", html_content)

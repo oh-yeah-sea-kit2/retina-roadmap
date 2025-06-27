@@ -62,19 +62,24 @@
         a:hover {
             text-decoration: underline;
         }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin: 20px 0;
+        /* フォーカス時の視認性向上 */
+        a:focus, button:focus, input:focus, select:focus, textarea:focus {
+            outline: 3px solid #ff6600;
+            outline-offset: 2px;
         }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
+        /* スキップリンク */
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            z-index: 999;
         }
-        th {
-            background-color: #3498db;
-            color: white;
+        .skip-link:focus {
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
         }
         code {
             background-color: #f4f4f4;
@@ -87,13 +92,87 @@
             border-radius: 5px;
             overflow-x: auto;
         }
+        
+        /* レスポンシブテーブル */
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 20px 0;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 600px;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        /* スマホ対応 */
+        @media screen and (max-width: 768px) {
+            .table-wrapper {
+                border: 1px solid #ddd;
+                border-radius: 4px;
+            }
+            
+            table {
+                font-size: 14px;
+            }
+            
+            th, td {
+                padding: 8px;
+            }
+            
+            /* 横スクロール可能であることを示す */
+            .table-wrapper::after {
+                content: "← スクロール可能 →";
+                display: block;
+                text-align: center;
+                color: #666;
+                font-size: 12px;
+                padding: 5px;
+            }
+        }
+        
+        /* より小さい画面用の調整 */
+        @media screen and (max-width: 480px) {
+            table {
+                font-size: 12px;
+            }
+            
+            th, td {
+                padding: 6px;
+            }
+        }
+    
     </style>
 </head>
 <body>
+    <!-- スキップリンク -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+    
     <div class="container">
         <!-- ナビゲーション -->
-        <nav>
-            <h3>関連ページ</h3>
+        <nav role="navigation" aria-label="サイト内ナビゲーション">
+            <h3 role="heading" aria-level="3">関連ページ</h3>
             <ul>
                 <li>📊 <a href="index.html">メインレポート</a> - 詳細な予測データ</li>
                 <li>🎯 <a href="reality_and_actions.html">現実的なアクションガイド</a> - 今すぐできる5つの行動</li>
@@ -105,9 +184,10 @@
             </ul>
         </nav>
         
-        <h1>AI予測による治療承認時期の分析</h1>
+        <main id="main-content" role="main">
+            <h1 role="heading" aria-level="1">AI予測による治療承認時期の分析</h1>
 <p>最終更新: 2025年6月26日</p>
-<h2>⚠️ 重要：これは予測です</h2>
+<h2 role="heading" aria-level="2">⚠️ 重要：これは予測です</h2>
 <p><strong>以下の内容はAI（モンテカルロシミュレーション）による予測であり、保証するものではありません。</strong></p>
 <ul>
 <li>予測には必ず誤差があります</li>
@@ -116,15 +196,15 @@
 </ul>
 <p>詳細な計算方法は<a href="simulation_methodology.html">シミュレーション方法論</a>をご覧ください。</p>
 <hr />
-<h2>🤖 予測の前提条件</h2>
-<h3>シミュレーション設定</h3>
+<h2 role="heading" aria-level="2">🤖 予測の前提条件</h2>
+<h3 role="heading" aria-level="3">シミュレーション設定</h3>
 <ul>
 <li><strong>手法</strong>: モンテカルロシミュレーション（10,000回/プログラム）</li>
 <li><strong>データソース</strong>: ClinicalTrials.govの実績データ（127試験）</li>
 <li><strong>基準日</strong>: 2025年6月26日</li>
 <li><strong>成功率</strong>: 過去のRP試験実績に基づく</li>
 </ul>
-<h3>考慮した要因</h3>
+<h3 role="heading" aria-level="3">考慮した要因</h3>
 <ol>
 <li>各フェーズの成功率（実績ベース）</li>
 <li>開発期間の分布（三角分布）</li>
@@ -132,15 +212,15 @@
 <li>遺伝子治療特有のリスク</li>
 </ol>
 <hr />
-<h2>📊 主要な予測結果</h2>
-<h3>最速承認予測</h3>
-<table>
+<h2 role="heading" aria-level="2">📊 主要な予測結果</h2>
+<h3 role="heading" aria-level="3">最速承認予測（米国FDA基準）</h3>
+<div class="table-wrapper"><table>
 <thead>
 <tr>
 <th>順位</th>
 <th>治療法</th>
 <th>企業</th>
-<th>承認予測（中央値）</th>
+<th>FDA承認予測（中央値）</th>
 <th>90%信頼区間</th>
 </tr>
 </thead>
@@ -149,166 +229,206 @@
 <td>1</td>
 <td>MCO-010</td>
 <td>Nanoscope</td>
-<td><strong>2027年</strong></td>
-<td>2026-2028年</td>
+<td><strong>2026年</strong></td>
+<td>2025-2027年</td>
 </tr>
 <tr>
 <td>2</td>
 <td>OCU400</td>
 <td>Ocugen</td>
-<td><strong>2029年</strong></td>
-<td>2027-2031年</td>
+<td><strong>2027年</strong></td>
+<td>2026-2029年</td>
 </tr>
 <tr>
 <td>3</td>
-<td>Botaretigene</td>
-<td>Janssen</td>
-<td><strong>2030年</strong></td>
-<td>2028-2033年</td>
+<td>VP-001</td>
+<td>PYC Therapeutics</td>
+<td><strong>2029年</strong></td>
+<td>2028-2031年</td>
 </tr>
 <tr>
 <td>4</td>
-<td>BIIB111</td>
-<td>Biogen</td>
-<td><strong>2031年</strong></td>
-<td>2029-2034年</td>
+<td>AGTC-501</td>
+<td>Beacon</td>
+<td><strong>2029年</strong></td>
+<td>2028-2031年</td>
 </tr>
 </tbody>
-</table>
-<h3>なぜMCO-010が最速なのか</h3>
+</table></div>
+<h3 role="heading" aria-level="3">日本での承認予測</h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>治療法</th>
+<th>FDA承認予測</th>
+<th>日本承認（標準的予測）</th>
+<th>日本承認（楽観的）</th>
+<th>日本承認（保守的）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MCO-010</td>
+<td>2026年</td>
+<td><strong>2031年</strong>（+5年）</td>
+<td>2029年（+3年）</td>
+<td>2033年（+7年）</td>
+</tr>
+<tr>
+<td>OCU400</td>
+<td>2027年</td>
+<td><strong>2032年</strong>（+5年）</td>
+<td>2030年（+3年）</td>
+<td>2034年（+7年）</td>
+</tr>
+</tbody>
+</table></div>
+<p>※過去実績（Luxturna: FDA 2017年→日本 2023年）に基づく推定</p>
+<h3 role="heading" aria-level="3">なぜMCO-010が最速なのか</h3>
 <ol>
-<li><strong>Phase 3完了済み</strong>（2024年11月）</li>
-<li><strong>2025年Q1にBLA申請予定</strong>（公式発表）</li>
+<li><strong>Phase 3（RESTORE試験）完了済み</strong>（2024年、統計的有意性達成）</li>
+<li><strong>2025年6月に段階的BLA申請開始</strong>（最新情報）</li>
 <li><strong>Fast Track指定</strong>により審査期間短縮</li>
-<li><strong>遺伝子型非依存</strong>で対象患者が広い</li>
+<li><strong>遺伝子型非依存（gene-agnostic）</strong>で対象患者が広い</li>
+<li><strong>スターガルト病への適応拡大</strong>も検討中</li>
+</ol>
+<h3 role="heading" aria-level="3">なぜOCU400も有望なのか</h3>
+<ol>
+<li><strong>Phase 1/2の2年データで100%改善/維持</strong>（2025年1月発表）</li>
+<li><strong>100以上の遺伝子変異に対応可能</strong></li>
+<li><strong>FDA RMAT指定とEMA ATMP分類</strong>取得</li>
+<li><strong>2026年中頃にBLA/MAA申請予定</strong>（スケジュール通り）</li>
 </ol>
 <hr />
-<h2>📈 時系列予測</h2>
-<h3>2025-2030年</h3>
+<h2 role="heading" aria-level="2">📈 時系列予測</h2>
+<h3 role="heading" aria-level="3">2025-2030年</h3>
 <ul>
-<li><strong>2025年</strong>: MCO-010がBLA申請（確定事項）</li>
-<li><strong>2026-2027年</strong>: MCO-010承認の可能性（60-70%）</li>
-<li><strong>2028年</strong>: 2-3の治療法が利用可能に（40%）</li>
-<li><strong>2029年</strong>: OCU400承認の可能性（50%）</li>
+<li><strong>2025年</strong>: MCO-010が6月にBLA申請開始（確定事項）</li>
+<li><strong>2026年</strong>: MCO-010承認の可能性（70-80%）、OCU400がBLA/MAA申請</li>
+<li><strong>2027年</strong>: OCU400承認の可能性（60-70%）</li>
+<li><strong>2028年</strong>: 3-4の治療法が利用可能に（50%）</li>
+<li><strong>2029年</strong>: VP-001、AGTC-501承認の可能性（40%）</li>
 <li><strong>2030年</strong>: 5-7の治療法が利用可能（中央値予測）</li>
 </ul>
-<h3>2031-2035年</h3>
+<h3 role="heading" aria-level="3">2031-2035年</h3>
 <ul>
 <li><strong>累積承認数</strong>: 10-15の治療法</li>
 <li><strong>カバー率</strong>: RP患者の60-80%に何らかの治療オプション</li>
 <li><strong>第2世代治療</strong>: より効果的な改良版が登場</li>
 </ul>
-<h3>2036年以降</h3>
+<h3 role="heading" aria-level="3">2036年以降</h3>
 <ul>
 <li><strong>汎用治療</strong>: 遺伝子型に関係ない治療が主流に</li>
 <li><strong>予防的介入</strong>: 発症前の遺伝子治療が可能に</li>
 <li><strong>完全な視力回復</strong>: 一部の患者で実現の可能性</li>
 </ul>
 <hr />
-<h2>🎯 予測の信頼度</h2>
-<h3>高信頼度（80%以上）</h3>
+<h2 role="heading" aria-level="2">🎯 予測の信頼度</h2>
+<h3 role="heading" aria-level="3">高信頼度（80%以上）</h3>
 <ul>
-<li>MCO-010が2025年にBLA申請 ✓（公式発表済み）</li>
+<li>MCO-010が2025年6月にBLA申請開始 ✓（最新情報で確認）</li>
+<li>MCO-010のRESTORE試験成功 ✓（統計的有意性達成）</li>
+<li>OCU400の2年データで100%改善/維持 ✓（2025年1月発表）</li>
 <li>2030年までに複数の治療法が承認される</li>
 <li>遺伝子治療が主流になる</li>
 </ul>
-<h3>中信頼度（50-80%）</h3>
+<h3 role="heading" aria-level="3">中信頼度（50-80%）</h3>
 <ul>
 <li>MCO-010が2027年までに承認</li>
 <li>2030年までに5つ以上の治療法</li>
 <li>日本での承認は米国の1-2年後</li>
 </ul>
-<h3>低信頼度（50%未満）</h3>
+<h3 role="heading" aria-level="3">低信頼度（50%未満）</h3>
 <ul>
 <li>具体的な承認日</li>
 <li>全試験の成功</li>
 <li>予期せぬブレークスルー</li>
 </ul>
 <hr />
-<h2>📉 リスク要因（予測が遅れる可能性）</h2>
-<h3>技術的リスク</h3>
+<h2 role="heading" aria-level="2">📉 リスク要因（予測が遅れる可能性）</h2>
+<h3 role="heading" aria-level="3">技術的リスク</h3>
 <ul>
 <li><strong>製造スケールアップの課題</strong>（20-30%）</li>
 <li><strong>長期安全性の問題</strong>（10-15%）</li>
 <li><strong>効果の個人差</strong>（30-40%）</li>
 </ul>
-<h3>規制リスク</h3>
+<h3 role="heading" aria-level="3">規制リスク</h3>
 <ul>
 <li><strong>追加データ要求</strong>（30%）</li>
 <li><strong>製造基準の厳格化</strong>（20%）</li>
 <li><strong>審査の遅延</strong>（40%）</li>
 </ul>
-<h3>外的要因</h3>
+<h3 role="heading" aria-level="3">外的要因</h3>
 <ul>
 <li><strong>パンデミック等の影響</strong>（10%）</li>
 <li><strong>経済状況による開発中止</strong>（5-10%）</li>
 <li><strong>企業の戦略変更</strong>（15%）</li>
 </ul>
 <hr />
-<h2>🚀 予測を加速する要因</h2>
-<h3>AI・技術革新による加速</h3>
+<h2 role="heading" aria-level="2">🚀 予測を加速する要因</h2>
+<h3 role="heading" aria-level="3">AI・技術革新による加速</h3>
 <ul>
 <li><strong>創薬AI</strong>: 開発期間を40-50%短縮の実例</li>
 <li><strong>製造技術</strong>: 自動化により品質向上・コスト削減</li>
 <li><strong>バイオマーカー</strong>: 効果予測の精度向上</li>
 </ul>
 <p>詳細: <a href="ai_acceleration_impact.html">AI活用による開発加速予測</a></p>
-<h3>規制の進化</h3>
+<h3 role="heading" aria-level="3">規制の進化</h3>
 <ul>
 <li><strong>条件付き早期承認</strong>の活用</li>
 <li><strong>リアルワールドデータ</strong>の受け入れ</li>
 <li><strong>国際協調</strong>による同時承認</li>
 </ul>
-<h3>投資の増加</h3>
+<h3 role="heading" aria-level="3">投資の増加</h3>
 <ul>
 <li><strong>2024年</strong>: RP領域に10億ドル以上の投資</li>
 <li><strong>大手製薬の参入</strong>: J&amp;J、Biogen、Rocheなど</li>
 <li><strong>政府支援</strong>: 希少疾患研究への助成拡大</li>
 </ul>
 <hr />
-<h2>📊 シナリオ別予測</h2>
-<h3>🌟 ベストケース（楽観的・20%の確率）</h3>
+<h2 role="heading" aria-level="2">📊 シナリオ別予測</h2>
+<h3 role="heading" aria-level="3">🌟 ベストケース（楽観的・20%の確率）</h3>
 <ul>
 <li>2026年: MCO-010承認</li>
 <li>2028年: 3-4の治療法が利用可能</li>
 <li>2030年: 主要な遺伝子変異すべてに治療法</li>
 </ul>
-<h3>📈 ベースケース（中央値・50%の確率）</h3>
+<h3 role="heading" aria-level="3">📈 ベースケース（中央値・50%の確率）</h3>
 <ul>
 <li>2027年: MCO-010承認</li>
 <li>2030年: 5-7の治療法が利用可能</li>
 <li>2035年: 80%の患者に治療オプション</li>
 </ul>
-<h3>📉 ワーストケース（悲観的・30%の確率）</h3>
+<h3 role="heading" aria-level="3">📉 ワーストケース（悲観的・30%の確率）</h3>
 <ul>
 <li>2029年: 最初の承認</li>
 <li>2035年: 3-4の治療法のみ</li>
 <li>限定的な効果、高額な治療費</li>
 </ul>
 <hr />
-<h2>🎲 予測の限界</h2>
-<h3>モデルに含まれていない要因</h3>
+<h2 role="heading" aria-level="2">🎲 予測の限界</h2>
+<h3 role="heading" aria-level="3">モデルに含まれていない要因</h3>
 <ol>
 <li><strong>革新的技術</strong>の突然の登場</li>
 <li><strong>企業買収</strong>による開発方針変更</li>
 <li><strong>新たな規制</strong>の導入</li>
 <li><strong>社会情勢</strong>の大きな変化</li>
 </ol>
-<h3>データの限界</h3>
+<h3 role="heading" aria-level="3">データの限界</h3>
 <ul>
 <li>企業の非公開パイプライン</li>
 <li>初期段階の研究</li>
 <li>アカデミアの基礎研究</li>
 </ul>
 <hr />
-<h2>💡 予測から分かること</h2>
-<h3>確実性の高い未来</h3>
+<h2 role="heading" aria-level="2">💡 予測から分かること</h2>
+<h3 role="heading" aria-level="3">確実性の高い未来</h3>
 <ol>
 <li><strong>複数の治療法が登場する</strong>（90%以上の確率）</li>
 <li><strong>遺伝子治療が中心になる</strong>（80%以上）</li>
 <li><strong>段階的に対象が拡大する</strong>（95%以上）</li>
 </ol>
-<h3>重要な示唆</h3>
+<h3 role="heading" aria-level="3">重要な示唆</h3>
 <ol>
 <li><strong>今から準備することが重要</strong></li>
 <li>遺伝子検査</li>
@@ -332,7 +452,7 @@
 <li>生活の質の改善</li>
 </ol>
 <hr />
-<h2>🔗 関連情報</h2>
+<h2 role="heading" aria-level="2">🔗 関連情報</h2>
 <ul>
 <li><strong><a href="current_status_facts.html">現在の事実のみ</a></strong> - 予測を含まない現状</li>
 <li><strong><a href="simulation_methodology.html">シミュレーション方法論</a></strong> - 詳細な計算方法</li>
@@ -340,8 +460,14 @@
 <li><strong><a href="faq.html">よくある質問</a></strong> - 予測に関する疑問</li>
 </ul>
 <hr />
-<h2>免責事項</h2>
+<h2 role="heading" aria-level="2">免責事項</h2>
 <p>本予測は統計的手法に基づくものであり、実際の承認時期を保証するものではありません。治療に関する決定は必ず医療専門家にご相談ください。予測は定期的に更新されますが、最新の臨床試験結果により大きく変わる可能性があります。</p>
+        </main>
     </div>
+    
+    <footer role="contentinfo" style="margin-top: 50px; padding: 20px; background: #f0f0f0; text-align: center;">
+        <p>アクセシビリティについて：このサイトは網膜色素変性症の方々にも利用しやすいよう配慮して作成されています。</p>
+        <p>改善提案は <a href="https://github.com/oh-yeah-sea-kit2/retina-roadmap/issues">GitHub</a> までお寄せください。</p>
+    </footer>
 </body>
 </html>

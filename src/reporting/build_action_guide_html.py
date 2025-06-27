@@ -5,6 +5,7 @@ reality_and_actions.mdをHTMLに変換
 
 import markdown
 from pathlib import Path
+from html_utils import convert_markdown_to_html, get_responsive_table_css
 
 
 def convert_action_guide():
@@ -91,6 +92,25 @@ def convert_action_guide():
         a:hover {
             text-decoration: underline;
         }
+        /* フォーカス時の視認性向上 */
+        a:focus, button:focus, input:focus, select:focus, textarea:focus {
+            outline: 3px solid #ff6600;
+            outline-offset: 2px;
+        }
+        /* スキップリンク */
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            z-index: 999;
+        }
+        .skip-link:focus {
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+        }
         .back-link {
             margin: 20px 0;
             font-size: 16px;
@@ -128,6 +148,7 @@ def convert_action_guide():
             padding: 2px 5px;
             border-radius: 3px;
         }
+        {get_responsive_table_css()}
         /* タイムラインセクション */
         .timeline {
             background-color: #f0f8ff;
@@ -152,9 +173,12 @@ def convert_action_guide():
     </style>
 </head>
 <body>
+    <!-- スキップリンク -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+    
     <div class="container">
         <!-- ナビゲーション -->
-        <nav style="background: #e8f4f8; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
+        <nav role="navigation" aria-label="サイト内ナビゲーション" style="background: #e8f4f8; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
             <h3 style="font-size: 1.2em; margin: 0 0 10px 0;">関連ページ</h3>
             <ul style="list-style: none; padding: 0; margin: 0;">
                 <li style="margin: 5px 0;">📊 <a href="index.html">メインレポート</a> - 詳細な予測データ</li>
@@ -168,26 +192,27 @@ def convert_action_guide():
             </ul>
         </nav>
         
-        <div class="back-link">
-            <a href="index.html">← メインレポートに戻る</a>
-        </div>
-        {content}
+        <main id="main-content" role="main">
+            <div class="back-link">
+                <a href="index.html">← メインレポートに戻る</a>
+            </div>
+            {content}
         <div class="back-link" style="margin-top: 50px; text-align: center;">
             <a href="index.html">← メインレポートに戻る</a> | 
             <a href="bottlenecks.html">開発ボトルネック分析 →</a>
         </div>
+        </main>
     </div>
+    
+    <footer role="contentinfo" style="margin-top: 50px; padding: 20px; background: #f0f0f0; text-align: center;">
+        <p>アクセシビリティについて：このサイトは網膜色素変性症の方々にも利用しやすいよう配慮して作成されています。</p>
+        <p>改善提案は <a href="https://github.com/oh-yeah-sea-kit2/retina-roadmap/issues">GitHub</a> までお寄せください。</p>
+    </footer>
 </body>
 </html>"""
     
-    # Markdownを変換（改行を適切に処理する拡張機能を追加）
-    md = markdown.Markdown(extensions=['tables', 'fenced_code', 'nl2br', 'extra'])
-    html_content = md.convert(md_content)
-    
-    # リンクを修正（.mdを.htmlに変換）
-    html_content = html_content.replace('href="simulation_methodology.md"', 'href="simulation_methodology.html"')
-    html_content = html_content.replace('href="index.md"', 'href="index.html"')
-    html_content = html_content.replace('href="bottlenecks.md"', 'href="bottlenecks.html"')
+    # Markdownを変換（URLリンク化とレスポンシブテーブル対応を含む）
+    html_content = convert_markdown_to_html(md_content)
     
     # リストの不適切な処理を修正
     # 番号付きリストが分割されている場合の修正

@@ -54,29 +54,15 @@
         h3 {
             color: #7f8c8d;
         }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin: 20px 0;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-        th {
-            background-color: #3498db;
-            color: white;
-        }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
+{get_responsive_table_css()}
         img {
             max-width: 100%;
             height: auto;
             margin: 20px 0;
             border: 1px solid #ddd;
             border-radius: 5px;
+            /* 画像にキャプションを正しく設定 */
+            display: block;
         }
         .summary-box {
             background-color: #e8f4f8;
@@ -92,6 +78,19 @@
         strong {
             color: #2c3e50;
         }
+        /* フォーカス時の視認性向上 */
+        a:focus, button:focus, input:focus, select:focus, textarea:focus {
+            outline: 3px solid #ff6600;
+            outline-offset: 2px;
+        }
+        /* スキップリンクのスタイル */
+        .skip-link:focus {
+            position: static;
+            background: #000;
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -106,7 +105,7 @@
     
     <div class="container" id="main-content" role="main">
         <!-- ナビゲーション -->
-        <nav style="background: #e8f4f8; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
+        <nav role="navigation" aria-label="サイト内ナビゲーション" style="background: #e8f4f8; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
             <h2 style="font-size: 1.2em; margin: 0 0 10px 0;">関連ページ</h2>
             <ul style="list-style: none; padding: 0; margin: 0;">
                 <li style="margin: 5px 0;">📊 <a href="index.html">メインレポート（このページ）</a></li>
@@ -122,13 +121,13 @@
         </nav>
         
         <h1>網膜色素変性症（RP）治療開発ロードマップ</h1>
-<p>生成日時: 2025年06月27日 04:21</p>
+<p>生成日時: 2025年06月28日 03:40</p>
 <h2>エグゼクティブサマリー</h2>
 <p>本レポートは、網膜色素変性症（Retinitis Pigmentosa, RP）の治療法開発状況を定量的に分析し、効果的な治療法がいつ頃利用可能になるかを予測したものです。</p>
 <h3>主要な発見（米国FDA承認基準）</h3>
 <ul>
 <li><strong>最速の承認予測</strong>: 2026年（MCO-010光遺伝学治療）</li>
-<li>根拠: https://clinicaltrials.gov/study/NCT04945772</li>
+<li>根拠: <a href="https://clinicaltrials.gov/study/NCT04945772" target="_blank" rel="noopener noreferrer">https://clinicaltrials.gov/study/NCT04945772</a></li>
 <li><strong>全体の中央値</strong>: 2037年（複数の治療法が利用可能になる時期）</li>
 <li><strong>現在アクティブな臨床試験</strong>: 54件（重要な完了試験含む）</li>
 <li><strong>成功率</strong>: Phase 1: 86.2%, Phase 2: 78.4%, Phase 3: 71.4%</li>
@@ -153,7 +152,7 @@
 <li><strong>期間</strong>: 1993-2025年</li>
 </ul>
 <h4>年別論文数（直近5年）</h4>
-<table>
+<div class="table-wrapper"><table>
 <thead>
 <tr>
 <th>年</th>
@@ -182,7 +181,7 @@
 <td>64</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2>2. モンテカルロシミュレーション結果</h2>
 <h3>予測手法</h3>
 <ul>
@@ -191,7 +190,7 @@
 <li><strong>パラメータ</strong>: 実データから推定した成功率と期間</li>
 </ul>
 <h3>最も有望な治療プログラム（米国FDA承認予測年順）</h3>
-<table>
+<div class="table-wrapper"><table>
 <thead>
 <tr>
 <th>試験ID</th>
@@ -306,10 +305,10 @@
 <td>[2031, 2033]</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h3>日本での承認予測</h3>
 <p>過去の実績（Luxturna: FDA承認2017年→日本承認2023年、約5.5年の遅延）に基づく予測：</p>
-<table>
+<div class="table-wrapper"><table>
 <thead>
 <tr>
 <th>治療法</th>
@@ -356,7 +355,7 @@
 <td>+5.0年</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>詳細は<a href="regional_approval_timeline.html">地域別承認予測タイムライン</a>をご覧ください。</p>
 <h3>治療モダリティ別の状況</h3>
 <h4>遺伝子治療</h4>
@@ -430,19 +429,19 @@
 <h2>7. 根拠・参照資料</h2>
 <h3>データソース</h3>
 <ul>
-<li><strong>ClinicalTrials.gov</strong>: https://clinicaltrials.gov/</li>
-<li><strong>RP臨床試験検索</strong>: https://clinicaltrials.gov/search?cond=Retinitis%20Pigmentosa</li>
+<li><strong>ClinicalTrials.gov</strong>: <a href="https://clinicaltrials.gov/" target="_blank" rel="noopener noreferrer">https://clinicaltrials.gov/</a></li>
+<li><strong>RP臨床試験検索</strong>: <a href="https://clinicaltrials.gov/search?cond=Retinitis%20Pigmentosa" target="_blank" rel="noopener noreferrer">https://clinicaltrials.gov/search?cond=Retinitis%20Pigmentosa</a></li>
 <li><strong>データ取得日</strong>: 2025年6月26日</li>
 </ul>
 <h3>主要試験の詳細</h3>
 <ul>
-<li><strong>MCO-010（Nanoscope）</strong>: https://clinicaltrials.gov/study/NCT04945772</li>
-<li><strong>OCU400（Ocugen）</strong>: https://clinicaltrials.gov/study/NCT05203939</li>
-<li><strong>ソースコード</strong>: https://github.com/oh-yeah-sea-kit2/retina-roadmap</li>
+<li><strong>MCO-010（Nanoscope）</strong>: <a href="https://clinicaltrials.gov/study/NCT04945772" target="_blank" rel="noopener noreferrer">https://clinicaltrials.gov/study/NCT04945772</a></li>
+<li><strong>OCU400（Ocugen）</strong>: <a href="https://clinicaltrials.gov/study/NCT05203939" target="_blank" rel="noopener noreferrer">https://clinicaltrials.gov/study/NCT05203939</a></li>
+<li><strong>ソースコード</strong>: <a href="https://github.com/oh-yeah-sea-kit2/retina-roadmap" target="_blank" rel="noopener noreferrer">https://github.com/oh-yeah-sea-kit2/retina-roadmap</a></li>
 </ul>
 <h2>8. 更新履歴</h2>
 <p>本レポートは自動的に生成・更新されます。最新版は以下でご確認ください：<br />
-https://oh-yeah-sea-kit2.github.io/retina-roadmap/</p>
+<a href="https://oh-yeah-sea-kit2.github.io/retina-roadmap/" target="_blank" rel="noopener noreferrer">https://oh-yeah-sea-kit2.github.io/retina-roadmap/</a></p>
 <h2>---</h2>
 <h2>⚠️ 重要な免責事項</h2>
 <p><strong>本レポートは研究目的で作成されており、医学的助言ではありません。</strong></p>

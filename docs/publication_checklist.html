@@ -62,19 +62,24 @@
         a:hover {
             text-decoration: underline;
         }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin: 20px 0;
+        /* フォーカス時の視認性向上 */
+        a:focus, button:focus, input:focus, select:focus, textarea:focus {
+            outline: 3px solid #ff6600;
+            outline-offset: 2px;
         }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
+        /* スキップリンク */
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            z-index: 999;
         }
-        th {
-            background-color: #3498db;
-            color: white;
+        .skip-link:focus {
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
         }
         code {
             background-color: #f4f4f4;
@@ -87,13 +92,87 @@
             border-radius: 5px;
             overflow-x: auto;
         }
+        
+        /* レスポンシブテーブル */
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 20px 0;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 600px;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        /* スマホ対応 */
+        @media screen and (max-width: 768px) {
+            .table-wrapper {
+                border: 1px solid #ddd;
+                border-radius: 4px;
+            }
+            
+            table {
+                font-size: 14px;
+            }
+            
+            th, td {
+                padding: 8px;
+            }
+            
+            /* 横スクロール可能であることを示す */
+            .table-wrapper::after {
+                content: "← スクロール可能 →";
+                display: block;
+                text-align: center;
+                color: #666;
+                font-size: 12px;
+                padding: 5px;
+            }
+        }
+        
+        /* より小さい画面用の調整 */
+        @media screen and (max-width: 480px) {
+            table {
+                font-size: 12px;
+            }
+            
+            th, td {
+                padding: 6px;
+            }
+        }
+    
     </style>
 </head>
 <body>
+    <!-- スキップリンク -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+    
     <div class="container">
         <!-- ナビゲーション -->
-        <nav>
-            <h3>関連ページ</h3>
+        <nav role="navigation" aria-label="サイト内ナビゲーション">
+            <h3 role="heading" aria-level="3">関連ページ</h3>
             <ul>
                 <li>📊 <a href="index.html">メインレポート</a> - 詳細な予測データ</li>
                 <li>🎯 <a href="reality_and_actions.html">現実的なアクションガイド</a> - 今すぐできる5つの行動</li>
@@ -105,61 +184,62 @@
             </ul>
         </nav>
         
-        <h1>公開前チェックリスト</h1>
-<h2>法的・倫理的確認</h2>
+        <main id="main-content" role="main">
+            <h1 role="heading" aria-level="1">公開前チェックリスト</h1>
+<h2 role="heading" aria-level="2">法的・倫理的確認</h2>
 <ul>
 <li>[ ] すべてのページに免責事項が明記されているか</li>
 <li>[ ] 「医学的助言ではない」ことが明確か</li>
 <li>[ ] データソースと引用が適切に記載されているか</li>
 <li>[ ] 著作権や商標の問題はないか</li>
 </ul>
-<h2>内容の正確性</h2>
+<h2 role="heading" aria-level="2">内容の正確性</h2>
 <ul>
 <li>[ ] 最新の臨床試験データを反映しているか</li>
 <li>[ ] 数値や日付に誤りはないか</li>
 <li>[ ] 誤解を招く表現はないか</li>
 <li>[ ] 専門用語に適切な説明があるか</li>
 </ul>
-<h2>アクセシビリティ</h2>
+<h2 role="heading" aria-level="2">アクセシビリティ</h2>
 <ul>
 <li>[ ] スクリーンリーダー対応版が機能しているか</li>
 <li>[ ] リンクがすべて正しく動作するか</li>
 <li>[ ] 画像に代替テキストがあるか</li>
 <li>[ ] 色覚異常の方でも読みやすいか</li>
 </ul>
-<h2>心理的配慮</h2>
+<h2 role="heading" aria-level="2">心理的配慮</h2>
 <ul>
 <li>[ ] 過度な期待を与えていないか</li>
 <li>[ ] 不確実性が適切に説明されているか</li>
 <li>[ ] サポート情報が充実しているか</li>
 <li>[ ] 希望と現実のバランスが取れているか</li>
 </ul>
-<h2>推奨される追加対応</h2>
-<h3>1. 医療専門家によるレビュー</h3>
+<h2 role="heading" aria-level="2">推奨される追加対応</h2>
+<h3 role="heading" aria-level="3">1. 医療専門家によるレビュー</h3>
 <ul>
 <li>眼科医（特にRP専門医）による内容確認</li>
 <li>遺伝カウンセラーによる遺伝子検査部分の確認</li>
 <li>臨床研究者による予測手法の妥当性確認</li>
 </ul>
-<h3>2. 患者団体との連携</h3>
+<h3 role="heading" aria-level="3">2. 患者団体との連携</h3>
 <ul>
 <li>JRPSへの事前相談</li>
 <li>患者代表者からのフィードバック</li>
 <li>公開後のサポート体制の確認</li>
 </ul>
-<h3>3. 定期更新の体制</h3>
+<h3 role="heading" aria-level="3">3. 定期更新の体制</h3>
 <ul>
 <li>3ヶ月ごとのデータ更新計画</li>
 <li>重要な変更の通知方法</li>
 <li>フィードバック受付窓口の設置</li>
 </ul>
-<h3>4. 多言語対応の検討</h3>
+<h3 role="heading" aria-level="3">4. 多言語対応の検討</h3>
 <ul>
 <li>英語版の作成（国際的な情報共有）</li>
 <li>やさしい日本語版の検討</li>
 </ul>
-<h2>公開プラットフォーム</h2>
-<h3>GitHub Pages（現在）</h3>
+<h2 role="heading" aria-level="2">公開プラットフォーム</h2>
+<h3 role="heading" aria-level="3">GitHub Pages（現在）</h3>
 <p><strong>メリット</strong>:<br />
 - 無料で安定したホスティング<br />
 - バージョン管理が容易<br />
@@ -167,7 +247,7 @@
 <p><strong>デメリット</strong>:<br />
 - 一般の患者にはアクセスしにくい可能性<br />
 - SEOが弱い</p>
-<h3>追加検討事項</h3>
+<h3 role="heading" aria-level="3">追加検討事項</h3>
 <ol>
 <li><strong>JRPS公式サイトでの紹介</strong></li>
 <li>より多くの患者にリーチ</li>
@@ -187,7 +267,7 @@
 <li>眼科学会での発表検討</li>
 <li>患者向け資料としての活用</li>
 </ol>
-<h2>最終確認事項</h2>
+<h2 role="heading" aria-level="2">最終確認事項</h2>
 <p>公開前に以下を再度確認：<br />
 1. すべてのリンクが正しく機能するか<br />
 2. 個人情報や機密情報が含まれていないか<br />
@@ -196,6 +276,12 @@
 5. 更新日時が正確か</p>
 <hr />
 <p>このチェックリストに基づいて準備を進めることで、責任ある情報公開ができます。</p>
+        </main>
     </div>
+    
+    <footer role="contentinfo" style="margin-top: 50px; padding: 20px; background: #f0f0f0; text-align: center;">
+        <p>アクセシビリティについて：このサイトは網膜色素変性症の方々にも利用しやすいよう配慮して作成されています。</p>
+        <p>改善提案は <a href="https://github.com/oh-yeah-sea-kit2/retina-roadmap/issues">GitHub</a> までお寄せください。</p>
+    </footer>
 </body>
 </html>

@@ -73,6 +73,25 @@
         a:hover {
             text-decoration: underline;
         }
+        /* フォーカス時の視認性向上 */
+        a:focus, button:focus, input:focus, select:focus, textarea:focus {
+            outline: 3px solid #ff6600;
+            outline-offset: 2px;
+        }
+        /* スキップリンク */
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            z-index: 999;
+        }
+        .skip-link:focus {
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+        }
         .back-link {
             margin: 20px 0;
             font-size: 16px;
@@ -110,6 +129,7 @@
             padding: 2px 5px;
             border-radius: 3px;
         }
+        {get_responsive_table_css()}
         /* タイムラインセクション */
         .timeline {
             background-color: #f0f8ff;
@@ -134,9 +154,12 @@
     </style>
 </head>
 <body>
+    <!-- スキップリンク -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+    
     <div class="container">
         <!-- ナビゲーション -->
-        <nav style="background: #e8f4f8; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
+        <nav role="navigation" aria-label="サイト内ナビゲーション" style="background: #e8f4f8; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
             <h3 style="font-size: 1.2em; margin: 0 0 10px 0;">関連ページ</h3>
             <ul style="list-style: none; padding: 0; margin: 0;">
                 <li style="margin: 5px 0;">📊 <a href="index.html">メインレポート</a> - 詳細な予測データ</li>
@@ -150,11 +173,17 @@
             </ul>
         </nav>
         
-        <div class="back-link">
-            <a href="index.html">← メインレポートに戻る</a>
-        </div>
-        <h1>予測の現実性と私たちにできること</h1>
+        <main id="main-content" role="main">
+            <div class="back-link">
+                <a href="index.html">← メインレポートに戻る</a>
+            </div>
+            <h1>予測の現実性と私たちにできること</h1>
 <p>最終更新: 2025年6月25日</p>
+<h2>⚠️ 重要な免責事項</h2>
+<p><strong>本情報は研究に基づく予測であり、医学的助言ではありません。</strong><br />
+- 承認時期は予測であり、大幅に変わる可能性があります<br />
+- 個々の患者により効果は異なります<br />
+- 治療の決定は必ず医療専門家にご相談ください</p>
 <h2>予測の現実性について</h2>
 <blockquote>
 <p>📊 <strong>詳しい計算方法と根拠を知りたい方はこちら</strong>: <a href="simulation_methodology.html">モンテカルロシミュレーションの詳細な計算方法と根拠</a></p>
@@ -164,7 +193,7 @@
 <li><strong>高い成功率は本物</strong></li>
 <li>実際のRP臨床試験データから算出（架空の数字ではない）</li>
 <li>Phase 3成功率71.4%は、一般的な医薬品（50%）より高い</li>
-<li>これはRP試験127件の実データから算出（<a href="simulation_methodology.md#過去の成功率データ">詳細はこちら</a>）</li>
+<li>これはRP試験127件の実データから算出（<a href="simulation_methodology.html#過去の成功率データ">詳細はこちら</a>）</li>
 <li>
 <p>これは遺伝子治療技術の成熟と、希少疾患への規制緩和が要因</p>
 </li>
@@ -291,7 +320,7 @@
 <p><strong>なぜ重要か</strong>: 製薬会社は患者数データが必要。登録者が多いほど開発が加速</p>
 <p><strong>日本での登録方法</strong>:</p>
 <p><strong>ステップ1: JRPS（日本網膜色素変性症協会）に入会</strong>（1週間）<br />
-1. <strong>アクセス</strong>: https://jrps.org/<br />
+1. <strong>アクセス</strong>: <a href="https://jrps.org/" target="_blank" rel="noopener noreferrer">https://jrps.org/</a><br />
 2. <strong>入会申込</strong>: オンラインフォームor郵送<br />
 3. <strong>年会費</strong>: 5,000円（家族会員3,000円）<br />
 4. <strong>メリット</strong>: 最新治療情報、患者交流会、医療講演会</p>
@@ -304,7 +333,7 @@
 3. <strong>重要</strong>: 年1回の更新を忘れずに（メールリマインダー設定）</p>
 <p><strong>海外レジストリ（より多くの治験情報）</strong>:</p>
 <p><strong>My Retina Tracker（推奨）</strong>（英語、15分）<br />
-1. <strong>URL</strong>: https://www.myretinatracker.org/<br />
+1. <strong>URL</strong>: <a href="https://www.myretinatracker.org/" target="_blank" rel="noopener noreferrer">https://www.myretinatracker.org/</a><br />
 2. <strong>登録方法</strong>: <br />
    - 「Register」をクリック<br />
    - Google翻訳を使いながら入力<br />
@@ -335,7 +364,7 @@
    - 税制優遇: あり（確定申告で約40%還付）</p>
 <ol>
 <li><strong>理化学研究所（理研）</strong></li>
-<li>URL: https://www.riken.jp/support/</li>
+<li>URL: <a href="https://www.riken.jp/support/" target="_blank" rel="noopener noreferrer">https://www.riken.jp/support/</a></li>
 <li>寄付申込フォームで「網膜再生医療研究」を指定</li>
 <li>クレジットカード月額寄付: 1,000円から可能</li>
 </ol>
@@ -369,7 +398,7 @@
 <p><strong>なぜ重要か</strong>: 規制緩和と保険適用が普及の鍵</p>
 <p><strong>誰でもできる4つの方法</strong>:</p>
 <p><strong>方法1: パブリックコメント投稿</strong>（年2-3回、各30分）<br />
-1. <strong>監視サイト</strong>: https://public-comment.e-gov.go.jp/<br />
+1. <strong>監視サイト</strong>: <a href="https://public-comment.e-gov.go.jp/" target="_blank" rel="noopener noreferrer">https://public-comment.e-gov.go.jp/</a><br />
 2. <strong>検索キーワード</strong>: 「再生医療」「遺伝子治療」「希少疾患」<br />
 3. <strong>投稿のコツ</strong>:<br />
    - 自分の体験を1段落で<br />
@@ -404,14 +433,14 @@
 <p><strong>ステップ1: 試験を探す</strong>（月1回、30分）</p>
 <p><strong>日本の治験情報</strong>:<br />
 1. <strong>JRPS治験情報ページ</strong>: 会員限定で最新情報<br />
-2. <strong>jRCT（臨床研究等提出・公開システム）</strong>: https://jrct.niph.go.jp/<br />
+2. <strong>jRCT（臨床研究等提出・公開システム）</strong>: <a href="https://jrct.niph.go.jp/" target="_blank" rel="noopener noreferrer">https://jrct.niph.go.jp/</a><br />
    - 検索窓に「網膜色素変性」と入力<br />
    - 「実施中」にチェック<br />
 3. <strong>大学病院に直接問い合わせ</strong>:<br />
    - 「治験コーディネーター」宛に電話<br />
    - 「RPの治験に興味がある」と伝える</p>
 <p><strong>世界の治験情報</strong>:<br />
-1. <strong>ClinicalTrials.gov</strong>: https://clinicaltrials.gov/<br />
+1. <strong>ClinicalTrials.gov</strong>: <a href="https://clinicaltrials.gov/" target="_blank" rel="noopener noreferrer">https://clinicaltrials.gov/</a><br />
 2. <strong>簡単検索方法</strong>:<br />
    - Condition: 「Retinitis Pigmentosa」<br />
    - Other terms: あなたの遺伝子名（例：RPGR）<br />
@@ -466,51 +495,51 @@
 <h3>今週中にやること</h3>
 <ul>
 <li>[ ] かかりつけ眼科に電話して「遺伝子検査の紹介状」を依頼</li>
-<li>[ ] JRPS（https://jrps.org/）の入会申込</li>
+<li>[ ] JRPS（<a href="https://jrps.org/）の入会申込" target="_blank" rel="noopener noreferrer">https://jrps.org/）の入会申込</a></li>
 <li>[ ] スマホに「治験情報チェック」の月1リマインダー設定</li>
 </ul>
 <h3>今月中にやること</h3>
 <ul>
 <li>[ ] 遺伝子検査の予約を取る</li>
-<li>[ ] My Retina Tracker（https://www.myretinatracker.org/）に登録</li>
+<li>[ ] My Retina Tracker（<a href="https://www.myretinatracker.org/）に登録" target="_blank" rel="noopener noreferrer">https://www.myretinatracker.org/）に登録</a></li>
 <li>[ ] 寄付先を1つ決めて月額設定（1,000円でOK）</li>
 </ul>
 <h2>根拠資料とリンク集</h2>
 <h3>データソースと方法論</h3>
 <ul>
-<li><strong>ClinicalTrials.gov（米国政府公式）</strong>: https://clinicaltrials.gov/</li>
-<li>RP臨床試験検索: https://clinicaltrials.gov/search?cond=Retinitis%20Pigmentosa</li>
+<li><strong>ClinicalTrials.gov（米国政府公式）</strong>: <a href="https://clinicaltrials.gov/" target="_blank" rel="noopener noreferrer">https://clinicaltrials.gov/</a></li>
+<li>RP臨床試験検索: <a href="https://clinicaltrials.gov/search?cond=Retinitis%20Pigmentosa" target="_blank" rel="noopener noreferrer">https://clinicaltrials.gov/search?cond=Retinitis%20Pigmentosa</a></li>
 <li>データ取得日: 2025年6月26日</li>
 <li><strong>解析方法</strong>: モンテカルロシミュレーション（10,000回/試験）</li>
-<li><strong>ソースコード</strong>: https://github.com/oh-yeah-sea-kit2/retina-roadmap</li>
+<li><strong>ソースコード</strong>: <a href="https://github.com/oh-yeah-sea-kit2/retina-roadmap" target="_blank" rel="noopener noreferrer">https://github.com/oh-yeah-sea-kit2/retina-roadmap</a></li>
 </ul>
 <h3>主要な治療法の根拠</h3>
 <ol>
 <li><strong>MCO-010（Nanoscope）</strong></li>
-<li>臨床試験: https://clinicaltrials.gov/study/NCT04945772</li>
-<li>RESTORE試験結果: https://nanostherapeutics.com/news/</li>
+<li>臨床試験: <a href="https://clinicaltrials.gov/study/NCT04945772" target="_blank" rel="noopener noreferrer">https://clinicaltrials.gov/study/NCT04945772</a></li>
+<li>RESTORE試験結果: <a href="https://nanostherapeutics.com/news/" target="_blank" rel="noopener noreferrer">https://nanostherapeutics.com/news/</a></li>
 <li>
 <p>FDA Fast Track: 2023年8月指定</p>
 </li>
 <li>
 <p><strong>OCU400（Ocugen）</strong></p>
 </li>
-<li>Phase 3試験: https://clinicaltrials.gov/study/NCT05203939</li>
-<li>2年データ: https://ir.ocugen.com/news-releases/</li>
+<li>Phase 3試験: <a href="https://clinicaltrials.gov/study/NCT05203939" target="_blank" rel="noopener noreferrer">https://clinicaltrials.gov/study/NCT05203939</a></li>
+<li>2年データ: <a href="https://ir.ocugen.com/news-releases/" target="_blank" rel="noopener noreferrer">https://ir.ocugen.com/news-releases/</a></li>
 <li>
 <p>FDA RMAT指定: 2023年取得</p>
 </li>
 <li>
 <p><strong>開発中止/遅延</strong></p>
 </li>
-<li>Janssen Botaretigene: https://clinicaltrials.gov/study/NCT04671433</li>
+<li>Janssen Botaretigene: <a href="https://clinicaltrials.gov/study/NCT04671433" target="_blank" rel="noopener noreferrer">https://clinicaltrials.gov/study/NCT04671433</a></li>
 <li>Biogen BIIB112: 開発中断発表（2021年）</li>
 </ol>
 <h3>日本での情報源</h3>
 <ul>
-<li><strong>JRPS（日本網膜色素変性症協会）</strong>: https://jrps.org/</li>
-<li><strong>jRCT（臨床研究等提出・公開システム）</strong>: https://jrct.niph.go.jp/</li>
-<li><strong>PMDA（医薬品医療機器総合機構）</strong>: https://www.pmda.go.jp/</li>
+<li><strong>JRPS（日本網膜色素変性症協会）</strong>: <a href="https://jrps.org/" target="_blank" rel="noopener noreferrer">https://jrps.org/</a></li>
+<li><strong>jRCT（臨床研究等提出・公開システム）</strong>: <a href="https://jrct.niph.go.jp/" target="_blank" rel="noopener noreferrer">https://jrct.niph.go.jp/</a></li>
+<li><strong>PMDA（医薬品医療機器総合機構）</strong>: <a href="https://www.pmda.go.jp/" target="_blank" rel="noopener noreferrer">https://www.pmda.go.jp/</a></li>
 </ul>
 <h3>3ヶ月以内にやること</h3>
 <ul>
@@ -533,11 +562,17 @@
 <li><strong>治験コーディネーター</strong>: 各病院の治験管理室</li>
 </ul>
 <hr />
-<p><em>このドキュメントは定期的に更新されます。最新情報は https://oh-yeah-sea-kit2.github.io/retina-roadmap/ でご確認ください。</em></p>
+<p><em>このドキュメントは定期的に更新されます。最新情報は <a href="https://oh-yeah-sea-kit2.github.io/retina-roadmap/" target="_blank" rel="noopener noreferrer">https://oh-yeah-sea-kit2.github.io/retina-roadmap/</a> でご確認ください。</em></p>
         <div class="back-link" style="margin-top: 50px; text-align: center;">
             <a href="index.html">← メインレポートに戻る</a> | 
             <a href="bottlenecks.html">開発ボトルネック分析 →</a>
         </div>
+        </main>
     </div>
+    
+    <footer role="contentinfo" style="margin-top: 50px; padding: 20px; background: #f0f0f0; text-align: center;">
+        <p>アクセシビリティについて：このサイトは網膜色素変性症の方々にも利用しやすいよう配慮して作成されています。</p>
+        <p>改善提案は <a href="https://github.com/oh-yeah-sea-kit2/retina-roadmap/issues">GitHub</a> までお寄せください。</p>
+    </footer>
 </body>
 </html>
