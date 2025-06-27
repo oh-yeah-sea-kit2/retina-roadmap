@@ -93,17 +93,10 @@
             overflow-x: auto;
         }
         
-        /* レスポンシブテーブル */
-        .table-wrapper {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            margin: 20px 0;
-        }
-        
+        /* テーブルスタイル */
         table {
             border-collapse: collapse;
             width: 100%;
-            min-width: 600px;
             margin: 20px 0;
         }
         
@@ -117,38 +110,44 @@
             background-color: #3498db;
             color: white;
             font-weight: bold;
-            position: sticky;
-            top: 0;
-            z-index: 10;
         }
         
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
         
-        /* スマホ対応 */
+        /* スマホ対応 - 横スクロール */
         @media screen and (max-width: 768px) {
-            .table-wrapper {
-                border: 1px solid #ddd;
-                border-radius: 4px;
-            }
-            
+            /* テーブルコンテナ */
             table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
                 font-size: 14px;
             }
             
             th, td {
                 padding: 8px;
+                min-width: 100px;
             }
             
-            /* 横スクロール可能であることを示す */
-            .table-wrapper::after {
-                content: "← スクロール可能 →";
-                display: block;
-                text-align: center;
-                color: #666;
-                font-size: 12px;
-                padding: 5px;
+            /* 最初の列を固定 */
+            tbody tr td:first-child,
+            thead tr th:first-child {
+                position: sticky;
+                left: 0;
+                background-color: white;
+                z-index: 1;
+                border-right: 2px solid #3498db;
+            }
+            
+            thead tr th:first-child {
+                background-color: #3498db;
+            }
+            
+            tbody tr:nth-child(even) td:first-child {
+                background-color: #f2f2f2;
             }
         }
         
@@ -160,6 +159,7 @@
             
             th, td {
                 padding: 6px;
+                min-width: 80px;
             }
         }
     
@@ -192,7 +192,7 @@
 <h2 role="heading" aria-level="2">📍 地域による承認時期の違い</h2>
 <p>本プロジェクトのシミュレーション予測は主に<strong>米国FDA承認</strong>を基準としています。日本での利用可能時期は異なります。</p>
 <h3 role="heading" aria-level="3">🇺🇸 米国（FDA）承認予測</h3>
-<div class="table-wrapper"><table>
+<table>
 <thead>
 <tr>
 <th>治療法</th>
@@ -227,7 +227,7 @@
 <td>2028-2031年</td>
 </tr>
 </tbody>
-</table></div>
+</table>
 <h3 role="heading" aria-level="3">🇯🇵 日本での承認予測</h3>
 <p>過去の実績に基づく推定：</p>
 <h4>参考：Luxturnaの承認時期</h4>
@@ -237,7 +237,7 @@
 <li><strong>遅延期間</strong>: <strong>5年6ヶ月</strong></li>
 </ul>
 <h4>日本での承認予測（推定）</h4>
-<div class="table-wrapper"><table>
+<table>
 <thead>
 <tr>
 <th>治療法</th>
@@ -277,7 +277,7 @@
 <td><strong>2036年</strong>（+7年）</td>
 </tr>
 </tbody>
-</table></div>
+</table>
 <h3 role="heading" aria-level="3">🌍 その他の地域</h3>
 <h4>欧州（EMA）</h4>
 <ul>
