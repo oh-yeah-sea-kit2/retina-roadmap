@@ -62,19 +62,24 @@
         a:hover {
             text-decoration: underline;
         }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin: 20px 0;
+        /* フォーカス時の視認性向上 */
+        a:focus, button:focus, input:focus, select:focus, textarea:focus {
+            outline: 3px solid #ff6600;
+            outline-offset: 2px;
         }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
+        /* スキップリンク */
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            z-index: 999;
         }
-        th {
-            background-color: #3498db;
-            color: white;
+        .skip-link:focus {
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
         }
         code {
             background-color: #f4f4f4;
@@ -87,13 +92,87 @@
             border-radius: 5px;
             overflow-x: auto;
         }
+        
+        /* レスポンシブテーブル */
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 20px 0;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 600px;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        /* スマホ対応 */
+        @media screen and (max-width: 768px) {
+            .table-wrapper {
+                border: 1px solid #ddd;
+                border-radius: 4px;
+            }
+            
+            table {
+                font-size: 14px;
+            }
+            
+            th, td {
+                padding: 8px;
+            }
+            
+            /* 横スクロール可能であることを示す */
+            .table-wrapper::after {
+                content: "← スクロール可能 →";
+                display: block;
+                text-align: center;
+                color: #666;
+                font-size: 12px;
+                padding: 5px;
+            }
+        }
+        
+        /* より小さい画面用の調整 */
+        @media screen and (max-width: 480px) {
+            table {
+                font-size: 12px;
+            }
+            
+            th, td {
+                padding: 6px;
+            }
+        }
+    
     </style>
 </head>
 <body>
+    <!-- スキップリンク -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+    
     <div class="container">
         <!-- ナビゲーション -->
-        <nav>
-            <h3>関連ページ</h3>
+        <nav role="navigation" aria-label="サイト内ナビゲーション">
+            <h3 role="heading" aria-level="3">関連ページ</h3>
             <ul>
                 <li>📊 <a href="index.html">メインレポート</a> - 詳細な予測データ</li>
                 <li>🎯 <a href="reality_and_actions.html">現実的なアクションガイド</a> - 今すぐできる5つの行動</li>
@@ -105,9 +184,10 @@
             </ul>
         </nav>
         
-        <h1>モンテカルロシミュレーションの詳細な計算方法と根拠</h1>
+        <main id="main-content" role="main">
+            <h1 role="heading" aria-level="1">モンテカルロシミュレーションの詳細な計算方法と根拠</h1>
 <p>最終更新: 2025年6月25日</p>
-<h2>目次</h2>
+<h2 role="heading" aria-level="2">目次</h2>
 <ol>
 <li><a href="#シミュレーションの仕組みわかりやすく">シミュレーションの仕組み（わかりやすく）</a></li>
 <li><a href="#使用した実データ">使用した実データ</a></li>
@@ -116,22 +196,22 @@
 <li><a href="#よくある質問">よくある質問</a></li>
 </ol>
 <hr />
-<h2>シミュレーションの仕組み（わかりやすく）</h2>
-<h3>モンテカルロシミュレーションとは？</h3>
+<h2 role="heading" aria-level="2">シミュレーションの仕組み（わかりやすく）</h2>
+<h3 role="heading" aria-level="3">モンテカルロシミュレーションとは？</h3>
 <p>サイコロを1万回振って、出た目の平均を計算するようなものです。ただし、私たちの「サイコロ」は：<br />
 - 🎲 <strong>臨床試験の成功率</strong>（Phase 3なら71.4%の確率で成功）<br />
 - ⏱️ <strong>各フェーズにかかる時間</strong>（Phase 3なら4-7年）<br />
 - 📝 <strong>規制当局の審査時間</strong>（1-3年）</p>
 <p>これらを組み合わせて、<strong>各試験を1万回シミュレーション</strong>し、いつ頃承認されるかを予測しています。</p>
-<h3>なぜ「範囲」で予測するのか？</h3>
+<h3 role="heading" aria-level="3">なぜ「範囲」で予測するのか？</h3>
 <p>医薬品開発には多くの不確実性があります：<br />
 - ✅ 試験が成功するかどうか<br />
 - ⏰ 各段階でどれくらい時間がかかるか<br />
 - 🏥 予期せぬ問題が起きるかどうか</p>
 <p>だから「2029年に必ず承認」ではなく、「<strong>2028-2029年頃が最も可能性が高い</strong>」という形で予測します。</p>
 <hr />
-<h2>使用した実データ</h2>
-<h3>1. ClinicalTrials.govからの臨床試験データ</h3>
+<h2 role="heading" aria-level="2">使用した実データ</h2>
+<h3 role="heading" aria-level="3">1. ClinicalTrials.govからの臨床試験データ</h3>
 <ul>
 <li><strong>データソース</strong>: 米国国立医学図書館の臨床試験データベース</li>
 <li><strong>取得日</strong>: 2025年6月25日</li>
@@ -144,7 +224,7 @@
 開始日: 2020年12月
 現在までの経過: 4.6年
 </code></pre>
-<h3>2. 過去の成功率データ</h3>
+<h3 role="heading" aria-level="3">2. 過去の成功率データ</h3>
 <p><strong>実際に計算した成功率</strong>（RP試験の実績から）:<br />
 - Phase 1: 86.2%（25成功/29試験）<br />
 - Phase 2: 78.4%（29成功/37試験）<br />
@@ -157,8 +237,8 @@
 2. 遺伝子治療技術の成熟<br />
 3. 明確な治療標的（特定の遺伝子）</p>
 <hr />
-<h2>各数値の根拠と計算方法</h2>
-<h3>Phase 3の期間設定（4-7年）の根拠</h3>
+<h2 role="heading" aria-level="2">各数値の根拠と計算方法</h2>
+<h3 role="heading" aria-level="3">Phase 3の期間設定（4-7年）の根拠</h3>
 <details>
 <summary>🔍 詳細な根拠を見る</summary>
 
@@ -179,7 +259,7 @@
 
 </details>
 
-<h3>成功率の調整</h3>
+<h3 role="heading" aria-level="3">成功率の調整</h3>
 <details>
 <summary>🔍 計算の詳細を見る</summary>
 
@@ -196,7 +276,7 @@
 
 </details>
 
-<h3>規制審査期間（1-3年）</h3>
+<h3 role="heading" aria-level="3">規制審査期間（1-3年）</h3>
 <details>
 <summary>🔍 実例データを見る</summary>
 
@@ -211,7 +291,7 @@
 
 </details>
 
-<h3>最速2028年予測の計算過程</h3>
+<h3 role="heading" aria-level="3">最速2028年予測の計算過程</h3>
 <details>
 <summary>🔍 詳細な計算を見る</summary>
 
@@ -235,8 +315,8 @@
 </details>
 
 <hr />
-<h2>予測の信頼性について</h2>
-<h3>信頼度: ⭐⭐⭐⭐☆（4/5）</h3>
+<h2 role="heading" aria-level="2">予測の信頼性について</h2>
+<h3 role="heading" aria-level="3">信頼度: ⭐⭐⭐⭐☆（4/5）</h3>
 <p><strong>高い信頼性の理由</strong>:<br />
 - ✅ 実際の臨床試験データを使用<br />
 - ✅ 127件の過去データから成功率を算出<br />
@@ -247,13 +327,13 @@
 - ❓ 製造スケールアップの課題<br />
 - ❓ 規制要求の変更可能性<br />
 - ❓ COVID-19のような外的要因</p>
-<h3>予測精度の検証</h3>
+<h3 role="heading" aria-level="3">予測精度の検証</h3>
 <p>過去の類似予測との比較:<br />
 - Luxturna承認時期: 予測と実際の差は約6ヶ月<br />
 - 一般的な医薬品予測: ±1-2年の誤差</p>
 <hr />
-<h2>よくある質問</h2>
-<h3>Q1: なぜ他の予測より楽観的/悲観的なの？</h3>
+<h2 role="heading" aria-level="2">よくある質問</h2>
+<h3 role="heading" aria-level="3">Q1: なぜ他の予測より楽観的/悲観的なの？</h3>
 <p><strong>A</strong>: 私たちの予測は以下の点で独自です：</p>
 <ol>
 <li><strong>実データに基づく</strong></li>
@@ -272,12 +352,12 @@
 </li>
 <li>製造、長期フォローアップなど</li>
 </ol>
-<h3>Q2: 「中央値」って何？</h3>
+<h3 role="heading" aria-level="3">Q2: 「中央値」って何？</h3>
 <p><strong>A</strong>: 1万回のシミュレーションを早い順に並べて、ちょうど真ん中（5,000番目）の値です。</p>
 <p>例：コイン投げを10回して、表が出た回数を記録<br />
 - 結果: 3,4,4,5,5,5,6,6,7,8<br />
 - 中央値: 5回（真ん中の値）</p>
-<h3>Q3: なぜ成功率が高いの？</h3>
+<h3 role="heading" aria-level="3">Q3: なぜ成功率が高いの？</h3>
 <p><strong>A</strong>: RP遺伝子治療が特別な理由：</p>
 <ol>
 <li><strong>明確な治療標的</strong></li>
@@ -298,7 +378,7 @@
 <li>AAVベクター技術が確立</li>
 <li>Luxturnaの成功で道筋が明確</li>
 </ol>
-<h3>Q4: 予測が外れる可能性は？</h3>
+<h3 role="heading" aria-level="3">Q4: 予測が外れる可能性は？</h3>
 <p><strong>A</strong>: もちろんあります。主なリスク：</p>
 <ul>
 <li>🚨 <strong>予期せぬ副作用</strong>（10-15%の確率）</li>
@@ -307,7 +387,7 @@
 </ul>
 <p>ただし、複数の試験が進行中なので、すべてが失敗する確率は低いです。</p>
 <hr />
-<h2>まとめ</h2>
+<h2 role="heading" aria-level="2">まとめ</h2>
 <p>このシミュレーションは：<br />
 - ✅ <strong>実際のデータ</strong>に基づいている<br />
 - ✅ <strong>統計的手法</strong>で不確実性を考慮<br />
@@ -317,7 +397,7 @@
 - ⚠️ <strong>想定外の事態</strong>は起こりうる</p>
 <p>最も重要なのは、<strong>複数の有望な試験が進行中</strong>であり、どれか1つでも成功すれば治療が利用可能になることです。</p>
 <hr />
-<h2>🔮 より高度な予測手法について</h2>
+<h2 role="heading" aria-level="2">🔮 より高度な予測手法について</h2>
 <p>現在のモンテカルロシミュレーションは「確率」に基づく予測です。より現実的な予測のためには、以下のような高度な手法が考えられます：</p>
 <ol>
 <li><strong>動的予測モデル</strong>: リアルタイムデータで予測を更新</li>
@@ -328,6 +408,12 @@
 <p>詳細な提案は<a href="advanced_simulation_proposal.html">より現実的な予測のための高度なシミュレーション手法</a>をご覧ください。</p>
 <hr />
 <p><a href="reality_and_actions.html">← 予測の現実性と私たちにできることに戻る</a> | <a href="index.html">メインレポートに戻る</a></p>
+        </main>
     </div>
+    
+    <footer role="contentinfo" style="margin-top: 50px; padding: 20px; background: #f0f0f0; text-align: center;">
+        <p>アクセシビリティについて：このサイトは網膜色素変性症の方々にも利用しやすいよう配慮して作成されています。</p>
+        <p>改善提案は <a href="https://github.com/oh-yeah-sea-kit2/retina-roadmap/issues">GitHub</a> までお寄せください。</p>
+    </footer>
 </body>
 </html>

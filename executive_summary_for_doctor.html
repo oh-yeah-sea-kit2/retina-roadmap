@@ -62,19 +62,24 @@
         a:hover {
             text-decoration: underline;
         }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin: 20px 0;
+        /* フォーカス時の視認性向上 */
+        a:focus, button:focus, input:focus, select:focus, textarea:focus {
+            outline: 3px solid #ff6600;
+            outline-offset: 2px;
         }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
+        /* スキップリンク */
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            z-index: 999;
         }
-        th {
-            background-color: #3498db;
-            color: white;
+        .skip-link:focus {
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
         }
         code {
             background-color: #f4f4f4;
@@ -87,13 +92,87 @@
             border-radius: 5px;
             overflow-x: auto;
         }
+        
+        /* レスポンシブテーブル */
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 20px 0;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 600px;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        /* スマホ対応 */
+        @media screen and (max-width: 768px) {
+            .table-wrapper {
+                border: 1px solid #ddd;
+                border-radius: 4px;
+            }
+            
+            table {
+                font-size: 14px;
+            }
+            
+            th, td {
+                padding: 8px;
+            }
+            
+            /* 横スクロール可能であることを示す */
+            .table-wrapper::after {
+                content: "← スクロール可能 →";
+                display: block;
+                text-align: center;
+                color: #666;
+                font-size: 12px;
+                padding: 5px;
+            }
+        }
+        
+        /* より小さい画面用の調整 */
+        @media screen and (max-width: 480px) {
+            table {
+                font-size: 12px;
+            }
+            
+            th, td {
+                padding: 6px;
+            }
+        }
+    
     </style>
 </head>
 <body>
+    <!-- スキップリンク -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+    
     <div class="container">
         <!-- ナビゲーション -->
-        <nav>
-            <h3>関連ページ</h3>
+        <nav role="navigation" aria-label="サイト内ナビゲーション">
+            <h3 role="heading" aria-level="3">関連ページ</h3>
             <ul>
                 <li>📊 <a href="index.html">メインレポート</a> - 詳細な予測データ</li>
                 <li>🎯 <a href="reality_and_actions.html">現実的なアクションガイド</a> - 今すぐできる5つの行動</li>
@@ -105,29 +184,30 @@
             </ul>
         </nav>
         
-        <h1>網膜色素変性症治療開発予測：医療従事者向け要約</h1>
-<h2>研究概要</h2>
-<h3>目的</h3>
+        <main id="main-content" role="main">
+            <h1 role="heading" aria-level="1">網膜色素変性症治療開発予測：医療従事者向け要約</h1>
+<h2 role="heading" aria-level="2">研究概要</h2>
+<h3 role="heading" aria-level="3">目的</h3>
 <p>網膜色素変性症（RP）の治療法がいつ頃利用可能になるかを、公開データに基づいて統計的に予測</p>
-<h3>方法</h3>
+<h3 role="heading" aria-level="3">方法</h3>
 <ul>
 <li><strong>データソース</strong>: ClinicalTrials.gov（2025年6月26日時点）</li>
-<li>検索URL: https://clinicaltrials.gov/search?cond=Retinitis%20Pigmentosa&amp;aggFilters=status:rec%20act</li>
+<li>検索URL: <a href="https://clinicaltrials.gov/search?cond=Retinitis%20Pigmentosa&amp;aggFilters=status:rec%20act" target="_blank" rel="noopener noreferrer">https://clinicaltrials.gov/search?cond=Retinitis%20Pigmentosa&amp;aggFilters=status:rec%20act</a></li>
 <li><strong>対象試験数</strong>: 127試験（アクティブ54試験）</li>
 <li><strong>予測手法</strong>: モンテカルロシミュレーション（10,000回/試験）</li>
 <li><strong>パラメータ</strong>: 過去の臨床試験データから推定した成功率と開発期間</li>
 </ul>
-<h2>主要な予測結果</h2>
-<h3>最速承認候補（高確度）</h3>
+<h2 role="heading" aria-level="2">主要な予測結果</h2>
+<h3 role="heading" aria-level="3">最速承認候補（高確度）</h3>
 <ol>
 <li><strong>MCO-010（Nanoscope Therapeutics）</strong></li>
 <li>承認予測：2025年後半～2026年</li>
 <li>根拠：RESTORE試験で統計的有意性達成、2025年Q1 BLA申請予定</li>
 <li>特徴：変異非特異的、外部デバイス不要の光遺伝学的アプローチ</li>
-<li><strong>臨床試験登録</strong>: https://clinicaltrials.gov/study/NCT04945772</li>
-<li><strong>企業プレスリリース</strong>: https://nanostherapeutics.com/2024/03/nanoscope-therapeutics-announces-positive-topline-results/</li>
+<li><strong>臨床試験登録</strong>: <a href="https://clinicaltrials.gov/study/NCT04945772" target="_blank" rel="noopener noreferrer">https://clinicaltrials.gov/study/NCT04945772</a></li>
+<li><strong>企業プレスリリース</strong>: <a href="https://nanostherapeutics.com/2024/03/nanoscope-therapeutics-announces-positive-topline-results/" target="_blank" rel="noopener noreferrer">https://nanostherapeutics.com/2024/03/nanoscope-therapeutics-announces-positive-topline-results/</a></li>
 <li>
-<p><strong>FDA Fast Track指定</strong>: https://nanostherapeutics.com/2023/08/fda-fast-track-designation/</p>
+<p><strong>FDA Fast Track指定</strong>: <a href="https://nanostherapeutics.com/2023/08/fda-fast-track-designation/" target="_blank" rel="noopener noreferrer">https://nanostherapeutics.com/2023/08/fda-fast-track-designation/</a></p>
 </li>
 <li>
 <p><strong>OCU400（Ocugen）</strong></p>
@@ -135,28 +215,28 @@
 <li>承認予測：2026～2027年</li>
 <li>根拠：2年データで100%改善/維持、Phase 3進行中</li>
 <li>特徴：遺伝子非依存型、マスター遺伝子調節</li>
-<li><strong>Phase 3試験</strong>: https://clinicaltrials.gov/study/NCT05203939</li>
-<li><strong>2年データ発表</strong>: https://ir.ocugen.com/news-releases/news-release-details/ocu400-demonstrates-100-improvement-or-maintenance-visual</li>
-<li><strong>FDA RMAT指定</strong>: https://ir.ocugen.com/news-releases/news-release-details/ocugen-receives-fda-regenerative-medicine-advanced-therapy</li>
+<li><strong>Phase 3試験</strong>: <a href="https://clinicaltrials.gov/study/NCT05203939" target="_blank" rel="noopener noreferrer">https://clinicaltrials.gov/study/NCT05203939</a></li>
+<li><strong>2年データ発表</strong>: <a href="https://ir.ocugen.com/news-releases/news-release-details/ocu400-demonstrates-100-improvement-or-maintenance-visual" target="_blank" rel="noopener noreferrer">https://ir.ocugen.com/news-releases/news-release-details/ocu400-demonstrates-100-improvement-or-maintenance-visual</a></li>
+<li><strong>FDA RMAT指定</strong>: <a href="https://ir.ocugen.com/news-releases/news-release-details/ocugen-receives-fda-regenerative-medicine-advanced-therapy" target="_blank" rel="noopener noreferrer">https://ir.ocugen.com/news-releases/news-release-details/ocugen-receives-fda-regenerative-medicine-advanced-therapy</a></li>
 </ol>
-<h3>中期的展望（2029-2035年）</h3>
+<h3 role="heading" aria-level="3">中期的展望（2029-2035年）</h3>
 <ul>
 <li>複数の遺伝子特異的治療が承認見込み</li>
 <li>RPGR、USH2A、PDE6Aなどの主要変異に対する治療法</li>
 </ul>
-<h3>全体の中央値：2036年</h3>
+<h3 role="heading" aria-level="3">全体の中央値：2036年</h3>
 <ul>
 <li>多様な治療オプションが揃う時期</li>
 <li>初期段階の試験が成熟</li>
 </ul>
-<h2>予測の信頼性と限界</h2>
-<h3>強み</h3>
+<h2 role="heading" aria-level="2">予測の信頼性と限界</h2>
+<h3 role="heading" aria-level="3">強み</h3>
 <ul>
 <li>公的データベースに基づく透明性</li>
 <li>統計的手法による不確実性の定量化</li>
 <li>最新の試験情報を反映（2025年6月時点）</li>
 </ul>
-<h3>限界</h3>
+<h3 role="heading" aria-level="3">限界</h3>
 <ol>
 <li><strong>外的要因を考慮できない</strong></li>
 <li>予期せぬ安全性問題</li>
@@ -178,31 +258,37 @@
 <li>製造スケールアップの成功を仮定</li>
 <li>規制当局との標準的な協議を前提</li>
 </ol>
-<h2>臨床的意義</h2>
-<h3>患者カウンセリングへの活用</h3>
+<h2 role="heading" aria-level="2">臨床的意義</h2>
+<h3 role="heading" aria-level="3">患者カウンセリングへの活用</h3>
 <ul>
 <li>エビデンスに基づく期待値の設定</li>
 <li>遺伝子検査の重要性の説明</li>
 <li>治験参加の検討材料</li>
 </ul>
-<h3>注意事項</h3>
+<h3 role="heading" aria-level="3">注意事項</h3>
 <ul>
 <li>個々の患者への適用は遺伝子型に依存</li>
 <li>病期による治療効果の差異</li>
 <li>高額医療費（推定1-3億円）への準備</li>
 </ul>
-<h2>データ更新情報</h2>
+<h2 role="heading" aria-level="2">データ更新情報</h2>
 <ul>
 <li><strong>Janssen社Botaretigene</strong>：Phase 3で主要評価項目未達成（2025年5月）</li>
-<li>臨床試験: https://clinicaltrials.gov/study/NCT04671433</li>
-<li>結果発表: https://www.janssen.com/botaretigene-sparoparvovec-phase-3-lumeos-results</li>
+<li>臨床試験: <a href="https://clinicaltrials.gov/study/NCT04671433" target="_blank" rel="noopener noreferrer">https://clinicaltrials.gov/study/NCT04671433</a></li>
+<li>結果発表: <a href="https://www.janssen.com/botaretigene-sparoparvovec-phase-3-lumeos-results" target="_blank" rel="noopener noreferrer">https://www.janssen.com/botaretigene-sparoparvovec-phase-3-lumeos-results</a></li>
 <li><strong>Biogen BIIB112</strong>：開発中断</li>
-<li>開発中止発表: https://investors.biogen.com/news-releases/news-release-details/biogen-announces-topline-results-phase-3-gene-therapy-study</li>
+<li>開発中止発表: <a href="https://investors.biogen.com/news-releases/news-release-details/biogen-announces-topline-results-phase-3-gene-therapy-study" target="_blank" rel="noopener noreferrer">https://investors.biogen.com/news-releases/news-release-details/biogen-announces-topline-results-phase-3-gene-therapy-study</a></li>
 <li>最新情報はGemini検索により2025年6月26日に更新</li>
 </ul>
 <hr />
 <p><strong>免責事項</strong>: 本予測は研究目的であり、医学的助言ではありません。治療に関する決定は必ず専門医の判断に基づいて行ってください。</p>
-<p><strong>問い合わせ先</strong>: プロジェクトGitHub: https://github.com/oh-yeah-sea-kit2/retina-roadmap</p>
+<p><strong>問い合わせ先</strong>: プロジェクトGitHub: <a href="https://github.com/oh-yeah-sea-kit2/retina-roadmap" target="_blank" rel="noopener noreferrer">https://github.com/oh-yeah-sea-kit2/retina-roadmap</a></p>
+        </main>
     </div>
+    
+    <footer role="contentinfo" style="margin-top: 50px; padding: 20px; background: #f0f0f0; text-align: center;">
+        <p>アクセシビリティについて：このサイトは網膜色素変性症の方々にも利用しやすいよう配慮して作成されています。</p>
+        <p>改善提案は <a href="https://github.com/oh-yeah-sea-kit2/retina-roadmap/issues">GitHub</a> までお寄せください。</p>
+    </footer>
 </body>
 </html>

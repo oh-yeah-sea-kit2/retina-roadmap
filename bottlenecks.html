@@ -62,19 +62,24 @@
         a:hover {
             text-decoration: underline;
         }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin: 20px 0;
+        /* フォーカス時の視認性向上 */
+        a:focus, button:focus, input:focus, select:focus, textarea:focus {
+            outline: 3px solid #ff6600;
+            outline-offset: 2px;
         }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
+        /* スキップリンク */
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            z-index: 999;
         }
-        th {
-            background-color: #3498db;
-            color: white;
+        .skip-link:focus {
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
         }
         code {
             background-color: #f4f4f4;
@@ -87,13 +92,87 @@
             border-radius: 5px;
             overflow-x: auto;
         }
+        
+        /* レスポンシブテーブル */
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 20px 0;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 600px;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        /* スマホ対応 */
+        @media screen and (max-width: 768px) {
+            .table-wrapper {
+                border: 1px solid #ddd;
+                border-radius: 4px;
+            }
+            
+            table {
+                font-size: 14px;
+            }
+            
+            th, td {
+                padding: 8px;
+            }
+            
+            /* 横スクロール可能であることを示す */
+            .table-wrapper::after {
+                content: "← スクロール可能 →";
+                display: block;
+                text-align: center;
+                color: #666;
+                font-size: 12px;
+                padding: 5px;
+            }
+        }
+        
+        /* より小さい画面用の調整 */
+        @media screen and (max-width: 480px) {
+            table {
+                font-size: 12px;
+            }
+            
+            th, td {
+                padding: 6px;
+            }
+        }
+    
     </style>
 </head>
 <body>
+    <!-- スキップリンク -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+    
     <div class="container">
         <!-- ナビゲーション -->
-        <nav>
-            <h3>関連ページ</h3>
+        <nav role="navigation" aria-label="サイト内ナビゲーション">
+            <h3 role="heading" aria-level="3">関連ページ</h3>
             <ul>
                 <li>📊 <a href="index.html">メインレポート</a> - 詳細な予測データ</li>
                 <li>🎯 <a href="reality_and_actions.html">現実的なアクションガイド</a> - 今すぐできる5つの行動</li>
@@ -105,21 +184,22 @@
             </ul>
         </nav>
         
-        <h1>網膜色素変性症治療開発のボトルネックと支援策</h1>
-<h2>1. 患者募集の困難さ</h2>
-<h3>現状と課題</h3>
+        <main id="main-content" role="main">
+            <h1 role="heading" aria-level="1">網膜色素変性症治療開発のボトルネックと支援策</h1>
+<h2 role="heading" aria-level="2">1. 患者募集の困難さ</h2>
+<h3 role="heading" aria-level="3">現状と課題</h3>
 <ul>
 <li><strong>有病率</strong>: 約1/4,000人（日本では約3万人）</li>
 <li><strong>遺伝的多様性</strong>: 100以上の原因遺伝子が存在</li>
 <li><strong>試験登録率</strong>: 対象患者の5-10%程度しか臨床試験に参加できていない</li>
 </ul>
-<h3>定量的データ</h3>
+<h3 role="heading" aria-level="3">定量的データ</h3>
 <ul>
 <li>現在進行中のRP臨床試験: 54件</li>
 <li>1試験あたりの平均登録目標: 20-50名</li>
 <li>実際の登録速度: 月1-2名程度（試験により大きく異なる）</li>
 </ul>
-<h3>具体的な支援策</h3>
+<h3 role="heading" aria-level="3">具体的な支援策</h3>
 <h4>患者・家族向け</h4>
 <ol>
 <li><strong>患者レジストリへの登録</strong></li>
@@ -147,21 +227,21 @@
 <li>遠方の試験施設への通院支援</li>
 <li>宿泊施設の提供・紹介</li>
 </ol>
-<h2>2. ベクター免疫原性</h2>
-<h3>現状と課題</h3>
+<h2 role="heading" aria-level="2">2. ベクター免疫原性</h2>
+<h3 role="heading" aria-level="3">現状と課題</h3>
 <ul>
 <li><strong>AAVベクターへの既存抗体</strong>: 成人の30-60%が保有</li>
 <li><strong>再投与の制限</strong>: 免疫反応により2回目の治療が困難</li>
 <li><strong>用量制限</strong>: 免疫反応を避けるため低用量に制限</li>
 </ul>
-<h3>定量的データ</h3>
+<h3 role="heading" aria-level="3">定量的データ</h3>
 <ul>
 <li>AAV2抗体陽性率: 59%（一般成人）</li>
 <li>AAV5抗体陽性率: 40%</li>
 <li>AAV8抗体陽性率: 38%</li>
 <li>免疫抑制剤使用による抗体価低下: 約70%減少</li>
 </ul>
-<h3>具体的な支援策</h3>
+<h3 role="heading" aria-level="3">具体的な支援策</h3>
 <h4>研究者向け</h4>
 <ol>
 <li><strong>新規ベクター開発への投資</strong></li>
@@ -181,21 +261,21 @@
 <li>治療前の抗体検査実施</li>
 <li>抗体陰性患者の優先的登録</li>
 </ol>
-<h2>3. 製造コストと供給能力</h2>
-<h3>現状と課題</h3>
+<h2 role="heading" aria-level="2">3. 製造コストと供給能力</h2>
+<h3 role="heading" aria-level="3">現状と課題</h3>
 <ul>
 <li><strong>AAVベクター製造コスト</strong>: 1患者あたり50-200万ドル</li>
 <li><strong>製造能力</strong>: 年間数百患者分が限界</li>
 <li><strong>品質管理</strong>: GMP基準での製造が必須</li>
 </ul>
-<h3>定量的データ</h3>
+<h3 role="heading" aria-level="3">定量的データ</h3>
 <ul>
 <li>現在のAAV製造施設数: 世界で約50施設</li>
 <li>1バッチあたりの収量: 10^15-10^16 vg（10-100患者分）</li>
 <li>製造期間: 6-9ヶ月/バッチ</li>
 <li>品質検査期間: 2-3ヶ月</li>
 </ul>
-<h3>具体的な支援策</h3>
+<h3 role="heading" aria-level="3">具体的な支援策</h3>
 <h4>政策立案者向け</h4>
 <ol>
 <li><strong>製造インフラへの公的投資</strong></li>
@@ -222,20 +302,20 @@
 <li>原材料の大量調達</li>
 <li>製造拠点の集約化</li>
 </ol>
-<h2>4. 規制要件とデータパッケージ</h2>
-<h3>現状と課題</h3>
+<h2 role="heading" aria-level="2">4. 規制要件とデータパッケージ</h2>
+<h3 role="heading" aria-level="3">現状と課題</h3>
 <ul>
 <li><strong>必要な患者数</strong>: Phase 3で通常100名以上</li>
 <li><strong>観察期間</strong>: 最低2年間のフォローアップ</li>
 <li><strong>エンドポイント</strong>: 視力改善の客観的証明が困難</li>
 </ul>
-<h3>定量的データ</h3>
+<h3 role="heading" aria-level="3">定量的データ</h3>
 <ul>
 <li>FDA承認に必要な平均データ量: 10万ページ以上</li>
 <li>審査期間: 通常12-18ヶ月</li>
 <li>希少疾患指定による短縮: 6-9ヶ月に短縮可能</li>
 </ul>
-<h3>具体的な支援策</h3>
+<h3 role="heading" aria-level="3">具体的な支援策</h3>
 <h4>規制当局向け</h4>
 <ol>
 <li><strong>柔軟な承認基準</strong></li>
@@ -255,7 +335,7 @@
 <li>Patient-Focused Drug Development会議への参加</li>
 <li>患者報告アウトカムの開発</li>
 </ol>
-<h2>まとめ：統合的アプローチの必要性</h2>
+<h2 role="heading" aria-level="2">まとめ：統合的アプローチの必要性</h2>
 <p>これらのボトルネックは相互に関連しており、解決には多面的なアプローチが必要です：</p>
 <ol>
 <li><strong>短期的施策</strong>（1-2年）</li>
@@ -280,6 +360,12 @@
 <li>医療システムの変革</li>
 </ol>
 <p>患者、研究者、企業、規制当局、そして社会全体が協力することで、これらのボトルネックを克服し、RP患者により早く治療を届けることが可能になります。</p>
+        </main>
     </div>
+    
+    <footer role="contentinfo" style="margin-top: 50px; padding: 20px; background: #f0f0f0; text-align: center;">
+        <p>アクセシビリティについて：このサイトは網膜色素変性症の方々にも利用しやすいよう配慮して作成されています。</p>
+        <p>改善提案は <a href="https://github.com/oh-yeah-sea-kit2/retina-roadmap/issues">GitHub</a> までお寄せください。</p>
+    </footer>
 </body>
 </html>

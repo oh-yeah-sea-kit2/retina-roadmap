@@ -62,19 +62,24 @@
         a:hover {
             text-decoration: underline;
         }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin: 20px 0;
+        /* フォーカス時の視認性向上 */
+        a:focus, button:focus, input:focus, select:focus, textarea:focus {
+            outline: 3px solid #ff6600;
+            outline-offset: 2px;
         }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
+        /* スキップリンク */
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            z-index: 999;
         }
-        th {
-            background-color: #3498db;
-            color: white;
+        .skip-link:focus {
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
         }
         code {
             background-color: #f4f4f4;
@@ -87,13 +92,87 @@
             border-radius: 5px;
             overflow-x: auto;
         }
+        
+        /* レスポンシブテーブル */
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 20px 0;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 600px;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        /* スマホ対応 */
+        @media screen and (max-width: 768px) {
+            .table-wrapper {
+                border: 1px solid #ddd;
+                border-radius: 4px;
+            }
+            
+            table {
+                font-size: 14px;
+            }
+            
+            th, td {
+                padding: 8px;
+            }
+            
+            /* 横スクロール可能であることを示す */
+            .table-wrapper::after {
+                content: "← スクロール可能 →";
+                display: block;
+                text-align: center;
+                color: #666;
+                font-size: 12px;
+                padding: 5px;
+            }
+        }
+        
+        /* より小さい画面用の調整 */
+        @media screen and (max-width: 480px) {
+            table {
+                font-size: 12px;
+            }
+            
+            th, td {
+                padding: 6px;
+            }
+        }
+    
     </style>
 </head>
 <body>
+    <!-- スキップリンク -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+    
     <div class="container">
         <!-- ナビゲーション -->
-        <nav>
-            <h3>関連ページ</h3>
+        <nav role="navigation" aria-label="サイト内ナビゲーション">
+            <h3 role="heading" aria-level="3">関連ページ</h3>
             <ul>
                 <li>📊 <a href="index.html">メインレポート</a> - 詳細な予測データ</li>
                 <li>🎯 <a href="reality_and_actions.html">現実的なアクションガイド</a> - 今すぐできる5つの行動</li>
@@ -105,24 +184,25 @@
             </ul>
         </nav>
         
-        <h1>生成AIによる網膜色素変性症治療開発の加速予測</h1>
-<h2>エグゼクティブサマリー</h2>
+        <main id="main-content" role="main">
+            <h1 role="heading" aria-level="1">生成AIによる網膜色素変性症治療開発の加速予測</h1>
+<h2 role="heading" aria-level="2">エグゼクティブサマリー</h2>
 <p>生成AIと機械学習技術により、網膜色素変性症（RP）の治療法開発が<strong>最大50%短縮</strong>される可能性があります。現在の予測（最速2027年）が、AI活用により<strong>2025-2026年に前倒し</strong>される可能性があります。</p>
-<h2>AIによる開発加速の実績</h2>
-<h3>1. <strong>創薬・前臨床段階の短縮</strong></h3>
+<h2 role="heading" aria-level="2">AIによる開発加速の実績</h2>
+<h3 role="heading" aria-level="3">1. <strong>創薬・前臨床段階の短縮</strong></h3>
 <ul>
 <li><strong>通常</strong>: 4-7年</li>
 <li><strong>AI活用</strong>: 2-3.5年（25-50%短縮）</li>
 <li><strong>実例</strong>: Insilico Medicine社は創薬から前臨床完了まで<strong>わずか30ヶ月</strong></li>
 </ul>
-<h3>2. <strong>臨床試験の効率化</strong></h3>
+<h3 role="heading" aria-level="3">2. <strong>臨床試験の効率化</strong></h3>
 <ul>
 <li><strong>患者募集</strong>: 最大80%の時間短縮</li>
 <li><strong>試験デザイン</strong>: AIによる最適化で期間短縮</li>
 <li><strong>コスト削減</strong>: 70%削減の事例</li>
 </ul>
-<h2>RPへの具体的な適用可能性</h2>
-<h3>現在進行中の試験への影響</h3>
+<h2 role="heading" aria-level="2">RPへの具体的な適用可能性</h2>
+<h3 role="heading" aria-level="3">現在進行中の試験への影響</h3>
 <h4>1. <strong>MCO-010（Nanoscope）</strong></h4>
 <ul>
 <li><strong>現在の予測</strong>: 2025年後半～2026年承認</li>
@@ -144,7 +224,7 @@
 <li>臨床試験: 1.5年短縮（30%減）</li>
 <li><strong>新予測</strong>: 2030-2033年</li>
 </ul>
-<h3>AIが特に効果的な領域</h3>
+<h3 role="heading" aria-level="3">AIが特に効果的な領域</h3>
 <h4>1. <strong>患者層別化と精密医療</strong></h4>
 <pre><code>効果予測：
 - 遺伝子型に基づく患者選択: 90%以上の精度
@@ -163,9 +243,9 @@
 <li><strong>開発期間</strong>: 新薬の50%以下</li>
 <li><strong>成功確率</strong>: 既知の安全性プロファイルにより向上</li>
 </ul>
-<h2>具体的な短縮タイムライン</h2>
-<h3>ベストケースシナリオ（AI全面活用）</h3>
-<table>
+<h2 role="heading" aria-level="2">具体的な短縮タイムライン</h2>
+<h3 role="heading" aria-level="3">ベストケースシナリオ（AI全面活用）</h3>
+<div class="table-wrapper"><table>
 <thead>
 <tr>
 <th>フェーズ</th>
@@ -224,8 +304,8 @@
 <td><strong>42-45%</strong></td>
 </tr>
 </tbody>
-</table>
-<h3>RPへの予測インパクト</h3>
+</table></div>
+<h3 role="heading" aria-level="3">RPへの予測インパクト</h3>
 <h4>短期的影響（2025-2027年）</h4>
 <ul>
 <li>MCO-010: 影響なし（すでに申請段階）</li>
@@ -244,45 +324,45 @@
 <li>AIによる個別最適化治療</li>
 <li><strong>全RP患者の80%以上に有効な治療法</strong></li>
 </ul>
-<h2>実現のための必要条件</h2>
-<h3>1. <strong>データ統合</strong></h3>
+<h2 role="heading" aria-level="2">実現のための必要条件</h2>
+<h3 role="heading" aria-level="3">1. <strong>データ統合</strong></h3>
 <ul>
 <li>患者レジストリの統合</li>
 <li>遺伝子データベースの充実</li>
 <li>リアルワールドデータの活用</li>
 </ul>
-<h3>2. <strong>規制対応</strong></h3>
+<h3 role="heading" aria-level="3">2. <strong>規制対応</strong></h3>
 <ul>
 <li>FDAのAIガイダンス（2025年予定）への適合</li>
 <li>バリデーション手法の確立</li>
 <li>倫理的考慮事項の整備</li>
 </ul>
-<h3>3. <strong>投資と協力</strong></h3>
+<h3 role="heading" aria-level="3">3. <strong>投資と協力</strong></h3>
 <ul>
 <li>AI創薬企業との提携</li>
 <li>データ共有プラットフォーム</li>
 <li>患者団体の積極的参加</li>
 </ul>
-<h2>患者ができること</h2>
-<h3>1. <strong>データ提供で貢献</strong></h3>
+<h2 role="heading" aria-level="2">患者ができること</h2>
+<h3 role="heading" aria-level="3">1. <strong>データ提供で貢献</strong></h3>
 <ul>
 <li>遺伝子検査結果の研究利用許可</li>
 <li>定期的な視機能データの提供</li>
 <li>ウェアラブルデバイスでの継続モニタリング</li>
 </ul>
-<h3>2. <strong>AI研究への参加</strong></h3>
+<h3 role="heading" aria-level="3">2. <strong>AI研究への参加</strong></h3>
 <ul>
 <li>デジタルバイオマーカー研究</li>
 <li>画像解析研究への協力</li>
 <li>患者報告アウトカム（PRO）の提供</li>
 </ul>
-<h3>3. <strong>情報発信</strong></h3>
+<h3 role="heading" aria-level="3">3. <strong>情報発信</strong></h3>
 <ul>
 <li>SNSでの体験共有（匿名化データとして活用）</li>
 <li>患者コミュニティでの情報交換</li>
 <li>研究者へのフィードバック</li>
 </ul>
-<h2>まとめ：AIがもたらす希望</h2>
+<h2 role="heading" aria-level="2">まとめ：AIがもたらす希望</h2>
 <p>生成AIとビッグデータ解析により、網膜色素変性症の治療法開発は<strong>従来の半分の期間</strong>で実現可能になりつつあります。特に：</p>
 <ol>
 <li><strong>2025-2026年</strong>: 最初の治療法承認がさらに確実に</li>
@@ -291,24 +371,30 @@
 </ol>
 <p>これは単なる楽観的予測ではなく、<strong>すでに他の疾患で実証されている技術</strong>の応用です。</p>
 <hr />
-<h2>参考資料</h2>
-<h3>AI創薬の実績</h3>
+<h2 role="heading" aria-level="2">参考資料</h2>
+<h3 role="heading" aria-level="3">AI創薬の実績</h3>
 <ul>
 <li>BCG・Wellcome「AI for Drug Discovery」レポート（2024年）</li>
-<li>Insilico Medicine社の創薬実績: https://insilico.com/</li>
-<li>Lantern Pharma社のRADRプラットフォーム: https://lanternpharma.com/</li>
+<li>Insilico Medicine社の創薬実績: <a href="https://insilico.com/" target="_blank" rel="noopener noreferrer">https://insilico.com/</a></li>
+<li>Lantern Pharma社のRADRプラットフォーム: <a href="https://lanternpharma.com/" target="_blank" rel="noopener noreferrer">https://lanternpharma.com/</a></li>
 </ul>
-<h3>規制関連</h3>
+<h3 role="heading" aria-level="3">規制関連</h3>
 <ul>
 <li>FDA AIガイダンスドラフト（2025年予定）</li>
 <li>EMA AI/ML作業部会レポート</li>
 </ul>
-<h3>最新研究</h3>
+<h3 role="heading" aria-level="3">最新研究</h3>
 <ul>
-<li>NIH TrialGPT: https://www.nature.com/articles/s41467-024-44713-5</li>
-<li>HealX希少疾患AI: https://healx.io/</li>
+<li>NIH TrialGPT: <a href="https://www.nature.com/articles/s41467-024-44713-5" target="_blank" rel="noopener noreferrer">https://www.nature.com/articles/s41467-024-44713-5</a></li>
+<li>HealX希少疾患AI: <a href="https://healx.io/" target="_blank" rel="noopener noreferrer">https://healx.io/</a></li>
 </ul>
 <p><em>最終更新: 2025年6月26日</em></p>
+        </main>
     </div>
+    
+    <footer role="contentinfo" style="margin-top: 50px; padding: 20px; background: #f0f0f0; text-align: center;">
+        <p>アクセシビリティについて：このサイトは網膜色素変性症の方々にも利用しやすいよう配慮して作成されています。</p>
+        <p>改善提案は <a href="https://github.com/oh-yeah-sea-kit2/retina-roadmap/issues">GitHub</a> までお寄せください。</p>
+    </footer>
 </body>
 </html>
