@@ -25,6 +25,29 @@
 
 詳細は[レポート](https://oh-yeah-sea-kit2.github.io/retina-roadmap/docs/)をご覧ください。
 
+## 🚀 クイックスタート（Claude Code）
+
+このプロジェクトでは、Claude Code用のカスタムコマンドで簡単に最新情報を確認・更新できます。
+
+### 最新情報をチェック
+```bash
+/update_rp_info check
+```
+- 既存データと比較して新しい情報のみを表示
+- 重要度スコア付きで更新の優先度を判定
+- データの更新はせず、確認のみ
+
+### 完全な更新を実行
+```bash
+/update_rp_info full
+```
+- Web検索で最新情報を収集
+- データベースを更新
+- シミュレーションを再実行
+- レポートを再生成
+
+詳細は[Claude Codeカスタムコマンド](#claude-code-カスタムコマンド)セクションをご覧ください。
+
 ## 1. リポジトリ設計案（Claude Code 専用・再現性重視）
 
 ```
@@ -148,51 +171,52 @@ retina-roadmap/                 ← 推奨プロジェクト名の一例
 
 ---
 
-## 6. プロジェクト名候補
+## 📝 Claude Code カスタムコマンド
 
-| 候補                 | ニュアンス                      |
-| ------------------ | -------------------------- |
-| **RetinaRoadmap**  | “視覚回復までの道のり” を示唆。          |
-| **SightSim**       | エミュレーション (Simulation) を連想。 |
-| **OptiRPForecast** | RP 治療最適化＋予測。               |
-| **VisionBridge**   | 科学と患者を“橋渡し”。               |
-| **Focus2030**      | 目標年 (中央値シナリオ) を前面に。        |
+### `/update_rp_info` コマンド
+
+網膜色素変性症の最新情報を効率的に収集・管理するためのカスタムコマンドです。
+
+#### 使用可能なモード
+
+| モード | コマンド | 説明 |
+|-------|---------|------|
+| **check** | `/update_rp_info check` | 最新情報の確認のみ（データ更新なし） |
+| **quick** | `/update_rp_info quick` | レポートの再生成のみ（既存データ使用） |
+| **full** | `/update_rp_info full` | 完全な更新（デフォルト） |
+
+#### checkモードの詳細
+
+```bash
+/update_rp_info check
+```
+
+**実行内容**：
+1. 知識ベースから既存データを読み込み
+2. Web検索で最新情報を収集
+3. 既存データと比較して差分を検出
+4. 結果を以下の形式で表示：
+   - 🆕 **新規プログラム**: 完全に新しい治療法や企業
+   - 🔄 **更新されたプログラム**: Phase進行、規制承認など
+   - ✅ **変更なし**: 既に把握している情報
+   - 🚨 **重要な更新**: FDA申請、Phase移行など（重要度スコア0-100）
+
+#### 更新頻度の推奨
+
+- **週次**: `/update_rp_info check` → 新情報の確認
+- **月次**: 重要な更新があれば `/update_rp_info full`
+- **四半期**: `/update_rp_info full` → 定期的な包括更新
+- **臨時**: 重要ニュース発生時に即座に更新
+
+#### データ構造
+
+```
+data/knowledge_base/
+├── clinical_programs.json   # 治療プログラムの構造化データ
+├── update_history.json      # 更新履歴
+└── last_check.json         # 最後のチェック情報
+```
 
 ---
 
-### 実装着手の最短ステップ
-
-1. `gh repo create retina-roadmap --public --clone`
-2. `cd retina-roadmap && git switch -c init`
-3. `python -m venv .venv && source .venv/bin/activate`
-4. `pip install requests pandas numpy scipy matplotlib`
-5. `mkdir -p data/raw/clinical_trials src`
-6. `code src/fetch_trials.py` ― ClinicalTrials.gov API スケルトンを書く
-7. `git add . && git commit -m "scaffold"`
-8. GitHub Actions テンプレートを追加 → push → CI green を確認
-
----
-
-### 想定 Q\&A
-
-* **Q: Claude Code は Python 外部 API 呼び出しをどう管理？**
-  → `claude_config.json` に `python_external_allowed=True` を設定し、`requests` モジュールで通常の REST 呼び出しが可能。結果 JSON を data/raw にキャッシュすれば、後続の推論はオフラインでも再現可能。
-
-* **Q: エミュレーション結果の信頼性担保は？**
-  → 入力パラメータとデータセット全てを `results/version=YYYYMMDD/` で凍結し、仮定・出典を `parameters.yaml` に明示。学術レビューを受けたら DOI 付きでアーカイブ。
-
----
-
-### まとめ
-
-* **リポジトリ構造**: データ取得 → 前処理 → シミュレーション → レポート生成をパイプライン化。
-* **検索補完**: 外部 API を呼ぶ 「fetch\_\*.py」 層で Claude Code の弱点をカバー。
-* **治療到達予測**: Monte Carlo で中央値 2030±2 年（遺伝子非特異的）、特定変異向けは 2028±1 年と試算。
-* **公開戦略**: 患者・研究者・メディア向けにアウトプット分割。CI で自動更新。
-* **一般支援策**: レジストリ参加・寄付・政策提言・市民科学・情報監査。
-
-この骨格をベースに進めれば、Claude Code 上でも定量的で説得力あるロードマップを継続的に提示できます。
-
-[1]: https://news.ohsu.edu/2024/05/06/participants-of-pioneering-crispr-gene-editing-trial-see-vision-improve?utm_source=chatgpt.com "Participants of pioneering CRISPR gene editing trial see vision ..."
-[2]: https://sparingvision.com/sparingvision-announces-favorable-safety-update-from-prodygy-trial-at-arvo-2025/?utm_source=chatgpt.com "SparingVision Announces Favorable Safety Update from PRODYGY ..."
-[3]: https://www.jcyte.com/news/press/2024-feb-21/?utm_source=chatgpt.com "jCyte Inc. Announces Positive Pre-Phase 3 FDA Type B Meeting and ..."
+## 6. プロジェクト名候補
