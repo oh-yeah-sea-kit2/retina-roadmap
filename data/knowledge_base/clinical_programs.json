@@ -1,0 +1,160 @@
+{
+  "last_updated": "2025-07-20",
+  "programs": {
+    "MCO-010": {
+      "company": "Nanoscope Therapeutics",
+      "current_phase": "Phase 3",
+      "status": "BLA submission initiated",
+      "key_dates": {
+        "phase3_start": "2021-06",
+        "phase3_completion": "2024-03",
+        "bla_submission_start": "2025-07-14",
+        "expected_bla_completion": "2025-Q1"
+      },
+      "trial_ids": ["NCT04945772"],
+      "modality": "Gene therapy (optogenetics)",
+      "target": "Gene-agnostic",
+      "regulatory": ["FDA Fast Track", "Orphan Drug Designation"],
+      "recent_updates": [
+        {
+          "date": "2025-07-14",
+          "event": "Initiated rolling BLA submission to FDA",
+          "source": "Company PR"
+        },
+        {
+          "date": "2024-03-26",
+          "event": "RESTORE trial met primary endpoint with statistical significance",
+          "source": "Company PR"
+        }
+      ],
+      "notes": "First gene-agnostic gene therapy for RP"
+    },
+    "OCU400": {
+      "company": "Ocugen",
+      "current_phase": "Phase 3",
+      "status": "Enrolling",
+      "key_dates": {
+        "phase3_start": "2024-06",
+        "expected_enrollment_completion": "2025-H1",
+        "expected_bla_submission": "2026-H1"
+      },
+      "trial_ids": ["NCT05203939"],
+      "modality": "Gene therapy",
+      "target": "NR2E3 (modifier gene)",
+      "regulatory": ["FDA RMAT", "FDA Orphan Drug", "EMA ATMP"],
+      "recent_updates": [
+        {
+          "date": "2025-01-13",
+          "event": "Phase 1/2 2-year data: 100% (9/9) patients improved or maintained vision",
+          "source": "Company PR"
+        },
+        {
+          "date": "2024-06",
+          "event": "First patient dosed in Phase 3 liMeliGhT trial",
+          "source": "Company PR"
+        }
+      ],
+      "notes": "Targets 100+ gene mutations"
+    },
+    "VP-001": {
+      "company": "PYC Therapeutics",
+      "current_phase": "Phase 1/2",
+      "status": "Active",
+      "key_dates": {
+        "phase1_start": "2022",
+        "expected_phase2_3_start": "2025-H2"
+      },
+      "trial_ids": ["PLATYPUS", "WALLABY"],
+      "modality": "RNA therapy",
+      "target": "PRPF31 (RP11)",
+      "regulatory": ["FDA alignment on trial design"],
+      "recent_updates": [
+        {
+          "date": "2025-05",
+          "event": "Positive Phase 1/2 results presented at ARVO",
+          "source": "Conference presentation"
+        }
+      ],
+      "notes": "Targets RP type 11 specifically"
+    },
+    "AGTC-501": {
+      "company": "Beacon Therapeutics",
+      "current_phase": "Phase 2/3",
+      "status": "Enrolling",
+      "key_dates": {
+        "phase2_3_start": "2023"
+      },
+      "trial_ids": ["VISTA"],
+      "modality": "Gene therapy",
+      "target": "RPGR (X-linked RP)",
+      "regulatory": [],
+      "recent_updates": [
+        {
+          "date": "2023",
+          "event": "Phase 2/3 VISTA trial initiated",
+          "source": "ClinicalTrials.gov"
+        }
+      ],
+      "notes": "Targets X-linked RP"
+    },
+    "OpCT-001": {
+      "company": "BlueRock Therapeutics",
+      "current_phase": "Phase 1/2a",
+      "status": "Active",
+      "key_dates": {
+        "phase1_start": "2023"
+      },
+      "trial_ids": ["CLARICO"],
+      "modality": "Cell therapy",
+      "target": "Photoreceptor replacement",
+      "regulatory": ["FDA Fast Track"],
+      "recent_updates": [
+        {
+          "date": "2023",
+          "event": "Received FDA Fast Track designation",
+          "source": "Company PR"
+        }
+      ],
+      "notes": "iPSC-derived photoreceptor cells"
+    },
+    "NPI-001": {
+      "company": "Nacuity Pharmaceuticals",
+      "current_phase": "Development",
+      "status": "Pre-clinical",
+      "key_dates": {},
+      "trial_ids": [],
+      "modality": "Small molecule (oral)",
+      "target": "Neuroprotection",
+      "regulatory": ["FDA Fast Track", "Orphan Drug Designation"],
+      "recent_updates": [
+        {
+          "date": "2024",
+          "event": "Received FDA Fast Track designation",
+          "source": "Company PR"
+        }
+      ],
+      "notes": "Oral neuroprotective therapy"
+    },
+    "Botaretigene sparoparvovec": {
+      "company": "Janssen (J&J)",
+      "current_phase": "Phase 3",
+      "status": "Failed primary endpoint",
+      "key_dates": {
+        "phase3_start": "2021-04",
+        "primary_endpoint_result": "2025-05"
+      },
+      "trial_ids": ["NCT04850118", "LUMEOS"],
+      "modality": "Gene therapy",
+      "target": "RPGR",
+      "regulatory": [],
+      "recent_updates": [
+        {
+          "date": "2025-05",
+          "event": "Phase 3 LUMEOS trial failed to meet primary endpoint",
+          "source": "Company announcement"
+        }
+      ],
+      "notes": "Did not meet primary endpoint but showed improvements in secondary endpoints"
+    }
+  }
+}

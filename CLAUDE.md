@@ -46,6 +46,10 @@ python src/reporting/build_report.py
 
 # ローカルでHTMLレポートを確認
 open docs/index.html
+
+# 最新情報で全体を更新（カスタムコマンド）
+# Claude Codeで /update_rp_info と入力して実行
+python scripts/update_latest_info.py
 ```
 
 ## アーキテクチャ概要
@@ -118,6 +122,10 @@ open docs/index.html
 - `docs/reality_and_actions.html`: アクションガイドのHTML版（NEW）
 - `docs/bottlenecks.md`: 開発ボトルネック分析と支援策
 - `.github/workflows/ci.yml`: GitHub Actions CI/CD設定
+- `scripts/update_latest_info.py`: 最新情報自動更新スクリプト（NEW）
+- `.claude/commands/update_rp_info.md`: Claude Code用カスタムコマンド /update_rp_info（NEW）
+- `data/knowledge_base/`: 構造化された治療プログラム情報の知識ベース（NEW）
+- `scripts/utils/data_comparison.py`: データ比較ユーティリティ（NEW）
 
 ## 完了したタスク（2025年6月25日時点）
 
@@ -147,6 +155,27 @@ open docs/index.html
 - **アクティブな試験数**: 55件（2025年6月時点、重要な完了試験含む）
 
 ## 最近の更新履歴
+
+### 2025年7月20日
+- **最新情報自動更新システムの構築と改善**
+  - `scripts/update_latest_info.py`: Web検索、API取得、データ更新を自動化するスクリプトを作成
+  - Claude Code用カスタムコマンド `/update_rp_info` を実装（`.claude/commands/`に配置）
+  - 3つのモードを実装：`full`（完全更新）、`quick`（レポートのみ）、`check`（確認のみ）
+  - YAML front-matterと動的機能（シェルコマンド実行、引数対応）を追加
+- **知識ベースシステムの導入**
+  - `data/knowledge_base/`: 構造化された治療プログラム情報を保存
+  - 既存データとの自動比較機能を実装（重複チェック）
+  - 新規・更新・変更なしを自動分類
+  - 重要度スコアリング（0-100）で更新の優先度を判定
+- **データ比較ユーティリティ**
+  - `scripts/utils/data_comparison.py`: Web検索結果と既存データの比較機能
+  - 自動的な情報抽出（治療名、Phase、規制承認など）
+  - 比較レポートの自動生成
+- **更新プロセスの標準化**
+  - 週次：`/update_rp_info check` → 新情報の確認のみ
+  - 月次：`/update_rp_info check` → 重要な更新があれば `full`
+  - 四半期：`/update_rp_info full` → 包括的な更新
+  - 臨時：重要ニュース発生時の即時対応
 
 ### 2025年6月26日（第5回更新）
 - **gemini-searchを使用した2025年最新情報の包括的な更新**

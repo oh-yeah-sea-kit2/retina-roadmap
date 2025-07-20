@@ -1,0 +1,14 @@
+{
+  "updates": [
+    {
+      "date": "2025-07-20",
+      "type": "initial_creation",
+      "summary": "Created initial knowledge base structure",
+      "changes": {
+        "new_programs": ["MCO-010", "OCU400", "VP-001", "AGTC-501", "OpCT-001", "NPI-001", "Botaretigene"],
+        "updated_programs": [],
+        "key_events": []
+      }
+    }
+  ]
+}
