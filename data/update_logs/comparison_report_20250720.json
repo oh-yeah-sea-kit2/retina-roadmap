@@ -1,0 +1,159 @@
+{
+  "comparison_date": "2025-07-20",
+  "summary": {
+    "total_programs_checked": 8,
+    "programs_with_updates": 4,
+    "new_programs_found": 5,
+    "critical_updates": 2
+  },
+  "program_updates": {
+    "MCO-010": {
+      "status": "minimal_update",
+      "importance_score": 30,
+      "changes": [
+        {
+          "field": "timeline",
+          "existing": "BLA submission initiated 2025-07-14",
+          "new_info": "Full BLA submission expected early 2026, priority review candidate",
+          "significance": "Provides more specific timeline"
+        }
+      ],
+      "action_required": "Update expected completion date and priority review status"
+    },
+    "OCU400": {
+      "status": "no_update",
+      "importance_score": 10,
+      "changes": [],
+      "notes": "All information already captured in knowledge base"
+    },
+    "VP-001": {
+      "status": "significant_update",
+      "importance_score": 70,
+      "changes": [
+        {
+          "field": "clinical_results",
+          "existing": "ARVO 2025 presentation mentioned",
+          "new_info": "Detailed results: low luminance visual acuity improvement, microperimetry improvements, 18 patients (PLATYPUS 12, WALLABY 6)",
+          "significance": "New specific clinical efficacy data"
+        }
+      ],
+      "action_required": "Add detailed clinical results to knowledge base"
+    },
+    "AGTC-501": {
+      "status": "significant_update",
+      "importance_score": 60,
+      "changes": [
+        {
+          "field": "clinical_results",
+          "existing": "Phase 2/3 VISTA enrolling",
+          "new_info": "Phase 2 DAWN trial results: second eye treatment showed mean 16-letter improvement",
+          "significance": "Important efficacy data for bilateral treatment"
+        },
+        {
+          "field": "funding",
+          "existing": "Not specified",
+          "new_info": "$170M Series B funding completed",
+          "significance": "Strong financial backing for continued development"
+        }
+      ],
+      "action_required": "Update with DAWN trial results and funding information"
+    },
+    "OpCT-001": {
+      "status": "minimal_update",
+      "importance_score": 20,
+      "changes": [
+        {
+          "field": "trial_status",
+          "existing": "Phase 1/2a active",
+          "new_info": "FDA approved Phase 1/2 trial, multiple US sites planning enrollment",
+          "significance": "Confirms regulatory approval and expansion"
+        }
+      ],
+      "action_required": "Update trial status details"
+    },
+    "Botaretigene": {
+      "status": "no_update",
+      "importance_score": 0,
+      "changes": [],
+      "notes": "Phase 3 failure already documented"
+    }
+  },
+  "new_programs_discovered": {
+    "Japan_Optogenetics": {
+      "importance_score": 80,
+      "details": {
+        "institution": "Keio University",
+        "phase": "Phase 1/2",
+        "start_date": "2025-02-13",
+        "technology": "Chimeric channelrhodopsin (optogenetics)",
+        "target_population": "Completely blind RP patients",
+        "significance": "First gene therapy trial for RP in Japan",
+        "expected_timeline": "Practical use within several years"
+      },
+      "recommendation": "Add to knowledge base - critical for Japan market"
+    },
+    "GS030": {
+      "importance_score": 40,
+      "company": "GenSight Biologics",
+      "modality": "Optogenetics",
+      "phase": "Clinical development",
+      "recommendation": "Consider adding if more details available"
+    },
+    "4D-125": {
+      "importance_score": 40,
+      "company": "4D Molecular Therapeutics",
+      "modality": "Gene therapy",
+      "phase": "Clinical development",
+      "recommendation": "Consider adding if more details available"
+    },
+    "CTx-PDE6b": {
+      "importance_score": 45,
+      "company": "Coave Therapeutics",
+      "modality": "Gene therapy",
+      "target": "PDE6B mutations",
+      "phase": "Clinical development",
+      "recommendation": "Consider adding - specific mutation target"
+    },
+    "AAV-mVChR1": {
+      "importance_score": 50,
+      "company": "Astellas/Tohoku University",
+      "modality": "Optogenetics",
+      "phase": "Development",
+      "location": "Japan",
+      "recommendation": "Monitor - important for Japan market"
+    }
+  },
+  "recommendations": {
+    "immediate_actions": [
+      {
+        "priority": 1,
+        "action": "Add Japan optogenetics trial to knowledge base",
+        "reason": "First RP gene therapy trial in Japan, highly relevant for Japanese patients"
+      },
+      {
+        "priority": 2,
+        "action": "Update VP-001 with detailed ARVO 2025 results",
+        "reason": "Significant new efficacy data available"
+      },
+      {
+        "priority": 3,
+        "action": "Update AGTC-501 with DAWN trial results and funding",
+        "reason": "Important bilateral treatment data and financial milestone"
+      }
+    ],
+    "monitoring_list": [
+      "MCO-010 BLA submission progress (Q1 2026)",
+      "Japan optogenetics trial enrollment and results",
+      "New programs (GS030, 4D-125, CTx-PDE6b) for Phase 1 initiation"
+    ],
+    "update_frequency": {
+      "suggestion": "Monthly check for MCO-010 and OCU400 given approaching milestones",
+      "rationale": "Both programs approaching critical regulatory submissions in 2026"
+    }
+  },
+  "data_quality_notes": {
+    "confidence_level": "High",
+    "sources": "Multiple corroborating sources including company PRs, clinical trial registries, and scientific conferences",
+    "limitations": "Some new programs lack detailed timeline information"
+  }
+}
