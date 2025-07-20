@@ -9,7 +9,7 @@
         "phase3_start": "2021-06",
         "phase3_completion": "2024-03",
         "bla_submission_start": "2025-07-14",
-        "expected_bla_completion": "2025-Q1"
+        "expected_bla_completion": "2026-early"
       },
       "trial_ids": ["NCT04945772"],
       "modality": "Gene therapy (optogenetics)",
@@ -27,7 +27,7 @@
           "source": "Company PR"
         }
       ],
-      "notes": "First gene-agnostic gene therapy for RP"
+      "notes": "First gene-agnostic gene therapy for RP. Full BLA submission expected early 2026, eligible for priority review."
     },
     "OCU400": {
       "company": "Ocugen",
@@ -71,7 +71,7 @@
       "recent_updates": [
         {
           "date": "2025-05",
-          "event": "Positive Phase 1/2 results presented at ARVO",
+          "event": "Positive Phase 1/2 results presented at ARVO: LLVA improvements, microperimetry improvements in 18 patients (PLATYPUS 12, WALLABY 6)",
           "source": "Conference presentation"
         }
       ],
@@ -89,6 +89,11 @@
       "target": "RPGR (X-linked RP)",
       "regulatory": [],
       "recent_updates": [
+        {
+          "date": "2025-07",
+          "event": "Phase 2 DAWN trial: second eye treatment showed mean 16-letter improvement. $170M Series B funding completed",
+          "source": "Company PR"
+        },
         {
           "date": "2023",
           "event": "Phase 2/3 VISTA trial initiated",
@@ -134,6 +139,74 @@
         }
       ],
       "notes": "Oral neuroprotective therapy"
+    },
+    "Keio_Optogenetics": {
+      "company": "Keio University",
+      "current_phase": "Phase 1/2",
+      "status": "Recruiting",
+      "key_dates": {
+        "phase1_start": "2025-02-13"
+      },
+      "trial_ids": [],
+      "modality": "Gene therapy (optogenetics)",
+      "target": "Gene-agnostic (Chimeric channelrhodopsin)",
+      "regulatory": [],
+      "recent_updates": [
+        {
+          "date": "2025-02-13",
+          "event": "First gene therapy trial for RP in Japan initiated",
+          "source": "University PR"
+        }
+      ],
+      "notes": "Targets completely blind RP patients. First RP gene therapy trial in Japan."
+    },
+    "GS030": {
+      "company": "GenSight Biologics",
+      "current_phase": "Clinical development",
+      "status": "Active",
+      "key_dates": {},
+      "trial_ids": [],
+      "modality": "Gene therapy (optogenetics)",
+      "target": "Gene-agnostic",
+      "regulatory": [],
+      "recent_updates": [],
+      "notes": "Optogenetics approach for RP"
+    },
+    "4D-125": {
+      "company": "4D Molecular Therapeutics",
+      "current_phase": "Clinical development",
+      "status": "Active",
+      "key_dates": {},
+      "trial_ids": [],
+      "modality": "Gene therapy",
+      "target": "Not specified",
+      "regulatory": [],
+      "recent_updates": [],
+      "notes": "Gene therapy for RP"
+    },
+    "CTx-PDE6b": {
+      "company": "Coave Therapeutics",
+      "current_phase": "Clinical development",
+      "status": "Active",
+      "key_dates": {},
+      "trial_ids": [],
+      "modality": "Gene therapy",
+      "target": "PDE6B mutations",
+      "regulatory": [],
+      "recent_updates": [],
+      "notes": "Targets specific PDE6B mutations causing RP"
+    },
+    "AAV-mVChR1": {
+      "company": "Astellas Pharma/Tohoku University",
+      "current_phase": "Preclinical",
+      "status": "Development",
+      "key_dates": {},
+      "trial_ids": [],
+      "modality": "Gene therapy (optogenetics)",
+      "target": "Gene-agnostic (modified Volvox channelrhodopsin-1)",
+      "regulatory": [],
+      "recent_updates": [],
+      "notes": "Japanese optogenetics program"
     },
     "Botaretigene sparoparvovec": {
       "company": "Janssen (J&J)",

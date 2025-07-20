@@ -1,8 +1,19 @@
 {
-  "last_check_date": "2025-07-20",
-  "check_type": "initial",
-  "programs_checked": [],
-  "sources_queried": [],
+  "last_check_date": "2025-07-20T23:32:17.308286",
+  "check_type": "web_search",
+  "programs_checked": [
+    "MCO-010",
+    "OCU400",
+    "VP-001"
+  ],
+  "sources_queried": [
+    "MCO-010 Nanoscope retinitis pigmentosa 2025 latest update clinical trial",
+    "OCU400 Ocugen retinitis pigmentosa 2025 latest results phase 3",
+    "VP-001 PYC therapeutics retinitis pigmentosa 2025 update",
+    "retinitis pigmentosa gene therapy 2025 FDA approval BLA",
+    "網膜色素変性症 遺伝子治療 2025 最新 臨床試験",
+    "retinal degeneration new treatments 2025 clinical trials"
+  ],
   "new_findings": [],
   "updates_found": []
 }

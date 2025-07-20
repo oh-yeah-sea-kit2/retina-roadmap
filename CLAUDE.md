@@ -26,7 +26,7 @@
 
 ```bash
 # 依存関係のインストール
-pip install -r requirements.txt
+uv pip install -r requirements.txt
 
 # テストの実行
 pytest tests/

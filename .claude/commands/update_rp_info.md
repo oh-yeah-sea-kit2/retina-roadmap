@@ -5,9 +5,6 @@ allowed-tools: WebSearch, Bash(python3:*), Bash(git:*), Read, Write, Task
 ---
 
 ## Context
-- Current branch: !`git branch --show-current`
-- Last update: !`grep -A1 "^### 2025" CLAUDE.md | head -2 | tail -1`
-- Last check: !`python3 -c "import json; f=open('data/knowledge_base/last_check.json'); d=json.load(f); print(f'Last checked: {d.get(\"last_check_date\", \"Never\")}');" 2>/dev/null || echo "Never"`
 - Mode: ${ARGUMENTS:-full}
 
 ## Task
@@ -17,18 +14,18 @@ allowed-tools: WebSearch, Bash(python3:*), Bash(git:*), Read, Write, Task
 ### モード別処理
 
 #### checkモード（最新情報の確認と既存データとの比較）
-!`if [ "${ARGUMENTS}" = "check" ]; then echo "🔍 最新情報の確認と既存データとの比較を実行します"; fi`
-
-${ARGUMENTS:+!`[ "${ARGUMENTS}" = "check" ] && echo "📊 既存の知識ベースを読み込んでいます..."`}
-${ARGUMENTS:+!`[ "${ARGUMENTS}" = "check" ] && python3 -c "import json; kb=json.load(open('data/knowledge_base/clinical_programs.json')); print(f'登録プログラム数: {len(kb[\"programs\"])}'); print(f'最終更新: {kb[\"last_updated\"]}')"`}
+🔍 最新情報の確認と既存データとの比較を実行します
+- 既存の知識ベースを読み込み
+- Web検索で最新情報を収集
+- 既存データと比較してレポート生成
 
 #### quickモード（レポート再生成のみ）
-!`if [ "${ARGUMENTS}" = "quick" ]; then echo "📝 既存データでレポートを再生成します"; fi`
-
-${ARGUMENTS:+!`[ "${ARGUMENTS}" = "quick" ] && echo "1. レポート再生成: python3 src/reporting/build_report.py"`}
+📝 既存データでレポートを再生成します
+- レポート再生成: python3 src/reporting/build_report.py
 
 #### fullモード（完全更新）
-!`if [ -z "${ARGUMENTS}" ] || [ "${ARGUMENTS}" = "full" ]; then echo "🚀 完全な更新を実行します"; fi`
+🚀 完全な更新を実行します（デフォルト）
+- 全ての処理を実行
 
 ### 実行手順
 
@@ -90,7 +87,9 @@ ${ARGUMENTS:+!`[ "${ARGUMENTS}" = "quick" ] && echo "1. レポート再生成: p
    ```
 
 8. **変更内容の確認**
-   !`git status --short`
+   ```bash
+   git status --short
+   ```
 
 ### チェック結果の見方（checkモード）
 
