@@ -7,75 +7,57 @@ on:
   workflow_dispatch:  # 手動実行も可能
 
 jobs:
-  create-check-issue:
+  weekly-update-check:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      id-token: write
+      actions: read
     
     steps:
-    - name: 現在の日付を取得
-      id: date
-      run: echo "date=$(TZ=Asia/Tokyo date +'%Y年%m月%d日')" >> $GITHUB_OUTPUT
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 1
     
-    - name: 今週のIssueが既に存在するか確認
-      id: check-existing
-      run: |
-        # 今週の月曜日の日付を取得
-        MONDAY=$(TZ=Asia/Tokyo date -d "monday this week" +'%Y年%m月%d日' 2>/dev/null || TZ=Asia/Tokyo date +'%Y年%m月%d日')
+    - name: Run Claude Code for weekly update check
+      uses: anthropics/claude-code-action@beta
+      with:
+        claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         
-        # 既存のIssueを検索
-        EXISTING=$(gh issue list \
-          --label "automation,update-check" \
-          --state open \
-          --json number,title,createdAt \
-          --jq ".[] | select(.title | contains(\"$MONDAY\")) | .number" \
-          | head -1)
+        model: "claude-opus-4-20250514"
         
-        echo "existing_issue=$EXISTING" >> $GITHUB_OUTPUT
-        echo "monday_date=$MONDAY" >> $GITHUB_OUTPUT
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
-    - name: 週次チェック用Issueを作成
-      if: steps.check-existing.outputs.existing_issue == ''
-      run: |
-        ISSUE_BODY="@claude
-
-        網膜色素変性症の治療情報について、週次更新チェックをお願いします。
-
-        以下のコマンドを実行して、最新情報を確認してください：
-        ```
-        /update_rp_info check
-        ```
-
-        チェック結果に基づいて：
-        1. 重要な更新があるかを報告してください
-        2. 更新が必要な場合は、推奨アクション（quick または full）を提案してください
-        3. 特に注目すべき治療プログラムの進展があれば強調してください
-
-        ---
-        *このIssueは毎週月曜日に自動的に作成されます。*"
+        # Claude Codeに週次更新チェックの指示を与える
+        prompt: |
+          網膜色素変性症の治療情報について、週次更新チェックを行ってください。
+          
+          以下のコマンドを実行して、最新情報を確認してください：
+          /update_rp_info check
+          
+          チェック結果に基づいて：
+          1. 重要な更新があるかを報告してください
+          2. 更新が必要な場合は、推奨アクション（quick または full）を提案してください
+          3. 特に注目すべき治療プログラムの進展があれば強調してください
+          
+          結果をGitHub Issueとして作成し、今週の週次更新チェック結果として報告してください。
+          Issue作成時は以下のタイトルを使用してください：
+          「📅 週次更新チェック結果 - [今日の日付]」
         
-        gh issue create \
-          --title "📅 週次更新チェック - ${{ steps.check-existing.outputs.monday_date }}" \
-          --body "$ISSUE_BODY" \
-          --label "automation,update-check"
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
-    - name: 既存のIssueにリマインダーコメントを追加
-      if: steps.check-existing.outputs.existing_issue != ''
-      run: |
-        COMMENT_BODY="## 🔔 週次チェックリマインダー
-
-        @claude
-
-        今週の更新チェックをお願いします。前回のチェックから新しい情報があるか確認してください。
-
-        `/update_rp_info check` を実行してください。
-
-        ---
-        *${{ steps.date.outputs.date }} - 自動リマインダー*"
+        allowed_tools: |
+          Bash(python scripts/*)
+          Bash(python src/*)
+          Bash(git status)
+          Bash(git diff)
         
-        gh issue comment ${{ steps.check-existing.outputs.existing_issue }} \
-          --body "$COMMENT_BODY"
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        custom_instructions: |
+          このプロジェクトは網膜色素変性症の治療予測システムです。
+          必ず日本語で応答してください。
+          週次更新チェックでは以下を重視してください：
+          - 新規の治療プログラムの追加
+          - Phase進行（特にPhase 3への移行）
+          - BLA申請の開始
+          - 試験の成功/失敗の発表
+          - 規制当局からの重要な発表
+          結果は詳細で分かりやすくGitHub Issueとして報告してください。
