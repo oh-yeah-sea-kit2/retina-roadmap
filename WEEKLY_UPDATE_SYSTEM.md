@@ -13,17 +13,17 @@
 - 毎週月曜日 午前9時（JST）
 - 手動実行も可能（Actions画面から）
 
-### 2. Claude Codeの自動実行
+### 2. Claude Code Base Actionの直接実行
 **仕組み**：
-1. GitHub ActionsがIssueを自動作成
-2. Issue内の`@claude`メンションでClaude Codeが起動
-3. `/update_rp_info check`コマンドを実行
-4. 結果をIssueにコメントとして報告
+1. GitHub ActionsがClaude Code Base Actionを直接呼び出し
+2. `prompt`パラメータで`/update_rp_info check`コマンドを実行  
+3. 結果をGitHub Issueとして自動作成・報告
 
 処理フロー：
-1. 週次チェック用のIssueを作成（または既存Issueにリマインダー追加）
-2. Claude Codeが自動的に反応して更新チェックを実行
+1. 週次スケジュール（毎週月曜日午前9時JST）でGitHub Actionsが自動実行
+2. Claude Codeが直接`/update_rp_info check`を実行
 3. 重要な更新があれば推奨アクションを提示
+4. 結果を新しいIssue「📅 週次更新チェック結果 - [日付]」として自動作成
 
 ## Claude Codeによる判定
 
@@ -74,9 +74,10 @@ Claude Codeが状況に応じて以下を提案：
 ## 技術的詳細
 
 ### GitHub Actions実装
-- **重複チェック**: 同じ週のIssueが既に存在する場合はリマインダーコメントを追加
-- **日付管理**: Asia/Tokyo時間で月曜日の日付を自動取得
-- **エラーハンドリング**: 日付取得の代替ロジックを実装
+- **Base Action使用**: `anthropics/claude-code-base-action@beta`で直接実行
+- **スケジュール実行**: 毎週月曜日午前9時（JST）に自動実行
+- **タイムアウト**: 30分でタイムアウト設定
+- **権限管理**: Issue作成権限とコンテンツ読み書き権限を付与
 
 ### YAMLファイルの構成
 ```yaml
@@ -88,9 +89,10 @@ on:
 
 # メイン処理
 jobs:
-  create-check-issue:
-    - 今週のIssue存在チェック
-    - 新規Issue作成 or リマインダーコメント追加
+  weekly-update-check:
+    - Claude Code Base Actionを直接呼び出し
+    - `/update_rp_info check`コマンドを実行
+    - 結果をGitHub Issueとして自動作成
 ```
 
 ## 注意事項
