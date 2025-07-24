@@ -45,7 +45,7 @@ python src/reporting/build_report.py # レポート生成
 python src/reporting/build_report.py
 
 # ローカルでHTMLレポートを確認
-open docs/index.html
+open docs/public/index.html
 
 # 最新情報で全体を更新（カスタムコマンド）
 # Claude Codeで /update_rp_info と入力して実行
@@ -119,15 +119,30 @@ python scripts/update_latest_info.py
 - `TASK_LIST.json`: 詳細な実装ロードマップ（完了済み）
 - `README.md`: 包括的なプロジェクト仕様と方法論
 - `SYSTEM.md`: Claude Code操作手順
-- `docs/index.html`: 自動生成されるレポート（ブラウザで閲覧）
-- `docs/reality_and_actions.md`: 予測の現実性と一般人向けアクションガイド（NEW）
-- `docs/reality_and_actions.html`: アクションガイドのHTML版（NEW）
-- `docs/bottlenecks.md`: 開発ボトルネック分析と支援策
+- `docs/public/index.html`: 自動生成されるメインレポート（ブラウザで閲覧）
+- `docs/content/`: Markdownソースファイル
+- `docs/development/`: 開発ドキュメント
 - `.github/workflows/ci.yml`: GitHub Actions CI/CD設定
-- `scripts/update_latest_info.py`: 最新情報自動更新スクリプト（NEW）
-- `.claude/commands/update_rp_info.md`: Claude Code用カスタムコマンド /update_rp_info（NEW）
-- `data/knowledge_base/`: 構造化された治療プログラム情報の知識ベース（NEW）
-- `scripts/utils/data_comparison.py`: データ比較ユーティリティ（NEW）
+- `scripts/update_latest_info.py`: 最新情報自動更新スクリプト
+- `.claude/commands/update_rp_info.md`: Claude Code用カスタムコマンド /update_rp_info
+- `data/knowledge_base/`: 構造化された治療プログラム情報の知識ベース
+
+## docsディレクトリ構造（2025年7月24日更新）
+
+```
+docs/
+├── public/          # GitHub Pages公開用
+│   ├── *.html      # 公開用HTMLファイル
+│   └── images/     # 図表（CDF.png等）
+├── content/         # Markdownソース
+│   ├── main/       # メインコンテンツ
+│   ├── medical/    # 医療従事者向け
+│   └── regional/   # 地域別情報
+├── development/     # 開発ドキュメント
+│   ├── planning/   # 計画・提案書
+│   └── technical/  # 技術仕様書
+└── checklists/      # チェックリスト類
+```
 
 ## 完了したタスク（2025年6月25日時点）
 

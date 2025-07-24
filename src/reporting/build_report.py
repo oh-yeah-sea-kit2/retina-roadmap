@@ -167,7 +167,7 @@ def generate_markdown_report(data):
 
 パラメータの±20%変動が承認時期に与える影響：
 
-![トルネード図](figs/tornado.png)
+![トルネード図](images/tornado.png)
 
 ### 主要な影響要因
 """
@@ -183,12 +183,12 @@ def generate_markdown_report(data):
 ## 4. 予測の可視化
 
 ### 累積承認確率
-![CDF図](figs/CDF.png)
+![CDF図](images/CDF.png)
 
 *図: 主要5プログラムの累積承認確率。横軸は年、縦軸は該当年までに承認される確率。*
 
 ### タイムライン予測
-![ウォーターフォール図](figs/waterfall.png)
+![ウォーターフォール図](images/waterfall.png)
 
 *図: 上位20プログラムの承認予測タイムライン。エラーバーは10-90パーセンタイル範囲。*
 
@@ -276,7 +276,7 @@ def convert_to_html(markdown_content, output_file):
     <meta property="og:url" content="https://oh-yeah-sea-kit2.github.io/retina-roadmap/docs/">
     <meta property="og:title" content="網膜色素変性症（RP）治療開発ロードマップ">
     <meta property="og:description" content="最新の臨床試験データに基づく網膜色素変性症の治療法承認時期予測。MCO-010は2025-2026年、OCU400は2026-2027年の承認見込み。54の活発な試験をモンテカルロシミュレーションで分析。">
-    <meta property="og:image" content="https://oh-yeah-sea-kit2.github.io/retina-roadmap/docs/figs/CDF.png">
+    <meta property="og:image" content="https://oh-yeah-sea-kit2.github.io/retina-roadmap/docs/public/images/CDF.png">
     <meta property="og:locale" content="ja_JP">
     
     <!-- Twitter -->
@@ -284,7 +284,7 @@ def convert_to_html(markdown_content, output_file):
     <meta property="twitter:url" content="https://oh-yeah-sea-kit2.github.io/retina-roadmap/docs/">
     <meta property="twitter:title" content="網膜色素変性症（RP）治療開発ロードマップ">
     <meta property="twitter:description" content="最新の臨床試験データに基づく網膜色素変性症の治療法承認時期予測。MCO-010は2025-2026年、OCU400は2026-2027年の承認見込み。">
-    <meta property="twitter:image" content="https://oh-yeah-sea-kit2.github.io/retina-roadmap/docs/figs/CDF.png">
+    <meta property="twitter:image" content="https://oh-yeah-sea-kit2.github.io/retina-roadmap/docs/public/images/CDF.png">
     
     <!-- Additional Meta Tags -->
     <meta name="description" content="最新の臨床試験データに基づく網膜色素変性症の治療法承認時期予測。MCO-010は2025-2026年、OCU400は2026-2027年の承認見込み。54の活発な試験をモンテカルロシミュレーションで分析。">
@@ -418,26 +418,35 @@ def main():
     # Markdownファイルを保存
     docs_dir = Path("docs")
     docs_dir.mkdir(exist_ok=True)
+    content_dir = docs_dir / "content" / "main"
+    content_dir.mkdir(parents=True, exist_ok=True)
+    public_dir = docs_dir / "public"
+    public_dir.mkdir(exist_ok=True)
     
-    md_file = docs_dir / "index.md"
+    md_file = content_dir / "index.md"
     with open(md_file, 'w', encoding='utf-8') as f:
         f.write(markdown_content)
     print(f"Markdown report saved to: {md_file}")
     
     # HTMLに変換
     print("Converting to HTML...")
-    html_file = docs_dir / "index.html"
+    html_file = public_dir / "index.html"
     convert_to_html(markdown_content, html_file)
     print(f"HTML report saved to: {html_file}")
     
     # 画像ファイルをコピー
     import shutil
     figs_src = Path("results/figs")
-    figs_dst = docs_dir / "figs"
-    if figs_dst.exists():
-        shutil.rmtree(figs_dst)
-    shutil.copytree(figs_src, figs_dst)
-    print(f"Figures copied to: {figs_dst}")
+    images_dst = public_dir / "images"
+    images_dst.mkdir(exist_ok=True)
+    
+    # 既存の画像を削除してから新しい画像をコピー
+    for old_img in images_dst.glob("*.png"):
+        old_img.unlink()
+    
+    for img_file in figs_src.glob("*.png"):
+        shutil.copy2(img_file, images_dst / img_file.name)
+    print(f"Figures copied to: {images_dst}")
     
     print("\nReport generation complete!")
 
