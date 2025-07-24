@@ -5,9 +5,33 @@
       "type": "initial_creation",
       "summary": "Created initial knowledge base structure",
       "changes": {
-        "new_programs": ["MCO-010", "OCU400", "VP-001", "AGTC-501", "OpCT-001", "NPI-001", "Botaretigene"],
+        "new_programs": [
+          "MCO-010",
+          "OCU400",
+          "VP-001",
+          "AGTC-501",
+          "OpCT-001",
+          "NPI-001",
+          "Botaretigene"
+        ],
         "updated_programs": [],
         "key_events": []
+      }
+    },
+    {
+      "date": "2025-07-24",
+      "type": "automatic_update",
+      "summary": "Found 1 new programs, 1 important updates",
+      "changes": {
+        "new_programs": [
+          "Botaretigene"
+        ],
+        "updated_programs": [
+          "VP-001"
+        ],
+        "key_events": [
+          "VP-001: Phase更新 Phase 1/2 → Phase 1"
+        ]
       }
     }
   ]

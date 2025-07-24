@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-07-20",
+  "last_updated": "2025-07-24",
   "programs": {
     "MCO-010": {
       "company": "Nanoscope Therapeutics",
@@ -11,10 +11,15 @@
         "bla_submission_start": "2025-07-14",
         "expected_bla_completion": "2026-early"
       },
-      "trial_ids": ["NCT04945772"],
+      "trial_ids": [
+        "NCT04945772"
+      ],
       "modality": "Gene therapy (optogenetics)",
       "target": "Gene-agnostic",
-      "regulatory": ["FDA Fast Track", "Orphan Drug Designation"],
+      "regulatory": [
+        "FDA Fast Track",
+        "Orphan Drug Designation"
+      ],
       "recent_updates": [
         {
           "date": "2025-07-14",
@@ -38,10 +43,16 @@
         "expected_enrollment_completion": "2025-H1",
         "expected_bla_submission": "2026-H1"
       },
-      "trial_ids": ["NCT05203939"],
+      "trial_ids": [
+        "NCT05203939"
+      ],
       "modality": "Gene therapy",
       "target": "NR2E3 (modifier gene)",
-      "regulatory": ["FDA RMAT", "FDA Orphan Drug", "EMA ATMP"],
+      "regulatory": [
+        "FDA RMAT",
+        "FDA Orphan Drug",
+        "EMA ATMP"
+      ],
       "recent_updates": [
         {
           "date": "2025-01-13",
@@ -64,10 +75,16 @@
         "phase1_start": "2022",
         "expected_phase2_3_start": "2025-H2"
       },
-      "trial_ids": ["PLATYPUS", "WALLABY"],
+      "trial_ids": [
+        "PLATYPUS",
+        "WALLABY"
+      ],
       "modality": "RNA therapy",
       "target": "PRPF31 (RP11)",
-      "regulatory": ["FDA alignment on trial design"],
+      "regulatory": [
+        "FDA Fast Track",
+        "FDA alignment on trial design"
+      ],
       "recent_updates": [
         {
           "date": "2025-05",
@@ -84,11 +101,20 @@
       "key_dates": {
         "phase2_3_start": "2023"
       },
-      "trial_ids": ["VISTA"],
+      "trial_ids": [
+        "VISTA"
+      ],
       "modality": "Gene therapy",
       "target": "RPGR (X-linked RP)",
-      "regulatory": [],
+      "regulatory": [
+        "FDA RMAT"
+      ],
       "recent_updates": [
+        {
+          "date": "2025-07",
+          "event": "Received FDA RMAT designation. Phase 2 SKYLINE trial 12-month data: 63% responder rate",
+          "source": "Company PR"
+        },
         {
           "date": "2025-07",
           "event": "Phase 2 DAWN trial: second eye treatment showed mean 16-letter improvement. $170M Series B funding completed",
@@ -109,10 +135,14 @@
       "key_dates": {
         "phase1_start": "2023"
       },
-      "trial_ids": ["CLARICO"],
+      "trial_ids": [
+        "CLARICO"
+      ],
       "modality": "Cell therapy",
       "target": "Photoreceptor replacement",
-      "regulatory": ["FDA Fast Track"],
+      "regulatory": [
+        "FDA Fast Track"
+      ],
       "recent_updates": [
         {
           "date": "2023",
@@ -130,7 +160,10 @@
       "trial_ids": [],
       "modality": "Small molecule (oral)",
       "target": "Neuroprotection",
-      "regulatory": ["FDA Fast Track", "Orphan Drug Designation"],
+      "regulatory": [
+        "FDA Fast Track",
+        "Orphan Drug Designation"
+      ],
       "recent_updates": [
         {
           "date": "2024",
@@ -141,7 +174,7 @@
       "notes": "Oral neuroprotective therapy"
     },
     "Keio_Optogenetics": {
-      "company": "Keio University",
+      "company": "Keio University / Restore Vision Co.",
       "current_phase": "Phase 1/2",
       "status": "Recruiting",
       "key_dates": {
@@ -158,7 +191,7 @@
           "source": "University PR"
         }
       ],
-      "notes": "Targets completely blind RP patients. First RP gene therapy trial in Japan."
+      "notes": "Targets completely blind RP patients. First RP gene therapy trial in Japan. Treatment designated as RV-001 by Restore Vision."
     },
     "GS030": {
       "company": "GenSight Biologics",
@@ -208,6 +241,42 @@
       "recent_updates": [],
       "notes": "Japanese optogenetics program"
     },
+    "SPVN06": {
+      "company": "SparingVision",
+      "current_phase": "Phase 1/2",
+      "status": "Active",
+      "key_dates": {
+        "expected_primary_endpoint": "2025"
+      },
+      "trial_ids": [],
+      "modality": "Gene therapy",
+      "target": "Gene-agnostic",
+      "regulatory": [],
+      "recent_updates": [],
+      "notes": "Gene-independent therapy expected to reach primary endpoint in 2025"
+    },
+    "Ultevursen": {
+      "company": "Sepul Bio / Théa",
+      "current_phase": "Phase 2b",
+      "status": "Enrolling",
+      "key_dates": {
+        "phase2b_start": "2024-12"
+      },
+      "trial_ids": [
+        "LUNA"
+      ],
+      "modality": "RNA therapy (antisense oligonucleotide)",
+      "target": "USH2A exon 13 mutations",
+      "regulatory": [],
+      "recent_updates": [
+        {
+          "date": "2024-12",
+          "event": "First patient dosed in Phase 2b LUNA trial",
+          "source": "Company PR"
+        }
+      ],
+      "notes": "Targets Usher syndrome type 2A and RP with USH2A mutations"
+    },
     "Botaretigene sparoparvovec": {
       "company": "Janssen (J&J)",
       "current_phase": "Phase 3",
@@ -216,7 +285,10 @@
         "phase3_start": "2021-04",
         "primary_endpoint_result": "2025-05"
       },
-      "trial_ids": ["NCT04850118", "LUMEOS"],
+      "trial_ids": [
+        "NCT04850118",
+        "LUMEOS"
+      ],
       "modality": "Gene therapy",
       "target": "RPGR",
       "regulatory": [],
@@ -228,6 +300,24 @@
         }
       ],
       "notes": "Did not meet primary endpoint but showed improvements in secondary endpoints"
+    },
+    "Botaretigene": {
+      "company": "TBD",
+      "current_phase": "TBD",
+      "status": "New",
+      "key_dates": {},
+      "trial_ids": [],
+      "modality": "TBD",
+      "target": "TBD",
+      "regulatory": [],
+      "recent_updates": [
+        {
+          "date": "2025-07-24",
+          "event": "Newly identified program",
+          "source": "Web search"
+        }
+      ],
+      "notes": "Automatically added - needs manual verification"
     }
   }
 }
