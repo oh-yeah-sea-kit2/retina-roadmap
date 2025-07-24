@@ -1,0 +1,481 @@
+/**
+ * 網膜色素変性症治療予測プロジェクト - 共通CSS
+ * バージョン: 1.0.0
+ * 作成日: 2025-01-24
+ */
+
+/* ========================================
+   カラーパレット（色覚異常対応）
+   ======================================== */
+:root {
+  /* メインカラー */
+  --primary-color: #3498db;      /* 青 - メインアクセント */
+  --secondary-color: #2c3e50;    /* 濃紺 - 見出し */
+  --accent-color: #e74c3c;       /* 赤 - 強調・警告 */
+  --success-color: #27ae60;      /* 緑 - 成功・完了 */
+  --warning-color: #f39c12;      /* オレンジ - 注意 */
+  
+  /* 背景色 */
+  --bg-color: #f5f5f5;           /* ページ背景 */
+  --bg-white: #ffffff;           /* コンテンツ背景 */
+  --bg-light: #e8f4f8;           /* 薄い背景 */
+  --bg-dark: #34495e;            /* ダークモード用 */
+  
+  /* テキスト色 */
+  --text-primary: #333333;       /* 本文 */
+  --text-secondary: #666666;     /* 補助テキスト */
+  --text-light: #999999;         /* 薄いテキスト */
+  --text-white: #ffffff;         /* 白文字 */
+  
+  /* その他 */
+  --border-color: #dddddd;       /* ボーダー */
+  --shadow: 0 2px 10px rgba(0,0,0,0.1);
+  --radius: 10px;                /* 角丸 */
+  --transition: all 0.3s ease;
+}
+
+/* ========================================
+   リセット・基本設定
+   ======================================== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
+               'Helvetica Neue', Arial, 'Noto Sans JP', sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========================================
+   レイアウト
+   ======================================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.content-wrapper {
+  background-color: var(--bg-white);
+  padding: 40px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 40px;
+}
+
+/* モバイル対応 */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .content-wrapper {
+    padding: 20px;
+    border-radius: 0;
+  }
+}
+
+/* ========================================
+   タイポグラフィ
+   ======================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  border-bottom: 3px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #34495e;
+  margin-top: 2rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  color: #7f8c8d;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover, a:focus {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* フォーカス時のアクセシビリティ */
+a:focus, button:focus, input:focus, select:focus, textarea:focus, details:focus {
+  outline: 3px solid #ff6600;
+  outline-offset: 2px;
+}
+
+strong {
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+code {
+  background-color: #f4f4f4;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9em;
+}
+
+/* ========================================
+   コンポーネント
+   ======================================== */
+
+/* ボタン */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: var(--transition);
+  line-height: 1.5;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-white);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: var(--text-white);
+}
+
+.btn-tertiary {
+  background-color: #95a5a6;
+  color: var(--text-white);
+}
+
+/* カード */
+.card {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: var(--transition);
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+/* 数字カード（トップページ用） */
+.number-card {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.big-number {
+  display: block;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.label {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+/* サマリーボックス */
+.summary-box {
+  background-color: var(--bg-light);
+  border-left: 5px solid var(--primary-color);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+/* アラート */
+.alert {
+  padding: 15px 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  border: 1px solid #ffeaa7;
+  color: #856404;
+}
+
+.alert-info {
+  background-color: #d1ecf1;
+  border: 1px solid #bee5eb;
+  color: #0c5460;
+}
+
+/* ========================================
+   テーブル（レスポンシブ対応）
+   ======================================== */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+}
+
+th, td {
+  border: 1px solid var(--border-color);
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: var(--text-white);
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e8f4f8;
+}
+
+/* スマホ対応 - 横スクロール */
+@media screen and (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    font-size: 14px;
+  }
+  
+  th, td {
+    padding: 8px;
+    min-width: 100px;
+  }
+  
+  /* 最初の列を固定 */
+  tbody tr td:first-child,
+  thead tr th:first-child {
+    position: sticky;
+    left: 0;
+    background-color: white;
+    z-index: 1;
+    border-right: 2px solid var(--primary-color);
+  }
+  
+  thead tr th:first-child {
+    background-color: var(--primary-color);
+  }
+  
+  tbody tr:nth-child(even) td:first-child {
+    background-color: #f2f2f2;
+  }
+}
+
+/* ========================================
+   ナビゲーション
+   ======================================== */
+nav {
+  background-color: var(--bg-light);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: var(--radius);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  font-weight: 600;
+  display: block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: var(--transition);
+}
+
+nav a:hover, nav a:focus {
+  background-color: var(--primary-color);
+  color: var(--text-white);
+  text-decoration: none;
+}
+
+/* モバイルメニュー */
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* ========================================
+   フッター
+   ======================================== */
+footer {
+  background-color: var(--secondary-color);
+  color: var(--text-white);
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+footer a {
+  color: var(--text-white);
+  text-decoration: underline;
+}
+
+/* ========================================
+   ユーティリティクラス
+   ======================================== */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 2rem; }
+.mt-4 { margin-top: 3rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 2rem; }
+.mb-4 { margin-bottom: 3rem; }
+
+.hidden {
+  display: none;
+}
+
+/* スキップリンク */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 999;
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  position: static;
+}
+
+/* ========================================
+   画像
+   ======================================== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+/* ========================================
+   リスト
+   ======================================== */
+ul, ol {
+  margin: 0 0 1rem;
+  padding-left: 2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* ========================================
+   印刷用スタイル
+   ======================================== */
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+  
+  .container {
+    max-width: 100%;
+  }
+  
+  .content-wrapper {
+    box-shadow: none;
+    padding: 0;
+  }
+  
+  nav, footer, .skip-link {
+    display: none;
+  }
+  
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+}
