@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>よくある質問（FAQ） - 網膜色素変性症治療予測</title>
+    <meta name="description" content="網膜色素変性症の治療予測に関するよくある質問と回答。治療時期、費用、参加方法、予測の信頼性など。">
+    
+    <!-- OGPタグ -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FAQ - 網膜色素変性症治療予測">
+    <meta property="og:description" content="治療時期、費用、参加方法に関するよくある質問">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        /* FAQ専用スタイル */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-category {
+            margin: 40px 0;
+        }
+        
+        .faq-category h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+        
+        details {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            margin: 15px 0;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+        
+        details:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        details[open] {
+            background: white;
+            border-color: var(--primary-color);
+        }
+        
+        summary {
+            cursor: pointer;
+            padding: 20px;
+            font-weight: bold;
+            color: var(--secondary-color);
+            list-style: none;
+            position: relative;
+            padding-left: 50px;
+        }
+        
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        
+        summary::before {
+            content: "Q";
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--primary-color);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        summary::after {
+            content: "＋";
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+            color: var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+        
+        details[open] summary::after {
+            transform: translateY(-50%) rotate(45deg);
+        }
+        
+        details p, details ul, details ol {
+            padding: 0 50px 20px 50px;
+            margin: 0;
+            color: #333;
+        }
+        
+        details ul, details ol {
+            margin-top: 10px;
+        }
+        
+        details li {
+            margin: 5px 0;
+        }
+        
+        .highlight-box {
+            background: #e8f4f8;
+            border-left: 4px solid var(--primary-color);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .info-box {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        /* 検索ボックス（将来実装用） */
+        .search-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .search-box input {
+            width: 80%;
+            max-width: 500px;
+            padding: 10px 15px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        /* カテゴリナビゲーション */
+        .category-nav {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+        
+        .category-nav h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        
+        .category-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .category-nav li {
+            margin: 8px 0;
+        }
+        
+        .category-nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .category-nav a:hover {
+            text-decoration: underline;
+        }
+        
+        .category-nav a::before {
+            content: "▶";
+            margin-right: 10px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <!-- スキップリンク -->
+    <a href="#main" class="skip-link">メインコンテンツへスキップ</a>
+    
+    <!-- ナビゲーション -->
+    <nav>
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="patient_guide.html">患者ガイド</a></li>
+            <li><a href="medical_info.html">医療従事者向け</a></li>
+            <li><a href="detailed_analysis.html">詳細分析</a></li>
+            <li><a href="faq.html" aria-current="page">FAQ</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <main id="main">
+            <h1>よくある質問（FAQ）</h1>
+            
+            <div class="faq-container">
+                <!-- カテゴリナビゲーション -->
+                <div class="category-nav">
+                    <h3>質問カテゴリ</h3>
+                    <ul>
+                        <li><a href="#timing">治療時期について</a></li>
+                        <li><a href="#treatment">治療法について</a></li>
+                        <li><a href="#participation">参加方法について</a></li>
+                        <li><a href="#cost">費用について</a></li>
+                        <li><a href="#reliability">予測の信頼性について</a></li>
+                        <li><a href="#other">その他</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 治療時期について -->
+                <section id="timing" class="faq-category">
+                    <h2>治療時期について</h2>
+                    
+                    <details>
+                        <summary>いつ頃治療を受けられますか？</summary>
+                        <div>
+                            <p>最も早い治療法（OCU400）は、以下の時期に承認される可能性があります：</p>
+                            <ul>
+                                <li><strong>米国</strong>：2027年頃（2026-2029年の間）</li>
+                                <li><strong>日本</strong>：2032年頃（米国承認の約5年後）</li>
+                            </ul>
+                            <div class="warning-box">
+                                <p><strong>注意：</strong>これは予測であり、実際の承認時期は早まることも遅れることもあります。</p>
+                            </div>
+                        </div>
+                    </details>
+                    
+                    <details>
+                        <summary>なぜ日本での承認は遅いのですか？</summary>
+                        <div>
+                            <p>日本での承認が遅れる主な理由：</p>
+                            <ol>
+                                <li><strong>追加の臨床試験</strong>：日本人での安全性・有効性データが必要</li>
+                                <li><strong>審査体制</strong>：PMDAの審査リソースが限られている</li>
+                                <li><strong>言語の壁</strong>：申請書類の翻訳に時間がかかる</li>
+                                <li><strong>過去の実績</strong>：Luxturnaは米国承認から5.5年後に日本承認</li>
+                            </ol>
+                            <p>ただし、国際共同治験への参加や規制の国際調和により、この期間は短縮される可能性があります。</p>
+                        </div>
+                    </details>
+                    
+                    <details>
+                        <summary>すべての患者が同時に治療を受けられますか？</summary>
+                        <div>
+                            <p><strong>いいえ、段階的な提供になります：</strong></p>
+                            <ol>
+                                <li><strong>第1段階</strong>：臨床試験参加者と重症患者</li>
+                                <li><strong>第2段階</strong>：対象遺伝子変異を持つ患者</li>
+                                <li><strong>第3段階</strong>：保険適用後、より広範な患者へ</li>
+                            </ol>
+                            <p>初期は製造能力の制約もあり、年間数百人程度の治療になる可能性があります。</p>
+                        </div>
+                    </details>
+                </section>
+                
+                <!-- 治療法について -->
+                <section id="treatment" class="faq-category">
+                    <h2>治療法について</h2>
+                    
+                    <details>
+                        <summary>どのような治療法が開発されていますか？</summary>
+                        <div>
+                            <p>現在開発中の主な治療法は4種類あります：</p>
+                            <ul>
+                                <li><strong>遺伝子治療</strong>：正常な遺伝子を導入（OCU400、AGTC-501など）</li>
+                                <li><strong>光遺伝学治療</strong>：光感受性タンパク質を導入（MCO-010）</li>
+                                <li><strong>細胞治療</strong>：網膜細胞を移植（OpCT-001）</li>
+                                <li><strong>RNA治療</strong>：遺伝子の働きを調整（PYC-001）</li>
+                            </ul>
+                            <div class="info-box">
+                                <p>各治療法の詳細は<a href="detailed_analysis.html">詳細分析ページ</a>をご覧ください。</p>
+                            </div>
+                        </div>
+                    </details>
+                    
+                    <details>
+                        <summary>自分に合う治療法はどれですか？</summary>
+                        <div>
+                            <p>適切な治療法は以下の要因で決まります：</p>
+                            <ol>
+                                <li><strong>遺伝子変異の種類</strong>：まず遺伝子検査が必要</li>
+                                <li><strong>病気の進行度</strong>：残存視機能により適応が異なる</li>
+                                <li><strong>年齢</strong>：若年者ほど効果が期待できる</li>
+                                <li><strong>全身状態</strong>：他の病気の有無</li>
+                            </ol>
+                            <div class="highlight-box">
+                                <p><strong>重要：</strong>遺伝子検査を受けていない方は、まず検査を受けることをお勧めします。</p>
+                            </div>
+                        </div>
+                    </details>
+                    
+                    <details>
+                        <summary>治療の効果はどの程度期待できますか？</summary>
+                        <div>
+                            <p>臨床試験の結果から：</p>
+                            <ul>
+                                <li><strong>視力改善</strong>：20-50%の患者で3行以上の改善</li>
+                                <li><strong>進行停止</strong>：70-100%で進行が停止または遅延</li>
+                                <li><strong>視野改善</strong>：一部の患者で視野拡大</li>
+                            </ul>
+                            <div class="warning-box">
+                                <p><strong>注意：</strong>完全な視力回復は現時点では期待できません。早期治療ほど効果が高い傾向があります。</p>
+                            </div>
+                        </div>
+                    </details>
+                </section>
+                
+                <!-- 参加方法について -->
+                <section id="participation" class="faq-category">
+                    <h2>参加方法について</h2>
+                    
+                    <details>
+                        <summary>臨床試験に参加するにはどうすればよいですか？</summary>
+                        <div>
+                            <p>臨床試験参加の手順：</p>
+                            <ol>
+                                <li><strong>情報収集</strong>
+                                    <ul>
+                                        <li><a href="https://clinicaltrials.gov" target="_blank">ClinicalTrials.gov</a>で検索</li>
+                                        <li><a href="https://jrct.niph.go.jp" target="_blank">jRCT</a>（日本の臨床試験）</li>
+                                    </ul>
+                                </li>
+                                <li><strong>適格性確認</strong>
+                                    <ul>
+                                        <li>遺伝子型の一致</li>
+                                        <li>年齢・視力などの基準</li>
+                                    </ul>
+                                </li>
+                                <li><strong>主治医に相談</strong></li>
+                                <li><strong>試験実施施設に問い合わせ</strong></li>
+                            </ol>
+                        </div>
+                    </details>
+                    
+                    <details>
+                        <summary>遺伝子検査はどこで受けられますか？</summary>
+                        <div>
+                            <p>遺伝子検査実施施設：</p>
+                            <ul>
+                                <li><strong>大学病院</strong>：東大、慶應、阪大、九大など</li>
+                                <li><strong>専門病院</strong>：神戸アイセンター病院など</li>
+                                <li><strong>研究機関</strong>：理化学研究所（研究参加で無料の場合あり）</li>
+                            </ul>
+                            <p>手順：</p>
+                            <ol>
+                                <li>かかりつけ眼科で紹介状をもらう</li>
+                                <li>遺伝カウンセリングを受ける</li>
+                                <li>採血（通常の血液検査と同じ）</li>
+                                <li>4-8週間後に結果説明</li>
+                            </ol>
+                        </div>
+                    </details>
+                    
+                    <details>
+                        <summary>患者会に参加するメリットは？</summary>
+                        <div>
+                            <p>患者会（JRPS）参加のメリット：</p>
+                            <ul>
+                                <li><strong>最新情報</strong>：治療法の進展をいち早く知れる</li>
+                                <li><strong>情報交換</strong>：同じ病気の方との交流</li>
+                                <li><strong>支援情報</strong>：福祉制度や補助具の情報</li>
+                                <li><strong>臨床試験情報</strong>：参加募集の案内</li>
+                            </ul>
+                            <p>年会費：5,000円（家族会員：2,500円）</p>
+                            <p>詳細：<a href="https://www.jrps.org" target="_blank">日本網膜色素変性症協会</a></p>
+                        </div>
+                    </details>
+                </section>
+                
+                <!-- 費用について -->
+                <section id="cost" class="faq-category">
+                    <h2>費用について</h2>
+                    
+                    <details>
+                        <summary>治療費はどのくらいかかりますか？</summary>
+                        <div>
+                            <p>予想される治療費：</p>
+                            <ul>
+                                <li><strong>薬剤費</strong>：1-3億円（遺伝子治療の場合）</li>
+                                <li><strong>保険適用後</strong>：高額療養費制度により月額上限あり
+                                    <ul>
+                                        <li>一般所得：月額約8万円</li>
+                                        <li>低所得：月額約3.5万円</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="info-box">
+                                <p>Luxturnaの例では、保険適用により患者負担は大幅に軽減されました。</p>
+                            </div>
+                        </div>
+                    </details>
+                    
+                    <details>
+                        <summary>遺伝子検査の費用は？</summary>
+                        <div>
+                            <p>検査の種類と費用：</p>
+                            <ul>
+                                <li><strong>単一遺伝子検査</strong>：1-3万円</li>
+                                <li><strong>網膜疾患パネル検査</strong>：10-12万円（推奨）</li>
+                                <li><strong>全エクソーム検査</strong>：20-30万円</li>
+                            </ul>
+                            <p>費用を抑える方法：</p>
+                            <ul>
+                                <li>保険適用（診断目的の場合）</li>
+                                <li>研究参加による無料検査</li>
+                                <li>指定難病の医療費助成制度</li>
+                            </ul>
+                        </div>
+                    </details>
+                    
+                    <details>
+                        <summary>治療費の準備はどうすればよいですか？</summary>
+                        <div>
+                            <p>推奨される準備：</p>
+                            <ol>
+                                <li><strong>医療保険の確認</strong>
+                                    <ul>
+                                        <li>先進医療特約の有無</li>
+                                        <li>高額療養費制度の理解</li>
+                                    </ul>
+                                </li>
+                                <li><strong>貯蓄計画</strong>
+                                    <ul>
+                                        <li>月1-2万円の積立</li>
+                                        <li>医療費控除を考慮</li>
+                                    </ul>
+                                </li>
+                                <li><strong>公的支援の確認</strong>
+                                    <ul>
+                                        <li>指定難病医療費助成</li>
+                                        <li>障害者手帳による支援</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                    </details>
+                </section>
+                
+                <!-- 予測の信頼性について -->
+                <section id="reliability" class="faq-category">
+                    <h2>予測の信頼性について</h2>
+                    
+                    <details>
+                        <summary>この予測はどの程度信頼できますか？</summary>
+                        <div>
+                            <p>予測の根拠：</p>
+                            <ul>
+                                <li><strong>実データ</strong>：127件の臨床試験データを分析</li>
+                                <li><strong>統計手法</strong>：10,000回のモンテカルロシミュレーション</li>
+                                <li><strong>過去実績</strong>：Luxturnaなど承認済み薬の開発期間を参考</li>
+                            </ul>
+                            <div class="warning-box">
+                                <p><strong>限界：</strong>予期せぬ遅延、規制変更、パンデミックなどは予測できません。</p>
+                            </div>
+                        </div>
+                    </details>
+                    
+                    <details>
+                        <summary>予測が外れる可能性は？</summary>
+                        <div>
+                            <p>予測が外れる主な要因：</p>
+                            <ul>
+                                <li><strong>早まる場合</strong>
+                                    <ul>
+                                        <li>AI技術による開発加速</li>
+                                        <li>規制の柔軟化</li>
+                                        <li>予想以上の有効性</li>
+                                    </ul>
+                                </li>
+                                <li><strong>遅れる場合</strong>
+                                    <ul>
+                                        <li>安全性の問題</li>
+                                        <li>製造の困難</li>
+                                        <li>資金不足</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <p>95%信頼区間を示していますが、5%の確率で範囲外になる可能性があります。</p>
+                        </div>
+                    </details>
+                    
+                    <details>
+                        <summary>情報はどのくらいの頻度で更新されますか？</summary>
+                        <div>
+                            <p>更新スケジュール：</p>
+                            <ul>
+                                <li><strong>定期更新</strong>：四半期ごと（1月、4月、7月、10月）</li>
+                                <li><strong>臨時更新</strong>：重要なニュースがあった場合</li>
+                                <li><strong>データソース</strong>：ClinicalTrials.gov、企業発表</li>
+                            </ul>
+                            <p>最終更新日：2025年7月24日</p>
+                        </div>
+                    </details>
+                </section>
+                
+                <!-- その他 -->
+                <section id="other" class="faq-category">
+                    <h2>その他</h2>
+                    
+                    <details>
+                        <summary>このサイトは誰が作っていますか？</summary>
+                        <div>
+                            <p>このサイトは、網膜色素変性症の治療開発状況を客観的に分析・予測することを目的とした研究プロジェクトです。</p>
+                            <ul>
+                                <li><strong>データ分析</strong>：公開データベースを統計的に分析</li>
+                                <li><strong>予測手法</strong>：モンテカルロシミュレーション</li>
+                                <li><strong>ソースコード</strong>：<a href="https://github.com/oh-yeah-sea-kit2/retina-roadmap" target="_blank">GitHub</a>で公開</li>
+                            </ul>
+                            <div class="warning-box">
+                                <p><strong>免責事項：</strong>医学的助言ではありません。治療の決定は医師にご相談ください。</p>
+                            </div>
+                        </div>
+                    </details>
+                    
+                    <details>
+                        <summary>質問やフィードバックはどこに送ればよいですか？</summary>
+                        <div>
+                            <p>フィードバックは以下から：</p>
+                            <ul>
+                                <li><strong>GitHub Issues</strong>：<a href="https://github.com/oh-yeah-sea-kit2/retina-roadmap/issues" target="_blank">技術的な問題や提案</a></li>
+                                <li><strong>患者会経由</strong>：JRPSを通じたフィードバック</li>
+                            </ul>
+                            <p>個人的な医療相談には対応できません。主治医にご相談ください。</p>
+                        </div>
+                    </details>
+                    
+                    <details>
+                        <summary>他に参考になる情報源はありますか？</summary>
+                        <div>
+                            <p>推奨する情報源：</p>
+                            <ul>
+                                <li><strong>患者団体</strong>
+                                    <ul>
+                                        <li><a href="https://www.jrps.org" target="_blank">日本網膜色素変性症協会（JRPS）</a></li>
+                                        <li><a href="https://www.fightingblindness.org" target="_blank">Foundation Fighting Blindness（英語）</a></li>
+                                    </ul>
+                                </li>
+                                <li><strong>医療情報</strong>
+                                    <ul>
+                                        <li><a href="https://www.nanbyou.or.jp" target="_blank">難病情報センター</a></li>
+                                        <li><a href="https://www.nichigan.or.jp" target="_blank">日本眼科学会</a></li>
+                                    </ul>
+                                </li>
+                                <li><strong>研究機関</strong>
+                                    <ul>
+                                        <li><a href="https://www.kobe.riken.jp" target="_blank">理化学研究所（神戸）</a></li>
+                                        <li>各大学病院の眼科</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </details>
+                </section>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 網膜色素変性症治療予測プロジェクト | 
+            <a href="disclaimer.html">免責事項</a> | 
+            <a href="index.html">ホームに戻る</a>
+            </p>
+        </footer>
+    </div>
+    
+    <script src="js/common.js"></script>
+</body>
+</html>
