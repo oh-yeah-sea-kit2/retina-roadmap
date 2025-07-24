@@ -37,24 +37,26 @@ jobs:
     - name: 週次チェック用Issueを作成
       if: steps.check-existing.outputs.existing_issue == ''
       run: |
+        ISSUE_BODY="@claude
+
+        網膜色素変性症の治療情報について、週次更新チェックをお願いします。
+
+        以下のコマンドを実行して、最新情報を確認してください：
+        ```
+        /update_rp_info check
+        ```
+
+        チェック結果に基づいて：
+        1. 重要な更新があるかを報告してください
+        2. 更新が必要な場合は、推奨アクション（quick または full）を提案してください
+        3. 特に注目すべき治療プログラムの進展があれば強調してください
+
+        ---
+        *このIssueは毎週月曜日に自動的に作成されます。*"
+        
         gh issue create \
           --title "📅 週次更新チェック - ${{ steps.check-existing.outputs.monday_date }}" \
-          --body "@claude 
-
-網膜色素変性症の治療情報について、週次更新チェックをお願いします。
-
-以下のコマンドを実行して、最新情報を確認してください：
-\`\`\`
-/update_rp_info check
-\`\`\`
-
-チェック結果に基づいて：
-1. 重要な更新があるかを報告してください
-2. 更新が必要な場合は、推奨アクション（quick または full）を提案してください
-3. 特に注目すべき治療プログラムの進展があれば強調してください
-
----
-*このIssueは毎週月曜日に自動的に作成されます。*" \
+          --body "$ISSUE_BODY" \
           --label "automation,update-check"
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -62,16 +64,18 @@ jobs:
     - name: 既存のIssueにリマインダーコメントを追加
       if: steps.check-existing.outputs.existing_issue != ''
       run: |
+        COMMENT_BODY="## 🔔 週次チェックリマインダー
+
+        @claude
+
+        今週の更新チェックをお願いします。前回のチェックから新しい情報があるか確認してください。
+
+        `/update_rp_info check` を実行してください。
+
+        ---
+        *${{ steps.date.outputs.date }} - 自動リマインダー*"
+        
         gh issue comment ${{ steps.check-existing.outputs.existing_issue }} \
-          --body "## 🔔 週次チェックリマインダー
-
-@claude 
-
-今週の更新チェックをお願いします。前回のチェックから新しい情報があるか確認してください。
-
-\`/update_rp_info check\` を実行してください。
-
----
-*${{ steps.date.outputs.date }} - 自動リマインダー*"
+          --body "$COMMENT_BODY"
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
