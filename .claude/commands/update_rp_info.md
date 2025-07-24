@@ -1,7 +1,7 @@
 ---
 description: 網膜色素変性症の最新情報を収集し、プロジェクトのデータとドキュメントを更新
 argument-hint: '[full|quick|check]'
-allowed-tools: WebSearch, Bash(python3:*), Bash(git:*), Read, Write, Task
+allowed-tools: WebSearch, Bash(python3:*), Bash(git:*), Bash(gemini:*), Read, Write, Task
 ---
 
 ## Context
@@ -29,12 +29,21 @@ allowed-tools: WebSearch, Bash(python3:*), Bash(git:*), Read, Write, Task
 
 ### 実行手順
 
-1. **Web検索で最新情報を収集**（checkモードとfullモードで実行）
-   - MCO-010 Nanoscope retinitis pigmentosa 2025 latest update clinical trial FDA BLA
-   - OCU400 Ocugen retinitis pigmentosa 2025 latest results phase 3 liMeliGhT
-   - VP-001 PYC therapeutics retinitis pigmentosa 2025 update phase 2/3
-   - retinitis pigmentosa gene therapy 2025 FDA approval new treatments
-   - 網膜色素変性症 遺伝子治療 2025 最新 日本 承認
+1. **Gemini検索で最新情報を収集**（checkモードとfullモードで実行）
+         ```bash
+   # Gemini Searchを使用（より包括的な情報収集が可能）
+   gemini --prompt "WebSearch: MCO-010 Nanoscope Therapeutics retinitis pigmentosa 2025 latest update Phase 3"
+   gemini --prompt "WebSearch: OCU400 Ocugen retinitis pigmentosa 2025 latest update Phase 3"
+   gemini --prompt "WebSearch: Botaretigene sparoparvovec Janssen (J&J) retinitis pigmentosa 2025 latest update Phase 3"
+   gemini --prompt "WebSearch: AGTC-501 Beacon Therapeutics retinitis pigmentosa 2025 latest update Phase 2/3"
+   gemini --prompt "WebSearch: Ultevursen Sepul Bio / Théa retinitis pigmentosa 2025 latest update Phase 2b"
+   gemini --prompt "WebSearch: VP-001 PYC Therapeutics retinitis pigmentosa 2025 latest update Phase 1/2"
+   gemini --prompt "WebSearch: OpCT-001 BlueRock Therapeutics retinitis pigmentosa 2025 latest update Phase 1/2a"
+   gemini --prompt "WebSearch: retinitis pigmentosa gene therapy 2025 FDA approval new treatments"
+   gemini --prompt "WebSearch: 網膜色素変性症 遺伝子治療 2025 最新 日本 承認"
+   ```
+   
+   注: gemini-searchが利用できない場合は、通常のWebSearchツールを使用
 
 2. **既存データとの比較**（checkモードで実行）
    ```python

@@ -1,19 +1,29 @@
 {
-  "last_check_date": "2025-07-20T23:32:17.308286",
+  "last_check_date": "2025-07-24T21:18:59.309574",
   "check_type": "web_search",
   "programs_checked": [
+    "Botaretigene",
+    "VP-001",
     "MCO-010",
     "OCU400",
-    "VP-001"
+    "AGTC-501",
+    "OpCT-001"
   ],
   "sources_queried": [
-    "MCO-010 Nanoscope retinitis pigmentosa 2025 latest update clinical trial",
-    "OCU400 Ocugen retinitis pigmentosa 2025 latest results phase 3",
-    "VP-001 PYC therapeutics retinitis pigmentosa 2025 update",
-    "retinitis pigmentosa gene therapy 2025 FDA approval BLA",
-    "網膜色素変性症 遺伝子治療 2025 最新 臨床試験",
-    "retinal degeneration new treatments 2025 clinical trials"
+    "MCO-010 Nanoscope Therapeutics retinitis pigmentosa 2025 latest update Phase 3",
+    "OCU400 Ocugen retinitis pigmentosa 2025 latest update Phase 3",
+    "Botaretigene sparoparvovec Janssen (J&J) retinitis pigmentosa 2025 latest update Phase 3",
+    "AGTC-501 Beacon Therapeutics retinitis pigmentosa 2025 latest update Phase 2/3",
+    "Ultevursen Sepul Bio / Théa retinitis pigmentosa 2025 latest update Phase 2b",
+    "VP-001 PYC Therapeutics retinitis pigmentosa 2025 latest update Phase 1/2",
+    "OpCT-001 BlueRock Therapeutics retinitis pigmentosa 2025 latest update Phase 1/2a",
+    "retinitis pigmentosa gene therapy 2025 FDA approval new treatments",
+    "網膜色素変性症 遺伝子治療 2025 最新 日本 承認"
   ],
-  "new_findings": [],
-  "updates_found": []
+  "new_findings": [
+    "Botaretigene"
+  ],
+  "updates_found": [
+    "VP-001: Phase更新 Phase 1/2 → Phase 1"
+  ]
 }

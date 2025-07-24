@@ -1,0 +1,141 @@
+{
+  "comparison_date": "2025-07-24",
+  "comparison_type": "gemini_search_vs_knowledge_base",
+  "summary": {
+    "total_programs_checked": 12,
+    "new_programs": 3,
+    "updated_programs": 1,
+    "unchanged_programs": 8,
+    "important_updates": 3
+  },
+  "new_programs": [
+    {
+      "program_name": "SPVN06",
+      "company": "SparingVision",
+      "importance_score": 65,
+      "description": "遺伝子非依存型治療",
+      "phase": "Phase 1/2",
+      "status": "2025年に主要評価項目到達予定",
+      "reason_important": "新しい遺伝子非依存型アプローチで、2025年に結果が期待される"
+    },
+    {
+      "program_name": "Ultevursen",
+      "company": "Sepul Bio/Théa",
+      "importance_score": 60,
+      "description": "USH2A遺伝子変異向けRNA治療",
+      "phase": "Phase 2b",
+      "status": "LUNA試験進行中",
+      "reason_important": "前回確認済みだが知識ベース未追加、RNA治療の新しいアプローチ"
+    },
+    {
+      "program_name": "RV-001",
+      "company": "レストアビジョン",
+      "importance_score": 40,
+      "description": "慶應大学光遺伝学プログラムの企業化",
+      "phase": "Phase 1/2",
+      "status": "2025年2月臨床試験開始",
+      "reason_important": "既存の慶應大学プログラムに企業名と治療名が判明"
+    }
+  ],
+  "updated_programs": [
+    {
+      "program_name": "Keio_Optogenetics",
+      "update_type": "additional_info",
+      "importance_score": 40,
+      "changes": {
+        "treatment_name": {
+          "old": "未定",
+          "new": "RV-001"
+        },
+        "company": {
+          "old": "Keio University",
+          "new": "Keio University/レストアビジョン"
+        }
+      },
+      "reason": "治療名と企業名が新たに判明"
+    }
+  ],
+  "unchanged_programs": [
+    {
+      "program_name": "MCO-010",
+      "reason": "2025年7月BLA開始は既に記録済み、変更なし"
+    },
+    {
+      "program_name": "OCU400",
+      "reason": "Phase 3進行中、2026年BLA申請予定は既知情報"
+    },
+    {
+      "program_name": "VP-001",
+      "reason": "2025年後半Phase 2/3開始予定は既知情報"
+    },
+    {
+      "program_name": "AGTC-501",
+      "reason": "新規情報なし"
+    },
+    {
+      "program_name": "OpCT-001",
+      "reason": "新規情報なし"
+    },
+    {
+      "program_name": "NPI-001",
+      "reason": "新規情報なし"
+    },
+    {
+      "program_name": "GS030",
+      "reason": "新規情報なし"
+    },
+    {
+      "program_name": "4D-125",
+      "reason": "新規情報なし"
+    }
+  ],
+  "important_updates": [
+    {
+      "priority": 1,
+      "program": "SPVN06",
+      "update": "新規遺伝子非依存型プログラム、2025年に結果期待",
+      "action_required": "知識ベースに追加"
+    },
+    {
+      "priority": 2,
+      "program": "Ultevursen",
+      "update": "USH2A向けRNA治療、Phase 2b進行中",
+      "action_required": "知識ベースに追加"
+    },
+    {
+      "priority": 3,
+      "program": "Keio_Optogenetics",
+      "update": "RV-001/レストアビジョンの情報を追加",
+      "action_required": "既存エントリーを更新"
+    }
+  ],
+  "japanese_developments": [
+    {
+      "program": "RV-001",
+      "significance": "日本初のRP遺伝子治療の企業化",
+      "details": "慶應大学の光遺伝学プログラムがレストアビジョン社により商業化"
+    },
+    {
+      "program": "Luxturna",
+      "significance": "2023年に日本承認済み",
+      "details": "RPE65変異のみ対象、既知情報"
+    }
+  ],
+  "data_sources": [
+    "Gemini search results (2025-07-24)",
+    "Knowledge base clinical_programs.json (2025-07-20)",
+    "Last check results (2025-07-24)"
+  ],
+  "recommendations": {
+    "immediate_actions": [
+      "SPVN06を知識ベースに新規追加",
+      "Ultevursenを知識ベースに新規追加",
+      "Keio_Optogenetics/RV-001の情報を更新"
+    ],
+    "future_monitoring": [
+      "SPVN06の2025年Phase 1/2結果",
+      "Ultevursen Phase 2b LUNA試験の進展",
+      "NAC（N-アセチルシステイン）の詳細情報収集"
+    ]
+  }
+}

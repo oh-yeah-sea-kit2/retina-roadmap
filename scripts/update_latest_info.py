@@ -28,20 +28,93 @@ from scripts.utils.data_comparison import (
 )
 
 
+def generate_search_queries():
+    """知識ベースから動的に検索クエリを生成"""
+    kb = load_knowledge_base()
+    programs = kb.get('programs', {})
+    
+    # 重要なプログラムを優先度順にソート
+    priority_programs = []
+    for name, info in programs.items():
+        priority_score = 0
+        # BLA申請中は最優先
+        if 'BLA' in info.get('status', ''):
+            priority_score = 100
+        # Phase 3は高優先
+        elif 'Phase 3' in info.get('current_phase', ''):
+            priority_score = 80
+        # Phase 2/3は中優先
+        elif 'Phase 2/3' in info.get('current_phase', '') or 'Phase 2' in info.get('current_phase', ''):
+            priority_score = 60
+        # FDA Fast Trackなど規制優遇がある場合は+10
+        if any('FDA' in r or 'Fast Track' in r for r in info.get('regulatory', [])):
+            priority_score += 10
+        
+        if priority_score > 0:
+            priority_programs.append((name, info, priority_score))
+    
+    # スコア順にソート
+    priority_programs.sort(key=lambda x: x[2], reverse=True)
+    
+    # 上位プログラムから検索クエリを生成
+    queries = []
+    for name, info, _ in priority_programs[:7]:  # 上位7個まで
+        company = info.get('company', '')
+        phase = info.get('current_phase', '')
+        query = f"{name} {company} retinitis pigmentosa 2025 latest update {phase}"
+        queries.append(query.strip())
+    
+    # 一般的な検索クエリも追加
+    queries.extend([
+        "retinitis pigmentosa gene therapy 2025 FDA approval new treatments",
+        "網膜色素変性症 遺伝子治療 2025 最新 日本 承認"
+    ])
+    
+    return queries
+
+
+def update_command_search_queries(queries):
+    """update_rp_info.mdの検索クエリセクションを更新"""
+    command_path = Path(__file__).parent.parent / ".claude" / "commands" / "update_rp_info.md"
+    
+    if not command_path.exists():
+        print("警告: update_rp_info.mdが見つかりません")
+        return
+    
+    with open(command_path, "r", encoding="utf-8") as f:
+        content = f.read()
+    
+    # 検索クエリセクションを生成
+    query_section = "   ```bash\n   # Gemini Searchを使用（より包括的な情報収集が可能）\n"
+    for query in queries:
+        query_section += f'   gemini --prompt "WebSearch: {query}"\n'
+    query_section += "   ```"
+    
+    # 既存の検索クエリセクションを探して置換
+    pattern = r'(```bash\n   # Gemini Searchを使用.*?\n)(.*?)(   ```)'
+    match = re.search(pattern, content, re.DOTALL)
+    
+    if match:
+        new_content = content[:match.start()] + query_section + content[match.end():]
+        
+        with open(command_path, "w", encoding="utf-8") as f:
+            f.write(new_content)
+        
+        print("update_rp_info.mdの検索クエリを更新しました")
+    else:
+        print("警告: 検索クエリセクションが見つかりません")
+
+
 def web_search_retina_updates():
     """Web検索で最新の網膜色素変性症治療情報を収集"""
     
     print("\n=== Web検索で最新情報を収集中 ===")
     
-    # 検索クエリのリスト
-    search_queries = [
-        "MCO-010 Nanoscope retinitis pigmentosa 2025 latest update clinical trial",
-        "OCU400 Ocugen retinitis pigmentosa 2025 latest results phase 3",
-        "VP-001 PYC therapeutics retinitis pigmentosa 2025 update",
-        "retinitis pigmentosa gene therapy 2025 FDA approval BLA",
-        "網膜色素変性症 遺伝子治療 2025 最新 臨床試験",
-        "retinal degeneration new treatments 2025 clinical trials"
-    ]
+    # 動的に検索クエリを生成
+    search_queries = generate_search_queries()
+    
+    # update_rp_info.mdも更新
+    update_command_search_queries(search_queries)
     
     updates = []
     
