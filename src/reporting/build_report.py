@@ -430,7 +430,7 @@ def main():
     
     # HTMLに変換
     print("Converting to HTML...")
-    html_file = public_dir / "index.html"
+    html_file = public_dir / "index_old.html"
     convert_to_html(markdown_content, html_file)
     print(f"HTML report saved to: {html_file}")
     
