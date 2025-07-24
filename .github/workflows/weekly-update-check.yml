@@ -42,5 +42,11 @@ jobs:
           日本語で簡潔に応答してください。
           重視ポイント: 新規治療プログラム / Phase 3進行 / BLA申請 / 試験成功・失敗 / 規制当局の発表
         
-        allowed_tools: Bash(python scripts/*), Bash(python src/*), Bash(git status), Bash(git diff)
+        allowed_tools: |
+          Bash(python scripts/*)
+          Bash(python src/*)
+          Bash(git status)
+          Bash(git diff)
+          Bash(gh issue create)
+          Bash(gh issue list)
         timeout_minutes: 30
