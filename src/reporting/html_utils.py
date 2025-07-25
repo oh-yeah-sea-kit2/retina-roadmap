@@ -23,9 +23,38 @@ def auto_link_urls(text):
 
 
 def make_tables_responsive(html_content):
-    """テーブルをレスポンシブ対応にする"""
-    # 現在は何もしない（CSSで対応）
-    return html_content
+    """テーブルをレスポンシブ対応にする（カード型レイアウト用のdata-label追加）"""
+    from bs4 import BeautifulSoup
+    
+    # BeautifulSoupでHTMLをパース
+    soup = BeautifulSoup(html_content, 'html.parser')
+    
+    # すべてのテーブルを処理
+    for table in soup.find_all('table'):
+        # カード型レイアウトクラスを追加
+        if 'class' in table.attrs:
+            table['class'].append('card-layout')
+        else:
+            table['class'] = ['card-layout']
+        
+        # ヘッダー行を取得
+        headers = []
+        thead = table.find('thead')
+        if thead:
+            header_row = thead.find('tr')
+            if header_row:
+                headers = [th.get_text(strip=True) for th in header_row.find_all(['th', 'td'])]
+        
+        # 各データ行にdata-label属性を追加
+        tbody = table.find('tbody')
+        if tbody and headers:
+            for row in tbody.find_all('tr'):
+                cells = row.find_all(['td', 'th'])
+                for i, cell in enumerate(cells):
+                    if i < len(headers) and i > 0:  # 最初のセルはラベル不要
+                        cell['data-label'] = headers[i]
+    
+    return str(soup)
 
 
 def get_responsive_table_css():

@@ -7,3 +7,4 @@ scikit-learn
 pyarrow
 pyyaml
 markdown
+beautifulsoup4
