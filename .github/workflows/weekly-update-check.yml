@@ -23,6 +23,7 @@ jobs:
         fetch-depth: 1
     
     - name: Claude Code - weekly scan
+      id: claude_scan
       uses: anthropics/claude-code-base-action@beta
       with:
         claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
@@ -30,27 +31,39 @@ jobs:
         prompt: |
           **週次更新チェック実行:** `/update_rp_info check`
           
-          **簡潔に以下のみ報告:**
-          1. ✅重要な更新: あり/なし
-          2. 🎯推奨アクション: 不要/quick/full
-          3. 📊注目プログラム: 3件以内
+          **以下の形式で結果を出力してください:**
+          ```markdown
+          ## 週次更新チェック結果
           
-          **必須:** 結果をMarkdownファイルに保存: `.github/weekly-update-result.md`
+          **実行日:** YYYY-MM-DD
+          
+          ### 📊 結果サマリー
+          
+          1. **✅重要な更新:** [あり/なし]
+          2. **🎯推奨アクション:** [不要/quick/full]
+          3. **📊注目プログラム:**
+             - プログラム1: 状況
+             - プログラム2: 状況
+             - プログラム3: 状況
+          
+          ### 詳細
+          [簡潔な説明]
+          ```
         
         append_system_prompt: |
           **出力要件:**
-          - 日本語で5行以内の超簡潔な応答
-          - 結論を最初に明記
+          - 日本語で応答
+          - Markdownフォーマットで構造化された出力を生成
           - 詳細なプロセスログは一切表示しない
-          - 結果をMarkdownファイルとして保存
+          - 最後に上記のMarkdown形式の結果のみを出力
           
           **重要:** MCO-010(BLA申請中)、OCU400(Phase3)、VP-001(Phase2/3予定)の状況のみ確認
         
         allowed_tools: |
           Bash(python scripts/*)
           Bash(python src/*)
-          Bash(echo *)
-          Write
+          WebSearch
+          Read
         timeout_minutes: 30
     
     - name: Create GitHub Issue
@@ -58,15 +71,20 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-          const fs = require('fs');
           const date = new Date().toISOString().split('T')[0];
           
-          // Markdownファイルから結果を読み込む
+          // Claude Codeの出力から結果を抽出
+          const claudeOutput = `${{ steps.claude_scan.outputs.result || '' }}`;
+          
+          // Markdownブロックを抽出（```markdown から ``` まで）
+          const markdownMatch = claudeOutput.match(/```markdown\n([\s\S]*?)\n```/);
           let content = '';
-          try {
-            content = fs.readFileSync('.github/weekly-update-result.md', 'utf8');
-          } catch (error) {
-            content = '## 週次更新チェック結果\n\n更新チェックの実行中にエラーが発生しました。';
+          
+          if (markdownMatch && markdownMatch[1]) {
+            content = markdownMatch[1].trim();
+          } else {
+            // Markdownブロックが見つからない場合は、全体の出力を使用
+            content = claudeOutput || '## 週次更新チェック結果\n\n更新チェックの実行中にエラーが発生しました。';
           }
           
           // Issueを作成
