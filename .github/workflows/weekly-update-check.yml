@@ -28,25 +28,29 @@ jobs:
         claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
         model: "claude-opus-4-20250514"
         prompt: |
-          網膜色素変性症の治療情報について週次更新チェックを実行してください。
+          **週次更新チェック実行:** `/update_rp_info check`
           
-          /update_rp_info check を実行した上で、以下を報告してください：
-          1. 重要な更新の有無
-          2. 必要なら推奨アクション（quick/full）
-          3. 注目すべき治療プログラム進展
+          **簡潔に以下のみ報告:**
+          1. ✅重要な更新: あり/なし
+          2. 🎯推奨アクション: 不要/quick/full
+          3. 📊注目プログラム: 3件以内
           
-          結果をGitHub Issue「📅 週次更新チェック結果 - [今日の日付]」として作成してください。
+          **必須:** 結果をGitHub Issue「📅 週次更新チェック結果 - [今日の日付]」として作成
         
         append_system_prompt: |
-          このプロジェクトは網膜色素変性症の治療予測システムです。
-          日本語で簡潔に応答してください。
-          重視ポイント: 新規治療プログラム / Phase 3進行 / BLA申請 / 試験成功・失敗 / 規制当局の発表
+          **出力要件:**
+          - 日本語で5行以内の超簡潔な応答
+          - 結論を最初に明記
+          - 詳細なプロセスログは一切表示しない
+          - GitHub Issue作成を最優先で実行
+          
+          **重要:** MCO-010(BLA申請中)、OCU400(Phase3)、VP-001(Phase2/3予定)の状況のみ確認
         
         allowed_tools: |
           Bash(python scripts/*)
           Bash(python src/*)
-          Bash(git status)
-          Bash(git diff)
           Bash(gh issue create)
           Bash(gh issue list)
+          Bash(echo *)
+          Write
         timeout_minutes: 30
