@@ -81,10 +81,17 @@ jobs:
           let content = '';
           
           if (markdownMatch && markdownMatch[1]) {
+            // Markdownブロックが見つかった場合
             content = markdownMatch[1].trim();
           } else {
-            // Markdownブロックが見つからない場合は、全体の出力を使用
-            content = claudeOutput || '## 週次更新チェック結果\n\n更新チェックの実行中にエラーが発生しました。';
+            // Markdownブロックがない場合、"## 週次更新チェック結果"で始まる部分を探す
+            const reportMatch = claudeOutput.match(/(## 週次更新チェック結果[\s\S]*)/);
+            if (reportMatch && reportMatch[1]) {
+              content = reportMatch[1].trim();
+            } else {
+              // それも見つからない場合は、全体の出力を使用
+              content = claudeOutput || '## 週次更新チェック結果\n\n更新チェックの実行中にエラーが発生しました。';
+            }
           }
           
           // Issueを作成
