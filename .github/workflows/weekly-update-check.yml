@@ -22,77 +22,131 @@ jobs:
       with:
         fetch-depth: 1
     
-    - name: Claude Code - weekly scan
-      id: claude_scan
-      uses: anthropics/claude-code-base-action@beta
-      with:
-        claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-        model: "claude-opus-4-20250514"
-        prompt: |
-          **週次更新チェック実行:** `/update_rp_info check`
-          
-          **以下の形式で結果を出力してください:**
-          ```markdown
-          ## 週次更新チェック結果
-          
-          **実行日:** YYYY-MM-DD
-          
-          ### 📊 結果サマリー
-          
-          1. **✅重要な更新:** [あり/なし]
-          2. **🎯推奨アクション:** [不要/quick/full]
-          3. **📊注目プログラム:**
-             - プログラム1: 状況
-             - プログラム2: 状況
-             - プログラム3: 状況
-          
-          ### 詳細
-          [簡潔な説明]
-          ```
+    - name: Run weekly update check
+      id: check_result
+      run: |
+        # 週次更新チェックを実行
+        python scripts/update_latest_info.py check > check_output.txt 2>&1 || true
         
-        append_system_prompt: |
-          **出力要件:**
-          - 日本語で応答
-          - Markdownフォーマットで構造化された出力を生成
-          - 詳細なプロセスログは一切表示しない
-          - 最後に上記のMarkdown形式の結果のみを出力
+        # 結果を抽出
+        if grep -q "📊 更新チェック結果サマリー" check_output.txt; then
+          # 結果サマリーが含まれている場合
+          echo "check_success=true" >> $GITHUB_OUTPUT
+          # 結果をファイルに保存
+          sed -n '/📊 更新チェック結果サマリー/,/^$/p' check_output.txt > summary.txt
           
-          **重要:** MCO-010(BLA申請中)、OCU400(Phase3)、VP-001(Phase2/3予定)の状況のみ確認
+          # 重要な更新の有無を確認
+          if grep -q "重要な更新: [1-9]" summary.txt; then
+            echo "has_updates=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_updates=false" >> $GITHUB_OUTPUT
+          fi
+          
+          # 推奨アクションを抽出
+          if grep -q "quick" check_output.txt; then
+            echo "recommended_action=quick" >> $GITHUB_OUTPUT
+          elif grep -q "full" check_output.txt; then
+            echo "recommended_action=full" >> $GITHUB_OUTPUT
+          else
+            echo "recommended_action=none" >> $GITHUB_OUTPUT
+          fi
+        else
+          echo "check_success=false" >> $GITHUB_OUTPUT
+          echo "has_updates=false" >> $GITHUB_OUTPUT
+          echo "recommended_action=error" >> $GITHUB_OUTPUT
+        fi
+    
+    - name: Format check result
+      id: format_result
+      run: |
+        # 結果をMarkdown形式で整形
+        DATE=$(date +"%Y-%m-%d")
         
-        allowed_tools: |
-          Bash(python scripts/*)
-          Bash(python src/*)
-          WebSearch
-          Read
-        timeout_minutes: 30
+        if [ "${{ steps.check_result.outputs.check_success }}" = "true" ]; then
+          # 成功時のレポート
+          cat > issue_content.md <<EOF
+## 週次更新チェック結果
+
+**実行日:** ${DATE}
+
+### 📊 結果サマリー
+
+EOF
+          # サマリーを追加
+          if [ -f summary.txt ]; then
+            cat summary.txt >> issue_content.md
+          fi
+          
+          # 推奨アクションを追加
+          echo "" >> issue_content.md
+          echo "### 🎯 推奨アクション" >> issue_content.md
+          
+          if [ "${{ steps.check_result.outputs.has_updates }}" = "true" ]; then
+            echo "" >> issue_content.md
+            echo "重要な更新が見つかりました。以下のコマンドで詳細を確認してください：" >> issue_content.md
+            echo "\`\`\`bash" >> issue_content.md
+            if [ "${{ steps.check_result.outputs.recommended_action }}" = "quick" ]; then
+              echo "python scripts/update_latest_info.py quick" >> issue_content.md
+            else
+              echo "python scripts/update_latest_info.py full" >> issue_content.md
+            fi
+            echo "\`\`\`" >> issue_content.md
+          else
+            echo "" >> issue_content.md
+            echo "重要な更新はありませんでした。" >> issue_content.md
+          fi
+          
+          # 詳細情報を追加
+          echo "" >> issue_content.md
+          echo "### 🔍 詳細" >> issue_content.md
+          echo "" >> issue_content.md
+          echo "<details>" >> issue_content.md
+          echo "<summary>チェックログを表示</summary>" >> issue_content.md
+          echo "" >> issue_content.md
+          echo "\`\`\`" >> issue_content.md
+          tail -50 check_output.txt >> issue_content.md
+          echo "\`\`\`" >> issue_content.md
+          echo "</details>" >> issue_content.md
+        else
+          # エラー時のレポート
+          cat > issue_content.md <<EOF
+## 週次更新チェック結果
+
+**実行日:** ${DATE}
+
+### ⚠️ エラー
+
+更新チェックの実行中にエラーが発生しました。
+
+### 対応方法
+
+手動で以下のコマンドを実行してください：
+\`\`\`bash
+python scripts/update_latest_info.py check
+\`\`\`
+
+### エラーログ
+
+<details>
+<summary>エラー詳細を表示</summary>
+
+\`\`\`
+EOF
+          tail -50 check_output.txt >> issue_content.md
+          echo "\`\`\`" >> issue_content.md
+          echo "</details>" >> issue_content.md
+        fi
     
     - name: Create GitHub Issue
       uses: actions/github-script@v7
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
+          const fs = require('fs');
           const date = new Date().toISOString().split('T')[0];
           
-          // Claude Codeの出力から結果を抽出
-          const claudeOutput = `${{ steps.claude_scan.outputs.result || '' }}`;
-          
-          // Markdownブロックを抽出（```markdown から ``` まで）
-          const markdownMatch = claudeOutput.match(/```markdown\n([\s\S]*?)\n```/);
-          let content = '';
-          
-          if (markdownMatch && markdownMatch[1]) {
-            // Markdownブロックが見つかった場合
-            content = markdownMatch[1].trim();
-          } else {
-            // Markdownブロックがない場合、"## 週次更新チェック結果"で始まる部分を探す
-            const reportMatch = claudeOutput.match(/(## 週次更新チェック結果[\s\S]*)/);
-            if (reportMatch && reportMatch[1]) {
-              content = reportMatch[1].trim();
-            } else {
-              // それも見つからない場合は、全体の出力を使用
-              content = claudeOutput || '## 週次更新チェック結果\n\n更新チェックの実行中にエラーが発生しました。';
-            }
-          }
+          // issue_content.mdを読み込む
+          const content = fs.readFileSync('issue_content.md', 'utf8');
           
           // Issueを作成
           await github.rest.issues.create({
