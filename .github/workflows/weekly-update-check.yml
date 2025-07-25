@@ -22,11 +22,22 @@ jobs:
       with:
         fetch-depth: 1
     
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
     - name: Run weekly update check
       id: check_result
       run: |
         # 週次更新チェックを実行
-        python scripts/update_latest_info.py check > check_output.txt 2>&1 || true
+        # GitHub Actions環境ではWebSearchが使えないので、簡易チェックを実行
+        python scripts/simple_weekly_check.py > check_output.txt 2>&1 || true
         
         # 結果を抽出
         if grep -q "📊 更新チェック結果サマリー" check_output.txt; then
@@ -64,14 +75,12 @@ jobs:
         
         if [ "${{ steps.check_result.outputs.check_success }}" = "true" ]; then
           # 成功時のレポート
-          cat > issue_content.md <<EOF
-## 週次更新チェック結果
-
-**実行日:** ${DATE}
-
-### 📊 結果サマリー
-
-EOF
+          echo "## 週次更新チェック結果" > issue_content.md
+          echo "" >> issue_content.md
+          echo "**実行日:** ${DATE}" >> issue_content.md
+          echo "" >> issue_content.md
+          echo "### 📊 結果サマリー" >> issue_content.md
+          echo "" >> issue_content.md
           # サマリーを追加
           if [ -f summary.txt ]; then
             cat summary.txt >> issue_content.md
@@ -109,29 +118,27 @@ EOF
           echo "</details>" >> issue_content.md
         else
           # エラー時のレポート
-          cat > issue_content.md <<EOF
-## 週次更新チェック結果
-
-**実行日:** ${DATE}
-
-### ⚠️ エラー
-
-更新チェックの実行中にエラーが発生しました。
-
-### 対応方法
-
-手動で以下のコマンドを実行してください：
-\`\`\`bash
-python scripts/update_latest_info.py check
-\`\`\`
-
-### エラーログ
-
-<details>
-<summary>エラー詳細を表示</summary>
-
-\`\`\`
-EOF
+          echo "## 週次更新チェック結果" > issue_content.md
+          echo "" >> issue_content.md
+          echo "**実行日:** ${DATE}" >> issue_content.md
+          echo "" >> issue_content.md
+          echo "### ⚠️ エラー" >> issue_content.md
+          echo "" >> issue_content.md
+          echo "更新チェックの実行中にエラーが発生しました。" >> issue_content.md
+          echo "" >> issue_content.md
+          echo "### 対応方法" >> issue_content.md
+          echo "" >> issue_content.md
+          echo "手動で以下のコマンドを実行してください：" >> issue_content.md
+          echo '```bash' >> issue_content.md
+          echo "python scripts/update_latest_info.py check" >> issue_content.md
+          echo '```' >> issue_content.md
+          echo "" >> issue_content.md
+          echo "### エラーログ" >> issue_content.md
+          echo "" >> issue_content.md
+          echo "<details>" >> issue_content.md
+          echo "<summary>エラー詳細を表示</summary>" >> issue_content.md
+          echo "" >> issue_content.md
+          echo '```' >> issue_content.md
           tail -50 check_output.txt >> issue_content.md
           echo "\`\`\`" >> issue_content.md
           echo "</details>" >> issue_content.md
