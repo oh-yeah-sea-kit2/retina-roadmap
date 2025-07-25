@@ -35,22 +35,44 @@ jobs:
           2. 🎯推奨アクション: 不要/quick/full
           3. 📊注目プログラム: 3件以内
           
-          **必須:** 結果をGitHub Issue「📅 週次更新チェック結果 - [今日の日付]」として作成
+          **必須:** 結果をMarkdownファイルに保存: `.github/weekly-update-result.md`
         
         append_system_prompt: |
           **出力要件:**
           - 日本語で5行以内の超簡潔な応答
           - 結論を最初に明記
           - 詳細なプロセスログは一切表示しない
-          - GitHub Issue作成を最優先で実行
+          - 結果をMarkdownファイルとして保存
           
           **重要:** MCO-010(BLA申請中)、OCU400(Phase3)、VP-001(Phase2/3予定)の状況のみ確認
         
         allowed_tools: |
           Bash(python scripts/*)
           Bash(python src/*)
-          Bash(gh issue create)
-          Bash(gh issue list)
           Bash(echo *)
           Write
         timeout_minutes: 30
+    
+    - name: Create GitHub Issue
+      uses: actions/github-script@v7
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const fs = require('fs');
+          const date = new Date().toISOString().split('T')[0];
+          
+          // Markdownファイルから結果を読み込む
+          let content = '';
+          try {
+            content = fs.readFileSync('.github/weekly-update-result.md', 'utf8');
+          } catch (error) {
+            content = '## 週次更新チェック結果\n\n更新チェックの実行中にエラーが発生しました。';
+          }
+          
+          // Issueを作成
+          await github.rest.issues.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: `📅 週次更新チェック結果 - ${date}`,
+            body: content
+          });
