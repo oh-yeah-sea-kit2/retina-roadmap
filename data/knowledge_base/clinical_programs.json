@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-07-24",
+  "last_updated": "2025-07-25",
   "programs": {
     "MCO-010": {
       "company": "Nanoscope Therapeutics",
@@ -70,9 +70,10 @@
     "VP-001": {
       "company": "PYC Therapeutics",
       "current_phase": "Phase 1/2",
-      "status": "Active",
+      "status": "Completed - Planning Phase 2/3",
       "key_dates": {
         "phase1_start": "2022",
+        "phase1_2_results": "2025-05",
         "expected_phase2_3_start": "2025-H2"
       },
       "trial_ids": [
@@ -90,9 +91,14 @@
           "date": "2025-05",
           "event": "Positive Phase 1/2 results presented at ARVO: LLVA improvements, microperimetry improvements in 18 patients (PLATYPUS 12, WALLABY 6)",
           "source": "Conference presentation"
+        },
+        {
+          "date": "2025-05",
+          "event": "Phase 2/3 registrational trial planned for late 2025 following FDA guidance",
+          "source": "Company announcement"
         }
       ],
-      "notes": "Targets RP type 11 specifically"
+      "notes": "First therapy specifically for RP11. Positive Phase 1/2 results with vision improvements reported by patients"
     },
     "AGTC-501": {
       "company": "Beacon Therapeutics",
@@ -176,9 +182,10 @@
     "Keio_Optogenetics": {
       "company": "Keio University / Restore Vision Co.",
       "current_phase": "Phase 1/2",
-      "status": "Recruiting",
+      "status": "Active - First patient dosed",
       "key_dates": {
-        "phase1_start": "2025-02-13"
+        "phase1_start": "2025-02-13",
+        "first_patient_dosed": "2025-02-06"
       },
       "trial_ids": [],
       "modality": "Gene therapy (optogenetics)",
@@ -189,9 +196,14 @@
           "date": "2025-02-13",
           "event": "First gene therapy trial for RP in Japan initiated",
           "source": "University PR"
+        },
+        {
+          "date": "2025-02-06",
+          "event": "First patient dosed at Keio University Hospital",
+          "source": "University announcement"
         }
       ],
-      "notes": "Targets completely blind RP patients. First RP gene therapy trial in Japan. Treatment designated as RV-001 by Restore Vision."
+      "notes": "Targets completely blind RP patients. First RP gene therapy trial in Japan. Treatment designated as RV-001 by Restore Vision. Planning to enroll 6-15 severe patients with 6-month follow-up."
     },
     "GS030": {
       "company": "GenSight Biologics",

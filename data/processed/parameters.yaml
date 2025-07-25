@@ -1,37 +1,37 @@
 metadata:
-  generated_date: '2025-07-24T21:19:16.449603'
+  generated_date: '2025-07-25T19:44:38.171310'
   data_source: ClinicalTrials.gov
-  total_trials_analyzed: 127
+  total_trials_analyzed: 128
   note: Parameters estimated from Retinitis Pigmentosa clinical trials
 phase_durations_years:
   PHASE1:
-    min: 0.9527720739219713
-    median: 2.642026009582478
-    max: 8.854209445585216
-    mean: 3.4324435318275155
-    std: 2.283972183616007
-    count: 10
+    min: 1.0
+    median: 2.0
+    max: 3.0
+    mean: 2.0
+    std: 0.5
+    count: 0
   PHASE2:
-    min: 0.9418206707734429
-    median: 2.642026009582478
-    max: 8.854209445585216
-    mean: 3.1261122518822724
-    std: 1.9384523060118097
-    count: 16
+    min: 2.0
+    median: 3.0
+    max: 4.0
+    mean: 3.0
+    std: 0.5
+    count: 0
   PHASE3:
-    min: 0.7529089664613279
-    median: 2.2888432580424367
-    max: 3.997262149212868
-    mean: 2.328737655226362
-    std: 1.1827821930185987
-    count: 7
+    min: 3.0
+    median: 4.0
+    max: 5.0
+    mean: 4.0
+    std: 0.5
+    count: 0
   PHASE1, PHASE2:
-    min: 0.9527720739219713
-    median: 2.674880219028063
-    max: 8.854209445585216
-    mean: 3.444998533294221
-    std: 2.4905920764494978
-    count: 7
+    min: 2.0
+    median: 3.5
+    max: 5.0
+    mean: 3.5
+    std: 0.75
+    count: 0
   PHASE2, PHASE3:
     min: 3.0
     median: 4.5

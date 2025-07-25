@@ -1,13 +1,13 @@
 {
-  "last_check_date": "2025-07-24T21:18:59.309574",
+  "last_check_date": "2025-07-25T19:44:20.046043",
   "check_type": "web_search",
   "programs_checked": [
-    "Botaretigene",
     "VP-001",
     "MCO-010",
     "OCU400",
     "AGTC-501",
-    "OpCT-001"
+    "OpCT-001",
+    "Botaretigene"
   ],
   "sources_queried": [
     "MCO-010 Nanoscope Therapeutics retinitis pigmentosa 2025 latest update Phase 3",
@@ -20,9 +20,7 @@
     "retinitis pigmentosa gene therapy 2025 FDA approval new treatments",
     "網膜色素変性症 遺伝子治療 2025 最新 日本 承認"
   ],
-  "new_findings": [
-    "Botaretigene"
-  ],
+  "new_findings": [],
   "updates_found": [
     "VP-001: Phase更新 Phase 1/2 → Phase 1"
   ]
