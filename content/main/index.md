@@ -1,6 +1,6 @@
 # 網膜色素変性症（RP）治療開発ロードマップ
 
-生成日時: 2025年07月25日 10:48
+生成日時: 2025年08月18日 05:12
 
 ## エグゼクティブサマリー
 
@@ -24,12 +24,12 @@
 ### 臨床試験データ
 - **データソース**: ClinicalTrials.gov
 - **総試験数**: 128件
-- **アクティブな試験**: 50件
+- **アクティブな試験**: 49件
 - **完了した試験**: 52件
 
 ### 文献データ
 - **データソース**: PubMed
-- **総論文数**: 808件
+- **総論文数**: 800件
 - **検索クエリ**: "retinitis pigmentosa" AND ("gene therapy" OR "cell therapy")
 - **期間**: 1993-2025年
 
@@ -37,10 +37,10 @@
 | 年 | 論文数 |
 |---|--------|
 | 2025 | 45 |
-| 2024 | 64 |
+| 2024 | 62 |
 | 2023 | 98 |
-| 2022 | 67 |
-| 2021 | 64 |
+| 2022 | 66 |
+| 2021 | 63 |
 
 
 ## 2. モンテカルロシミュレーション結果
@@ -54,16 +54,16 @@
 
 | 試験ID | 治療法名 | フェーズ | スポンサー | 成功率 | FDA承認予測（中央値） | 日本承認予測（中央値） | 90%信頼区間（FDA） |
 |--------|----------|----------|------------|--------|---------------------|---------------------|------------------|
-| NCT06388200 | A Phase 3 Study Of OCU400 Gene Therapy f... | PHASE3 | Ocugen | 100.0% | 2027年 | 2032年 | [2027, 2027] |
 | NCT05203939 | Study to Assess the Safety and Efficacy ... | PHASE1, PHASE2 | Ocugen | 100.0% | 2027年 | 2032年 | [2027, 2027] |
-| NCT06333249 | A Study Comparing Two Doses of AGTC-501 ... | PHASE2 | Beacon Therapeutics | 100.0% | 2029年 | 2034年 | [2029, 2029] |
-| NCT06275620 | A Study Comparing Two Doses of AGTC-501 ... | PHASE2 | Beacon Therapeutics | 100.0% | 2029年 | 2034年 | [2029, 2029] |
-| NCT00999609 | Safety and Efficacy Study in Subjects Wi... | PHASE3 | Spark Therapeutics, Inc. | 70.6% | 2029年 | 2034年 | [2029, 2030] |
+| NCT06388200 | A Phase 3 Study Of OCU400 Gene Therapy f... | PHASE3 | Ocugen | 100.0% | 2027年 | 2032年 | [2027, 2027] |
 | NCT04850118 | A Clinical Trial Evaluating the Safety a... | PHASE2, PHASE3 | Beacon Therapeutics | 100.0% | 2029年 | 2034年 | [2029, 2029] |
+| NCT06275620 | A Study Comparing Two Doses of AGTC-501 ... | PHASE2 | Beacon Therapeutics | 100.0% | 2029年 | 2034年 | [2029, 2029] |
+| NCT06333249 | A Study Comparing Two Doses of AGTC-501 ... | PHASE2 | Beacon Therapeutics | 100.0% | 2029年 | 2034年 | [2029, 2029] |
+| NCT00999609 | Safety and Efficacy Study in Subjects Wi... | PHASE3 | Spark Therapeutics, Inc. | 70.4% | 2029年 | 2034年 | [2029, 2030] |
 | NCT06852963 | A Study of Two Doses of VP-001 Administe... | PHASE1, PHASE2 | PYC Therapeutics | 100.0% | 2030年 | 2035年 | [2029, 2030] |
 | NCT06455826 | MAD of IVT VP-001 in PRPF31 Mutation-Ass... | PHASE1 | PYC Therapeutics | 100.0% | 2030年 | 2035年 | [2029, 2030] |
-| NCT05537220 | Oral N-acetylcysteine for Retinitis Pigm... | PHASE3 | Johns Hopkins University | 71.1% | 2031年 | 2036年 | [2031, 2032] |
-| NCT07082855 | A Multicenter, Randomized, Double-Blind,... | PHASE3 | Zhongshan Ophthalmic Center, Sun Yat-sen University | 71.9% | 2031年 | 2036年 | [2031, 2032] |
+| NCT05537220 | Oral N-acetylcysteine for Retinitis Pigm... | PHASE3 | Johns Hopkins University | 71.7% | 2032年 | 2037年 | [2031, 2033] |
+| NCT07082855 | A Multicenter, Randomized, Double-Blind,... | PHASE3 | Zhongshan Ophthalmic Center, Sun Yat-sen University | 70.6% | 2032年 | 2037年 | [2031, 2033] |
 
 
 ### 日本での承認予測
@@ -72,11 +72,11 @@
 
 | 治療法 | FDA承認予測 | 日本承認予測（中央値） | 日本承認90%信頼区間 | 遅延期間（中央値） |
 |--------|------------|---------------------|-------------------|---------------------|
-| NCT06388200 | 2027年 | **2032年** | [2031, 2033] | +5.0年 |
 | NCT05203939 | 2027年 | **2032年** | [2031, 2033] | +5.0年 |
-| NCT06333249 | 2029年 | **2034年** | [2033, 2035] | +5.0年 |
+| NCT06388200 | 2027年 | **2032年** | [2031, 2033] | +5.0年 |
+| NCT04850118 | 2029年 | **2034年** | [2033, 2035] | +5.0年 |
 | NCT06275620 | 2029年 | **2034年** | [2033, 2035] | +5.0年 |
-| NCT00999609 | 2029年 | **2034年** | [2033, 2036] | +5.0年 |
+| NCT06333249 | 2029年 | **2034年** | [2033, 2035] | +5.0年 |
 
 
 詳細は[地域別承認予測タイムライン](regional_approval_timeline.html)をご覧ください。
@@ -105,10 +105,11 @@
 ![トルネード図](images/tornado.png)
 
 ### 主要な影響要因
-- **PHASE1 duration** (increase 20%): +1.0年の影響
-- **PHASE2 duration** (increase 20%): +1.0年の影響
-- **PHASE3 duration** (increase 20%): +1.0年の影響
-- **regulatory review** (increase 20%): +0.2年の影響
+- **PHASE3 duration** (increase 20%): +0.8年の影響
+- **BLA MAA submission** (increase 20%): +0.6年の影響
+- **regulatory review** (increase 20%): +0.6年の影響
+- **PHASE1 duration** (increase 20%): +0.4年の影響
+- **PHASE2 duration** (increase 20%): +0.4年の影響
 
 
 ## 4. 予測の可視化
