@@ -1,9 +1,10 @@
 parameter,change,base_value,modified_value,impact_years,impact_percent
 PHASE1 duration,increase 20%,2036.0,2037.0,1.0,0.04911591355599214
 PHASE2 duration,increase 20%,2036.0,2037.0,1.0,0.04911591355599214
-PHASE3 duration,decrease 20%,2036.0,2035.0,-1.0,-0.04911591355599214
 PHASE3 duration,increase 20%,2036.0,2037.0,1.0,0.04911591355599214
-regulatory review,increase 20%,2036.0,2036.2,0.20000000000004547,0.00982318271120066
+PHASE3 duration,decrease 20%,2036.0,2035.4,-0.599999999999909,-0.029469548133590817
+BLA MAA submission,increase 20%,2036.0,2036.4,0.40000000000009095,0.01964636542240132
+regulatory review,increase 20%,2036.0,2036.4,0.40000000000009095,0.01964636542240132
 PHASE1 duration,decrease 20%,2036.0,2036.0,0.0,0.0
 PHASE2 duration,decrease 20%,2036.0,2036.0,0.0,0.0
 PHASE1 success rate,decrease 20%,2036.0,2036.0,0.0,0.0
@@ -13,5 +14,4 @@ PHASE2 success rate,increase 20%,2036.0,2036.0,0.0,0.0
 PHASE3 success rate,decrease 20%,2036.0,2036.0,0.0,0.0
 PHASE3 success rate,increase 20%,2036.0,2036.0,0.0,0.0
 BLA MAA submission,decrease 20%,2036.0,2036.0,0.0,0.0
-BLA MAA submission,increase 20%,2036.0,2036.0,0.0,0.0
 regulatory review,decrease 20%,2036.0,2036.0,0.0,0.0

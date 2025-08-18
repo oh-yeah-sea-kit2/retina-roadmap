@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-07-25",
+  "last_updated": "2025-08-18",
   "programs": {
     "MCO-010": {
       "company": "Nanoscope Therapeutics",
@@ -41,6 +41,7 @@
       "key_dates": {
         "phase3_start": "2024-06",
         "expected_enrollment_completion": "2025-H1",
+        "expected_study_completion": "2026-10",
         "expected_bla_submission": "2026-H1"
       },
       "trial_ids": [
@@ -330,6 +331,26 @@
         }
       ],
       "notes": "Automatically added - needs manual verification"
+    },
+    "VG901": {
+      "company": "ViGeneron",
+      "current_phase": "Phase 1b",
+      "status": "Active",
+      "key_dates": {},
+      "trial_ids": [],
+      "modality": "Gene therapy",
+      "target": "CNGA1 mutations",
+      "regulatory": [
+        "FDA Rare Pediatric Disease Designation"
+      ],
+      "recent_updates": [
+        {
+          "date": "2025-08-18",
+          "event": "Currently in Phase 1b trial for RP associated with CNGA1 mutations",
+          "source": "Web search"
+        }
+      ],
+      "notes": "Gene therapy for RP caused by CNGA1 mutations"
     }
   }
 }
