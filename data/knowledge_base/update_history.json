@@ -61,6 +61,34 @@
           "VP-001: Phase更新 Phase 1/2 → Phase 1"
         ]
       }
+    },
+    {
+      "date": "2025-09-12",
+      "type": "automatic_update",
+      "summary": "Found 0 new programs, 1 important updates",
+      "changes": {
+        "new_programs": [],
+        "updated_programs": [
+          "VP-001"
+        ],
+        "key_events": [
+          "VP-001: Phase更新 Phase 1/2 → Phase 1"
+        ]
+      }
+    },
+    {
+      "date": "2025-10-06",
+      "type": "automatic_update",
+      "summary": "Found 0 new programs, 1 important updates",
+      "changes": {
+        "new_programs": [],
+        "updated_programs": [
+          "VP-001"
+        ],
+        "key_events": [
+          "VP-001: Phase更新 Phase 1/2 → Phase 1"
+        ]
+      }
     }
   ]
 }

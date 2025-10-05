@@ -1,0 +1,90 @@
+{
+  "timestamp": "2025-09-12T21:41:42.532703",
+  "web_results": [
+    {
+      "query": "MCO-010 Nanoscope Therapeutics retinitis pigmentosa 2025 latest update Phase 3",
+      "timestamp": "2025-09-12T21:41:34.065525",
+      "results": "[検索結果: MCO-010 Nanoscope Therapeutics retinitis pigmentosa 2025 latest update Phase 3]"
+    },
+    {
+      "query": "OCU400 Ocugen retinitis pigmentosa 2025 latest update Phase 3",
+      "timestamp": "2025-09-12T21:41:34.065532",
+      "results": "[検索結果: OCU400 Ocugen retinitis pigmentosa 2025 latest update Phase 3]"
+    },
+    {
+      "query": "Botaretigene sparoparvovec Janssen (J&J) retinitis pigmentosa 2025 latest update Phase 3",
+      "timestamp": "2025-09-12T21:41:34.065533",
+      "results": "[検索結果: Botaretigene sparoparvovec Janssen (J&J) retinitis pigmentosa 2025 latest update Phase 3]"
+    },
+    {
+      "query": "AGTC-501 Beacon Therapeutics retinitis pigmentosa 2025 latest update Phase 2/3",
+      "timestamp": "2025-09-12T21:41:34.065534",
+      "results": "[検索結果: AGTC-501 Beacon Therapeutics retinitis pigmentosa 2025 latest update Phase 2/3]"
+    },
+    {
+      "query": "Ultevursen Sepul Bio / Théa retinitis pigmentosa 2025 latest update Phase 2b",
+      "timestamp": "2025-09-12T21:41:34.065535",
+      "results": "[検索結果: Ultevursen Sepul Bio / Théa retinitis pigmentosa 2025 latest update Phase 2b]"
+    },
+    {
+      "query": "VP-001 PYC Therapeutics retinitis pigmentosa 2025 latest update Phase 1/2",
+      "timestamp": "2025-09-12T21:41:34.065536",
+      "results": "[検索結果: VP-001 PYC Therapeutics retinitis pigmentosa 2025 latest update Phase 1/2]"
+    },
+    {
+      "query": "OpCT-001 BlueRock Therapeutics retinitis pigmentosa 2025 latest update Phase 1/2a",
+      "timestamp": "2025-09-12T21:41:34.065537",
+      "results": "[検索結果: OpCT-001 BlueRock Therapeutics retinitis pigmentosa 2025 latest update Phase 1/2a]"
+    },
+    {
+      "query": "retinitis pigmentosa gene therapy 2025 FDA approval new treatments",
+      "timestamp": "2025-09-12T21:41:34.065538",
+      "results": "[検索結果: retinitis pigmentosa gene therapy 2025 FDA approval new treatments]"
+    },
+    {
+      "query": "網膜色素変性症 遺伝子治療 2025 最新 日本 承認",
+      "timestamp": "2025-09-12T21:41:34.065539",
+      "results": "[検索結果: 網膜色素変性症 遺伝子治療 2025 最新 日本 承認]"
+    }
+  ],
+  "key_updates": {
+    "comparison": {
+      "new_programs": [],
+      "updated_programs": {
+        "VP-001": {
+          "old_phase": "Phase 1/2",
+          "new_phase": "Phase 1"
+        }
+      },
+      "unchanged_programs": [
+        "MCO-010",
+        "OCU400",
+        "AGTC-501",
+        "OpCT-001",
+        "Botaretigene"
+      ],
+      "important_updates": [
+        "VP-001: Phase更新 Phase 1/2 → Phase 1"
+      ]
+    },
+    "extracted_info": {
+      "programs_mentioned": [
+        "MCO-010",
+        "OCU400",
+        "VP-001",
+        "AGTC-501",
+        "OpCT-001",
+        "Botaretigene"
+      ],
+      "phase_updates": {
+        "MCO-010": "Phase 3",
+        "OCU400": "Phase 3",
+        "VP-001": "Phase 1"
+      },
+      "regulatory_updates": {},
+      "key_events": []
+    },
+    "report": "## 📊 更新チェック結果サマリー\n\n- 新規プログラム: 0件\n- 更新されたプログラム: 1件\n- 変更なし: 5件\n- 重要な更新: 1件\n\n### 🚨 重要な更新\n- VP-001: Phase更新 Phase 1/2 → Phase 1 (重要度: 50/100)\n\n### 🔄 更新されたプログラム\n- VP-001: Phase 1/2 → Phase 1\n\n### ✅ 変更なし（既知の情報）\n- MCO-010, OCU400, AGTC-501, OpCT-001, Botaretigene"
+  },
+  "summary": "\n## 網膜色素変性症治療法 最新情報更新サマリー\n更新日時: 2025年09月12日\n\n## 📊 更新チェック結果サマリー\n\n- 新規プログラム: 0件\n- 更新されたプログラム: 1件\n- 変更なし: 5件\n- 重要な更新: 1件\n\n### 🚨 重要な更新\n- VP-001: Phase更新 Phase 1/2 → Phase 1 (重要度: 50/100)\n\n### 🔄 更新されたプログラム\n- VP-001: Phase 1/2 → Phase 1\n\n### ✅ 変更なし（既知の情報）\n- MCO-010, OCU400, AGTC-501, OpCT-001, Botaretigene\n"
+}

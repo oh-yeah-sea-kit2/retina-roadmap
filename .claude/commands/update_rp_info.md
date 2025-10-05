@@ -30,7 +30,7 @@ allowed-tools: WebSearch, Bash(python3:*), Bash(git:*), Bash(gemini:*), Read, Wr
 ### 実行手順
 
 1. **Gemini検索で最新情報を収集**（checkモードとfullモードで実行）
-               ```bash
+                     ```bash
    # Gemini Searchを使用（より包括的な情報収集が可能）
    gemini --prompt "WebSearch: MCO-010 Nanoscope Therapeutics retinitis pigmentosa 2025 latest update Phase 3"
    gemini --prompt "WebSearch: OCU400 Ocugen retinitis pigmentosa 2025 latest update Phase 3"
