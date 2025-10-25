@@ -124,13 +124,13 @@ def generate_markdown_report(data):
 過去の実績（Luxturna: FDA承認2017年→日本承認2023年、約5.5年の遅延）に基づく予測：
 
 """
-    # 上位5プログラムの日本承認予測を詳細表示
-    top5_programs = data['forecasts'].head(5)
-    if len(top5_programs) > 0 and 'japan_median_approval_year' in top5_programs.columns:
+    # 上位10プログラムの日本承認予測を詳細表示
+    top10_programs = data['forecasts'].head(10)
+    if len(top10_programs) > 0 and 'japan_median_approval_year' in top10_programs.columns:
         content += """| 治療法 | FDA承認予測 | 日本承認予測（中央値） | 日本承認90%信頼区間 | 遅延期間（中央値） |
 |--------|------------|---------------------|-------------------|---------------------|
 """
-        for _, row in top5_programs.iterrows():
+        for _, row in top10_programs.iterrows():
             if 'japan_median_approval_year' in row:
                 japan_ci = f"[{row.get('japan_pct10_approval_year', 'N/A'):.0f}, {row.get('japan_pct90_approval_year', 'N/A'):.0f}]"
                 delay_years = row.get('japan_median_delay_years', 5.0)

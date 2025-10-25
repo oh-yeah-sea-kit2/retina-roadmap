@@ -1,6 +1,6 @@
 # 網膜色素変性症（RP）治療開発ロードマップ
 
-生成日時: 2025年10月06日 01:14
+生成日時: 2025年10月25日 18:50
 
 ## エグゼクティブサマリー
 
@@ -56,14 +56,14 @@
 |--------|----------|----------|------------|--------|---------------------|---------------------|------------------|
 | NCT05203939 | Study to Assess the Safety and Efficacy ... | PHASE1, PHASE2 | Ocugen | 100.0% | 2027年 | 2032年 | [2027, 2027] |
 | NCT06388200 | A Phase 3 Study Of OCU400 Gene Therapy f... | PHASE3 | Ocugen | 100.0% | 2027年 | 2032年 | [2027, 2027] |
-| NCT05537220 | Oral N-acetylcysteine for Retinitis Pigm... | PHASE3 | Johns Hopkins University | 71.2% | 2028年 | 2034年 | [2028, 2030] |
-| NCT03584165 | Long-term Safety and Efficacy Follow-up ... | PHASE3 | NightstaRx Ltd, a Biogen Company | 71.9% | 2029年 | 2034年 | [2029, 2030] |
+| NCT03584165 | Long-term Safety and Efficacy Follow-up ... | PHASE3 | NightstaRx Ltd, a Biogen Company | 71.0% | 2029年 | 2034年 | [2029, 2030] |
 | NCT06275620 | A Study Comparing Two Doses of AGTC-501 ... | PHASE2 | Beacon Therapeutics | 100.0% | 2029年 | 2034年 | [2029, 2030] |
 | NCT06333249 | A Study Comparing Two Doses of AGTC-501 ... | PHASE2 | Beacon Therapeutics | 100.0% | 2029年 | 2034年 | [2029, 2030] |
 | NCT04850118 | A Clinical Trial Evaluating the Safety a... | PHASE2, PHASE3 | Beacon Therapeutics | 100.0% | 2029年 | 2034年 | [2029, 2030] |
-| NCT02065011 | A Study to Determine the Long-Term Safet... | PHASE2 | Sanofi | 55.3% | 2030年 | 2035年 | [2029, 2031] |
+| NCT05537220 | Oral N-acetylcysteine for Retinitis Pigm... | PHASE3 | Johns Hopkins University | 71.6% | 2029年 | 2034年 | [2028, 2030] |
+| NCT02065011 | A Study to Determine the Long-Term Safet... | PHASE2 | Sanofi | 55.4% | 2030年 | 2035年 | [2029, 2031] |
 | NCT07082855 | A Multicenter, Randomized, Double-Blind,... | PHASE3 | Zhongshan Ophthalmic Center, Sun Yat-sen University | 71.4% | 2030年 | 2035年 | [2029, 2031] |
-| NCT00999609 | Safety and Efficacy Study in Subjects Wi... | PHASE3 | Spark Therapeutics, Inc. | 70.6% | 2030年 | 2035年 | [2029, 2031] |
+| NCT00999609 | Safety and Efficacy Study in Subjects Wi... | PHASE3 | Spark Therapeutics, Inc. | 70.7% | 2030年 | 2035年 | [2029, 2031] |
 
 
 ### 日本での承認予測
@@ -74,9 +74,14 @@
 |--------|------------|---------------------|-------------------|---------------------|
 | NCT05203939 | 2027年 | **2032年** | [2031, 2033] | +5.0年 |
 | NCT06388200 | 2027年 | **2032年** | [2031, 2033] | +5.0年 |
-| NCT05537220 | 2028年 | **2034年** | [2032, 2035] | +5.0年 |
 | NCT03584165 | 2029年 | **2034年** | [2033, 2036] | +5.0年 |
 | NCT06275620 | 2029年 | **2034年** | [2033, 2035] | +5.0年 |
+| NCT06333249 | 2029年 | **2034年** | [2033, 2035] | +5.0年 |
+| NCT04850118 | 2029年 | **2034年** | [2033, 2035] | +5.0年 |
+| NCT05537220 | 2029年 | **2034年** | [2032, 2035] | +5.0年 |
+| NCT02065011 | 2030年 | **2035年** | [2034, 2037] | +5.0年 |
+| NCT07082855 | 2030年 | **2035年** | [2033, 2036] | +5.0年 |
+| NCT00999609 | 2030年 | **2035年** | [2033, 2036] | +5.0年 |
 
 
 詳細は[地域別承認予測タイムライン](regional_approval_timeline.html)をご覧ください。
@@ -105,12 +110,12 @@
 ![トルネード図](images/tornado.png)
 
 ### 主要な影響要因
-- **PHASE2 duration** (increase 20%): +0.8年の影響
 - **PHASE1 duration** (increase 20%): +0.6年の影響
-- **PHASE3 duration** (increase 20%): +0.6年の影響
-- **PHASE2 success rate** (decrease 20%): +0.4年の影響
-- **BLA MAA submission** (increase 20%): +0.4年の影響
-- **regulatory review** (increase 20%): +0.4年の影響
+- **PHASE2 duration** (increase 20%): +0.6年の影響
+- **PHASE3 duration** (increase 20%): +0.4年の影響
+- **PHASE2 success rate** (decrease 20%): +0.2年の影響
+- **BLA MAA submission** (increase 20%): +0.2年の影響
+- **regulatory review** (increase 20%): +0.2年の影響
 
 
 ## 4. 予測の可視化

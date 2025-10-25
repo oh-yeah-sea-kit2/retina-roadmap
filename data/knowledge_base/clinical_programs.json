@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-10-06",
+  "last_updated": "2025-10-25",
   "programs": {
     "MCO-010": {
       "company": "Nanoscope Therapeutics",
@@ -21,6 +21,11 @@
         "Orphan Drug Designation"
       ],
       "recent_updates": [
+        {
+          "date": "2025-10-22",
+          "event": "REMAIN study: Durable 3-year vision improvements with favorable safety profile",
+          "source": "Company PR"
+        },
         {
           "date": "2025-07-14",
           "event": "Initiated rolling BLA submission to FDA",
@@ -56,6 +61,21 @@
       ],
       "recent_updates": [
         {
+          "date": "2025-10-16",
+          "event": "Phase 3 liMeliGhT trial actively enrolling (ClinicalTrials.gov updated)",
+          "source": "ClinicalTrials.gov"
+        },
+        {
+          "date": "2025",
+          "event": "FDA approved Expanded Access Program for up to 75 eligible patients in the US",
+          "source": "Company PR"
+        },
+        {
+          "date": "2025",
+          "event": "Health Canada approved trial expansion to Canada (up to 50 subjects)",
+          "source": "Company PR"
+        },
+        {
           "date": "2025-01-13",
           "event": "Phase 1/2 2-year data: 100% (9/9) patients improved or maintained vision",
           "source": "Company PR"
@@ -66,7 +86,7 @@
           "source": "Company PR"
         }
       ],
-      "notes": "Targets 100+ gene mutations"
+      "notes": "Targets 100+ gene mutations. Expanded Access Program in US (75 patients) and Canada expansion (50 patients) approved."
     },
     "VP-001": {
       "company": "PYC Therapeutics",
@@ -85,9 +105,15 @@
       "target": "PRPF31 (RP11)",
       "regulatory": [
         "FDA Fast Track",
+        "FDA Rare Pediatric Disease Designation",
         "FDA alignment on trial design"
       ],
       "recent_updates": [
+        {
+          "date": "2025-06",
+          "event": "Positive FDA meeting to finalize Phase 2/3 registrational study design",
+          "source": "Company announcement"
+        },
         {
           "date": "2025-05",
           "event": "Positive Phase 1/2 results presented at ARVO: LLVA improvements, microperimetry improvements in 18 patients (PLATYPUS 12, WALLABY 6)",
@@ -97,16 +123,23 @@
           "date": "2025-05",
           "event": "Phase 2/3 registrational trial planned for late 2025 following FDA guidance",
           "source": "Company announcement"
+        },
+        {
+          "date": "2025-01",
+          "event": "Received FDA Rare Pediatric Disease (RPD) designation",
+          "source": "Company PR"
         }
       ],
-      "notes": "First therapy specifically for RP11. Positive Phase 1/2 results with vision improvements reported by patients"
+      "notes": "First therapy specifically for RP11. Positive Phase 1/2 results with vision improvements reported by patients. RPD designation makes it eligible for Priority Review Voucher (PRV) worth $100M+ if approved."
     },
     "AGTC-501": {
       "company": "Beacon Therapeutics",
       "current_phase": "Phase 2/3",
-      "status": "Enrolling",
+      "status": "Enrollment completed - Awaiting 12-month data",
       "key_dates": {
-        "phase2_3_start": "2023"
+        "phase2_3_start": "2023",
+        "enrollment_completion": "2025-08",
+        "expected_12m_data": "2026-H2"
       },
       "trial_ids": [
         "VISTA"
@@ -118,8 +151,18 @@
       ],
       "recent_updates": [
         {
+          "date": "2025-10",
+          "event": "Phase 2/3 VISTA trial enrollment completed. 12-month topline data expected in H2 2026",
+          "source": "Web search"
+        },
+        {
           "date": "2025-07",
           "event": "Received FDA RMAT designation. Phase 2 SKYLINE trial 12-month data: 63% responder rate",
+          "source": "Company PR"
+        },
+        {
+          "date": "2025-05",
+          "event": "Phase 2 DAWN trial: 6-month interim data positive",
           "source": "Company PR"
         },
         {
@@ -128,19 +171,25 @@
           "source": "Company PR"
         },
         {
+          "date": "2025-01",
+          "event": "Received FDA RMAT designation",
+          "source": "Company PR"
+        },
+        {
           "date": "2023",
           "event": "Phase 2/3 VISTA trial initiated",
           "source": "ClinicalTrials.gov"
         }
       ],
-      "notes": "Targets X-linked RP"
+      "notes": "Targets X-linked RP. VISTA trial enrollment completed Aug 2025. RMAT designation received Jan 2025."
     },
     "OpCT-001": {
       "company": "BlueRock Therapeutics",
       "current_phase": "Phase 1/2a",
-      "status": "Active",
+      "status": "Active - First patient dosed",
       "key_dates": {
-        "phase1_start": "2023"
+        "phase1_start": "2023",
+        "first_patient_dosed": "2025-07"
       },
       "trial_ids": [
         "CLARICO"
@@ -152,12 +201,17 @@
       ],
       "recent_updates": [
         {
+          "date": "2025-07",
+          "event": "First patient treated in CLARICO trial - world's first iPSC-derived cell therapy tested in humans for primary photoreceptor diseases",
+          "source": "Company PR"
+        },
+        {
           "date": "2023",
           "event": "Received FDA Fast Track designation",
           "source": "Company PR"
         }
       ],
-      "notes": "iPSC-derived photoreceptor cells"
+      "notes": "iPSC-derived photoreceptor cells. World's first iPSC-derived cell therapy for primary photoreceptor diseases. First patient dosed July 2025."
     },
     "NPI-001": {
       "company": "Nacuity Pharmaceuticals",
