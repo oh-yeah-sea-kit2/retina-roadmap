@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-10-25",
+  "last_updated": "2025-11-07",
   "programs": {
     "MCO-010": {
       "company": "Nanoscope Therapeutics",
@@ -22,6 +22,11 @@
       ],
       "recent_updates": [
         {
+          "date": "2025-11-07",
+          "event": "5-year safety data and 3-year efficacy data show sustained vision gains. BLA expected to be completed in early 2026 with priority review eligibility",
+          "source": "Web Search"
+        },
+        {
           "date": "2025-10-22",
           "event": "REMAIN study: Durable 3-year vision improvements with favorable safety profile",
           "source": "Company PR"
@@ -37,7 +42,7 @@
           "source": "Company PR"
         }
       ],
-      "notes": "First gene-agnostic gene therapy for RP. Full BLA submission expected early 2026, eligible for priority review."
+      "notes": "First gene-agnostic gene therapy for RP. Full BLA submission expected early 2026, eligible for priority review. One-time in-office injection for severe vision loss."
     },
     "OCU400": {
       "company": "Ocugen",
@@ -45,12 +50,13 @@
       "status": "Enrolling",
       "key_dates": {
         "phase3_start": "2024-06",
-        "expected_enrollment_completion": "2025-H1",
-        "expected_study_completion": "2026-10",
-        "expected_bla_submission": "2026-H1"
+        "expected_enrollment_completion": "2025-H2",
+        "expected_topline_data": "2026-Q4",
+        "expected_bla_submission": "2026",
+        "expected_commercialization": "2027"
       },
       "trial_ids": [
-        "NCT05203939"
+        "NCT06388200"
       ],
       "modality": "Gene therapy",
       "target": "NR2E3 (modifier gene)",
@@ -60,6 +66,11 @@
         "EMA ATMP"
       ],
       "recent_updates": [
+        {
+          "date": "2025-11-07",
+          "event": "Phase 3 liMeliGhT trial (NCT06388200) enrollment nearing completion. Top-line data expected Q4 2026, commercialization projected for 2027",
+          "source": "Web Search"
+        },
         {
           "date": "2025-10-16",
           "event": "Phase 3 liMeliGhT trial actively enrolling (ClinicalTrials.gov updated)",
@@ -135,21 +146,31 @@
     "AGTC-501": {
       "company": "Beacon Therapeutics",
       "current_phase": "Phase 2/3",
-      "status": "Enrollment completed - Awaiting 12-month data",
+      "status": "Enrolling globally",
       "key_dates": {
         "phase2_3_start": "2023",
-        "enrollment_completion": "2025-08",
         "expected_12m_data": "2026-H2"
       },
       "trial_ids": [
-        "VISTA"
+        "VISTA",
+        "SKYLINE",
+        "HORIZON",
+        "DAWN"
       ],
       "modality": "Gene therapy",
       "target": "RPGR (X-linked RP)",
       "regulatory": [
-        "FDA RMAT"
+        "FDA RMAT",
+        "FDA Fast Track",
+        "UK ILAP",
+        "EU PRIME"
       ],
       "recent_updates": [
+        {
+          "date": "2025-11-07",
+          "event": "Phase 2/3 VISTA trial actively enrolling globally. Additional regulatory designations: FDA Fast Track, UK ILAP, EU PRIME. Positive interim results from Phase 2 DAWN trial (May 2025)",
+          "source": "Web Search"
+        },
         {
           "date": "2025-10",
           "event": "Phase 2/3 VISTA trial enrollment completed. 12-month topline data expected in H2 2026",
@@ -181,7 +202,7 @@
           "source": "ClinicalTrials.gov"
         }
       ],
-      "notes": "Targets X-linked RP. VISTA trial enrollment completed Aug 2025. RMAT designation received Jan 2025."
+      "notes": "Targets X-linked RP. VISTA trial actively enrolling globally. Multiple positive Phase 2 trials. RMAT designation received Jan 2025, along with Fast Track, UK ILAP, and EU PRIME designations."
     },
     "OpCT-001": {
       "company": "BlueRock Therapeutics",
@@ -189,17 +210,24 @@
       "status": "Active - First patient dosed",
       "key_dates": {
         "phase1_start": "2023",
-        "first_patient_dosed": "2025-07"
+        "fda_fast_track": "2025-02-27",
+        "first_patient_dosed": "2025-07-08"
       },
       "trial_ids": [
+        "NCT06789445",
         "CLARICO"
       ],
-      "modality": "Cell therapy",
+      "modality": "Cell therapy (iPSC-derived photoreceptors)",
       "target": "Photoreceptor replacement",
       "regulatory": [
         "FDA Fast Track"
       ],
       "recent_updates": [
+        {
+          "date": "2025-11-07",
+          "event": "FDA Fast Track Designation granted Feb 27, 2025. First patient dosed July 8, 2025 in Phase 1/2a CLARICO trial (NCT06789445). Trial aims to enroll 54 participants to assess safety and outcomes",
+          "source": "Web Search"
+        },
         {
           "date": "2025-07",
           "event": "First patient treated in CLARICO trial - world's first iPSC-derived cell therapy tested in humans for primary photoreceptor diseases",
@@ -211,7 +239,7 @@
           "source": "Company PR"
         }
       ],
-      "notes": "iPSC-derived photoreceptor cells. World's first iPSC-derived cell therapy for primary photoreceptor diseases. First patient dosed July 2025."
+      "notes": "iPSC-derived photoreceptor cells. World's first iPSC-derived cell therapy for primary photoreceptor diseases. First patient dosed July 8, 2025. Aims to restore vision by replacing degenerated photoreceptor cells."
     },
     "NPI-001": {
       "company": "Nacuity Pharmaceuticals",
@@ -327,7 +355,8 @@
       "current_phase": "Phase 2b",
       "status": "Enrolling",
       "key_dates": {
-        "phase2b_start": "2024-12"
+        "phase2b_start": "2024-12",
+        "expected_study_completion": "2026-12"
       },
       "trial_ids": [
         "LUNA"
@@ -337,12 +366,17 @@
       "regulatory": [],
       "recent_updates": [
         {
+          "date": "2025-11-07",
+          "event": "Phase 2b LUNA trial ongoing. 2-year study actively enrolling 81 participants (ages 8+). Trial sites in US, UK, and Netherlands. Latest update on ClinicalTrials.gov: October 2, 2025",
+          "source": "Web Search"
+        },
+        {
           "date": "2024-12",
           "event": "First patient dosed in Phase 2b LUNA trial",
           "source": "Company PR"
         }
       ],
-      "notes": "Targets Usher syndrome type 2A and RP with USH2A mutations"
+      "notes": "Targets Usher syndrome type 2A and RP with USH2A mutations. 2-year trial with 81 participants ages 8 and up."
     },
     "Botaretigene sparoparvovec": {
       "company": "Janssen (J&J)",

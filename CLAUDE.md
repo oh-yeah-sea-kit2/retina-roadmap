@@ -182,6 +182,91 @@ docs/
 
 ## 最近の更新履歴
 
+### 2025年11月7日（自動更新）
+- **Web検索による最新情報更新（/update_rp_info full実行）**
+
+## 網膜色素変性症治療法 最新情報更新サマリー
+更新日時: 2025年11月7日
+
+## 📊 更新チェック結果サマリー
+
+- 新規プログラム: 0件
+- 更新されたプログラム: 5件
+- 変更なし: 9件
+- 重要な更新: 5件
+
+### 🚨 重要な更新（重要度70以上）
+- **MCO-010**: 5年間安全性データと3年間有効性データ発表 - 重要度: 85
+  * 持続的な視覚改善を確認
+  * BLA提出は2026年初頭に完了予定
+  * Priority Review対象
+  * ワンタイム・オフィス内注射
+
+- **OCU400**: Phase 3 liMeliGhT試験（NCT06388200）進行中 - 重要度: 90
+  * Trial ID更新: NCT05203939 → NCT06388200
+  * 登録完了間近
+  * 2026年Q4にトップラインデータ予定
+  * 2027年に商用化予定
+
+- **VP-001**: Phase 1/2完了、Phase 2/3開始予定 - 重要度: 80
+  * Phase 1/2試験（PLATYPUS、WALLABY）完了
+  * 安全性良好、視力改善確認
+  * 2025年後半にPhase 2/3開始予定
+  * FDA Fast Track、RPD指定取得
+
+- **AGTC-501**: VISTA試験グローバル登録中 - 重要度: 85
+  * ステータス更新: "Enrollment completed" → "Enrolling globally"
+  * 追加規制承認: FDA Fast Track、UK ILAP、EU PRIME
+  * Phase 2 DAWN試験で良好な中間結果（2025年5月）
+
+- **OpCT-001**: FDA Fast Track指定、初患者投与完了 - 重要度: 75
+  * 2025年2月27日にFDA Fast Track指定取得
+  * 2025年7月8日に初患者投与
+  * Phase 1/2a CLARICO試験（NCT06789445）進行中
+  * 54名登録予定
+
+- **Ultevursen**: Phase 2b LUNA試験進行中 - 重要度: 70
+  * 2年間試験、81名登録予定（8歳以上）
+  * 米国、英国、オランダで試験実施中
+  * 2025年10月2日にClinicalTrials.gov更新
+
+### 🔄 更新されたプログラム詳細
+1. **MCO-010（Nanoscope）**:
+   - 5年間安全性データと3年間有効性データ追加
+   - BLA完了予定を2026年初頭に明記
+
+2. **OCU400（Ocugen）**:
+   - Trial ID: NCT05203939 → NCT06388200
+   - 2026年Q4トップラインデータ予定追加
+   - 2027年商用化予定追加
+
+3. **VP-001（PYC Therapeutics）**:
+   - Phase 1/2試験完了情報を詳細化
+   - Phase 2/3開始時期を2025年後半と明記
+
+4. **AGTC-501（Beacon）**:
+   - ステータス: "Enrollment completed" → "Enrolling globally"
+   - Trial IDs拡充: VISTA, SKYLINE, HORIZON, DAWN
+   - 規制承認追加: FDA Fast Track, UK ILAP, EU PRIME
+
+5. **OpCT-001（BlueRock）**:
+   - FDA Fast Track指定日を明記（2025年2月27日）
+   - 初患者投与日を明記（2025年7月8日）
+   - Trial ID追加: NCT06789445
+
+6. **Ultevursen（Sepul Bio/Théa）**:
+   - 試験詳細追加（2年間、81名、8歳以上）
+   - 試験地域情報追加（米国、英国、オランダ）
+
+### ✅ 変更なし（既知の情報）
+- NPI-001, Keio_Optogenetics, GS030, 4D-125, CTx-PDE6b, AAV-mVChR1, SPVN06, Botaretigene sparoparvovec, VG901
+
+### 📈 シミュレーション結果
+- アクティブ試験数: 55件
+- **最速承認予測（FDA）**: OCU400 2027年（2つのトライアル: NCT05203939とNCT06388200）
+- **全体中央値**: 2034年（FDA承認）
+- **Phase別成功率**: Phase 1: 86.7%, Phase 2: 78.4%, Phase 3: 71.4%
+
 ### 2025年10月25日（自動更新）
 - **update_latest_info.pyによる自動更新**
 
