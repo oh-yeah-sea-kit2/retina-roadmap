@@ -117,11 +117,35 @@ python scripts/update_latest_info.py
 
 ## 開発ワークフロー
 
-1. すべての変更は`develop`ブランチで作業
-2. 実装順序はTASK_LIST.jsonのタスクリストに従う
-3. すべてのデータ変換をコード化（手動ステップなし）
-4. 外部依存関係やAPIキーが必要な場合は文書化
-5. 変更をコミットする前にテストを実行
+**重要: すべての変更は必ずPull Request（PR）を通して適用すること**
+
+1. **ブランチ戦略**:
+   - `develop`ブランチに直接コミット・プッシュしない
+   - 機能追加・修正は必ず新しいブランチを作成: `feature/xxx`, `fix/xxx`, `docs/xxx`
+   - 変更完了後はPRを作成し、レビュー後に`develop`にマージ
+
+2. **PR作成の手順**:
+   ```bash
+   # 1. developブランチから最新を取得
+   git checkout develop && git pull
+
+   # 2. 新しいブランチを作成
+   git checkout -b fix/issue-number-description
+
+   # 3. 変更を実装・コミット
+   git add . && git commit -m "fix: description"
+
+   # 4. リモートにプッシュ
+   git push -u origin fix/issue-number-description
+
+   # 5. PRを作成
+   gh pr create --base develop --title "fix: description" --body "..."
+   ```
+
+3. 実装順序はTASK_LIST.jsonのタスクリストに従う
+4. すべてのデータ変換をコード化（手動ステップなし）
+5. 外部依存関係やAPIキーが必要な場合は文書化
+6. 変更をコミットする前にテストを実行
 
 ## 重要なファイル
 
