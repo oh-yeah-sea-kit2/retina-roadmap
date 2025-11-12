@@ -12,7 +12,7 @@ def convert_action_guide():
     """アクションガイドをHTMLに変換"""
     
     # Markdownファイルを読み込む
-    md_file = Path("docs/reality_and_actions.md")
+    md_file = Path("docs/content/main/reality_and_actions.md")
     with open(md_file, "r", encoding="utf-8") as f:
         md_content = f.read()
     
@@ -239,10 +239,10 @@ def convert_action_guide():
     final_html = html_template.replace("{content}", html_content)
     
     # ファイルに保存
-    html_file = Path("docs/reality_and_actions.html")
+    html_file = Path("docs/public/reality_and_actions.html")
     with open(html_file, "w", encoding="utf-8") as f:
         f.write(final_html)
-    
+
     print(f"HTML file created: {html_file}")
 
 
