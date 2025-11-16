@@ -204,8 +204,6 @@ def generate_markdown_report(data):
 
 📌 **[詳細な行動ガイドはこちら](reality_and_actions.html)** - 予測の現実性と、治療開発を加速するために私たちができる5つの具体的アクション
 
-📊 **[モンテカルロシミュレーションの詳細な計算方法と根拠](simulation_methodology.html)** - 予測値がどのように計算されたか、なぜ信頼できるかの詳細説明
-
 ### 研究者向け
 1. **成功率の高さ**: RP領域の成功率は他疾患より高い（Phase 3で71%）
 2. **開発期間**: Phase 1から承認まで平均8-10年
@@ -252,7 +250,7 @@ https://oh-yeah-sea-kit2.github.io/retina-roadmap/
 - 治療に関する決定は**必ず医療専門家にご相談ください**
 - 現在の治療を自己判断で中断しないでください
 
-詳細は[免責事項](publication_disclaimer.html)をご確認ください。
+詳細は[免責事項](disclaimer.html)をご確認ください。
 """
     
     return content
@@ -376,11 +374,6 @@ def convert_to_html(markdown_content, output_file):
                 <li style="margin: 5px 0;">🌍 <a href="regional_approval_timeline.html">地域別承認予測</a> - 日本・米国・欧州の違い</li>
                 <li style="margin: 5px 0;">🎯 <a href="reality_and_actions.html">現実的なアクションガイド</a> - 今すぐできる5つの行動</li>
                 <li style="margin: 5px 0;">🔊 <a href="accessible_summary.html">音声読み上げ対応版</a> - スクリーンリーダー最適化</li>
-                <li style="margin: 5px 0;">🤖 <a href="ai_acceleration_impact.html">AI活用による開発加速予測</a> - 最大45%短縮の可能性</li>
-                <li style="margin: 5px 0;">📈 <a href="simulation_methodology.html">シミュレーション方法論</a> - 計算の詳細</li>
-                <li style="margin: 5px 0;">🏥 <a href="for_doctor_checklist.html">医師向けチェックリスト</a> - 信憑性確認用</li>
-                <li style="margin: 5px 0;">📄 <a href="executive_summary_for_doctor.html">医師向け要約</a> - 研究概要と根拠</li>
-                <li style="margin: 5px 0;">🔧 <a href="bottlenecks.html">開発ボトルネック分析</a> - 課題と解決策</li>
             </ul>
         </nav>
         
@@ -430,7 +423,7 @@ def main():
     
     # HTMLに変換
     print("Converting to HTML...")
-    html_file = public_dir / "index_old.html"
+    html_file = public_dir / "index.html"
     convert_to_html(markdown_content, html_file)
     print(f"HTML report saved to: {html_file}")
     

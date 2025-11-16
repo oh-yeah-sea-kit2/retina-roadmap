@@ -206,6 +206,19 @@ docs/
 
 ## 最近の更新履歴
 
+### 2025年11月17日
+- **古いHTML/Markdownファイルの整理（Issue #41対応）**
+  - 陳腐なHTMLファイル9個を削除：
+    - index_old.html, ai_predictions.html, current_status_facts.html
+    - bottlenecks.html, for_doctor_checklist.html, ai_acceleration_impact.html
+    - publication_checklist.html, publication_disclaimer.html, executive_summary_for_doctor.html
+  - 陳腐なMarkdownファイル2個を削除：
+    - docs/content/main/ai_predictions.md, current_status_facts.md
+  - ナビゲーションリンクを更新：
+    - index.html, html_template.py, build_report.py, convert_md_to_html.py
+  - build_report.pyの出力ファイル名をindex_old.htmlからindex.htmlに変更
+  - プロジェクトの保守性向上とファイル構造の明確化
+
 ### 2025年11月7日（自動更新）
 - **Web検索による最新情報更新（/update_rp_info full実行）**
 
