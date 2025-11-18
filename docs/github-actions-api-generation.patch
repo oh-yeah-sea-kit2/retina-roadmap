@@ -1,0 +1,17 @@
+diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
+index 9a2281e..0b859cb 100644
+--- a/.github/workflows/ci.yml
++++ b/.github/workflows/ci.yml
+@@ -63,7 +63,11 @@ jobs:
+     - name: Generate report
+       run: |
+         python src/reporting/build_report.py
+-    
++
++    - name: Generate JSON API
++      run: |
++        python src/api_generator.py
++
+     - name: Upload artifacts
+       uses: actions/upload-artifact@v4
+       with:
