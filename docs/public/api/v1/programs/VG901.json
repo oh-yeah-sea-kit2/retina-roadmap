@@ -1,0 +1,24 @@
+{
+  "id": "VG901",
+  "company": "ViGeneron",
+  "current_phase": "Phase 1b",
+  "status": "Active",
+  "key_dates": {},
+  "trial_ids": [],
+  "modality": "Gene therapy",
+  "target": "CNGA1 mutations",
+  "regulatory": [
+    "FDA Rare Pediatric Disease Designation"
+  ],
+  "recent_updates": [
+    {
+      "date": "2025-08-18",
+      "event": "Currently in Phase 1b trial for RP associated with CNGA1 mutations",
+      "source": "Web search",
+      "importance": "medium"
+    }
+  ],
+  "notes": "Gene therapy for RP caused by CNGA1 mutations",
+  "predicted_approval": {},
+  "links": {}
+}

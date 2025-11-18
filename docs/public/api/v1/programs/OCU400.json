@@ -1,0 +1,64 @@
+{
+  "id": "OCU400",
+  "company": "Ocugen",
+  "current_phase": "Phase 3",
+  "status": "Enrolling",
+  "key_dates": {
+    "phase3_start": "2024-06",
+    "expected_enrollment_completion": "2025-H2",
+    "expected_topline_data": "2026-Q4",
+    "expected_bla_submission": "2026",
+    "expected_commercialization": "2027"
+  },
+  "trial_ids": [
+    "NCT06388200"
+  ],
+  "modality": "Gene therapy",
+  "target": "NR2E3 (modifier gene)",
+  "regulatory": [
+    "FDA RMAT",
+    "FDA Orphan Drug",
+    "EMA ATMP"
+  ],
+  "recent_updates": [
+    {
+      "date": "2025-11-07",
+      "event": "Phase 3 liMeliGhT trial (NCT06388200) enrollment nearing completion. Top-line data expected Q4 2026, commercialization projected for 2027",
+      "source": "Web Search",
+      "importance": "high"
+    },
+    {
+      "date": "2025-10-16",
+      "event": "Phase 3 liMeliGhT trial actively enrolling (ClinicalTrials.gov updated)",
+      "source": "ClinicalTrials.gov",
+      "importance": "high"
+    },
+    {
+      "date": "2025",
+      "event": "FDA approved Expanded Access Program for up to 75 eligible patients in the US",
+      "source": "Company PR",
+      "importance": "high"
+    },
+    {
+      "date": "2025",
+      "event": "Health Canada approved trial expansion to Canada (up to 50 subjects)",
+      "source": "Company PR",
+      "importance": "low"
+    },
+    {
+      "date": "2025-01-13",
+      "event": "Phase 1/2 2-year data: 100% (9/9) patients improved or maintained vision",
+      "source": "Company PR",
+      "importance": "medium"
+    }
+  ],
+  "notes": "Targets 100+ gene mutations. Expanded Access Program in US (75 patients) and Canada expansion (50 patients) approved.",
+  "predicted_approval": {
+    "fda": "2027-Q4",
+    "japan": "2033-Q2",
+    "europe": "2029-Q1"
+  },
+  "links": {
+    "clinicaltrials_gov": "https://clinicaltrials.gov/study/NCT06388200"
+  }
+}

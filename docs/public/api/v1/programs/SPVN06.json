@@ -1,0 +1,17 @@
+{
+  "id": "SPVN06",
+  "company": "SparingVision",
+  "current_phase": "Phase 1/2",
+  "status": "Active",
+  "key_dates": {
+    "expected_primary_endpoint": "2025"
+  },
+  "trial_ids": [],
+  "modality": "Gene therapy",
+  "target": "Gene-agnostic",
+  "regulatory": [],
+  "recent_updates": [],
+  "notes": "Gene-independent therapy expected to reach primary endpoint in 2025",
+  "predicted_approval": {},
+  "links": {}
+}

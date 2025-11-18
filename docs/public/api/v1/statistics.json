@@ -1,0 +1,66 @@
+{
+  "overview": {
+    "total_programs": 16,
+    "active_programs": 15,
+    "phase_distribution": {
+      "Phase 3": 3,
+      "Phase 1/2": 3,
+      "Phase 2/3": 1,
+      "Phase 1/2a": 1,
+      "Development": 1,
+      "Clinical development": 3,
+      "Preclinical": 1,
+      "Phase 2b": 1,
+      "TBD": 1,
+      "Phase 1b": 1
+    },
+    "last_updated": "2025-11-07"
+  },
+  "success_rates": {
+    "PHASE1": {
+      "success_rate": 0.8666666666666667,
+      "success_count": 26,
+      "total_count": 30,
+      "confidence": "measured"
+    },
+    "PHASE2": {
+      "success_rate": 0.7837837837837838,
+      "success_count": 29,
+      "total_count": 37,
+      "confidence": "measured"
+    },
+    "PHASE3": {
+      "success_rate": 0.7142857142857143,
+      "success_count": 10,
+      "total_count": 14,
+      "confidence": "measured"
+    }
+  },
+  "modality_breakdown": {
+    "Gene therapy (optogenetics)": 4,
+    "Gene therapy": 7,
+    "RNA therapy": 1,
+    "Cell therapy (iPSC-derived photoreceptors)": 1,
+    "Small molecule (oral)": 1,
+    "RNA therapy (antisense oligonucleotide)": 1,
+    "TBD": 1
+  },
+  "status_breakdown": {
+    "BLA submission initiated": 1,
+    "Enrolling": 2,
+    "Completed - Planning Phase 2/3": 1,
+    "Enrolling globally": 1,
+    "Active - First patient dosed": 2,
+    "Pre-clinical": 1,
+    "Active": 5,
+    "Development": 1,
+    "Failed primary endpoint": 1,
+    "New": 1
+  },
+  "regional_status": {
+    "fda_approved": 0,
+    "fda_under_review": 1,
+    "japan_approved": 0,
+    "europe_approved": 0
+  }
+}

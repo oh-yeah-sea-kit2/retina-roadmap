@@ -1,0 +1,53 @@
+{
+  "id": "VP-001",
+  "company": "PYC Therapeutics",
+  "current_phase": "Phase 1/2",
+  "status": "Completed - Planning Phase 2/3",
+  "key_dates": {
+    "phase1_start": "2022",
+    "phase1_2_results": "2025-05",
+    "expected_phase2_3_start": "2025-H2"
+  },
+  "trial_ids": [
+    "PLATYPUS",
+    "WALLABY"
+  ],
+  "modality": "RNA therapy",
+  "target": "PRPF31 (RP11)",
+  "regulatory": [
+    "FDA Fast Track",
+    "FDA Rare Pediatric Disease Designation",
+    "FDA alignment on trial design"
+  ],
+  "recent_updates": [
+    {
+      "date": "2025-06",
+      "event": "Positive FDA meeting to finalize Phase 2/3 registrational study design",
+      "source": "Company announcement",
+      "importance": "high"
+    },
+    {
+      "date": "2025-05",
+      "event": "Positive Phase 1/2 results presented at ARVO: LLVA improvements, microperimetry improvements in 18 patients (PLATYPUS 12, WALLABY 6)",
+      "source": "Conference presentation",
+      "importance": "medium"
+    },
+    {
+      "date": "2025-05",
+      "event": "Phase 2/3 registrational trial planned for late 2025 following FDA guidance",
+      "source": "Company announcement",
+      "importance": "high"
+    },
+    {
+      "date": "2025-01",
+      "event": "Received FDA Rare Pediatric Disease (RPD) designation",
+      "source": "Company PR",
+      "importance": "high"
+    }
+  ],
+  "notes": "First therapy specifically for RP11. Positive Phase 1/2 results with vision improvements reported by patients. RPD designation makes it eligible for Priority Review Voucher (PRV) worth $100M+ if approved.",
+  "predicted_approval": {},
+  "links": {
+    "clinicaltrials_gov": "https://clinicaltrials.gov/study/PLATYPUS"
+  }
+}

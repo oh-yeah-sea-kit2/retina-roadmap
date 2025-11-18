@@ -1,0 +1,44 @@
+{
+  "api_version": "1.0.0",
+  "last_updated": "2025-11-18T22:18:59.253367",
+  "endpoints": [
+    {
+      "path": "/programs.json",
+      "description": "全治療プログラム一覧",
+      "method": "GET"
+    },
+    {
+      "path": "/programs/{id}.json",
+      "description": "個別プログラム詳細",
+      "method": "GET",
+      "example": "/programs/MCO-010.json"
+    },
+    {
+      "path": "/timeline.json",
+      "description": "治療承認予測タイムライン",
+      "method": "GET"
+    },
+    {
+      "path": "/statistics.json",
+      "description": "統計情報",
+      "method": "GET"
+    },
+    {
+      "path": "/meta.json",
+      "description": "APIメタ情報",
+      "method": "GET"
+    }
+  ],
+  "data_sources": {
+    "clinical_trials": "ClinicalTrials.gov",
+    "papers": "PubMed",
+    "programs": "Manual curation + Web search"
+  },
+  "update_frequency": {
+    "programs": "weekly",
+    "timeline": "monthly",
+    "statistics": "weekly"
+  },
+  "repository": "https://github.com/oh-yeah-sea-kit2/retina-roadmap",
+  "documentation": "https://oh-yeah-sea-kit2.github.io/retina-roadmap/docs/API_REDESIGN_PROPOSAL.md"
+}

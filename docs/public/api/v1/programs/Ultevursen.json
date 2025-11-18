@@ -1,0 +1,35 @@
+{
+  "id": "Ultevursen",
+  "company": "Sepul Bio / Théa",
+  "current_phase": "Phase 2b",
+  "status": "Enrolling",
+  "key_dates": {
+    "phase2b_start": "2024-12",
+    "expected_study_completion": "2026-12"
+  },
+  "trial_ids": [
+    "LUNA"
+  ],
+  "modality": "RNA therapy (antisense oligonucleotide)",
+  "target": "USH2A exon 13 mutations",
+  "regulatory": [],
+  "recent_updates": [
+    {
+      "date": "2025-11-07",
+      "event": "Phase 2b LUNA trial ongoing. 2-year study actively enrolling 81 participants (ages 8+). Trial sites in US, UK, and Netherlands. Latest update on ClinicalTrials.gov: October 2, 2025",
+      "source": "Web Search",
+      "importance": "medium"
+    },
+    {
+      "date": "2024-12",
+      "event": "First patient dosed in Phase 2b LUNA trial",
+      "source": "Company PR",
+      "importance": "medium"
+    }
+  ],
+  "notes": "Targets Usher syndrome type 2A and RP with USH2A mutations. 2-year trial with 81 participants ages 8 and up.",
+  "predicted_approval": {},
+  "links": {
+    "clinicaltrials_gov": "https://clinicaltrials.gov/study/LUNA"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "simulation_date": "2025-11-18T22:18:59.252422",
+    "method": "Monte Carlo (10,000 iterations)",
+    "confidence_interval": 0.9,
+    "parameters": {
+      "phase_success_rates": {
+        "PHASE1": {
+          "success_rate": 0.8666666666666667,
+          "success_count": 26,
+          "total_count": 30,
+          "confidence": "measured"
+        },
+        "PHASE2": {
+          "success_rate": 0.7837837837837838,
+          "success_count": 29,
+          "total_count": 37,
+          "confidence": "measured"
+        },
+        "PHASE3": {
+          "success_rate": 0.7142857142857143,
+          "success_count": 10,
+          "total_count": 14,
+          "confidence": "measured"
+        }
+      },
+      "phase_durations": {
+        "PHASE1": {
+          "median_years": 2.6091718001368926,
+          "range": [
+            0.9527720739219713,
+            8.854209445585216
+          ]
+        },
+        "PHASE2": {
+          "median_years": 2.674880219028063,
+          "range": [
+            0.9418206707734429,
+            8.854209445585216
+          ]
+        },
+        "PHASE3": {
+          "median_years": 2.2888432580424367,
+          "range": [
+            0.7529089664613279,
+            3.997262149212868
+          ]
+        },
+        "PHASE1, PHASE2": {
+          "median_years": 2.674880219028063,
+          "range": [
+            0.9527720739219713,
+            8.854209445585216
+          ]
+        },
+        "PHASE2, PHASE3": {
+          "median_years": 4.5,
+          "range": [
+            3.0,
+            6.0
+          ]
+        }
+      }
+    }
+  },
+  "predictions": {
+    "first_approval": {
+      "program": "MCO-010",
+      "median_date": "2026-Q1",
+      "confidence_90": {
+        "lower": "2025-Q4",
+        "upper": "2027-Q2"
+      },
+      "probability_by_year": {
+        "2025": 0.05,
+        "2026": 0.65,
+        "2027": 0.25,
+        "2028": 0.05
+      }
+    },
+    "by_region": {
+      "FDA": {
+        "median_approval_year": 2026,
+        "programs": [
+          "MCO-010",
+          "OCU400"
+        ],
+        "description": "米国FDA - 最速の承認が見込まれる"
+      },
+      "Japan": {
+        "median_approval_year": 2032,
+        "delay_years": 6,
+        "programs": [
+          "MCO-010"
+        ],
+        "description": "日本 - 歴史的に3-7年の遅延"
+      },
+      "Europe": {
+        "median_approval_year": 2027,
+        "delay_years": 1,
+        "programs": [
+          "MCO-010",
+          "AGTC-501"
+        ],
+        "description": "欧州EMA - 1-2年の遅延"
+      }
+    }
+  }
+}

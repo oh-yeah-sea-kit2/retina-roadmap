@@ -1,0 +1,45 @@
+{
+  "id": "OpCT-001",
+  "company": "BlueRock Therapeutics",
+  "current_phase": "Phase 1/2a",
+  "status": "Active - First patient dosed",
+  "key_dates": {
+    "phase1_start": "2023",
+    "fda_fast_track": "2025-02-27",
+    "first_patient_dosed": "2025-07-08"
+  },
+  "trial_ids": [
+    "NCT06789445",
+    "CLARICO"
+  ],
+  "modality": "Cell therapy (iPSC-derived photoreceptors)",
+  "target": "Photoreceptor replacement",
+  "regulatory": [
+    "FDA Fast Track"
+  ],
+  "recent_updates": [
+    {
+      "date": "2025-11-07",
+      "event": "FDA Fast Track Designation granted Feb 27, 2025. First patient dosed July 8, 2025 in Phase 1/2a CLARICO trial (NCT06789445). Trial aims to enroll 54 participants to assess safety and outcomes",
+      "source": "Web Search",
+      "importance": "high"
+    },
+    {
+      "date": "2025-07",
+      "event": "First patient treated in CLARICO trial - world's first iPSC-derived cell therapy tested in humans for primary photoreceptor diseases",
+      "source": "Company PR",
+      "importance": "low"
+    },
+    {
+      "date": "2023",
+      "event": "Received FDA Fast Track designation",
+      "source": "Company PR",
+      "importance": "high"
+    }
+  ],
+  "notes": "iPSC-derived photoreceptor cells. World's first iPSC-derived cell therapy for primary photoreceptor diseases. First patient dosed July 8, 2025. Aims to restore vision by replacing degenerated photoreceptor cells.",
+  "predicted_approval": {},
+  "links": {
+    "clinicaltrials_gov": "https://clinicaltrials.gov/study/NCT06789445"
+  }
+}

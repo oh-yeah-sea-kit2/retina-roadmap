@@ -1,0 +1,61 @@
+{
+  "id": "AGTC-501",
+  "company": "Beacon Therapeutics",
+  "current_phase": "Phase 2/3",
+  "status": "Enrolling globally",
+  "key_dates": {
+    "phase2_3_start": "2023",
+    "expected_12m_data": "2026-H2"
+  },
+  "trial_ids": [
+    "VISTA",
+    "SKYLINE",
+    "HORIZON",
+    "DAWN"
+  ],
+  "modality": "Gene therapy",
+  "target": "RPGR (X-linked RP)",
+  "regulatory": [
+    "FDA RMAT",
+    "FDA Fast Track",
+    "UK ILAP",
+    "EU PRIME"
+  ],
+  "recent_updates": [
+    {
+      "date": "2025-11-07",
+      "event": "Phase 2/3 VISTA trial actively enrolling globally. Additional regulatory designations: FDA Fast Track, UK ILAP, EU PRIME. Positive interim results from Phase 2 DAWN trial (May 2025)",
+      "source": "Web Search",
+      "importance": "high"
+    },
+    {
+      "date": "2025-10",
+      "event": "Phase 2/3 VISTA trial enrollment completed. 12-month topline data expected in H2 2026",
+      "source": "Web search",
+      "importance": "medium"
+    },
+    {
+      "date": "2025-07",
+      "event": "Received FDA RMAT designation. Phase 2 SKYLINE trial 12-month data: 63% responder rate",
+      "source": "Company PR",
+      "importance": "high"
+    },
+    {
+      "date": "2025-05",
+      "event": "Phase 2 DAWN trial: 6-month interim data positive",
+      "source": "Company PR",
+      "importance": "medium"
+    },
+    {
+      "date": "2025-07",
+      "event": "Phase 2 DAWN trial: second eye treatment showed mean 16-letter improvement. $170M Series B funding completed",
+      "source": "Company PR",
+      "importance": "medium"
+    }
+  ],
+  "notes": "Targets X-linked RP. VISTA trial actively enrolling globally. Multiple positive Phase 2 trials. RMAT designation received Jan 2025, along with Fast Track, UK ILAP, and EU PRIME designations.",
+  "predicted_approval": {},
+  "links": {
+    "clinicaltrials_gov": "https://clinicaltrials.gov/study/VISTA"
+  }
+}

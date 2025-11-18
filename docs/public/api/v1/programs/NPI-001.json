@@ -1,0 +1,25 @@
+{
+  "id": "NPI-001",
+  "company": "Nacuity Pharmaceuticals",
+  "current_phase": "Development",
+  "status": "Pre-clinical",
+  "key_dates": {},
+  "trial_ids": [],
+  "modality": "Small molecule (oral)",
+  "target": "Neuroprotection",
+  "regulatory": [
+    "FDA Fast Track",
+    "Orphan Drug Designation"
+  ],
+  "recent_updates": [
+    {
+      "date": "2024",
+      "event": "Received FDA Fast Track designation",
+      "source": "Company PR",
+      "importance": "high"
+    }
+  ],
+  "notes": "Oral neuroprotective therapy",
+  "predicted_approval": {},
+  "links": {}
+}

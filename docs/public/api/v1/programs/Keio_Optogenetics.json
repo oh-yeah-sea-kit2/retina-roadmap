@@ -1,0 +1,31 @@
+{
+  "id": "Keio_Optogenetics",
+  "company": "Keio University / Restore Vision Co.",
+  "current_phase": "Phase 1/2",
+  "status": "Active - First patient dosed",
+  "key_dates": {
+    "phase1_start": "2025-02-13",
+    "first_patient_dosed": "2025-02-06"
+  },
+  "trial_ids": [],
+  "modality": "Gene therapy (optogenetics)",
+  "target": "Gene-agnostic (Chimeric channelrhodopsin)",
+  "regulatory": [],
+  "recent_updates": [
+    {
+      "date": "2025-02-13",
+      "event": "First gene therapy trial for RP in Japan initiated",
+      "source": "University PR",
+      "importance": "low"
+    },
+    {
+      "date": "2025-02-06",
+      "event": "First patient dosed at Keio University Hospital",
+      "source": "University announcement",
+      "importance": "low"
+    }
+  ],
+  "notes": "Targets completely blind RP patients. First RP gene therapy trial in Japan. Treatment designated as RV-001 by Restore Vision. Planning to enroll 6-15 severe patients with 6-month follow-up.",
+  "predicted_approval": {},
+  "links": {}
+}

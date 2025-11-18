@@ -1,0 +1,30 @@
+{
+  "id": "Botaretigene sparoparvovec",
+  "company": "Janssen (J&J)",
+  "current_phase": "Phase 3",
+  "status": "Failed primary endpoint",
+  "key_dates": {
+    "phase3_start": "2021-04",
+    "primary_endpoint_result": "2025-05"
+  },
+  "trial_ids": [
+    "NCT04850118",
+    "LUMEOS"
+  ],
+  "modality": "Gene therapy",
+  "target": "RPGR",
+  "regulatory": [],
+  "recent_updates": [
+    {
+      "date": "2025-05",
+      "event": "Phase 3 LUMEOS trial failed to meet primary endpoint",
+      "source": "Company announcement",
+      "importance": "high"
+    }
+  ],
+  "notes": "Did not meet primary endpoint but showed improvements in secondary endpoints",
+  "predicted_approval": {},
+  "links": {
+    "clinicaltrials_gov": "https://clinicaltrials.gov/study/NCT04850118"
+  }
+}
