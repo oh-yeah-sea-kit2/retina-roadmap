@@ -3,6 +3,8 @@
 [![CI/CD Pipeline](https://github.com/oh-yeah-sea-kit2/retina-roadmap/actions/workflows/ci.yml/badge.svg)](https://github.com/oh-yeah-sea-kit2/retina-roadmap/actions/workflows/ci.yml)
 [![Last Updated](https://img.shields.io/badge/Last%20Updated-2025--06--26-blue)](https://oh-yeah-sea-kit2.github.io/retina-roadmap/)
 
+**[サイトを見る](https://oh-yeah-sea-kit2.github.io/retina-roadmap/docs/public/index.html)**
+
 ## 📊 プロジェクト概要
 
 網膜色素変性症（Retinitis Pigmentosa, RP）の治療法がいつ頃利用可能になるかを、公開データに基づいて予測するプロジェクトです。
@@ -23,7 +25,7 @@
 - **全体の中央値**: 2036年
 - **AI活用による加速**: 最大45%の開発期間短縮の可能性
 
-詳細は[レポート](https://oh-yeah-sea-kit2.github.io/retina-roadmap/docs/)をご覧ください。
+詳細は[サイト](https://oh-yeah-sea-kit2.github.io/retina-roadmap/docs/public/index.html)をご覧ください。
 
 ## 🚀 クイックスタート（Claude Code）
 
