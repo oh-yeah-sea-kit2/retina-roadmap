@@ -1,5 +1,6 @@
 {
-  "last_updated": "2025-11-07",
+  "last_updated": "2026-01-03",
+  "update_notes": "2026-01-03: MCO-010にRMAT指定・EMA Orphan指定追加、jCells NCT追加、SPVN06 PRODYGY試験詳細追加、ZM-02 PRISM試験NCT追加、VG901試験完了予定更新",
   "programs": {
     "MCO-010": {
       "company": "Nanoscope Therapeutics",
@@ -18,9 +19,16 @@
       "target": "Gene-agnostic",
       "regulatory": [
         "FDA Fast Track",
-        "Orphan Drug Designation"
+        "FDA Orphan Drug Designation",
+        "FDA RMAT (Stargardt)",
+        "EMA Orphan Designation (5 categories)"
       ],
       "recent_updates": [
+        {
+          "date": "2026-01-03",
+          "event": "BLA rolling submission in progress (started July 2025). Full submission expected early 2026 with priority review eligibility. ICER (April 2025) concluded evidence demonstrates net health benefit. EMA granted Orphan designations for 5 categories of retinal dystrophies. RMAT designation for Stargardt disease",
+          "source": "Web Search (Gemini)"
+        },
         {
           "date": "2025-11-07",
           "event": "5-year safety data and 3-year efficacy data show sustained vision gains. BLA expected to be completed in early 2026 with priority review eligibility",
@@ -42,17 +50,19 @@
           "source": "Company PR"
         }
       ],
-      "notes": "First gene-agnostic gene therapy for RP. Full BLA submission expected early 2026, eligible for priority review. One-time in-office injection for severe vision loss."
+      "notes": "First gene-agnostic gene therapy for RP (sonpiretigene isteparvovec). Uses AAV2 vector to deliver multi-characteristic opsin (MCO) to bipolar retinal cells via intravitreal injection. Full BLA submission expected early 2026, eligible for priority review. One-time in-office injection for severe vision loss. ICER (April 2025) concluded evidence adequately demonstrates net health benefit. Also pursuing Stargardt disease indication."
     },
     "OCU400": {
       "company": "Ocugen",
       "current_phase": "Phase 3",
-      "status": "Enrolling",
+      "status": "Enrollment nearing completion",
       "key_dates": {
         "phase3_start": "2024-06",
-        "expected_enrollment_completion": "2025-H2",
+        "expected_enrollment_completion": "2025-12",
+        "expected_primary_endpoint": "2026-12-31",
         "expected_topline_data": "2026-Q4",
-        "expected_bla_submission": "2026",
+        "expected_bla_submission_start": "2026-H1",
+        "expected_bla_submission_complete": "2026",
         "expected_commercialization": "2027"
       },
       "trial_ids": [
@@ -63,9 +73,15 @@
       "regulatory": [
         "FDA RMAT",
         "FDA Orphan Drug",
-        "EMA ATMP"
+        "EMA ATMP",
+        "EMA centralized review eligibility"
       ],
       "recent_updates": [
+        {
+          "date": "2026-01-03",
+          "event": "Phase 3 liMeliGhT trial enrollment nearing completion (US 15 sites ~150 patients: 75 RHO + 75 gene-agnostic, Canada up to 50 patients). Rolling BLA submission expected to start H1 2026. Top-line data expected Q4 2026. Primary endpoint completion Dec 31, 2026. EMA MAA eligible for centralized review",
+          "source": "Web Search (Gemini)"
+        },
         {
           "date": "2025-11-07",
           "event": "Phase 3 liMeliGhT trial (NCT06388200) enrollment nearing completion. Top-line data expected Q4 2026, commercialization projected for 2027",
@@ -339,16 +355,27 @@
     "SPVN06": {
       "company": "SparingVision",
       "current_phase": "Phase 1/2",
-      "status": "Active",
+      "status": "Active - PRODYGY Step 2 (controlled phase) ongoing",
       "key_dates": {
-        "expected_primary_endpoint": "2025"
+        "dose_escalation_completed": "2024-10",
+        "step2_start": "2024-Q4",
+        "expected_primary_endpoint": "2025-H2"
       },
-      "trial_ids": [],
+      "trial_ids": [
+        "PRODYGY",
+        "NCT05748873"
+      ],
       "modality": "Gene therapy",
       "target": "Gene-agnostic",
       "regulatory": [],
-      "recent_updates": [],
-      "notes": "Gene-independent therapy expected to reach primary endpoint in 2025"
+      "recent_updates": [
+        {
+          "date": "2026-01-03",
+          "event": "PRODYGY Phase 1/2 trial progressing well. Dose escalation (Step 1) completed Oct 2024. Controlled, randomized extension phase (Step 2) started Q4 2024. Primary endpoint expected H2 2025 (12 months after last patient in Step 2). Favorable safety profile through 18 months: no SAEs, no DLTs, no discontinuations. Preliminary efficacy signals observed in Phase 1",
+          "source": "Web Search (Gemini)"
+        }
+      ],
+      "notes": "Gene-agnostic gene therapy for RP. PRODYGY trial evaluating safety, tolerability, and preliminary efficacy. Good safety profile demonstrated through 18 months with no serious adverse events. Primary endpoint expected H2 2025."
     },
     "Ultevursen": {
       "company": "Sepul Bio / Théa",
@@ -423,22 +450,118 @@
     "VG901": {
       "company": "ViGeneron",
       "current_phase": "Phase 1b",
-      "status": "Active",
-      "key_dates": {},
-      "trial_ids": [],
+      "status": "Active - Dose escalation in progress, trial expected to complete end of 2025",
+      "key_dates": {
+        "first_patient_dosed": "2024-04",
+        "rpdd_designation": "2025-01",
+        "dose_escalation_approved": "2025-01",
+        "expected_trial_completion": "2025-end"
+      },
+      "trial_ids": [
+        "NCT06291935"
+      ],
       "modality": "Gene therapy",
       "target": "CNGA1 mutations",
       "regulatory": [
-        "FDA Rare Pediatric Disease Designation"
+        "FDA Rare Pediatric Disease Designation",
+        "FDA Orphan Drug Designation"
       ],
       "recent_updates": [
         {
-          "date": "2025-08-18",
-          "event": "Currently in Phase 1b trial for RP associated with CNGA1 mutations",
-          "source": "Web search"
+          "date": "2026-01-03",
+          "event": "Phase 1b trial ongoing at University of Tübingen, Germany. Dose escalation proceeding after DSMB approval (Jan 2025). No dose-limiting toxicities in first dose cohort. Trial expected to complete by end of 2025. RPDD designation enables potential Priority Review Voucher upon approval",
+          "source": "Web Search (Gemini)"
+        },
+        {
+          "date": "2025-01",
+          "event": "FDA granted Rare Pediatric Disease Designation (RPDD). DSMB unanimously approved dose escalation in ongoing Phase 1b trial",
+          "source": "Company PR"
+        },
+        {
+          "date": "2024-04",
+          "event": "First patient dosed in Phase 1b trial",
+          "source": "Company PR"
         }
       ],
-      "notes": "Gene therapy for RP caused by CNGA1 mutations"
+      "notes": "Gene therapy for RP caused by CNGA1 mutations. Uses proprietary next-generation vgAAV capsid for intravitreal delivery of functional CNGA1 gene to photoreceptors. Trial conducted at University of Tübingen. RPDD makes it eligible for Priority Review Voucher if approved."
+    },
+    "ZM-02": {
+      "company": "Zhongmou Therapeutics",
+      "current_phase": "Phase 1/2",
+      "status": "IND approved - PRISM trial active in US and China",
+      "key_dates": {
+        "orphan_drug_designation": "2024-10",
+        "fda_ind_approval": "2025-11",
+        "moon_trial_china": "2024"
+      },
+      "trial_ids": [
+        "PRISM",
+        "NCT07282457",
+        "NCT06292650"
+      ],
+      "modality": "Gene therapy (optogenetics)",
+      "target": "Gene-agnostic",
+      "regulatory": [
+        "FDA Orphan Drug Designation",
+        "FDA IND approval"
+      ],
+      "recent_updates": [
+        {
+          "date": "2026-01-03",
+          "event": "PRISM trial (NCT07282457) is a multi-center, randomized, sham-controlled, dose-escalation Phase 1/2 study in US and China. MOON trial data presented at ATC (Nov 2025) showed significant improvements in vision, mobility, and color perception recovery. Gene-agnostic approach restores photosensitivity regardless of specific mutation",
+          "source": "Web Search (Gemini)"
+        },
+        {
+          "date": "2025-11",
+          "event": "FDA approved IND application, enabling multinational Phase 1/2 PRISM trial in US and China",
+          "source": "Company PR"
+        },
+        {
+          "date": "2024-10",
+          "event": "Received FDA Orphan Drug Designation",
+          "source": "Company PR"
+        }
+      ],
+      "notes": "Gene-agnostic optogenetic therapy. Bypasses degenerated photoreceptors to reactivate remaining inner retinal neural circuits. MOON trial in China showed promising initial clinical data with improvements in vision, mobility, and color perception."
+    },
+    "jCells": {
+      "company": "jCyte",
+      "current_phase": "Phase 2",
+      "status": "Active - JC02-88 trial ongoing, first patient dosed Aug 2025",
+      "key_dates": {
+        "phase2_jc0288_start": "2025-06-20",
+        "first_patient_dosed": "2025-08-18",
+        "expected_primary_completion": "2026-09",
+        "expected_trial_completion": "2026-09",
+        "trial_duration": "6 months"
+      },
+      "trial_ids": [
+        "JC02-88",
+        "NCT06912633"
+      ],
+      "modality": "Cell therapy",
+      "target": "Gene-agnostic (neuroprotection)",
+      "regulatory": [
+        "FDA RMAT"
+      ],
+      "recent_updates": [
+        {
+          "date": "2026-01-03",
+          "event": "JC02-88 trial (NCT06912633) started June 20, 2025. First patient dosed Aug 18-20, 2025. Testing 8.8 million cells (~50% higher than previous highest dose) via single intravitreal injection. Randomized, blinded, sham-controlled design with up to 60 patients ages 18-60. 6-month trial with primary/full completion Sept 2026. Sham recipients eligible for treatment in extension study",
+          "source": "Web Search (Gemini)"
+        },
+        {
+          "date": "2025-08",
+          "event": "Initiated new Phase 2 clinical trial (JC02-88) with higher dose of 8.8 million jCells",
+          "source": "Company PR"
+        },
+        {
+          "date": "2025-06-20",
+          "event": "JC02-88 Phase 2 trial officially started",
+          "source": "ClinicalTrials.gov"
+        }
+      ],
+      "notes": "Cell-based therapy (famzeletcel) for RP regardless of causative gene mutation. RMAT designation granted. Previous Phase 2b showed improvements in BCVA, contrast sensitivity, and visual field. New trial tests higher dose in sham-controlled design."
     }
   }
 }
