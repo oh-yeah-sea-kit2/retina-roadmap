@@ -12,7 +12,7 @@ def convert_action_guide():
     """アクションガイドをHTMLに変換"""
     
     # Markdownファイルを読み込む
-    md_file = Path("docs/reality_and_actions.md")
+    md_file = Path("docs/content/main/reality_and_actions.md")
     with open(md_file, "r", encoding="utf-8") as f:
         md_content = f.read()
     
@@ -181,14 +181,13 @@ def convert_action_guide():
         <nav role="navigation" aria-label="サイト内ナビゲーション" style="background: #e8f4f8; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
             <h3 style="font-size: 1.2em; margin: 0 0 10px 0;">関連ページ</h3>
             <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="margin: 5px 0;">📊 <a href="index.html">メインレポート</a> - 詳細な予測データ</li>
+                <li style="margin: 5px 0;">🏠 <a href="index.html">トップページ</a></li>
+                <li style="margin: 5px 0;">📊 <a href="report.html">詳細レポート</a> - シミュレーション結果</li>
                 <li style="margin: 5px 0;">🎯 <a href="reality_and_actions.html">現実的なアクションガイド（このページ）</a></li>
                 <li style="margin: 5px 0;">🔊 <a href="accessible_summary.html">音声読み上げ対応版</a> - スクリーンリーダー最適化</li>
-                <li style="margin: 5px 0;">🤖 <a href="ai_acceleration_impact.html">AI活用による開発加速予測</a></li>
                 <li style="margin: 5px 0;">📈 <a href="simulation_methodology.html">シミュレーション方法論</a></li>
-                <li style="margin: 5px 0;">🏥 <a href="for_doctor_checklist.html">医師向けチェックリスト</a></li>
-                <li style="margin: 5px 0;">📄 <a href="executive_summary_for_doctor.html">医師向け要約</a></li>
-                <li style="margin: 5px 0;">🔧 <a href="bottlenecks.html">開発ボトルネック分析</a></li>
+                <li style="margin: 5px 0;">👨‍⚕️ <a href="medical_info.html">医療従事者向け情報</a></li>
+                <li style="margin: 5px 0;">👥 <a href="patient_guide.html">患者・家族向けガイド</a></li>
             </ul>
         </nav>
         
@@ -198,8 +197,8 @@ def convert_action_guide():
             </div>
             {content}
         <div class="back-link" style="margin-top: 50px; text-align: center;">
-            <a href="index.html">← メインレポートに戻る</a> | 
-            <a href="bottlenecks.html">開発ボトルネック分析 →</a>
+            <a href="index.html">← トップページに戻る</a> |
+            <a href="patient_guide.html">患者・家族向けガイド →</a>
         </div>
         </main>
     </div>
@@ -239,7 +238,7 @@ def convert_action_guide():
     final_html = html_template.replace("{content}", html_content)
     
     # ファイルに保存
-    html_file = Path("docs/reality_and_actions.html")
+    html_file = Path("docs/public/reality_and_actions.html")
     with open(html_file, "w", encoding="utf-8") as f:
         f.write(final_html)
     
