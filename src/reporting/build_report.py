@@ -252,7 +252,7 @@ https://oh-yeah-sea-kit2.github.io/retina-roadmap/
 - 治療に関する決定は**必ず医療専門家にご相談ください**
 - 現在の治療を自己判断で中断しないでください
 
-詳細は[免責事項](publication_disclaimer.html)をご確認ください。
+詳細は[免責事項](disclaimer.html)をご確認ください。
 """
     
     return content
@@ -372,15 +372,13 @@ def convert_to_html(markdown_content, output_file):
         <nav role="navigation" aria-label="サイト内ナビゲーション" style="background: #e8f4f8; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
             <h2 style="font-size: 1.2em; margin: 0 0 10px 0;">関連ページ</h2>
             <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="margin: 5px 0;">📊 <a href="index.html">メインレポート（このページ）</a></li>
+                <li style="margin: 5px 0;">📊 <a href="index.html">トップページ</a></li>
                 <li style="margin: 5px 0;">🌍 <a href="regional_approval_timeline.html">地域別承認予測</a> - 日本・米国・欧州の違い</li>
                 <li style="margin: 5px 0;">🎯 <a href="reality_and_actions.html">現実的なアクションガイド</a> - 今すぐできる5つの行動</li>
                 <li style="margin: 5px 0;">🔊 <a href="accessible_summary.html">音声読み上げ対応版</a> - スクリーンリーダー最適化</li>
-                <li style="margin: 5px 0;">🤖 <a href="ai_acceleration_impact.html">AI活用による開発加速予測</a> - 最大45%短縮の可能性</li>
                 <li style="margin: 5px 0;">📈 <a href="simulation_methodology.html">シミュレーション方法論</a> - 計算の詳細</li>
-                <li style="margin: 5px 0;">🏥 <a href="for_doctor_checklist.html">医師向けチェックリスト</a> - 信憑性確認用</li>
-                <li style="margin: 5px 0;">📄 <a href="executive_summary_for_doctor.html">医師向け要約</a> - 研究概要と根拠</li>
-                <li style="margin: 5px 0;">🔧 <a href="bottlenecks.html">開発ボトルネック分析</a> - 課題と解決策</li>
+                <li style="margin: 5px 0;">👨‍⚕️ <a href="medical_info.html">医療従事者向け情報</a> - 専門家向け詳細</li>
+                <li style="margin: 5px 0;">👥 <a href="patient_guide.html">患者・家族向けガイド</a> - わかりやすい解説</li>
             </ul>
         </nav>
         

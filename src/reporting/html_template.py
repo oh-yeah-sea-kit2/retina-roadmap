@@ -47,8 +47,7 @@ def get_html_template(title, description=""):
         <nav role="navigation" aria-label="サイト内ナビゲーション">
             <ul>
                 <li><a href="index.html">🏠 ホーム</a></li>
-                <li><a href="current_status_facts.html">📊 現状の事実</a></li>
-                <li><a href="ai_predictions.html">🤖 AI予測</a></li>
+                <li><a href="report.html">📊 詳細レポート</a></li>
                 <li><a href="reality_and_actions.html">🎯 今できること</a></li>
                 <li><a href="regional_approval_timeline.html">🌍 地域別予測</a></li>
                 <li><a href="faq.html">❓ FAQ</a></li>
@@ -72,21 +71,21 @@ def get_html_template(title, description=""):
                 </a>
             </li>
             <li>
-                <a href="current_status_facts.html">
+                <a href="report.html">
                     <span class="bottom-nav-icon">📊</span>
-                    <span>現状</span>
+                    <span>レポート</span>
                 </a>
             </li>
             <li>
-                <a href="ai_predictions.html">
-                    <span class="bottom-nav-icon">🤖</span>
-                    <span>予測</span>
+                <a href="patient_guide.html">
+                    <span class="bottom-nav-icon">👥</span>
+                    <span>患者向け</span>
                 </a>
             </li>
             <li>
-                <a href="reality_and_actions.html">
-                    <span class="bottom-nav-icon">🎯</span>
-                    <span>行動</span>
+                <a href="faq.html">
+                    <span class="bottom-nav-icon">❓</span>
+                    <span>FAQ</span>
                 </a>
             </li>
         </ul>
@@ -244,21 +243,21 @@ def get_landing_page_template():
                 </a>
             </li>
             <li>
-                <a href="current_status_facts.html">
+                <a href="report.html">
                     <span class="bottom-nav-icon">📊</span>
-                    <span>現状</span>
+                    <span>レポート</span>
                 </a>
             </li>
             <li>
-                <a href="ai_predictions.html">
-                    <span class="bottom-nav-icon">🤖</span>
-                    <span>予測</span>
+                <a href="patient_guide.html">
+                    <span class="bottom-nav-icon">👥</span>
+                    <span>患者向け</span>
                 </a>
             </li>
             <li>
-                <a href="reality_and_actions.html">
-                    <span class="bottom-nav-icon">🎯</span>
-                    <span>行動</span>
+                <a href="faq.html">
+                    <span class="bottom-nav-icon">❓</span>
+                    <span>FAQ</span>
                 </a>
             </li>
         </ul>

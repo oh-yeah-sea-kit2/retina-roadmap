@@ -121,13 +121,13 @@ def convert_with_nav(md_file, title):
         <nav role="navigation" aria-label="サイト内ナビゲーション">
             <h3>関連ページ</h3>
             <ul>
-                <li>📊 <a href="index.html">メインレポート</a> - 詳細な予測データ</li>
+                <li>🏠 <a href="index.html">トップページ</a></li>
+                <li>📊 <a href="report.html">詳細レポート</a> - シミュレーション結果</li>
                 <li>🎯 <a href="reality_and_actions.html">現実的なアクションガイド</a> - 今すぐできる5つの行動</li>
                 <li>🔊 <a href="accessible_summary.html">音声読み上げ対応版</a> - スクリーンリーダー最適化</li>
-                <li>🤖 <a href="ai_acceleration_impact.html">AI活用による開発加速予測</a> - 最大45%短縮の可能性</li>
                 <li>📈 <a href="simulation_methodology.html">シミュレーション方法論</a> - 計算の詳細</li>
-                <li>🏥 <a href="for_doctor_checklist.html">医師向けチェックリスト</a> - 信憑性確認用</li>
-                <li>📄 <a href="executive_summary_for_doctor.html">医師向け要約</a> - 研究概要と根拠</li>
+                <li>👨‍⚕️ <a href="medical_info.html">医療従事者向け情報</a></li>
+                <li>👥 <a href="patient_guide.html">患者・家族向けガイド</a></li>
             </ul>
         </nav>
         
@@ -167,17 +167,9 @@ def main():
     """メイン処理"""
     docs_dir = Path("docs")
     
-    # 変換するファイルのリスト
+    # 変換するファイルのリスト（削除されたファイルは除外）
     files_to_convert = [
-        ("ai_acceleration_impact.md", "AI活用による開発加速予測"),
-        ("for_doctor_checklist.md", "医師向けチェックリスト"),
-        ("executive_summary_for_doctor.md", "医師向け要約"),
         ("simulation_methodology.md", "シミュレーション方法論"),
-        ("bottlenecks.md", "開発ボトルネック分析"),
-        ("publication_disclaimer.md", "免責事項"),
-        ("publication_checklist.md", "公開前チェックリスト"),
-        ("current_status_facts.md", "網膜色素変性症治療開発の現状"),
-        ("ai_predictions.md", "AI予測による治療承認時期の分析"),
         ("regional_approval_timeline.md", "地域別承認予測タイムライン")
     ]
     
