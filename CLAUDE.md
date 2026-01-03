@@ -45,7 +45,8 @@ python src/reporting/build_report.py # レポート生成
 python src/reporting/build_report.py
 
 # ローカルでHTMLレポートを確認
-open docs/public/index.html
+open docs/public/index.html         # ランディングページ
+open docs/public/report.html        # シミュレーションレポート
 
 # 最新情報で全体を更新（カスタムコマンド）
 # Claude Codeで /update_rp_info と入力して実行
@@ -152,7 +153,8 @@ python scripts/update_latest_info.py
 - `TASK_LIST.json`: 詳細な実装ロードマップ（完了済み）
 - `README.md`: 包括的なプロジェクト仕様と方法論
 - `SYSTEM.md`: Claude Code操作手順
-- `docs/public/index.html`: 自動生成されるメインレポート（ブラウザで閲覧）
+- `docs/public/index.html`: ランディングページ（手動編集）
+- `docs/public/report.html`: 自動生成されるシミュレーションレポート（build_report.pyで生成）
 - `docs/content/`: Markdownソースファイル
 - `docs/development/`: 開発ドキュメント
 - `.github/workflows/ci.yml`: GitHub Actions CI/CD設定
@@ -205,6 +207,79 @@ docs/
 - **アクティブな試験数**: 55件（2025年6月時点、重要な完了試験含む）
 
 ## 最近の更新履歴
+
+### 2026年1月3日（自動更新）
+- **Gemini検索による最新情報更新（/update_rp_info full実行）**
+- **build_report.pyの出力先をreport.htmlに変更**（ランディングページindex.htmlとの分離）
+- **CSSテンプレート展開バグを修正**
+
+## 網膜色素変性症治療法 最新情報更新サマリー
+更新日時: 2026年1月3日
+
+## 📊 更新チェック結果サマリー
+
+- 新規プログラム: 2件（ZM-02、jCells）
+- 更新されたプログラム: 7件
+- 変更なし: 8件
+- 重要な更新: 4件
+
+### 🆕 新規プログラム
+- **ZM-02（Zhongmou Therapeutics）**: 遺伝子非特異的光遺伝学療法
+  * 2024年10月: FDA Orphan Drug Designation取得
+  * 2025年11月: FDA IND承認、米国・中国での多国籍Phase 1/2 PRISM試験開始
+  * 中国MOON試験で視覚、移動能力、色覚に改善を確認
+- **jCells（jCyte）**: 細胞治療（ファムゼレトセル）
+  * 2025年8月: 新Phase 2試験（JC2-088）開始
+  * より高用量（880万細胞）を評価
+  * FDA RMAT指定取得済み
+
+### 🚨 重要な更新（重要度70以上）
+- **AGTC-501（Beacon）**: VISTA試験登録完了、LANDSCAPE試験開始 - 重要度: 90
+  * 2025年7月: Phase 2/3 VISTA試験登録完了
+  * 2025年12月: Phase 2 LANDSCAPE試験開始（両眼投与安全性評価）
+  * EURETINA 2025: DAWN 9+ヶ月、SKYLINE 36ヶ月データで持続的改善確認
+  * 12ヶ月トップラインデータ: 2026年下半期予定
+
+- **OCU400（Ocugen）**: Phase 3 liMeliGhT試験登録完了間近 - 重要度: 85
+  * 米国約150名、カナダ最大50名登録
+  * 2026年上半期: Rolling BLA申請開始予定
+  * 2026年Q4: トップラインデータ予定
+  * 2027年: 商用化予定
+
+- **VG901（ViGeneron）**: RPDD指定・用量漸増承認 - 重要度: 75
+  * 2025年1月: FDA RPDD指定取得、DSMB用量漸増承認
+  * Phase 1b試験進行中（ドイツ・テュービンゲン大学、6名登録）
+  * NCT06291935として登録
+
+- **Ultevursen（Sepul Bio）**: LUNA試験進行中 - 重要度: 70
+  * NCT06627179として登録
+  * 2025年11月26日: ClinicalTrials.gov更新
+  * 2年間試験、81名登録予定（8歳以上）
+  * 米国、英国、オランダで実施
+
+### 🔄 更新されたプログラム詳細
+1. **MCO-010（Nanoscope）**: BLA申請進行中、2026年初頭完了予定
+2. **OCU400（Ocugen）**: ステータス更新「登録完了間近」、BLA申請タイムライン明確化
+3. **VP-001（PYC）**: DINGO延長研究進行中、自然史研究2026年2月完了予定
+4. **AGTC-501（Beacon）**: LANDSCAPE試験追加、ステータス「登録完了」に更新
+5. **OpCT-001（BlueRock）**: 試験デザイン詳細追加（Phase 1: 12-24名、Phase 2: 最大15名）
+6. **VG901（ViGeneron）**: Trial ID追加、RPDD指定・用量漸増情報追加
+7. **Ultevursen（Sepul Bio）**: Trial ID追加（NCT06627179）
+
+### ✅ 変更なし（既知の情報）
+- MCO-010（BLA進行中）, Keio_Optogenetics, GS030, 4D-125, CTx-PDE6b, AAV-mVChR1, SPVN06, NPI-001, Botaretigene sparoparvovec
+
+### 📈 シミュレーション結果
+- アクティブ試験数: 55件
+- **最速承認予測（FDA）**: OCU400 2027年（2試験進行中）
+- **全体中央値**: 2035年（FDA承認）
+- **Phase別成功率**: Phase 1: 86.7%, Phase 2: 78.4%, Phase 3: 71.4%
+
+### 2025年11月17日
+- **古いHTML/Markdownファイルの整理（Issue #41対応）**
+  - 陳腐なHTMLファイル9個を削除
+  - build_report.pyの出力ファイル名をindex_old.htmlからindex.htmlに変更（後にreport.htmlに再変更）
+  - プロジェクトの保守性向上とファイル構造の明確化
 
 ### 2025年11月7日（自動更新）
 - **Web検索による最新情報更新（/update_rp_info full実行）**

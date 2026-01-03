@@ -398,9 +398,10 @@ def convert_to_html(markdown_content, output_file):
     # Markdownを変換（URLリンク化とレスポンシブテーブル対応を含む）
     html_content = convert_markdown_to_html(markdown_content)
     
-    # HTMLテンプレートに挿入（{{と}}をエスケープ）
+    # HTMLテンプレートに挿入
     final_html = html_template.replace("{content}", html_content)
-    
+    final_html = final_html.replace("{get_responsive_table_css()}", get_responsive_table_css())
+
     # ファイルに保存
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(final_html)
@@ -430,7 +431,7 @@ def main():
     
     # HTMLに変換
     print("Converting to HTML...")
-    html_file = public_dir / "index_old.html"
+    html_file = public_dir / "report.html"
     convert_to_html(markdown_content, html_file)
     print(f"HTML report saved to: {html_file}")
     
@@ -447,8 +448,35 @@ def main():
     for img_file in figs_src.glob("*.png"):
         shutil.copy2(img_file, images_dst / img_file.name)
     print(f"Figures copied to: {images_dst}")
-    
+
+    # ランディングページの最終更新日を更新
+    update_landing_page_date(public_dir)
+
     print("\nReport generation complete!")
+
+
+def update_landing_page_date(public_dir: Path):
+    """ランディングページ（index.html）の最終更新日を今日の日付に更新"""
+    import re
+
+    index_file = public_dir / "index.html"
+    if not index_file.exists():
+        print(f"Warning: Landing page not found at {index_file}")
+        return
+
+    today = datetime.now().strftime("%Y年%-m月%-d日")
+
+    content = index_file.read_text(encoding='utf-8')
+
+    # 最終更新日のパターンを探して置換
+    pattern = r'最終更新: \d{4}年\d{1,2}月\d{1,2}日'
+    replacement = f'最終更新: {today}'
+
+    new_content = re.sub(pattern, replacement, content)
+
+    if new_content != content:
+        index_file.write_text(new_content, encoding='utf-8')
+        print(f"Landing page date updated to: {today}")
 
 
 if __name__ == "__main__":
