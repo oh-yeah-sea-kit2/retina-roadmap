@@ -1,0 +1,110 @@
+# シミュレーション設定ファイル
+# ハードコードされていた日付・パラメータを集約
+
+# 日本承認遅延パラメータ（Luxturna実績: 5.5年に基づく）
+japan_delay_years:
+  min: 3.0       # 楽観的シナリオ
+  median: 5.0    # 標準シナリオ
+  max: 7.0       # 保守的シナリオ
+
+# プログラム固有の設定
+programs:
+  MCO-010:
+    match_fields:
+      brief_title_keywords: ["MCO-010", "MCO010"]
+      nct_ids: ["NCT04945772"]
+      sponsor_keywords: ["Nanoscope"]
+    submission_date: "2025-06-30"
+    review_time:
+      min: 0.5
+      median: 0.67
+      max: 0.83
+    confidence: "very_high"
+    fast_track: true
+    gene_agnostic: true
+    program_name: "MCO-010"
+
+  OCU400:
+    match_fields:
+      brief_title_keywords: ["OCU400", "OCU-400"]
+      nct_ids: ["NCT05203939"]
+      sponsor_keywords: ["Ocugen"]
+    submission_date: "2026-09-30"
+    review_time:
+      min: 0.83
+      median: 1.0
+      max: 1.17
+    confidence: "very_high"
+    gene_agnostic: true
+    rmat_designated: true
+    program_name: "OCU400"
+
+  Botaretigene:
+    match_fields:
+      nct_ids: ["NCT04794101"]
+      sponsor_keywords: ["Janssen"]
+      brief_title_keywords: ["RPGR"]
+    success_rate: 0.2
+    additional_time:
+      min: 2.0
+      median: 3.0
+      max: 4.0
+    submission_time:
+      min: 1.0
+      median: 1.5
+      max: 2.0
+    review_time:
+      min: 1.5
+      median: 2.0
+      max: 2.5
+    confidence: "low"
+    program_name: "Botaretigene sparoparvovec"
+
+  VP-001:
+    match_fields:
+      brief_title_keywords: ["VP-001", "VP001"]
+      sponsor_keywords: ["PYC"]
+    phase23_start_date: "2025-10-01"
+    phase23_duration:
+      min: 2.0
+      median: 2.5
+      max: 3.0
+    analysis_time:
+      min: 0.5
+      median: 0.75
+      max: 1.0
+    review_time:
+      min: 1.0
+      median: 1.25
+      max: 1.5
+    confidence: "medium"
+    rna_therapy: true
+    program_name: "VP-001"
+
+  AGTC-501:
+    match_fields:
+      brief_title_keywords: ["AGTC-501", "AGTC501"]
+      sponsor_keywords: ["Beacon"]
+    phase23_duration:
+      min: 1.5
+      median: 2.0
+      max: 2.5
+    analysis_time:
+      min: 0.5
+      median: 0.75
+      max: 1.0
+    review_time:
+      min: 1.0
+      median: 1.25
+      max: 1.5
+    confidence: "medium"
+    xlrp_specific: true
+    program_name: "AGTC-501"
+
+# CDF プロット年範囲
+cdf_year_range:
+  start: 2025
+  end: 2041
+
+# ウォーターフォールチャート基準年
+waterfall_base_year: 2025

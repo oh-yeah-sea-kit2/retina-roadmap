@@ -9,8 +9,11 @@ import numpy as np
 from pathlib import Path
 import yaml
 from datetime import datetime
+import logging
 import warnings
 warnings.filterwarnings('ignore')
+
+logger = logging.getLogger(__name__)
 
 
 def load_clinical_trials():
@@ -20,7 +23,7 @@ def load_clinical_trials():
         raise FileNotFoundError(f"Data file not found: {data_file}")
     
     df = pd.read_parquet(data_file)
-    print(f"Loaded {len(df)} clinical trials")
+    logger.info("Loaded %d clinical trials", len(df))
     return df
 
 
@@ -69,7 +72,7 @@ def calculate_phase_durations(df):
     for phase, defaults in default_durations.items():
         if phase not in phase_durations:
             phase_durations[phase] = defaults
-            print(f"Using default values for {phase} (insufficient data)")
+            logger.info("Using default values for %s (insufficient data)", phase)
     
     return phase_durations
 
@@ -147,13 +150,13 @@ def estimate_parameters():
     
     # データ読み込み
     df = load_clinical_trials()
-    
+
     # フェーズ期間を計算
-    print("\nCalculating phase durations...")
+    logger.info("Calculating phase durations...")
     phase_durations = calculate_phase_durations(df)
-    
+
     # 成功率を計算
-    print("\nCalculating success rates...")
+    logger.info("Calculating success rates...")
     success_rates = calculate_success_rates(df)
     
     # 規制当局関連の期間
@@ -186,20 +189,21 @@ def estimate_parameters():
     with open(output_file, "w", encoding="utf-8") as f:
         yaml.dump(parameters, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
     
-    print(f"\nParameters saved to: {output_file}")
-    
+    logger.info("Parameters saved to: %s", output_file)
+
     # サマリー表示
-    print("\n=== PARAMETER SUMMARY ===")
-    print("\nPhase Durations (years):")
+    logger.info("=== PARAMETER SUMMARY ===")
+    logger.info("Phase Durations (years):")
     for phase, stats in phase_durations.items():
-        print(f"  {phase}: {stats['min']:.1f} - {stats['median']:.1f} - {stats['max']:.1f} (n={stats['count']})")
-    
-    print("\nPhase Success Rates:")
+        logger.info("  %s: %.1f - %.1f - %.1f (n=%d)", phase, stats['min'], stats['median'], stats['max'], stats['count'])
+
+    logger.info("Phase Success Rates:")
     for phase, stats in success_rates.items():
-        print(f"  {phase}: {stats['success_rate']:.1%} ({stats['confidence']}, n={stats['total_count']})")
+        logger.info("  %s: %.1f%% (%s, n=%d)", phase, stats['success_rate'] * 100, stats['confidence'], stats['total_count'])
     
     return parameters
 
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
     parameters = estimate_parameters()
