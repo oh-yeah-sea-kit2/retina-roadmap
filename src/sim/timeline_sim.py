@@ -758,72 +758,75 @@ def main():
     active_trials = get_active_programs(trials_df)
     
     # シミュレーション実行
-    print(f"\nRunning Monte Carlo simulation ({parameters['simulation_parameters']['n_simulations']} iterations per program)...")
+    logger.info("Running Monte Carlo simulation (%d iterations per program)...",
+                parameters['simulation_parameters']['n_simulations'])
     results_df = run_monte_carlo_simulation(
-        active_trials, 
+        active_trials,
         parameters,
         n_simulations=parameters["simulation_parameters"]["n_simulations"]
     )
-    
+
     # 結果を保存
     output_dir = Path("results")
     output_dir.mkdir(parents=True, exist_ok=True)
-    
+
     output_file = output_dir / "forecasts.csv"
     results_df.to_csv(output_file, index=False)
-    print(f"\nResults saved to: {output_file}")
-    
+    logger.info("Results saved to: %s", output_file)
+
     # 可視化
     fig_dir = output_dir / "figs"
     fig_dir.mkdir(parents=True, exist_ok=True)
-    
-    print("\nCreating visualizations...")
+
+    logger.info("Creating visualizations...")
     create_cdf_plot(results_df, fig_dir)
     sim_config = load_simulation_config()
     base_year = sim_config.get("waterfall_base_year", 2025)
     create_waterfall_chart(results_df, fig_dir, base_year=base_year)
-    
+
     # 感度分析
     sensitivity_df = run_sensitivity_analysis(
         active_trials,
         parameters,
         n_simulations=1000  # 感度分析は計算時間短縮のため少なめ
     )
-    
+
     # 感度分析結果を保存
     sensitivity_file = output_dir / "sensitivity_analysis.csv"
     sensitivity_df.to_csv(sensitivity_file, index=False)
-    print(f"\nSensitivity analysis saved to: {sensitivity_file}")
-    
+    logger.info("Sensitivity analysis saved to: %s", sensitivity_file)
+
     # トルネード図を作成
     create_tornado_chart(sensitivity_df, fig_dir)
-    
+
     # サマリー統計
-    print("\n=== SIMULATION SUMMARY ===")
-    print(f"Total programs simulated: {len(results_df)}")
-    print(f"Average success rate: {results_df['success_rate'].mean():.1%}")
-    print(f"\nTop 5 programs by median approval year:")
-    
+    logger.info("=== SIMULATION SUMMARY ===")
+    logger.info("Total programs simulated: %d", len(results_df))
+    logger.info("Average success rate: %.1f%%", results_df['success_rate'].mean() * 100)
+    logger.info("Top 5 programs by median approval year:")
+
     for idx, row in results_df.head(5).iterrows():
-        print(f"\n{row['NCTId']}: {row['BriefTitle'][:50]}...")
-        print(f"  Phase: {row['Phase']}")
-        print(f"  Sponsor: {row['SponsorName']}")
-        print(f"  Success rate: {row['success_rate']:.1%}")
-        print(f"  FDA Median approval: {row['median_approval_year']:.0f}")
-        print(f"  FDA 90% CI: [{row['pct10_approval_year']:.0f}, {row['pct90_approval_year']:.0f}]")
-        print(f"  Japan Median approval: {row['japan_median_approval_year']:.0f} (+{row['japan_median_delay_years']:.1f} years)")
-        print(f"  Japan 90% CI: [{row['japan_pct10_approval_year']:.0f}, {row['japan_pct90_approval_year']:.0f}]")
-    
+        logger.info("%s: %s...", row['NCTId'], row['BriefTitle'][:50])
+        logger.info("  Phase: %s", row['Phase'])
+        logger.info("  Sponsor: %s", row['SponsorName'])
+        logger.info("  Success rate: %.1f%%", row['success_rate'] * 100)
+        logger.info("  FDA Median approval: %.0f", row['median_approval_year'])
+        logger.info("  FDA 90%% CI: [%.0f, %.0f]", row['pct10_approval_year'], row['pct90_approval_year'])
+        logger.info("  Japan Median approval: %.0f (+%.1f years)",
+                     row['japan_median_approval_year'], row['japan_median_delay_years'])
+        logger.info("  Japan 90%% CI: [%.0f, %.0f]",
+                     row['japan_pct10_approval_year'], row['japan_pct90_approval_year'])
+
     # 全体的な予測
     all_approval_years = []
     for _, row in results_df.iterrows():
         # 各プログラムの中央値を重み付き（成功率）で集計
         weight = row['success_rate']
         all_approval_years.extend([row['median_approval_year']] * int(weight * 100))
-    
+
     if all_approval_years:
         overall_median = np.median(all_approval_years)
-        print(f"\n\nOverall median year for first approval: {overall_median:.0f}")
+        logger.info("Overall median year for first approval: %.0f", overall_median)
 
 
 if __name__ == "__main__":

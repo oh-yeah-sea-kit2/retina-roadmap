@@ -13,7 +13,9 @@ on:
 jobs:
   test-and-build:
     runs-on: ubuntu-latest
-    
+    env:
+      PYTHONPATH: .
+
     steps:
     - uses: actions/checkout@v4
     
@@ -61,8 +63,6 @@ jobs:
     - name: Generate report
       run: |
         python src/reporting/build_report.py
-      env:
-        PYTHONPATH: .
     
     - name: Upload artifacts
       uses: actions/upload-artifact@v4

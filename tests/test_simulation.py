@@ -165,13 +165,16 @@ class TestSimulateSingleProgram:
     def test_japan_approval_after_fda(self, sample_trial, sample_parameters):
         np.random.seed(42)
         sim_config = load_simulation_config()
+        found_success = False
         for _ in range(50):
             result = simulate_single_program(
                 sample_trial, sample_parameters, datetime(2025, 1, 1), sim_config
             )
             if result["success"]:
                 assert result["japan_approval_year"] >= result["approval_year"]
+                found_success = True
                 break
+        assert found_success, "50回のシミュレーションで成功ケースが1件もなかった"
 
 
 class TestLoadSimulationConfig:
