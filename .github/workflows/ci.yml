@@ -61,6 +61,8 @@ jobs:
     - name: Generate report
       run: |
         python src/reporting/build_report.py
+      env:
+        PYTHONPATH: .
     
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
