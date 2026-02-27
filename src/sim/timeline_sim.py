@@ -150,30 +150,34 @@ def simulate_single_program(trial: pd.Series, parameters: dict,
     mco_match = mco_cfg.get("match_fields", {})
     if _match_program(trial, mco_match) or \
        ("Nanoscope" in trial.get("SponsorName", "") and phase in ["PHASE2", "PHASE3"]):
-        submission_date = datetime.fromisoformat(mco_cfg.get("submission_date", "2025-06-30"))
-        time_to_submission = (submission_date - current_date).days / 365.25
+        # BLA完全提出予定日（rolling submissionの完了）
+        bla_complete_date = datetime.fromisoformat(mco_cfg.get("bla_complete_date", "2026-03-31"))
+        time_to_bla_complete = max(0, (bla_complete_date - current_date).days / 365.25)
 
-        if time_to_submission > 0:
-            review_time = _sample_triangular(mco_cfg.get("review_time", {"min": 0.5, "median": 0.67, "max": 0.83}))
-            total_time = time_to_submission + review_time
+        review_time = _sample_triangular(mco_cfg.get("review_time", {"min": 0.5, "median": 0.67, "max": 0.83}))
+        total_time = time_to_bla_complete + review_time
 
-            approval_date = current_date + timedelta(days=total_time * 365.25)
-            japan_delay = _simulate_japan_delay(japan_delay_years)
-            japan_approval_date = approval_date + timedelta(days=japan_delay * 365.25)
+        approval_date = current_date + timedelta(days=total_time * 365.25)
 
-            return {
-                "success": True,
-                "approval_date": approval_date,
-                "approval_year": approval_date.year,
-                "time_to_approval": total_time,
-                "fast_track": mco_cfg.get("fast_track", True),
-                "program_name": mco_cfg.get("program_name", "MCO-010"),
-                "confidence": mco_cfg.get("confidence", "very_high"),
-                "gene_agnostic": mco_cfg.get("gene_agnostic", True),
-                "japan_approval_date": japan_approval_date,
-                "japan_approval_year": japan_approval_date.year,
-                "japan_delay_years": japan_delay
-            }
+        # MCO-010は日本MHLW先駆け指定を取得 - 短縮された遅延を使用
+        japan_sakigake_delay = sim_config.get("japan_delay_years_sakigake", japan_delay_years)
+        japan_delay = _simulate_japan_delay(japan_sakigake_delay)
+        japan_approval_date = approval_date + timedelta(days=japan_delay * 365.25)
+
+        return {
+            "success": True,
+            "approval_date": approval_date,
+            "approval_year": approval_date.year,
+            "time_to_approval": total_time,
+            "fast_track": mco_cfg.get("fast_track", True),
+            "program_name": mco_cfg.get("program_name", "MCO-010"),
+            "confidence": mco_cfg.get("confidence", "very_high"),
+            "gene_agnostic": mco_cfg.get("gene_agnostic", True),
+            "japan_sakigake": True,
+            "japan_approval_date": japan_approval_date,
+            "japan_approval_year": japan_approval_date.year,
+            "japan_delay_years": japan_delay
+        }
     
     # OCU400の特別処理
     ocu_cfg = programs_cfg.get("OCU400", {})
@@ -693,26 +697,27 @@ def create_tornado_chart(sensitivity_df: pd.DataFrame, output_dir: Path):
     logger.info("Tornado chart saved to: %s", output_file)
 
 
-def create_waterfall_chart(results_df: pd.DataFrame, output_dir: Path):
+def create_waterfall_chart(results_df: pd.DataFrame, output_dir: Path,
+                           base_year: int = 2025):
     """ウォーターフォールチャートを作成"""
-    
+
     plt.figure(figsize=(14, 10))
-    
+
     # 上位20プログラムまたは全プログラム
     n_programs = min(20, len(results_df))
     top_df = results_df.head(n_programs)
-    
+
     # Y軸の位置
     y_positions = range(n_programs)
-    
+
     # エラーバーの計算
     lower_errors = top_df["median_approval_year"] - top_df["pct10_approval_year"]
     upper_errors = top_df["pct90_approval_year"] - top_df["median_approval_year"]
-    
+
     # バーチャート
-    bars = plt.barh(y_positions, 
-                     top_df["median_approval_year"] - 2025,  # 2025年からの年数
-                     left=2025,  # 開始位置
+    bars = plt.barh(y_positions,
+                     top_df["median_approval_year"] - base_year,  # base_yearからの年数
+                     left=base_year,  # 開始位置
                      xerr=[lower_errors, upper_errors],
                      capsize=5,
                      color='skyblue',
@@ -731,7 +736,7 @@ def create_waterfall_chart(results_df: pd.DataFrame, output_dir: Path):
               fontsize=14, pad=20)
     
     # 現在年を示す縦線
-    plt.axvline(x=2025, color='red', linestyle='--', alpha=0.5, label='Current Year')
+    plt.axvline(x=base_year, color='red', linestyle='--', alpha=0.5, label='Current Year')
     
     plt.grid(True, axis='x', alpha=0.3)
     plt.tight_layout()
@@ -774,7 +779,9 @@ def main():
     
     print("\nCreating visualizations...")
     create_cdf_plot(results_df, fig_dir)
-    create_waterfall_chart(results_df, fig_dir)
+    sim_config = load_simulation_config()
+    base_year = sim_config.get("waterfall_base_year", 2025)
+    create_waterfall_chart(results_df, fig_dir, base_year=base_year)
     
     # 感度分析
     sensitivity_df = run_sensitivity_analysis(
