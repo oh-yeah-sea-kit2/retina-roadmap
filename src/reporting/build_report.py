@@ -9,7 +9,10 @@ from pathlib import Path
 from datetime import datetime
 import json
 import yaml
-from html_utils import convert_markdown_to_html, get_responsive_table_css
+import logging
+from src.reporting.html_utils import convert_markdown_to_html, get_responsive_table_css
+
+logger = logging.getLogger(__name__)
 
 
 def load_all_data():
@@ -408,10 +411,10 @@ def convert_to_html(markdown_content, output_file):
 def main():
     """メイン実行関数"""
     
-    print("Loading data...")
+    logger.info("Loading data...")
     data = load_all_data()
     
-    print("Generating Markdown report...")
+    logger.info("Generating Markdown report...")
     markdown_content = generate_markdown_report(data)
     
     # Markdownファイルを保存
@@ -425,13 +428,13 @@ def main():
     md_file = content_dir / "index.md"
     with open(md_file, 'w', encoding='utf-8') as f:
         f.write(markdown_content)
-    print(f"Markdown report saved to: {md_file}")
+    logger.info("Markdown report saved to: %s", md_file)
     
     # HTMLに変換
-    print("Converting to HTML...")
+    logger.info("Converting to HTML...")
     html_file = public_dir / "report.html"
     convert_to_html(markdown_content, html_file)
-    print(f"HTML report saved to: {html_file}")
+    logger.info("HTML report saved to: %s", html_file)
     
     # 画像ファイルをコピー
     import shutil
@@ -445,12 +448,12 @@ def main():
     
     for img_file in figs_src.glob("*.png"):
         shutil.copy2(img_file, images_dst / img_file.name)
-    print(f"Figures copied to: {images_dst}")
+    logger.info("Figures copied to: %s", images_dst)
 
     # ランディングページの最終更新日を更新
     update_landing_page_date(public_dir)
 
-    print("\nReport generation complete!")
+    logger.info("Report generation complete!")
 
 
 def update_landing_page_date(public_dir: Path):
@@ -459,7 +462,7 @@ def update_landing_page_date(public_dir: Path):
 
     index_file = public_dir / "index.html"
     if not index_file.exists():
-        print(f"Warning: Landing page not found at {index_file}")
+        logger.warning("Landing page not found at %s", index_file)
         return
 
     today = datetime.now().strftime("%Y年%-m月%-d日")
@@ -474,8 +477,9 @@ def update_landing_page_date(public_dir: Path):
 
     if new_content != content:
         index_file.write_text(new_content, encoding='utf-8')
-        print(f"Landing page date updated to: {today}")
+        logger.info("Landing page date updated to: %s", today)
 
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
     main()
