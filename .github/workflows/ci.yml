@@ -60,7 +60,7 @@ jobs:
     
     - name: Generate report
       run: |
-        python src/reporting/build_report.py
+        PYTHONPATH=. python src/reporting/build_report.py
     
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
