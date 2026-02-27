@@ -3,7 +3,7 @@
 共通HTMLテンプレート
 """
 
-from src.reporting.html_utils import get_responsive_table_css
+from html_utils import get_responsive_table_css
 
 
 def get_html_template(title, description=""):

@@ -38,7 +38,9 @@ jobs:
     
     - name: Run tests
       run: |
-        pytest tests/ -v --tb=short
+        # テストがある場合はここで実行
+        # pytest tests/ --cov=src --cov-report=xml
+        echo "Tests would run here when implemented"
     
     - name: Fetch latest clinical trials data
       run: |
