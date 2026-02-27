@@ -193,20 +193,98 @@ docs/
 
 ## 主な分析結果
 
-- **最速承認予測（米国FDA）**: 
-  - **MCO-010（Nanoscope社）**: 2026年（2025年6月BLA申請開始、Fast Track指定）
-  - **OCU400（Ocugen社）**: 2027年（Phase 3進行中、2026年中頃BLA/MAA申請予定）
-  - PYC VP-001: 2030年（2025年後半Phase 2/3開始予定）
-  - Beacon AGTC-501: 2029年（Phase 2/3実施中）
+- **最速承認予測（米国FDA）**:
+  - **MCO-010（Nanoscope社）**: 2026年（BLA rolling submission進行中、Priority Review対象）
+  - **OCU400（Ocugen社）**: 2027年（Phase 3 liMeliGhT、2026年H1 BLA開始予定）
+  - Beacon AGTC-501: 2029年（VISTA試験登録完了、2026年H2トップラインデータ）
+  - PYC VP-001: 2030年（Phase 2/3 registrational study FDA alignment完了）
 - **日本承認予測**:
-  - MCO-010: 2031年（FDA承認の5年後）[90%信頼区間: 2030-2032年]
+  - MCO-010: 2029年（先駆け指定により遅延約2年に短縮）[90%信頼区間: 2028-2029年]
   - OCU400: 2032年（FDA承認の5年後）[90%信頼区間: 2031-2033年]
   - VP-001: 2035年（FDA承認の5年後）[90%信頼区間: 2034-2036年]
-- **全体中央値**: 2037年（FDA承認）
-- **Phase別成功率**: Phase 1: 86.2%, Phase 2: 78.4%, Phase 3: 71.4%（※限定的データに基づく）
-- **アクティブな試験数**: 55件（2025年6月時点、重要な完了試験含む）
+- **全体中央値**: 2035年（FDA承認）
+- **Phase別成功率**: Phase 1: 86.7%, Phase 2: 78.4%, Phase 3: 71.4%（※限定的データに基づく）
+- **アクティブな試験数**: 55件（重要な完了試験含む）
 
 ## 最近の更新履歴
+
+### 2026年2月27日（自動更新）
+- **Web検索による最新情報更新（/update_rp_info full実行）**
+
+## 網膜色素変性症治療法 最新情報更新サマリー
+更新日時: 2026年2月27日
+
+## 📊 更新チェック結果サマリー
+
+- 新規プログラム: 1件（DSP-3077）
+- 更新されたプログラム: 10件
+- 変更なし: 4件
+- 重要な更新: 6件
+- 削除: 1件（重複Botaretigeneエントリ）
+
+### 🚨 重要な更新（重要度70以上）
+- **MCO-010（Nanoscope）**: 日本MHLW先駆け指定＋オーファン指定取得（2026年1月） - 重要度: 95
+  * 網膜遺伝子治療として世界初の先駆け＋オーファン同時指定
+  * 先駆け指定により日本での審査期間が6ヶ月目標に短縮
+  * 日本承認予測: 2029年（従来2031年から大幅前倒し）
+  * 2026 Macula Society Annual Meeting（2月25-28日）でpost-hoc分析発表
+
+- **SPVN06（SparingVision）**: PRODYGY試験投与完了 - 重要度: 90
+  * 2026年2月9日: Phase 1/2 PRODYGY試験の全患者投与完了
+  * 33名登録（SPVN06投与27名 + 対照群6名）
+  * 初回データ読出し: 2027年予定
+  * 2026年中に規制当局とデータ共有開始、2027年ピボタル試験開始目標
+
+- **NPI-001（Nacuity）**: FDA Breakthrough Therapy指定・Phase 1/2陽性データ - 重要度: 85
+  * FDA Breakthrough Therapy指定取得（Fast Track + Orphanに加え3つ目の指定）
+  * Phase 1/2試験（49名、2年間）: 視覚機能喪失を約30%遅延
+  * Usher症候群関連RPで光受容体喪失を50%以上抑制
+  * 2026年に確認的試験開始予定
+  * Phase更新: Pre-clinical → Phase 1/2
+
+- **OpCT-001（BlueRock/Bayer）**: FDA Orphan Drug指定取得 - 重要度: 80
+  * 2026年1月22日: FDA Orphan Drug Designation取得
+  * Fast Track + Orphan Drugの二重指定に
+  * CLARICO Phase 1/2a試験進行中（54名登録予定）
+
+- **ZM-02（Zhongmou）**: MOON試験詳細結果 - 重要度: 75
+  * 36週時点で83%の患者にBCVA ≥0.3 LogMAR改善
+  * 平均0.59 LogMAR改善、52週で持続性確認
+  * 色覚回復、低照度ナビゲーション能力回復も確認
+  * SAE/DLTなし
+
+- **jCells（jCyte）**: 中間結果予定 - 重要度: 70
+  * JC02-88 Phase 2試験: 2026年Q1に中間結果予定
+  * 主要評価項目: ETDRS 15文字以上の視力改善
+
+### 🆕 新規プログラム
+- **DSP-3077（住友ファーマ）**: 他家iPS細胞由来網膜シート
+  * 米国Phase 1/2 IND承認（2024年11月）
+  * Massachusetts Eye and Earで実施予定
+  * 神戸アイセンター病院での臨床研究で2年間の生着・安全性確認済み
+  * 新鮮（非凍結）3Dオルガノイド使用
+
+### 🔄 更新されたプログラム詳細
+1. **MCO-010（Nanoscope）**: 日本先駆け指定追加、BLA状況更新
+2. **OCU400（Ocugen）**: BLA submission H1 2026予定確認
+3. **VP-001（PYC）**: FDA alignment meeting（2025年12月）追加
+4. **AGTC-501（Beacon）**: LANDSCAPE試験開始、SKYLINE 36ヶ月データ追加、laru-zova正式名称化
+5. **OpCT-001（BlueRock）**: Orphan Drug指定追加
+6. **NPI-001（Nacuity）**: Breakthrough Therapy指定、Phase 1/2データ追加
+7. **SPVN06（SparingVision）**: PRODYGY試験投与完了、RdCVF/RdCVFL詳細追加
+8. **ZM-02（Zhongmou）**: MOON試験定量的結果追加
+9. **jCells（jCyte）**: 中間結果時期追加
+10. **VG901（ViGeneron）**: EMA CTA承認追加
+
+### ✅ 変更なし（既知の情報）
+- Keio_Optogenetics, GS030, 4D-125, CTx-PDE6b
+
+### 📈 シミュレーション結果
+- アクティブ試験数: 55件
+- **最速承認予測（FDA）**: MCO-010 2026年（BLA priority review）
+- **日本最速承認予測**: MCO-010 2029年（先駆け指定により大幅短縮）
+- **全体中央値**: 2035年（FDA承認）
+- **Phase別成功率**: Phase 1: 86.7%, Phase 2: 78.4%, Phase 3: 71.4%
 
 ### 2026年1月3日（自動更新）
 - **Gemini検索による最新情報更新（/update_rp_info full実行）**

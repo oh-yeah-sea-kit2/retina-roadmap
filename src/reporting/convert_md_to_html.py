@@ -5,7 +5,7 @@ MarkdownファイルをHTMLに変換（ナビゲーション付き）
 
 import markdown
 from pathlib import Path
-from html_utils import convert_markdown_to_html, get_responsive_table_css
+from src.reporting.html_utils import convert_markdown_to_html, get_responsive_table_css
 
 def convert_with_nav(md_file, title):
     """Markdownファイルをナビゲーション付きHTMLに変換"""
