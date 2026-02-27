@@ -11,17 +11,33 @@ from pathlib import Path
 from datetime import datetime, timedelta
 import matplotlib.pyplot as plt
 from typing import Dict, List, Tuple
+import logging
+
+logger = logging.getLogger(__name__)
+
+# プロジェクトルートディレクトリ
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+
+
+def load_simulation_config():
+    """シミュレーション設定ファイルを読み込む"""
+    config_file = PROJECT_ROOT / "config" / "simulation_params.yaml"
+    if not config_file.exists():
+        logger.warning("設定ファイルが見つかりません: %s（デフォルト値を使用）", config_file)
+        return {}
+    with open(config_file, "r", encoding="utf-8") as f:
+        return yaml.safe_load(f)
 
 
 def load_data():
     """必要なデータを読み込む"""
     # 臨床試験データ
     trials_df = pd.read_parquet("data/processed/clinical_trials.parquet")
-    
+
     # パラメータ
     with open("data/processed/parameters.yaml", "r") as f:
         parameters = yaml.safe_load(f)
-    
+
     return trials_df, parameters
 
 
@@ -47,7 +63,7 @@ def get_active_programs(df):
     # 開始日がない場合は現在日付を仮定
     active_trials["StartDate"] = active_trials["StartDate"].fillna(pd.Timestamp.now())
     
-    print(f"Found {len(active_trials)} active trials")
+    logger.info("Found %d active trials", len(active_trials))
     return active_trials
 
 
@@ -78,132 +94,146 @@ def simulate_phase_success(phase: str, parameters: dict, is_gene_therapy: bool =
     return np.random.random() < success_rate
 
 
-def simulate_single_program(trial: pd.Series, parameters: dict, 
-                          current_date: datetime) -> Dict:
+def _match_program(trial: pd.Series, match_fields: dict) -> bool:
+    """設定ファイルのmatch_fieldsに基づいてプログラムを照合"""
+    title = trial.get("BriefTitle", "")
+    nct_id = trial.get("NCTId", "")
+    sponsor = trial.get("SponsorName", "")
+
+    for keyword in match_fields.get("brief_title_keywords", []):
+        if keyword in title:
+            return True
+    for nid in match_fields.get("nct_ids", []):
+        if nid in nct_id:
+            return True
+    for sk in match_fields.get("sponsor_keywords", []):
+        if sk in sponsor:
+            return True
+    return False
+
+
+def _sample_triangular(params: dict) -> float:
+    """辞書からmin/median/maxを取得して三角分布サンプリング"""
+    return np.random.triangular(params["min"], params["median"], params["max"])
+
+
+def _simulate_japan_delay(japan_cfg: dict) -> float:
+    """日本承認遅延をシミュレート"""
+    return np.random.triangular(japan_cfg["min"], japan_cfg["median"], japan_cfg["max"])
+
+
+def simulate_single_program(trial: pd.Series, parameters: dict,
+                          current_date: datetime,
+                          sim_config: dict = None) -> Dict:
     """単一プログラムの承認までのタイムラインをシミュレート"""
-    
+    if sim_config is None:
+        sim_config = load_simulation_config()
+
     # 現在のフェーズを判定
     phase = trial["Phase"]
     start_date = trial["StartDate"]
-    
+
     # 経過時間を考慮
     time_in_current_phase = (current_date - start_date).days / 365.25
     time_in_current_phase = max(0, time_in_current_phase)
+
+    # 日本承認遅延のパラメータ（設定ファイルから読み込み）
+    japan_delay_years = sim_config.get("japan_delay_years", {
+        "min": 3.0, "median": 5.0, "max": 7.0
+    })
     
-    # 日本承認遅延のパラメータ（Luxturna実績: 5.5年）
-    japan_delay_years = {
-        "min": 3.0,      # 楽観的シナリオ
-        "median": 5.0,   # 標準シナリオ（Luxturna実績に近い）
-        "max": 7.0       # 保守的シナリオ
-    }
-    
-    # MCO-010の特別処理（2025年6月にBLA申請開始）
-    if "MCO-010" in trial.get("BriefTitle", "") or "MCO010" in trial.get("BriefTitle", "") or \
-       "NCT04945772" in trial.get("NCTId", "") or \
+    # 設定ファイルのプログラム定義を参照
+    programs_cfg = sim_config.get("programs", {})
+
+    # MCO-010の特別処理
+    mco_cfg = programs_cfg.get("MCO-010", {})
+    mco_match = mco_cfg.get("match_fields", {})
+    if _match_program(trial, mco_match) or \
        ("Nanoscope" in trial.get("SponsorName", "") and phase in ["PHASE2", "PHASE3"]):
-        # 2025年6月の段階的BLA申請開始を反映
-        submission_date = datetime(2025, 6, 30)
-        time_to_submission = (submission_date - current_date).days / 365.25
-        
-        if time_to_submission > 0:
-            # Fast Track指定により短縮された審査期間（6-10ヶ月）
-            review_time = np.random.triangular(0.5, 0.67, 0.83)
-            total_time = time_to_submission + review_time
-            
-            approval_date = current_date + timedelta(days=total_time * 365.25)
-            
-            # 日本承認の遅延をシミュレート
-            japan_delay = np.random.triangular(
-                japan_delay_years["min"],
-                japan_delay_years["median"],
-                japan_delay_years["max"]
-            )
-            japan_approval_date = approval_date + timedelta(days=japan_delay * 365.25)
-            
-            return {
-                "success": True,
-                "approval_date": approval_date,
-                "approval_year": approval_date.year,
-                "time_to_approval": total_time,
-                "fast_track": True,
-                "program_name": "MCO-010",
-                "confidence": "very_high",  # RESTORE試験で統計的有意性達成、スターガルト病への適応拡大も
-                "gene_agnostic": True,
-                "japan_approval_date": japan_approval_date,
-                "japan_approval_year": japan_approval_date.year,
-                "japan_delay_years": japan_delay
-            }
+        # BLA完全提出予定日（rolling submissionの完了）
+        bla_complete_date = datetime.fromisoformat(mco_cfg.get("bla_complete_date", "2026-03-31"))
+        time_to_bla_complete = max(0, (bla_complete_date - current_date).days / 365.25)
+
+        review_time = _sample_triangular(mco_cfg.get("review_time", {"min": 0.5, "median": 0.67, "max": 0.83}))
+        total_time = time_to_bla_complete + review_time
+
+        approval_date = current_date + timedelta(days=total_time * 365.25)
+
+        # MCO-010は日本MHLW先駆け指定を取得 - 短縮された遅延を使用
+        japan_sakigake_delay = sim_config.get("japan_delay_years_sakigake", japan_delay_years)
+        japan_delay = _simulate_japan_delay(japan_sakigake_delay)
+        japan_approval_date = approval_date + timedelta(days=japan_delay * 365.25)
+
+        return {
+            "success": True,
+            "approval_date": approval_date,
+            "approval_year": approval_date.year,
+            "time_to_approval": total_time,
+            "fast_track": mco_cfg.get("fast_track", True),
+            "program_name": mco_cfg.get("program_name", "MCO-010"),
+            "confidence": mco_cfg.get("confidence", "very_high"),
+            "gene_agnostic": mco_cfg.get("gene_agnostic", True),
+            "japan_sakigake": True,
+            "japan_approval_date": japan_approval_date,
+            "japan_approval_year": japan_approval_date.year,
+            "japan_delay_years": japan_delay
+        }
     
-    # OCU400の特別処理（2026年中頃BLA/MAA申請予定）
-    if "OCU400" in trial.get("BriefTitle", "") or "OCU-400" in trial.get("BriefTitle", "") or \
-       "NCT05203939" in trial.get("NCTId", "") or \
+    # OCU400の特別処理
+    ocu_cfg = programs_cfg.get("OCU400", {})
+    ocu_match = ocu_cfg.get("match_fields", {})
+    if _match_program(trial, ocu_match) or \
        ("Ocugen" in trial.get("SponsorName", "") and phase == "PHASE3"):
-        # liMeliGhT Phase 3試験実施中、2025年前半に患者登録完了予定
-        # 2026年中頃にBLA/MAA申請
-        bla_submission_date = datetime(2026, 9, 30)  # 2026年中頃
+        bla_submission_date = datetime.fromisoformat(ocu_cfg.get("submission_date", "2026-09-30"))
         time_to_submission = (bla_submission_date - current_date).days / 365.25
-        
+
         if time_to_submission > 0:
-            # FDA/EMA審査（10-14ヵ月）- RMAT指定とEMA ATMP分類による迅速審査
-            review_time = np.random.triangular(0.83, 1.0, 1.17)
+            review_time = _sample_triangular(ocu_cfg.get("review_time", {"min": 0.83, "median": 1.0, "max": 1.17}))
             total_time = time_to_submission + review_time
-            
+
             approval_date = current_date + timedelta(days=total_time * 365.25)
-            
-            # 日本承認の遅延をシミュレート
-            japan_delay = np.random.triangular(
-                japan_delay_years["min"],
-                japan_delay_years["median"],
-                japan_delay_years["max"]
-            )
+            japan_delay = _simulate_japan_delay(japan_delay_years)
             japan_approval_date = approval_date + timedelta(days=japan_delay * 365.25)
-            
+
             return {
                 "success": True,
                 "approval_date": approval_date,
                 "approval_year": approval_date.year,
                 "time_to_approval": total_time,
-                "program_name": "OCU400",
-                "confidence": "very_high",  # Phase 1/2の2年データで100%改善/維持
-                "gene_agnostic": True,  # 100以上の遺伝子変異に対応
-                "rmat_designated": True,
+                "program_name": ocu_cfg.get("program_name", "OCU400"),
+                "confidence": ocu_cfg.get("confidence", "very_high"),
+                "gene_agnostic": ocu_cfg.get("gene_agnostic", True),
+                "rmat_designated": ocu_cfg.get("rmat_designated", True),
                 "japan_approval_date": japan_approval_date,
                 "japan_approval_year": japan_approval_date.year,
                 "japan_delay_years": japan_delay
             }
     
-    # Janssen社の遺伝子治療の特別処理（Phase 3で主要評価項目未達成）
-    if "NCT04794101" in trial.get("NCTId", "") or \
-       ("Janssen" in trial.get("SponsorName", "") and "RPGR" in trial.get("BriefTitle", "")):
-        # Phase 3失敗により成功率を大幅に下げる
-        if np.random.random() < 0.2:  # 20%の成功率
-            # 追加試験や規制当局との協議により時間がかかる
-            additional_time = np.random.triangular(2.0, 3.0, 4.0)
+    # Janssen/Botaretigeneの特別処理（Phase 3で主要評価項目未達成）
+    bot_cfg = programs_cfg.get("Botaretigene", {})
+    bot_match = bot_cfg.get("match_fields", {})
+    if _match_program(trial, bot_match):
+        success_rate = bot_cfg.get("success_rate", 0.2)
+        if np.random.random() < success_rate:
+            additional_time = _sample_triangular(bot_cfg.get("additional_time", {"min": 2.0, "median": 3.0, "max": 4.0}))
             phase_duration = simulate_phase_duration("PHASE3", parameters)
             total_time = time_in_current_phase + phase_duration + additional_time
-            
-            # 規制当局承認プロセス
-            submission_time = np.random.triangular(1.0, 1.5, 2.0)
-            review_time = np.random.triangular(1.5, 2.0, 2.5)
+
+            submission_time = _sample_triangular(bot_cfg.get("submission_time", {"min": 1.0, "median": 1.5, "max": 2.0}))
+            review_time = _sample_triangular(bot_cfg.get("review_time", {"min": 1.5, "median": 2.0, "max": 2.5}))
             total_time += submission_time + review_time
-            
+
             approval_date = current_date + timedelta(days=total_time * 365.25)
-            
-            # 日本承認の遅延をシミュレート
-            japan_delay = np.random.triangular(
-                japan_delay_years["min"],
-                japan_delay_years["median"],
-                japan_delay_years["max"]
-            )
+            japan_delay = _simulate_japan_delay(japan_delay_years)
             japan_approval_date = approval_date + timedelta(days=japan_delay * 365.25)
-            
+
             return {
                 "success": True,
                 "approval_date": approval_date,
                 "approval_year": approval_date.year,
                 "time_to_approval": total_time,
-                "program_name": "Botaretigene sparoparvovec",
-                "confidence": "low",  # Phase 3で主要評価項目未達成
+                "program_name": bot_cfg.get("program_name", "Botaretigene sparoparvovec"),
+                "confidence": bot_cfg.get("confidence", "low"),
                 "japan_approval_date": japan_approval_date,
                 "japan_approval_year": japan_approval_date.year,
                 "japan_delay_years": japan_delay
@@ -216,78 +246,63 @@ def simulate_single_program(trial: pd.Series, parameters: dict,
                 "reason": "Phase 3 primary endpoint not met"
             }
     
-    # PYC VP-001の特別処理（2025年後半にPhase 2/3開始予定）
-    if "VP-001" in trial.get("BriefTitle", "") or "VP001" in trial.get("BriefTitle", "") or \
+    # PYC VP-001の特別処理
+    vp_cfg = programs_cfg.get("VP-001", {})
+    vp_match = vp_cfg.get("match_fields", {})
+    if _match_program(trial, vp_match) or \
        ("PYC" in trial.get("SponsorName", "") and "RP11" in trial.get("BriefTitle", "")):
         if phase in ["PHASE1", "PHASE1, PHASE2"]:
-            # 2025年後半のPhase 2/3開始
-            phase23_start = datetime(2025, 10, 1)
+            phase23_start = datetime.fromisoformat(vp_cfg.get("phase23_start_date", "2025-10-01"))
             time_to_phase23 = (phase23_start - current_date).days / 365.25
-            
+
             if time_to_phase23 > 0:
-                # Phase 2/3期間（2-3年）
-                phase23_duration = np.random.triangular(2.0, 2.5, 3.0)
-                # データ解析と申請準備
-                analysis_time = np.random.triangular(0.5, 0.75, 1.0)
-                # FDA審査
-                review_time = np.random.triangular(1.0, 1.25, 1.5)
-                
+                phase23_duration = _sample_triangular(vp_cfg.get("phase23_duration", {"min": 2.0, "median": 2.5, "max": 3.0}))
+                analysis_time = _sample_triangular(vp_cfg.get("analysis_time", {"min": 0.5, "median": 0.75, "max": 1.0}))
+                review_time = _sample_triangular(vp_cfg.get("review_time", {"min": 1.0, "median": 1.25, "max": 1.5}))
+
                 total_time = time_to_phase23 + phase23_duration + analysis_time + review_time
-                
+
                 approval_date = current_date + timedelta(days=total_time * 365.25)
-                
-                # 日本承認の遅延をシミュレート
-                japan_delay = np.random.triangular(
-                    japan_delay_years["min"],
-                    japan_delay_years["median"],
-                    japan_delay_years["max"]
-                )
+                japan_delay = _simulate_japan_delay(japan_delay_years)
                 japan_approval_date = approval_date + timedelta(days=japan_delay * 365.25)
-                
+
                 return {
                     "success": True,
                     "approval_date": approval_date,
                     "approval_year": approval_date.year,
                     "time_to_approval": total_time,
-                    "program_name": "VP-001",
-                    "confidence": "medium",
-                    "rna_therapy": True,
+                    "program_name": vp_cfg.get("program_name", "VP-001"),
+                    "confidence": vp_cfg.get("confidence", "medium"),
+                    "rna_therapy": vp_cfg.get("rna_therapy", True),
                     "japan_approval_date": japan_approval_date,
                     "japan_approval_year": japan_approval_date.year,
                     "japan_delay_years": japan_delay
                 }
     
-    # Beacon AGTC-501の特別処理（Phase 2/3 VISTA試験実施中）
-    if "AGTC-501" in trial.get("BriefTitle", "") or "AGTC501" in trial.get("BriefTitle", "") or \
+    # Beacon AGTC-501の特別処理
+    agtc_cfg = programs_cfg.get("AGTC-501", {})
+    agtc_match = agtc_cfg.get("match_fields", {})
+    if _match_program(trial, agtc_match) or \
        ("Beacon" in trial.get("SponsorName", "") and "XLRP" in trial.get("BriefTitle", "")):
         if phase in ["PHASE2", "PHASE3", "PHASE2, PHASE3"]:
-            # Phase 2/3継続期間（1.5-2.5年）
-            phase23_duration = np.random.triangular(1.5, 2.0, 2.5)
-            # データ解析と申請準備
-            analysis_time = np.random.triangular(0.5, 0.75, 1.0)
-            # FDA審査
-            review_time = np.random.triangular(1.0, 1.25, 1.5)
-            
+            phase23_duration = _sample_triangular(agtc_cfg.get("phase23_duration", {"min": 1.5, "median": 2.0, "max": 2.5}))
+            analysis_time = _sample_triangular(agtc_cfg.get("analysis_time", {"min": 0.5, "median": 0.75, "max": 1.0}))
+            review_time = _sample_triangular(agtc_cfg.get("review_time", {"min": 1.0, "median": 1.25, "max": 1.5}))
+
             total_time = phase23_duration + analysis_time + review_time
-            
+
             approval_date = current_date + timedelta(days=total_time * 365.25)
-            
-            # 日本承認の遅延をシミュレート
-            japan_delay = np.random.triangular(
-                japan_delay_years["min"],
-                japan_delay_years["median"],
-                japan_delay_years["max"]
-            )
+            japan_delay = _simulate_japan_delay(japan_delay_years)
             japan_approval_date = approval_date + timedelta(days=japan_delay * 365.25)
-            
+
             return {
                 "success": True,
                 "approval_date": approval_date,
                 "approval_year": approval_date.year,
                 "time_to_approval": total_time,
-                "program_name": "AGTC-501",
-                "confidence": "medium",
-                "xlrp_specific": True,
+                "program_name": agtc_cfg.get("program_name", "AGTC-501"),
+                "confidence": agtc_cfg.get("confidence", "medium"),
+                "xlrp_specific": agtc_cfg.get("xlrp_specific", True),
                 "japan_approval_date": japan_approval_date,
                 "japan_approval_year": japan_approval_date.year,
                 "japan_delay_years": japan_delay
@@ -364,13 +379,9 @@ def simulate_single_program(trial: pd.Series, parameters: dict,
     approval_date = current_date + timedelta(days=total_time * 365.25)
     
     # 日本承認の遅延をシミュレート
-    japan_delay = np.random.triangular(
-        japan_delay_years["min"],
-        japan_delay_years["median"],
-        japan_delay_years["max"]
-    )
+    japan_delay = _simulate_japan_delay(japan_delay_years)
     japan_approval_date = approval_date + timedelta(days=japan_delay * 365.25)
-    
+
     return {
         "success": True,
         "time_to_approval": total_time,
@@ -382,23 +393,24 @@ def simulate_single_program(trial: pd.Series, parameters: dict,
     }
 
 
-def run_monte_carlo_simulation(active_trials: pd.DataFrame, 
+def run_monte_carlo_simulation(active_trials: pd.DataFrame,
                              parameters: dict,
                              n_simulations: int = 10000) -> pd.DataFrame:
     """全プログラムに対してモンテカルロシミュレーションを実行"""
-    
+
     current_date = datetime.now()
     np.random.seed(parameters["simulation_parameters"]["random_seed"])
+    sim_config = load_simulation_config()
     
     results = []
     
     for idx, trial in active_trials.iterrows():
         program_results = []
         
-        print(f"Simulating {trial['NCTId']}: {trial['BriefTitle'][:50]}...")
+        logger.info("Simulating %s: %s...", trial['NCTId'], trial['BriefTitle'][:50])
         
         for sim in range(n_simulations):
-            result = simulate_single_program(trial, parameters, current_date)
+            result = simulate_single_program(trial, parameters, current_date, sim_config)
             result["NCTId"] = trial["NCTId"]
             result["BriefTitle"] = trial["BriefTitle"]
             result["Phase"] = trial["Phase"]
@@ -451,8 +463,10 @@ def create_cdf_plot(results_df: pd.DataFrame, output_dir: Path):
     # 最も有望な5つのプログラムをハイライト
     top_programs = results_df.head(5)
     
-    # 年のレンジを設定
-    years = range(2025, 2041)
+    # 年のレンジを設定（設定ファイルから読み込み）
+    sim_config = load_simulation_config()
+    cdf_range = sim_config.get("cdf_year_range", {"start": 2025, "end": 2041})
+    years = range(cdf_range["start"], cdf_range["end"])
     
     # FDA承認のCDF（左側）
     for _, program in top_programs.iterrows():
@@ -518,7 +532,7 @@ def create_cdf_plot(results_df: pd.DataFrame, output_dir: Path):
     plt.savefig(output_file, dpi=300, bbox_inches='tight')
     plt.close()
     
-    print(f"CDF plot saved to: {output_file}")
+    logger.info("CDF plot saved to: %s", output_file)
 
 
 def run_sensitivity_analysis(active_trials: pd.DataFrame, 
@@ -526,7 +540,7 @@ def run_sensitivity_analysis(active_trials: pd.DataFrame,
                            n_simulations: int = 1000) -> pd.DataFrame:
     """感度分析：各パラメータを±20%変動させて影響を評価"""
     
-    print("\nRunning sensitivity analysis...")
+    logger.info("Running sensitivity analysis...")
     
     # 分析対象のプログラム（最も有望な5つ）
     sample_trials = active_trials.head(5)
@@ -680,29 +694,30 @@ def create_tornado_chart(sensitivity_df: pd.DataFrame, output_dir: Path):
     plt.savefig(output_file, dpi=300, bbox_inches='tight')
     plt.close()
     
-    print(f"Tornado chart saved to: {output_file}")
+    logger.info("Tornado chart saved to: %s", output_file)
 
 
-def create_waterfall_chart(results_df: pd.DataFrame, output_dir: Path):
+def create_waterfall_chart(results_df: pd.DataFrame, output_dir: Path,
+                           base_year: int = 2025):
     """ウォーターフォールチャートを作成"""
-    
+
     plt.figure(figsize=(14, 10))
-    
+
     # 上位20プログラムまたは全プログラム
     n_programs = min(20, len(results_df))
     top_df = results_df.head(n_programs)
-    
+
     # Y軸の位置
     y_positions = range(n_programs)
-    
+
     # エラーバーの計算
     lower_errors = top_df["median_approval_year"] - top_df["pct10_approval_year"]
     upper_errors = top_df["pct90_approval_year"] - top_df["median_approval_year"]
-    
+
     # バーチャート
-    bars = plt.barh(y_positions, 
-                     top_df["median_approval_year"] - 2025,  # 2025年からの年数
-                     left=2025,  # 開始位置
+    bars = plt.barh(y_positions,
+                     top_df["median_approval_year"] - base_year,  # base_yearからの年数
+                     left=base_year,  # 開始位置
                      xerr=[lower_errors, upper_errors],
                      capsize=5,
                      color='skyblue',
@@ -721,7 +736,7 @@ def create_waterfall_chart(results_df: pd.DataFrame, output_dir: Path):
               fontsize=14, pad=20)
     
     # 現在年を示す縦線
-    plt.axvline(x=2025, color='red', linestyle='--', alpha=0.5, label='Current Year')
+    plt.axvline(x=base_year, color='red', linestyle='--', alpha=0.5, label='Current Year')
     
     plt.grid(True, axis='x', alpha=0.3)
     plt.tight_layout()
@@ -730,7 +745,7 @@ def create_waterfall_chart(results_df: pd.DataFrame, output_dir: Path):
     plt.savefig(output_file, dpi=300, bbox_inches='tight')
     plt.close()
     
-    print(f"Waterfall chart saved to: {output_file}")
+    logger.info("Waterfall chart saved to: %s", output_file)
 
 
 def main():
@@ -743,71 +758,77 @@ def main():
     active_trials = get_active_programs(trials_df)
     
     # シミュレーション実行
-    print(f"\nRunning Monte Carlo simulation ({parameters['simulation_parameters']['n_simulations']} iterations per program)...")
+    logger.info("Running Monte Carlo simulation (%d iterations per program)...",
+                parameters['simulation_parameters']['n_simulations'])
     results_df = run_monte_carlo_simulation(
-        active_trials, 
+        active_trials,
         parameters,
         n_simulations=parameters["simulation_parameters"]["n_simulations"]
     )
-    
+
     # 結果を保存
     output_dir = Path("results")
     output_dir.mkdir(parents=True, exist_ok=True)
-    
+
     output_file = output_dir / "forecasts.csv"
     results_df.to_csv(output_file, index=False)
-    print(f"\nResults saved to: {output_file}")
-    
+    logger.info("Results saved to: %s", output_file)
+
     # 可視化
     fig_dir = output_dir / "figs"
     fig_dir.mkdir(parents=True, exist_ok=True)
-    
-    print("\nCreating visualizations...")
+
+    logger.info("Creating visualizations...")
     create_cdf_plot(results_df, fig_dir)
-    create_waterfall_chart(results_df, fig_dir)
-    
+    sim_config = load_simulation_config()
+    base_year = sim_config.get("waterfall_base_year", 2025)
+    create_waterfall_chart(results_df, fig_dir, base_year=base_year)
+
     # 感度分析
     sensitivity_df = run_sensitivity_analysis(
         active_trials,
         parameters,
         n_simulations=1000  # 感度分析は計算時間短縮のため少なめ
     )
-    
+
     # 感度分析結果を保存
     sensitivity_file = output_dir / "sensitivity_analysis.csv"
     sensitivity_df.to_csv(sensitivity_file, index=False)
-    print(f"\nSensitivity analysis saved to: {sensitivity_file}")
-    
+    logger.info("Sensitivity analysis saved to: %s", sensitivity_file)
+
     # トルネード図を作成
     create_tornado_chart(sensitivity_df, fig_dir)
-    
+
     # サマリー統計
-    print("\n=== SIMULATION SUMMARY ===")
-    print(f"Total programs simulated: {len(results_df)}")
-    print(f"Average success rate: {results_df['success_rate'].mean():.1%}")
-    print(f"\nTop 5 programs by median approval year:")
-    
+    logger.info("=== SIMULATION SUMMARY ===")
+    logger.info("Total programs simulated: %d", len(results_df))
+    logger.info("Average success rate: %.1f%%", results_df['success_rate'].mean() * 100)
+    logger.info("Top 5 programs by median approval year:")
+
     for idx, row in results_df.head(5).iterrows():
-        print(f"\n{row['NCTId']}: {row['BriefTitle'][:50]}...")
-        print(f"  Phase: {row['Phase']}")
-        print(f"  Sponsor: {row['SponsorName']}")
-        print(f"  Success rate: {row['success_rate']:.1%}")
-        print(f"  FDA Median approval: {row['median_approval_year']:.0f}")
-        print(f"  FDA 90% CI: [{row['pct10_approval_year']:.0f}, {row['pct90_approval_year']:.0f}]")
-        print(f"  Japan Median approval: {row['japan_median_approval_year']:.0f} (+{row['japan_median_delay_years']:.1f} years)")
-        print(f"  Japan 90% CI: [{row['japan_pct10_approval_year']:.0f}, {row['japan_pct90_approval_year']:.0f}]")
-    
+        logger.info("%s: %s...", row['NCTId'], row['BriefTitle'][:50])
+        logger.info("  Phase: %s", row['Phase'])
+        logger.info("  Sponsor: %s", row['SponsorName'])
+        logger.info("  Success rate: %.1f%%", row['success_rate'] * 100)
+        logger.info("  FDA Median approval: %.0f", row['median_approval_year'])
+        logger.info("  FDA 90%% CI: [%.0f, %.0f]", row['pct10_approval_year'], row['pct90_approval_year'])
+        logger.info("  Japan Median approval: %.0f (+%.1f years)",
+                     row['japan_median_approval_year'], row['japan_median_delay_years'])
+        logger.info("  Japan 90%% CI: [%.0f, %.0f]",
+                     row['japan_pct10_approval_year'], row['japan_pct90_approval_year'])
+
     # 全体的な予測
     all_approval_years = []
     for _, row in results_df.iterrows():
         # 各プログラムの中央値を重み付き（成功率）で集計
         weight = row['success_rate']
         all_approval_years.extend([row['median_approval_year']] * int(weight * 100))
-    
+
     if all_approval_years:
         overall_median = np.median(all_approval_years)
-        print(f"\n\nOverall median year for first approval: {overall_median:.0f}")
+        logger.info("Overall median year for first approval: %.0f", overall_median)
 
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
     main()

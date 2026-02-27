@@ -5,7 +5,7 @@ reality_and_actions.mdをHTMLに変換
 
 import markdown
 from pathlib import Path
-from html_utils import convert_markdown_to_html, get_responsive_table_css
+from src.reporting.html_utils import convert_markdown_to_html, get_responsive_table_css
 
 
 def convert_action_guide():

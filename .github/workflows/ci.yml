@@ -13,7 +13,9 @@ on:
 jobs:
   test-and-build:
     runs-on: ubuntu-latest
-    
+    env:
+      PYTHONPATH: .
+
     steps:
     - uses: actions/checkout@v4
     
@@ -38,9 +40,7 @@ jobs:
     
     - name: Run tests
       run: |
-        # テストがある場合はここで実行
-        # pytest tests/ --cov=src --cov-report=xml
-        echo "Tests would run here when implemented"
+        pytest tests/ -v --tb=short
     
     - name: Fetch latest clinical trials data
       run: |
