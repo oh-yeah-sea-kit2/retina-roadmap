@@ -1,6 +1,6 @@
 # 網膜色素変性症（RP）治療開発ロードマップ
 
-生成日時: 2026年02月27日 12:17
+生成日時: 2026年03月09日 00:09
 
 ## エグゼクティブサマリー
 
@@ -29,18 +29,18 @@
 
 ### 文献データ
 - **データソース**: PubMed
-- **総論文数**: 826件
+- **総論文数**: 863件
 - **検索クエリ**: "retinitis pigmentosa" AND ("gene therapy" OR "cell therapy")
-- **期間**: 1993-2025年
+- **期間**: 1993-2026年
 
 #### 年別論文数（直近5年）
 | 年 | 論文数 |
 |---|--------|
-| 2025 | 63 |
-| 2024 | 63 |
+| 2026 | 18 |
+| 2025 | 83 |
+| 2024 | 62 |
 | 2023 | 99 |
 | 2022 | 67 |
-| 2021 | 64 |
 
 
 ## 2. モンテカルロシミュレーション結果
@@ -57,13 +57,13 @@
 | NCT04945772 | Efficacy and Safety of MCO-010 Optogenet... | PHASE2 | Nanoscope Therapeutics Inc. | 100.0% | 2026年 | 2029年 | [2026, 2026] |
 | NCT05203939 | Study to Assess the Safety and Efficacy ... | PHASE1, PHASE2 | Ocugen | 100.0% | 2027年 | 2032年 | [2027, 2027] |
 | NCT06388200 | A Phase 3 Study Of OCU400 Gene Therapy f... | PHASE3 | Ocugen | 100.0% | 2027年 | 2032年 | [2027, 2027] |
-| NCT05537220 | Oral N-acetylcysteine for Retinitis Pigm... | PHASE3 | Johns Hopkins University | 72.0% | 2029年 | 2034年 | [2028, 2030] |
-| NCT03584165 | Long-term Safety and Efficacy Follow-up ... | PHASE3 | NightstaRx Ltd, a Biogen Company | 71.2% | 2030年 | 2035年 | [2029, 2031] |
+| NCT05537220 | Oral N-acetylcysteine for Retinitis Pigm... | PHASE3 | Johns Hopkins University | 71.8% | 2029年 | 2034年 | [2028, 2030] |
+| NCT03584165 | Long-term Safety and Efficacy Follow-up ... | PHASE3 | NightstaRx Ltd, a Biogen Company | 71.3% | 2030年 | 2035年 | [2029, 2031] |
 | NCT04850118 | A Clinical Trial Evaluating the Safety a... | PHASE2, PHASE3 | Beacon Therapeutics | 100.0% | 2030年 | 2035年 | [2029, 2030] |
 | NCT00999609 | Safety and Efficacy Study in Subjects Wi... | PHASE3 | Spark Therapeutics, Inc. | 71.4% | 2030年 | 2035年 | [2029, 2031] |
 | NCT07174726 | A Phase 2 Open-label Study to Evaluate t... | PHASE2 | Beacon Therapeutics | 100.0% | 2030年 | 2035年 | [2029, 2030] |
-| NCT07082855 | A Multicenter, Randomized, Double-Blind,... | PHASE3 | Zhongshan Ophthalmic Center, Sun Yat-sen University | 71.1% | 2030年 | 2035年 | [2029, 2031] |
-| NCT02065011 | A Study to Determine the Long-Term Safet... | PHASE2 | Sanofi | 57.1% | 2031年 | 2036年 | [2030, 2032] |
+| NCT07082855 | A Multicenter, Randomized, Double-Blind,... | PHASE3 | Zhongshan Ophthalmic Center, Sun Yat-sen University | 71.2% | 2030年 | 2035年 | [2029, 2031] |
+| NCT02065011 | A Study to Determine the Long-Term Safet... | PHASE2 | Sanofi | 57.2% | 2031年 | 2036年 | [2030, 2032] |
 
 
 ### 日本での承認予測

@@ -208,6 +208,56 @@ docs/
 
 ## 最近の更新履歴
 
+### 2026年3月9日（自動更新）
+- **Web検索による最新情報更新（/update_rp_info full実行）**
+
+## 網膜色素変性症治療法 最新情報更新サマリー
+更新日時: 2026年3月9日
+
+## 📊 更新チェック結果サマリー
+
+- 新規プログラム: 1件（SPVN20）
+- 更新されたプログラム: 3件
+- 変更なし: 15件
+- 重要な更新: 2件
+
+### 🚨 重要な更新（重要度70以上）
+- **OCU400（Ocugen）**: Phase 3 liMeliGhT試験登録完了 - 重要度: 95
+  * 2026年3月2日: 登録完了を発表（140名、2:1ランダム化）
+  * RHOアームとgene-agnosticアームを含む、小児（3歳以上）も対象
+  * BLA rolling submission Q3 2026予定（以前はH1 2026）
+  * トップラインデータQ1 2027予定（以前はQ4 2026）
+  * 3年間Phase 1/2データ: 88%(7/8)改善/維持、約2ライン改善
+  * 2027年承認・商用化を目指す
+
+- **MCO-010（Nanoscope）**: スターガルト病Phase 3計画 - 重要度: 70
+  * STARLIGHT Phase 2試験で陽性データ
+  * 2026年にスターガルト病Phase 3 registrational試験開始予定
+  * RP向けBLA rolling submission継続中
+
+### 🆕 新規プログラム
+- **SPVN20（SparingVision）**: 休眠錐体細胞再活性化遺伝子治療
+  * NYRVANA Phase 1/2試験で初患者投与（2025年10月）
+  * 進行したRP患者の休眠錐体を再活性化し、視力と色覚を回復
+  * ベルギーで開始、フランス・アイルランドに拡大、2026年に米国申請予定
+  * SparingVisionの2番目の治療プログラム（SPVN06に加え）
+
+### 🔄 更新されたプログラム詳細
+1. **OCU400（Ocugen）**: 登録完了（140名）、BLA Q3 2026、トップラインQ1 2027に更新
+2. **MCO-010（Nanoscope）**: スターガルトPhase 3計画追加
+3. **OpCT-001（BlueRock）**: Phase 2登録人数更新（最大30名×2コホート）
+
+### ✅ 変更なし（既知の情報）
+- VP-001, AGTC-501, NPI-001, SPVN06, Ultevursen, Botaretigene sparoparvovec, VG901, ZM-02, jCells, DSP-3077, Keio_Optogenetics, GS030, 4D-125, CTx-PDE6b, AAV-mVChR1
+
+### 📈 シミュレーション結果
+- アクティブ試験数: 55件
+- **最速承認予測（FDA）**: MCO-010 2026年（BLA priority review）
+- **日本最速承認予測**: MCO-010 2029年（先駆け指定）
+- **OCU400**: FDA 2027年（liMeliGhT登録完了）、日本 2032年
+- **全体中央値**: 2035年（FDA承認）
+- **Phase別成功率**: Phase 1: 86.7%, Phase 2: 78.4%, Phase 3: 71.4%
+
 ### 2026年2月27日（自動更新）
 - **Web検索による最新情報更新（/update_rp_info full実行）**
 
