@@ -30,15 +30,15 @@ allowed-tools: WebSearch, Bash(python3:*), Bash(git:*), Bash(gemini:*), Read, Wr
 ### 実行手順
 
 1. **Gemini検索で最新情報を収集**（checkモードとfullモードで実行）
-                     ```bash
+                        ```bash
    # Gemini Searchを使用（より包括的な情報収集が可能）
    gemini --prompt "WebSearch: MCO-010 Nanoscope Therapeutics retinitis pigmentosa 2025 latest update Phase 3"
    gemini --prompt "WebSearch: OCU400 Ocugen retinitis pigmentosa 2025 latest update Phase 3"
    gemini --prompt "WebSearch: Botaretigene sparoparvovec Janssen (J&J) retinitis pigmentosa 2025 latest update Phase 3"
    gemini --prompt "WebSearch: AGTC-501 Beacon Therapeutics retinitis pigmentosa 2025 latest update Phase 2/3"
+   gemini --prompt "WebSearch: jCells jCyte retinitis pigmentosa 2025 latest update Phase 2"
    gemini --prompt "WebSearch: Ultevursen Sepul Bio / Théa retinitis pigmentosa 2025 latest update Phase 2b"
    gemini --prompt "WebSearch: VP-001 PYC Therapeutics retinitis pigmentosa 2025 latest update Phase 1/2"
-   gemini --prompt "WebSearch: OpCT-001 BlueRock Therapeutics retinitis pigmentosa 2025 latest update Phase 1/2a"
    gemini --prompt "WebSearch: retinitis pigmentosa gene therapy 2025 FDA approval new treatments"
    gemini --prompt "WebSearch: 網膜色素変性症 遺伝子治療 2025 最新 日本 承認"
    ```

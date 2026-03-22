@@ -89,6 +89,22 @@
           "VP-001: Phase更新 Phase 1/2 → Phase 1"
         ]
       }
+    },
+    {
+      "date": "2026-03-22",
+      "type": "automatic_update",
+      "summary": "Found 1 new programs, 1 important updates",
+      "changes": {
+        "new_programs": [
+          "Botaretigene"
+        ],
+        "updated_programs": [
+          "VP-001"
+        ],
+        "key_events": [
+          "VP-001: Phase更新 Phase 1/2 → Phase 1"
+        ]
+      }
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-02-27",
-  "update_notes": "2026-02-27: MCO-010に日本MHLW先駆け指定・オーファン指定追加、SPVN06 PRODYGY試験投与完了、NPI-001 Breakthrough Therapy指定・Phase 1/2陽性データ、OpCT-001 Orphan Drug指定追加、AGTC-501 LANDSCAPE試験・SKYLINE 36ヶ月データ追加、ZM-02 MOON試験詳細結果追加、DSP-3077新規追加",
+  "last_updated": "2026-03-22",
+  "update_notes": "2026-03-12: OCU400 Phase 3 liMeliGhT登録完了（140名、2026年3月2日発表）・BLA Q3 2026・トップラインQ1 2027に更新、MCO-010スターガルトPhase 3計画追加、SPVN20新規追加（NYRVANA Phase 1/2初投与）、OpCT-001試験デザイン詳細更新",
   "programs": {
     "MCO-010": {
       "company": "Nanoscope Therapeutics",
@@ -58,19 +58,19 @@
           "source": "Company PR"
         }
       ],
-      "notes": "First gene-agnostic gene therapy for RP (sonpiretigene isteparvovec). Uses AAV2 vector to deliver multi-characteristic opsin (MCO) to bipolar retinal cells via intravitreal injection. Full BLA submission expected early 2026, eligible for priority review. One-time in-office injection for severe vision loss. ICER (April 2025) concluded evidence adequately demonstrates net health benefit. Also pursuing Stargardt disease indication. Japan MHLW granted Sakigake (Pioneer) and Orphan Drug designations (Jan 2026) - first retinal gene therapy to receive both, enabling accelerated 6-month review in Japan."
+      "notes": "First gene-agnostic gene therapy for RP (sonpiretigene isteparvovec). Uses AAV2 vector to deliver multi-characteristic opsin (MCO) to bipolar retinal cells via intravitreal injection. Full BLA submission expected early 2026, eligible for priority review. One-time in-office injection for severe vision loss. ICER (April 2025) concluded evidence adequately demonstrates net health benefit. STARLIGHT Phase 2 positive for Stargardt disease; Phase 3 registrational trial planned for 2026. Japan MHLW granted Sakigake (Pioneer) and Orphan Drug designations (Jan 2026) - first retinal gene therapy to receive both, enabling accelerated 6-month review in Japan."
     },
     "OCU400": {
       "company": "Ocugen",
       "current_phase": "Phase 3",
-      "status": "Enrollment nearing completion, BLA submission H1 2026",
+      "status": "Enrollment completed - BLA rolling submission Q3 2026",
       "key_dates": {
         "phase3_start": "2024-06",
-        "expected_enrollment_completion": "2025-12",
-        "expected_primary_endpoint": "2026-12-31",
-        "expected_topline_data": "2026-Q4",
-        "expected_bla_submission_start": "2026-H1",
-        "expected_bla_submission_complete": "2026",
+        "enrollment_completed": "2026-03-02",
+        "enrolled_patients": 140,
+        "expected_topline_data": "2027-Q1",
+        "expected_bla_submission_start": "2026-Q3",
+        "expected_approval": "2027",
         "expected_commercialization": "2027"
       },
       "trial_ids": [
@@ -86,18 +86,13 @@
       ],
       "recent_updates": [
         {
-          "date": "2026-02-27",
-          "event": "Phase 3 liMeliGhT試験は予定通り進行中。BLA rolling submission H1 2026開始予定。150名（RHO 75名+gene-agnostic 75名）、カナダ50名追加。Phase 1/2の2年データで100%(9/9)改善/維持。Expanded Access Program承認済み（米国75名）",
+          "date": "2026-03-12",
+          "event": "Phase 3 liMeliGhT試験の登録完了を発表（2026年3月2日）。140名をランダム化（2:1で治療群と未治療対照群、RHOアームとgene-agnosticアーム）。小児（3歳以上）も含む。BLA rolling submission Q3 2026予定。1年試験のため、トップラインデータはQ1 2027。3年間Phase 1/2データ: 88%(7/8)の評価可能患者で改善/維持、約2ライン(LLVA)改善",
           "source": "Web Search"
         },
         {
-          "date": "2026-01-03",
-          "event": "Phase 3 liMeliGhT trial enrollment nearing completion (US 15 sites ~150 patients: 75 RHO + 75 gene-agnostic, Canada up to 50 patients). Rolling BLA submission expected to start H1 2026. Top-line data expected Q4 2026. Primary endpoint completion Dec 31, 2026. EMA MAA eligible for centralized review",
-          "source": "Web Search (Gemini)"
-        },
-        {
-          "date": "2025-11-07",
-          "event": "Phase 3 liMeliGhT trial (NCT06388200) enrollment nearing completion. Top-line data expected Q4 2026, commercialization projected for 2027",
+          "date": "2026-02-27",
+          "event": "Phase 3 liMeliGhT試験は予定通り進行中。BLA rolling submission H1 2026開始予定。150名（RHO 75名+gene-agnostic 75名）、カナダ50名追加。Phase 1/2の2年データで100%(9/9)改善/維持。Expanded Access Program承認済み（米国75名）",
           "source": "Web Search"
         },
         {
@@ -111,7 +106,7 @@
           "source": "Company PR"
         }
       ],
-      "notes": "Targets 100+ gene mutations. Expanded Access Program in US (75 patients) and Canada expansion (50 patients) approved. Phase 3 includes RHO arm and gene-agnostic arm with ~150 participants. BLA rolling submission targeted for H1 2026."
+      "notes": "Targets 100+ gene mutations. Phase 3 liMeliGhT enrollment completed March 2, 2026 (140 patients, 2:1 randomized, including pediatrics 3+). 3-year Phase 1/2 data: 88% improvement/preservation with ~2-line LLVA gain. Expanded Access Program in US (75 patients) and Canada (50 patients). BLA rolling submission Q3 2026, topline data Q1 2027, potential approval 2027."
     },
     "VP-001": {
       "company": "PYC Therapeutics",
@@ -249,7 +244,7 @@
           "source": "Company PR"
         }
       ],
-      "notes": "iPSC-derived photoreceptor cells by BlueRock Therapeutics (Bayer subsidiary). World's first iPSC-derived cell therapy for primary photoreceptor diseases. Phase 1: dose escalation (12-24 legally blind patients across 4 cohorts). Phase 2: visual function assessment (up to 15 patients). FDA Fast Track + Orphan Drug Designation."
+      "notes": "iPSC-derived photoreceptor cells by BlueRock Therapeutics (Bayer subsidiary). World's first iPSC-derived cell therapy for primary photoreceptor diseases. Phase 1: dose escalation (12-24 legally blind patients across 4 cohorts). Phase 2: up to 30 participants across 2 cohorts evaluating 2 dose levels. FDA Fast Track + Orphan Drug Designation."
     },
     "NPI-001": {
       "company": "Nacuity Pharmaceuticals",
@@ -400,6 +395,30 @@
         }
       ],
       "notes": "Gene-agnostic gene therapy for RP delivering RdCVF and RdCVFL via AAV to sustain photoreceptor function. PRODYGY trial dosing completed (33 patients: 27 treated + 6 control). Favorable safety profile through 18+ months. Data readout expected 2027, pivotal trial planned 2027. US IND approved."
+    },
+    "SPVN20": {
+      "company": "SparingVision",
+      "current_phase": "Phase 1/2",
+      "status": "NYRVANA trial - First patient dosed",
+      "key_dates": {
+        "first_patient_dosed": "2025-10",
+        "nyrvana_start": "2025-10",
+        "expected_us_clearance": "2026"
+      },
+      "trial_ids": [
+        "NYRVANA"
+      ],
+      "modality": "Gene therapy",
+      "target": "Gene-agnostic (dormant cone reactivation)",
+      "regulatory": [],
+      "recent_updates": [
+        {
+          "date": "2026-03-12",
+          "event": "NYRVANA Phase 1/2試験で初患者投与（2025年10月）。進行したRP患者の休眠錐体細胞を再活性化し、視力と色覚を回復する遺伝子非特異的治療。硝子体内AAV注射、単回投与。ベルギーで開始、フランス・アイルランドに拡大予定。2026年に米国での試験許可取得を目指す。オープンラベル、多施設、用量漸増試験。6ヶ月評価+5年長期フォローアップ",
+          "source": "Web Search"
+        }
+      ],
+      "notes": "SparingVision's second gene therapy program (after SPVN06). Gene-agnostic intravitreal AAV therapy designed to restore cone vision in advanced RP by reactivating dormant cone photoreceptors. NYRVANA Phase 1/2 first-in-human trial: open-label, multicenter, dose-escalation study. Started in Belgium (Oct 2025), expanding to France and Ireland. US clearance sought in 2026. 6-month evaluation + 5-year long-term follow-up."
     },
     "Ultevursen": {
       "company": "Sepul Bio / Théa",
