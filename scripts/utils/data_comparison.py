@@ -46,16 +46,25 @@ def extract_program_info_from_text(text: str) -> Dict[str, Any]:
             info["programs_mentioned"].append(program_name)
     
     # Phase情報の抽出
-    phase_patterns = [
-        (r"(MCO-010).*?Phase\s*(\d)", "MCO-010"),
-        (r"(OCU400).*?Phase\s*(\d)", "OCU400"),
-        (r"(VP-001).*?Phase\s*(\d)", "VP-001")
-    ]
-    
-    for pattern, program in phase_patterns:
-        match = re.search(pattern, text, re.IGNORECASE)
-        if match:
-            info["phase_updates"][program] = f"Phase {match.group(2)}"
+    # 各プログラム名の近傍（200文字以内）に出現するPhase番号を全て収集し、
+    # 最大値を現在のPhaseとして採用する（過去の試験Phase言及を除外するため）
+    phase_programs = ["MCO-010", "OCU400", "VP-001", "AGTC-501", "OpCT-001", "NPI-001"]
+
+    for program in phase_programs:
+        phases_found = []
+        for match in re.finditer(re.escape(program), text, re.IGNORECASE):
+            # プログラム名の前後200文字の範囲でPhase番号を探す
+            start = max(0, match.start() - 200)
+            end = min(len(text), match.end() + 200)
+            context = text[start:end]
+            # "Phase 2/3" や "Phase 1/2a" のような複合表記にも対応
+            for phase_match in re.finditer(r"Phase\s*(\d)(?:\s*/\s*(\d))?", context, re.IGNORECASE):
+                phases_found.append(int(phase_match.group(1)))
+                if phase_match.group(2):
+                    phases_found.append(int(phase_match.group(2)))
+        if phases_found:
+            max_phase = max(phases_found)
+            info["phase_updates"][program] = f"Phase {max_phase}"
     
     # BLA/FDA申請情報の抽出
     bla_patterns = [
@@ -76,6 +85,18 @@ def extract_program_info_from_text(text: str) -> Dict[str, Any]:
     return info
 
 
+def _extract_max_phase_number(phase_str: str) -> int:
+    """Phase文字列から最大のPhase番号を抽出する。
+    "Phase 2/3" → 3, "Phase 1/2a" → 2, "Phase 3" → 3, "BLA" → 4
+    """
+    if not phase_str:
+        return 0
+    if "BLA" in phase_str.upper() or "NDA" in phase_str.upper():
+        return 4  # BLA/NDAはPhase 3より進んだ段階
+    numbers = re.findall(r"\d", phase_str)
+    return max(int(n) for n in numbers) if numbers else 0
+
+
 def compare_clinical_programs(new_data: Dict[str, Any], existing_kb: Dict[str, Any]) -> Dict[str, Any]:
     """新旧データを比較し、差分を検出"""
     comparison = {
@@ -84,19 +105,21 @@ def compare_clinical_programs(new_data: Dict[str, Any], existing_kb: Dict[str, A
         "unchanged_programs": [],
         "important_updates": []
     }
-    
+
     existing_programs = existing_kb.get("programs", {})
-    
+
     # 新規プログラムの検出
     for program in new_data.get("programs_mentioned", []):
         if program not in existing_programs:
             comparison["new_programs"].append(program)
-    
-    # 更新の検出
+
+    # 更新の検出（Phase番号を正規化して比較）
     for program, phase in new_data.get("phase_updates", {}).items():
         if program in existing_programs:
             existing_phase = existing_programs[program].get("current_phase", "")
-            if phase != existing_phase:
+            new_max = _extract_max_phase_number(phase)
+            existing_max = _extract_max_phase_number(existing_phase)
+            if new_max != existing_max:
                 comparison["updated_programs"][program] = {
                     "old_phase": existing_phase,
                     "new_phase": phase
