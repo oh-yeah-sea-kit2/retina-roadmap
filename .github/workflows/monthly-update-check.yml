@@ -37,7 +37,7 @@ jobs:
       run: |
         # 月次更新チェックを実行
         # GitHub Actions環境ではWebSearchが使えないので、簡易チェックを実行
-        python scripts/simple_weekly_check.py > check_output.txt 2>&1 || true
+        python scripts/simple_monthly_check.py > check_output.txt 2>&1 || true
         
         # 結果を抽出
         if grep -q "📊 更新チェック結果サマリー" check_output.txt; then
