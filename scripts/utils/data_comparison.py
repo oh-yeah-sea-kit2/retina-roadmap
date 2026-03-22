@@ -46,24 +46,62 @@ def extract_program_info_from_text(text: str) -> Dict[str, Any]:
             info["programs_mentioned"].append(program_name)
     
     # Phase情報の抽出
-    # 各プログラム名の近傍（200文字以内）に出現するPhase番号を全て収集し、
-    # 最大値を現在のPhaseとして採用する（過去の試験Phase言及を除外するため）
+    # 各プログラム名の近傍に出現するPhase番号を収集する。
+    # 誤検知を防ぐため以下のフィルタを適用:
+    # 1. 将来の計画を示すキーワード（planned, design等）の近傍は除外
+    # 2. 他のプログラム名がPhase言及とプログラム名の間にある場合は除外
+    # 3. プログラム名から最も近いPhase言及を優先
     phase_programs = ["MCO-010", "OCU400", "VP-001", "AGTC-501", "OpCT-001", "NPI-001"]
+    all_program_names = phase_programs + ["Botaretigene", "bota-vec", "SPVN06", "SPVN20",
+                                          "Ultevursen", "ZM-02", "jCells", "DSP-3077",
+                                          "VG901", "GS030", "4D-125"]
+    # 将来の計画を示すキーワード（Phase言及の前後50文字に出現する場合は除外）
+    future_keywords = re.compile(
+        r"planned|design|expected|will\s+start|to\s+start|initiat\w+\s+in|"
+        r"proposed|upcoming|目指|予定|計画|開始予定|finalize",
+        re.IGNORECASE,
+    )
 
     for program in phase_programs:
-        phases_found = []
+        phases_with_distance = []  # (distance, phase_number) のリスト
         for match in re.finditer(re.escape(program), text, re.IGNORECASE):
-            # プログラム名の前後200文字の範囲でPhase番号を探す
-            start = max(0, match.start() - 200)
-            end = min(len(text), match.end() + 200)
+            prog_pos = match.start()
+            # プログラム名の前後100文字の範囲でPhase番号を探す
+            start = max(0, prog_pos - 100)
+            end = min(len(text), match.end() + 100)
             context = text[start:end]
+            prog_offset = prog_pos - start  # context内でのプログラム名の位置
             # "Phase 2/3" や "Phase 1/2a" のような複合表記にも対応
             for phase_match in re.finditer(r"Phase\s*(\d)(?:\s*/\s*(\d))?", context, re.IGNORECASE):
-                phases_found.append(int(phase_match.group(1)))
+                # Phase言及の前後50文字に将来を示すキーワードがあれば除外
+                pm_start = max(0, phase_match.start() - 50)
+                pm_end = min(len(context), phase_match.end() + 50)
+                surrounding = context[pm_start:pm_end]
+                if future_keywords.search(surrounding):
+                    continue
+                # プログラム名とPhase言及の間に別のプログラム名があれば除外
+                between_start = min(prog_offset + len(program), phase_match.start())
+                between_end = max(prog_offset, phase_match.end())
+                between_text = context[between_start:between_end]
+                has_other_program = False
+                for other in all_program_names:
+                    if other != program and re.search(re.escape(other), between_text, re.IGNORECASE):
+                        has_other_program = True
+                        break
+                if has_other_program:
+                    continue
+                distance = abs(phase_match.start() - prog_offset)
+                phases_with_distance.append((distance, int(phase_match.group(1))))
                 if phase_match.group(2):
-                    phases_found.append(int(phase_match.group(2)))
-        if phases_found:
-            max_phase = max(phases_found)
+                    phases_with_distance.append((distance, int(phase_match.group(2))))
+        if phases_with_distance:
+            # 最も近いPhase言及を優先（距離30文字以内のものだけ集めて最大値）
+            # 近いものがなければ全体から最大値
+            close_phases = [p for d, p in phases_with_distance if d <= 30]
+            if close_phases:
+                max_phase = max(close_phases)
+            else:
+                max_phase = max(p for _, p in phases_with_distance)
             info["phase_updates"][program] = f"Phase {max_phase}"
     
     # BLA/FDA申請情報の抽出
