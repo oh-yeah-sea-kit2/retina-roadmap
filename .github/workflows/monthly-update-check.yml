@@ -43,11 +43,11 @@ jobs:
         if grep -q "📊 更新チェック結果サマリー" check_output.txt; then
           # 結果サマリーが含まれている場合
           echo "check_success=true" >> $GITHUB_OUTPUT
-          # 結果をファイルに保存
-          sed -n '/📊 更新チェック結果サマリー/,/^$/p' check_output.txt > summary.txt
-          
-          # 重要な更新の有無を確認
-          if grep -q "重要な更新: [1-9]" summary.txt; then
+          # 結果をファイルに保存（サマリーセクション全体を抽出）
+          sed -n '/📊 更新チェック結果サマリー/,/### 🎯/p' check_output.txt > summary.txt
+
+          # 重要な更新の有無を確認（全出力から検索）
+          if grep -q "重要な更新: [1-9]" check_output.txt; then
             echo "has_updates=true" >> $GITHUB_OUTPUT
           else
             echo "has_updates=false" >> $GITHUB_OUTPUT
