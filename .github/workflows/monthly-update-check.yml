@@ -1,13 +1,13 @@
-name: 週次更新チェック
+name: 月次更新チェック
 
 on:
   schedule:
-    # 毎週月曜日 午前9時（JST）= 日曜日 24時（UTC）
-    - cron: '0 0 * * 0'
+    # 毎月1日 午前9時（JST）= 前月末日 24時（UTC）
+    - cron: '0 0 1 * *'
   workflow_dispatch:  # 手動実行も可能
 
 jobs:
-  weekly-update-check:
+  monthly-update-check:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -32,12 +32,12 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     
-    - name: Run weekly update check
+    - name: Run monthly update check
       id: check_result
       run: |
-        # 週次更新チェックを実行
+        # 月次更新チェックを実行
         # GitHub Actions環境ではWebSearchが使えないので、簡易チェックを実行
-        python scripts/simple_weekly_check.py > check_output.txt 2>&1 || true
+        python scripts/simple_monthly_check.py > check_output.txt 2>&1 || true
         
         # 結果を抽出
         if grep -q "📊 更新チェック結果サマリー" check_output.txt; then
@@ -75,7 +75,7 @@ jobs:
         
         if [ "${{ steps.check_result.outputs.check_success }}" = "true" ]; then
           # 成功時のレポート
-          echo "## 週次更新チェック結果" > issue_content.md
+          echo "## 月次更新チェック結果" > issue_content.md
           echo "" >> issue_content.md
           echo "**実行日:** ${DATE}" >> issue_content.md
           echo "" >> issue_content.md
@@ -118,7 +118,7 @@ jobs:
           echo "</details>" >> issue_content.md
         else
           # エラー時のレポート
-          echo "## 週次更新チェック結果" > issue_content.md
+          echo "## 月次更新チェック結果" > issue_content.md
           echo "" >> issue_content.md
           echo "**実行日:** ${DATE}" >> issue_content.md
           echo "" >> issue_content.md
@@ -159,6 +159,6 @@ jobs:
           await github.rest.issues.create({
             owner: context.repo.owner,
             repo: context.repo.repo,
-            title: `📅 週次更新チェック結果 - ${date}`,
+            title: `📅 月次更新チェック結果 - ${date}`,
             body: content
           });

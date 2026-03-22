@@ -6,8 +6,8 @@ on:
   pull_request:
     branches: [ main ]
   schedule:
-    # 毎週月曜日の午前9時（JST）に実行
-    - cron: '0 0 * * 1'
+    # 毎月1日の午前9時（JST）に実行
+    - cron: '0 0 1 * *'
   workflow_dispatch:  # 手動実行も可能
 
 jobs:
