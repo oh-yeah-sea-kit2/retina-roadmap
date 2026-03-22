@@ -114,12 +114,15 @@ def compare_clinical_programs(new_data: Dict[str, Any], existing_kb: Dict[str, A
             comparison["new_programs"].append(program)
 
     # 更新の検出（Phase番号を正規化して比較）
+    # Phase番号が上がった場合 → 進捗として報告
+    # Phase番号が下がった場合 → 検索結果の情報不足の可能性が高いため無視
+    #   （本当の後退・中止は _detect_new_keywords で "discontinued" 等から検出）
     for program, phase in new_data.get("phase_updates", {}).items():
         if program in existing_programs:
             existing_phase = existing_programs[program].get("current_phase", "")
             new_max = _extract_max_phase_number(phase)
             existing_max = _extract_max_phase_number(existing_phase)
-            if new_max != existing_max:
+            if new_max > existing_max:
                 comparison["updated_programs"][program] = {
                     "old_phase": existing_phase,
                     "new_phase": phase
