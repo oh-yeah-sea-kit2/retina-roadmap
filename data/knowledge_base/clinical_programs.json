@@ -1,6 +1,6 @@
 {
   "last_updated": "2026-03-22",
-  "update_notes": "2026-03-12: OCU400 Phase 3 liMeliGhT登録完了（140名、2026年3月2日発表）・BLA Q3 2026・トップラインQ1 2027に更新、MCO-010スターガルトPhase 3計画追加、SPVN20新規追加（NYRVANA Phase 1/2初投与）、OpCT-001試験デザイン詳細更新",
+  "update_notes": "2026-03-22(full): MCO-010ブランド名MOGENRY条件付き承認・GA Phase 2計画追加、VP-001登録試験CY2030に遅延（$653M資金調達）、OCU400韓国Kwangdong社ライセンス契約追加、SPVN06初期有効性シグナル追加、NPI-001確認試験詳細追加。2026-03-12: OCU400 Phase 3 liMeliGhT登録完了（140名、2026年3月2日発表）・BLA Q3 2026・トップラインQ1 2027に更新、MCO-010スターガルトPhase 3計画追加、SPVN20新規追加（NYRVANA Phase 1/2初投与）、OpCT-001試験デザイン詳細更新",
   "programs": {
     "MCO-010": {
       "company": "Nanoscope Therapeutics",
@@ -27,6 +27,11 @@
         "Japan MHLW Orphan Drug Designation"
       ],
       "recent_updates": [
+        {
+          "date": "2026-03-22",
+          "event": "ブランド名「MOGENRY」がFDA・EMA・PMDAで条件付き承認。BLA完全提出は2026年初頭予定で、Priority Reviewにより2026年中のFDA承認の可能性あり。地図状萎縮（GA）向けPhase 2を2026年開始予定（パイプライン拡大）。スターガルト病Phase 3も2026年開始予定",
+          "source": "Web Search"
+        },
         {
           "date": "2026-02-27",
           "event": "2026 Macula Society Annual Meeting (Feb 25-28, San Diego) でpost-hoc臨床分析データを発表予定。日本MHLWから先駆け指定（Sakigake）およびオーファン医薬品指定を取得（2026年1月21日）- 網膜遺伝子治療として初。先駆けは6ヶ月審査が目標。BLA rolling submission継続中、完全提出は2026年早期予定",
@@ -58,7 +63,7 @@
           "source": "Company PR"
         }
       ],
-      "notes": "First gene-agnostic gene therapy for RP (sonpiretigene isteparvovec). Uses AAV2 vector to deliver multi-characteristic opsin (MCO) to bipolar retinal cells via intravitreal injection. Full BLA submission expected early 2026, eligible for priority review. One-time in-office injection for severe vision loss. ICER (April 2025) concluded evidence adequately demonstrates net health benefit. STARLIGHT Phase 2 positive for Stargardt disease; Phase 3 registrational trial planned for 2026. Japan MHLW granted Sakigake (Pioneer) and Orphan Drug designations (Jan 2026) - first retinal gene therapy to receive both, enabling accelerated 6-month review in Japan."
+      "notes": "First gene-agnostic gene therapy for RP (sonpiretigene isteparvovec / brand name: MOGENRY). Uses AAV2 vector to deliver multi-characteristic opsin (MCO) to bipolar retinal cells via intravitreal injection. Full BLA submission expected early 2026, eligible for priority review - potential FDA approval in 2026. One-time in-office injection for severe vision loss. ICER (April 2025) concluded evidence adequately demonstrates net health benefit. STARLIGHT Phase 2 positive for Stargardt disease; Phase 3 registrational trial planned for 2026. Geographic atrophy (GA) Phase 2 also planned for 2026. Japan MHLW granted Sakigake (Pioneer) and Orphan Drug designations (Jan 2026) - first retinal gene therapy to receive both, enabling accelerated 6-month review in Japan. Brand name MOGENRY conditionally approved by FDA, EMA, and PMDA."
     },
     "OCU400": {
       "company": "Ocugen",
@@ -86,6 +91,11 @@
       ],
       "recent_updates": [
         {
+          "date": "2026-03-22",
+          "event": "韓国Kwangdong Pharmaceutical社とライセンス契約締結。韓国における開発・商業化の独占権を付与。初の地域パートナーシップ。キャッシュランウェイは2026年Q4まで。株価は年初来75%上昇",
+          "source": "Web Search"
+        },
+        {
           "date": "2026-03-12",
           "event": "Phase 3 liMeliGhT試験の登録完了を発表（2026年3月2日）。140名をランダム化（2:1で治療群と未治療対照群、RHOアームとgene-agnosticアーム）。小児（3歳以上）も含む。BLA rolling submission Q3 2026予定。1年試験のため、トップラインデータはQ1 2027。3年間Phase 1/2データ: 88%(7/8)の評価可能患者で改善/維持、約2ライン(LLVA)改善",
           "source": "Web Search"
@@ -106,21 +116,23 @@
           "source": "Company PR"
         }
       ],
-      "notes": "Targets 100+ gene mutations. Phase 3 liMeliGhT enrollment completed March 2, 2026 (140 patients, 2:1 randomized, including pediatrics 3+). 3-year Phase 1/2 data: 88% improvement/preservation with ~2-line LLVA gain. Expanded Access Program in US (75 patients) and Canada (50 patients). BLA rolling submission Q3 2026, topline data Q1 2027, potential approval 2027."
+      "notes": "Targets 100+ gene mutations. Phase 3 liMeliGhT enrollment completed March 2, 2026 (140 patients, 2:1 randomized, including pediatrics 3+). 3-year Phase 1/2 data: 88% improvement/preservation with ~2-line LLVA gain. Expanded Access Program in US (75 patients) and Canada (50 patients). BLA rolling submission Q3 2026, topline data Q1 2027, potential approval 2027. Korea license agreement with Kwangdong Pharmaceutical (first regional partner). Cash runway through Q4 2026."
     },
     "VP-001": {
       "company": "PYC Therapeutics",
       "current_phase": "Phase 1/2",
-      "status": "Completed - Phase 2/3 registrational study design finalized with FDA",
+      "status": "Completed Phase 1/2 - Registrational trial start delayed to by CY2030",
       "key_dates": {
         "phase1_start": "2022",
         "phase1_2_results": "2025-05",
         "fda_alignment_meeting": "2025-12",
-        "expected_phase2_3_start": "2025-H2"
+        "expected_phase2_3_start": "by CY2030",
+        "capital_raise": "2026-02"
       },
       "trial_ids": [
         "PLATYPUS",
-        "WALLABY"
+        "WALLABY",
+        "DINGO"
       ],
       "modality": "RNA therapy",
       "target": "PRPF31 (RP11)",
@@ -130,6 +142,11 @@
         "FDA alignment on trial design"
       ],
       "recent_updates": [
+        {
+          "date": "2026-03-22",
+          "event": "2026年2月に$653M（6億5300万ドル）の大型資金調達を完了。登録試験開始はCY2030までと発表資料に記載（従来の2025年後半予定から大幅遅延）。PYC公式サイトでは「Phase 1臨床試験の登録は終了。将来の試験を計画中」と記載。DINGO延長試験で一部患者に継続投与中。30μgが治療効果のある最小用量として特定",
+          "source": "Web Search"
+        },
         {
           "date": "2026-02-27",
           "event": "Phase 2/3 registrational study design finalized after FDA alignment meeting (Dec 2025). FDA confirmed sham control arm and inclusion/exclusion criteria acceptable. Phase 1/2 results (PLATYPUS 12名, WALLABY 6名): LLVA改善、微小視野改善を確認",
@@ -151,7 +168,7 @@
           "source": "Company PR"
         }
       ],
-      "notes": "First therapy specifically for RP11. Positive Phase 1/2 results with vision improvements reported by patients. RPD designation makes it eligible for Priority Review Voucher (PRV) worth $100M+ if approved. FDA alignment meeting confirmed trial design for Phase 2/3."
+      "notes": "First therapy specifically for RP11. Positive Phase 1/2 results with vision improvements (LLVA, microperimetry) in 18 patients across 4 dose levels (3, 10, 30, 75 μg). 30μg identified as minimum effective dose. RPD designation makes it eligible for Priority Review Voucher (PRV) worth $100M+ if approved. FDA alignment meeting confirmed trial design for Phase 2/3. However, registrational trial start delayed significantly to by CY2030 (previously 2025-H2). $653M capital raise in Feb 2026 secures funding through 2030. DINGO extension study ongoing for select patients."
     },
     "AGTC-501": {
       "company": "Beacon Therapeutics",
@@ -281,7 +298,7 @@
           "source": "Company PR"
         }
       ],
-      "notes": "Oral neuroprotective therapy (N-acetylcysteine amide/NACA). FDA Breakthrough Therapy + Fast Track + Orphan Drug designations. Phase 1/2 showed ~30% slower visual function loss in USH-associated RP. Boosts glutathione to protect retinal cells from oxidative damage. Confirmatory study planned for 2026."
+      "notes": "Oral neuroprotective therapy (N-acetylcysteine amide/NACA, 500mg/day). FDA Breakthrough Therapy (Oct 2025) + Fast Track + Orphan Drug designations. Phase 1/2 showed ~30% slower visual function loss in USH-associated RP, >50% reduction in photoreceptor loss. Boosts glutathione to protect retinal cells from oxidative damage. Confirmatory study planned for 2026 in US and Australia."
     },
     "Keio_Optogenetics": {
       "company": "Keio University / Restore Vision Co.",
@@ -384,6 +401,11 @@
       ],
       "recent_updates": [
         {
+          "date": "2026-03-22",
+          "event": "初期有効性シグナル確認: Phase 1の最初の6名（低・中用量）のうち3名で、2つの連続する時点（6ヶ月間隔）でBCVA改善を確認。2026年中に規制当局とデータ共有を開始予定。AI/機械学習ツールを統計解析と並行して使用し、ピボタル試験の最適なエンドポイント・患者集団の選定を行う予定",
+          "source": "Web Search"
+        },
+        {
           "date": "2026-02-27",
           "event": "PRODYGY Phase 1/2試験の患者投与を完了（2026年2月9日発表）。合計33名登録（SPVN06投与27名 + 対照群6名、2023年4月から投与開始）。初回データ読出しは2027年予定。2026年中に規制当局とのデータ共有を開始し、2027年にピボタル試験開始を目指す。RdCVF/RdCVFLを送達し、遺伝子変異に依存せず光受容体機能を維持",
           "source": "Web Search"
@@ -394,7 +416,7 @@
           "source": "Web Search (Gemini)"
         }
       ],
-      "notes": "Gene-agnostic gene therapy for RP delivering RdCVF and RdCVFL via AAV to sustain photoreceptor function. PRODYGY trial dosing completed (33 patients: 27 treated + 6 control). Favorable safety profile through 18+ months. Data readout expected 2027, pivotal trial planned 2027. US IND approved."
+      "notes": "Gene-agnostic gene therapy for RP delivering RdCVF and RdCVFL via AAV to sustain photoreceptor function. PRODYGY trial dosing completed (33 patients: 27 treated + 6 control). Initial efficacy signals: 3/6 patients in Phase 1 (low/mid dose) showed BCVA improvement at 2 consecutive timepoints (6-month intervals). Favorable safety profile through 18+ months. Regulatory data sharing planned 2026, data readout expected 2027, pivotal trial planned 2027. US IND approved."
     },
     "SPVN20": {
       "company": "SparingVision",
