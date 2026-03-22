@@ -72,6 +72,8 @@ def extract_program_info_from_text(text: str) -> Dict[str, Any]:
             context = text[start:end]
             prog_offset = prog_pos - start  # context内でのプログラム名の位置
             # "Phase 2/3" や "Phase 1/2a" のような複合表記にも対応
+            # 注意: "Phase 2/3" は「Phase 2からPhase 3へ向かう試験」を意味し、
+            # まだPhase 3に到達したわけではないため、低い方の番号（2）を採用する
             for phase_match in re.finditer(r"Phase\s*(\d)(?:\s*/\s*(\d))?", context, re.IGNORECASE):
                 # Phase言及の前後50文字に将来を示すキーワードがあれば除外
                 pm_start = max(0, phase_match.start() - 50)
@@ -91,9 +93,10 @@ def extract_program_info_from_text(text: str) -> Dict[str, Any]:
                 if has_other_program:
                     continue
                 distance = abs(phase_match.start() - prog_offset)
-                phases_with_distance.append((distance, int(phase_match.group(1))))
-                if phase_match.group(2):
-                    phases_with_distance.append((distance, int(phase_match.group(2))))
+                # 複合Phase（例: "Phase 2/3"）は低い方の番号を採用
+                # "Phase 2/3" = Phase 2からPhase 3を目指す試験であり、Phase 3到達ではない
+                phase_num = int(phase_match.group(1))
+                phases_with_distance.append((distance, phase_num))
         if phases_with_distance:
             # 最も近いPhase言及を優先（距離30文字以内のものだけ集めて最大値）
             # 近いものがなければ全体から最大値
@@ -124,13 +127,20 @@ def extract_program_info_from_text(text: str) -> Dict[str, Any]:
 
 
 def _extract_max_phase_number(phase_str: str) -> int:
-    """Phase文字列から最大のPhase番号を抽出する。
-    "Phase 2/3" → 3, "Phase 1/2a" → 2, "Phase 3" → 3, "BLA" → 4
+    """Phase文字列から現在のPhase番号を抽出する。
+    複合Phase表記は低い方の番号を採用する（試験の開始Phase）。
+    "Phase 2/3" → 2, "Phase 1/2a" → 1, "Phase 1/2" → 1,
+    "Phase 3" → 3, "Phase 2b" → 2, "BLA" → 4
     """
     if not phase_str:
         return 0
     if "BLA" in phase_str.upper() or "NDA" in phase_str.upper():
         return 4  # BLA/NDAはPhase 3より進んだ段階
+    # "Phase X/Y" の形式を検出し、Xを採用（複合Phaseの低い方）
+    compound = re.search(r"(\d)\s*/\s*(\d)", phase_str)
+    if compound:
+        return int(compound.group(1))
+    # 単独Phase（"Phase 3" など）
     numbers = re.findall(r"\d", phase_str)
     return max(int(n) for n in numbers) if numbers else 0
 
