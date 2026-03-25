@@ -156,10 +156,14 @@ def generate_markdown_report(data):
 - **主要なターゲット遺伝子**: RPGR, RPE65, PDE6A, USH2A
 - **最速FDA承認予測**: 2026年（MCO-010光遺伝学治療）
 
-#### 細胞治療
-- **試験数**: {len(data['trials'][data['trials']['BriefTitle'].str.contains('cell|stem|transplant', case=False, na=False)])}件
-- **アプローチ**: 幹細胞移植、網膜前駆細胞
-- **FDA承認予測**: 2030年代前半
+#### 細胞治療・再生医療（iPS細胞含む）
+- **試験数**: {len(data['trials'][data['trials']['BriefTitle'].str.contains('cell|stem|transplant|iPSC|iPS', case=False, na=False)])}件
+- **主要プログラム**:
+  - **DSP-3077（住友ファーマ）**: 日本発の他家iPS細胞由来網膜シート。神戸アイセンター病院で2年間の生着・安全性確認済み。米国Phase 1/2（Massachusetts Eye and Ear）
+  - **OpCT-001（BlueRock/Bayer）**: iPSC由来光受容体細胞。世界初のiPSC由来細胞治療。Phase 1/2a CLARICO試験進行中。FDA Fast Track + Orphan Drug指定
+  - **jCells/ファムゼレトセル（jCyte）**: 網膜前駆細胞。Phase 2 JC02-88試験進行中。FDA RMAT指定
+- **特徴**: 遺伝子変異に依存しない治療法。失われた網膜細胞を補う再生医療アプローチ
+- **FDA承認予測**: 2030年代前半～中盤
 
 #### 低分子薬
 - **試験数**: {len(data['trials'][data['trials']['BriefTitle'].str.contains('tablet|oral|drug', case=False, na=False)])}件

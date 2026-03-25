@@ -37,6 +37,7 @@ def extract_program_info_from_text(text: str) -> Dict[str, Any]:
         r"AGTC-501",
         r"OpCT-001",
         r"NPI-001",
+        r"DSP-3077",
         r"Botaretigene|bota-vec"
     ]
     
@@ -51,7 +52,7 @@ def extract_program_info_from_text(text: str) -> Dict[str, Any]:
     # 1. 将来の計画を示すキーワード（planned, design等）の近傍は除外
     # 2. 他のプログラム名がPhase言及とプログラム名の間にある場合は除外
     # 3. プログラム名から最も近いPhase言及を優先
-    phase_programs = ["MCO-010", "OCU400", "VP-001", "AGTC-501", "OpCT-001", "NPI-001"]
+    phase_programs = ["MCO-010", "OCU400", "VP-001", "AGTC-501", "OpCT-001", "NPI-001", "DSP-3077"]
     all_program_names = phase_programs + ["Botaretigene", "bota-vec", "SPVN06", "SPVN20",
                                           "Ultevursen", "ZM-02", "jCells", "DSP-3077",
                                           "VG901", "GS030", "4D-125"]
