@@ -1,6 +1,6 @@
 # 網膜色素変性症（RP）治療開発ロードマップ
 
-生成日時: 2026年03月23日 11:56
+生成日時: 2026年03月29日 20:31
 
 ## エグゼクティブサマリー
 
@@ -29,15 +29,15 @@
 
 ### 文献データ
 - **データソース**: PubMed
-- **総論文数**: 866件
+- **総論文数**: 867件
 - **検索クエリ**: "retinitis pigmentosa" AND ("gene therapy" OR "cell therapy")
 - **期間**: 1993-2026年
 
 #### 年別論文数（直近5年）
 | 年 | 論文数 |
 |---|--------|
-| 2026 | 20 |
-| 2025 | 83 |
+| 2026 | 22 |
+| 2025 | 82 |
 | 2024 | 63 |
 | 2023 | 99 |
 | 2022 | 67 |
@@ -60,7 +60,7 @@
 | NCT05537220 | Oral N-acetylcysteine for Retinitis Pigm... | PHASE3 | Johns Hopkins University | 71.7% | 2029年 | 2034年 | [2028, 2030] |
 | NCT07290530 | 24-Month Trial of NPI-001 for the Preser... | PHASE3 | Nacuity Pharmaceuticals, Inc. | 70.9% | 2030年 | 2035年 | [2029, 2031] |
 | NCT07174726 | A Phase 2 Open-label Study to Evaluate t... | PHASE2 | Beacon Therapeutics | 100.0% | 2030年 | 2035年 | [2029, 2030] |
-| NCT00999609 | Safety and Efficacy Study in Subjects Wi... | PHASE3 | Spark Therapeutics, Inc. | 71.1% | 2030年 | 2035年 | [2029, 2031] |
+| NCT00999609 | Safety and Efficacy Study in Subjects Wi... | PHASE3 | Spark Therapeutics, Inc. | 71.0% | 2030年 | 2035年 | [2029, 2031] |
 | NCT07082855 | A Multicenter, Randomized, Double-Blind,... | PHASE3 | Zhongshan Ophthalmic Center, Sun Yat-sen University | 71.7% | 2030年 | 2035年 | [2029, 2031] |
 | NCT03584165 | Long-term Safety and Efficacy Follow-up ... | PHASE3 | NightstaRx Ltd, a Biogen Company | 71.7% | 2030年 | 2035年 | [2029, 2031] |
 | NCT04850118 | A Clinical Trial Evaluating the Safety a... | PHASE2, PHASE3 | Beacon Therapeutics | 100.0% | 2030年 | 2035年 | [2029, 2030] |

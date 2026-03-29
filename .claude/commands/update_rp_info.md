@@ -1,7 +1,7 @@
 ---
 description: 網膜色素変性症の最新情報を収集し、プロジェクトのデータとドキュメントを更新
 argument-hint: '[full|quick|check]'
-allowed-tools: WebSearch, Bash(python3:*), Bash(git:*), Bash(gemini:*), Read, Write, Task
+allowed-tools: WebSearch, Bash(python3:*), Bash(git:*), Bash(.venv/bin/python:*), Read, Write, Edit, Task
 ---
 
 ## Context
@@ -29,21 +29,33 @@ allowed-tools: WebSearch, Bash(python3:*), Bash(git:*), Bash(gemini:*), Read, Wr
 
 ### 実行手順
 
-1. **Gemini検索で最新情報を収集**（checkモードとfullモードで実行）
-                        ```bash
-   # Gemini Searchを使用（より包括的な情報収集が可能）
-   gemini --prompt "WebSearch: MCO-010 Nanoscope Therapeutics retinitis pigmentosa 2025 latest update Phase 3"
-   gemini --prompt "WebSearch: OCU400 Ocugen retinitis pigmentosa 2025 latest update Phase 3"
-   gemini --prompt "WebSearch: Botaretigene sparoparvovec Janssen (J&J) retinitis pigmentosa 2025 latest update Phase 3"
-   gemini --prompt "WebSearch: AGTC-501 Beacon Therapeutics retinitis pigmentosa 2025 latest update Phase 2/3"
-   gemini --prompt "WebSearch: jCells jCyte retinitis pigmentosa 2025 latest update Phase 2"
-   gemini --prompt "WebSearch: Ultevursen Sepul Bio / Théa retinitis pigmentosa 2025 latest update Phase 2b"
-   gemini --prompt "WebSearch: VP-001 PYC Therapeutics retinitis pigmentosa 2025 latest update Phase 1/2"
-   gemini --prompt "WebSearch: retinitis pigmentosa gene therapy 2025 FDA approval new treatments"
-   gemini --prompt "WebSearch: 網膜色素変性症 遺伝子治療 2025 最新 日本 承認"
-   ```
-   
-   注: gemini-searchが利用できない場合は、通常のWebSearchツールを使用
+1. **WebSearchで最新情報を収集**（checkモードとfullモードで実行）
+
+   WebSearchツールを使用して以下のクエリを**並列実行**する（URLつきの検索結果が返るため、ソース検証が可能）。
+
+   **遺伝子治療・RNA治療:**
+   - `MCO-010 MOGENRY Nanoscope Therapeutics retinitis pigmentosa 2026 BLA approval update`
+   - `OCU400 Ocugen retinitis pigmentosa 2026 Phase 3 liMeliGhT BLA update`
+   - `AGTC-501 laru-zova Beacon Therapeutics retinitis pigmentosa 2026 VISTA trial update`
+   - `VP-001 PYC Therapeutics retinitis pigmentosa 2026 registrational trial update`
+   - `NPI-001 Nacuity retinitis pigmentosa 2026 confirmatory trial update`
+   - `SPVN06 SparingVision retinitis pigmentosa 2026 PRODYGY trial update`
+   - `SPVN20 SparingVision retinitis pigmentosa 2026 NYRVANA trial update`
+   - `Ultevursen Sepul Bio retinitis pigmentosa 2026 LUNA trial update`
+   - `Botaretigene sparoparvovec Janssen retinitis pigmentosa 2026 update`
+   - `VG901 VeonGen retinitis pigmentosa 2026 Phase 1b CNGA1 update`
+   - `ZM-02 Zhongmou retinitis pigmentosa 2026 PRISM trial update`
+
+   **iPS細胞・細胞治療:**
+   - `DSP-3077 Sumitomo Pharma iPSC retinal sheet retinitis pigmentosa 2026 update`
+   - `OpCT-001 BlueRock Therapeutics iPSC retinitis pigmentosa 2026 CLARICO update`
+   - `jCells jCyte famzeletcel retinitis pigmentosa 2026 Phase 2 update`
+
+   **一般・新規:**
+   - `retinitis pigmentosa gene therapy 2026 FDA approval new treatments clinical trial`
+   - `網膜色素変性症 遺伝子治療 iPS細胞 2026 最新 日本 承認`
+
+   **重要**: 検索結果のURLを確認し、信頼できるソース（会社PR、ClinicalTrials.gov、学会発表、査読論文）からの情報を優先すること。LLM要約ではなく元データに基づいて知識ベースを更新する。
 
 2. **既存データとの比較**（checkモードで実行）
    ```python
@@ -77,25 +89,30 @@ allowed-tools: WebSearch, Bash(python3:*), Bash(git:*), Bash(gemini:*), Read, Wr
 
 4. **データ処理**（fullモードのみ）
    ```bash
-   python3 src/ingest/parameters.py
+   .venv/bin/python src/ingest/parameters.py
    ```
 
 5. **シミュレーション実行**（fullモードのみ）
    ```bash
-   python3 src/sim/timeline_sim.py
+   .venv/bin/python src/sim/timeline_sim.py
    ```
 
 6. **レポート生成**（quickモードとfullモードで実行）
    ```bash
-   python3 src/reporting/build_report.py
+   PYTHONPATH=. .venv/bin/python src/reporting/build_report.py
    ```
 
-7. **結果確認**
+7. **更新履歴ページ生成**（quickモードとfullモードで実行）
    ```bash
-   open docs/index.html
+   PYTHONPATH=. .venv/bin/python src/reporting/build_updates_page.py
    ```
 
-8. **変更内容の確認**
+8. **結果確認**
+   ```bash
+   open docs/public/index.html
+   ```
+
+9. **変更内容の確認**
    ```bash
    git status --short
    ```

@@ -1,38 +1,50 @@
 {
-  "last_check_date": "2026-03-22T13:43:57.348164",
-  "manual_review_date": "2026-03-22",
-  "check_type": "web_search + manual_review",
+  "last_check_date": "2026-03-29T10:00:00",
+  "manual_review_date": "2026-03-29",
+  "check_type": "web_search (WebSearch tool)",
   "programs_checked": [
-    "VP-001",
     "MCO-010",
     "OCU400",
+    "VP-001",
     "AGTC-501",
     "OpCT-001",
-    "NPI-001"
+    "NPI-001",
+    "SPVN06",
+    "SPVN20",
+    "Ultevursen",
+    "Botaretigene sparoparvovec",
+    "VG901",
+    "ZM-02",
+    "DSP-3077",
+    "jCells"
   ],
   "sources_queried": [
-    "DuckDuckGo: MCO-010",
-    "DuckDuckGo: OCU400",
-    "DuckDuckGo: VP-001",
-    "DuckDuckGo: AGTC-501",
-    "DuckDuckGo: OpCT-001",
-    "DuckDuckGo: NPI-001",
-    "DuckDuckGo: SPVN06",
-    "DuckDuckGo: Ultevursen",
-    "DuckDuckGo: 一般RP遺伝子治療",
-    "DuckDuckGo: 一般RP臨床試験",
-    "WebSearch: VP-001 PYC Therapeutics 2026",
-    "WebSearch: OpCT-001 BlueRock Therapeutics 2026",
-    "WebSearch: OCU400 Ocugen 2026"
+    "WebSearch: MCO-010 MOGENRY Nanoscope 2026 BLA approval",
+    "WebSearch: OCU400 Ocugen 2026 Phase 3 liMeliGhT BLA",
+    "WebSearch: AGTC-501 laru-zova Beacon VISTA trial 2026",
+    "WebSearch: VP-001 PYC Therapeutics 2026 registrational trial",
+    "WebSearch: NPI-001 Nacuity 2026 confirmatory trial",
+    "WebSearch: SPVN06 SparingVision PRODYGY trial 2026",
+    "WebSearch: SPVN20 SparingVision NYRVANA trial 2026",
+    "WebSearch: Ultevursen Sepul Bio LUNA trial 2026",
+    "WebSearch: Botaretigene Janssen 2026",
+    "WebSearch: VG901 VeonGen Phase 1b CNGA1 2026",
+    "WebSearch: ZM-02 Zhongmou PRISM trial 2026",
+    "WebSearch: DSP-3077 Sumitomo Pharma iPSC 2026",
+    "WebSearch: OpCT-001 BlueRock CLARICO 2026",
+    "WebSearch: jCells jCyte Phase 2 2026",
+    "WebSearch: RP gene therapy 2026 FDA approval",
+    "WebSearch: 網膜色素変性症 遺伝子治療 iPS細胞 2026 日本",
+    "WebSearch: DSP-3077 FDA Orphan Drug Designation March 2026",
+    "WebSearch: jCyte ARVO 2026 interim results",
+    "WebSearch: Nanoscope MCO-010 PDUFA date priority review"
   ],
   "new_findings": [],
   "updates_found": [
-    "VP-001: 登録試験開始がCY2030まで遅延（従来2025-H2予定）、$653M資金調達（2026年2月）",
-    "OCU400: 韓国Kwangdong Pharmaceutical社とライセンス契約締結"
-  ],
-  "false_positives_corrected": [
-    "VP-001: Phase 1/2 → Phase 3（誤検知 - 検索結果でPhase 2/3計画への言及をPhase 3と誤認。実際はまだPhase 1/2完了段階）",
-    "OpCT-001: Phase 1/2a → Phase 3（誤検知 - 実際はPhase 1用量漸増段階でPhase 3の計画なし）",
-    "OCU400: BLA/MAA planned 2026（既知情報 - 2026-03-12更新で既に反映済み）"
+    "DSP-3077: FDA Orphan Drug Designation取得（2026年3月23日発表）- 税額控除、ユーザーフィー免除、7年間市場独占権",
+    "MCO-010: BLA rolling submission継続中（完全提出2026年初頭予定）。新US特許取得（2026年1月5日）",
+    "jCells: Frontiers in Cellular Neuroscience誌に査読論文掲載、Nature記事掲載",
+    "VG901/VeonGen: VG801（スターガルト病）ARVO 2026口頭発表予定、RPDD指定取得",
+    "SPVN06: Nature Gene Therapy誌に前臨床安全性論文掲載、H1 2026カンファレンス参加予定"
   ]
 }
