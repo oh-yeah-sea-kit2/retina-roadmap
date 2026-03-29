@@ -1,7 +1,7 @@
 ---
 description: 網膜色素変性症の最新情報を収集し、プロジェクトのデータとドキュメントを更新
 argument-hint: '[full|quick|check]'
-allowed-tools: WebSearch, Bash(python3:*), Bash(git:*), Bash(gemini:*), Read, Write, Task
+allowed-tools: WebSearch, Bash(python3:*), Bash(git:*), Bash(.venv/bin/python:*), Read, Write, Edit, Task
 ---
 
 ## Context
@@ -29,31 +29,33 @@ allowed-tools: WebSearch, Bash(python3:*), Bash(git:*), Bash(gemini:*), Read, Wr
 
 ### 実行手順
 
-1. **Gemini検索で最新情報を収集**（checkモードとfullモードで実行）
-   ```bash
-   # Gemini Searchを使用（より包括的な情報収集が可能）
-   # 遺伝子治療・RNA治療
-   gemini --prompt "WebSearch: MCO-010 MOGENRY Nanoscope Therapeutics retinitis pigmentosa 2026 latest update BLA approval"
-   gemini --prompt "WebSearch: OCU400 Ocugen retinitis pigmentosa 2026 latest update Phase 3 liMeliGhT BLA"
-   gemini --prompt "WebSearch: AGTC-501 laru-zova Beacon Therapeutics retinitis pigmentosa 2026 latest update VISTA trial"
-   gemini --prompt "WebSearch: VP-001 PYC Therapeutics retinitis pigmentosa 2026 latest update Phase 2/3"
-   gemini --prompt "WebSearch: NPI-001 Nacuity retinitis pigmentosa 2026 latest update breakthrough therapy"
-   gemini --prompt "WebSearch: SPVN06 SparingVision retinitis pigmentosa 2026 latest update PRODYGY trial"
-   gemini --prompt "WebSearch: SPVN20 SparingVision retinitis pigmentosa 2026 latest update NYRVANA trial"
-   gemini --prompt "WebSearch: Ultevursen Sepul Bio Théa retinitis pigmentosa 2026 latest update LUNA trial"
-   gemini --prompt "WebSearch: Botaretigene sparoparvovec Janssen retinitis pigmentosa 2026 latest update"
-   gemini --prompt "WebSearch: VG901 ViGeneron retinitis pigmentosa 2026 latest update Phase 1b"
-   gemini --prompt "WebSearch: ZM-02 Zhongmou retinitis pigmentosa 2026 latest update PRISM trial"
-   # iPS細胞・細胞治療
-   gemini --prompt "WebSearch: DSP-3077 Sumitomo Pharma iPSC retinal sheet retinitis pigmentosa 2026 latest update"
-   gemini --prompt "WebSearch: OpCT-001 BlueRock Therapeutics iPSC retinitis pigmentosa 2026 latest update CLARICO"
-   gemini --prompt "WebSearch: jCells jCyte retinitis pigmentosa 2026 latest update Phase 2"
-   # 一般・新規
-   gemini --prompt "WebSearch: retinitis pigmentosa gene therapy 2026 FDA approval new treatments clinical trial"
-   gemini --prompt "WebSearch: 網膜色素変性症 遺伝子治療 iPS細胞 2026 最新 日本 承認"
-   ```
+1. **WebSearchで最新情報を収集**（checkモードとfullモードで実行）
 
-   注: gemini-searchが利用できない場合は、通常のWebSearchツールを使用
+   WebSearchツールを使用して以下のクエリを**並列実行**する（URLつきの検索結果が返るため、ソース検証が可能）。
+
+   **遺伝子治療・RNA治療:**
+   - `MCO-010 MOGENRY Nanoscope Therapeutics retinitis pigmentosa 2026 BLA approval update`
+   - `OCU400 Ocugen retinitis pigmentosa 2026 Phase 3 liMeliGhT BLA update`
+   - `AGTC-501 laru-zova Beacon Therapeutics retinitis pigmentosa 2026 VISTA trial update`
+   - `VP-001 PYC Therapeutics retinitis pigmentosa 2026 registrational trial update`
+   - `NPI-001 Nacuity retinitis pigmentosa 2026 confirmatory trial update`
+   - `SPVN06 SparingVision retinitis pigmentosa 2026 PRODYGY trial update`
+   - `SPVN20 SparingVision retinitis pigmentosa 2026 NYRVANA trial update`
+   - `Ultevursen Sepul Bio retinitis pigmentosa 2026 LUNA trial update`
+   - `Botaretigene sparoparvovec Janssen retinitis pigmentosa 2026 update`
+   - `VG901 VeonGen retinitis pigmentosa 2026 Phase 1b CNGA1 update`
+   - `ZM-02 Zhongmou retinitis pigmentosa 2026 PRISM trial update`
+
+   **iPS細胞・細胞治療:**
+   - `DSP-3077 Sumitomo Pharma iPSC retinal sheet retinitis pigmentosa 2026 update`
+   - `OpCT-001 BlueRock Therapeutics iPSC retinitis pigmentosa 2026 CLARICO update`
+   - `jCells jCyte famzeletcel retinitis pigmentosa 2026 Phase 2 update`
+
+   **一般・新規:**
+   - `retinitis pigmentosa gene therapy 2026 FDA approval new treatments clinical trial`
+   - `網膜色素変性症 遺伝子治療 iPS細胞 2026 最新 日本 承認`
+
+   **重要**: 検索結果のURLを確認し、信頼できるソース（会社PR、ClinicalTrials.gov、学会発表、査読論文）からの情報を優先すること。LLM要約ではなく元データに基づいて知識ベースを更新する。
 
 2. **既存データとの比較**（checkモードで実行）
    ```python
