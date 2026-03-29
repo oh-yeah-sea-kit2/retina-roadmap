@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-03-23",
-  "update_notes": "2026-03-23(full): SPVN06 PRODYGY 12ヶ月トップラインデータ発表・Phase 3準備開始、NPI-001 Phase 2/3確認試験開始（NCT07290530）、ZM-02 PRISM試験正式開始（2026-02-25）、DSP-3077 Trial ID追加（NCT06891885）・MEE観察研究完了、VG901社名変更（VeonGen Therapeutics）、jCells ARVO 2026発表見込み・Phase 3準備中、Botaretigene PARASOL試験完了・XLRP開発停滞、SPVN20用量漸増進行中・米国IND申請予定、Ultevursen投与スケジュール詳細追加。2026-03-22(full): MCO-010ブランド名MOGENRY条件付き承認・GA Phase 2計画追加、VP-001登録試験CY2030に遅延（$653M資金調達）、OCU400韓国Kwangdong社ライセンス契約追加、SPVN06初期有効性シグナル追加、NPI-001確認試験詳細追加。2026-03-12: OCU400 Phase 3 liMeliGhT登録完了（140名、2026年3月2日発表）・BLA Q3 2026・トップラインQ1 2027に更新、MCO-010スターガルトPhase 3計画追加、SPVN20新規追加（NYRVANA Phase 1/2初投与）、OpCT-001試験デザイン詳細更新",
+  "last_updated": "2026-03-29",
+  "update_notes": "2026-03-29(full): DSP-3077 FDA Orphan Drug Designation取得（2026-03-23）、MCO-010 BLA継続中・新US特許取得（2026-01-05）、jCells Frontiers誌査読論文・Nature記事掲載、VG901/VeonGen VG801 ARVO 2026口頭発表予定、SPVN06 Nature Gene Therapy誌前臨床安全性論文。2026-03-23(full): SPVN06 PRODYGY 12ヶ月トップラインデータ発表・Phase 3準備開始、NPI-001 Phase 2/3確認試験開始（NCT07290530）、ZM-02 PRISM試験正式開始（2026-02-25）、DSP-3077 Trial ID追加（NCT06891885）・MEE観察研究完了、VG901社名変更（VeonGen Therapeutics）、jCells ARVO 2026発表見込み・Phase 3準備中。2026-03-12: OCU400 Phase 3 liMeliGhT登録完了（140名）・BLA Q3 2026、MCO-010スターガルトPhase 3計画追加、SPVN20新規追加",
   "programs": {
     "MCO-010": {
       "company": "Nanoscope Therapeutics",
@@ -11,6 +11,8 @@
         "phase3_completion": "2024-03",
         "bla_submission_start": "2025-07-14",
         "expected_bla_completion": "2026-early",
+        "pdufa_target_date": "TBD (after BLA acceptance)",
+        "us_patent_granted": "2026-01-05",
         "japan_sakigake_designation": "2026-01-21"
       },
       "trial_ids": [
@@ -27,6 +29,11 @@
         "Japan MHLW Orphan Drug Designation"
       ],
       "recent_updates": [
+        {
+          "date": "2026-03-29",
+          "event": "BLA rolling submissionは継続中（完全提出は2026年初頭予定）。FDA承認・CRLの発表は未確認。Ophthalmology TimesのQ2 2026パイプライン記事にMCO-010が掲載。新US特許取得（2026年1月5日）- MCO光遺伝学プラットフォームの知的財産保護を強化。BLA完全提出完了後、Priority Reviewにより6ヶ月以内の審査結果が期待される",
+          "source": "Web Search (ophthalmologytimes.com, nanostherapeutics.com, prnewswire.com)"
+        },
         {
           "date": "2026-03-22",
           "event": "ブランド名「MOGENRY」がFDA・EMA・PMDAで条件付き承認。BLA完全提出は2026年初頭予定で、Priority Reviewにより2026年中のFDA承認の可能性あり。地図状萎縮（GA）向けPhase 2を2026年開始予定（パイプライン拡大）。スターガルト病Phase 3も2026年開始予定",
@@ -63,7 +70,7 @@
           "source": "Company PR"
         }
       ],
-      "notes": "First gene-agnostic gene therapy for RP (sonpiretigene isteparvovec / brand name: MOGENRY). Uses AAV2 vector to deliver multi-characteristic opsin (MCO) to bipolar retinal cells via intravitreal injection. Full BLA submission expected early 2026, eligible for priority review - potential FDA approval in 2026. One-time in-office injection for severe vision loss. ICER (April 2025) concluded evidence adequately demonstrates net health benefit. STARLIGHT Phase 2 positive for Stargardt disease; Phase 3 registrational trial planned for 2026. Geographic atrophy (GA) Phase 2 also planned for 2026. Japan MHLW granted Sakigake (Pioneer) and Orphan Drug designations (Jan 2026) - first retinal gene therapy to receive both, enabling accelerated 6-month review in Japan. Brand name MOGENRY conditionally approved by FDA, EMA, and PMDA."
+      "notes": "First gene-agnostic gene therapy for RP (sonpiretigene isteparvovec / brand name: MOGENRY). Uses AAV2 vector to deliver multi-characteristic opsin (MCO) to bipolar retinal cells via intravitreal injection. BLA rolling submission ongoing, full submission expected early 2026. New US patent granted Jan 5, 2026 for MCO platform. Eligible for priority review (6-month review after BLA acceptance) - potential FDA approval in 2026. One-time in-office injection for severe vision loss. ICER (April 2025) concluded evidence adequately demonstrates net health benefit. STARLIGHT Phase 2 positive for Stargardt disease; Phase 3 registrational trial planned for 2026. Geographic atrophy (GA) Phase 2 also planned for 2026. Japan MHLW granted Sakigake (Pioneer) and Orphan Drug designations (Jan 2026) - first retinal gene therapy to receive both, enabling accelerated 6-month review in Japan. Brand name MOGENRY conditionally approved by FDA, EMA, and PMDA."
     },
     "OCU400": {
       "company": "Ocugen",
@@ -275,7 +282,9 @@
         "confirmatory_trial_start": "2026-early",
         "trial_duration_months": 24
       },
-      "trial_ids": ["NCT07290530"],
+      "trial_ids": [
+        "NCT07290530"
+      ],
       "modality": "Small molecule (oral)",
       "target": "Neuroprotection (antioxidant - N-acetylcysteine amide)",
       "regulatory": [
@@ -409,6 +418,11 @@
       ],
       "recent_updates": [
         {
+          "date": "2026-03-29",
+          "event": "Nature Gene Therapy誌に前臨床安全性・体内分布論文「Preclinical safety and biodistribution of SPVN06」が掲載。H1 2026のカンファレンス参加予定を発表（SparingVision公式サイト）。PRODYGY試験データの規制当局との共有が2026年中に進行中",
+          "source": "Web Search (nature.com, sparingvision.com)"
+        },
+        {
           "date": "2026-03-23",
           "event": "PRODYGY試験12ヶ月トップラインデータ発表。全用量で忍容性良好・SAEなし。網膜構造維持（視細胞層厚み）と視機能（微細視野感度）でプラセボ群比較でポジティブな傾向確認。FDA/EMAとの規制当局協議を開始。Phase 3（ピボタル試験）を2026年後半〜2027年初頭に開始計画",
           "source": "Web Search (Gemini)"
@@ -540,6 +554,11 @@
       ],
       "recent_updates": [
         {
+          "date": "2026-03-29",
+          "event": "VG801（スターガルト病向け遺伝子治療）のARVO 2026口頭発表を予定。同社のパイプライン拡大を示す。VG901（RP向け）のPhase 1b高用量コホート評価は継続中。VG801にもFDA RPDD指定取得",
+          "source": "Web Search (biospace.com, ophthalmologytimes.com)"
+        },
+        {
           "date": "2026-03-23",
           "event": "社名をViGeneronからVeonGen Therapeuticsに変更（2025年6月）。Phase 1b高用量コホート評価中。最終解析結果の発表またはPhase 2/3移行準備段階。CNGA1変異RPに対する世界唯一の臨床段階治療法",
           "source": "Web Search (Gemini)"
@@ -632,6 +651,11 @@
       ],
       "recent_updates": [
         {
+          "date": "2026-03-29",
+          "event": "Frontiers in Cellular Neuroscience誌に「Retinal progenitor cells (jCell) for retinitis pigmentosa」の査読論文が掲載（PubMed ID: 40927136）。Nature誌にも「First-in-class cell therapy shows promise in patients with progressive vision loss」の記事掲載。JC02-88中間結果はQ1 2026予定だが正式発表は未確認。ARVO 2026（5月）での発表が有力",
+          "source": "Web Search (frontiersin.org, nature.com, pubmed.ncbi.nlm.nih.gov)"
+        },
+        {
           "date": "2026-03-23",
           "event": "JC02-88試験のデータ集積・解析中。正式な中間解析プレスリリースは未発行（Q1 2026目標）。ARVO 2026（2026年5月）での発表が有力視。Phase 2b試験での高用量群（300万細胞）で平均+16.27文字改善の既存データを基に、Phase 3ピボタル試験の設計・準備を並行して進行中。Frontiers in Cellular Neuroscience誌で高用量群12ヶ月データ（平均+9.0文字改善）を発表済み",
           "source": "Web Search (Gemini)"
@@ -657,19 +681,30 @@
     "DSP-3077": {
       "company": "Sumitomo Pharma",
       "current_phase": "Phase 1/2",
-      "status": "Phase 1/2 trial in progress - First transplant by end of FY2025 (March 2026)",
+      "status": "Phase 1/2 trial in progress - FDA Orphan Drug Designation granted",
       "key_dates": {
         "ind_submission": "2024-10-25",
         "fda_ind_clearance": "2024-11",
+        "fda_orphan_drug_designation": "2026-03-23",
         "expected_transplantation_start": "FY2025 (by March 2026)",
         "mee_observational_study_completed": "2026-02",
         "long_term_followup_years": 15
       },
-      "trial_ids": ["NCT06891885", "NCT06517940"],
+      "trial_ids": [
+        "NCT06891885",
+        "NCT06517940"
+      ],
       "modality": "Cell therapy (allogeneic iPSC-derived retinal sheet)",
       "target": "Photoreceptor replacement (3D retinal organoid)",
-      "regulatory": [],
+      "regulatory": [
+        "FDA Orphan Drug Designation"
+      ],
       "recent_updates": [
+        {
+          "date": "2026-03-29",
+          "event": "FDA Orphan Drug Designation取得（2026年3月23日発表）。オーファン指定により臨床試験費用の税額控除、FDAユーザーフィー免除、承認後7年間の市場独占権が付与。住友ファーマとしては過去1年で4件目のFDA Orphan Drug Designation取得。Phase 1/2試験（NCT06891885）進行中",
+          "source": "Company PR (prnewswire.com), Foundation Fighting Blindness, CheckOrphan, Ophthalmology Times"
+        },
         {
           "date": "2026-03-23",
           "event": "住友ファーマR&D説明会（2026年2月17日）: 米国Phase 1/2試験（NCT06891885）進行中。FY2025内（2026年3月末まで）の第1症例移植開始を目標。MEEでの観察研究（NCT06517940）が2026年2月末に完了、エンドポイント最適化に活用。移植後最大15年間の長期安全性モニタリングを計画。神戸アイセンターでは「ひも状」iPS網膜細胞移植の新臨床研究が2025年12月に厚労省承認",
@@ -681,7 +716,7 @@
           "source": "Web Search"
         }
       ],
-      "notes": "Allogeneic iPSC-derived retinal sheet (3D organoid) for RP. Kobe City Eye Hospital confirmed 2-year engraftment and safety in clinical research (started 2020). US Phase 1/2 (NCT06891885) at Massachusetts Eye and Ear, first transplant planned by end of FY2025 (March 2026). MEE observational study (NCT06517940) completed Feb 2026 for endpoint optimization. 15-year long-term safety monitoring planned. Kobe Eye Center also approved new 'string-shaped' iPSC retinal cell transplant clinical research (Dec 2025 MHLW approval). Uses fresh non-frozen 3D tissue. Building on pioneering Japanese iPS cell retinal sheet technology."
+      "notes": "Allogeneic iPSC-derived retinal sheet (3D organoid) for RP. FDA Orphan Drug Designation granted March 23, 2026 (tax credits, fee exemption, 7-year market exclusivity). Kobe City Eye Hospital confirmed 2-year engraftment and safety in clinical research (started 2020). US Phase 1/2 (NCT06891885) at Massachusetts Eye and Ear, first transplant planned by end of FY2025 (March 2026). MEE observational study (NCT06517940) completed Feb 2026 for endpoint optimization. 15-year long-term safety monitoring planned. Kobe Eye Center also approved new 'string-shaped' iPSC retinal cell transplant clinical research (Dec 2025 MHLW approval). Uses fresh non-frozen 3D tissue. Building on pioneering Japanese iPS cell retinal sheet technology."
     }
   }
 }
