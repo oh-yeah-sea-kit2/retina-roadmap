@@ -1,38 +1,51 @@
 {
-  "last_check_date": "2026-03-22T13:43:57.348164",
-  "manual_review_date": "2026-03-22",
-  "check_type": "web_search + manual_review",
+  "last_check_date": "2026-03-23T10:00:00",
+  "manual_review_date": "2026-03-23",
+  "check_type": "web_search (Gemini CLI) + manual_review",
   "programs_checked": [
-    "VP-001",
     "MCO-010",
     "OCU400",
+    "VP-001",
     "AGTC-501",
     "OpCT-001",
-    "NPI-001"
+    "NPI-001",
+    "SPVN06",
+    "SPVN20",
+    "Ultevursen",
+    "Botaretigene sparoparvovec",
+    "VG901",
+    "ZM-02",
+    "DSP-3077",
+    "jCells"
   ],
   "sources_queried": [
-    "DuckDuckGo: MCO-010",
-    "DuckDuckGo: OCU400",
-    "DuckDuckGo: VP-001",
-    "DuckDuckGo: AGTC-501",
-    "DuckDuckGo: OpCT-001",
-    "DuckDuckGo: NPI-001",
-    "DuckDuckGo: SPVN06",
-    "DuckDuckGo: Ultevursen",
-    "DuckDuckGo: 一般RP遺伝子治療",
-    "DuckDuckGo: 一般RP臨床試験",
-    "WebSearch: VP-001 PYC Therapeutics 2026",
-    "WebSearch: OpCT-001 BlueRock Therapeutics 2026",
-    "WebSearch: OCU400 Ocugen 2026"
+    "Gemini CLI: MCO-010 MOGENRY Nanoscope 2026 BLA",
+    "Gemini CLI: OCU400 Ocugen 2026 Phase 3 liMeliGhT",
+    "Gemini CLI: AGTC-501 laru-zova Beacon VISTA trial",
+    "Gemini CLI: VP-001 PYC Therapeutics 2026",
+    "Gemini CLI: NPI-001 Nacuity 2026 breakthrough therapy",
+    "Gemini CLI: SPVN06 SparingVision PRODYGY trial",
+    "Gemini CLI: SPVN20 SparingVision NYRVANA trial",
+    "Gemini CLI: Ultevursen Sepul Bio LUNA trial",
+    "Gemini CLI: Botaretigene Janssen LUMEOS",
+    "Gemini CLI: VG901 ViGeneron Phase 1b",
+    "Gemini CLI: ZM-02 Zhongmou PRISM trial",
+    "Gemini CLI: DSP-3077 Sumitomo Pharma iPSC",
+    "Gemini CLI: OpCT-001 BlueRock CLARICO",
+    "Gemini CLI: jCells jCyte Phase 2",
+    "Gemini CLI: RP gene therapy 2026 FDA approval",
+    "Gemini CLI: 網膜色素変性症 遺伝子治療 iPS細胞 2026 日本"
   ],
   "new_findings": [],
   "updates_found": [
-    "VP-001: 登録試験開始がCY2030まで遅延（従来2025-H2予定）、$653M資金調達（2026年2月）",
-    "OCU400: 韓国Kwangdong Pharmaceutical社とライセンス契約締結"
-  ],
-  "false_positives_corrected": [
-    "VP-001: Phase 1/2 → Phase 3（誤検知 - 検索結果でPhase 2/3計画への言及をPhase 3と誤認。実際はまだPhase 1/2完了段階）",
-    "OpCT-001: Phase 1/2a → Phase 3（誤検知 - 実際はPhase 1用量漸増段階でPhase 3の計画なし）",
-    "OCU400: BLA/MAA planned 2026（既知情報 - 2026-03-12更新で既に反映済み）"
+    "SPVN06: PRODYGY 12ヶ月トップラインデータ発表、Phase 3準備開始（FDA/EMA協議開始）",
+    "NPI-001: Phase 2/3確認試験開始（NCT07290530）、Phase 1/2→Phase 2/3に進行",
+    "ZM-02: PRISM試験正式開始（2026年2月25日）",
+    "DSP-3077: Trial ID判明（NCT06891885）、MEE観察研究完了、FY2025内移植目標",
+    "VG901: 社名変更 ViGeneron→VeonGen Therapeutics（2025年6月）",
+    "jCells: ARVO 2026で中間結果発表見込み、Phase 3ピボタル試験準備中",
+    "Botaretigene: XLRP開発停滞、PARASOL(GA) Phase 2b主要試験完了(2026-02-23)",
+    "SPVN20: 用量漸増進行中、米国IND申請2026年予定",
+    "日本: 神戸アイセンター「ひも状」iPS網膜細胞移植臨床研究が厚労省承認(2025年12月)"
   ]
 }

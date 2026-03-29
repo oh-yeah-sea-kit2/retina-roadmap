@@ -30,19 +30,29 @@ allowed-tools: WebSearch, Bash(python3:*), Bash(git:*), Bash(gemini:*), Read, Wr
 ### 実行手順
 
 1. **Gemini検索で最新情報を収集**（checkモードとfullモードで実行）
-                        ```bash
+   ```bash
    # Gemini Searchを使用（より包括的な情報収集が可能）
-   gemini --prompt "WebSearch: MCO-010 Nanoscope Therapeutics retinitis pigmentosa 2025 latest update Phase 3"
-   gemini --prompt "WebSearch: OCU400 Ocugen retinitis pigmentosa 2025 latest update Phase 3"
-   gemini --prompt "WebSearch: Botaretigene sparoparvovec Janssen (J&J) retinitis pigmentosa 2025 latest update Phase 3"
-   gemini --prompt "WebSearch: AGTC-501 Beacon Therapeutics retinitis pigmentosa 2025 latest update Phase 2/3"
-   gemini --prompt "WebSearch: jCells jCyte retinitis pigmentosa 2025 latest update Phase 2"
-   gemini --prompt "WebSearch: Ultevursen Sepul Bio / Théa retinitis pigmentosa 2025 latest update Phase 2b"
-   gemini --prompt "WebSearch: VP-001 PYC Therapeutics retinitis pigmentosa 2025 latest update Phase 1/2"
-   gemini --prompt "WebSearch: retinitis pigmentosa gene therapy 2025 FDA approval new treatments"
-   gemini --prompt "WebSearch: 網膜色素変性症 遺伝子治療 2025 最新 日本 承認"
+   # 遺伝子治療・RNA治療
+   gemini --prompt "WebSearch: MCO-010 MOGENRY Nanoscope Therapeutics retinitis pigmentosa 2026 latest update BLA approval"
+   gemini --prompt "WebSearch: OCU400 Ocugen retinitis pigmentosa 2026 latest update Phase 3 liMeliGhT BLA"
+   gemini --prompt "WebSearch: AGTC-501 laru-zova Beacon Therapeutics retinitis pigmentosa 2026 latest update VISTA trial"
+   gemini --prompt "WebSearch: VP-001 PYC Therapeutics retinitis pigmentosa 2026 latest update Phase 2/3"
+   gemini --prompt "WebSearch: NPI-001 Nacuity retinitis pigmentosa 2026 latest update breakthrough therapy"
+   gemini --prompt "WebSearch: SPVN06 SparingVision retinitis pigmentosa 2026 latest update PRODYGY trial"
+   gemini --prompt "WebSearch: SPVN20 SparingVision retinitis pigmentosa 2026 latest update NYRVANA trial"
+   gemini --prompt "WebSearch: Ultevursen Sepul Bio Théa retinitis pigmentosa 2026 latest update LUNA trial"
+   gemini --prompt "WebSearch: Botaretigene sparoparvovec Janssen retinitis pigmentosa 2026 latest update"
+   gemini --prompt "WebSearch: VG901 ViGeneron retinitis pigmentosa 2026 latest update Phase 1b"
+   gemini --prompt "WebSearch: ZM-02 Zhongmou retinitis pigmentosa 2026 latest update PRISM trial"
+   # iPS細胞・細胞治療
+   gemini --prompt "WebSearch: DSP-3077 Sumitomo Pharma iPSC retinal sheet retinitis pigmentosa 2026 latest update"
+   gemini --prompt "WebSearch: OpCT-001 BlueRock Therapeutics iPSC retinitis pigmentosa 2026 latest update CLARICO"
+   gemini --prompt "WebSearch: jCells jCyte retinitis pigmentosa 2026 latest update Phase 2"
+   # 一般・新規
+   gemini --prompt "WebSearch: retinitis pigmentosa gene therapy 2026 FDA approval new treatments clinical trial"
+   gemini --prompt "WebSearch: 網膜色素変性症 遺伝子治療 iPS細胞 2026 最新 日本 承認"
    ```
-   
+
    注: gemini-searchが利用できない場合は、通常のWebSearchツールを使用
 
 2. **既存データとの比較**（checkモードで実行）
@@ -77,22 +87,22 @@ allowed-tools: WebSearch, Bash(python3:*), Bash(git:*), Bash(gemini:*), Read, Wr
 
 4. **データ処理**（fullモードのみ）
    ```bash
-   python3 src/ingest/parameters.py
+   .venv/bin/python src/ingest/parameters.py
    ```
 
 5. **シミュレーション実行**（fullモードのみ）
    ```bash
-   python3 src/sim/timeline_sim.py
+   .venv/bin/python src/sim/timeline_sim.py
    ```
 
 6. **レポート生成**（quickモードとfullモードで実行）
    ```bash
-   python3 src/reporting/build_report.py
+   PYTHONPATH=. .venv/bin/python src/reporting/build_report.py
    ```
 
 7. **結果確認**
    ```bash
-   open docs/index.html
+   open docs/public/index.html
    ```
 
 8. **変更内容の確認**
