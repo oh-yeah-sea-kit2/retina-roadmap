@@ -86,15 +86,6 @@ def generate_html(kb, last_check):
     last_check_date = last_check.get("last_check_date", "")[:10]
     check_type = last_check.get("check_type", "")
 
-    # 各プログラムの現在のステータスサマリーを構築
-    program_status = {}
-    for pid, prog in kb.get("programs", {}).items():
-        program_status[pid] = {
-            "company": prog.get("company", ""),
-            "phase": prog.get("current_phase", ""),
-            "status": prog.get("status", ""),
-        }
-
     # 更新一覧のHTML生成
     timeline_html = ""
     for date in sorted_dates:
@@ -153,7 +144,6 @@ def generate_html(kb, last_check):
         company = prog.get("company", "")
         updates = prog.get("recent_updates", [])
         last_update_date = updates[0]["date"] if updates else "-"
-        regulatory = ", ".join(prog.get("regulatory", [])) or "-"
 
         programs_table_rows += f"""
                     <tr>
