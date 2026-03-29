@@ -1,6 +1,6 @@
 # 網膜色素変性症（RP）治療開発ロードマップ
 
-生成日時: 2026年03月25日 21:28
+生成日時: 2026年03月29日 12:17
 
 ## エグゼクティブサマリー
 
@@ -57,13 +57,13 @@
 | NCT04945772 | Efficacy and Safety of MCO-010 Optogenet... | PHASE2 | Nanoscope Therapeutics Inc. | 100.0% | 2026年 | 2029年 | [2026, 2027] |
 | NCT05203939 | Study to Assess the Safety and Efficacy ... | PHASE1, PHASE2 | Ocugen | 100.0% | 2027年 | 2032年 | [2027, 2027] |
 | NCT06388200 | A Phase 3 Study Of OCU400 Gene Therapy f... | PHASE3 | Ocugen | 100.0% | 2027年 | 2032年 | [2027, 2027] |
+| NCT00999609 | Safety and Efficacy Study in Subjects Wi... | PHASE3 | Spark Therapeutics, Inc. | 71.5% | 2030年 | 2035年 | [2029, 2031] |
 | NCT07174726 | A Phase 2 Open-label Study to Evaluate t... | PHASE2 | Beacon Therapeutics | 100.0% | 2030年 | 2035年 | [2029, 2030] |
-| NCT00999609 | Safety and Efficacy Study in Subjects Wi... | PHASE3 | Spark Therapeutics, Inc. | 71.7% | 2030年 | 2035年 | [2029, 2031] |
 | NCT04850118 | A Clinical Trial Evaluating the Safety a... | PHASE2, PHASE3 | Beacon Therapeutics | 100.0% | 2030年 | 2035年 | [2029, 2030] |
-| NCT03584165 | Long-term Safety and Efficacy Follow-up ... | PHASE3 | NightstaRx Ltd, a Biogen Company | 72.0% | 2032年 | 2037年 | [2031, 2033] |
-| NCT07290530 | 24-Month Trial of NPI-001 for the Preser... | PHASE3 | Nacuity Pharmaceuticals, Inc. | 71.5% | 2032年 | 2037年 | [2031, 2033] |
-| NCT07082855 | A Multicenter, Randomized, Double-Blind,... | PHASE3 | Zhongshan Ophthalmic Center, Sun Yat-sen University | 71.2% | 2032年 | 2037年 | [2031, 2033] |
-| NCT05537220 | Oral N-acetylcysteine for Retinitis Pigm... | PHASE3 | Johns Hopkins University | 72.2% | 2032年 | 2037年 | [2031, 2033] |
+| NCT03584165 | Long-term Safety and Efficacy Follow-up ... | PHASE3 | NightstaRx Ltd, a Biogen Company | 70.9% | 2033年 | 2038年 | [2032, 2034] |
+| NCT05537220 | Oral N-acetylcysteine for Retinitis Pigm... | PHASE3 | Johns Hopkins University | 71.6% | 2033年 | 2038年 | [2032, 2034] |
+| NCT07082855 | A Multicenter, Randomized, Double-Blind,... | PHASE3 | Zhongshan Ophthalmic Center, Sun Yat-sen University | 72.1% | 2033年 | 2038年 | [2032, 2034] |
+| NCT07290530 | 24-Month Trial of NPI-001 for the Preser... | PHASE3 | Nacuity Pharmaceuticals, Inc. | 71.9% | 2033年 | 2038年 | [2032, 2034] |
 
 
 ### 日本での承認予測
@@ -75,13 +75,13 @@
 | NCT04945772 | 2026年 | **2029年** | [2028, 2029] | +2.1年 |
 | NCT05203939 | 2027年 | **2032年** | [2031, 2033] | +5.0年 |
 | NCT06388200 | 2027年 | **2032年** | [2031, 2033] | +5.0年 |
-| NCT07174726 | 2030年 | **2035年** | [2034, 2036] | +5.0年 |
 | NCT00999609 | 2030年 | **2035年** | [2034, 2036] | +5.0年 |
+| NCT07174726 | 2030年 | **2035年** | [2034, 2036] | +5.0年 |
 | NCT04850118 | 2030年 | **2035年** | [2034, 2036] | +5.0年 |
-| NCT03584165 | 2032年 | **2037年** | [2036, 2038] | +5.0年 |
-| NCT07290530 | 2032年 | **2037年** | [2036, 2038] | +5.0年 |
-| NCT07082855 | 2032年 | **2037年** | [2036, 2038] | +5.0年 |
-| NCT05537220 | 2032年 | **2037年** | [2036, 2038] | +5.0年 |
+| NCT03584165 | 2033年 | **2038年** | [2036, 2039] | +5.0年 |
+| NCT05537220 | 2033年 | **2038年** | [2036, 2039] | +5.0年 |
+| NCT07082855 | 2033年 | **2038年** | [2036, 2039] | +5.0年 |
+| NCT07290530 | 2033年 | **2038年** | [2036, 2039] | +5.0年 |
 
 
 詳細は[地域別承認予測タイムライン](regional_approval_timeline.html)をご覧ください。
@@ -114,8 +114,9 @@
 ![トルネード図](images/tornado.png)
 
 ### 主要な影響要因
-- **PHASE3 duration** (increase 20%): +1.0年の影響
-- **PHASE2 duration** (increase 20%): +0.2年の影響
+- **PHASE3 duration** (increase 20%): +0.8年の影響
+- **PHASE2 duration** (increase 20%): +0.4年の影響
+- **PHASE1 duration** (increase 20%): +0.2年の影響
 
 
 ## 4. 予測の可視化
