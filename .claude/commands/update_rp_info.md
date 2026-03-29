@@ -102,12 +102,17 @@ allowed-tools: WebSearch, Bash(python3:*), Bash(git:*), Bash(.venv/bin/python:*)
    PYTHONPATH=. .venv/bin/python src/reporting/build_report.py
    ```
 
-7. **結果確認**
+7. **更新履歴ページ生成**（quickモードとfullモードで実行）
+   ```bash
+   PYTHONPATH=. .venv/bin/python src/reporting/build_updates_page.py
+   ```
+
+8. **結果確認**
    ```bash
    open docs/public/index.html
    ```
 
-8. **変更内容の確認**
+9. **変更内容の確認**
    ```bash
    git status --short
    ```
