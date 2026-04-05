@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-29",
+  "last_updated": "2026-04-04",
   "update_notes": "2026-03-29(full): DSP-3077 FDA Orphan Drug Designation取得（2026-03-23）、MCO-010 BLA継続中・新US特許取得（2026-01-05）、jCells Frontiers誌査読論文・Nature記事掲載、VG901/VeonGen VG801 ARVO 2026口頭発表予定、SPVN06 Nature Gene Therapy誌前臨床安全性論文。2026-03-23(full): SPVN06 PRODYGY 12ヶ月トップラインデータ発表・Phase 3準備開始、NPI-001 Phase 2/3確認試験開始（NCT07290530）、ZM-02 PRISM試験正式開始（2026-02-25）、DSP-3077 Trial ID追加（NCT06891885）・MEE観察研究完了、VG901社名変更（VeonGen Therapeutics）、jCells ARVO 2026発表見込み・Phase 3準備中。2026-03-12: OCU400 Phase 3 liMeliGhT登録完了（140名）・BLA Q3 2026、MCO-010スターガルトPhase 3計画追加、SPVN20新規追加",
   "programs": {
     "MCO-010": {
@@ -717,6 +717,24 @@
         }
       ],
       "notes": "Allogeneic iPSC-derived retinal sheet (3D organoid) for RP. FDA Orphan Drug Designation granted March 23, 2026 (tax credits, fee exemption, 7-year market exclusivity). Kobe City Eye Hospital confirmed 2-year engraftment and safety in clinical research (started 2020). US Phase 1/2 (NCT06891885) at Massachusetts Eye and Ear, first transplant planned by end of FY2025 (March 2026). MEE observational study (NCT06517940) completed Feb 2026 for endpoint optimization. 15-year long-term safety monitoring planned. Kobe Eye Center also approved new 'string-shaped' iPSC retinal cell transplant clinical research (Dec 2025 MHLW approval). Uses fresh non-frozen 3D tissue. Building on pioneering Japanese iPS cell retinal sheet technology."
+    },
+    "Botaretigene": {
+      "company": "TBD",
+      "current_phase": "TBD",
+      "status": "New",
+      "key_dates": {},
+      "trial_ids": [],
+      "modality": "TBD",
+      "target": "TBD",
+      "regulatory": [],
+      "recent_updates": [
+        {
+          "date": "2026-04-04",
+          "event": "Newly identified program",
+          "source": "Web search"
+        }
+      ],
+      "notes": "Automatically added - needs manual verification"
     }
   }
 }
