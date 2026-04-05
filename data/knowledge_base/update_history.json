@@ -121,6 +121,18 @@
           "AGTC-501: Phase更新 Phase 2/3 → Phase 3"
         ]
       }
+    },
+    {
+      "date": "2026-04-04",
+      "type": "full_update",
+      "summary": "全16プログラム検索、新規更新なし（前回3/29から6日後）",
+      "changes": {
+        "new_programs": [],
+        "updated_programs": [],
+        "key_events": [
+          "全プログラムで前回報告の情報と一致、新規の重要な更新なし"
+        ]
+      }
     }
   ]
 }
