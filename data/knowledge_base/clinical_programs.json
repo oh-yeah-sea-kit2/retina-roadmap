@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-04-04",
-  "update_notes": "2026-03-29(full): DSP-3077 FDA Orphan Drug Designation取得（2026-03-23）、MCO-010 BLA継続中・新US特許取得（2026-01-05）、jCells Frontiers誌査読論文・Nature記事掲載、VG901/VeonGen VG801 ARVO 2026口頭発表予定、SPVN06 Nature Gene Therapy誌前臨床安全性論文。2026-03-23(full): SPVN06 PRODYGY 12ヶ月トップラインデータ発表・Phase 3準備開始、NPI-001 Phase 2/3確認試験開始（NCT07290530）、ZM-02 PRISM試験正式開始（2026-02-25）、DSP-3077 Trial ID追加（NCT06891885）・MEE観察研究完了、VG901社名変更（VeonGen Therapeutics）、jCells ARVO 2026発表見込み・Phase 3準備中。2026-03-12: OCU400 Phase 3 liMeliGhT登録完了（140名）・BLA Q3 2026、MCO-010スターガルトPhase 3計画追加、SPVN20新規追加",
+  "last_updated": "2026-04-13",
+  "update_notes": "2026-04-13(full): RTx-015（Ray Therapeutics）新規追加 - FDA RMAT指定（2026-04-01）・Fast Track、ENVISION Phase 1試験（NCT06460844）。MCO-010 BLA rolling submission継続中・Q2 2026パイプラインマイルストーンとして注目。jCells Q1 2026中間結果未発表・ARVO 2026（5月）での発表有力。重複Botaretigeneエントリ削除。2026-03-29(full): DSP-3077 FDA Orphan Drug Designation取得（2026-03-23）、MCO-010 BLA継続中・新US特許取得（2026-01-05）、jCells Frontiers誌査読論文・Nature記事掲載、VG901/VeonGen VG801 ARVO 2026口頭発表予定、SPVN06 Nature Gene Therapy誌前臨床安全性論文。2026-03-23(full): SPVN06 PRODYGY 12ヶ月トップラインデータ発表・Phase 3準備開始、NPI-001 Phase 2/3確認試験開始（NCT07290530）、ZM-02 PRISM試験正式開始（2026-02-25）、DSP-3077 Trial ID追加（NCT06891885）・MEE観察研究完了、VG901社名変更（VeonGen Therapeutics）、jCells ARVO 2026発表見込み・Phase 3準備中。2026-03-12: OCU400 Phase 3 liMeliGhT登録完了（140名）・BLA Q3 2026、MCO-010スターガルトPhase 3計画追加、SPVN20新規追加",
   "programs": {
     "MCO-010": {
       "company": "Nanoscope Therapeutics",
@@ -29,6 +29,11 @@
         "Japan MHLW Orphan Drug Designation"
       ],
       "recent_updates": [
+        {
+          "date": "2026-04-13",
+          "event": "BLA rolling submission継続中。Ophthalmology Times Q2 2026パイプラインマイルストーン記事で引き続き注目プログラムとして掲載。BLA完全提出は2026年初頭〜Q2目標。Fast Track指定によりPriority Review適格（BLA受理後6ヶ月審査）。承認されれば世界初の遺伝子非特異的網膜遺伝子治療となる。PDUFA日は未公式発表",
+          "source": "Web Search (ophthalmologytimes.com, nanostherapeutics.com)"
+        },
         {
           "date": "2026-03-29",
           "event": "BLA rolling submissionは継続中（完全提出は2026年初頭予定）。FDA承認・CRLの発表は未確認。Ophthalmology TimesのQ2 2026パイプライン記事にMCO-010が掲載。新US特許取得（2026年1月5日）- MCO光遺伝学プラットフォームの知的財産保護を強化。BLA完全提出完了後、Priority Reviewにより6ヶ月以内の審査結果が期待される",
@@ -631,7 +636,7 @@
     "jCells": {
       "company": "jCyte",
       "current_phase": "Phase 2",
-      "status": "JC02-88 trial ongoing - Data expected at ARVO 2026 (May)",
+      "status": "JC02-88 trial ongoing - Q1 interim results pending, ARVO 2026 (May) expected",
       "key_dates": {
         "phase2_jc0288_start": "2025-06-20",
         "first_patient_dosed": "2025-08-18",
@@ -718,6 +723,34 @@
       ],
       "notes": "Allogeneic iPSC-derived retinal sheet (3D organoid) for RP. FDA Orphan Drug Designation granted March 23, 2026 (tax credits, fee exemption, 7-year market exclusivity). Kobe City Eye Hospital confirmed 2-year engraftment and safety in clinical research (started 2020). US Phase 1/2 (NCT06891885) at Massachusetts Eye and Ear, first transplant planned by end of FY2025 (March 2026). MEE observational study (NCT06517940) completed Feb 2026 for endpoint optimization. 15-year long-term safety monitoring planned. Kobe Eye Center also approved new 'string-shaped' iPSC retinal cell transplant clinical research (Dec 2025 MHLW approval). Uses fresh non-frozen 3D tissue. Building on pioneering Japanese iPS cell retinal sheet technology."
     },
+    "RTx-015": {
+      "company": "Ray Therapeutics",
+      "current_phase": "Phase 1",
+      "status": "ENVISION Phase 1 trial - dose escalation in progress",
+      "key_dates": {
+        "fda_fast_track": "2025",
+        "fda_rmat_designation": "2026-04-01",
+        "envision_trial_start": "2024"
+      },
+      "trial_ids": [
+        "ENVISION",
+        "NCT06460844"
+      ],
+      "modality": "Gene therapy (optogenetics)",
+      "target": "Gene-agnostic",
+      "regulatory": [
+        "FDA RMAT",
+        "FDA Fast Track"
+      ],
+      "recent_updates": [
+        {
+          "date": "2026-04-13",
+          "event": "FDA RMAT指定取得（2026年4月1日発表）。既存のFast Track指定と合わせ2つの加速審査経路を同時取得。RMAT指定により開発中のFDAとの集中的な協議・審査段階でのPriority Review適格性が付与。ENVISION Phase 1試験（NCT06460844）はオープンラベル用量漸増試験で、RPまたはコロイデレミア患者を対象に最大3つの用量コホートを計画。5年間のフォローアップ。UC Irvineで実施中",
+          "source": "Company PR (businesswire.com), FDA, glance.eyesoneyecare.com, healio.com, biospace.com"
+        }
+      ],
+      "notes": "Optogenetic gene therapy delivering a light-sensitive protein via intravitreal injection to reprogram surviving retinal cells. Gene-agnostic approach applicable across 100+ RP-associated genes. ENVISION Phase 1 open-label dose-escalation trial (NCT06460844) at UC Irvine for RP/choroideremia, up to 3 dose cohorts, 5-year follow-up. FDA Fast Track + RMAT designations (dual expedited pathways). If approved, eligible for priority review. Similar approach to MCO-010 (Nanoscope) and ZM-02 (Zhongmou) but distinct protein/vector."
+    },
     "Botaretigene": {
       "company": "TBD",
       "current_phase": "TBD",
@@ -729,7 +762,7 @@
       "regulatory": [],
       "recent_updates": [
         {
-          "date": "2026-04-04",
+          "date": "2026-04-13",
           "event": "Newly identified program",
           "source": "Web search"
         }

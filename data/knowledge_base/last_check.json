@@ -1,46 +1,28 @@
 {
-  "last_check_date": "2026-04-04T10:00:00",
-  "manual_review_date": "2026-04-04",
-  "check_type": "web_search (WebSearch tool)",
+  "last_check_date": "2026-04-13T03:59:36.823937",
+  "check_type": "web_search",
   "programs_checked": [
+    "Botaretigene",
+    "AGTC-501",
     "MCO-010",
     "OCU400",
-    "VP-001",
-    "AGTC-501",
-    "OpCT-001",
-    "NPI-001",
-    "SPVN06",
-    "SPVN20",
-    "Ultevursen",
-    "Botaretigene sparoparvovec",
-    "VG901",
-    "ZM-02",
-    "DSP-3077",
-    "jCells"
+    "NPI-001"
   ],
   "sources_queried": [
-    "WebSearch: MCO-010 MOGENRY Nanoscope 2026 BLA approval update",
-    "WebSearch: OCU400 Ocugen 2026 Phase 3 liMeliGhT BLA update",
-    "WebSearch: AGTC-501 laru-zova Beacon VISTA trial 2026",
-    "WebSearch: VP-001 PYC Therapeutics 2026 registrational trial update",
-    "WebSearch: NPI-001 Nacuity 2026 confirmatory trial update",
-    "WebSearch: SPVN06 SparingVision PRODYGY trial 2026",
-    "WebSearch: SPVN20 SparingVision NYRVANA trial 2026",
-    "WebSearch: Ultevursen Sepul Bio LUNA trial 2026",
-    "WebSearch: Botaretigene Janssen 2026 update",
-    "WebSearch: VG901 VeonGen Phase 1b CNGA1 2026",
-    "WebSearch: ZM-02 Zhongmou PRISM trial 2026",
-    "WebSearch: DSP-3077 Sumitomo Pharma iPSC 2026",
-    "WebSearch: OpCT-001 BlueRock CLARICO 2026",
-    "WebSearch: jCells jCyte famzeletcel 2026 Phase 2",
-    "WebSearch: RP gene therapy 2026 FDA approval new treatments",
-    "WebSearch: 網膜色素変性症 遺伝子治療 iPS細胞 2026 日本",
-    "WebSearch: VP-001 PYC 2026 CY2030 delay funding",
-    "WebSearch: OCU400 liMeliGhT enrollment 140 150 patients",
-    "WebSearch: Nacuity NPI-001 Phase 2/3 NCT07290530 2026",
-    "WebSearch: AGTC-501 Beacon VISTA 12-month topline ARVO 2026"
+    "MCO-010 Nanoscope Therapeutics retinitis pigmentosa 2025 latest update Phase 3",
+    "OCU400 Ocugen retinitis pigmentosa 2025 latest update Phase 3",
+    "Botaretigene sparoparvovec Janssen (J&J) retinitis pigmentosa 2025 latest update Phase 3",
+    "AGTC-501 Beacon Therapeutics retinitis pigmentosa 2025 latest update Phase 2/3",
+    "NPI-001 Nacuity Pharmaceuticals retinitis pigmentosa 2025 latest update Phase 2/3",
+    "jCells jCyte retinitis pigmentosa 2025 latest update Phase 2",
+    "Ultevursen Sepul Bio / Théa retinitis pigmentosa 2025 latest update Phase 2b",
+    "retinitis pigmentosa gene therapy 2025 FDA approval new treatments",
+    "網膜色素変性症 遺伝子治療 2025 最新 日本 承認"
   ],
-  "new_findings": [],
-  "updates_found": [],
-  "notes": "前回更新（2026-03-29）から6日後のチェック。全16プログラムを検索したが、新規の重要な更新は確認されず。すべてのプログラムで前回報告の情報と一致。"
+  "new_findings": [
+    "Botaretigene"
+  ],
+  "updates_found": [
+    "AGTC-501: Phase更新 Phase 2/3 → Phase 3"
+  ]
 }

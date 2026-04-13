@@ -133,6 +133,22 @@
           "全プログラムで前回報告の情報と一致、新規の重要な更新なし"
         ]
       }
+    },
+    {
+      "date": "2026-04-13",
+      "type": "automatic_update",
+      "summary": "Found 1 new programs, 1 important updates",
+      "changes": {
+        "new_programs": [
+          "Botaretigene"
+        ],
+        "updated_programs": [
+          "AGTC-501"
+        ],
+        "key_events": [
+          "AGTC-501: Phase更新 Phase 2/3 → Phase 3"
+        ]
+      }
     }
   ]
 }
