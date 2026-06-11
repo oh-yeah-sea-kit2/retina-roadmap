@@ -184,6 +184,7 @@ def convert_action_guide():
                 <li style="margin: 5px 0;">🏠 <a href="index.html">トップページ</a></li>
                 <li style="margin: 5px 0;">📊 <a href="report.html">詳細レポート</a> - シミュレーション結果</li>
                 <li style="margin: 5px 0;">🎯 <a href="reality_and_actions.html">現実的なアクションガイド（このページ）</a></li>
+                <li style="margin: 5px 0;">🇯🇵 <a href="japan_action_guide.html">日本の読者向けアクションガイド</a> - 遺伝子検査・国内レジストリ・jRCTの手順</li>
                 <li style="margin: 5px 0;">🔊 <a href="accessible_summary.html">音声読み上げ対応版</a> - スクリーンリーダー最適化</li>
                 <li style="margin: 5px 0;">📈 <a href="simulation_methodology.html">シミュレーション方法論</a></li>
                 <li style="margin: 5px 0;">👨‍⚕️ <a href="medical_info.html">医療従事者向け情報</a></li>
@@ -198,6 +199,7 @@ def convert_action_guide():
             {content}
         <div class="back-link" style="margin-top: 50px; text-align: center;">
             <a href="index.html">← トップページに戻る</a> |
+            <a href="japan_action_guide.html">日本向け手順を見る</a> |
             <a href="patient_guide.html">患者・家族向けガイド →</a>
         </div>
         </main>

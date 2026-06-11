@@ -1,0 +1,49 @@
+programs:
+  MCO-010:
+    name: MCO-010
+    company: Nanoscope Therapeutics
+  OCU400:
+    name: OCU400
+    company: Ocugen
+  Botaretigene sparoparvovec:
+    name: botaretigene sparoparvovec bota-vec
+    company: MeiraGTx
+  VP-001:
+    name: VP-001
+    company: PYC Therapeutics
+  AGTC-501:
+    name: laru-zova AGTC-501
+    company: Beacon Therapeutics
+  OpCT-001:
+    name: OpCT-001
+    company: BlueRock Therapeutics
+  NPI-001:
+    name: NPI-001 N-acetylcysteine amide
+    company: Nacuity Pharmaceuticals
+  DSP-3077:
+    name: DSP-3077 allogeneic iPS retinal sheet
+    company: Sumitomo Pharma RACTHERA
+  SPVN06:
+    name: SPVN06 RdCVF
+    company: SparingVision
+  RV-001:
+    name: RV-001 optogenetic retinitis pigmentosa
+    company: Restore Vision Keio
+  SENTAN-PVS-NP:
+    name: pitavastatin PLGA nanoparticle retinitis pigmentosa
+    company: SENTAN Pharma Kyushu University
+  Ultevursen:
+    name: Ultevursen
+    company: Sepul Bio
+
+general_queries:
+  - query: retinitis pigmentosa gene therapy 2026 FDA approval new treatments
+    label: 一般RP遺伝子治療
+  - query: retinitis pigmentosa clinical trial 2026 new results Phase 3
+    label: 一般RP臨床試験
+  - query: 網膜色素変性 jRCT jrct.mhlw.go.jp 治験
+    label: 国内jRCT検索
+  - query: 網膜色素変性症 site:nanbyo-chiken.nibn.go.jp 募集中
+    label: 難病治験ウェブ検索
+  - query: 網膜色素変性症 JRPS 治験 レジストリ
+    label: JRPS・国内レジストリ

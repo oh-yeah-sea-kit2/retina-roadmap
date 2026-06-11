@@ -6,7 +6,7 @@
 網膜色素変性症（RP）の治療法がいつ頃利用可能になるかを、公開データに基づいて統計的に予測
 
 ### 方法
-- **データソース**: ClinicalTrials.gov（2025年6月26日時点）
+- **データソース**: ClinicalTrials.gov（{{ clinical_trials_snapshot_date }}時点）
   - 検索URL: https://clinicaltrials.gov/search?cond=Retinitis%20Pigmentosa&aggFilters=status:rec%20act
 - **対象試験数**: 127試験（アクティブ54試験）
 - **予測手法**: モンテカルロシミュレーション（10,000回/試験）
@@ -17,19 +17,20 @@
 ### 最速承認候補（高確度）
 
 1. **MCO-010（Nanoscope Therapeutics）**
-   - 承認予測：2025年後半～2026年
-   - 根拠：RESTORE試験で統計的有意性達成、2025年Q1 BLA申請予定
+   - 承認予測：最新の再シミュレーション結果を参照
+   - 根拠：RESTORE試験で統計的有意性達成。申請・審査状況により時期は変動
    - 特徴：変異非特異的、外部デバイス不要の光遺伝学的アプローチ
    - **臨床試験登録**: https://clinicaltrials.gov/study/NCT04945772
    - **企業プレスリリース**: https://nanostherapeutics.com/2024/03/nanoscope-therapeutics-announces-positive-topline-results/
    - **FDA Fast Track指定**: https://nanostherapeutics.com/2023/08/fda-fast-track-designation/
 
 2. **OCU400（Ocugen）**
-   - 承認予測：2026～2027年
-   - 根拠：2年データで100%改善/維持、Phase 3進行中
+   - 承認予測：2027年以降（トップラインPhase 3データは2027年Q1予定）
+   - 根拠：Phase 3 liMeliGhT（NCT06388200）は140名の組入れ完了、rolling BLAは2026年Q3計画
    - 特徴：遺伝子非依存型、マスター遺伝子調節
-   - **Phase 3試験**: https://clinicaltrials.gov/study/NCT05203939
-   - **2年データ発表**: https://ir.ocugen.com/news-releases/news-release-details/ocu400-demonstrates-100-improvement-or-maintenance-visual
+   - **Phase 3試験**: https://clinicaltrials.gov/study/NCT06388200
+   - **組入れ完了発表**: https://ir.ocugen.com/news-releases/news-release-details/ocugen-announces-phase-3-limelight-enrollment-completion-ocu400
+   - **EAP方針**: https://ocugen.com/expanded-access-policy/（NCT06574997はClinicalTrials.gov上でNO_LONGER_AVAILABLE）
    - **FDA RMAT指定**: https://ir.ocugen.com/news-releases/news-release-details/ocugen-receives-fda-regenerative-medicine-advanced-therapy
 
 ### 中期的展望（2029-2035年）
@@ -45,7 +46,7 @@
 ### 強み
 - 公的データベースに基づく透明性
 - 統計的手法による不確実性の定量化
-- 最新の試験情報を反映（2025年6月時点）
+- 最新の試験情報を反映（データ取得: {{ clinical_trials_snapshot_date }}）
 
 ### 限界
 1. **外的要因を考慮できない**
@@ -76,12 +77,20 @@
 
 ## データ更新情報
 
-- **Janssen社Botaretigene**：Phase 3で主要評価項目未達成（2025年5月）
-  - 臨床試験: https://clinicaltrials.gov/study/NCT04671433
-  - 結果発表: https://www.janssen.com/botaretigene-sparoparvovec-phase-3-lumeos-results
+- **Botaretigene sparoparvovec / bota-vec**：LUMEOSは主要評価項目未達だが、MeiraGTxが2026年4月にJ&Jから取得し、米国・EU・日本で申請を進める方針
+  - MeiraGTx発表: https://investors.meiragtx.com/news-releases/news-release-details/meiragtx-announces-acquisition-botaretigene-sparoparvovec-bota
+  - LUMEOS: https://clinicaltrials.gov/study/NCT04671433
+- **AGTC-501 / laru-zova**：VISTA（NCT04850118）は85名の組入れ完了。12ヶ月トップラインは2026年後半予定
+  - Beacon発表: https://www.beacontx.com/news-and-events/beacon-therapeutics-completes-enrollment-in-registrational-phase-2-3-vista-trial-of-laru-zova-for-patients-with-xlrp/
+- **NAC Attack**：NCT05537220は485名・31施設の組入れ目標に到達。日本施設は掲載なし
+  - Johns Hopkins: https://www.hopkinsmedicine.org/wilmer/research/nac-attack
+- **NPI-001**：FDA Breakthrough Therapy指定（2025年10月）、SLO-RP Phase 1/2で光受容体喪失50%超抑制と会社発表
+  - Nacuity発表: https://www.nacuity.com/news/nacuity-pharmaceuticals-granted-u-s-fda-breakthrough-therapy-designation-for-npi-001-n-acetylcysteine-amide-tablets-for-the-treatment-of-retinitis-pigmentosa/
+- **DSP-3077**：FDA Orphan Drug Designation取得（2026年3月）、米Phase 1/2（NCT06891885）はRecruiting
+  - Sumitomo Pharma America: https://news.us.sumitomo-pharma.com/press-release-details/2026/Sumitomo-Pharma-America-Announces-that-its-Investigational-Therapy-DSP-3077-Has-Received-FDA-Orphan-Drug-Designation-for-the-Treatment-of-Retinitis-Pigmentosa/default.aspx
 - **Biogen BIIB112**：開発中断
   - 開発中止発表: https://investors.biogen.com/news-releases/news-release-details/biogen-announces-topline-results-phase-3-gene-therapy-study
-- 最新情報はGemini検索により2025年6月26日に更新
+- 最新情報チェック日: {{ data_check_date }}
 
 ---
 

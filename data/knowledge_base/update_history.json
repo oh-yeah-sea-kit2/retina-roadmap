@@ -149,6 +149,39 @@
           "AGTC-501: Phase更新 Phase 2/3 → Phase 3"
         ]
       }
+    },
+    {
+      "date": "2026-06-11",
+      "type": "sprint2_primary_source_update",
+      "summary": "Sprint 2 primary-source data refresh for existing 6 programs and 4 additions",
+      "changes": {
+        "new_programs": [
+          "NAC Attack",
+          "RV-001",
+          "SENTAN-PVS-NP",
+          "Prime editing in vivo rescue"
+        ],
+        "updated_programs": [
+          "OCU400",
+          "Botaretigene sparoparvovec",
+          "AGTC-501",
+          "NPI-001",
+          "DSP-3077",
+          "SPVN06"
+        ],
+        "key_events": [
+          "OCU400: Phase 3 enrollment completed, topline Q1 2027, rolling BLA Q3 2026",
+          "Botaretigene: MeiraGTx acquired bota-vec and intends global filings",
+          "AGTC-501: VISTA enrollment completed, H2 2026 topline expected",
+          "NAC Attack: recruitment goal reached with 485 participants at 31 sites",
+          "NPI-001: FDA Breakthrough Therapy Designation granted",
+          "DSP-3077: FDA Orphan Drug Designation granted",
+          "SPVN06: PRODYGY dosing completed, 2027 initial readout expected",
+          "RV-001: Japan jRCT Phase 1/2 and May 2026 interim first-in-human data",
+          "SENTAN-PVS-NP: Japan Phase 1 jRCT registered",
+          "Prime editing: Nature Communications 2025 preclinical mouse rescue"
+        ]
+      }
     }
   ]
 }

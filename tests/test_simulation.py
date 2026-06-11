@@ -13,9 +13,13 @@ import yaml
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from src.sim.timeline_sim import (
+    calculate_cumulative_approval_probability,
+    get_current_phase_historical_success_rate,
+    get_phase_success_rate,
     simulate_phase_duration,
     simulate_phase_success,
     simulate_single_program,
+    run_monte_carlo_simulation,
     _match_program,
     _sample_triangular,
     _simulate_japan_delay,
@@ -31,6 +35,9 @@ def sample_parameters():
             "PHASE1": {"min": 1.0, "median": 2.0, "max": 3.0},
             "PHASE2": {"min": 2.0, "median": 3.0, "max": 4.0},
             "PHASE3": {"min": 3.0, "median": 4.0, "max": 5.0},
+        },
+        "success_rate_policy": {
+            "display_cap": 0.85,
         },
         "phase_success_rates": {
             "PHASE1": {"success_rate": 0.86},
@@ -118,11 +125,12 @@ class TestSimulatePhaseDuration:
 class TestSimulatePhaseSuccess:
     """フェーズ成功率シミュレーションのテスト"""
 
-    def test_always_succeeds_at_rate_1(self, sample_parameters):
+    def test_rate_1_is_capped_before_sampling(self, sample_parameters):
         params = {**sample_parameters}
         params["phase_success_rates"] = {"PHASE1": {"success_rate": 1.0}}
-        for _ in range(50):
-            assert simulate_phase_success("PHASE1", params)
+        np.random.seed(42)
+        successes = sum(simulate_phase_success("PHASE1", params) for _ in range(1000))
+        assert 800 <= successes <= 900
 
     def test_never_succeeds_at_rate_0(self, sample_parameters):
         params = {**sample_parameters}
@@ -144,6 +152,21 @@ class TestSimulatePhaseSuccess:
         )
         # 遺伝子治療は10%低い成功率のため、成功数が少ないはず
         assert gene_success < normal_success
+
+    def test_phase_rate_is_capped_for_display_and_calculation(self, sample_parameters):
+        assert get_phase_success_rate("PHASE1", sample_parameters) == 0.85
+        assert get_phase_success_rate("PHASE2", sample_parameters) == 0.78
+
+    def test_cumulative_probability_multiplies_remaining_phases(self, sample_parameters):
+        probability = calculate_cumulative_approval_probability("PHASE2", sample_parameters)
+        assert abs(probability - (0.78 * 0.71)) < 0.001
+        assert probability < 0.85
+
+    def test_current_phase_rate_is_separate_from_cumulative(self, sample_parameters):
+        phase_rate = get_current_phase_historical_success_rate("PHASE2", sample_parameters)
+        cumulative = calculate_cumulative_approval_probability("PHASE2", sample_parameters)
+        assert phase_rate == 0.78
+        assert cumulative != phase_rate
 
 
 class TestSimulateSingleProgram:
@@ -175,6 +198,43 @@ class TestSimulateSingleProgram:
                 found_success = True
                 break
         assert found_success, "50回のシミュレーションで成功ケースが1件もなかった"
+
+    def test_special_program_is_not_forced_to_100_percent(self, sample_parameters):
+        trial = pd.Series({
+            "NCTId": "NCT06388200",
+            "BriefTitle": "A Phase 3 Study Of OCU400 Gene Therapy",
+            "Phase": "PHASE3",
+            "Status": "ACTIVE_NOT_RECRUITING",
+            "SponsorName": "Ocugen",
+            "StartDate": pd.Timestamp("2024-01-01"),
+        })
+        sim_config = load_simulation_config()
+        np.random.seed(42)
+        results = [
+            simulate_single_program(trial, sample_parameters, datetime(2025, 1, 1), sim_config)
+            for _ in range(1000)
+        ]
+        success_rate = sum(r["success"] for r in results) / len(results)
+        assert 0.55 <= success_rate <= 0.75
+
+
+class TestRunMonteCarloSimulation:
+    def test_outputs_separate_probability_columns(self, sample_parameters):
+        trials = pd.DataFrame([{
+            "NCTId": "NCT06388200",
+            "BriefTitle": "A Phase 3 Study Of OCU400 Gene Therapy",
+            "Phase": "PHASE3",
+            "Status": "ACTIVE_NOT_RECRUITING",
+            "SponsorName": "Ocugen",
+            "StartDate": pd.Timestamp("2024-01-01"),
+        }])
+        np.random.seed(42)
+        df = run_monte_carlo_simulation(trials, sample_parameters, n_simulations=500)
+        row = df.iloc[0]
+        assert row["phase_historical_success_rate"] <= 0.85
+        assert row["cumulative_approval_probability"] <= 0.85
+        assert row["success_rate"] == row["cumulative_approval_probability"]
+        assert row["success_rate"] < 1.0
 
 
 class TestLoadSimulationConfig:

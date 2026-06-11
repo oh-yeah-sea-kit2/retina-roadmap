@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-04-13",
-  "update_notes": "2026-04-13(full): RTx-015（Ray Therapeutics）新規追加 - FDA RMAT指定（2026-04-01）・Fast Track、ENVISION Phase 1試験（NCT06460844）。MCO-010 BLA rolling submission継続中・Q2 2026パイプラインマイルストーンとして注目。jCells Q1 2026中間結果未発表・ARVO 2026（5月）での発表有力。重複Botaretigeneエントリ削除。2026-03-29(full): DSP-3077 FDA Orphan Drug Designation取得（2026-03-23）、MCO-010 BLA継続中・新US特許取得（2026-01-05）、jCells Frontiers誌査読論文・Nature記事掲載、VG901/VeonGen VG801 ARVO 2026口頭発表予定、SPVN06 Nature Gene Therapy誌前臨床安全性論文。2026-03-23(full): SPVN06 PRODYGY 12ヶ月トップラインデータ発表・Phase 3準備開始、NPI-001 Phase 2/3確認試験開始（NCT07290530）、ZM-02 PRISM試験正式開始（2026-02-25）、DSP-3077 Trial ID追加（NCT06891885）・MEE観察研究完了、VG901社名変更（VeonGen Therapeutics）、jCells ARVO 2026発表見込み・Phase 3準備中。2026-03-12: OCU400 Phase 3 liMeliGhT登録完了（140名）・BLA Q3 2026、MCO-010スターガルトPhase 3計画追加、SPVN20新規追加",
+  "last_updated": "2026-06-11",
+  "update_notes": "2026-06-11(sprint2): OCU400, bota-vec, AGTC-501, NAC Attack, NPI-001, DSP-3077を一次ソースで更新。SPVN06, RV-001, SENTAN-PVS-NP, prime editing前臨床を追加/整理。bota-vecをMeiraGTx取得・申請準備ステータスへ修正し、OCU400 EAPはOcugenページとCT.govステータスの差分を明記。 2026-04-13(full): RTx-015（Ray Therapeutics）新規追加 - FDA RMAT指定（2026-04-01）・Fast Track、ENVISION Phase 1試験（NCT06460844）。MCO-010 BLA rolling submission継続中・Q2 2026パイプラインマイルストーンとして注目。jCells Q1 2026中間結果未発表・ARVO 2026（5月）での発表有力。重複Botaretigeneエントリ削除、2026-06-11にMeiraGTx取得後ステータスへ更新。2026-03-29(full): DSP-3077 FDA Orphan Drug Designation取得（2026-03-23）、MCO-010 BLA継続中・新US特許取得（2026-01-05）、jCells Frontiers誌査読論文・Nature記事掲載、VG901/VeonGen VG801 ARVO 2026口頭発表予定、SPVN06 Nature Gene Therapy誌前臨床安全性論文。2026-03-23(full): SPVN06 PRODYGY投与完了・初回データ読出し2027予定、NPI-001 Phase 2/3確認試験登録（NCT07290530、CT.govではNOT_YET_RECRUITING）、ZM-02 PRISM試験正式開始（2026-02-25）、DSP-3077 Trial ID追加（NCT06891885）・MEE観察研究完了、VG901社名変更（VeonGen Therapeutics）、jCells ARVO 2026発表見込み・Phase 3準備中。2026-03-12: OCU400 Phase 3 liMeliGhT登録完了（140名）・BLA Q3 2026、MCO-010スターガルトPhase 3計画追加、SPVN20新規追加",
   "programs": {
     "MCO-010": {
       "company": "Nanoscope Therapeutics",
@@ -75,33 +75,49 @@
           "source": "Company PR"
         }
       ],
-      "notes": "First gene-agnostic gene therapy for RP (sonpiretigene isteparvovec / brand name: MOGENRY). Uses AAV2 vector to deliver multi-characteristic opsin (MCO) to bipolar retinal cells via intravitreal injection. BLA rolling submission ongoing, full submission expected early 2026. New US patent granted Jan 5, 2026 for MCO platform. Eligible for priority review (6-month review after BLA acceptance) - potential FDA approval in 2026. One-time in-office injection for severe vision loss. ICER (April 2025) concluded evidence adequately demonstrates net health benefit. STARLIGHT Phase 2 positive for Stargardt disease; Phase 3 registrational trial planned for 2026. Geographic atrophy (GA) Phase 2 also planned for 2026. Japan MHLW granted Sakigake (Pioneer) and Orphan Drug designations (Jan 2026) - first retinal gene therapy to receive both, enabling accelerated 6-month review in Japan. Brand name MOGENRY conditionally approved by FDA, EMA, and PMDA."
+      "notes": "First gene-agnostic gene therapy for RP (sonpiretigene isteparvovec / brand name: MOGENRY). Uses AAV2 vector to deliver multi-characteristic opsin (MCO) to bipolar retinal cells via intravitreal injection. BLA rolling submission ongoing, full submission expected early 2026. New US patent granted Jan 5, 2026 for MCO platform. Eligible for priority review (6-month review after BLA acceptance) - potential FDA approval in 2026. One-time in-office injection for severe vision loss. ICER (April 2025) concluded evidence adequately demonstrates net health benefit. STARLIGHT Phase 2 positive for Stargardt disease; Phase 3 registrational trial planned for 2026. Geographic atrophy (GA) Phase 2 also planned for 2026. Japan MHLW granted Sakigake (Pioneer) and Orphan Drug designations (Jan 2026) - first retinal gene therapy to receive both, enabling accelerated 6-month review in Japan. Brand name MOGENRY conditionally approved by FDA, EMA, and PMDA.",
+      "message_design": {
+        "axis": "B/intermediate",
+        "axis_label": "B寄り/中間（光遺伝学による視覚再建）",
+        "genotype_scope": "型不問",
+        "genotype_scope_key": "agnostic",
+        "patient_summary": "重度視機能低下後に、光への反応や移動能力の再建を狙う。根治ではなく、元の視力を完全に戻す治療ではない。",
+        "eligibility_hint": "原因遺伝子を問わない設計だが、病期・残存細胞・視機能基準で対象が絞られる。",
+        "landing_milestone": "BLA rolling submission進行中"
+      }
     },
     "OCU400": {
       "company": "Ocugen",
       "current_phase": "Phase 3",
-      "status": "Enrollment completed - BLA rolling submission Q3 2026",
+      "status": "Enrollment completed - topline Phase 3 data expected Q1 2027; rolling BLA planned Q3 2026",
       "key_dates": {
-        "phase3_start": "2024-06",
-        "enrollment_completed": "2026-03-02",
-        "enrolled_patients": 140,
-        "expected_topline_data": "2027-Q1",
-        "expected_bla_submission_start": "2026-Q3",
-        "expected_approval": "2027",
-        "expected_commercialization": "2027"
+        "phase3_first_patient": "2024-06",
+        "phase3_enrollment_completed": "2026-03-02",
+        "phase3_enrollment": 140,
+        "topline_phase3_data": "2027-Q1",
+        "rolling_bla_planned": "2026-Q3",
+        "potential_approval": "2027",
+        "eap_status_check": "2026-06-11: Ocugen EAP page published; ClinicalTrials.gov NCT06574997 status NO_LONGER_AVAILABLE (last updated 2026-04-07)"
       },
       "trial_ids": [
-        "NCT06388200"
+        "NCT06388200",
+        "NCT05203939",
+        "NCT06574997"
       ],
       "modality": "Gene therapy",
-      "target": "NR2E3 (modifier gene)",
+      "target": "Gene-agnostic / modifier gene therapy (NR2E3)",
       "regulatory": [
         "FDA RMAT",
-        "FDA Orphan Drug",
-        "EMA ATMP",
-        "EMA centralized review eligibility"
+        "FDA Orphan Drug Designation",
+        "EMA ATMP"
       ],
       "recent_updates": [
+        {
+          "date": "2026-06-11",
+          "event": "Phase 3 liMeliGhTの組入れ完了（140名）。トップラインは2027年Q1予定、rolling BLAは2026年Q3計画。OCU400 EAPはOcugen公式ページに掲載されている一方、ClinicalTrials.govのNCT06574997は2026-04-07更新でNO_LONGER_AVAILABLEのため、実際のアクセス可否は直接確認が必要。",
+          "source": "Ocugen PR / Ocugen EAP / ClinicalTrials.gov",
+          "source_url": "https://ir.ocugen.com/news-releases/news-release-details/ocugen-announces-phase-3-limelight-enrollment-completion-ocu400"
+        },
         {
           "date": "2026-03-22",
           "event": "韓国Kwangdong Pharmaceutical社とライセンス契約締結。韓国における開発・商業化の独占権を付与。初の地域パートナーシップ。キャッシュランウェイは2026年Q4まで。株価は年初来75%上昇",
@@ -113,22 +129,39 @@
           "source": "Web Search"
         },
         {
-          "date": "2026-02-27",
-          "event": "Phase 3 liMeliGhT試験は予定通り進行中。BLA rolling submission H1 2026開始予定。150名（RHO 75名+gene-agnostic 75名）、カナダ50名追加。Phase 1/2の2年データで100%(9/9)改善/維持。Expanded Access Program承認済み（米国75名）",
-          "source": "Web Search"
-        },
-        {
-          "date": "2025-01-13",
-          "event": "Phase 1/2 2-year data: 100% (9/9) patients improved or maintained vision",
-          "source": "Company PR"
-        },
-        {
           "date": "2024-06",
           "event": "First patient dosed in Phase 3 liMeliGhT trial",
           "source": "Company PR"
         }
       ],
-      "notes": "Targets 100+ gene mutations. Phase 3 liMeliGhT enrollment completed March 2, 2026 (140 patients, 2:1 randomized, including pediatrics 3+). 3-year Phase 1/2 data: 88% improvement/preservation with ~2-line LLVA gain. Expanded Access Program in US (75 patients) and Canada (50 patients). BLA rolling submission Q3 2026, topline data Q1 2027, potential approval 2027. Korea license agreement with Kwangdong Pharmaceutical (first regional partner). Cash runway through Q4 2026."
+      "notes": "Broad RP modifier gene therapy. Phase 3 liMeliGhT enrollment completed with 140 patients across RHO and gene-agnostic arms; topline data are expected in Q1 2027 and rolling BLA filing is planned for Q3 2026. Ocugen publishes a U.S.-only EAP page for OCU400, but ClinicalTrials.gov lists NCT06574997 as NO_LONGER_AVAILABLE as of the 2026-04-07 update, so actual access must be verified directly with Ocugen/clinical sites.",
+      "primary_sources": [
+        {
+          "label": "ClinicalTrials.gov Phase 3 liMeliGhT (NCT06388200)",
+          "url": "https://clinicaltrials.gov/study/NCT06388200"
+        },
+        {
+          "label": "Ocugen Phase 3 enrollment completion PR (2026-03-02)",
+          "url": "https://ir.ocugen.com/news-releases/news-release-details/ocugen-announces-phase-3-limelight-enrollment-completion-ocu400"
+        },
+        {
+          "label": "Ocugen Expanded Access Policy",
+          "url": "https://ocugen.com/expanded-access-policy/"
+        },
+        {
+          "label": "ClinicalTrials.gov OCU400 EAP (NCT06574997)",
+          "url": "https://clinicaltrials.gov/study/NCT06574997"
+        }
+      ],
+      "message_design": {
+        "axis": "A/B",
+        "axis_label": "A/B中間（進行抑制＋低照度視機能改善）",
+        "genotype_scope": "型不問",
+        "genotype_scope_key": "agnostic",
+        "patient_summary": "改変遺伝子治療。進行抑制と機能改善の両方を狙うが、根治や完全な視力回復とは分けて読む。",
+        "eligibility_hint": "liMeliGhTではRHOアームと広範RPアームがあり、実際の対象は承認ラベルで決まる。EAPは要問い合わせ。",
+        "landing_milestone": "Phase 3組入れ完了、トップライン2027年Q1予定"
+      }
     },
     "VP-001": {
       "company": "PYC Therapeutics",
@@ -180,24 +213,33 @@
           "source": "Company PR"
         }
       ],
-      "notes": "First therapy specifically for RP11. Positive Phase 1/2 results with vision improvements (LLVA, microperimetry) in 18 patients across 4 dose levels (3, 10, 30, 75 μg). 30μg identified as minimum effective dose. RPD designation makes it eligible for Priority Review Voucher (PRV) worth $100M+ if approved. FDA alignment meeting confirmed trial design for Phase 2/3. However, registrational trial start delayed significantly to by CY2030 (previously 2025-H2). $653M capital raise in Feb 2026 secures funding through 2030. DINGO extension study ongoing for select patients."
+      "notes": "First therapy specifically for RP11. Positive Phase 1/2 results with vision improvements (LLVA, microperimetry) in 18 patients across 4 dose levels (3, 10, 30, 75 μg). 30μg identified as minimum effective dose. RPD designation makes it eligible for Priority Review Voucher (PRV) worth $100M+ if approved. FDA alignment meeting confirmed trial design for Phase 2/3. However, registrational trial start delayed significantly to by CY2030 (previously 2025-H2). $653M capital raise in Feb 2026 secures funding through 2030. DINGO extension study ongoing for select patients.",
+      "message_design": {
+        "axis": "B",
+        "axis_label": "B（RNA治療で原因遺伝子機能を補う）",
+        "genotype_scope": "型特異",
+        "genotype_scope_key": "specific",
+        "patient_summary": "PRPF31/RP11を対象にRNAレベルで機能回復を狙う。対象遺伝子が合う人向け。",
+        "eligibility_hint": "PRPF31変異が前提。登録試験開始時期は遅れている。"
+      }
     },
     "AGTC-501": {
       "company": "Beacon Therapeutics",
       "current_phase": "Phase 2/3",
-      "status": "Enrollment completed - 12-month topline data expected H2 2026",
+      "status": "VISTA enrollment completed - 12-month topline data expected H2 2026",
       "key_dates": {
-        "phase2_3_start": "2023",
-        "vista_enrollment_completed": "2025-10",
-        "landscape_first_patient": "2025-12",
+        "phase2_3_start": "2024-06-12",
+        "vista_enrollment_completed": "2025-07-08",
+        "vista_enrollment": 85,
+        "landscape_first_patient": "2025-12-16",
         "expected_12m_data": "2026-H2"
       },
       "trial_ids": [
-        "VISTA",
-        "SKYLINE",
-        "HORIZON",
-        "DAWN",
-        "LANDSCAPE"
+        "NCT04850118",
+        "NCT06275620",
+        "NCT06333249",
+        "NCT06646289",
+        "NCT03316560"
       ],
       "modality": "Gene therapy",
       "target": "RPGR (X-linked RP)",
@@ -205,9 +247,17 @@
         "FDA RMAT",
         "FDA Fast Track",
         "UK ILAP",
-        "EU PRIME"
+        "EU PRIME",
+        "FDA Orphan Drug Designation",
+        "EMA Orphan Drug Designation"
       ],
       "recent_updates": [
+        {
+          "date": "2026-06-11",
+          "event": "VISTA（NCT04850118）の組入れ完了（85名、12-50歳男性、RPGR関連XLRP）。12ヶ月トップラインデータは2026年後半予定。",
+          "source": "Beacon Therapeutics PR / ClinicalTrials.gov",
+          "source_url": "https://www.beacontx.com/news-and-events/beacon-therapeutics-completes-enrollment-in-registrational-phase-2-3-vista-trial-of-laru-zova-for-patients-with-xlrp/"
+        },
         {
           "date": "2026-02-27",
           "event": "VISTA試験登録完了（85名、12-50歳男性、XLRP確定診断）。12ヶ月トップラインデータ2026年H2予定。LANDSCAPE試験開始（2025年12月、両眼投与安全性評価）。EURETINA 2025でDAWN 9+ヶ月データとSKYLINE 36ヶ月データ発表 - 持続的な視覚機能改善を確認。laru-zova（AGTC-501）として正式名称化",
@@ -234,7 +284,30 @@
           "source": "ClinicalTrials.gov"
         }
       ],
-      "notes": "Targets X-linked RP (laru-zova/AGTC-501). VISTA trial enrollment completed with 85 participants. Multiple positive Phase 2 trials (SKYLINE 36-month, DAWN 9+ month). LANDSCAPE trial evaluating bilateral dosing safety. RMAT, Fast Track, UK ILAP, and EU PRIME designations."
+      "notes": "Targets X-linked RP caused by RPGR mutations (laru-zova/AGTC-501). VISTA completed enrollment with 85 male participants aged 12-50; 12-month topline data are expected in H2 2026. Data from VISTA, DAWN, HORIZON, and SKYLINE are intended to support U.S. and European regulatory submissions.",
+      "primary_sources": [
+        {
+          "label": "Beacon VISTA enrollment completion PR (2025-07-08)",
+          "url": "https://www.beacontx.com/news-and-events/beacon-therapeutics-completes-enrollment-in-registrational-phase-2-3-vista-trial-of-laru-zova-for-patients-with-xlrp/"
+        },
+        {
+          "label": "ClinicalTrials.gov VISTA (NCT04850118)",
+          "url": "https://clinicaltrials.gov/study/NCT04850118"
+        },
+        {
+          "label": "ClinicalTrials.gov DAWN (NCT06275620)",
+          "url": "https://clinicaltrials.gov/study/NCT06275620"
+        }
+      ],
+      "message_design": {
+        "axis": "B",
+        "axis_label": "B（遺伝子補充）",
+        "genotype_scope": "型特異",
+        "genotype_scope_key": "specific",
+        "patient_summary": "RPGR関連X連鎖性RPで、原因遺伝子を補う発想。対象は限定される。",
+        "eligibility_hint": "RPGR変異、性別、年齢、視機能などの試験基準で対象が決まる。",
+        "landing_milestone": "VISTA組入れ完了、トップライン2026年後半予定"
+      }
     },
     "OpCT-001": {
       "company": "BlueRock Therapeutics (Bayer)",
@@ -273,25 +346,33 @@
           "source": "Company PR"
         }
       ],
-      "notes": "iPSC-derived photoreceptor cells by BlueRock Therapeutics (Bayer subsidiary) in partnership with FUJIFILM Cellular Dynamics. World's first iPSC-derived cell therapy for primary photoreceptor diseases. Phase 1: dose escalation (12-24 legally blind patients across 4 cohorts). Phase 2: up to 30 participants across 2 cohorts evaluating 2 dose levels. FDA Fast Track + Orphan Drug Designation. Initial safety and preliminary efficacy data expected H2 2026 to 2027."
+      "notes": "iPSC-derived photoreceptor cells by BlueRock Therapeutics (Bayer subsidiary) in partnership with FUJIFILM Cellular Dynamics. World's first iPSC-derived cell therapy for primary photoreceptor diseases. Phase 1: dose escalation (12-24 legally blind patients across 4 cohorts). Phase 2: up to 30 participants across 2 cohorts evaluating 2 dose levels. FDA Fast Track + Orphan Drug Designation. Initial safety and preliminary efficacy data expected H2 2026 to 2027.",
+      "message_design": {
+        "axis": "B",
+        "axis_label": "B（細胞補充・再生医療）",
+        "genotype_scope": "型不問",
+        "genotype_scope_key": "agnostic",
+        "patient_summary": "iPSC由来光受容体細胞で、失われた細胞を補うことを狙う長期目標。",
+        "eligibility_hint": "遺伝子型より病期・網膜状態・手術適応が重要になる。"
+      }
     },
     "NPI-001": {
       "company": "Nacuity Pharmaceuticals",
       "current_phase": "Phase 2/3",
-      "status": "Phase 2/3 confirmatory trial started (2026)",
+      "status": "FDA Breakthrough Therapy Designation granted; confirmatory trial registered (not yet recruiting on ClinicalTrials.gov)",
       "key_dates": {
-        "fda_fast_track": "2024",
-        "phase1_2_results": "2025-09",
-        "fda_breakthrough_therapy": "2025-10",
-        "confirmatory_trial_registered": "2025-12",
-        "confirmatory_trial_start": "2026-early",
+        "phase1_2_results": "2025-09-11",
+        "fda_breakthrough_therapy": "2025-10-02",
+        "confirmatory_trial_registered": "2025-12-16",
+        "confirmatory_trial_status_check": "2026-06-11: NCT07290530 NOT_YET_RECRUITING on ClinicalTrials.gov",
         "trial_duration_months": 24
       },
       "trial_ids": [
+        "NCT04355689",
         "NCT07290530"
       ],
-      "modality": "Small molecule (oral)",
-      "target": "Neuroprotection (antioxidant - N-acetylcysteine amide)",
+      "modality": "Small molecule (oral N-acetylcysteine amide)",
+      "target": "Gene-agnostic neuroprotection / antioxidant",
       "regulatory": [
         "FDA Fast Track",
         "FDA Orphan Drug Designation",
@@ -299,9 +380,10 @@
       ],
       "recent_updates": [
         {
-          "date": "2026-03-23",
-          "event": "Phase 2/3確認試験（NCT07290530）が2026年初頭に開始。24ヶ月間のランダム化二重盲検試験。主要評価項目: EZ Area変化（光受容体保護）。Usher症候群関連RP患者を対象。承認申請は良好な結果が得られれば2028年頃を見込む",
-          "source": "Web Search (Gemini)"
+          "date": "2026-06-11",
+          "event": "FDA Breakthrough Therapy Designation取得（2025-10-02）。SLO-RP Phase 1/2ではUsher症候群関連RPで光受容体喪失を2年間で50%超抑制と会社発表。確認試験NCT07290530は登録済みだが、2026-06-11確認時点のClinicalTrials.govではNOT_YET_RECRUITING。",
+          "source": "Nacuity PR / ClinicalTrials.gov",
+          "source_url": "https://www.nacuity.com/news/nacuity-pharmaceuticals-granted-u-s-fda-breakthrough-therapy-designation-for-npi-001-n-acetylcysteine-amide-tablets-for-the-treatment-of-retinitis-pigmentosa/"
         },
         {
           "date": "2026-02-27",
@@ -319,38 +401,34 @@
           "source": "Company PR"
         }
       ],
-      "notes": "Oral neuroprotective therapy (N-acetylcysteine amide/NACA, 500mg BID). FDA Breakthrough Therapy (Oct 2025) + Fast Track + Orphan Drug designations. Phase 1/2 showed ~30% slower visual function loss in USH-associated RP, >50% reduction in photoreceptor loss. Phase 2/3 confirmatory trial (NCT07290530) started early 2026: 24-month randomized double-blind trial, primary endpoint EZ Area change. If successful, NDA filing expected around 2028. First oral therapy for RP."
-    },
-    "Keio_Optogenetics": {
-      "company": "Keio University / Restore Vision Co.",
-      "current_phase": "Phase 1/2",
-      "status": "Active - First patient dosed",
-      "key_dates": {
-        "phase1_start": "2025-02-13",
-        "first_patient_dosed": "2025-02-06"
-      },
-      "trial_ids": [],
-      "modality": "Gene therapy (optogenetics)",
-      "target": "Gene-agnostic (Chimeric channelrhodopsin)",
-      "regulatory": [],
-      "recent_updates": [
+      "notes": "Oral N-acetylcysteine amide/NACA therapy. SLO-RP Phase 1/2 in 49 patients with RP associated with Usher syndrome reported more than 50% slowing of photoreceptor loss over two years versus placebo and a favorable trend in visual function. FDA Breakthrough Therapy Designation was granted on 2025-10-02. The confirmatory NCT07290530 trial is registered but was NOT_YET_RECRUITING on ClinicalTrials.gov when checked on 2026-06-11.",
+      "primary_sources": [
         {
-          "date": "2026-02-27",
-          "event": "慶應大学・名古屋工大共同研究による光遺伝学治療。RV-001としてRestore Vision社が開発。AAVベクターでキメラロドプシン遺伝子を硝子体注射。低光量でも反応可能な高感度が特徴。1回投与で半永久的効果が期待。国内初の光遺伝学臨床応用",
-          "source": "Web Search"
+          "label": "Nacuity positive SLO-RP Phase 1/2 data PR (2025-09-11)",
+          "url": "https://www.nacuity.com/news/nacuity-pharmaceuticals-announces-positive-data-from-clinical-trial-evaluating-npi-001-to-treat-retinitis-pigmentosa-associated-with-usher-syndrome/"
         },
         {
-          "date": "2025-02-13",
-          "event": "First gene therapy trial for RP in Japan initiated",
-          "source": "University PR"
+          "label": "Nacuity FDA Breakthrough Therapy Designation PR (2025-10-02)",
+          "url": "https://www.nacuity.com/news/nacuity-pharmaceuticals-granted-u-s-fda-breakthrough-therapy-designation-for-npi-001-n-acetylcysteine-amide-tablets-for-the-treatment-of-retinitis-pigmentosa/"
         },
         {
-          "date": "2025-02-06",
-          "event": "First patient dosed at Keio University Hospital",
-          "source": "University announcement"
+          "label": "ClinicalTrials.gov SLO-RP Phase 1/2 (NCT04355689)",
+          "url": "https://clinicaltrials.gov/study/NCT04355689"
+        },
+        {
+          "label": "ClinicalTrials.gov confirmatory trial (NCT07290530)",
+          "url": "https://clinicaltrials.gov/study/NCT07290530"
         }
       ],
-      "notes": "Targets completely blind RP patients. First RP gene therapy trial in Japan. Treatment designated as RV-001 by Restore Vision Inc. (Keio University spin-off). Uses chimeric channelrhodopsin with high sensitivity enabling vision even under low light conditions. Single administration expected to provide semi-permanent effect regardless of RP genotype. Planning to enroll 6-15 severe patients with 6-month follow-up."
+      "message_design": {
+        "axis": "A",
+        "axis_label": "A（抗酸化・神経保護）",
+        "genotype_scope": "対象限定",
+        "genotype_scope_key": "limited",
+        "patient_summary": "光受容体喪失を遅らせることを狙う経口薬。視力を取り戻す治療ではない。",
+        "eligibility_hint": "現在の主データはUsher症候群関連RP。確認試験の対象条件を確認する必要がある。",
+        "landing_milestone": "確認試験登録済み、未募集確認済み"
+      }
     },
     "GS030": {
       "company": "GenSight Biologics",
@@ -362,7 +440,15 @@
       "target": "Gene-agnostic",
       "regulatory": [],
       "recent_updates": [],
-      "notes": "Optogenetics approach for RP"
+      "notes": "Optogenetics approach for RP",
+      "message_design": {
+        "axis": "B/intermediate",
+        "axis_label": "B寄り/中間（光遺伝学）",
+        "genotype_scope": "型不問",
+        "genotype_scope_key": "agnostic",
+        "patient_summary": "光遺伝学で視覚再建を狙う。根治ではない。",
+        "eligibility_hint": "進行期RPが主な想定。"
+      }
     },
     "4D-125": {
       "company": "4D Molecular Therapeutics",
@@ -374,7 +460,15 @@
       "target": "Not specified",
       "regulatory": [],
       "recent_updates": [],
-      "notes": "Gene therapy for RP"
+      "notes": "Gene therapy for RP",
+      "message_design": {
+        "axis": "B",
+        "axis_label": "B（遺伝子治療）",
+        "genotype_scope": "型特異",
+        "genotype_scope_key": "specific",
+        "patient_summary": "特定遺伝子を対象に原因側へ介入する治療。",
+        "eligibility_hint": "対象遺伝子と試験基準の一致が必要。"
+      }
     },
     "CTx-PDE6b": {
       "company": "Coave Therapeutics",
@@ -386,7 +480,15 @@
       "target": "PDE6B mutations",
       "regulatory": [],
       "recent_updates": [],
-      "notes": "Targets specific PDE6B mutations causing RP"
+      "notes": "Targets specific PDE6B mutations causing RP",
+      "message_design": {
+        "axis": "B",
+        "axis_label": "B（遺伝子補充）",
+        "genotype_scope": "型特異",
+        "genotype_scope_key": "specific",
+        "patient_summary": "PDE6B変異を対象にした原因遺伝子治療。",
+        "eligibility_hint": "PDE6B変異が前提。"
+      }
     },
     "AAV-mVChR1": {
       "company": "Astellas Pharma/Tohoku University",
@@ -398,44 +500,50 @@
       "target": "Gene-agnostic (modified Volvox channelrhodopsin-1)",
       "regulatory": [],
       "recent_updates": [],
-      "notes": "Japanese optogenetics program"
+      "notes": "Japanese optogenetics program",
+      "message_design": {
+        "axis": "B/intermediate",
+        "axis_label": "B寄り/中間（光遺伝学・前臨床）",
+        "genotype_scope": "前臨床",
+        "genotype_scope_key": "preclinical",
+        "patient_summary": "日本発の光遺伝学候補。人で使える段階ではない。",
+        "eligibility_hint": "前臨床のため臨床対象は未確定。"
+      }
     },
     "SPVN06": {
       "company": "SparingVision",
       "current_phase": "Phase 1/2",
-      "status": "PRODYGY 12-month topline data released - Phase 3 preparation underway",
+      "status": "PRODYGY dosing completed - initial data readout expected in 2027",
       "key_dates": {
+        "first_patient_dosed": "2023-04",
         "dose_escalation_completed": "2024-10",
         "step2_start": "2024-Q4",
         "dosing_completed": "2026-02-09",
-        "12month_topline_data": "2026-Q1",
-        "regulatory_discussions_start": "2026-H2",
-        "expected_pivotal_trial_start": "2026-H2 to 2027-H1"
+        "enrollment": 33,
+        "treated": 27,
+        "control": 6,
+        "initial_data_readout": "2027",
+        "pivotal_trial_start_aim": "2027"
       },
       "trial_ids": [
-        "PRODYGY",
         "NCT05748873"
       ],
       "modality": "Gene therapy",
-      "target": "Gene-agnostic (RdCVF/RdCVFL neuroprotection)",
+      "target": "Gene-agnostic neuroprotection (RdCVF/RdCVFL)",
       "regulatory": [
         "FDA IND approved"
       ],
       "recent_updates": [
         {
+          "date": "2026-06-11",
+          "event": "PRODYGY Phase 1/2の全例投与完了（33名登録、27名投与、6名対照）。SPVN06はRdCVF/RdCVFLによる型不問の神経保護AAV治療で、初回データ読出しは2027年予定。",
+          "source": "SparingVision PR / ClinicalTrials.gov",
+          "source_url": "https://sparingvision.com/sparingvision-successfully-completes-prodygy-trial-patient-dosing-with-spvn06-its-novel-neuroprotective-gene-therapy/"
+        },
+        {
           "date": "2026-03-29",
           "event": "Nature Gene Therapy誌に前臨床安全性・体内分布論文「Preclinical safety and biodistribution of SPVN06」が掲載。H1 2026のカンファレンス参加予定を発表（SparingVision公式サイト）。PRODYGY試験データの規制当局との共有が2026年中に進行中",
           "source": "Web Search (nature.com, sparingvision.com)"
-        },
-        {
-          "date": "2026-03-23",
-          "event": "PRODYGY試験12ヶ月トップラインデータ発表。全用量で忍容性良好・SAEなし。網膜構造維持（視細胞層厚み）と視機能（微細視野感度）でプラセボ群比較でポジティブな傾向確認。FDA/EMAとの規制当局協議を開始。Phase 3（ピボタル試験）を2026年後半〜2027年初頭に開始計画",
-          "source": "Web Search (Gemini)"
-        },
-        {
-          "date": "2026-03-22",
-          "event": "初期有効性シグナル確認: Phase 1の最初の6名（低・中用量）のうち3名で、2つの連続する時点（6ヶ月間隔）でBCVA改善を確認。2026年中に規制当局とデータ共有を開始予定。AI/機械学習ツールを統計解析と並行して使用し、ピボタル試験の最適なエンドポイント・患者集団の選定を行う予定",
-          "source": "Web Search"
         },
         {
           "date": "2026-02-27",
@@ -448,7 +556,26 @@
           "source": "Web Search (Gemini)"
         }
       ],
-      "notes": "Gene-agnostic gene therapy for RP delivering RdCVF and RdCVFL via AAV to sustain photoreceptor function. PRODYGY trial dosing completed (33 patients: 27 treated + 6 control). 12-month topline data (Q1 2026): favorable safety across all doses (no SAEs), positive trends in retinal structure preservation and microperimetry sensitivity vs placebo. Initial efficacy signals: 3/6 Phase 1 patients showed BCVA improvement. FDA/EMA regulatory discussions initiated. Phase 3 (pivotal trial) planned late 2026/early 2027. US IND approved."
+      "notes": "Gene-agnostic AAV neuroprotective therapy delivering RdCVF and RdCVFL. PRODYGY completed dosing with 33 enrolled patients (27 treated, 6 controls). Initial data readout is expected in 2027, after at least one year of follow-up for all patients; SparingVision aims to initiate a pivotal trial in 2027.",
+      "primary_sources": [
+        {
+          "label": "SparingVision PRODYGY dosing completion PR (2026-02-09)",
+          "url": "https://sparingvision.com/sparingvision-successfully-completes-prodygy-trial-patient-dosing-with-spvn06-its-novel-neuroprotective-gene-therapy/"
+        },
+        {
+          "label": "ClinicalTrials.gov PRODYGY (NCT05748873)",
+          "url": "https://clinicaltrials.gov/study/NCT05748873"
+        }
+      ],
+      "message_design": {
+        "axis": "A",
+        "axis_label": "A（神経保護・RdCVF/RdCVFL）",
+        "genotype_scope": "型不問",
+        "genotype_scope_key": "agnostic",
+        "patient_summary": "遺伝子型を問わず、残っている視細胞を守ることを狙う。視力を戻す治療ではない。",
+        "eligibility_hint": "早期から中等度で残存視機能がある人ほど考えやすい。",
+        "landing_milestone": "初回データ読出しは2027年予定"
+      }
     },
     "SPVN20": {
       "company": "SparingVision",
@@ -473,7 +600,15 @@
           "source": "Web Search"
         }
       ],
-      "notes": "SparingVision's second gene therapy program (after SPVN06). Gene-agnostic intravitreal AAV therapy designed to restore cone vision in advanced RP by reactivating dormant cone photoreceptors using GIRK channel gene. NYRVANA Phase 1/2 first-in-human trial: open-label, multicenter, dose-escalation study. Dose-escalation ongoing in Belgium, France, Ireland. US IND filing planned 2026. Initial safety data expected H2 2026. 6-month evaluation + 5-year long-term follow-up."
+      "notes": "SparingVision's second gene therapy program (after SPVN06). Gene-agnostic intravitreal AAV therapy designed to restore cone vision in advanced RP by reactivating dormant cone photoreceptors using GIRK channel gene. NYRVANA Phase 1/2 first-in-human trial: open-label, multicenter, dose-escalation study. Dose-escalation ongoing in Belgium, France, Ireland. US IND filing planned 2026. Initial safety data expected H2 2026. 6-month evaluation + 5-year long-term follow-up.",
+      "message_design": {
+        "axis": "B/intermediate",
+        "axis_label": "B寄り/中間（休眠錐体の再活性化）",
+        "genotype_scope": "型不問",
+        "genotype_scope_key": "agnostic",
+        "patient_summary": "進行期RPで残存する錐体機能の再活性化を狙う。根治ではない。",
+        "eligibility_hint": "病期と残存細胞の条件が重要。"
+      }
     },
     "Ultevursen": {
       "company": "Sepul Bio / Théa",
@@ -502,32 +637,47 @@
           "source": "Company PR"
         }
       ],
-      "notes": "Targets Usher syndrome type 2A and RP with USH2A exon 13 mutations. Antisense oligonucleotide (AON) injected intravitreally to mask disease mutation in RNA via exon skipping. 2-year double-masked, randomized, sham-controlled trial (NCT06627179) with 81 participants ages 8+. Dosing schedule: 4 IVT injections over 2 years (day 0, month 6, 12, 18). ~16,000 affected patients estimated in Western world. Data readout expected H2 2026 to 2027. Developed by Sepul Bio (Théa subsidiary, acquired from ProQR 2023)."
+      "notes": "Targets Usher syndrome type 2A and RP with USH2A exon 13 mutations. Antisense oligonucleotide (AON) injected intravitreally to mask disease mutation in RNA via exon skipping. 2-year double-masked, randomized, sham-controlled trial (NCT06627179) with 81 participants ages 8+. Dosing schedule: 4 IVT injections over 2 years (day 0, month 6, 12, 18). ~16,000 affected patients estimated in Western world. Data readout expected H2 2026 to 2027. Developed by Sepul Bio (Théa subsidiary, acquired from ProQR 2023).",
+      "message_design": {
+        "axis": "B",
+        "axis_label": "B（RNA治療・スプライシング調整）",
+        "genotype_scope": "型特異",
+        "genotype_scope_key": "specific",
+        "patient_summary": "USH2A exon 13変異を対象にRNA処理を調整する。対象はかなり限定される。",
+        "eligibility_hint": "USH2A exon 13変異が前提。"
+      }
     },
     "Botaretigene sparoparvovec": {
-      "company": "Janssen (J&J)",
-      "current_phase": "Phase 3",
-      "status": "XLRP development stalled - Focus shifted to GA (PARASOL trial)",
+      "company": "MeiraGTx (acquired from Johnson & Johnson)",
+      "current_phase": "Phase 3 completed / regulatory filing preparation",
+      "status": "Acquired by MeiraGTx - global regulatory filings planned; potential 2027 launch if approved",
       "key_dates": {
         "phase3_start": "2021-04",
-        "primary_endpoint_result": "2025-05",
-        "long_term_study_completed": "2025-09",
-        "parasol_primary_completion": "2026-02-23"
+        "lumeos_primary_endpoint_result": "2025-05",
+        "meiragtx_acquisition": "2026-04-16",
+        "global_filings_planned": "2026+",
+        "potential_launch": "2027"
       },
       "trial_ids": [
-        "NCT04850118",
-        "LUMEOS",
+        "NCT04671433",
         "NCT04794101",
-        "PARASOL"
+        "NCT05926583"
       ],
       "modality": "Gene therapy",
-      "target": "RPGR",
-      "regulatory": [],
+      "target": "RPGR (X-linked RP)",
+      "regulatory": [
+        "FDA Fast Track",
+        "FDA Orphan Drug Designation",
+        "EMA PRIME",
+        "EMA ATMP",
+        "EU Orphan Drug Designation"
+      ],
       "recent_updates": [
         {
-          "date": "2026-03-23",
-          "event": "XLRP開発は事実上停滞。2026年J&J優先パイプラインにXLRP適応は含まれず。長期安全性試験（NCT04794101）が2025年9月に早期完了（プログラム整理の兆候）。同一プラットフォームで地図状萎縮（GA）向けPARASOL Phase 2b試験の主要試験期間が2026年2月23日に完了。2026年後半にARVO等での発表が期待。XLRP副次評価項目では40%の患者が2つ以上の視機能指標で改善を示した（対照群0%）",
-          "source": "Web Search (Gemini)"
+          "date": "2026-06-11",
+          "event": "J&JからMeiraGTxがbota-vecを取得（2026-04-16）。LUMEOSは主要評価項目未達だが副次評価に良好な結果があり、MeiraGTxは米国・EU・日本での申請を進める方針。『申請準備中（不確実性あり）』として扱う。",
+          "source": "MeiraGTx PR / ClinicalTrials.gov",
+          "source_url": "https://investors.meiragtx.com/news-releases/news-release-details/meiragtx-announces-acquisition-botaretigene-sparoparvovec-bota"
         },
         {
           "date": "2025-05",
@@ -535,7 +685,34 @@
           "source": "Company announcement"
         }
       ],
-      "notes": "XLRP Phase 3 LUMEOS failed primary endpoint (VMA) but 40% of treated patients improved on 2+ secondary visual endpoints (vs 0% control). J&J described results as 'directionally supportive'. XLRP development stalled; BLA plans cancelled. Long-term safety study (NCT04794101) completed early Sept 2025. Same platform being used for geographic atrophy (GA) PARASOL Phase 2b trial (primary completion Feb 2026). XLRP not in J&J 2026 priority pipeline."
+      "notes": "LUMEOS did not meet the novel VMA primary endpoint, but MeiraGTx reports supportive secondary outcomes and intends to pursue BLA/MAA filings in the U.S., EU, and Japan after acquiring bota-vec from J&J on 2026-04-16. Do not describe this program as discontinued; current status is filing preparation with substantial regulatory uncertainty.",
+      "primary_sources": [
+        {
+          "label": "MeiraGTx acquisition and filing plan PR (2026-04-16)",
+          "url": "https://investors.meiragtx.com/news-releases/news-release-details/meiragtx-announces-acquisition-botaretigene-sparoparvovec-bota"
+        },
+        {
+          "label": "ClinicalTrials.gov LUMEOS (NCT04671433)",
+          "url": "https://clinicaltrials.gov/study/NCT04671433"
+        },
+        {
+          "label": "ClinicalTrials.gov long-term follow-up (NCT04794101)",
+          "url": "https://clinicaltrials.gov/study/NCT04794101"
+        },
+        {
+          "label": "ClinicalTrials.gov Japan RPGR study (NCT05926583)",
+          "url": "https://clinicaltrials.gov/study/NCT05926583"
+        }
+      ],
+      "message_design": {
+        "axis": "B",
+        "axis_label": "B（遺伝子補充）",
+        "genotype_scope": "型特異",
+        "genotype_scope_key": "specific",
+        "patient_summary": "RPGR関連X連鎖性RPを対象に原因遺伝子を補う。主要評価未達の不確実性は残る。",
+        "eligibility_hint": "RPGR変異が前提。MeiraGTxが申請準備中だが承認は未確定。",
+        "landing_milestone": "MeiraGTxが取得、米欧日で申請準備中"
+      }
     },
     "VG901": {
       "company": "VeonGen Therapeutics (formerly ViGeneron)",
@@ -584,7 +761,15 @@
           "source": "Company PR"
         }
       ],
-      "notes": "Gene therapy for RP caused by CNGA1 mutations. Company renamed from ViGeneron to VeonGen Therapeutics (June 2025). Uses proprietary next-generation vgAAV capsid for intravitreal delivery of functional CNGA1 gene to photoreceptors. Trial conducted at University of Tübingen. High-dose cohort evaluation in progress, final analysis expected. RPDD makes it eligible for Priority Review Voucher if approved. EMA CTA approved for EU trial. Only clinical-stage therapy for CNGA1 RP worldwide."
+      "notes": "Gene therapy for RP caused by CNGA1 mutations. Company renamed from ViGeneron to VeonGen Therapeutics (June 2025). Uses proprietary next-generation vgAAV capsid for intravitreal delivery of functional CNGA1 gene to photoreceptors. Trial conducted at University of Tübingen. High-dose cohort evaluation in progress, final analysis expected. RPDD makes it eligible for Priority Review Voucher if approved. EMA CTA approved for EU trial. Only clinical-stage therapy for CNGA1 RP worldwide.",
+      "message_design": {
+        "axis": "B",
+        "axis_label": "B（遺伝子補充）",
+        "genotype_scope": "型特異",
+        "genotype_scope_key": "specific",
+        "patient_summary": "CNGA1変異を対象に原因遺伝子を補う。",
+        "eligibility_hint": "CNGA1変異が前提。"
+      }
     },
     "ZM-02": {
       "company": "Zhongmou Therapeutics",
@@ -631,7 +816,15 @@
           "source": "Company PR"
         }
       ],
-      "notes": "Gene-agnostic optogenetic therapy using AAV to deliver PsCatCh2.0e channelrhodopsin to retinal ganglion/bipolar cells. Unique ability to restore color vision (unlike other optogenetic approaches). MOON trial (first-in-human, China): 83% BCVA improvement at 36 weeks, mean 0.59 LogMAR gain, durability at 52 weeks, no SAEs. PRISM trial officially started Feb 25, 2026: prospective randomized sham-controlled dose-escalation in US and China. Primary completion Dec 2029, full completion Dec 2031."
+      "notes": "Gene-agnostic optogenetic therapy using AAV to deliver PsCatCh2.0e channelrhodopsin to retinal ganglion/bipolar cells. Unique ability to restore color vision (unlike other optogenetic approaches). MOON trial (first-in-human, China): 83% BCVA improvement at 36 weeks, mean 0.59 LogMAR gain, durability at 52 weeks, no SAEs. PRISM trial officially started Feb 25, 2026: prospective randomized sham-controlled dose-escalation in US and China. Primary completion Dec 2029, full completion Dec 2031.",
+      "message_design": {
+        "axis": "B/intermediate",
+        "axis_label": "B寄り/中間（光遺伝学）",
+        "genotype_scope": "型不問",
+        "genotype_scope_key": "agnostic",
+        "patient_summary": "光遺伝学で視覚再建を狙う。色覚回復の探索もあるが、根治ではない。",
+        "eligibility_hint": "原因遺伝子より病期・網膜状態が重要。"
+      }
     },
     "jCells": {
       "company": "jCyte",
@@ -681,18 +874,26 @@
           "source": "ClinicalTrials.gov"
         }
       ],
-      "notes": "Cell-based therapy (famzeletcel) for RP regardless of causative gene mutation. RMAT designation granted. Previous Phase 2b: high-dose group +16.27 letters, published in Frontiers in Cellular Neuroscience (12-month: +9.0 letters). JC02-88 tests higher dose (8.8M cells) in sham-controlled design. Primary endpoint: ≥15 ETDRS letter improvement. Data expected at ARVO 2026 (May). Phase 3 pivotal trial design and preparation underway."
+      "notes": "Cell-based therapy (famzeletcel) for RP regardless of causative gene mutation. RMAT designation granted. Previous Phase 2b: high-dose group +16.27 letters, published in Frontiers in Cellular Neuroscience (12-month: +9.0 letters). JC02-88 tests higher dose (8.8M cells) in sham-controlled design. Primary endpoint: ≥15 ETDRS letter improvement. Data expected at ARVO 2026 (May). Phase 3 pivotal trial design and preparation underway.",
+      "message_design": {
+        "axis": "A/B",
+        "axis_label": "A/B中間（細胞由来の保護・機能改善）",
+        "genotype_scope": "型不問",
+        "genotype_scope_key": "agnostic",
+        "patient_summary": "網膜前駆細胞で視機能維持・改善を狙う。細胞置換による根治とは分けて読む。",
+        "eligibility_hint": "遺伝子型を問わない設計だが病期と視機能基準がある。"
+      }
     },
     "DSP-3077": {
-      "company": "Sumitomo Pharma",
+      "company": "Sumitomo Pharma America / Sumitomo Pharma / RACTHERA",
       "current_phase": "Phase 1/2",
-      "status": "Phase 1/2 trial in progress - FDA Orphan Drug Designation granted",
+      "status": "Phase 1/2 recruiting - FDA Orphan Drug Designation granted",
       "key_dates": {
         "ind_submission": "2024-10-25",
         "fda_ind_clearance": "2024-11",
+        "racthera_operations_started": "2025-02-01",
         "fda_orphan_drug_designation": "2026-03-23",
-        "expected_transplantation_start": "FY2025 (by March 2026)",
-        "mee_observational_study_completed": "2026-02",
+        "ctgov_recruiting_check": "2026-06-11: NCT06891885 RECRUITING; last updated 2026-04-14",
         "long_term_followup_years": 15
       },
       "trial_ids": [
@@ -705,6 +906,12 @@
         "FDA Orphan Drug Designation"
       ],
       "recent_updates": [
+        {
+          "date": "2026-06-11",
+          "event": "FDA Orphan Drug Designation取得（2026-03-23）。DSP-3077は他家iPS細胞由来3D網膜オルガノイド/網膜シートで、米Phase 1/2（NCT06891885）は2026-06-11確認時点でRECRUITING。",
+          "source": "Sumitomo Pharma America PR / ClinicalTrials.gov",
+          "source_url": "https://news.us.sumitomo-pharma.com/press-release-details/2026/Sumitomo-Pharma-America-Announces-that-its-Investigational-Therapy-DSP-3077-Has-Received-FDA-Orphan-Drug-Designation-for-the-Treatment-of-Retinitis-Pigmentosa/default.aspx"
+        },
         {
           "date": "2026-03-29",
           "event": "FDA Orphan Drug Designation取得（2026年3月23日発表）。オーファン指定により臨床試験費用の税額控除、FDAユーザーフィー免除、承認後7年間の市場独占権が付与。住友ファーマとしては過去1年で4件目のFDA Orphan Drug Designation取得。Phase 1/2試験（NCT06891885）進行中",
@@ -721,7 +928,30 @@
           "source": "Web Search"
         }
       ],
-      "notes": "Allogeneic iPSC-derived retinal sheet (3D organoid) for RP. FDA Orphan Drug Designation granted March 23, 2026 (tax credits, fee exemption, 7-year market exclusivity). Kobe City Eye Hospital confirmed 2-year engraftment and safety in clinical research (started 2020). US Phase 1/2 (NCT06891885) at Massachusetts Eye and Ear, first transplant planned by end of FY2025 (March 2026). MEE observational study (NCT06517940) completed Feb 2026 for endpoint optimization. 15-year long-term safety monitoring planned. Kobe Eye Center also approved new 'string-shaped' iPSC retinal cell transplant clinical research (Dec 2025 MHLW approval). Uses fresh non-frozen 3D tissue. Building on pioneering Japanese iPS cell retinal sheet technology."
+      "notes": "Allogeneic iPSC-derived 3D retinal organoid/retinal sheet therapy for RP. FDA Orphan Drug Designation was announced on 2026-03-23. NCT06891885 was RECRUITING on ClinicalTrials.gov when checked on 2026-06-11. Sumitomo Pharma America states that DSP-3077 development uses RACTHERA technologies and expertise.",
+      "primary_sources": [
+        {
+          "label": "Sumitomo Pharma America FDA Orphan Drug Designation PR (2026-03-23)",
+          "url": "https://news.us.sumitomo-pharma.com/press-release-details/2026/Sumitomo-Pharma-America-Announces-that-its-Investigational-Therapy-DSP-3077-Has-Received-FDA-Orphan-Drug-Designation-for-the-Treatment-of-Retinitis-Pigmentosa/default.aspx"
+        },
+        {
+          "label": "ClinicalTrials.gov DSP-3077 Phase 1/2 (NCT06891885)",
+          "url": "https://clinicaltrials.gov/study/NCT06891885"
+        },
+        {
+          "label": "Sumitomo Pharma Phase 1/2 initiation PR",
+          "url": "https://www.sumitomo-pharma.com/news/20241129.html"
+        }
+      ],
+      "message_design": {
+        "axis": "B",
+        "axis_label": "B（iPS細胞由来網膜シート）",
+        "genotype_scope": "型不問",
+        "genotype_scope_key": "agnostic",
+        "patient_summary": "失われた網膜細胞を補う再生医療。10〜20年スパンで見る治療。",
+        "eligibility_hint": "遺伝子型より手術適応・病期・安全性確認が重要。",
+        "landing_milestone": "米Phase 1/2 recruiting、FDA orphan指定取得"
+      }
     },
     "RTx-015": {
       "company": "Ray Therapeutics",
@@ -749,25 +979,239 @@
           "source": "Company PR (businesswire.com), FDA, glance.eyesoneyecare.com, healio.com, biospace.com"
         }
       ],
-      "notes": "Optogenetic gene therapy delivering a light-sensitive protein via intravitreal injection to reprogram surviving retinal cells. Gene-agnostic approach applicable across 100+ RP-associated genes. ENVISION Phase 1 open-label dose-escalation trial (NCT06460844) at UC Irvine for RP/choroideremia, up to 3 dose cohorts, 5-year follow-up. FDA Fast Track + RMAT designations (dual expedited pathways). If approved, eligible for priority review. Similar approach to MCO-010 (Nanoscope) and ZM-02 (Zhongmou) but distinct protein/vector."
+      "notes": "Optogenetic gene therapy delivering a light-sensitive protein via intravitreal injection to reprogram surviving retinal cells. Gene-agnostic approach applicable across 100+ RP-associated genes. ENVISION Phase 1 open-label dose-escalation trial (NCT06460844) at UC Irvine for RP/choroideremia, up to 3 dose cohorts, 5-year follow-up. FDA Fast Track + RMAT designations (dual expedited pathways). If approved, eligible for priority review. Similar approach to MCO-010 (Nanoscope) and ZM-02 (Zhongmou) but distinct protein/vector.",
+      "message_design": {
+        "axis": "B/intermediate",
+        "axis_label": "B寄り/中間（光遺伝学）",
+        "genotype_scope": "型不問",
+        "genotype_scope_key": "agnostic",
+        "patient_summary": "光遺伝学で視覚再建を狙う。根治ではない。",
+        "eligibility_hint": "原因遺伝子を問わないが、病期・網膜状態で対象が決まる。"
+      }
     },
-    "Botaretigene": {
-      "company": "TBD",
-      "current_phase": "TBD",
-      "status": "New",
-      "key_dates": {},
-      "trial_ids": [],
-      "modality": "TBD",
-      "target": "TBD",
+    "NAC Attack": {
+      "company": "Johns Hopkins University / National Eye Institute",
+      "current_phase": "Phase 3",
+      "status": "Recruitment goal reached - 485 eligible RP patients at 31 sites; follow-up ongoing",
+      "key_dates": {
+        "study_started": "2023",
+        "recruitment_goal_reached": "2025-08",
+        "enrollment": 485,
+        "clinical_sites": 31,
+        "interim_progression_readout": "2028-early",
+        "final_followup_completion": "2029-end"
+      },
+      "trial_ids": [
+        "NCT05537220"
+      ],
+      "modality": "Small molecule (oral N-acetylcysteine)",
+      "target": "Gene-agnostic neuroprotection / oxidative stress",
+      "regulatory": [],
+      "primary_sources": [
+        {
+          "label": "Johns Hopkins NAC Attack trial page",
+          "url": "https://www.hopkinsmedicine.org/wilmer/research/nac-attack"
+        },
+        {
+          "label": "ClinicalTrials.gov NAC Attack (NCT05537220)",
+          "url": "https://clinicaltrials.gov/study/NCT05537220"
+        }
+      ],
+      "recent_updates": [
+        {
+          "date": "2026-06-11",
+          "event": "組入れ目標到達（485名、31施設、2025年8月末）。対象施設は米国・カナダ・欧州で、日本施設は掲載なし。45ヶ月追跡で、進行データの中間読出しは2028年初頭予定。",
+          "source": "Johns Hopkins Medicine / ClinicalTrials.gov",
+          "source_url": "https://www.hopkinsmedicine.org/wilmer/research/nac-attack"
+        }
+      ],
+      "notes": "International Phase 3 randomized placebo-controlled trial of oral NAC 1800 mg twice daily. Recruitment goal was reached by the end of August 2025 with 485 eligible RP patients at 31 sites in the United States, Canada, Austria, Germany, the Netherlands, Switzerland, and the United Kingdom; no Japan site is listed. Interim progression readout is expected in early 2028, with final analysis after 45-month follow-up by the end of 2029.",
+      "message_design": {
+        "axis": "A",
+        "axis_label": "A（抗酸化・神経保護）",
+        "genotype_scope": "型不問",
+        "genotype_scope_key": "agnostic",
+        "patient_summary": "進行を遅らせることを狙う内服薬。視力を取り戻す治療ではない。",
+        "eligibility_hint": "広いRPを対象にするが、日本施設は掲載なし。",
+        "landing_milestone": "組入れ目標到達、追跡中"
+      }
+    },
+    "RV-001": {
+      "company": "Restore Vision / Keio University / Nagoya Institute of Technology",
+      "current_phase": "Phase 1/2",
+      "status": "Recruiting in Japan - first patient dosed; interim first-in-human results presented May 2026",
+      "key_dates": {
+        "jRCT_registered": "2025-01-27",
+        "first_patient_dosed": "2025-02-06",
+        "company_first_patient_announcement": "2025-02-13",
+        "interim_results_presented": "2026-05-01",
+        "planned_trial_end": "2026-06-30",
+        "target_enrollment": 15
+      },
+      "trial_ids": [
+        "jRCT2033240611"
+      ],
+      "modality": "Gene therapy (optogenetics)",
+      "target": "Gene-agnostic visual restoration (chimeric rhodopsin / GPCR-based optogenetics)",
       "regulatory": [],
       "recent_updates": [
         {
-          "date": "2026-04-13",
-          "event": "Newly identified program",
-          "source": "Web search"
+          "date": "2026-06-11",
+          "event": "RV-001として整理。jRCT2033240611は難病治験ウェブで募集中、慶應義塾大学病院で実施。2025-02に初回投与、2026-05-01にARVO/Eyecelerator等で初回ヒト中間結果を発表。型不問の日本発GPCR型光遺伝学治療だが、まだPhase 1/2の早期データ。",
+          "source": "難病治験ウェブ / Restore Vision PR / Keio University PR",
+          "source_url": "https://nanbyo-chiken.nibn.go.jp/detail/jRCT2033240611/"
         }
       ],
-      "notes": "Automatically added - needs manual verification"
+      "notes": "Japan-origin gene-agnostic optogenetic visual restoration program. RV-001 is delivered by single intravitreal injection and targets advanced RP regardless of genotype. The domestic registry ID is jRCT2033240611; no NCT identifier is listed. Interim May 2026 results were from six patients across two dose cohorts and remain early safety/exploratory efficacy data.",
+      "primary_sources": [
+        {
+          "label": "難病治験ウェブ jRCT2033240611",
+          "url": "https://nanbyo-chiken.nibn.go.jp/detail/jRCT2033240611/"
+        },
+        {
+          "label": "Restore Vision first patient dosed announcement",
+          "url": "https://restore-vis.com/en/news/2882107.html"
+        },
+        {
+          "label": "Restore Vision interim clinical results PR (2026-05-01)",
+          "url": "https://www.prnewswire.com/news-releases/restore-vision-announces-first-in-human-clinical-interim-results-for-rv-001-a-gpcr-based-optogenetic-gene-therapy-302759414.html"
+        },
+        {
+          "label": "Keio University first patient dosed PR",
+          "url": "https://www.keio.ac.jp/en/press-release/20250213-1/"
+        }
+      ],
+      "message_design": {
+        "axis": "B/intermediate",
+        "axis_label": "B寄り/中間（日本発の光遺伝学）",
+        "genotype_scope": "型不問",
+        "genotype_scope_key": "agnostic",
+        "patient_summary": "進行期RPで視覚再建を狙う日本発プログラム。根治ではなく、まだ早期データ。",
+        "eligibility_hint": "国内jRCT試験。原因遺伝子を問わないが病期・視機能基準がある。",
+        "landing_milestone": "国内Phase 1/2、初回ヒト中間結果発表済み"
+      }
+    },
+    "SENTAN-PVS-NP": {
+      "company": "SENTAN Pharma / Kyushu University",
+      "current_phase": "Phase 1",
+      "status": "Domestic investigator-initiated Phase 1 registered - recruiting not yet open",
+      "key_dates": {
+        "pmda_advice_completed": "2026-01",
+        "jRCT_registered": "2026-04-13",
+        "planned_start": "2026-07-01",
+        "planned_end": "2028-03-01",
+        "target_enrollment": 21
+      },
+      "trial_ids": [
+        "jRCT2071260006"
+      ],
+      "modality": "Nanoparticle drug (intravenous pitavastatin PLGA nanoparticles / ULREA-PVS-NP)",
+      "target": "Gene-agnostic neuroprotection / inflammatory monocytes and macrophages",
+      "regulatory": [],
+      "primary_sources": [
+        {
+          "label": "難病治験ウェブ jRCT2071260006",
+          "url": "https://nanbyo-chiken.nibn.go.jp/detail/jRCT2071260006/"
+        },
+        {
+          "label": "MHLW clinical trial portal jRCT2071260006",
+          "url": "https://rctportal.mhlw.go.jp/detail/jr?trial_id=jRCT2071260006"
+        },
+        {
+          "label": "SENTAN Pharma research page",
+          "url": "https://www.sentan.co.jp/research/situation.html"
+        },
+        {
+          "label": "Preclinical paper PubMed PMID 41060148",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41060148/"
+        }
+      ],
+      "recent_updates": [
+        {
+          "date": "2026-06-11",
+          "event": "ピタバスタチンPLGAナノ粒子（ULREA-PVS-NP）の国内第1相医師主導治験がjRCT2071260006として登録。難病治験ウェブでは募集前、開始予定日は2026-07-01、九州大学病院で21名目標。",
+          "source": "難病治験ウェブ / MHLW臨床研究情報ポータル / SENTAN Pharma",
+          "source_url": "https://nanbyo-chiken.nibn.go.jp/detail/jRCT2071260006/"
+        }
+      ],
+      "notes": "Japan-origin mutation-agnostic neuroprotective approach. jRCT2071260006 is a Phase 1 investigator-initiated trial at Kyushu University Hospital evaluating safety of intravenous ULREA-PVS-NP in RP patients aged 18-70; listed as pre-recruitment with planned start 2026-07-01.",
+      "message_design": {
+        "axis": "A",
+        "axis_label": "A（神経保護・国内第1相）",
+        "genotype_scope": "型不問",
+        "genotype_scope_key": "agnostic",
+        "patient_summary": "ピタバスタチンナノ粒子で進行抑制を狙う日本発候補。視力回復ではない。",
+        "eligibility_hint": "国内第1相で安全性確認が中心。募集開始状況の確認が必要。",
+        "landing_milestone": "国内第1相、2026年7月開始予定"
+      }
+    },
+    "Prime editing in vivo rescue": {
+      "company": "Academic preclinical program",
+      "current_phase": "Preclinical",
+      "status": "Preclinical mouse proof-of-concept - not a human trial",
+      "key_dates": {
+        "publication": "2025-03-10"
+      },
+      "trial_ids": [],
+      "registry_note": "Preclinical animal study; no NCT or jRCT identifier.",
+      "modality": "Genome editing (prime editing)",
+      "target": "PDE6B Y347X nonsense mutation in rd1 mouse model",
+      "regulatory": [],
+      "primary_sources": [
+        {
+          "label": "Fu et al., Nature Communications 2025",
+          "url": "https://www.nature.com/articles/s41467-025-57628-6"
+        },
+        {
+          "label": "PubMed PMID 40064881",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40064881/"
+        }
+      ],
+      "recent_updates": [
+        {
+          "date": "2026-06-11",
+          "event": "将来技術として追加。Nature Communications 2025で、PDE6B Y347Xを持つrd1マウスに対するdual-AAV prime editingが光受容体変性を抑制し視機能悪化を抑えたと報告。ヒト治験ではなく前臨床段階。",
+          "source": "Nature Communications / PubMed",
+          "source_url": "https://www.nature.com/articles/s41467-025-57628-6"
+        }
+      ],
+      "notes": "Future-technology item only. Dual-AAV in vivo prime editing corrected a PDE6B nonsense mutation in rd1 mice, restored PDE6B expression, protected rods, and inhibited vision deterioration versus no treatment. It should not be presented as a near-term clinical option.",
+      "message_design": {
+        "axis": "B",
+        "axis_label": "B（ゲノム編集・前臨床）",
+        "genotype_scope": "前臨床",
+        "genotype_scope_key": "preclinical",
+        "patient_summary": "将来技術。マウスでの概念実証で、人で使える治療ではまだない。",
+        "eligibility_hint": "前臨床段階。対象変異ごとに開発が必要。"
+      }
+    }
+  },
+  "message_design": {
+    "updated": "2026-06-11",
+    "purpose": "Sprint 3 patient-facing classification for explaining RP treatments by expectation and eligibility.",
+    "axes": {
+      "A": {
+        "label": "A: 進行を止める/遅らせる",
+        "patient_definition": "視力を取り戻すものではないが、数年内に手が届きうる現実的な希望。神経保護・抗酸化・進行抑制を主に狙う。"
+      },
+      "B": {
+        "label": "B: 失った視力を取り戻す/根治を目指す",
+        "patient_definition": "10〜20年スパン。遺伝子補充・編集・細胞移植などで、対象遺伝子や病期が限られることが多い。"
+      },
+      "A/B": {
+        "label": "A/B中間: 進行抑制と機能改善の中間",
+        "patient_definition": "進行を抑える面と機能改善を狙う面が混在する。根治や完全な視力回復とは分けて読む。"
+      },
+      "B/intermediate": {
+        "label": "B寄り/中間: 視覚再建を狙うが根治ではない",
+        "patient_definition": "失った視覚機能の一部を補う発想。光遺伝学などは末期でも候補になりうるが、元の網膜を治す根治ではない。"
+      }
+    },
+    "genotype_scopes": {
+      "agnostic": "型不問",
+      "specific": "型特異",
+      "limited": "対象限定",
+      "preclinical": "前臨床"
     }
   }
 }

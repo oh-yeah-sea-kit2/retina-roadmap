@@ -9,6 +9,7 @@ import sys
 import time
 from datetime import datetime
 from pathlib import Path
+from typing import Any
 
 sys.path.insert(0, ".")
 
@@ -20,6 +21,24 @@ from scripts.utils.data_comparison import (
     calculate_importance_score,
     save_check_results,
 )
+
+
+MONITOR_TARGETS_PATH = Path("config/monitor_targets.yaml")
+
+
+def load_monitor_targets(path: Path = MONITOR_TARGETS_PATH) -> dict[str, Any]:
+    """月次監視対象を設定ファイルから読み込む"""
+    import yaml
+
+    if not path.exists():
+        raise FileNotFoundError(f"監視対象設定が見つかりません: {path}")
+
+    config = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    if not isinstance(config.get("programs"), dict):
+        raise ValueError("monitor_targets.yaml に programs がありません")
+    if not isinstance(config.get("general_queries"), list):
+        raise ValueError("monitor_targets.yaml に general_queries がありません")
+    return config
 
 
 def search_program_updates(program_id: str, program_name: str, company: str) -> str:
@@ -69,22 +88,11 @@ def main():
 
     print(f"\n登録プログラム数: {len(programs)}件")
 
-    # 主要プログラムの検索
-    key_programs = {
-        "MCO-010": {"name": "MCO-010", "company": "Nanoscope Therapeutics"},
-        "OCU400": {"name": "OCU400", "company": "Ocugen"},
-        "VP-001": {"name": "VP-001", "company": "PYC Therapeutics"},
-        "AGTC-501": {"name": "laru-zova AGTC-501", "company": "Beacon Therapeutics"},
-        "OpCT-001": {"name": "OpCT-001", "company": "BlueRock Therapeutics"},
-        "NPI-001": {"name": "NPI-001 N-acetylcysteine amide", "company": "Nacuity Pharmaceuticals"},
-        "SPVN06": {"name": "SPVN06 RdCVF", "company": "SparingVision"},
-        "Ultevursen": {"name": "Ultevursen", "company": "Sepul Bio"},
-    }
-
-    # 一般的なRP治療ニュースも検索
+    monitor_targets = load_monitor_targets()
+    key_programs = monitor_targets["programs"]
     general_queries = [
-        ("retinitis pigmentosa gene therapy 2026 FDA approval new treatments", "一般RP遺伝子治療"),
-        ("retinitis pigmentosa clinical trial 2026 new results Phase 3", "一般RP臨床試験"),
+        (item["query"], item["label"])
+        for item in monitor_targets["general_queries"]
     ]
 
     all_search_text = []

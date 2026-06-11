@@ -1,6 +1,6 @@
 # 予測の現実性と私たちにできること
 
-最終更新: 2025年6月25日
+最終更新: {{ site_last_updated }}
 
 ## ⚠️ 重要な免責事項
 
@@ -21,16 +21,20 @@
    - これはRP試験127件の実データから算出（[詳細はこちら](simulation_methodology.md#過去の成功率データ)）
    - これは遺伝子治療技術の成熟と、希少疾患への規制緩和が要因
 
-2. **🎯 最速2025-2026年の承認が現実的に！（最新情報）**
-   - **MCO-010（Nanoscope社）**：2025年第1四半期にFDA申請、最速2025年後半〜2026年承認見込み
+2. **🎯 最も早い候補でも、承認時期は再シミュレーション結果で幅を持って見る**
+   - **MCO-010（Nanoscope社）**：有力候補の一つ。承認時期は申請・審査状況で変わるため、最新の予測年は詳細レポートを参照
      - RESTORE試験で統計的に有意な視力改善を達成（0.337-0.382 LogMAR改善）
      - Fast Track指定取得済み、患者の最大50%が3行以上の視力改善
      - 変異非特異的（mutation-agnostic）で幅広い患者に適用可能
-   - **OCU400（Ocugen社）**：2024年6月Phase 3初回投与、2026年BLA/MAA申請予定
-     - 2年間の追跡データで評価可能な9名全員（100%）が視機能改善/維持
+   - **OCU400（Ocugen社）**：Phase 3 liMeliGhTは140名の組入れ完了。トップラインは2027年Q1、rolling BLAは2026年Q3計画
+     - 米国EAPページは公開されているが、ClinicalTrials.govのEAP登録（NCT06574997）は2026年4月更新で「NO_LONGER_AVAILABLE」のため、実際のアクセス可否は直接確認が必要
      - FDA RMAT指定、EMA ATMP指定取得済み
      - 遺伝子非依存型アプローチ
-   - ~~Janssen社の遺伝子治療（Botaretigene sparoparvovec）~~：Phase 3で主要評価項目未達成（2025年5月発表）
+   - **Botaretigene sparoparvovec（bota-vec）**：LUMEOSは主要評価項目未達だが、MeiraGTxが2026年4月にJ&Jから取得し、米国・EU・日本で申請を進める方針
+     - 撤退扱いではなく、申請準備中。ただし主要評価未達の不確実性は残る
+   - **AGTC-501 / laru-zova（Beacon）**：VISTA（NCT04850118）は85名の組入れ完了。12ヶ月トップラインは2026年後半予定
+   - **NPI-001（Nacuity）**：FDA Breakthrough Therapy指定（2025年10月）。SLO-RP Phase 1/2で光受容体喪失をプラセボ比50%超抑制と会社発表
+   - **NAC Attack（Johns Hopkins）**：Phase 3（NCT05537220）は485名・31施設の組入れ目標に到達。日本施設は掲載なし
    - BIIB111/BIIB112（Biogen）：開発中断（Phase 2/3で主要評価項目未達成）
    - 類似の眼科遺伝子治療Luxturnaは2017年に承認済み（前例あり）
 
@@ -279,12 +283,17 @@
 
 **日本の治験情報**:
 1. **JRPS治験情報ページ**: 会員限定で最新情報
-2. **jRCT（臨床研究等提出・公開システム）**: https://jrct.niph.go.jp/
+2. **jRCT（臨床研究等提出・公開システム）**: https://jrct.mhlw.go.jp/
    - 検索窓に「網膜色素変性」と入力
    - 「実施中」にチェック
-3. **大学病院に直接問い合わせ**:
+3. **難病治験ウェブ**: https://nanbyo-chiken.nibn.go.jp/
+   - 検索窓に「網膜色素変性症」と入力
+   - 募集中・募集前の試験を優先して確認
+4. **大学病院に直接問い合わせ**:
    - 「治験コーディネーター」宛に電話
    - 「RPの治験に興味がある」と伝える
+
+日本国内での具体的な手順は、[日本の読者向けアクションガイド](japan_action_guide.html)にまとめています。
 
 **世界の治験情報**:
 1. **ClinicalTrials.gov**: https://clinicaltrials.gov/
@@ -360,7 +369,7 @@
 ### データソースと方法論
 - **ClinicalTrials.gov（米国政府公式）**: https://clinicaltrials.gov/
   - RP臨床試験検索: https://clinicaltrials.gov/search?cond=Retinitis%20Pigmentosa
-  - データ取得日: 2025年6月26日
+  - データ取得日: {{ clinical_trials_snapshot_date }}
 - **解析方法**: モンテカルロシミュレーション（10,000回/試験）
 - **ソースコード**: https://github.com/oh-yeah-sea-kit2/retina-roadmap
 
@@ -371,17 +380,30 @@
    - FDA Fast Track: 2023年8月指定
 
 2. **OCU400（Ocugen）**
-   - Phase 3試験: https://clinicaltrials.gov/study/NCT05203939
-   - 2年データ: https://ir.ocugen.com/news-releases/
+   - Phase 3試験: https://clinicaltrials.gov/study/NCT06388200
+   - 組入れ完了: https://ir.ocugen.com/news-releases/news-release-details/ocugen-announces-phase-3-limelight-enrollment-completion-ocu400
+   - EAP方針: https://ocugen.com/expanded-access-policy/
    - FDA RMAT指定: 2023年取得
 
-3. **開発中止/遅延**
-   - Janssen Botaretigene: https://clinicaltrials.gov/study/NCT04671433
+3. **その他の主要更新**
+   - Botaretigene / bota-vec: https://investors.meiragtx.com/news-releases/news-release-details/meiragtx-announces-acquisition-botaretigene-sparoparvovec-bota
+   - AGTC-501 / laru-zova VISTA: https://www.beacontx.com/news-and-events/beacon-therapeutics-completes-enrollment-in-registrational-phase-2-3-vista-trial-of-laru-zova-for-patients-with-xlrp/
+   - NAC Attack: https://www.hopkinsmedicine.org/wilmer/research/nac-attack
+   - NPI-001: https://www.nacuity.com/news/nacuity-pharmaceuticals-granted-u-s-fda-breakthrough-therapy-designation-for-npi-001-n-acetylcysteine-amide-tablets-for-the-treatment-of-retinitis-pigmentosa/
+   - DSP-3077: https://news.us.sumitomo-pharma.com/press-release-details/2026/Sumitomo-Pharma-America-Announces-that-its-Investigational-Therapy-DSP-3077-Has-Received-FDA-Orphan-Drug-Designation-for-the-Treatment-of-Retinitis-Pigmentosa/default.aspx
+   - SPVN06: https://sparingvision.com/sparingvision-successfully-completes-prodygy-trial-patient-dosing-with-spvn06-its-novel-neuroprotective-gene-therapy/
+   - RV-001: https://nanbyo-chiken.nibn.go.jp/detail/jRCT2033240611/
+   - SENTAN-PVS-NP: https://nanbyo-chiken.nibn.go.jp/detail/jRCT2071260006/
+   - Prime editing前臨床: https://www.nature.com/articles/s41467-025-57628-6
+
+4. **開発中止/遅延**
    - Biogen BIIB112: 開発中断発表（2021年）
 
 ### 日本での情報源
 - **JRPS（日本網膜色素変性症協会）**: https://jrps.org/
-- **jRCT（臨床研究等提出・公開システム）**: https://jrct.niph.go.jp/
+- **jRCT（臨床研究等提出・公開システム）**: https://jrct.mhlw.go.jp/
+- **難病治験ウェブ**: https://nanbyo-chiken.nibn.go.jp/
+- **日本の読者向けアクションガイド**: japan_action_guide.html
 - **PMDA（医薬品医療機器総合機構）**: https://www.pmda.go.jp/
 
 ### 3ヶ月以内にやること

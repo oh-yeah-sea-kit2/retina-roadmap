@@ -31,6 +31,49 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+
+    - name: Validate monitored targets
+      run: |
+        python - <<'PY'
+        import yaml
+        from pathlib import Path
+
+        config_path = Path("config/monitor_targets.yaml")
+        config = yaml.safe_load(config_path.read_text(encoding="utf-8"))
+        required_programs = [
+            "SPVN06",
+            "RV-001",
+            "Botaretigene sparoparvovec",
+            "DSP-3077",
+            "SENTAN-PVS-NP",
+        ]
+        required_query_terms = [
+            "jrct.mhlw.go.jp",
+            "nanbyo-chiken.nibn.go.jp",
+            "網膜色素変性",
+        ]
+        missing_programs = [
+            program for program in required_programs
+            if program not in config.get("programs", {})
+        ]
+        query_text = "\n".join(
+            item.get("query", "") for item in config.get("general_queries", [])
+        )
+        missing_terms = [
+            term for term in required_query_terms
+            if term not in query_text
+        ]
+        if missing_programs or missing_terms:
+            raise SystemExit(
+                f"monitor target missing: programs={missing_programs}, terms={missing_terms}"
+            )
+        print("Monitor targets:")
+        for program, info in config["programs"].items():
+            print(f"- {program}: {info['company']}")
+        print("General queries:")
+        for item in config["general_queries"]:
+            print(f"- {item['label']}: {item['query']}")
+        PY
     
     - name: Run monthly update check
       id: check_result

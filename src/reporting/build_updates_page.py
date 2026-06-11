@@ -10,6 +10,8 @@ from pathlib import Path
 from datetime import datetime
 from collections import defaultdict
 import logging
+from src.reporting.site_metadata import load_build_metadata
+from src.reporting.message_design import get_message_design
 
 logger = logging.getLogger(__name__)
 
@@ -38,12 +40,14 @@ def collect_updates_by_date(kb):
             date = update.get("date", "")
             event = update.get("event", "")
             source = update.get("source", "")
+            source_url = update.get("source_url", "")
             updates_by_date[date].append({
                 "program_id": program_id,
                 "company": company,
                 "phase": phase,
                 "event": event,
                 "source": source,
+                "source_url": source_url,
             })
 
     return updates_by_date
@@ -77,12 +81,26 @@ def escape_html(text):
             .replace('"', "&quot;"))
 
 
+def source_link(label, url):
+    """一次ソースへのリンクHTMLを生成"""
+    label_escaped = escape_html(label or "source")
+    if not url:
+        return label_escaped
+    url_escaped = escape_html(url)
+    return (
+        f'<a href="{url_escaped}" target="_blank" '
+        f'rel="noopener noreferrer">{label_escaped}</a>'
+    )
+
+
 def generate_html(kb, last_check):
     """更新履歴HTMLを生成"""
     updates_by_date = collect_updates_by_date(kb)
     sorted_dates = sorted(updates_by_date.keys(), reverse=True)
+    site_metadata = load_build_metadata()
 
-    last_updated = kb.get("last_updated", "")
+    site_last_updated = site_metadata.get("site_last_updated", "")
+    kb_last_updated = kb.get("last_updated", "")
     last_check_date = last_check.get("last_check_date", "")[:10]
     check_type = last_check.get("check_type", "")
 
@@ -108,7 +126,7 @@ def generate_html(kb, last_check):
                 badge = '<span class="badge badge-low">情報</span>'
 
             event_escaped = escape_html(item["event"])
-            source_escaped = escape_html(item["source"])
+            source_html = source_link(item["source"], item.get("source_url", ""))
 
             cards_html += f"""
                 <div class="update-card importance-{importance}">
@@ -122,7 +140,7 @@ def generate_html(kb, last_check):
                         <p>{event_escaped}</p>
                     </div>
                     <div class="update-card-footer">
-                        <span class="source">出典: {source_escaped}</span>
+                        <span class="source">出典: {source_html}</span>
                     </div>
                 </div>"""
 
@@ -142,6 +160,18 @@ def generate_html(kb, last_check):
         status = prog.get("status", "")
         phase = prog.get("current_phase", "")
         company = prog.get("company", "")
+        design = get_message_design(prog)
+        classification = design.get("axis_label", "分類未設定")
+        genotype_scope = design.get("genotype_scope", "未分類")
+        trial_ids = ", ".join(prog.get("trial_ids", [])) or "-"
+        primary_sources = prog.get("primary_sources", [])
+        source_html = "-"
+        if primary_sources:
+            links = [
+                source_link(src.get("label", ""), src.get("url", ""))
+                for src in primary_sources[:2]
+            ]
+            source_html = " / ".join(links)
         updates = prog.get("recent_updates", [])
         last_update_date = updates[0]["date"] if updates else "-"
 
@@ -149,8 +179,12 @@ def generate_html(kb, last_check):
                     <tr>
                         <td><strong>{escape_html(pid)}</strong></td>
                         <td>{escape_html(company)}</td>
+                        <td>{escape_html(classification)}</td>
+                        <td>{escape_html(genotype_scope)}</td>
                         <td>{escape_html(phase)}</td>
                         <td>{escape_html(status)}</td>
+                        <td>{escape_html(trial_ids)}</td>
+                        <td>{source_html}</td>
                         <td>{escape_html(last_update_date)}</td>
                     </tr>"""
 
@@ -358,7 +392,8 @@ def generate_html(kb, last_check):
             <h1>更新履歴</h1>
 
             <div class="update-meta">
-                最終更新: <strong>{last_updated}</strong> |
+                最終更新: <strong>{site_last_updated}</strong> |
+                知識ベース更新: <strong>{kb_last_updated}</strong> |
                 最終チェック: <strong>{last_check_date}</strong> |
                 チェック方法: {escape_html(check_type)}
             </div>
@@ -370,8 +405,12 @@ def generate_html(kb, last_check):
                         <tr>
                             <th>プログラム</th>
                             <th>企業</th>
+                            <th>治療の読み方</th>
+                            <th>対象</th>
                             <th>Phase</th>
                             <th>ステータス</th>
+                            <th>登録番号</th>
+                            <th>一次ソース</th>
                             <th>最終更新</th>
                         </tr>
                     </thead>

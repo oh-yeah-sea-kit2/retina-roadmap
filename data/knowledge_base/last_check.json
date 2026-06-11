@@ -1,28 +1,36 @@
 {
-  "last_check_date": "2026-04-13T03:59:36.823937",
-  "check_type": "web_search",
+  "last_check_date": "2026-06-11T00:00:00",
+  "check_type": "manual_primary_source_verification",
   "programs_checked": [
-    "Botaretigene",
-    "AGTC-501",
-    "MCO-010",
     "OCU400",
-    "NPI-001"
+    "Botaretigene sparoparvovec",
+    "AGTC-501",
+    "NAC Attack",
+    "NPI-001",
+    "DSP-3077",
+    "SPVN06",
+    "RV-001",
+    "SENTAN-PVS-NP",
+    "Prime editing in vivo rescue"
   ],
   "sources_queried": [
-    "MCO-010 Nanoscope Therapeutics retinitis pigmentosa 2025 latest update Phase 3",
-    "OCU400 Ocugen retinitis pigmentosa 2025 latest update Phase 3",
-    "Botaretigene sparoparvovec Janssen (J&J) retinitis pigmentosa 2025 latest update Phase 3",
-    "AGTC-501 Beacon Therapeutics retinitis pigmentosa 2025 latest update Phase 2/3",
-    "NPI-001 Nacuity Pharmaceuticals retinitis pigmentosa 2025 latest update Phase 2/3",
-    "jCells jCyte retinitis pigmentosa 2025 latest update Phase 2",
-    "Ultevursen Sepul Bio / Théa retinitis pigmentosa 2025 latest update Phase 2b",
-    "retinitis pigmentosa gene therapy 2025 FDA approval new treatments",
-    "網膜色素変性症 遺伝子治療 2025 最新 日本 承認"
+    "ClinicalTrials.gov NCT06388200 / NCT06574997 / NCT04850118 / NCT05537220 / NCT04355689 / NCT07290530 / NCT06891885 / NCT05748873",
+    "Ocugen, MeiraGTx, Beacon, Johns Hopkins, Nacuity, Sumitomo Pharma America, SparingVision, Restore Vision primary pages",
+    "jRCT / 難病治験ウェブ jRCT2033240611 and jRCT2071260006",
+    "Nature Communications / PubMed for prime editing and pitavastatin nanoparticles"
   ],
   "new_findings": [
-    "Botaretigene"
+    "NAC Attack",
+    "RV-001",
+    "SENTAN-PVS-NP",
+    "Prime editing in vivo rescue"
   ],
   "updates_found": [
-    "AGTC-501: Phase更新 Phase 2/3 → Phase 3"
+    "OCU400 Phase 3 enrollment completed; topline Q1 2027; rolling BLA Q3 2026; EAP status caveat",
+    "Botaretigene acquired by MeiraGTx; filing plans in U.S./EU/Japan",
+    "AGTC-501 VISTA enrollment completed; H2 2026 topline expected",
+    "NPI-001 FDA Breakthrough Therapy Designation and >50% photoreceptor-loss slowing report",
+    "DSP-3077 FDA Orphan Drug Designation and NCT06891885 recruiting",
+    "SPVN06 PRODYGY dosing completed; initial readout expected 2027"
   ]
 }
