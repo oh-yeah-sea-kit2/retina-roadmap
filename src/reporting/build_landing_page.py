@@ -411,7 +411,7 @@ def generate_html(site_metadata: dict[str, Any] | None = None) -> str:
                     </div>
                     <div class="action-item">
                         <strong>3. 国内治験DBを定点チェック</strong>
-                        <p>jRCT（現行URL）と難病治験ウェブで「網膜色素変性」を定期検索します。</p>
+                        <p><a href="https://jrct.mhlw.go.jp/" target="_blank" rel="noopener noreferrer">jRCT</a> と <a href="https://nanbyo-chiken.nibn.go.jp/" target="_blank" rel="noopener noreferrer">難病治験ウェブ</a> で「網膜色素変性」を定期検索します。</p>
                     </div>
                 </div>
                 <p>

@@ -1,393 +1,242 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>網膜色素変性症（RP）治療開発予測：音声読み上げ対応版</title>
-    <meta name="description" content="網膜色素変性症の治療法開発予測を音声読み上げソフトで利用しやすい形式で提供。最新の再シミュレーション結果を掲載。">
-    
-    <style>
-        body {
-            font-family: "UD デジタル 教科書体", "BIZ UDゴシック", Arial, sans-serif;
-            line-height: 2;
-            font-size: 18px;
-            color: #000;
-            background-color: #fff;
-            max-width: 800px;
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>音声読み上げ対応版 - 網膜色素変性症治療ロードマップ</title>
+<meta content="網膜色素変性症治療ロードマップのスクリーンリーダー向け要約。2軸の治療分類、日本で今日からできる行動、主要プログラムを読みやすい順番で整理。" name="description"/>
+<link href="css/common.css" rel="stylesheet"/>
+<script defer="" src="js/mobile-nav.js"></script>
+<style>
+        .accessible-content {
+            max-width: 920px;
             margin: 0 auto;
-            padding: 20px;
+            font-size: 1.05rem;
+            line-height: 1.9;
         }
-        
-        /* ハイコントラストモード対応 */
-        @media (prefers-contrast: high) {
-            body {
-                background-color: #000;
-                color: #fff;
-            }
-            a {
-                color: #ff0;
-                text-decoration: underline;
-            }
+        .accessible-content h1 {
+            margin-top: 0;
         }
-        
-        /* ダークモード対応 */
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #1a1a1a;
-                color: #e0e0e0;
-            }
-            .highlight-box {
-                background-color: #2a2a2a;
-                border-color: #4a4a4a;
-            }
+        .accessible-content h2 {
+            margin-top: 42px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--primary-color);
         }
-        
-        h1, h2, h3 {
-            margin-top: 2em;
-            margin-bottom: 1em;
+        .accessible-content h3 {
+            margin-top: 28px;
         }
-        
-        h1 {
-            font-size: 1.8em;
-            border-bottom: 3px solid #333;
-            padding-bottom: 0.5em;
+        .accessible-content li {
+            margin-bottom: 0.35rem;
         }
-        
-        h2 {
-            font-size: 1.5em;
-            border-bottom: 2px solid #666;
-            padding-bottom: 0.3em;
+        .reader-note {
+            background: #f7fbf9;
+            border-left: 6px solid var(--success-color);
+            padding: 16px 18px;
+            margin: 20px 0 28px;
         }
-        
-        h3 {
-            font-size: 1.3em;
-        }
-        
-        .skip-link {
-            position: absolute;
-            left: -9999px;
-            top: 0;
-            z-index: 999;
-        }
-        
-        .skip-link:focus {
-            left: 0;
-            background: #000;
-            color: #fff;
-            padding: 10px;
-            text-decoration: none;
-        }
-        
-        .highlight-box {
-            background-color: #f0f8ff;
-            border: 2px solid #0066cc;
-            padding: 15px;
+
+        /* テーブルスタイル */
+        table {
+            border-collapse: collapse;
+            width: 100%;
             margin: 20px 0;
-            border-radius: 5px;
         }
-        
-        .toc {
-            background-color: #f5f5f5;
-            padding: 20px;
-            margin: 20px 0;
-            border: 1px solid #ccc;
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
         }
-        
-        .toc ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        
-        .toc li {
-            margin: 10px 0;
-        }
-        
-        /* フォーカス時の視認性向上 */
-        a:focus, button:focus, input:focus, select:focus, textarea:focus {
-            outline: 3px solid #ff6600;
-            outline-offset: 2px;
-        }
-        
-        /* リンクの下線を常に表示 */
-        a {
-            text-decoration: underline;
-        }
-        
-        /* 番号付きリストを明確に */
-        ol {
-            padding-left: 40px;
-        }
-        
-        ol li {
-            margin: 10px 0;
-        }
-        
-        /* 重要な情報を強調 */
-        .important {
+
+        th {
+            background-color: #3498db;
+            color: white;
             font-weight: bold;
-            font-size: 1.1em;
-            color: #d00;
         }
-        
-        @media (prefers-color-scheme: dark) {
-            .important {
-                color: #ff6666;
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* スマホ対応 - 横スクロール */
+        @media screen and (max-width: 768px) {
+            /* テーブルコンテナ */
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+                font-size: 14px;
+            }
+
+            th, td {
+                padding: 8px;
+                min-width: 100px;
+            }
+
+            /* 最初の列を固定 */
+            tbody tr td:first-child,
+            thead tr th:first-child {
+                position: sticky;
+                left: 0;
+                background-color: white;
+                z-index: 1;
+                border-right: 2px solid #3498db;
+            }
+
+            thead tr th:first-child {
+                background-color: #3498db;
+            }
+
+            tbody tr:nth-child(even) td:first-child {
+                background-color: #f2f2f2;
             }
         }
+
+        /* より小さい画面用の調整 */
+        @media screen and (max-width: 480px) {
+            table {
+                font-size: 12px;
+            }
+
+            th, td {
+                padding: 6px;
+                min-width: 80px;
+            }
+        }
+
     </style>
 </head>
 <body>
-    <!-- スキップリンク -->
-    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
-    
-    <main id="main-content" role="main">
-        <!-- ナビゲーション -->
-        <nav style="background: #e8f4f8; padding: 15px; margin-bottom: 20px; border-radius: 5px;" role="navigation" aria-label="サイト内ナビゲーション">
-            <h2 style="font-size: 1.2em; margin: 0 0 10px 0;">関連ページ</h2>
-            <ul style="list-style: none; padding: 0; margin: 0;">
-                <li style="margin: 5px 0;">🏠 <a href="index.html">トップページ</a></li>
-                <li style="margin: 5px 0;">📊 <a href="report.html">詳細レポート</a> - シミュレーション結果</li>
-                <li style="margin: 5px 0;">🎯 <a href="reality_and_actions.html">現実的なアクションガイド</a> - 今すぐできる5つの行動</li>
-                <li style="margin: 5px 0;">🔊 <a href="accessible_summary.html">音声読み上げ対応版（このページ）</a></li>
-                <li style="margin: 5px 0;">📈 <a href="simulation_methodology.html">シミュレーション方法論</a> - 計算の詳細</li>
-                <li style="margin: 5px 0;">👨‍⚕️ <a href="medical_info.html">医療従事者向け情報</a></li>
-                <li style="margin: 5px 0;">👥 <a href="patient_guide.html">患者・家族向けガイド</a></li>
-            </ul>
-        </nav>
-        
-        <h1>網膜色素変性症（RP）治療開発予測：音声読み上げ対応版</h1>
-        
-        <p><strong>このページは音声読み上げソフト（スクリーンリーダー）での利用を想定して作成されています。</strong></p>
-        
-        <div class="highlight-box" role="region" aria-label="最重要ポイント">
-            <h2>最初に：最も重要な3つのポイント</h2>
-            <ol>
-                <li><span class="important">最も早い候補でも承認時期は不確実で、最新の再シミュレーション結果を確認する必要があります</span></li>
-                <li><span class="important">あなたの遺伝子型を知ることが、将来の治療を受けるために必須です</span></li>
-                <li><span class="important">今すぐできる5つの行動があります（詳細は後述）</span></li>
-            </ol>
-        </div>
-        
-        <nav class="toc" role="navigation" aria-label="目次">
-            <h2>目次（セクション番号で移動できます）</h2>
-            <ul>
-                <li><a href="#section1">1. 治療法承認の予測時期</a></li>
-                <li><a href="#section2">2. 現在開発中の主な治療法</a></li>
-                <li><a href="#section3">3. 今すぐできる5つの行動</a></li>
-                <li><a href="#section4">4. よくある質問と回答</a></li>
-                <li><a href="#section5">5. 連絡先と支援情報</a></li>
-            </ul>
-        </nav>
-        
-        <hr>
-        
-        <section id="section1" aria-label="治療法承認の予測時期">
-            <h2>セクション1：治療法承認の予測時期</h2>
-            
-            <h3>最も早い承認予測</h3>
-            
-            <h4>最も早い候補</h4>
-            <ul>
-                <li>治療法名：MCO-010（エムシーオー ゼロイチゼロ）</li>
-                <li>会社：Nanoscope社（ナノスコープ社）</li>
-                <li>特徴：どの遺伝子変異でも使える可能性がある</li>
-            </ul>
-            
-            <h4>2026年から2027年</h4>
-            <ul>
-                <li>治療法名：OCU400（オーシーユー ヨンヒャク）</li>
-                <li>会社：Ocugen社（オキュジェン社）</li>
-                <li>特徴：遺伝子に関係なく効果が期待できる</li>
-            </ul>
-            
-            <h3>中期的な予測（2030年まで）</h3>
-            <p>2030年までに5個から10個の治療法が利用可能になる見込みです。</p>
-            
-            <h3>長期的な予測（2035年まで）</h3>
-            <p>2035年までに、RP患者の80パーセント以上に有効な治療法が確立される見込みです。</p>
-        </section>
-        
-        <hr>
-        
-        <section id="section2" aria-label="現在開発中の主な治療法">
-            <h2>セクション2：現在開発中の主な治療法</h2>
-            
-            <h3>承認に最も近い2つの治療法</h3>
-            
-            <h4>1. MCO-010について</h4>
-            <ul>
-                <li><strong>読み方</strong>：エムシーオー ゼロイチゼロ</li>
-                <li><strong>開発段階</strong>：最終試験完了、2025年初めに申請予定</li>
-                <li><strong>効果</strong>：視力が最大50パーセント改善した例あり</li>
-                <li><strong>対象</strong>：遺伝子型に関係なく使える可能性</li>
-            </ul>
-            
-            <h4>2. OCU400について</h4>
-            <ul>
-                <li><strong>読み方</strong>：オーシーユー ヨンヒャク</li>
-                <li><strong>開発段階</strong>：第3相試験実施中</li>
-                <li><strong>効果</strong>：2年間の追跡で100パーセントの患者が改善または維持</li>
-                <li><strong>対象</strong>：複数の遺伝子変異に対応可能</li>
-            </ul>
-            
-            <h3>その他の有望な治療法</h3>
-            <p>現在、54個の臨床試験が進行中です。主な種類は以下の3つです：</p>
-            <ol>
-                <li><strong>遺伝子治療</strong>：32件</li>
-                <li><strong>細胞治療</strong>：5件</li>
-                <li><strong>薬物治療</strong>：3件</li>
-            </ol>
-        </section>
-        
-        <hr>
-        
-        <section id="section3" aria-label="今すぐできる5つの行動">
-            <h2>セクション3：今すぐできる5つの行動</h2>
-            
-            <h3>行動1：遺伝子検査を受ける（最重要）</h3>
-            
-            <h4>なぜ重要か</h4>
-            <p>治療法の多くは特定の遺伝子変異に対するものです。自分の遺伝子型を知らないと、治療を受けられません。</p>
-            
-            <h4>具体的な手順</h4>
-            <ol>
-                <li>かかりつけの眼科医に「遺伝子検査を受けたい」と伝える</li>
-                <li>紹介状をもらって専門病院へ</li>
-                <li>採血（5から10ミリリットル）</li>
-                <li>結果は4週間から8週間後</li>
-            </ol>
-            
-            <h4>費用</h4>
-            <ul>
-                <li>保険適用の場合：3万円から4万円</li>
-                <li>自費の場合：10万円から12万円</li>
-            </ul>
-            
-            <h4>検査可能な主な施設</h4>
-            <ul>
-                <li>東京大学医科学研究所附属病院</li>
-                <li>慶應義塾大学病院</li>
-                <li>大阪大学医学部附属病院</li>
-                <li>神戸アイセンター病院</li>
-            </ul>
-            
-            <h3>行動2：患者レジストリに登録する</h3>
-            
-            <h4>日本の登録先</h4>
-            <dl>
-                <dt>JRPS（日本網膜色素変性症協会）</dt>
-                <dd>
-                    <ul>
-                        <li>ウェブサイト：<a href="https://jrps.org">jrps.org</a></li>
-                        <li>年会費：5,000円</li>
-                        <li>電話：03-5753-5156</li>
-                    </ul>
-                </dd>
-            </dl>
-            
-            <h4>海外の登録先</h4>
-            <dl>
-                <dt>My Retina Tracker（マイ レティナ トラッカー）</dt>
-                <dd>
-                    <ul>
-                        <li>ウェブサイト：<a href="https://myretinatracker.org">myretinatracker.org</a></li>
-                        <li>費用：無料</li>
-                        <li>日本語非対応（英語のみ）</li>
-                    </ul>
-                </dd>
-            </dl>
-            
-            <h3>行動3：研究支援の寄付</h3>
-            
-            <h4>寄付先の例</h4>
-            <ol>
-                <li>理化学研究所 網膜再生医療研究開発プロジェクト</li>
-                <li>慶應義塾大学病院 眼科学教室</li>
-                <li>JRPS研究助成基金</li>
-            </ol>
-            
-            <p><strong>金額</strong>：月1,000円からでも研究の大きな支えになります</p>
-            
-            <h3>行動4：政策提言への参加</h3>
-            
-            <h4>簡単な方法</h4>
-            <ol>
-                <li>パブリックコメントへの投稿（年2から3回）</li>
-                <li>地元議員への手紙やメール</li>
-                <li>SNSでの情報発信</li>
-            </ol>
-            
-            <h3>行動5：臨床試験への参加検討</h3>
-            
-            <h4>試験を探す方法</h4>
-            <ol>
-                <li>JRPSの治験情報（会員限定）</li>
-                <li>主治医に相談</li>
-                <li>大学病院の治験窓口に問い合わせ</li>
-            </ol>
-        </section>
-        
-        <hr>
-        
-        <section id="section4" aria-label="よくある質問と回答">
-            <h2>セクション4：よくある質問と回答</h2>
-            
-            <h3>質問1：本当に近いうちに治療法が出るのですか？</h3>
-            <p><strong>回答</strong>：MCO-010は有力候補の一つですが、承認時期は申請・審査状況で変わります。最新の予測年は詳細レポートの再シミュレーション結果を確認してください。</p>
-            
-            <h3>質問2：治療費はいくらかかりますか？</h3>
-            <p><strong>回答</strong>：遺伝子治療の場合、1回1億円から3億円と予想されます。ただし、保険適用や患者支援プログラムにより、実際の負担額は大幅に軽減される見込みです。</p>
-            
-            <h3>質問3：すべての患者に効果がありますか？</h3>
-            <p><strong>回答</strong>：残念ながら、すべての患者に効果があるわけではありません。遺伝子型、病期、年齢などにより効果は異なります。</p>
-            
-            <h3>質問4：日本での承認はいつですか？</h3>
-            <p><strong>回答</strong>：通常、アメリカでの承認から1年から2年後に日本でも承認されます。ただし、国際共同治験の場合は同時期の可能性もあります。</p>
-            
-            <h3>質問5：AIで開発が早まるというのは本当ですか？</h3>
-            <p><strong>回答</strong>：はい。AIにより創薬期間が40パーセントから50パーセント短縮された実例があります。RPの治療開発にも応用されています。</p>
-        </section>
-        
-        <hr>
-        
-        <section id="section5" aria-label="連絡先と支援情報">
-            <h2>セクション5：連絡先と支援情報</h2>
-            
-            <h3>相談窓口</h3>
-            
-            <h4>JRPS（日本網膜色素変性症協会）</h4>
-            <ul>
-                <li>電話：<a href="tel:0357535156">03-5753-5156</a></li>
-                <li>メール：<a href="mailto:info@jrps.org">info@jrps.org</a></li>
-                <li>受付時間：平日10時から16時</li>
-            </ul>
-            
-            <h3>このプロジェクトについて</h3>
-            
-            <h4>網膜色素変性症治療開発予測プロジェクト</h4>
-            <ul>
-                <li>GitHub：<a href="https://github.com/oh-yeah-sea-kit2/retina-roadmap">github.com/oh-yeah-sea-kit2/retina-roadmap</a></li>
-                <li>最新レポート：<a href="https://oh-yeah-sea-kit2.github.io/retina-roadmap/docs/">oh-yeah-sea-kit2.github.io/retina-roadmap/docs/</a></li>
-            </ul>
-            
-            <h3>アクセシビリティについて</h3>
-            <p>このドキュメントは以下に配慮して作成しています：</p>
-            <ul>
-                <li>スクリーンリーダーでの読み上げ</li>
-                <li>明確な見出し構造</li>
-                <li>専門用語の読み仮名</li>
-                <li>数字の読みやすい表記</li>
-            </ul>
-            
-            <p>改善提案は上記GitHubまでお寄せください。</p>
-        </section>
-        
-        <hr>
-        
-        <footer role="contentinfo">
-            <p><strong>最終更新日：2026年6月11日</strong></p>
-            <p><strong>重要</strong>：この情報は研究に基づく予測であり、医学的助言ではありません。治療に関する決定は必ず医師にご相談ください。</p>
-        </footer>
-    </main>
+<a class="skip-link" href="#main-content">メインコンテンツへスキップ</a>
+<nav aria-label="サイト内ナビゲーション" role="navigation">
+<ul>
+<li><a href="index.html">ホーム</a></li>
+<li><a href="japan_action_guide.html">日本向け行動</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="report.html">詳細レポート</a></li>
+<li><a aria-current="page" href="accessible_summary.html">音声読み上げ対応版</a></li>
+</ul>
+</nav>
+<div class="container">
+<main class="accessible-content" id="main-content" role="main">
+<div class="reader-note">
+<strong>読み上げ用の構成:</strong> このページは、トップページと日本アクションガイドの要点を、見出し移動しやすい順番に並べ直しています。
+            </div>
+<h1><ruby class="term-ruby"><abbr class="term-abbr" title="もうまくしきそへんせいしょう">網膜色素変性症</abbr><rt>もうまくしきそへんせいしょう</rt></ruby>治療ロードマップ：音声読み上げ対応版</h1>
+<p>このページは、スクリーンリーダーで読みやすい順番と短い文で、網膜色素変性症（RP）の治療開発と日本で今日からできる行動をまとめたものです。医学的な判断は、必ず主治医と相談してください。</p>
+<p>最終更新: 2026年6月11日</p>
+<p>データ取得: ClinicalTrials.gov 2026-04-13 / PubMed 2026-04-13</p>
+<h2>最初に聞いてほしい3点</h2>
+<ol>
+<li>治療は大きく2種類あります。進行を遅らせる治療と、失った視力を取り戻す・根治を目指す治療です。</li>
+<li>「何年に治る」と単一年では言えません。原因遺伝子、残っている視機能、病期、承認審査で現実的な候補が変わります。</li>
+<li>今日からできることは、原因遺伝子の確認、自然経過レジストリの確認、国内治験情報の月1回チェックです。</li>
+</ol>
+<h2>1. 治療を2種類に分けて理解する</h2>
+<h3>A. 進行を止める、または遅らせる治療</h3>
+<p><ruby class="term-ruby"><abbr class="term-abbr" title="しんけいほご">神経保護</abbr><rt>しんけいほご</rt></ruby>、抗酸化、栄養因子など、残っている視機能を守ることを狙う治療です。視力を取り戻すものではありませんが、遺伝子型を問わない候補もあり、数年内に選択肢が出る可能性がある現実的な希望です。</p>
+<p>代表例:</p>
+<ul>
+<li>SPVN06。<abbr class="term-abbr" title="錐体保護因子（Rod-derived Cone Viability Factor）">RdCVF</abbr>を使う神経保護の<ruby class="term-ruby"><abbr class="term-abbr" title="いでんしちりょう">遺伝子治療</abbr><rt>いでんしちりょう</rt></ruby>候補です。</li>
+<li>NAC Attack。飲み薬NACで進行抑制を検証する<abbr class="term-abbr" title="承認前の最終段階の大規模臨床試験">第3相</abbr>試験です。</li>
+<li>NPI-001。NACアミドの錠剤で、進行抑制を狙う候補です。</li>
+<li>SENTANピタバスタチンPLGAナノ粒子。国内医師主導治験が予定されている日本発の候補です。</li>
+</ul>
+<h3>B. 失った視力を取り戻す、または根治を目指す治療</h3>
+<p>遺伝子補充、遺伝子編集、細胞移植などです。原因遺伝子や病期が合う人に限られることがあり、10年から20年単位の長い見通しで考える必要があります。</p>
+<p>代表例:</p>
+<ul>
+<li>AGTC-501。特定遺伝子を対象にする遺伝子補充治療候補です。</li>
+<li>bota-vec。主要評価項目は未達でしたが、MeiraGTxが取得し、申請を進める方針です。</li>
+<li>DSP-3077。<abbr class="term-abbr" title="人工多能性幹細胞（体細胞から作られる万能細胞）">iPS細胞</abbr>由来網膜シート移植の候補です。</li>
+<li>Prime editing。前臨床段階の遺伝子編集技術です。</li>
+</ul>
+<h3>中間に位置する治療</h3>
+<p>OCU400、MCO-010、RV-001のように、進行抑制、機能改善、光覚再建の要素を持つ治療があります。ただし、完全な視力回復や根治とは分けて読む必要があります。</p>
+<h2>2. 今日からできる3ステップ</h2>
+<h3>ステップ1. 遺伝子検査で原因遺伝子を確認する</h3>
+<p><abbr class="term-abbr" title="特定の遺伝子変異がある人のみ対象">型特異</abbr>治療は、原因遺伝子が合うかどうかで対象が決まります。まず、かかりつけ眼科に「原因遺伝子を調べたい」「遺伝カウンセリングや専門外来に紹介してほしい」と相談してください。</p>
+<p>日本で相談先を探すときの例:</p>
+<ul>
+<li>神戸アイセンター病院。網膜変性専門外来と遺伝カウンセリング外来があります。</li>
+<li>IRUD。難病の原因究明研究として、研究連携の対象になる場合があります。</li>
+</ul>
+<p>公式ソース:</p>
+<ul>
+<li>神戸市立神戸アイセンター病院 専門外来: <a href="https://kobe.eye.center.kcho.jp/outpatient/disease.html" rel="noopener noreferrer" target="_blank">https://kobe.eye.center.kcho.jp/outpatient/disease.html</a></li>
+<li>神戸アイセンター: <a href="https://www.kobe-eye-center.jp/" rel="noopener noreferrer" target="_blank">https://www.kobe-eye-center.jp/</a></li>
+<li>AMED IRUD: <a href="https://www.amed.go.jp/program/IRUD/" rel="noopener noreferrer" target="_blank">https://www.amed.go.jp/program/IRUD/</a></li>
+</ul>
+<h3>ステップ2. 自然経過レジストリに登録できるか確認する</h3>
+<p>自然経過レジストリは、病気の進み方を記録し、将来の治験候補者を探す基盤になります。すぐに治験へ入れる仕組みではありませんが、「声がかかる側」に入るための準備です。</p>
+<p>主な確認先:</p>
+<ul>
+<li>JRPRP。日本網膜色素変性レジストリプロジェクト。</li>
+<li>KEYS study。UMIN000057025として登録されている自然経過研究。</li>
+<li>RP-PRIMARY。PubMed PMID 40042698で紹介されている前向き多施設研究。</li>
+</ul>
+<p>公式ソース:</p>
+<ul>
+<li>JRPRP: <a href="https://convention.jtbcom.co.jp/jrprp/" rel="noopener noreferrer" target="_blank">https://convention.jtbcom.co.jp/jrprp/</a></li>
+<li>JRPRP UMIN: <a href="https://rctportal.mhlw.go.jp/detail/um?trial_id=UMIN000049034" rel="noopener noreferrer" target="_blank">https://rctportal.mhlw.go.jp/detail/um?trial_id=UMIN000049034</a></li>
+<li>KEYS study: <a href="https://center6.umin.ac.jp/cgi-open-bin/ctr/ctr_view.cgi?recptno=R000065178" rel="noopener noreferrer" target="_blank">https://center6.umin.ac.jp/cgi-open-bin/ctr/ctr_view.cgi?recptno=R000065178</a></li>
+<li>RP-PRIMARY: <a href="https://pubmed.ncbi.nlm.nih.gov/40042698/" rel="noopener noreferrer" target="_blank">https://pubmed.ncbi.nlm.nih.gov/40042698/</a></li>
+</ul>
+<h3>ステップ3. 国内治験情報を月1回チェックする</h3>
+<p>月1回、次の2か所で「網膜色素変性」または「網膜色素変性症」を検索してください。見つけた試験は、対象年齢、実施施設、問い合わせ先、jRCT番号を控え、参加可否は主治医と実施施設に確認してください。</p>
+<p>公式ソース:</p>
+<ul>
+<li>jRCT: <a href="https://jrct.mhlw.go.jp/" rel="noopener noreferrer" target="_blank">https://jrct.mhlw.go.jp/</a></li>
+<li>jRCT検索: <a href="https://jrct.mhlw.go.jp/search" rel="noopener noreferrer" target="_blank">https://jrct.mhlw.go.jp/search</a></li>
+<li>難病治験ウェブ: <a href="https://nanbyo-chiken.nibn.go.jp/" rel="noopener noreferrer" target="_blank">https://nanbyo-chiken.nibn.go.jp/</a></li>
+</ul>
+<h2>3. 患者会・支援ネットワーク</h2>
+<p>情報を一人で追い続けるのは負担が大きくなります。JRPS（日本網膜色素変性症協会）は、治験情報、専門医情報、ロービジョンケア、当事者同士のつながりを得る窓口です。</p>
+<p>公式ソース:</p>
+<ul>
+<li>JRPS: <a href="https://jrps.org/" rel="noopener noreferrer" target="_blank">https://jrps.org/</a></li>
+<li>JRPS電話・対面相談: <a href="https://jrps.org/jrps%E9%9B%BB%E8%A9%B1%E7%9B%B8%E8%AB%87%E7%AA%93%E5%8F%A3/" rel="noopener noreferrer" target="_blank">https://jrps.org/jrps%E9%9B%BB%E8%A9%B1%E7%9B%B8%E8%AB%87%E7%AA%93%E5%8F%A3/</a></li>
+</ul>
+<h2>4. 主要プログラムの読み方</h2>
+<h3>OCU400</h3>
+<p><abbr class="term-abbr" title="どの遺伝子変異でも対象になりうる治療">型不問</abbr>に近い改変遺伝子治療です。第3相liMeliGhT試験は140名の組入れを完了し、トップラインデータは2027年予定です。米国では拡大アクセスの案内ページがありますが、ClinicalTrials.gov上の該当試験は新規利用可否に注意が必要な状態です。利用可能性は必ず公式窓口へ確認してください。</p>
+<h3>MCO-010</h3>
+<p><abbr class="term-abbr" title="遺伝子操作で光への感度を神経細胞に持たせる技術">光遺伝学</abbr>による視覚再建を狙う治療候補です。対象は進行した網膜色素変性症で、遺伝子型を問わない可能性があります。承認時期は申請・審査・追加データの状況で変わるため、単一年で断定しません。</p>
+<h3>bota-vec</h3>
+<p>主要評価項目は未達でしたが、MeiraGTxが2026年4月に取得し、米国、欧州、日本で申請を進める方針です。「中断」とは扱いません。</p>
+<h3>DSP-3077、RV-001、SENTAN</h3>
+<p>日本発または日本主導の候補です。DSP-3077はiPS細胞由来網膜シート、RV-001は慶應義塾大学病院で初回投与された光遺伝学治療、SENTANは国内医師主導治験予定のピタバスタチンPLGAナノ粒子です。</p>
+<h2>5. よくある質問</h2>
+<h3>いつ治りますか。</h3>
+<p>「何年に治る」と単一年では答えられません。進行を遅らせる治療なら、早ければ数年内に選択肢が出る可能性があります。一方、失った視力を取り戻す・根治を目指す治療は10年から20年の長期目標です。あなたの原因遺伝子と病期によって、どちらが現実的かが変わります。</p>
+<h3>海外治験に参加できますか。</h3>
+<p>可能性はありますが、条件は厳しく、渡航、滞在、言語、費用、追跡検査の負担があります。まず国内の主治医、実施施設、患者会に相談し、対象条件を確認してください。</p>
+<h3>今の治療や通院をやめてもよいですか。</h3>
+<p>やめないでください。このサイトは治療開発の情報整理であり、医学的助言ではありません。現在の治療、通院、補助具、ロービジョンケアは主治医と相談して続けてください。</p>
+<h2>6. 主治医に見せる短いメモ</h2>
+<p>診察時に、次の文をそのまま見せてもかまいません。</p>
+<pre><code class="language-text">網膜色素変性症の治験・将来治療に備えたいです。
+1. 私の原因遺伝子を調べるため、遺伝子検査や遺伝カウンセリングを受けられますか。
+2. JRPRPなどの自然経過レジストリに登録できる施設へ紹介可能ですか。
+3. jRCTや難病治験ウェブで見つけた試験について、対象になりうるか確認していただけますか。
+</code></pre>
+<h2>注意</h2>
+<p>この情報は研究と公開情報に基づく整理であり、医学的助言ではありません。治療を受けるか、治験へ参加するか、現在の治療を変更するかは、必ず主治医と相談して決めてください。</p>
+</main>
+</div>
+<nav aria-label="モバイル用ナビゲーション" class="bottom-nav" role="navigation">
+<ul>
+<li><a href="index.html"><span class="bottom-nav-icon">ホーム</span></a></li>
+<li><a href="japan_action_guide.html"><span class="bottom-nav-icon">日本向け</span></a></li>
+<li><a href="report.html"><span class="bottom-nav-icon">レポート</span></a></li>
+<li><a href="faq.html"><span class="bottom-nav-icon">FAQ</span></a></li>
+</ul>
+</nav>
+<footer role="contentinfo">
+<p>このサイトは研究・情報整理目的であり、医学的助言ではありません。</p>
+<p>改善提案は <a href="https://github.com/oh-yeah-sea-kit2/retina-roadmap/issues">GitHub</a> までお寄せください。</p>
+</footer>
 </body>
 </html>

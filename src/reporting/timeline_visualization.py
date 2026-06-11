@@ -216,7 +216,7 @@ def _render_scale() -> str:
         ticks.append(
             f'<span class="timeline-tick" style="left: {left:.2f}%;">{year}</span>'
         )
-    return "<div class=\"timeline-scale\">" + "".join(ticks) + "</div>"
+    return "<div class=\"timeline-scale\" aria-hidden=\"true\">" + "".join(ticks) + "</div>"
 
 
 def _render_row(item: TimelineItem) -> str:
@@ -255,7 +255,7 @@ def render_timeline(kb: dict[str, Any]) -> str:
                 <span><i class="legend-a"></i>A: 進行を遅らせる</span>
                 <span><i class="legend-b"></i>B/中間: 視覚再建・根治を目指す</span>
             </div>
-            <div class="timeline-scroll" role="region" aria-label="治療プログラムの予測タイムライン" tabindex="0">
+            <div class="timeline-scroll" role="region" aria-label="2026年から2040年までの治療プログラム予測タイムライン。各横棒のラベルでプログラム名、予測幅、注意書きを確認できます。" tabindex="0">
                 <div class="timeline-chart">
                     {_render_scale()}
                     <h3>A: 進行を遅らせる</h3>
