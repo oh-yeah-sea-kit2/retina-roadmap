@@ -1,7 +1,7 @@
 # 網膜色素変性症（RP）治療開発ロードマップ
 
 [![CI/CD Pipeline](https://github.com/oh-yeah-sea-kit2/retina-roadmap/actions/workflows/ci.yml/badge.svg)](https://github.com/oh-yeah-sea-kit2/retina-roadmap/actions/workflows/ci.yml)
-[![Last Updated](https://img.shields.io/badge/Last%20Updated-2025--06--26-blue)](https://oh-yeah-sea-kit2.github.io/retina-roadmap/)
+[![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--06--11-blue)](https://oh-yeah-sea-kit2.github.io/retina-roadmap/)
 
 **[サイトを見る](https://oh-yeah-sea-kit2.github.io/retina-roadmap/docs/public/index.html)**
 
@@ -21,11 +21,21 @@
 
 ### 📈 最新の予測結果
 
-- **最速承認予測**: 2025年後半～2026年（MCO-010）
+- **最速承認予測**: 最新の再シミュレーション結果は公開サイトの詳細レポートを参照
 - **全体の中央値**: 2036年
 - **AI活用による加速**: 最大45%の開発期間短縮の可能性
 
 詳細は[サイト](https://oh-yeah-sea-kit2.github.io/retina-roadmap/docs/public/index.html)をご覧ください。
+
+## 更新履歴
+
+### 2026-06-11 — 大規模改訂（v2.0）
+- **信頼性**：成功率100%問題を計算根から修正。フェーズ別ヒストリカル成功率（最大0.71）に統一し、MCO-010のFDA中央値が2026→2027に移動したことで計算側に効いていることを確認。
+- **データ更新**：OCU400・bota-vec・NPI-001・DSP-3077・NAC Attack・laru-zovaの6件を2026-06時点の正確な状況に更新。SPVN06・RV-001・SENTANの3件を新規追加。Botaretigeneの「中断」誤記を修正（MeiraGTxが継承・申請へ）。
+- **メッセージ設計**：「進行を遅らせる（A軸・型不問）」と「視力回復・根治（B軸）」の2軸化。トップを「今すぐできること→予測年→詳細」の順に変更。FAQ追加。
+- **日本向けアクション**：jRCT・難病治験ウェブ・JRPS・レジストリ（KEYS/JRPRP/RP-PRIMARY）・神戸アイセンターの手順を新設。日本発プログラム（DSP-3077・RV-001・SENTAN）を強調。
+- **UX**：2色タイムライン視覚化・用語ふりがな/ツールチップ・モバイル対応（Playwright確認済み）。NCT番号をトップから詳細に格納。
+- **自動化**：監視対象を`config/monitor_targets.yaml`に一元化。MeiraGTx/SparingVision/Restore Vision等7プログラムと日本語クエリを月次監視に追加。
 
 ## 🚀 クイックスタート（Claude Code）
 

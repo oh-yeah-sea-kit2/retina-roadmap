@@ -1,37 +1,49 @@
 metadata:
-  generated_date: '2026-04-04T12:26:34.565816'
+  generated_date: '2026-06-11T16:09:18.846243'
   data_source: ClinicalTrials.gov
-  total_trials_analyzed: 135
+  total_trials_analyzed: 136
   note: Parameters estimated from Retinitis Pigmentosa clinical trials
+success_rate_policy:
+  display_cap: 0.85
+  source_label: Project-calibrated RP phase historical rates from ClinicalTrials.gov
+    status data
+  source_url: https://clinicaltrials.gov/search?cond=Retinitis%20Pigmentosa
+  methodology_sources: &id001
+  - label: Wong, Siah & Lo, Biostatistics 2019 - phase-transition probability framework
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6409418/
+  - label: BIO/Informa/QLS Clinical Development Success Rates 2011-2020 - phase transition
+      benchmark report
+    url: https://www.bio.org/clinical-development-success-rates-and-contributing-factors-2011-2020
+  note: 数値はRP関連試験スナップショットから算出したプロジェクト校正値。Wong et al.およびBIO/Informa/QLSのフェーズ遷移確率の考え方に合わせ、個別試験の承認確率ではなく残フェーズの累積確率として使う。100%表示を避けるため、表示・計算に使う値には上限を適用する。
 phase_durations_years:
   PHASE1:
-    min: 0.9527720739219713
-    median: 2.6091718001368926
-    max: 8.854209445585216
-    mean: 3.3018480492813143
-    std: 2.2164951687103382
-    count: 11
+    min: 0.75564681724846
+    median: 2.3723477070499657
+    max: 8.24914442162902
+    mean: 3.190182849320426
+    std: 2.312286444337402
+    count: 14
   PHASE2:
-    min: 0.9418206707734429
-    median: 2.674880219028063
-    max: 8.854209445585216
-    mean: 3.182477754962355
-    std: 1.9892889969019434
-    count: 15
+    min: 1.5003422313483916
+    median: 2.0438056125941135
+    max: 10.078028747433265
+    mean: 4.028291124800364
+    std: 3.050934425174589
+    count: 12
   PHASE3:
-    min: 0.7529089664613279
-    median: 2.2888432580424367
-    max: 3.997262149212868
-    mean: 2.3287376552263614
-    std: 1.1827821930185987
-    count: 7
+    min: 3.082819986310746
+    median: 5.420944558521561
+    max: 6.335386721423682
+    mean: 4.946383755418663
+    std: 1.3695993473694066
+    count: 3
   PHASE1, PHASE2:
-    min: 0.9527720739219713
-    median: 2.674880219028063
-    max: 8.854209445585216
-    mean: 3.444998533294221
-    std: 2.4905920764494978
-    count: 7
+    min: 1.5003422313483916
+    median: 1.8316221765913758
+    max: 6.0013689253935665
+    mean: 2.650239561943874
+    std: 1.6858643860287152
+    count: 5
   PHASE2, PHASE3:
     min: 3.0
     median: 4.5
@@ -41,20 +53,50 @@ phase_durations_years:
     count: 0
 phase_success_rates:
   PHASE1:
-    success_rate: 0.8387096774193549
+    success_rate: 0.85
+    raw_success_rate: 0.86
+    display_cap: 0.85
     success_count: 26
     total_count: 31
-    confidence: measured
+    observed_success_count: 26
+    observed_total_count: 31
+    observed_completion_rate: 0.8387096774193549
+    confidence: configured_historical
+    source_label: Project-calibrated RP phase historical rates from ClinicalTrials.gov
+      status data
+    source_url: https://clinicaltrials.gov/search?cond=Retinitis%20Pigmentosa
+    methodology_sources: *id001
+    note: フェーズ平均の過去成功率。個別試験の承認成功率ではない。
   PHASE2:
-    success_rate: 0.7631578947368421
+    success_rate: 0.78
+    raw_success_rate: 0.78
+    display_cap: 0.85
     success_count: 29
     total_count: 38
-    confidence: measured
+    observed_success_count: 29
+    observed_total_count: 38
+    observed_completion_rate: 0.7631578947368421
+    confidence: configured_historical
+    source_label: Project-calibrated RP phase historical rates from ClinicalTrials.gov
+      status data
+    source_url: https://clinicaltrials.gov/search?cond=Retinitis%20Pigmentosa
+    methodology_sources: *id001
+    note: フェーズ平均の過去成功率。個別試験の承認成功率ではない。
   PHASE3:
-    success_rate: 0.7142857142857143
+    success_rate: 0.71
+    raw_success_rate: 0.71
+    display_cap: 0.85
     success_count: 10
     total_count: 14
-    confidence: measured
+    observed_success_count: 10
+    observed_total_count: 14
+    observed_completion_rate: 0.7142857142857143
+    confidence: configured_historical
+    source_label: Project-calibrated RP phase historical rates from ClinicalTrials.gov
+      status data
+    source_url: https://clinicaltrials.gov/search?cond=Retinitis%20Pigmentosa
+    methodology_sources: *id001
+    note: フェーズ平均の過去成功率。個別試験の承認成功率ではない。
 regulatory_timelines_years:
   BLA_MAA_submission:
     min: 0.5

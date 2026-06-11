@@ -1,119 +1,121 @@
 PMID,Year,Title,Journal
-41865892,2026,Retinal gene therapies for inherited ocular diseases: Translational delivery strategies from bench to bedside.,Journal of controlled release : official journal of the Controlled Release Society
-41606207,2026,Overcoming size barriers in retinal gene therapy via lipid nanoparticle-mediated delivery of full-length eys DNA.,Drug delivery and translational research
+41962540,2026,A genome-wide in vivo CRISPR screen identifies neuroprotective strategies in the mouse and human retina.,Neuron
+41655020,2026,AAV NRF2 gene therapy preserves retinal structure and function in rodent models of oxidative damage.,Molecular therapy : the journal of the American Society of Gene Therapy
 40825661,2026,Safety and vision outcomes of subretinal gene supplementation therapy in ,The British journal of ophthalmology
 41273655,2026,Phase 1/2a Clinical Trial Protocol for Lentiviral Vector-Based Retinal Gene Therapy to Slow the Progression of Retinitis Pigmentosa.,"Methods in molecular biology (Clifton, N.J.)"
 41364873,2026,MODELING NATURAL HISTORY AND COST-EFFECTIVENESS OF GENE-AGNOSTIC TREATMENT IN RETINITIS PIGMENTOSA.,"Retina (Philadelphia, Pa.)"
-41859137,2026,Mapping the intellectual landscape and emerging trends of retinitis pigmentosa research.,Frontiers in medicine
+41944104,2026,Development of Chitosan Nanoparticles for PRPF31 Gene Delivery in the Treatment of Retinitis Pigmentosa.,Current drug delivery
 41457516,2026,Age-Stratified Genetic Spectrum of Retinitis Pigmentosa in Korean Patients: Predominance of ,Annals of laboratory medicine
 41480687,2026,Advances in RPGR gene therapy for X‑linked retinitis pigmentosa: From preclinical insights to clinical application (Review).,International journal of molecular medicine
 41507439,2026,Leveraging large scale deep learning models for diagnosis and visual outcome prediction in retinitis pigmentosa.,NPJ digital medicine
-41534822,2026,Key optogenetic advances in retinal prostheses: A comparative narrative review.,Brain research
-41539649,2026,Genotypic and phenotypic landscape of novel RPGR variants in patients from Western Canada.,Canadian journal of ophthalmology. Journal canadien d'ophtalmologie
 41213528,2026,"Social media-derived patient perspectives on the burden of inherited retinal diseases, including retinitis pigmentosa.",Ophthalmic genetics
-41655020,2026,AAV NRF2 gene therapy preserves retinal structure and function in rodent models of oxidative damage.,Molecular therapy : the journal of the American Society of Gene Therapy
-41760155,2026,Advanced therapeutic approaches for inherited retinal diseases: an umbrella review.,BMJ open
+41539649,2026,Genotypic and phenotypic landscape of novel RPGR variants in patients from Western Canada.,Canadian journal of ophthalmology. Journal canadien d'ophtalmologie
+41606207,2026,Overcoming size barriers in retinal gene therapy via lipid nanoparticle-mediated delivery of full-length eys DNA.,Drug delivery and translational research
+41534822,2026,Key optogenetic advances in retinal prostheses: A comparative narrative review.,Brain research
 41661511,2026,A gel-forming antioxidant eye drop for photoreceptor protection in retinitis pigmentosa.,Drug delivery and translational research
-41790220,2026,[Remodeling of the internal retina-Implications for targeted optogenetics].,Die Ophthalmologie
 41773775,2026,Efficacy and Safety of Gene Therapy for RPGR Gene-Associated X-Linked Retinitis Pigmentosa: A Systematic Review and Meta-Analysis.,Translational vision science & technology
-41769936,2026,Combined Expression of hRdCVF and hRdCVFL Through AAV-Mediated Delivery for the Treatment of Retinitis Pigmentosa.,Investigative ophthalmology & visual science
+41865892,2026,Retinal gene therapies for inherited ocular diseases: Translational delivery strategies from bench to bedside.,Journal of controlled release : official journal of the Controlled Release Society
+41859137,2026,Mapping the intellectual landscape and emerging trends of retinitis pigmentosa research.,Frontiers in medicine
 41845931,2026,A heterozygous pathogenic ,Ophthalmic genetics
-41730765,2026,Streamlining the diagnostic and management pathways of patients with retinitis pigmentosa.,Ophthalmic genetics
 41701365,2026,[Optogenetic reactivation of dormant cone photoreceptors].,Die Ophthalmologie
+41790220,2026,[Remodeling of the internal retina-Implications for targeted optogenetics].,Die Ophthalmologie
+41187450,2026,Peptide-functionalized nanomaterials for controlled drug delivery and regenerative therapies in retinal diseases.,Journal of biomaterials applications
+41769936,2026,Combined Expression of hRdCVF and hRdCVFL Through AAV-Mediated Delivery for the Treatment of Retinitis Pigmentosa.,Investigative ophthalmology & visual science
+41760155,2026,Advanced therapeutic approaches for inherited retinal diseases: an umbrella review.,BMJ open
+41730765,2026,Streamlining the diagnostic and management pathways of patients with retinitis pigmentosa.,Ophthalmic genetics
 41714294,2026,A Tripartite AAV System with Engineered Lox Sites Enables Efficient Delivery of the ,Human gene therapy
-40429522,2025,State of the Art on Inherited Retinal Dystrophies: Management and Molecular Genetics.,Journal of clinical medicine
-40178895,2025,RPE-specific MCT2 expression promotes cone survival in models of retinitis pigmentosa.,Proceedings of the National Academy of Sciences of the United States of America
 40057012,2025,Retinitis Pigmentosa GTPase Regulator-Associated X-Linked Retinitis Pigmentosa: Molecular Genetics and Clinical Characteristics.,American journal of ophthalmology
 40083649,2025,Rescue of the disease-associated phenotype in CRISPR-corrected hiPSCs as a therapeutic approach for inherited retinal dystrophies.,Molecular therapy. Nucleic acids
-40118996,2025,H105A peptide eye drops promote photoreceptor survival in murine and human models of retinal degeneration.,Communications medicine
 40119518,2025,Correcting a patient-specific Rhodopsin mutation with adenine base editor in a mouse model.,Molecular therapy : the journal of the American Society of Gene Therapy
 40121528,2025,A synthetic opsin restores vision in patients with severe retinal degeneration.,Molecular therapy : the journal of the American Society of Gene Therapy
 40146151,2025,Addressing Multiplicity in Retinal Sensitivity Analysis: An Alternative Approach to Assessing Gene Therapy Efficacy in Inherited Retinal Diseases.,Translational vision science & technology
 40171502,2025,Enhancing ophthalmology students' awareness of retinitis pigmentosa: assessing the efficacy of ChatGPT in AI-assisted teaching of rare diseases-a quasi-experimental study.,Frontiers in medicine
-40231248,2025,The RNA content of extracellular vesicles from gene-edited ,Molecular therapy. Methods & clinical development
+40178895,2025,RPE-specific MCT2 expression promotes cone survival in models of retinitis pigmentosa.,Proceedings of the National Academy of Sciences of the United States of America
+40118996,2025,H105A peptide eye drops promote photoreceptor survival in murine and human models of retinal degeneration.,Communications medicine
 40419840,2025,Global research trends on endoplasmic reticulum stress in retinal diseases from 2000 to 2024.,International ophthalmology
+40231248,2025,The RNA content of extracellular vesicles from gene-edited ,Molecular therapy. Methods & clinical development
 40248902,2025,A Genomic Analysis of Usher Syndrome: Population-Scale Prevalence and Therapeutic Targets.,"American journal of medical genetics. Part C, Seminars in medical genetics"
 40249779,2025,MFRP is a molecular hub that organizes the apical membrane of RPE cells by engaging in interactions with specific proteins and lipids.,Proceedings of the National Academy of Sciences of the United States of America
-39975398,2025,Higher throughput assays for understanding the pathogenicity of variants of unknown significance (VUS) in the RPE65 gene.,bioRxiv : the preprint server for biology
 40266467,2025,Can Stem Cell Therapy Revolutionize Ocular Disease Treatment? A Critical Review of Preclinical and Clinical Advances.,Stem cell reviews and reports
 40299283,2025,"""I miss stars, too"": a thematic analysis of the experiences of persons with retinitis pigmentosa using Reddit.",Journal of community genetics
 40362317,2025,Rekindling Vision: Innovative Strategies for Treating Retinal Degeneration.,International journal of molecular sciences
 40417352,2025,Regulatory aspects of optogenetic research and therapy for retinitis pigmentosa under EU law.,Frontiers in medical technology
+39975398,2025,Higher throughput assays for understanding the pathogenicity of variants of unknown significance (VUS) in the RPE65 gene.,bioRxiv : the preprint server for biology
+40429522,2025,State of the Art on Inherited Retinal Dystrophies: Management and Molecular Genetics.,Journal of clinical medicine
 40004046,2025,Tropism of the AAV6.2 Vector in the Murine Retina.,International journal of molecular sciences
-39917110,2025,A Case of Childhood Acute Lymphoblastic Leukemia With Retinitis Pigmentosa-like Fundus Findings.,Cureus
+39745676,2025,A Penetrable AAV2 Capsid Variant for Efficient Intravitreal Gene Delivery to the Retina.,Investigative ophthalmology & visual science
 39941570,2025,Pre-Clinical and Clinical Advances in Gene Therapy of X-Linked Retinitis Pigmentosa: Hope on the Horizon.,Journal of clinical medicine
 39932789,2025,Ablating VHL in rod photoreceptors modulates RPE glycolysis and improves preclinical model of retinitis pigmentosa.,The Journal of clinical investigation
 38504575,2025,Bone Marrow-derived Mesenchymal Stem Cell Therapy in Retinitis Pigmentosa.,Current stem cell research & therapy
 39218074,2025,"PDE6A-Associated Retinitis Pigmentosa, Clinical Characteristics, Genetics, and Natural History.",Ophthalmology. Retina
 39328826,2025,Phase I Study of Intravitreal Injection of Autologous CD34+ Stem Cells from Bone Marrow in Eyes with Vision Loss from Retinitis Pigmentosa.,Ophthalmology science
-39384069,2025,Challenges in Value Assessment for One-Time Gene Therapies for Inherited Retinal Diseases: Are We Turning a Blind Eye?,Value in health : the journal of the International Society for Pharmacoeconomics and Outcomes Research
+39359097,2025,AAV2-PDE6B restores retinal structure and function in the retinal degeneration 10 mouse model of retinitis pigmentosa by promoting phototransduction and inhibiting apoptosis.,Neural regeneration research
 39560289,2025,Prevalence of Molecular Diagnoses for Usher Syndrome and the Need for Coordinated Care.,The Laryngoscope
 39610034,2025,The phenotypic spectrum of ,Ophthalmic genetics
 39643074,2025,Subretinal Gene Therapy Drug AGTC-501 for XLRP Phase 1/2 Multicenter Study (HORIZON): 24-Month Safety and Efficacy Results.,American journal of ophthalmology
 39710900,2025,Retinitis Pigmentosa and Therapeutic Candidates.,International ophthalmology clinics
 39743696,2025,[Research progress in optogenetic therapy for retinitis pigmentosa].,[Zhonghua yan ke za zhi] Chinese journal of ophthalmology
-39745676,2025,A Penetrable AAV2 Capsid Variant for Efficient Intravitreal Gene Delivery to the Retina.,Investigative ophthalmology & visual science
 40535564,2025,Early-Onset Cone Photoreceptor Degeneration Is Associated With High Myopia in ,Journal of ophthalmology
 39860336,2025,Managing Retinitis Pigmentosa: A Literature Review of Current Non-Surgical Approaches.,Journal of clinical medicine
 39861150,2025,Non-Viral Delivery Systems to Transport Nucleic Acids for Inherited Retinal Disorders.,"Pharmaceuticals (Basel, Switzerland)"
 39877255,2025,Progress in photoreceptor replacement therapy for retinal degenerative diseases.,Cell insight
 39878701,2025,Ocular Safety and Toxicology of Subretinal Gene Therapy With rAAV.hPDE6A in Nonhuman Primates.,Translational vision science & technology
 39889868,2025,From bench to bedside: Developing CRISPR/Cas-based therapy for ocular diseases.,Pharmacological research
+39917110,2025,A Case of Childhood Acute Lymphoblastic Leukemia With Retinitis Pigmentosa-like Fundus Findings.,Cureus
 39930178,2025,Frequency and Pattern of Gene Therapy Clinical Trials for Inherited Retinal Diseases.,Advances in experimental medicine and biology
 40510754,2025,Female Simplex Carriers of X-Linked Retinal Dystrophies: A Case Series.,Case reports in ophthalmology
-39359097,2025,AAV2-PDE6B restores retinal structure and function in the retinal degeneration 10 mouse model of retinitis pigmentosa by promoting phototransduction and inhibiting apoptosis.,Neural regeneration research
+39384069,2025,Challenges in Value Assessment for One-Time Gene Therapies for Inherited Retinal Diseases: Are We Turning a Blind Eye?,Value in health : the journal of the International Society for Pharmacoeconomics and Outcomes Research
 40540142,2025,Revakinagene Taroretcel: First Approval.,Molecular diagnosis & therapy
-41242876,2025,Genetics and eye health: research advances and implications for primary eyecare.,Clinical & experimental optometry
+41054259,2025,One down but many more to go: the state of gene therapy for inherited retinal disease.,Regenerative medicine
 41127571,2025,Approval of retinal gene therapies in the US and Europe based on visual acuity and microperimetry.,Expert review of ophthalmology
 41136844,2025,The Programme for Manufacture of hPSC‑Based Products for AMD and PD.,Advances in experimental medicine and biology
 41138048,2025,Can Gene Therapy Transform the Treatment Landscape of Posterior Segment Eye Diseases? A Comprehensive Review of Recent Advancements.,Drugs
-41140124,2025,Clinical and pharmacovigilance safety evaluation of LUXTURNA,Cutaneous and ocular toxicology
 41376775,2025,Retinal organoids mirror CRISPR-Cas9 gene editing efficiency observed ,Molecular therapy. Methods & clinical development
+41153429,2025,"Cystoid Macular Lesions in Inherited Retinal Diseases: Prevalence, Characteristics, and Genetic Associations in a Hungarian Cohort.",Genes
 41169366,2025,"Immune responses in retinal gene therapy: challenges, mechanisms, and future strategies.",Frontiers in immunology
-41187450,2025,Peptide-functionalized nanomaterials for controlled drug delivery and regenerative therapies in retinal diseases.,Journal of biomaterials applications
 41234928,2025,Preclinical biodistribution and toxicology assessment of an AAV5-based subretinal modifier gene therapy for retinitis pigmentosa.,Frontiers in medicine
+41242876,2025,Genetics and eye health: research advances and implications for primary eyecare.,Clinical & experimental optometry
 41251530,2025,Mild RPE65-Associated Inherited Retinal Dystrophies: A Multimodal Clinical and Genetic Evaluation.,Translational vision science & technology
-41054259,2025,One down but many more to go: the state of gene therapy for inherited retinal disease.,Regenerative medicine
 41277943,2025,Advancing vision: gene therapy innovations for X-linked retinitis pigmentosa (XLRP).,EXCLI journal
 41286208,2025,Linking Mitochondrial Gene Dysregulation to Immune Cell Shifts in Retinitis Pigmentosa.,Molecular neurobiology
-40575766,2025,Current understanding on Retinitis Pigmentosa: a literature review.,Frontiers in ophthalmology
 41315142,2025,Decoding retinitis pigmentosa: molecular targets and therapy with focus on pre-mRNA splicing.,Cellular and molecular life sciences : CMLS
+40575766,2025,Current understanding on Retinitis Pigmentosa: a literature review.,Frontiers in ophthalmology
 41480395,2025,Novel developments in retinal regeneration: Advances and future outlooks in stem cell therapy.,World journal of stem cells
-41323371,2025,Cell-based regenerative therapy for retinal diseases: challenges and emerging bioengineering strategies.,Regenerative therapy
 41396591,2025,Preclinical Study on the Long-Term Efficacy and Safety of Sustained-Release Gas6 Liposomes Combined With MERTK Gene Therapy for Retinitis Pigmentosa.,Translational vision science & technology
+41323371,2025,Cell-based regenerative therapy for retinal diseases: challenges and emerging bioengineering strategies.,Regenerative therapy
 41368829,2025,Stem cell therapy for inherited retinal diseases: Trends and insights from 2000 to 2024.,Cell transplantation
 41106454,2025,A novel X-linked retinitis pigmentosa beagle dog model for ophthalmic research established rapidly by editing the RPGR gene in zygotes.,Experimental eye research
-41153429,2025,"Cystoid Macular Lesions in Inherited Retinal Diseases: Prevalence, Characteristics, and Genetic Associations in a Hungarian Cohort.",Genes
+41140124,2025,Clinical and pharmacovigilance safety evaluation of LUXTURNA,Cutaneous and ocular toxicology
 40998214,2025,Decoding pediatric inherited retinal dystrophies: Bridging genetic complexity and clinical heterogeneity.,Progress in retinal and eye research
 40864185,2025,[Gene therapy methods for rare ophthalmological diseases in the light of distributional justice-An overview].,Die Ophthalmologie
+40653814,2025,Early symptoms in ,Ophthalmic genetics
 40668311,2025,Advancements and future directions in Oguchi disease research.,International ophthalmology
 40701540,2025,[Inherited retinal disorders: Current therapeutic options and future perspectives].,Klinische Monatsblatter fur Augenheilkunde
 40725503,2025,Advances in Precision Therapeutics and Gene Therapy Applications for Retinal Diseases: Impact and Future Directions.,Genes
 40978076,2025,Clinical Research for Inherited Retinal Disease Related Pediatric Blindness: A Preliminary Descriptive Analysis Based on ClinicalTrials.gov.,Journal of multidisciplinary healthcare
-40731764,2025,Ophthalmologic Manifestations in Bardet-Biedl Syndrome: Emerging Therapeutic Approaches.,"Medicina (Kaunas, Lithuania)"
 40731809,2025,Retinitis Pigmentosa: From Genetic Insights to Innovative Therapeutic Approaches-A Literature Review.,"Medicina (Kaunas, Lithuania)"
-40858513,2025,A survey of genotypes associated with Leber congenital amaurosis and early-onset severe retinal degeneration identified in a Singaporean patient cohort.,Ophthalmic genetics
 40833643,2025,ConPath 2.0: an optimized consensus strategy for assessing the potential pathogenicity of hRPE65 missense variants.,Journal of molecular modeling
+40858513,2025,A survey of genotypes associated with Leber congenital amaurosis and early-onset severe retinal degeneration identified in a Singaporean patient cohort.,Ophthalmic genetics
+40731764,2025,Ophthalmologic Manifestations in Bardet-Biedl Syndrome: Emerging Therapeutic Approaches.,"Medicina (Kaunas, Lithuania)"
 40867647,2025,Retinal Gatekeepers: Molecular Mechanism and Therapeutic Role of Cysteine and Selenocysteine.,Biomolecules
-40869487,2025,Genetic Therapies for Retinitis Pigmentosa: Current Breakthroughs and Future Directions.,Journal of clinical medicine
 40897815,2025,Gene augmentation therapy restores vision and preserves photoreceptors in a mouse model of CNGA1-retinitis pigmentosa.,Communications medicine
 40905668,2025,Evaluating the long-term efficacy of umbilical cord-derived mesenchymal stem cell therapy in retinitis pigmentosa: findings from a 1-to-4-year follow-up.,Stem cells translational medicine
 40923851,2025,Net present value cost analysis for treating retinitis pigmentosa.,Journal of medical economics
+40869487,2025,Genetic Therapies for Retinitis Pigmentosa: Current Breakthroughs and Future Directions.,Journal of clinical medicine
 40927136,2025,Retinal progenitor cells (jCell) for retinitis pigmentosa.,Frontiers in cellular neuroscience
 40938072,2025,RP1 Dual-AAV Gene Therapy Preserves Retinal Structure and Ameliorates Photoreceptor Degeneration in a Murine Model of Retinitis Pigmentosa.,Investigative ophthalmology & visual science
 40965251,2025,Update on Gene Therapy Clinical Trials for Eye Diseases.,Human gene therapy
-40653814,2025,Early symptoms in ,Ophthalmic genetics
 38431596,2024,Cell therapy for retinal degenerative disorders: a systematic review and three-level meta-analysis.,Journal of translational medicine
 38295996,2024,Next generation therapeutics for retinal neurodegenerative diseases.,Journal of controlled release : official journal of the Controlled Release Society
 38368562,2024,Knockout and Replacement Gene Surgery to Treat Rhodopsin-Mediated Autosomal Dominant Retinitis Pigmentosa.,Human gene therapy
 38370727,2024,Txnip deletions and missense alleles prolong the survival of cones in a retinitis pigmentosa mouse model.,bioRxiv : the preprint server for biology
 38408137,2024,Therapeutic In Vivo Gene Editing Achieved by a Hypercompact CRISPR-Cas12f1 System Delivered with All-in-One Adeno-Associated Virus.,"Advanced science (Weinheim, Baden-Wurttemberg, Germany)"
 38423215,2024,Assessment of Visual Function with Cotoretigene Toliparvovec in X-Linked Retinitis Pigmentosa in the Randomized XIRIUS Phase 2/3 Study.,Ophthalmology
-38518771,2024,CRISPR editing of anti-anemia drug target rescues independent preclinical models of retinitis pigmentosa.,Cell reports. Medicine
 38485090,2024,Frequency and Distribution of Ophthalmic Surgical Procedures among Patients with Inherited Retinal Diseases.,Ophthalmology. Retina
 38500388,2024,Inherited retinal dystrophies and orphan designations in the European Union.,European journal of ophthalmology
 38504136,2024,Fine-tuning FAM161A gene augmentation therapy to restore retinal function.,EMBO molecular medicine
 38504520,2024,Rescue of cone and rod photoreceptor function in a CDHR1-model of age-related retinal degeneration.,Molecular therapy : the journal of the American Society of Gene Therapy
+38525684,2024,Navigating the Usher Syndrome Genetic Landscape: An Evaluation of the Associations between Specific Genes and Quality Categories of Cochlear Implant Outcomes.,Audiology research
 38569559,2024,Correction to: Gene therapy for retinitis pigmentosa and Leber congenital amaurosis caused by defects in AIPL1: effective rescue of mouse models of partial and complete Aipl1 deficiency using AAV2/2 and AAV2/8 vectors.,Human molecular genetics
 38341159,2024,Navigating the future of retinitis pigmentosa treatments: A comprehensive analysis of therapeutic approaches in rd10 mice.,Neurobiology of disease
 37460158,2024,Gene Therapies for Retinitis Pigmentosa that Target Glucose Metabolism.,Cold Spring Harbor perspectives in medicine
@@ -134,7 +136,7 @@ PMID,Year,Title,Journal
 38276971,2024,Cell therapy for retinal disease.,Current opinion in ophthalmology
 38319527,2024,New Perspectives in Stem Cell Transplantation and Associated Therapies to Treat Retinal Diseases: From Gene Editing to 3D Bioprinting.,Stem cell reviews and reports
 38586868,2024,"Regenerative treatment of ophthalmic diseases with stem cells: Principles, progress, and challenges.",Advances in ophthalmology practice and research
-38525684,2024,Navigating the Usher Syndrome Genetic Landscape: An Evaluation of the Associations between Specific Genes and Quality Categories of Cochlear Implant Outcomes.,Audiology research
+38518771,2024,CRISPR editing of anti-anemia drug target rescues independent preclinical models of retinitis pigmentosa.,Cell reports. Medicine
 38627549,2024,Voretigene neparvovec for inherited retinal dystrophy due to RPE65 mutations: a scoping review of eligibility and treatment challenges from clinical trials to real practice.,"Eye (London, England)"
 39202371,2024,Whole-Exome Analysis for Polish Caucasian Patients with Retinal Dystrophies and the Creation of a Reference Genomic Database for the Polish Population.,Genes
 39441757,2024,PCDH15 dual-AAV gene therapy for deafness and blindness in Usher syndrome type 1F models.,The Journal of clinical investigation
@@ -215,7 +217,7 @@ PMID,Year,Title,Journal
 36773475,2023,Binocular benefit following monocular subretinal AAV injection in a mouse model of autosomal dominant retinitis pigmentosa (adRP).,Vision research
 36830806,2023,"Biology, Pathobiology and Gene Therapy of CNG Channel-Related Retinopathies.",Biomedicines
 37251979,2023,A clinically viable approach to restoring visual function using optogenetic gene therapy.,Molecular therapy. Methods & clinical development
-37295269,2023,Microglial and macroglial dynamics in a model of retinitis pigmentosa.,Vision research
+37312453,2023,Rescue of hearing by adenine base editing in a humanized mouse model of Usher syndrome type 1F.,Molecular therapy : the journal of the American Society of Gene Therapy
 37288665,2023,A versatile laser-induced porcine model of outer retinal and choroidal degeneration for preclinical testing.,JCI insight
 37915173,2023,Third-generation lentiviral gene therapy rescues function in a mouse model of Usher 1B.,Molecular therapy : the journal of the American Society of Gene Therapy
 37712069,2023,Clinical and genetic features of Koreans with retinitis pigmentosa associated with mutations in rhodopsin.,Frontiers in genetics
@@ -253,12 +255,12 @@ PMID,Year,Title,Journal
 37440027,2023,Txnip Gene Therapy of Retinitis Pigmentosa Improves Cone Health.,Advances in experimental medicine and biology
 37440058,2023,Morphological and Functional Comparison of Mice Models for Retinitis Pigmentosa.,Advances in experimental medicine and biology
 37321111,2023,Gene therapy for RAB28: What can we learn from zebrafish?,Vision research
-37312453,2023,Rescue of hearing by adenine base editing in a humanized mouse model of Usher syndrome type 1F.,Molecular therapy : the journal of the American Society of Gene Therapy
+38993872,2023,A treatment within sight: challenges in the development of stem cell-derived photoreceptor therapies for retinal degenerative diseases.,Frontiers in transplantation
 37372984,2023,"The Phosphoproteome of the Rd1 Mouse Retina, a Model of Inherited Photoreceptor Degeneration, Changes after Protein Kinase G Inhibition.",International journal of molecular sciences
 37440064,2023,"Rod Photoreceptor-Specific Ablation of Metformin Target, AMPK, in a Preclinical Model of Autosomal Recessive Retinitis Pigmentosa.",Advances in experimental medicine and biology
 37449599,2023,"Retinoprotective compounds, current efficacy, and future prospective.",Neural regeneration research
 37440059,2023,Current Advancements in Mouse Models of Retinal Disease.,Advances in experimental medicine and biology
-38993872,2023,A treatment within sight: challenges in the development of stem cell-derived photoreceptor therapies for retinal degenerative diseases.,Frontiers in transplantation
+37295269,2023,Microglial and macroglial dynamics in a model of retinitis pigmentosa.,Vision research
 37539253,2023,Progress and prospects of gene therapy in ophthalmology from 2000 to 2022: A bibliometric analysis.,Heliyon
 37640142,2023,Development of experimental treatments for patients with retinitis pigmentosa.,Archivos de la Sociedad Espanola de Oftalmologia
 37605279,2023,Soluble CX3CL1-expressing retinal pigment epithelium cells protect rod photoreceptors in a mouse model of retinitis pigmentosa.,Stem cell research & therapy
@@ -404,8 +406,8 @@ PMID,Year,Title,Journal
 32189222,2020,Impact of gene therapy for canine monogenic diseases on the progress of preclinical studies.,Journal of applied genetics
 32381254,2020,X-Chromosome Insight for Targeting Gene Therapy.,Ophthalmology. Retina
 32231889,2020,Monitoring progression of retinitis pigmentosa: current recommendations and recent advances.,Expert opinion on orphan drugs
+32295315,2020,A Systematic Review on Transplantation Studies of the Retinal Pigment Epithelium in Animal Models.,International journal of molecular sciences
 32414297,2020,Dose Range Finding Studies with Two ,Human gene therapy
-32323592,2020,A novel homozygous c.67C>T variant in retinol binding protein 4 (RBP4) associated with retinitis pigmentosa and childhood acne vulgaris.,Ophthalmic genetics
 32352930,2020,Microglia modulation by TGF-β1 protects cones in mouse models of retinal degeneration.,The Journal of clinical investigation
 32120883,2020,Metabolic and Redox Signaling of the Nucleoredoxin-Like-1 Gene for the Treatment of Genetic Retinal Diseases.,International journal of molecular sciences
 32363976,2020,"""Eye genetics at the fork in the road"" 2017 Franceschetti Lecture, Leeds UK.",Ophthalmic genetics
@@ -426,7 +428,7 @@ PMID,Year,Title,Journal
 31612744,2020,RPGR gene therapy presents challenges in cloning the coding sequence.,Expert opinion on biological therapy
 31630094,2020,Genetic and clinical findings in a Chinese cohort with Leber congenital amaurosis and early onset severe retinal dystrophy.,The British journal of ophthalmology
 32394751,2020,Effect of AAV-Mediated Rhodopsin Gene Augmentation on Retinal Degeneration Caused by the Dominant P23H Rhodopsin Mutation in a Knock-In Murine Model.,Human gene therapy
-32295315,2020,A Systematic Review on Transplantation Studies of the Retinal Pigment Epithelium in Animal Models.,International journal of molecular sciences
+32323592,2020,A novel homozygous c.67C>T variant in retinol binding protein 4 (RBP4) associated with retinitis pigmentosa and childhood acne vulgaris.,Ophthalmic genetics
 32426524,2020,Advanced late-onset retinitis pigmentosa with dominant-acting D477G RPE65 mutation is responsive to oral synthetic retinoid therapy.,BMJ open ophthalmology
 32882879,2020,Transferrin Non-Viral Gene Therapy for Treatment of Retinal Degeneration.,Pharmaceutics
 33928237,2020,Retinal imaging in inherited retinal diseases.,Annals of eye science

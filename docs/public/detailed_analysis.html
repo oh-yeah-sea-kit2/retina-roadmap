@@ -1,31 +1,30 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>詳細分析データ - 網膜色素変性症治療予測</title>
-    <meta name="description" content="網膜色素変性症治療の詳細な予測データ、AI影響分析、開発ボトルネック、シミュレーション方法論。研究者・専門家向け。">
-    
-    <!-- OGPタグ -->
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="詳細分析 - RP治療予測データ">
-    <meta property="og:description" content="モンテカルロシミュレーションによる詳細な予測結果と分析">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/common.css">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>詳細分析データ - 網膜色素変性症治療予測</title>
+<meta content="網膜色素変性症治療の詳細な予測データ、AI影響分析、開発ボトルネック、シミュレーション方法論。研究者・専門家向け。" name="description"/>
+<!-- OGPタグ -->
+<meta content="article" property="og:type"/>
+<meta content="詳細分析 - RP治療予測データ" property="og:title"/>
+<meta content="モンテカルロシミュレーションによる詳細な予測結果と分析" property="og:description"/>
+<!-- CSS -->
+<link href="css/common.css" rel="stylesheet"/>
+<style>
         /* タブシステム用スタイル */
         .tab-container {
             margin: 30px 0;
         }
-        
+
         .tabs {
             display: flex;
             border-bottom: 2px solid #ddd;
             margin-bottom: 0;
             flex-wrap: wrap;
         }
-        
+
         .tab-btn {
             background: none;
             border: none;
@@ -38,19 +37,19 @@
             border-bottom: 3px solid transparent;
             margin-bottom: -2px;
         }
-        
+
         .tab-btn:hover {
             color: var(--primary-color);
             background: #f0f0f0;
         }
-        
+
         .tab-btn.active {
             color: var(--primary-color);
             font-weight: bold;
             border-bottom-color: var(--primary-color);
             background: white;
         }
-        
+
         .tab-content {
             display: none;
             padding: 30px;
@@ -59,48 +58,48 @@
             border-top: none;
             animation: fadeIn 0.3s ease;
         }
-        
+
         .tab-content.active {
             display: block;
         }
-        
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        
+
         /* 詳細データテーブル */
         .data-table {
             font-size: 0.9em;
             margin: 20px 0;
         }
-        
+
         .data-table th {
             position: sticky;
             top: 0;
             background: var(--primary-color);
             z-index: 10;
         }
-        
+
         /* 図表のキャプション */
         figure {
             margin: 30px 0;
             text-align: center;
         }
-        
+
         figure img {
             max-width: 100%;
             height: auto;
             border: 1px solid #ddd;
             border-radius: 5px;
         }
-        
+
         figcaption {
             margin-top: 10px;
             font-size: 0.9em;
             color: #666;
         }
-        
+
         /* AI分析セクション */
         .ai-impact-box {
             background: #e8f4f8;
@@ -108,14 +107,14 @@
             border-radius: 8px;
             margin: 20px 0;
         }
-        
+
         .scenario-card {
             border: 1px solid #ddd;
             padding: 15px;
             margin: 15px 0;
             border-radius: 5px;
         }
-        
+
         /* ボトルネック分析 */
         .bottleneck-item {
             background: #f8f9fa;
@@ -123,14 +122,14 @@
             margin: 20px 0;
             border-left: 4px solid var(--accent-color);
         }
-        
+
         .solution-box {
             background: #e7f3ff;
             padding: 15px;
             margin: 10px 0;
             border-radius: 5px;
         }
-        
+
         /* 方法論セクション */
         .formula-box {
             background: #f5f5f5;
@@ -139,36 +138,36 @@
             font-family: 'Courier New', monospace;
             overflow-x: auto;
         }
-        
+
         .parameter-table {
             background: white;
             margin: 20px 0;
         }
-        
+
         /* モバイル対応 */
         @media screen and (max-width: 768px) {
             .tabs {
                 flex-direction: column;
             }
-            
+
             .tab-btn {
                 width: 100%;
                 text-align: left;
                 border-bottom: 1px solid #eee;
             }
-            
+
             .tab-content {
                 padding: 20px;
             }
         }
-        
+
         /* ハイライト */
         .highlight {
             background: #ffeb3b;
             padding: 2px 5px;
             border-radius: 3px;
         }
-        
+
         /* 統計情報ボックス */
         .stat-box {
             display: flex;
@@ -176,7 +175,7 @@
             flex-wrap: wrap;
             margin: 20px 0;
         }
-        
+
         .stat-item {
             flex: 1;
             min-width: 200px;
@@ -185,13 +184,13 @@
             border-radius: 8px;
             text-align: center;
         }
-        
+
         .stat-number {
             font-size: 2em;
             font-weight: bold;
             color: var(--primary-color);
         }
-        
+
         .stat-label {
             color: #666;
             margin-top: 5px;
@@ -199,500 +198,458 @@
     </style>
 </head>
 <body>
-    <!-- スキップリンク -->
-    <a href="#main" class="skip-link">メインコンテンツへスキップ</a>
-    
-    <!-- ナビゲーション -->
-    <nav>
-        <ul>
-            <li><a href="index.html">ホーム</a></li>
-            <li><a href="patient_guide.html">患者ガイド</a></li>
-            <li><a href="medical_info.html">医療従事者向け</a></li>
-            <li><a href="detailed_analysis.html" aria-current="page">詳細分析</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-        </ul>
-    </nav>
-    
-    <div class="container">
-        <main id="main">
-            <h1>詳細分析データ</h1>
-            
-            <p>このページでは、網膜色素変性症治療予測の詳細なデータと分析結果を提供します。研究者・専門家向けの技術的内容を含みます。</p>
-            
-            <!-- タブシステム -->
-            <div class="tab-container">
-                <nav class="tabs" role="tablist">
-                    <button class="tab-btn active" data-tab="predictions" role="tab" aria-selected="true">予測結果</button>
-                    <button class="tab-btn" data-tab="methodology" role="tab" aria-selected="false">方法論</button>
-                    <button class="tab-btn" data-tab="ai-impact" role="tab" aria-selected="false">AI影響</button>
-                    <button class="tab-btn" data-tab="bottlenecks" role="tab" aria-selected="false">開発課題</button>
-                </nav>
-                
-                <!-- タブ1: 予測結果 -->
-                <div id="predictions" class="tab-content active" role="tabpanel">
-                    <h2>モンテカルロシミュレーション結果</h2>
-                    
-                    <!-- 統計サマリー -->
-                    <div class="stat-box">
-                        <div class="stat-item">
-                            <div class="stat-number">127</div>
-                            <div class="stat-label">分析した臨床試験数</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">10,000</div>
-                            <div class="stat-label">シミュレーション回数</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">71.4%</div>
-                            <div class="stat-label">Phase 3成功率</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">2037年</div>
-                            <div class="stat-label">承認時期中央値</div>
-                        </div>
-                    </div>
-                    
-                    <!-- 詳細予測テーブル -->
-                    <h3>全プログラム詳細予測（54件）</h3>
-                    <div style="overflow-x: auto;">
-                        <table class="data-table">
-                            <thead>
-                                <tr>
-                                    <th>順位</th>
-                                    <th>NCT番号</th>
-                                    <th>プログラム名</th>
-                                    <th>企業/機関</th>
-                                    <th>Phase</th>
-                                    <th>対象遺伝子</th>
-                                    <th>モダリティ</th>
-                                    <th>成功確率</th>
-                                    <th>FDA承認予測</th>
-                                    <th>日本承認予測</th>
-                                    <th>95% CI</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>NCT04945772</td>
-                                    <td>MCO-010</td>
-                                    <td>Nanoscope Therapeutics</td>
-                                    <td>BLA申請中</td>
-                                    <td>変異非依存</td>
-                                    <td>光遺伝学</td>
-                                    <td>95.0%</td>
-                                    <td><strong>2026年</strong></td>
-                                    <td>2031年</td>
-                                    <td>2025-2027</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>NCT05203939</td>
-                                    <td>OCU400</td>
-                                    <td>Ocugen</td>
-                                    <td>Phase 3</td>
-                                    <td>NR2E3</td>
-                                    <td>遺伝子治療</td>
-                                    <td>100.0%</td>
-                                    <td><strong>2027年</strong></td>
-                                    <td>2032年</td>
-                                    <td>2026-2029</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>NCT06388200</td>
-                                    <td>OCU400</td>
-                                    <td>Ocugen</td>
-                                    <td>Phase 3</td>
-                                    <td>NR2E3</td>
-                                    <td>遺伝子治療</td>
-                                    <td>100.0%</td>
-                                    <td><strong>2027年</strong></td>
-                                    <td>2032年</td>
-                                    <td>2026-2029</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>NCT04919473</td>
-                                    <td>AGTC-501</td>
-                                    <td>Beacon/Astellas</td>
-                                    <td>Phase 2/3</td>
-                                    <td>RPGR</td>
-                                    <td>遺伝子治療</td>
-                                    <td>85.7%</td>
-                                    <td>2029年</td>
-                                    <td>2034年</td>
-                                    <td>2028-2031</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>NCT05948761</td>
-                                    <td>LY3561949</td>
-                                    <td>Eli Lilly</td>
-                                    <td>Phase 2</td>
-                                    <td>全般</td>
-                                    <td>小分子</td>
-                                    <td>60.0%</td>
-                                    <td>2030年</td>
-                                    <td>2035年</td>
-                                    <td>2029-2032</td>
-                                </tr>
-                                <!-- 以下、残りの49プログラム（省略） -->
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                    <!-- グラフ -->
-                    <h3>累積承認確率（CDF）</h3>
-                    <figure>
-                        <img src="images/CDF.png" alt="累積承認確率グラフ" />
-                        <figcaption>図1: FDA承認の累積確率分布。2035年までに50%、2040年までに80%の確率で少なくとも1つの治療法が承認される。</figcaption>
-                    </figure>
-                    
-                    <h3>感度分析（トルネード図）</h3>
-                    <figure>
-                        <img src="images/tornado.png" alt="感度分析トルネード図" />
-                        <figcaption>図2: 承認時期に最も影響を与える要因。Phase 3の成功率と期間が最も重要。</figcaption>
-                    </figure>
-                    
-                    <h3>タイムライン予測（ウォーターフォール）</h3>
-                    <figure>
-                        <img src="images/waterfall.png" alt="タイムライン予測図" />
-                        <figcaption>図3: 上位20プログラムの予測タイムライン。色の濃さは成功確率を示す。</figcaption>
-                    </figure>
-                </div>
-                
-                <!-- タブ2: 方法論 -->
-                <div id="methodology" class="tab-content" role="tabpanel">
-                    <h2>シミュレーション方法論</h2>
-                    
-                    <h3>モンテカルロシミュレーション</h3>
-                    <p>本予測では、各治療プログラムに対して10,000回のモンテカルロシミュレーションを実施しました。</p>
-                    
-                    <h4>基本アルゴリズム</h4>
-                    <div class="formula-box">
-                        <pre>
+<!-- スキップリンク -->
+<a class="skip-link" href="#main">メインコンテンツへスキップ</a>
+<!-- ナビゲーション -->
+<nav>
+<ul>
+<li><a href="index.html">ホーム</a></li>
+<li><a href="patient_guide.html">患者ガイド</a></li>
+<li><a href="medical_info.html">医療従事者向け</a></li>
+<li><a aria-current="page" href="detailed_analysis.html">詳細分析</a></li>
+<li><a href="faq.html">FAQ</a></li>
+</ul>
+</nav>
+<div class="container">
+<main id="main">
+<h1>詳細分析データ</h1>
+<p>このページでは、網膜色素変性症治療予測の詳細なデータと分析結果を提供します。研究者・専門家向けの技術的内容を含みます。</p>
+<!-- タブシステム -->
+<div class="tab-container">
+<nav class="tabs" role="tablist">
+<button aria-selected="true" class="tab-btn active" data-tab="predictions" role="tab">予測結果</button>
+<button aria-selected="false" class="tab-btn" data-tab="methodology" role="tab">方法論</button>
+<button aria-selected="false" class="tab-btn" data-tab="ai-impact" role="tab">AI影響</button>
+<button aria-selected="false" class="tab-btn" data-tab="bottlenecks" role="tab">開発課題</button>
+</nav>
+<!-- タブ1: 予測結果 -->
+<div class="tab-content active" id="predictions" role="tabpanel">
+<h2>モンテカルロシミュレーション結果</h2>
+<!-- 統計サマリー -->
+<div class="stat-box">
+<div class="stat-item">
+<div class="stat-number">127</div>
+<div class="stat-label">分析した臨床試験数</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">10,000</div>
+<div class="stat-label">シミュレーション回数</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">71.4%</div>
+<div class="stat-label">Phase 3成功率</div>
+</div>
+<div class="stat-item">
+<div class="stat-number">2037年</div>
+<div class="stat-label">承認時期中央値</div>
+</div>
+</div>
+<!-- 詳細予測テーブル -->
+<h3>全プログラム詳細予測（54件）</h3>
+<div style="overflow-x: auto;">
+<table class="data-table">
+<thead>
+<tr>
+<th>順位</th>
+<th>NCT番号</th>
+<th>プログラム名</th>
+<th>企業/機関</th>
+<th>Phase</th>
+<th>対象遺伝子</th>
+<th>モダリティ</th>
+<th>累積承認確率（残フェーズ）</th>
+<th>FDA承認予測</th>
+<th>日本承認予測</th>
+<th>95% CI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>NCT04945772</td>
+<td>MCO-010</td>
+<td>Nanoscope Therapeutics</td>
+<td>BLA申請中</td>
+<td>変異非依存</td>
+<td>光遺伝学</td>
+<td>49.8%</td>
+<td>2027年</td>
+<td>2029年</td>
+<td>2027-2027</td>
+</tr>
+<tr>
+<td>2</td>
+<td>NCT05203939</td>
+<td>OCU400</td>
+<td>Ocugen</td>
+<td>Phase 3</td>
+<td>NR2E3</td>
+<td>遺伝子治療</td>
+<td>42.4%</td>
+<td>2027年</td>
+<td>2032年</td>
+<td>2027-2027</td>
+</tr>
+<tr>
+<td>3</td>
+<td>NCT06388200</td>
+<td>OCU400</td>
+<td>Ocugen</td>
+<td>Phase 3</td>
+<td>NR2E3</td>
+<td>遺伝子治療</td>
+<td>63.9%</td>
+<td>2027年</td>
+<td>2032年</td>
+<td>2027-2027</td>
+</tr>
+<tr>
+<td>4</td>
+<td>NCT04919473</td>
+<td>AGTC-501</td>
+<td>Beacon/Astellas</td>
+<td>Phase 2/3</td>
+<td>RPGR</td>
+<td>遺伝子治療</td>
+<td>85.0%</td>
+<td>2029年</td>
+<td>2034年</td>
+<td>2028-2031</td>
+</tr>
+<tr>
+<td>5</td>
+<td>NCT05948761</td>
+<td>LY3561949</td>
+<td>Eli Lilly</td>
+<td>Phase 2</td>
+<td>全般</td>
+<td>小分子</td>
+<td>60.0%</td>
+<td>2030年</td>
+<td>2035年</td>
+<td>2029-2032</td>
+</tr>
+<!-- 以下、残りの49プログラム（省略） -->
+</tbody>
+</table>
+</div>
+<!-- グラフ -->
+<h3>累積承認確率（CDF）</h3>
+<figure>
+<img alt="累積承認確率グラフ" src="images/CDF.png"/>
+<figcaption>図1: FDA承認の累積確率分布。2035年までに50%、2040年までに80%の確率で少なくとも1つの治療法が承認される。</figcaption>
+</figure>
+<h3>感度分析（トルネード図）</h3>
+<figure>
+<img alt="感度分析トルネード図" src="images/tornado.png"/>
+<figcaption>図2: 承認時期に最も影響を与える要因。Phase 3の成功率と期間が最も重要。</figcaption>
+</figure>
+<h3>タイムライン予測（ウォーターフォール）</h3>
+<figure>
+<img alt="タイムライン予測図" src="images/waterfall.png"/>
+<figcaption>図3: 上位20プログラムの予測タイムライン。色の濃さは累積承認確率を示す。</figcaption>
+</figure>
+</div>
+<!-- タブ2: 方法論 -->
+<div class="tab-content" id="methodology" role="tabpanel">
+<h2>シミュレーション方法論</h2>
+<h3>モンテカルロシミュレーション</h3>
+<p>本予測では、各治療プログラムに対して10,000回のモンテカルロシミュレーションを実施しました。</p>
+<h4>基本アルゴリズム</h4>
+<div class="formula-box">
+<pre>
 for program in active_programs:
     success_times = []
     for i in range(10000):
         t = current_time
         success = True
-        
+
         for phase in remaining_phases:
             # Phase期間をサンプリング
             duration = sample_triangular(min, mode, max)
             t += duration
-            
+
             # 成功判定
-            if random() > success_rate[phase]:
+            if random() &gt; success_rate[phase]:
                 success = False
                 break
-        
+
         if success:
             # 規制審査期間を追加
             t += sample_normal(12, 3)  # months
             success_times.append(t)
-    
+
     # 統計量を計算
     program.median = median(success_times)
     program.ci_95 = percentile(success_times, [2.5, 97.5])
                         </pre>
-                    </div>
-                    
-                    <h4>パラメータ設定</h4>
-                    <table class="parameter-table">
-                        <thead>
-                            <tr>
-                                <th>パラメータ</th>
-                                <th>分布</th>
-                                <th>値</th>
-                                <th>根拠</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Phase 1期間</td>
-                                <td>三角分布</td>
-                                <td>最小1年、最頻2年、最大3年</td>
-                                <td>過去RP試験29件の実績</td>
-                            </tr>
-                            <tr>
-                                <td>Phase 2期間</td>
-                                <td>三角分布</td>
-                                <td>最小2年、最頻3年、最大4年</td>
-                                <td>過去RP試験37件の実績</td>
-                            </tr>
-                            <tr>
-                                <td>Phase 3期間</td>
-                                <td>三角分布</td>
-                                <td>最小4年、最頻5年、最大7年</td>
-                                <td>遺伝子治療試験21件の実績</td>
-                            </tr>
-                            <tr>
-                                <td>Phase 1→2成功率</td>
-                                <td>ベータ分布</td>
-                                <td>α=25, β=4 (86.2%)</td>
-                                <td>25/29成功</td>
-                            </tr>
-                            <tr>
-                                <td>Phase 2→3成功率</td>
-                                <td>ベータ分布</td>
-                                <td>α=29, β=8 (78.4%)</td>
-                                <td>29/37成功</td>
-                            </tr>
-                            <tr>
-                                <td>Phase 3→承認成功率</td>
-                                <td>ベータ分布</td>
-                                <td>α=15, β=6 (71.4%)</td>
-                                <td>15/21成功</td>
-                            </tr>
-                            <tr>
-                                <td>規制審査期間</td>
-                                <td>正規分布</td>
-                                <td>平均12ヶ月、標準偏差3ヶ月</td>
-                                <td>FDA PDUFA目標</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    
-                    <h4>特別な考慮事項</h4>
-                    <ul>
-                        <li><strong>Fast Track指定</strong>：審査期間を6ヶ月に短縮</li>
-                        <li><strong>RMAT指定</strong>：Phase期間を20%短縮</li>
-                        <li><strong>長期実施中試験</strong>：追加遅延リスク（+1-2年）</li>
-                        <li><strong>製造スケールアップ</strong>：遺伝子治療に+6-12ヶ月</li>
-                    </ul>
-                    
-                    <h3>データソース</h3>
-                    <ul>
-                        <li><strong>ClinicalTrials.gov</strong>：API v2を使用、2025年7月20日時点</li>
-                        <li><strong>PubMed</strong>：E-utilities API、検索式: "retinitis pigmentosa"[MeSH] AND ("gene therapy"[MeSH] OR "cell therapy"[MeSH])</li>
-                        <li><strong>企業発表</strong>：各社IR資料、プレスリリース（2023-2025年）</li>
-                    </ul>
-                </div>
-                
-                <!-- タブ3: AI影響分析 -->
-                <div id="ai-impact" class="tab-content" role="tabpanel">
-                    <h2>AI活用による開発加速の可能性</h2>
-                    
-                    <div class="ai-impact-box">
-                        <h3>エグゼクティブサマリー</h3>
-                        <p>生成AIと機械学習技術により、網膜色素変性症（RP）の治療法開発が<strong class="highlight">最大50%短縮</strong>される可能性があります。現在の予測（最速2027年）が、AI活用により<strong class="highlight">2025-2026年に前倒し</strong>される可能性があります。</p>
-                    </div>
-                    
-                    <h3>AIによる開発加速の実績</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>プロセス</th>
-                                <th>従来期間</th>
-                                <th>AI活用後</th>
-                                <th>短縮率</th>
-                                <th>実例</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>標的同定</td>
-                                <td>2-4年</td>
-                                <td>6-12ヶ月</td>
-                                <td>75%</td>
-                                <td>Insilico Medicine（21日で新規標的発見）</td>
-                            </tr>
-                            <tr>
-                                <td>リード最適化</td>
-                                <td>1-2年</td>
-                                <td>3-6ヶ月</td>
-                                <td>70%</td>
-                                <td>Atomwise（エボラ薬を数日で同定）</td>
-                            </tr>
-                            <tr>
-                                <td>患者選定</td>
-                                <td>12-18ヶ月</td>
-                                <td>3-6ヶ月</td>
-                                <td>67%</td>
-                                <td>MELLODDY（10社共同、予測精度向上）</td>
-                            </tr>
-                            <tr>
-                                <td>臨床試験デザイン</td>
-                                <td>6-12ヶ月</td>
-                                <td>1-3ヶ月</td>
-                                <td>75%</td>
-                                <td>Unlearn.AI（対照群サイズ削減）</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    
-                    <h3>RPへの具体的インパクト</h3>
-                    
-                    <div class="scenario-card">
-                        <h4>シナリオ1: 保守的予測（30%短縮）</h4>
-                        <ul>
-                            <li>OCU400: 2027年 → <strong>2026年前半</strong></li>
-                            <li>総開発期間: 12年 → 8-9年</li>
-                            <li>実現可能性: <strong>高い（80%）</strong></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="scenario-card">
-                        <h4>シナリオ2: 中間予測（40%短縮）</h4>
-                        <ul>
-                            <li>OCU400: 2027年 → <strong>2025年後半</strong></li>
-                            <li>新規プログラム: 10年 → 6年</li>
-                            <li>実現可能性: <strong>中程度（50%）</strong></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="scenario-card">
-                        <h4>シナリオ3: 楽観的予測（50%短縮）</h4>
-                        <ul>
-                            <li>ブレークスルー: 2025年内に最初の承認</li>
-                            <li>2030年までに10種類以上の治療法</li>
-                            <li>実現可能性: <strong>低い（20%）</strong></li>
-                        </ul>
-                    </div>
-                    
-                    <h3>実現のための必要条件</h3>
-                    <ol>
-                        <li><strong>規制対応</strong>
-                            <ul>
-                                <li>FDAのAI/ML医療機器ガイダンス活用</li>
-                                <li>リアルワールドエビデンスの受け入れ</li>
-                                <li>適応的試験デザインの承認</li>
-                            </ul>
-                        </li>
-                        <li><strong>データ基盤</strong>
-                            <ul>
-                                <li>RP患者レジストリの統合（現在約5,000例）</li>
-                                <li>ゲノム・臨床データの標準化</li>
-                                <li>国際的データシェアリング</li>
-                            </ul>
-                        </li>
-                        <li><strong>投資と人材</strong>
-                            <ul>
-                                <li>AI創薬への投資（年間100億ドル以上）</li>
-                                <li>計算生物学者の育成</li>
-                                <li>産学連携の強化</li>
-                            </ul>
-                        </li>
-                    </ol>
-                </div>
-                
-                <!-- タブ4: 開発課題 -->
-                <div id="bottlenecks" class="tab-content" role="tabpanel">
-                    <h2>開発ボトルネック分析</h2>
-                    
-                    <p>網膜色素変性症治療開発における主要な課題と、その解決に向けた取り組みを分析します。</p>
-                    
-                    <div class="bottleneck-item">
-                        <h3>1. 患者募集の困難さ</h3>
-                        <p><strong>問題：</strong>希少疾患のため、臨床試験に必要な患者数の確保が困難（試験あたり50-200名必要）</p>
-                        
-                        <h4>影響</h4>
-                        <ul>
-                            <li>募集期間の長期化（平均2-3年）</li>
-                            <li>地理的制約（専門施設への通院）</li>
-                            <li>遺伝子型特異的試験での更なる絞り込み</li>
-                        </ul>
-                        
-                        <div class="solution-box">
-                            <h4>解決策</h4>
-                            <ul>
-                                <li><strong>患者レジストリ構築</strong>：日本網膜色素変性症協会（約4,000名）との連携</li>
-                                <li><strong>国際共同治験</strong>：複数国での同時実施</li>
-                                <li><strong>リモート臨床試験</strong>：在宅での評価項目導入</li>
-                                <li><strong>AI活用</strong>：電子カルテからの適格患者抽出</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="bottleneck-item">
-                        <h3>2. ベクター製造と免疫原性</h3>
-                        <p><strong>問題：</strong>AAVベクターの大量製造が困難で、既存抗体保有者は治療対象外</p>
-                        
-                        <h4>影響</h4>
-                        <ul>
-                            <li>製造コスト：1患者分100-300万ドル</li>
-                            <li>AAV既存抗体保有率：30-60%</li>
-                            <li>スケールアップに2-3年必要</li>
-                        </ul>
-                        
-                        <div class="solution-box">
-                            <h4>解決策</h4>
-                            <ul>
-                                <li><strong>新規ベクター開発</strong>：免疫原性の低いAAV改変体</li>
-                                <li><strong>製造技術革新</strong>：合成生物学による効率化</li>
-                                <li><strong>免疫抑制プロトコル</strong>：一時的免疫抑制の併用</li>
-                                <li><strong>代替デリバリー</strong>：非ウイルスベクター（LNP等）</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="bottleneck-item">
-                        <h3>3. 有効性評価の標準化</h3>
-                        <p><strong>問題：</strong>視機能改善の客観的評価が困難、プラセボ効果の除外が必要</p>
-                        
-                        <h4>影響</h4>
-                        <ul>
-                            <li>主要評価項目の設定困難</li>
-                            <li>規制当局間での基準不統一</li>
-                            <li>長期フォローアップの必要性（5年以上）</li>
-                        </ul>
-                        
-                        <div class="solution-box">
-                            <h4>解決策</h4>
-                            <ul>
-                                <li><strong>新規評価法開発</strong>：AI画像解析による網膜構造評価</li>
-                                <li><strong>複合エンドポイント</strong>：視力＋視野＋QOL</li>
-                                <li><strong>バイオマーカー探索</strong>：血液・涙液マーカー</li>
-                                <li><strong>国際標準化</strong>：FDA-EMA-PMDA協調</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="bottleneck-item">
-                        <h3>4. 規制要件とコスト</h3>
-                        <p><strong>問題：</strong>希少疾患薬開発の高コスト（10-20億ドル）と長期間（10-15年）</p>
-                        
-                        <h4>影響</h4>
-                        <ul>
-                            <li>ベンチャー企業の資金調達困難</li>
-                            <li>大手製薬会社の参入躊躇</li>
-                            <li>患者アクセスの制限</li>
-                        </ul>
-                        
-                        <div class="solution-box">
-                            <h4>解決策</h4>
-                            <ul>
-                                <li><strong>規制優遇措置</strong>：オーファンドラッグ指定、優先審査</li>
-                                <li><strong>官民パートナーシップ</strong>：AMED等の公的支援</li>
-                                <li><strong>革新的価格モデル</strong>：成果報酬型、分割払い</li>
-                                <li><strong>プラットフォーム技術</strong>：複数疾患への応用</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <h3>統合的アプローチの必要性</h3>
-                    <p>これらの課題は相互に関連しており、単独での解決は困難です。産学官患の連携による統合的アプローチが必要です：</p>
-                    
-                    <ol>
-                        <li><strong>エコシステム構築</strong>：研究機関・企業・患者団体の連携強化</li>
-                        <li><strong>データ共有基盤</strong>：競合前領域でのオープンイノベーション</li>
-                        <li><strong>人材育成</strong>：遺伝子治療専門家の養成</li>
-                        <li><strong>社会的理解</strong>：遺伝子治療への理解促進</li>
-                    </ol>
-                </div>
-            </div>
-        </main>
-        
-        <footer>
-            <p>&copy; 2025 網膜色素変性症治療予測プロジェクト | 
-            <a href="disclaimer.html">免責事項</a> | 
+</div>
+<h4>パラメータ設定</h4>
+<table class="parameter-table">
+<thead>
+<tr>
+<th>パラメータ</th>
+<th>分布</th>
+<th>値</th>
+<th>根拠</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phase 1期間</td>
+<td>三角分布</td>
+<td>最小1年、最頻2年、最大3年</td>
+<td>過去RP試験29件の実績</td>
+</tr>
+<tr>
+<td>Phase 2期間</td>
+<td>三角分布</td>
+<td>最小2年、最頻3年、最大4年</td>
+<td>過去RP試験37件の実績</td>
+</tr>
+<tr>
+<td>Phase 3期間</td>
+<td>三角分布</td>
+<td>最小4年、最頻5年、最大7年</td>
+<td>遺伝子治療試験21件の実績</td>
+</tr>
+<tr>
+<td>Phase 1→2成功率</td>
+<td>ベータ分布</td>
+<td>α=25, β=4 (86.2%)</td>
+<td>25/29成功</td>
+</tr>
+<tr>
+<td>Phase 2→3成功率</td>
+<td>ベータ分布</td>
+<td>α=29, β=8 (78.4%)</td>
+<td>29/37成功</td>
+</tr>
+<tr>
+<td>Phase 3→承認成功率</td>
+<td>ベータ分布</td>
+<td>α=15, β=6 (71.4%)</td>
+<td>15/21成功</td>
+</tr>
+<tr>
+<td>規制審査期間</td>
+<td>正規分布</td>
+<td>平均12ヶ月、標準偏差3ヶ月</td>
+<td>FDA PDUFA目標</td>
+</tr>
+</tbody>
+</table>
+<h4>特別な考慮事項</h4>
+<ul>
+<li><strong>Fast Track指定</strong>：審査期間を6ヶ月に短縮</li>
+<li><strong>RMAT指定</strong>：Phase期間を20%短縮</li>
+<li><strong>長期実施中試験</strong>：追加遅延リスク（+1-2年）</li>
+<li><strong>製造スケールアップ</strong>：遺伝子治療に+6-12ヶ月</li>
+</ul>
+<h3>データソース</h3>
+<ul>
+<li><strong>ClinicalTrials.gov</strong>：API v2を使用、2025年7月20日時点</li>
+<li><strong>PubMed</strong>：E-utilities API、検索式: "retinitis pigmentosa"[MeSH] AND ("gene therapy"[MeSH] OR "cell therapy"[MeSH])</li>
+<li><strong>企業発表</strong>：各社IR資料、プレスリリース（2023-2025年）</li>
+</ul>
+</div>
+<!-- タブ3: AI影響分析 -->
+<div class="tab-content" id="ai-impact" role="tabpanel">
+<h2>AI活用による開発加速の可能性</h2>
+<div class="ai-impact-box">
+<h3>エグゼクティブサマリー</h3>
+<p>生成AIと機械学習技術により、網膜色素変性症（RP）の治療法開発が<strong class="highlight">最大50%短縮</strong>される可能性があります。現在の予測（最速2027年）は、AI活用で前倒しされる可能性がありますが、具体年は再シミュレーション結果を優先します。</p>
+</div>
+<h3>AIによる開発加速の実績</h3>
+<table>
+<thead>
+<tr>
+<th>プロセス</th>
+<th>従来期間</th>
+<th>AI活用後</th>
+<th>短縮率</th>
+<th>実例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>標的同定</td>
+<td>2-4年</td>
+<td>6-12ヶ月</td>
+<td>75%</td>
+<td>Insilico Medicine（21日で新規標的発見）</td>
+</tr>
+<tr>
+<td>リード最適化</td>
+<td>1-2年</td>
+<td>3-6ヶ月</td>
+<td>70%</td>
+<td>Atomwise（エボラ薬を数日で同定）</td>
+</tr>
+<tr>
+<td>患者選定</td>
+<td>12-18ヶ月</td>
+<td>3-6ヶ月</td>
+<td>67%</td>
+<td>MELLODDY（10社共同、予測精度向上）</td>
+</tr>
+<tr>
+<td>臨床試験デザイン</td>
+<td>6-12ヶ月</td>
+<td>1-3ヶ月</td>
+<td>75%</td>
+<td>Unlearn.AI（対照群サイズ削減）</td>
+</tr>
+</tbody>
+</table>
+<h3>RPへの具体的インパクト</h3>
+<div class="scenario-card">
+<h4>シナリオ1: 保守的予測（30%短縮）</h4>
+<ul>
+<li>OCU400: 2027年 → <strong>前倒しの可能性</strong></li>
+<li>総開発期間: 12年 → 8-9年</li>
+<li>実現可能性: <strong>高い（80%）</strong></li>
+</ul>
+</div>
+<div class="scenario-card">
+<h4>シナリオ2: 中間予測（40%短縮）</h4>
+<ul>
+<li>OCU400: 2027年 → <strong>前倒しの可能性</strong></li>
+<li>新規プログラム: 10年 → 6年</li>
+<li>実現可能性: <strong>中程度（50%）</strong></li>
+</ul>
+</div>
+<div class="scenario-card">
+<h4>シナリオ3: 楽観的予測（50%短縮）</h4>
+<ul>
+<li>ブレークスルー: 2025年内に最初の承認</li>
+<li>2030年までに10種類以上の治療法</li>
+<li>実現可能性: <strong>低い（20%）</strong></li>
+</ul>
+</div>
+<h3>実現のための必要条件</h3>
+<ol>
+<li><strong>規制対応</strong>
+<ul>
+<li>FDAのAI/ML医療機器ガイダンス活用</li>
+<li>リアルワールドエビデンスの受け入れ</li>
+<li>適応的試験デザインの承認</li>
+</ul>
+</li>
+<li><strong>データ基盤</strong>
+<ul>
+<li>RP患者レジストリの統合（現在約5,000例）</li>
+<li>ゲノム・臨床データの標準化</li>
+<li>国際的データシェアリング</li>
+</ul>
+</li>
+<li><strong>投資と人材</strong>
+<ul>
+<li>AI創薬への投資（年間100億ドル以上）</li>
+<li>計算生物学者の育成</li>
+<li>産学連携の強化</li>
+</ul>
+</li>
+</ol>
+</div>
+<!-- タブ4: 開発課題 -->
+<div class="tab-content" id="bottlenecks" role="tabpanel">
+<h2>開発ボトルネック分析</h2>
+<p>網膜色素変性症治療開発における主要な課題と、その解決に向けた取り組みを分析します。</p>
+<div class="bottleneck-item">
+<h3>1. 患者募集の困難さ</h3>
+<p><strong>問題：</strong>希少疾患のため、臨床試験に必要な患者数の確保が困難（試験あたり50-200名必要）</p>
+<h4>影響</h4>
+<ul>
+<li>募集期間の長期化（平均2-3年）</li>
+<li>地理的制約（専門施設への通院）</li>
+<li>遺伝子型特異的試験での更なる絞り込み</li>
+</ul>
+<div class="solution-box">
+<h4>解決策</h4>
+<ul>
+<li><strong>患者レジストリ構築</strong>：日本網膜色素変性症協会（約4,000名）との連携</li>
+<li><strong>国際共同治験</strong>：複数国での同時実施</li>
+<li><strong>リモート臨床試験</strong>：在宅での評価項目導入</li>
+<li><strong>AI活用</strong>：電子カルテからの適格患者抽出</li>
+</ul>
+</div>
+</div>
+<div class="bottleneck-item">
+<h3>2. ベクター製造と免疫原性</h3>
+<p><strong>問題：</strong>AAVベクターの大量製造が困難で、既存抗体保有者は治療対象外</p>
+<h4>影響</h4>
+<ul>
+<li>製造コスト：1患者分100-300万ドル</li>
+<li>AAV既存抗体保有率：30-60%</li>
+<li>スケールアップに2-3年必要</li>
+</ul>
+<div class="solution-box">
+<h4>解決策</h4>
+<ul>
+<li><strong>新規ベクター開発</strong>：免疫原性の低いAAV改変体</li>
+<li><strong>製造技術革新</strong>：合成生物学による効率化</li>
+<li><strong>免疫抑制プロトコル</strong>：一時的免疫抑制の併用</li>
+<li><strong>代替デリバリー</strong>：非ウイルスベクター（LNP等）</li>
+</ul>
+</div>
+</div>
+<div class="bottleneck-item">
+<h3>3. 有効性評価の標準化</h3>
+<p><strong>問題：</strong>視機能改善の客観的評価が困難、プラセボ効果の除外が必要</p>
+<h4>影響</h4>
+<ul>
+<li>主要評価項目の設定困難</li>
+<li>規制当局間での基準不統一</li>
+<li>長期フォローアップの必要性（5年以上）</li>
+</ul>
+<div class="solution-box">
+<h4>解決策</h4>
+<ul>
+<li><strong>新規評価法開発</strong>：AI画像解析による網膜構造評価</li>
+<li><strong>複合エンドポイント</strong>：視力＋視野＋QOL</li>
+<li><strong>バイオマーカー探索</strong>：血液・涙液マーカー</li>
+<li><strong>国際標準化</strong>：FDA-EMA-PMDA協調</li>
+</ul>
+</div>
+</div>
+<div class="bottleneck-item">
+<h3>4. 規制要件とコスト</h3>
+<p><strong>問題：</strong>希少疾患薬開発の高コスト（10-20億ドル）と長期間（10-15年）</p>
+<h4>影響</h4>
+<ul>
+<li>ベンチャー企業の資金調達困難</li>
+<li>大手製薬会社の参入躊躇</li>
+<li>患者アクセスの制限</li>
+</ul>
+<div class="solution-box">
+<h4>解決策</h4>
+<ul>
+<li><strong>規制優遇措置</strong>：オーファンドラッグ指定、優先審査</li>
+<li><strong>官民パートナーシップ</strong>：AMED等の公的支援</li>
+<li><strong>革新的価格モデル</strong>：成果報酬型、分割払い</li>
+<li><strong>プラットフォーム技術</strong>：複数疾患への応用</li>
+</ul>
+</div>
+</div>
+<h3>統合的アプローチの必要性</h3>
+<p>これらの課題は相互に関連しており、単独での解決は困難です。産学官患の連携による統合的アプローチが必要です：</p>
+<ol>
+<li><strong>エコシステム構築</strong>：研究機関・企業・患者団体の連携強化</li>
+<li><strong>データ共有基盤</strong>：競合前領域でのオープンイノベーション</li>
+<li><strong>人材育成</strong>：遺伝子治療専門家の養成</li>
+<li><strong>社会的理解</strong>：遺伝子治療への理解促進</li>
+</ol>
+</div>
+</div>
+</main>
+<footer>
+<p>© 2025 網膜色素変性症治療予測プロジェクト |
+            <a href="disclaimer.html">免責事項</a> |
             <a href="index.html">ホームに戻る</a>
-            </p>
-        </footer>
-    </div>
-    
-    <script src="js/common.js"></script>
+</p>
+</footer>
+</div>
+<script src="js/common.js"></script>
 </body>
 </html>

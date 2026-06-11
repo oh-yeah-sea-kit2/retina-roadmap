@@ -1,18 +1,36 @@
 # 網膜色素変性症（RP）治療開発ロードマップ
 
-生成日時: 2026年04月04日 12:27
+最終更新（HTML生成）: 2026年06月11日 17:54
+
+データ取得: ClinicalTrials.gov 2026-04-13 / PubMed 2026-04-13
 
 ## エグゼクティブサマリー
 
 本レポートは、網膜色素変性症（Retinitis Pigmentosa, RP）の治療法開発状況を定量的に分析し、効果的な治療法がいつ頃利用可能になるかを予測したものです。
 
-### 主要な発見（米国FDA承認基準）
+### 3分でわかる
 
-- **最速の承認予測**: 2026年（MCO-010光遺伝学治療）
-  - 根拠: https://clinicaltrials.gov/study/NCT04945772
+**網膜色素変性症の治療は「2種類」あります。**
+
+1. **A: 進行を止める/遅らせる**
+   視力を取り戻すものではないが、数年内に手が届きうる現実的な希望。神経保護・抗酸化・進行抑制を主に狙います。
+2. **B: 失った視力を取り戻す/根治を目指す**
+   10〜20年スパン。遺伝子補充・編集・細胞移植などで、対象遺伝子や病期が限られることが多いです。
+
+OCU400や光遺伝学（MCO-010/RV-001など）は、進行抑制と機能改善、または視覚再建を狙う**中間**として扱います。根治や完全な視力回復とは分けて読む必要があります。
+
+### まず今すぐできること
+
+1. **遺伝子検査**で原因遺伝子を確定する
+2. **自然経過レジストリ**に登録し、治験の声がかかる側に入る
+3. **jRCT・難病治験ウェブ**で「網膜色素変性」を定点検索する
+
+### 予測年の読み方（米国FDA承認基準）
+
+- **早い候補の中央値**: 2027年（MCO-010を含む。視覚再建・中間分類の候補を含む）
 - **全体の中央値**: 2037年（複数の治療法が利用可能になる時期）
 - **現在アクティブな臨床試験**: 60件（重要な完了試験含む）
-- **成功率**: Phase 1: 86.2%, Phase 2: 78.4%, Phase 3: 71.4%
+- **フェーズ平均の過去成功率**: Phase 1: 85.0%, Phase 2: 78.0%, Phase 3: 71.0%（表示・計算上限 85%）
 
 ⚠️ **重要**: 上記の予測は**米国FDA承認**を基準としています。
 - **日本での承認**: 通常FDA承認の**3-7年後**（過去実績より）
@@ -29,15 +47,15 @@
 
 ### 文献データ
 - **データソース**: PubMed
-- **総論文数**: 867件
+- **総論文数**: 869件
 - **検索クエリ**: "retinitis pigmentosa" AND ("gene therapy" OR "cell therapy")
 - **期間**: 1993-2026年
 
 #### 年別論文数（直近5年）
 | 年 | 論文数 |
 |---|--------|
-| 2026 | 22 |
-| 2025 | 82 |
+| 2026 | 25 |
+| 2025 | 81 |
 | 2024 | 63 |
 | 2023 | 99 |
 | 2022 | 67 |
@@ -48,22 +66,22 @@
 ### 予測手法
 - **シミュレーション回数**: 10000回/プログラム
 - **分布**: 三角分布（最小値、中央値、最大値）
-- **パラメータ**: 実データから推定した成功率と期間
+- **パラメータ**: フェーズ別ヒストリカル成功率、残フェーズの累積承認確率、開発期間
 
 ### 最も有望な治療プログラム（米国FDA承認予測年順）
 
-| 試験ID | 治療法名 | フェーズ | スポンサー | 成功率 | FDA承認予測（中央値） | 日本承認予測（中央値） | 90%信頼区間（FDA） |
-|--------|----------|----------|------------|--------|---------------------|---------------------|------------------|
-| NCT04945772 | Efficacy and Safety of MCO-010 Optogenet... | PHASE2 | Nanoscope Therapeutics Inc. | 100.0% | 2026年 | 2029年 | [2026, 2027] |
-| NCT06388200 | A Phase 3 Study Of OCU400 Gene Therapy f... | PHASE3 | Ocugen | 100.0% | 2027年 | 2032年 | [2027, 2027] |
-| NCT05203939 | Study to Assess the Safety and Efficacy ... | PHASE1, PHASE2 | Ocugen | 100.0% | 2027年 | 2032年 | [2027, 2027] |
-| NCT07290530 | 24-Month Trial of NPI-001 for the Preser... | PHASE3 | Nacuity Pharmaceuticals, Inc. | 70.8% | 2030年 | 2035年 | [2029, 2031] |
-| NCT07082855 | A Multicenter, Randomized, Double-Blind,... | PHASE3 | Zhongshan Ophthalmic Center, Sun Yat-sen University | 71.3% | 2030年 | 2035年 | [2029, 2031] |
-| NCT04850118 | A Clinical Trial Evaluating the Safety a... | PHASE2, PHASE3 | Beacon Therapeutics | 100.0% | 2030年 | 2035年 | [2029, 2030] |
-| NCT07174726 | A Phase 2 Open-label Study to Evaluate t... | PHASE2 | Beacon Therapeutics | 100.0% | 2030年 | 2035年 | [2029, 2030] |
-| NCT03584165 | Long-term Safety and Efficacy Follow-up ... | PHASE3 | NightstaRx Ltd, a Biogen Company | 71.4% | 2030年 | 2035年 | [2029, 2031] |
-| NCT05537220 | Oral N-acetylcysteine for Retinitis Pigm... | PHASE3 | Johns Hopkins University | 71.5% | 2030年 | 2035年 | [2029, 2031] |
-| NCT00999609 | Safety and Efficacy Study in Subjects Wi... | PHASE3 | Spark Therapeutics, Inc. | 70.9% | 2030年 | 2035年 | [2029, 2031] |
+| 試験ID | 治療法名 | 治療の読み方 | 対象 | フェーズ | スポンサー | フェーズ平均の過去成功率 | 累積承認確率（残フェーズ） | FDA承認予測（中央値） | 日本承認予測（中央値） | 90%信頼区間（FDA） |
+|--------|----------|--------------|------|----------|------------|----------------------|---------------------------|---------------------|---------------------|------------------|
+| NCT04945772 | Efficacy and Safety of MCO-010 Optogenet... | B寄り/中間（光遺伝学による視覚再建） | 型不問 | PHASE2 | Nanoscope Therapeutics Inc. | 78.0% | 49.8% | 2027年 | 2029年 | [2027, 2027] |
+| NCT06388200 | A Phase 3 Study Of OCU400 Gene Therapy f... | A/B中間（進行抑制＋低照度視機能改善） | 型不問 | PHASE3 | Ocugen | 63.9% | 63.9% | 2027年 | 2032年 | [2027, 2027] |
+| NCT05203939 | Study to Assess the Safety and Efficacy ... | A/B中間（進行抑制＋低照度視機能改善） | 型不問 | PHASE1, PHASE2 | Ocugen | 85.0% | 42.4% | 2027年 | 2032年 | [2027, 2027] |
+| NCT04794101 | Follow-up Gene Therapy Trial for the Tre... | B（遺伝子補充） | 型特異 | PHASE3 | Janssen Research & Development, LLC | 63.9% | 50.0% | 2028年 | 2033年 | [2027, 2028] |
+| NCT06646289 | A Follow-on Study for Second-Eye Treatme... | B（遺伝子補充） | 型特異 | PHASE2 | Janssen Research & Development, LLC | 78.0% | 50.0% | 2028年 | 2033年 | [2027, 2028] |
+| NCT05926583 | A Study of AAV5-hRKp.RPGR for the Treatm... | B（遺伝子補充） | 型特異 | PHASE3 | Janssen Pharmaceutical K.K. | 63.9% | 50.0% | 2028年 | 2033年 | [2027, 2028] |
+| NCT00999609 | Safety and Efficacy Study in Subjects Wi... | 分類未設定 | 未分類 | PHASE3 | Spark Therapeutics, Inc. | 71.0% | 71.0% | 2030年 | 2035年 | [2029, 2031] |
+| NCT06275620 | A Study Comparing Two Doses of AGTC-501 ... | B（遺伝子補充） | 型特異 | PHASE2 | Beacon Therapeutics | 78.0% | 49.8% | 2030年 | 2035年 | [2030, 2030] |
+| NCT07174726 | A Phase 2 Open-label Study to Evaluate t... | B（遺伝子補充） | 型特異 | PHASE2 | Beacon Therapeutics | 78.0% | 49.8% | 2030年 | 2035年 | [2030, 2030] |
+| NCT06333249 | A Study Comparing Two Doses of AGTC-501 ... | B（遺伝子補充） | 型特異 | PHASE2 | Beacon Therapeutics | 78.0% | 49.8% | 2030年 | 2035年 | [2030, 2030] |
 
 
 ### 日本での承認予測
@@ -72,16 +90,16 @@
 
 | 治療法 | FDA承認予測 | 日本承認予測（中央値） | 日本承認90%信頼区間 | 遅延期間（中央値） |
 |--------|------------|---------------------|-------------------|---------------------|
-| NCT04945772 | 2026年 | **2029年** | [2028, 2029] | +2.1年 |
+| NCT04945772 | 2027年 | **2029年** | [2028, 2030] | +2.1年 |
 | NCT06388200 | 2027年 | **2032年** | [2031, 2033] | +5.0年 |
 | NCT05203939 | 2027年 | **2032年** | [2031, 2033] | +5.0年 |
-| NCT07290530 | 2030年 | **2035年** | [2034, 2037] | +5.0年 |
-| NCT07082855 | 2030年 | **2035年** | [2034, 2037] | +5.0年 |
-| NCT04850118 | 2030年 | **2035年** | [2034, 2036] | +5.0年 |
-| NCT07174726 | 2030年 | **2035年** | [2034, 2036] | +5.0年 |
-| NCT03584165 | 2030年 | **2035年** | [2034, 2037] | +5.0年 |
-| NCT05537220 | 2030年 | **2035年** | [2034, 2037] | +5.0年 |
+| NCT04794101 | 2028年 | **2033年** | [2031, 2034] | +5.0年 |
+| NCT06646289 | 2028年 | **2033年** | [2031, 2034] | +5.0年 |
+| NCT05926583 | 2028年 | **2033年** | [2031, 2034] | +5.0年 |
 | NCT00999609 | 2030年 | **2035年** | [2034, 2036] | +5.0年 |
+| NCT06275620 | 2030年 | **2035年** | [2034, 2036] | +5.0年 |
+| NCT07174726 | 2030年 | **2035年** | [2034, 2036] | +5.0年 |
+| NCT06333249 | 2030年 | **2035年** | [2034, 2036] | +5.0年 |
 
 
 詳細は[地域別承認予測タイムライン](regional_approval_timeline.html)をご覧ください。
@@ -91,12 +109,12 @@
 #### 遺伝子治療
 - **試験数**: 36件
 - **主要なターゲット遺伝子**: RPGR, RPE65, PDE6A, USH2A
-- **最速FDA承認予測**: 2026年（MCO-010光遺伝学治療）
+- **最速FDA承認予測**: 詳細表の再シミュレーション結果を参照
 
 #### 細胞治療・再生医療（iPS細胞含む）
 - **試験数**: 23件
 - **主要プログラム**:
-  - **DSP-3077（住友ファーマ）**: 日本発の他家iPS細胞由来網膜シート。神戸アイセンター病院で2年間の生着・安全性確認済み。米国Phase 1/2（Massachusetts Eye and Ear）
+  - **DSP-3077（住友ファーマ/RACTHERA）**: 日本発の他家iPS細胞由来網膜シート。FDA Orphan Drug Designation取得（2026年3月）。米国Phase 1/2（NCT06891885）はRecruiting
   - **OpCT-001（BlueRock/Bayer）**: iPSC由来光受容体細胞。世界初のiPSC由来細胞治療。Phase 1/2a CLARICO試験進行中。FDA Fast Track + Orphan Drug指定
   - **jCells/ファムゼレトセル（jCyte）**: 網膜前駆細胞。Phase 2 JC02-88試験進行中。FDA RMAT指定
 - **特徴**: 遺伝子変異に依存しない治療法。失われた網膜細胞を補う再生医療アプローチ
@@ -105,6 +123,10 @@
 #### 低分子薬
 - **試験数**: 11件
 - **メカニズム**: 神経保護、抗酸化、血流改善
+- **主要プログラム**:
+  - **NAC Attack（Johns Hopkins）**: NCT05537220。485名・31施設の組入れ目標到達、日本施設なし
+  - **NPI-001（Nacuity）**: FDA Breakthrough Therapy Designation取得。Phase 1/2で光受容体喪失50%超抑制と会社発表
+  - **SENTAN-PVS-NP（SENTAN Pharma/九州大学）**: jRCT2071260006。国内第1相医師主導治験、2026年7月開始予定
 - **FDA承認予測**: 2029-2034年
 
 ## 3. 感度分析結果
@@ -117,10 +139,7 @@
 - **PHASE2 duration** (increase 20%): +1.0年の影響
 - **PHASE3 duration** (increase 20%): +1.0年の影響
 - **PHASE1 duration** (increase 20%): +0.6年の影響
-- **regulatory review** (increase 20%): +0.5年の影響
-- **PHASE1 success rate** (decrease 20%): +0.4年の影響
-- **PHASE2 success rate** (decrease 20%): +0.4年の影響
-- **BLA MAA submission** (increase 20%): +0.4年の影響
+- **PHASE2 success rate** (increase 20%): +0.1年の影響
 
 
 ## 4. 予測の可視化
@@ -138,9 +157,9 @@
 ## 5. 主要な知見と提言
 
 ### 患者・家族向け
-1. **最速シナリオ**: 2028-2029年頃に最初の遺伝子治療が承認される可能性
-2. **現実的な期待値**: 多くの患者が恩恵を受けられるのは2030年代前半
-3. **行動提案**: 
+1. **進行を遅らせる治療**: 視力を取り戻すものではないが、残っている視機能を守る現実的な希望
+2. **視力再建・根治を目指す治療**: 10〜20年スパンで、原因遺伝子や病期により対象が限られる
+3. **行動提案**:
    - 遺伝子検査を受けて原因遺伝子を特定
    - 患者レジストリへの登録
    - 臨床試験情報の定期的なチェック
@@ -162,7 +181,8 @@
 ## 6. 制限事項と注意点
 
 - 本分析は公開データに基づくものであり、企業の非公開パイプラインは含まれません
-- 成功率は過去のデータに基づく推定値です
+- 表の「フェーズ平均の過去成功率」は個別試験の成功率ではありません
+- 「累積承認確率」は残フェーズ分を掛け合わせた推定値で、承認を保証するものではありません
 - 技術革新により予測が大幅に変わる可能性があります
 - 規制環境の変化は考慮していません
 
@@ -171,11 +191,20 @@
 ### データソース
 - **ClinicalTrials.gov**: https://clinicaltrials.gov/
 - **RP臨床試験検索**: https://clinicaltrials.gov/search?cond=Retinitis%20Pigmentosa
-- **データ取得日**: 2025年6月26日
+- **データ取得日**: 2026-04-13
 
 ### 主要試験の詳細
 - **MCO-010（Nanoscope）**: https://clinicaltrials.gov/study/NCT04945772
-- **OCU400（Ocugen）**: https://clinicaltrials.gov/study/NCT05203939
+- **OCU400（Ocugen）**: https://clinicaltrials.gov/study/NCT06388200
+- **Botaretigene / bota-vec（MeiraGTx）**: https://investors.meiragtx.com/news-releases/news-release-details/meiragtx-announces-acquisition-botaretigene-sparoparvovec-bota
+- **AGTC-501 / laru-zova（Beacon）**: https://clinicaltrials.gov/study/NCT04850118
+- **NAC Attack（Johns Hopkins）**: https://clinicaltrials.gov/study/NCT05537220
+- **NPI-001（Nacuity）**: https://clinicaltrials.gov/study/NCT04355689
+- **DSP-3077（Sumitomo Pharma/RACTHERA）**: https://clinicaltrials.gov/study/NCT06891885
+- **SPVN06（SparingVision）**: https://clinicaltrials.gov/study/NCT05748873
+- **RV-001（Restore Vision）**: https://nanbyo-chiken.nibn.go.jp/detail/jRCT2033240611/
+- **SENTAN-PVS-NP（SENTAN Pharma/九州大学）**: https://nanbyo-chiken.nibn.go.jp/detail/jRCT2071260006/
+- **Prime editing前臨床**: https://www.nature.com/articles/s41467-025-57628-6
 - **ソースコード**: https://github.com/oh-yeah-sea-kit2/retina-roadmap
 
 ## 8. 更新履歴

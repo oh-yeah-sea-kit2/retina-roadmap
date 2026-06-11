@@ -1,46 +1,36 @@
 {
-  "last_check_date": "2026-04-04T10:00:00",
-  "manual_review_date": "2026-04-04",
-  "check_type": "web_search (WebSearch tool)",
+  "last_check_date": "2026-06-11T00:00:00",
+  "check_type": "manual_primary_source_verification",
   "programs_checked": [
-    "MCO-010",
     "OCU400",
-    "VP-001",
-    "AGTC-501",
-    "OpCT-001",
-    "NPI-001",
-    "SPVN06",
-    "SPVN20",
-    "Ultevursen",
     "Botaretigene sparoparvovec",
-    "VG901",
-    "ZM-02",
+    "AGTC-501",
+    "NAC Attack",
+    "NPI-001",
     "DSP-3077",
-    "jCells"
+    "SPVN06",
+    "RV-001",
+    "SENTAN-PVS-NP",
+    "Prime editing in vivo rescue"
   ],
   "sources_queried": [
-    "WebSearch: MCO-010 MOGENRY Nanoscope 2026 BLA approval update",
-    "WebSearch: OCU400 Ocugen 2026 Phase 3 liMeliGhT BLA update",
-    "WebSearch: AGTC-501 laru-zova Beacon VISTA trial 2026",
-    "WebSearch: VP-001 PYC Therapeutics 2026 registrational trial update",
-    "WebSearch: NPI-001 Nacuity 2026 confirmatory trial update",
-    "WebSearch: SPVN06 SparingVision PRODYGY trial 2026",
-    "WebSearch: SPVN20 SparingVision NYRVANA trial 2026",
-    "WebSearch: Ultevursen Sepul Bio LUNA trial 2026",
-    "WebSearch: Botaretigene Janssen 2026 update",
-    "WebSearch: VG901 VeonGen Phase 1b CNGA1 2026",
-    "WebSearch: ZM-02 Zhongmou PRISM trial 2026",
-    "WebSearch: DSP-3077 Sumitomo Pharma iPSC 2026",
-    "WebSearch: OpCT-001 BlueRock CLARICO 2026",
-    "WebSearch: jCells jCyte famzeletcel 2026 Phase 2",
-    "WebSearch: RP gene therapy 2026 FDA approval new treatments",
-    "WebSearch: 網膜色素変性症 遺伝子治療 iPS細胞 2026 日本",
-    "WebSearch: VP-001 PYC 2026 CY2030 delay funding",
-    "WebSearch: OCU400 liMeliGhT enrollment 140 150 patients",
-    "WebSearch: Nacuity NPI-001 Phase 2/3 NCT07290530 2026",
-    "WebSearch: AGTC-501 Beacon VISTA 12-month topline ARVO 2026"
+    "ClinicalTrials.gov NCT06388200 / NCT06574997 / NCT04850118 / NCT05537220 / NCT04355689 / NCT07290530 / NCT06891885 / NCT05748873",
+    "Ocugen, MeiraGTx, Beacon, Johns Hopkins, Nacuity, Sumitomo Pharma America, SparingVision, Restore Vision primary pages",
+    "jRCT / 難病治験ウェブ jRCT2033240611 and jRCT2071260006",
+    "Nature Communications / PubMed for prime editing and pitavastatin nanoparticles"
   ],
-  "new_findings": [],
-  "updates_found": [],
-  "notes": "前回更新（2026-03-29）から6日後のチェック。全16プログラムを検索したが、新規の重要な更新は確認されず。すべてのプログラムで前回報告の情報と一致。"
+  "new_findings": [
+    "NAC Attack",
+    "RV-001",
+    "SENTAN-PVS-NP",
+    "Prime editing in vivo rescue"
+  ],
+  "updates_found": [
+    "OCU400 Phase 3 enrollment completed; topline Q1 2027; rolling BLA Q3 2026; EAP status caveat",
+    "Botaretigene acquired by MeiraGTx; filing plans in U.S./EU/Japan",
+    "AGTC-501 VISTA enrollment completed; H2 2026 topline expected",
+    "NPI-001 FDA Breakthrough Therapy Designation and >50% photoreceptor-loss slowing report",
+    "DSP-3077 FDA Orphan Drug Designation and NCT06891885 recruiting",
+    "SPVN06 PRODYGY dosing completed; initial readout expected 2027"
+  ]
 }

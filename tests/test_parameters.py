@@ -10,6 +10,7 @@ import pytest
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from src.ingest.parameters import (
+    cap_success_rate,
     calculate_phase_durations,
     calculate_success_rates,
     calculate_regulatory_duration,
@@ -81,11 +82,23 @@ class TestCalculateSuccessRates:
         for phase, stats in result.items():
             assert 0.0 <= stats["success_rate"] <= 1.0
 
-    def test_phase1_rate_reflects_data(self, sample_trials_df):
+    def test_phase1_uses_configured_historical_rate_with_cap(self, sample_trials_df):
         result = calculate_success_rates(sample_trials_df)
-        # 5 completed + 2 terminated = 7 total, 5/7 success
         rate = result["PHASE1"]["success_rate"]
-        assert abs(rate - 5 / 7) < 0.01
+        assert rate == 0.85
+        assert result["PHASE1"]["raw_success_rate"] == 0.86
+        assert result["PHASE1"]["confidence"] == "configured_historical"
+
+    def test_observed_counts_are_kept_separate(self, sample_trials_df):
+        result = calculate_success_rates(sample_trials_df)
+        assert result["PHASE1"]["observed_success_count"] == 5
+        assert result["PHASE1"]["observed_total_count"] == 7
+        assert abs(result["PHASE1"]["observed_completion_rate"] - 5 / 7) < 0.01
+
+    def test_success_rate_cap_helper(self):
+        assert cap_success_rate(1.0, 0.85) == 0.85
+        assert cap_success_rate(-1.0, 0.85) == 0.0
+        assert cap_success_rate(0.71, 0.85) == 0.71
 
 
 class TestCalculateRegulatoryDuration:

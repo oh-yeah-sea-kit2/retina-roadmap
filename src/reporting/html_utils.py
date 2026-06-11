@@ -5,6 +5,7 @@ HTML生成のための共通ユーティリティ関数
 
 import re
 import markdown
+from src.reporting.site_metadata import render_metadata_placeholders
 
 
 def auto_link_urls(text):
@@ -147,6 +148,8 @@ def convert_markdown_to_html(md_content, extensions=None):
     """Markdownをより良いHTMLに変換"""
     if extensions is None:
         extensions = ['tables', 'fenced_code', 'nl2br', 'extra', 'attr_list']
+
+    md_content = render_metadata_placeholders(md_content)
     
     md = markdown.Markdown(extensions=extensions)
     html_content = md.convert(md_content)

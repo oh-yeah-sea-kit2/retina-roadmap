@@ -1,6 +1,32 @@
 # シミュレーション設定ファイル
 # ハードコードされていた日付・パラメータを集約
 
+# 成功率ポリシー
+# - raw_success_rate: 出典から得たフェーズ別ヒストリカル成功率
+# - success_rate: 表示・計算に使う上限キャップ適用後の値
+# - cumulative_approval_probability: 現在フェーズ以降のsuccess_rateを掛け合わせた値
+success_rate_policy:
+  display_cap: 0.85
+  source_label: "Project-calibrated RP phase historical rates from ClinicalTrials.gov status data"
+  source_url: "https://clinicaltrials.gov/search?cond=Retinitis%20Pigmentosa"
+  methodology_sources:
+    - label: "Wong, Siah & Lo, Biostatistics 2019 - phase-transition probability framework"
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6409418/"
+    - label: "BIO/Informa/QLS Clinical Development Success Rates 2011-2020 - phase transition benchmark report"
+      url: "https://www.bio.org/clinical-development-success-rates-and-contributing-factors-2011-2020"
+  note: "数値はRP関連試験スナップショットから算出したプロジェクト校正値。Wong et al.およびBIO/Informa/QLSのフェーズ遷移確率の考え方に合わせ、個別試験の承認確率ではなく残フェーズの累積確率として使う。100%表示を避けるため、表示・計算に使う値には上限を適用する。"
+
+phase_historical_success_rates:
+  PHASE1:
+    success_rate: 0.86
+    label: "Phase 1"
+  PHASE2:
+    success_rate: 0.78
+    label: "Phase 2"
+  PHASE3:
+    success_rate: 0.71
+    label: "Phase 3"
+
 # 日本承認遅延パラメータ（Luxturna実績: 5.5年に基づく）
 japan_delay_years:
   min: 3.0       # 楽観的シナリオ
@@ -36,7 +62,7 @@ programs:
   OCU400:
     match_fields:
       brief_title_keywords: ["OCU400", "OCU-400"]
-      nct_ids: ["NCT05203939"]
+      nct_ids: ["NCT05203939", "NCT06388200"]
       sponsor_keywords: ["Ocugen"]
     submission_date: "2026-09-30"
     review_time:
@@ -50,22 +76,22 @@ programs:
 
   Botaretigene:
     match_fields:
-      nct_ids: ["NCT04794101"]
-      brief_title_keywords: ["RPGR"]
-    success_rate: 0.2
-    additional_time:
-      min: 2.0
-      median: 3.0
-      max: 4.0
+      nct_ids: ["NCT04671433", "NCT04794101", "NCT05926583"]
+      brief_title_keywords: ["Botaretigene", "bota-vec", "AAV5-hRKp.RPGR"]
+      sponsor_keywords: ["MeiraGTx", "Janssen"]
+    # LUMEOSは主要評価未達だがMeiraGTxが取得し、米欧日申請を進める方針。
+    # 副次評価の支持と主要評価未達の不確実性を併せ、通常のPhase 3成功率より保守的に置く。
+    success_rate: 0.5
+    submission_date: "2026-12-31"
     submission_time:
-      min: 1.0
-      median: 1.5
-      max: 2.0
+      min: 0.25
+      median: 0.5
+      max: 1.0
     review_time:
-      min: 1.5
-      median: 2.0
-      max: 2.5
-    confidence: "low"
+      min: 0.75
+      median: 1.0
+      max: 1.5
+    confidence: "medium_low"
     program_name: "Botaretigene sparoparvovec"
 
   VP-001:
@@ -92,6 +118,7 @@ programs:
   AGTC-501:
     match_fields:
       brief_title_keywords: ["AGTC-501", "AGTC501"]
+      nct_ids: ["NCT04850118", "NCT06275620", "NCT06333249", "NCT06646289"]
       sponsor_keywords: ["Beacon"]
     phase23_duration:
       min: 1.5

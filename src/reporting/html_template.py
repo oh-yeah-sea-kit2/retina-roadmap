@@ -116,7 +116,7 @@ def get_landing_page_template():
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://oh-yeah-sea-kit2.github.io/retina-roadmap/">
     <meta property="og:title" content="網膜色素変性症の治療はいつ？">
-    <meta property="og:description" content="最新の臨床試験データに基づく治療承認時期予測。OCU400は2027年（米国）、2032年（日本）の承認見込み。">
+    <meta property="og:description" content="RP治療を、進行を遅らせる治療と視力再建・根治を目指す治療に分けて整理。">
     <meta property="og:image" content="https://oh-yeah-sea-kit2.github.io/retina-roadmap/docs/images/CDF.png">
     
     <!-- Twitter Card -->
