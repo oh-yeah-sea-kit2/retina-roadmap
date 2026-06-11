@@ -17,6 +17,7 @@ def test_imports():
         import src.ingest.parameters
         import src.sim.timeline_sim
         import src.reporting.build_report
+        import src.reporting.build_accessible_summary_html
         import src.reporting.build_landing_page
         import src.reporting.build_faq_page
         import src.reporting.build_japan_action_guide_html
@@ -426,3 +427,57 @@ def test_sprint6_stale_optimistic_phrases_removed_from_sources():
         assert not stale_year_pattern.search(content), f"stale year phrase in {path}"
         for pattern in stale_success_patterns:
             assert pattern not in content, f"{pattern} remains in {path}"
+
+
+def test_release_review_accessible_summary_refreshed():
+    """音声読み上げ対応版にSprint前の旧情報を残さない"""
+    html_path = Path("docs/public/accessible_summary.html")
+    md_path = Path("docs/content/accessibility/accessible_summary.md")
+    assert html_path.exists()
+    assert md_path.exists()
+
+    combined = (
+        html_path.read_text(encoding="utf-8")
+        + "\n"
+        + md_path.read_text(encoding="utf-8")
+    )
+    stale_patterns = [
+        "100パーセント",
+        "80パーセント以上",
+        "2025年初め",
+        "2030年までに5個から10個",
+        "研究支援の寄付",
+        "政策提言への参加",
+    ]
+    for pattern in stale_patterns:
+        assert pattern not in combined, f"{pattern} remains in accessible summary"
+
+    required_terms = [
+        "進行を止める、または遅らせる治療",
+        "失った視力を取り戻す、または根治を目指す治療",
+        "今日からできる3ステップ",
+        "https://jrct.mhlw.go.jp/",
+        "https://nanbyo-chiken.nibn.go.jp/",
+        "神戸アイセンター",
+        "JRPS",
+    ]
+    for term in required_terms:
+        assert term in combined, f"{term} missing from accessible summary"
+
+
+def test_release_review_placeholders_and_japan_guide_headings_removed():
+    """レビュー指摘のプレースホルダー、空ソース、H1重複を防ぐ"""
+    public_html = "\n".join(
+        path.read_text(encoding="utf-8") for path in Path("docs/public").glob("*.html")
+    )
+    source_text = "\n".join(
+        path.read_text(encoding="utf-8") for path in Path("docs/content").glob("**/*.md")
+    )
+    assert "現行URL" not in public_html
+    assert "現行URL" not in source_text
+
+    guide_html = Path("docs/public/japan_action_guide.html").read_text(encoding="utf-8")
+    assert guide_html.count("<h1>日本の読者向けアクションガイド</h1>") == 1
+    assert "一次ソース:</p>\n<ul>" not in guide_html
+    assert "一次ソース: jRCT" in guide_html
+    assert "https://jrct.mhlw.go.jp/" in guide_html

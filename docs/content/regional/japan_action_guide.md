@@ -1,9 +1,3 @@
-# 日本の読者向けアクションガイド
-
-最終更新: {{ site_last_updated }}
-
-データ取得: ClinicalTrials.gov {{ clinical_trials_snapshot_date }} / PubMed {{ pubmed_snapshot_date }}
-
 このページは、日本にいる網膜色素変性症（RP）の患者・家族が「今日から何をすればよいか」を具体的な窓口に落とし込んだガイドです。治療の判断は必ず主治医と相談し、現在の治療や通院を自己判断で中断しないでください。
 
 ## 今日からできる3ステップ
@@ -27,7 +21,7 @@
 3. 専門外来で、網膜疾患パネル検査、遺伝カウンセリング、IRUDなどの研究連携の対象になるかを確認する
 4. 保険診療で難しい場合は、自費パネル検査や研究参加の選択肢があるかを主治医に確認する
 
-一次ソース:
+一次ソース（公式URL）:
 
 - 神戸市立神戸アイセンター病院 専門外来: https://kobe.eye.center.kcho.jp/outpatient/disease.html
 - 神戸アイセンター: https://www.kobe-eye-center.jp/
@@ -64,7 +58,7 @@
 
 ### jRCTで探す
 
-現行のjRCTは厚生労働省ドメインです。2025年3月の管理移管後は、現行URL https://jrct.mhlw.go.jp/ を使います。
+現在のjRCTは厚生労働省ドメインです。2025年3月の管理移管後は、https://jrct.mhlw.go.jp/ を使います。
 
 手順:
 
@@ -74,11 +68,7 @@
 4. jRCT番号、対象年齢、実施施設、問い合わせ先を控える
 5. 参加可否は自分で判断せず、主治医と試験実施施設へ確認する
 
-一次ソース:
-
-- jRCT: https://jrct.mhlw.go.jp/
-- jRCT検索: https://jrct.mhlw.go.jp/search
-- URL変更の告知例: https://www.crea.hosp.keio.ac.jp/2025/04/url.html
+一次ソース: jRCT https://jrct.mhlw.go.jp/ / jRCT検索 https://jrct.mhlw.go.jp/search / URL変更の告知例 https://www.crea.hosp.keio.ac.jp/2025/04/url.html
 
 ### 難病治験ウェブで探す
 
@@ -92,7 +82,7 @@
 4. 実施地域、年齢、実施施設、問い合わせ先を控える
 5. 月次更新時に、前月から増えたjRCT番号がないか確認する
 
-一次ソース:
+一次ソース（公式URL）:
 
 - 難病治験ウェブ: https://nanbyo-chiken.nibn.go.jp/
 - 難病治験ウェブ公開情報: https://nanbyo.jp/2025/08/01/nanbyochiken/
