@@ -211,6 +211,24 @@ code {
   font-size: 0.9em;
 }
 
+/* 初出用語のふりがな・ツールチップ */
+.term-ruby {
+  ruby-align: center;
+}
+
+.term-ruby rt {
+  font-size: 0.62em;
+  color: var(--text-secondary);
+  letter-spacing: 0;
+}
+
+.term-abbr {
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+  cursor: help;
+  border-bottom: 0;
+}
+
 /* ========================================
    コンポーネント
    ======================================== */
