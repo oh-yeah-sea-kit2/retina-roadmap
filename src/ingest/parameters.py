@@ -17,9 +17,9 @@ logger = logging.getLogger(__name__)
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 
 DEFAULT_SUCCESS_RATE_POLICY = {
-    "display_cap": 0.85,
-    "source_label": "Project-calibrated RP phase historical rates from ClinicalTrials.gov status data",
-    "source_url": "https://clinicaltrials.gov/search?cond=Retinitis%20Pigmentosa",
+    "display_cap": 0.911,
+    "source_label": "BIO Clinical Development Success Rates 2011–2020 — Ophthalmology",
+    "source_url": "https://go.bio.org/rs/490-EHZ-999/images/ClinicalDevelopmentSuccessRates2011_2020.pdf",
     "methodology_sources": [
         {
             "label": "Wong, Siah & Lo, Biostatistics 2019 - phase-transition probability framework",
@@ -31,16 +31,16 @@ DEFAULT_SUCCESS_RATE_POLICY = {
         },
     ],
     "note": (
-        "Numeric values are project-calibrated from RP trial status data. "
+        "Numeric values are BIO ophthalmology phase transition rates. "
         "They are used with the phase-transition probability framework, not as "
         "program-specific approval probabilities."
     ),
 }
 
 DEFAULT_PHASE_HISTORICAL_SUCCESS_RATES = {
-    "PHASE1": {"success_rate": 0.86, "label": "Phase 1"},
-    "PHASE2": {"success_rate": 0.78, "label": "Phase 2"},
-    "PHASE3": {"success_rate": 0.71, "label": "Phase 3"},
+    "PHASE1": {"success_rate": 0.716, "label": "Phase 1"},
+    "PHASE2": {"success_rate": 0.355, "label": "Phase 2"},
+    "PHASE3": {"success_rate": 0.512, "label": "Phase 3"},
 }
 
 
@@ -132,7 +132,7 @@ def calculate_success_rates(df, sim_config=None):
         DEFAULT_PHASE_HISTORICAL_SUCCESS_RATES,
     )
     
-    # 成功 = COMPLETED、失敗 = TERMINATED または WITHDRAWN
+    # 完了率の参考値。効果確認・段階通過の成功率としては使わない。
     success_status = ["COMPLETED"]
     failure_status = ["TERMINATED", "WITHDRAWN"]
     
@@ -147,10 +147,10 @@ def calculate_success_rates(df, sim_config=None):
             phase_trials["Status"].isin(success_status + failure_status)
         ]
         
-        observed_success_count = int(len(finished_trials[finished_trials["Status"].isin(success_status)]))
+        observed_completion_count = int(len(finished_trials[finished_trials["Status"].isin(success_status)]))
         observed_total_count = int(len(finished_trials))
         observed_rate = (
-            observed_success_count / observed_total_count
+            observed_completion_count / observed_total_count
             if observed_total_count > 0 else None
         )
 
@@ -164,9 +164,9 @@ def calculate_success_rates(df, sim_config=None):
             "success_rate": cap_success_rate(raw_rate, display_cap),
             "raw_success_rate": raw_rate,
             "display_cap": display_cap,
-            "success_count": observed_success_count,
+            "completion_count": observed_completion_count,
             "total_count": observed_total_count,
-            "observed_success_count": observed_success_count,
+            "observed_completion_count": observed_completion_count,
             "observed_total_count": observed_total_count,
             "observed_completion_rate": observed_rate,
             "confidence": "configured_historical",
@@ -226,13 +226,15 @@ def estimate_parameters():
     parameters = {
         "metadata": {
             "generated_date": datetime.now().isoformat(),
-            "data_source": "ClinicalTrials.gov",
+            "data_source": "ClinicalTrials.gov (durations/completion reference); BIO ophthalmology (transition rates)",
             "total_trials_analyzed": len(df),
-            "note": "Parameters estimated from Retinitis Pigmentosa clinical trials"
+            "note": "Durations from cached RP trials or defaults; success gates from BIO ophthalmology and RP-history scenario"
         },
         "success_rate_policy": sim_config.get("success_rate_policy", DEFAULT_SUCCESS_RATE_POLICY),
         "phase_durations_years": phase_durations,
         "phase_success_rates": success_rates,
+        "regulatory_approval_success_rate": sim_config["regulatory_approval_success_rate"],
+        "success_rate_scenarios": sim_config["success_rate_scenarios"],
         "regulatory_timelines_years": regulatory,
         "simulation_parameters": {
             "n_simulations": 10000,

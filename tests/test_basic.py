@@ -59,7 +59,7 @@ def test_parameters_file():
         assert "regulatory_timelines_years" in params
         assert "simulation_parameters" in params
         assert "success_rate_policy" in params
-        assert params["success_rate_policy"]["display_cap"] == 0.85
+        assert params["success_rate_policy"]["display_cap"] == 0.911
         assert params["success_rate_policy"].get("methodology_sources")
 
 
@@ -81,8 +81,8 @@ def test_forecast_results():
         for col in required_columns:
             assert col in df.columns, f"Column {col} missing from forecasts.csv"
 
-        assert df["success_rate"].max() <= 0.85
-        assert df["cumulative_approval_probability"].max() <= 0.85
+        assert df["success_rate"].max() <= 0.911
+        assert df["cumulative_approval_probability"].max() <= 0.911
         assert (df["success_rate"] == df["cumulative_approval_probability"]).all()
 
 

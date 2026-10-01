@@ -37,12 +37,12 @@ def sample_parameters():
             "PHASE3": {"min": 3.0, "median": 4.0, "max": 5.0},
         },
         "success_rate_policy": {
-            "display_cap": 0.85,
+            "display_cap": 0.911,
         },
         "phase_success_rates": {
-            "PHASE1": {"success_rate": 0.86},
-            "PHASE2": {"success_rate": 0.78},
-            "PHASE3": {"success_rate": 0.71},
+            "PHASE1": {"success_rate": 0.716},
+            "PHASE2": {"success_rate": 0.355},
+            "PHASE3": {"success_rate": 0.512},
         },
         "regulatory_timelines_years": {
             "BLA_MAA_submission": {"min": 0.5, "median": 1.0, "max": 1.5},
@@ -130,7 +130,7 @@ class TestSimulatePhaseSuccess:
         params["phase_success_rates"] = {"PHASE1": {"success_rate": 1.0}}
         np.random.seed(42)
         successes = sum(simulate_phase_success("PHASE1", params) for _ in range(1000))
-        assert 800 <= successes <= 900
+        assert 880 <= successes <= 945
 
     def test_never_succeeds_at_rate_0(self, sample_parameters):
         params = {**sample_parameters}
@@ -154,18 +154,18 @@ class TestSimulatePhaseSuccess:
         assert gene_success < normal_success
 
     def test_phase_rate_is_capped_for_display_and_calculation(self, sample_parameters):
-        assert get_phase_success_rate("PHASE1", sample_parameters) == 0.85
-        assert get_phase_success_rate("PHASE2", sample_parameters) == 0.78
+        assert get_phase_success_rate("PHASE1", sample_parameters) == 0.716
+        assert get_phase_success_rate("PHASE2", sample_parameters) == 0.355
 
     def test_cumulative_probability_multiplies_remaining_phases(self, sample_parameters):
         probability = calculate_cumulative_approval_probability("PHASE2", sample_parameters)
-        assert abs(probability - (0.78 * 0.71)) < 0.001
-        assert probability < 0.85
+        assert abs(probability - (0.355 * 0.512 * 0.911)) < 0.001
+        assert probability < 0.911
 
     def test_current_phase_rate_is_separate_from_cumulative(self, sample_parameters):
         phase_rate = get_current_phase_historical_success_rate("PHASE2", sample_parameters)
         cumulative = calculate_cumulative_approval_probability("PHASE2", sample_parameters)
-        assert phase_rate == 0.78
+        assert phase_rate == 0.355
         assert cumulative != phase_rate
 
 
@@ -215,7 +215,7 @@ class TestSimulateSingleProgram:
             for _ in range(1000)
         ]
         success_rate = sum(r["success"] for r in results) / len(results)
-        assert 0.55 <= success_rate <= 0.75
+        assert 0.38 <= success_rate <= 0.48
 
 
 class TestRunMonteCarloSimulation:
@@ -231,8 +231,8 @@ class TestRunMonteCarloSimulation:
         np.random.seed(42)
         df = run_monte_carlo_simulation(trials, sample_parameters, n_simulations=500)
         row = df.iloc[0]
-        assert row["phase_historical_success_rate"] <= 0.85
-        assert row["cumulative_approval_probability"] <= 0.85
+        assert row["phase_historical_success_rate"] <= 0.911
+        assert row["cumulative_approval_probability"] <= 0.911
         assert row["success_rate"] == row["cumulative_approval_probability"]
         assert row["success_rate"] < 1.0
 

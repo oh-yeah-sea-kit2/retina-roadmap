@@ -50,6 +50,14 @@ def collect_updates_by_date(kb):
                 "source_url": source_url,
             })
 
+    history = json.loads(Path("data/knowledge_base/update_history.json").read_text())
+    for entry in history["updates"]:
+        if entry.get("type") == "forecast_assumptions_changed":
+            updates_by_date[entry["date"]].append({
+                "program_id": "予測モデル", "company": "", "phase": "",
+                "event": entry["summary"] + "：" + " ".join(entry["changes"]["key_events"]),
+                "source": "シミュレーション方法論", "source_url": "simulation_methodology.html",
+            })
     return updates_by_date
 
 

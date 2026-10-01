@@ -24,6 +24,8 @@ from src.reporting.site_metadata import (
     update_readme_badge,
 )
 
+from src.reporting.arrival_visualization import render_arrival_probability, arrival_chart_css
+
 logger = logging.getLogger(__name__)
 
 
@@ -118,12 +120,14 @@ OCU400や光遺伝学（MCO-010/RV-001など）は、進行抑制と機能改善
 2. **自然経過レジストリ**に登録し、治験の声がかかる側に入る
 3. **jRCT・難病治験ウェブ**で「網膜色素変性」を定点検索する
 
+{render_arrival_probability()}
+
 ### 予測年の読み方（米国FDA承認基準）
 
 - **早い候補の中央値**: {earliest_year}（{earliest_label}を含む。視覚再建・中間分類の候補を含む）
-- **全体の中央値**: 2037年（複数の治療法が利用可能になる時期）
+- **少なくとも1つ届く確率**: 上の帯グラフを参照（失敗する場合も含む）
 - **現在アクティブな臨床試験**: {len(active_trials)}件（重要な完了試験含む）
-- **フェーズ平均の過去成功率**: {phase_rate_summary}（表示・計算上限 {data['parameters'].get('success_rate_policy', {}).get('display_cap', 0.85):.0%}）
+- **フェーズ平均の過去成功率**: {phase_rate_summary}（表示・計算上限 {data['parameters'].get('success_rate_policy', {}).get('display_cap', 0.911):.0%}）
 
 ⚠️ **重要**: 上記の予測は**米国FDA承認**を基準としています。
 - **日本での承認**: 通常FDA承認の**3-7年後**（過去実績より）
@@ -166,7 +170,7 @@ OCU400や光遺伝学（MCO-010/RV-001など）は、進行抑制と機能改善
 
 ### 最も有望な治療プログラム（米国FDA承認予測年順）
 
-| 試験ID | 治療法名 | 治療の読み方 | 対象 | フェーズ | スポンサー | フェーズ平均の過去成功率 | 累積承認確率（残フェーズ） | FDA承認予測（中央値） | 日本承認予測（中央値） | 90%信頼区間（FDA） |
+| 試験ID | 治療法名 | 治療の読み方 | 対象 | フェーズ | スポンサー | フェーズ平均の過去成功率 | 累積承認確率（残フェーズ） | FDA承認予測（中央値） | 日本承認予測（中央値） | 10〜90%幅（FDA） |
 |--------|----------|--------------|------|----------|------------|----------------------|---------------------------|---------------------|---------------------|------------------|
 """
 
@@ -189,6 +193,8 @@ OCU400や光遺伝学（MCO-010/RV-001など）は、進行抑制と機能改善
 
     content += f"""
 
+表の成功確率は [BIO Clinical Development Success Rates 2011–2020（眼科）](https://go.bio.org/rs/490-EHZ-999/images/ClinicalDevelopmentSuccessRates2011_2020.pdf) の段階通過率と、申請→承認91.1%に基づく眼科平均シナリオです。遺伝子治療は最終試験×0.9。NACは最終試験陽性までの到達確率・到達年で、承認確率ではありません。年の中央値と10〜90%幅は到達した場合のみです。
+
 ### 日本での承認予測
 
 過去の実績（Luxturna: FDA承認2017年→日本承認2023年、約5.5年の遅延）に基づく予測：
@@ -197,7 +203,7 @@ OCU400や光遺伝学（MCO-010/RV-001など）は、進行抑制と機能改善
     # 上位10プログラムの日本承認予測を詳細表示
     top10_programs = data['forecasts'].head(10)
     if len(top10_programs) > 0 and 'japan_median_approval_year' in top10_programs.columns:
-        content += """| 治療法 | FDA承認予測 | 日本承認予測（中央値） | 日本承認90%信頼区間 | 遅延期間（中央値） |
+        content += """| 治療法 | FDA承認予測 | 日本承認予測（中央値） | 日本承認10〜90%幅 | 遅延期間（中央値） |
 |--------|------------|---------------------|-------------------|---------------------|
 """
         for _, row in top10_programs.iterrows():
@@ -379,6 +385,7 @@ def convert_to_html(markdown_content, output_file):
     <meta name="keywords" content="網膜色素変性症,RP,Retinitis Pigmentosa,遺伝子治療,臨床試験,MCO-010,OCU400,承認予測">
     <meta name="author" content="網膜色素変性症治療開発予測プロジェクト">
     <style>
+{arrival_chart_css()}
 {get_color_palette_css()}
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
