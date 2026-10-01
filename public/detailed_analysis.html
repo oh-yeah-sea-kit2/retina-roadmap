@@ -197,364 +197,84 @@
         }
     </style>
 </head>
-<body>
-<!-- スキップリンク -->
-<a class="skip-link" href="#main">メインコンテンツへスキップ</a>
-<!-- ナビゲーション -->
-<nav>
-<ul>
-<li><a href="index.html">ホーム</a></li>
-<li><a href="patient_guide.html">患者ガイド</a></li>
-<li><a href="medical_info.html">医療従事者向け</a></li>
-<li><a aria-current="page" href="detailed_analysis.html">詳細分析</a></li>
-<li><a href="faq.html">FAQ</a></li>
-</ul>
-</nav>
-<div class="container">
-<main id="main">
-<h1>詳細分析データ</h1>
-<p>このページでは、網膜色素変性症治療予測の詳細なデータと分析結果を提供します。研究者・専門家向けの技術的内容を含みます。</p>
-<!-- タブシステム -->
-<div class="tab-container">
-<nav class="tabs" role="tablist">
-<button aria-selected="true" class="tab-btn active" data-tab="predictions" role="tab">予測結果</button>
-<button aria-selected="false" class="tab-btn" data-tab="methodology" role="tab">方法論</button>
-<button aria-selected="false" class="tab-btn" data-tab="ai-impact" role="tab">AI影響</button>
-<button aria-selected="false" class="tab-btn" data-tab="bottlenecks" role="tab">開発課題</button>
-</nav>
-<!-- タブ1: 予測結果 -->
-<div class="tab-content active" id="predictions" role="tabpanel">
-<h2>モンテカルロシミュレーション結果</h2>
-<!-- 統計サマリー -->
-<div class="stat-box">
-<div class="stat-item">
-<div class="stat-number">127</div>
-<div class="stat-label">分析した臨床試験数</div>
-</div>
-<div class="stat-item">
-<div class="stat-number">10,000</div>
-<div class="stat-label">シミュレーション回数</div>
-</div>
-<div class="stat-item">
-<div class="stat-number">71.4%</div>
-<div class="stat-label">Phase 3成功率</div>
-</div>
-<div class="stat-item">
-<div class="stat-number">2037年</div>
-<div class="stat-label">承認時期中央値</div>
-</div>
-</div>
-<!-- 詳細予測テーブル -->
-<h3>全プログラム詳細予測（54件）</h3>
-<div style="overflow-x: auto;">
-<table class="data-table">
+<body><div class="container"><main id="main-content"><h1>詳細データと予測の前提</h1>
+<p>2026年10月から、試験の完了率を成功率とする前提を撤回し、眼科平均とRP過去の2シナリオに変更しました。</p>
+<table aria-label="データ表" class="card-layout card-layout">
 <thead>
 <tr>
-<th>順位</th>
-<th>NCT番号</th>
-<th>プログラム名</th>
-<th>企業/機関</th>
-<th>Phase</th>
-<th>対象遺伝子</th>
-<th>モダリティ</th>
-<th>累積承認確率（残フェーズ）</th>
-<th>FDA承認予測</th>
-<th>日本承認予測</th>
-<th>95% CI</th>
+<th>段階</th>
+<th>BIO眼科の通過率</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1</td>
-<td>NCT04945772</td>
-<td>MCO-010</td>
-<td>Nanoscope Therapeutics</td>
-<td>BLA申請中</td>
-<td>変異非依存</td>
-<td>光遺伝学</td>
-<td>49.8%</td>
-<td>2027年</td>
-<td>2027年</td>
-<td>2027-2027</td>
+<td>第1相→第2相</td>
+<td data-label="BIO眼科の通過率">71.6%</td>
 </tr>
 <tr>
-<td>2</td>
-<td>NCT05203939</td>
-<td>OCU400</td>
-<td>Ocugen</td>
-<td>Phase 3</td>
-<td>NR2E3</td>
-<td>遺伝子治療</td>
-<td>42.4%</td>
-<td>2028年</td>
-<td>2033年</td>
-<td>2028-2028</td>
+<td>第2相→第3相</td>
+<td data-label="BIO眼科の通過率">35.5%</td>
 </tr>
 <tr>
-<td>3</td>
-<td>NCT06388200</td>
-<td>OCU400</td>
-<td>Ocugen</td>
-<td>Phase 3</td>
-<td>NR2E3</td>
-<td>遺伝子治療</td>
-<td>63.9%</td>
-<td>2028年</td>
-<td>2033年</td>
-<td>2028-2028</td>
+<td>第3相→申請</td>
+<td data-label="BIO眼科の通過率">51.2%</td>
 </tr>
 <tr>
-<td>4</td>
-<td>NCT04919473</td>
-<td>AGTC-501</td>
-<td>Beacon/Astellas</td>
-<td>Phase 2/3</td>
-<td>RPGR</td>
-<td>遺伝子治療</td>
-<td>85.0%</td>
-<td>2029年</td>
-<td>2034年</td>
-<td>2028-2031</td>
+<td>申請→承認</td>
+<td data-label="BIO眼科の通過率">91.1%</td>
 </tr>
-<tr>
-<td>5</td>
-<td>NCT05948761</td>
-<td>LY3561949</td>
-<td>Eli Lilly</td>
-<td>Phase 2</td>
-<td>全般</td>
-<td>小分子</td>
-<td>60.0%</td>
-<td>2030年</td>
-<td>2035年</td>
-<td>2029-2032</td>
-</tr>
-<!-- 以下、残りの49プログラム（省略） -->
 </tbody>
 </table>
-</div>
-<!-- グラフ -->
-<h3>累積承認確率（CDF）</h3>
-<figure>
-<img alt="累積承認確率グラフ" src="images/CDF.png"/>
-<figcaption>図1: FDA承認の累積確率分布。2035年までに50%、2040年までに80%の確率で少なくとも1つの治療法が承認される。</figcaption>
-</figure>
-<h3>感度分析（トルネード図）</h3>
-<figure>
-<img alt="感度分析トルネード図" src="images/tornado.png"/>
-<figcaption>図2: 承認時期に最も影響を与える要因。Phase 3の成功率と期間が最も重要。</figcaption>
-</figure>
-<h3>タイムライン予測（ウォーターフォール）</h3>
-<figure>
-<img alt="タイムライン予測図" src="images/waterfall.png"/>
-<figcaption>図3: 上位20プログラムの予測タイムライン。色の濃さは累積承認確率を示す。</figcaption>
-</figure>
-</div>
-<!-- タブ2: 方法論 -->
-<div class="tab-content" id="methodology" role="tabpanel">
-<h2>シミュレーション方法論</h2>
-<h3>モンテカルロシミュレーション</h3>
-<p>本予測では、各治療プログラムに対して10,000回のモンテカルロシミュレーションを実施しました。</p>
-<h4>基本アルゴリズム</h4>
-<div class="formula-box">
-<pre>
-for program in active_programs:
-    success_times = []
-    for i in range(10000):
-        t = current_time
-        success = True
-
-        for phase in remaining_phases:
-            # Phase期間をサンプリング
-            duration = sample_triangular(min, mode, max)
-            t += duration
-
-            # 成功判定
-            if random() &gt; success_rate[phase]:
-                success = False
-                break
-
-        if success:
-            # 規制審査期間を追加
-            t += sample_normal(12, 3)  # months
-            success_times.append(t)
-
-    # 統計量を計算
-    program.median = median(success_times)
-    program.ci_95 = percentile(success_times, [2.5, 97.5])
-                        </pre>
-</div>
-<h4>パラメータ設定</h4>
-<table class="parameter-table">
+<p>出典: <a href="https://go.bio.org/rs/490-EHZ-999/images/ClinicalDevelopmentSuccessRates2011_2020.pdf">BIO Clinical Development Success Rates 2011–2020</a>。RP過去シナリオは進行抑制の第3相だけ11.1%です。遺伝子治療の第3相×0.9と進行抑制の相関0.5はいずれも仮定です。</p>
+<p><a href="report.html">最新の試験別予測表と到達確率グラフ</a> | <a href="simulation_methodology.html">計算方法・モデルの限界</a></p>
+<p>到達確率は知識ベースのプログラム単位で20,000回計算し、同じ薬の複数試験を二重に数えません。試験別の従来モデルは10,000回計算します。表の中央値年は到達した場合の値で、到達自体が保証されるわけではありません。</p>
+<p><img alt="FDAと日本の累積承認確率" src="images/CDF.png"/></p>
+<p><img alt="期間・確率設定の感度分析" src="images/tornado.png"/></p>
+<p><img alt="試験別の条件付き承認年" src="images/waterfall.png"/></p>
+<p>NACなど既存薬は最終試験の陽性を到達と数え、RP適応承認・保険適用の時点と区別しています。</p>
+<h2>AIは開発をどこまで速くできるか</h2>
+<p><strong>要点: AIは薬や遺伝子の運び屋を「設計する」前半を数倍速くしていますが、人で効果を確かめる後半（臨床試験・安全性の観察・審査）は体と時間が相手で、AIが賢くなっても同じ割合では縮みません。</strong></p>
+<p>以前このページにあった「最大50%短縮」「2025年内に最初の承認」という見通しは、根拠が弱く実際にも外れたため、2026年10月に取り下げました。</p>
+<table aria-label="データ表" class="card-layout card-layout">
 <thead>
 <tr>
-<th>パラメータ</th>
-<th>分布</th>
-<th>値</th>
+<th>部分</th>
+<th>AIの効き方</th>
 <th>根拠</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Phase 1期間</td>
-<td>三角分布</td>
-<td>最小1年、最頻2年、最大3年</td>
-<td>過去RP試験29件の実績</td>
+<td>標的探し〜候補の決定</td>
+<td data-label="AIの効き方">速くなっている。4〜6年かかる区間が18か月になった実例がある</td>
+<td data-label="根拠"><a href="https://www.nature.com/articles/s41587-024-02143-0">Nature Biotechnology 2024（Insilico Medicine の肺線維症薬）</a></td>
 </tr>
 <tr>
-<td>Phase 2期間</td>
-<td>三角分布</td>
-<td>最小2年、最頻3年、最大4年</td>
-<td>過去RP試験37件の実績</td>
+<td>臨床試験での有効性</td>
+<td data-label="AIの効き方">優位は確認されていない。AI由来の薬の第2相の成功率は約40%で業界平均と同程度（完了試験は約10件と少ない）</td>
+<td data-label="根拠"><a href="https://www.sciencedirect.com/science/article/pii/S135964462400134X">Drug Discovery Today 2024</a></td>
 </tr>
 <tr>
-<td>Phase 3期間</td>
-<td>三角分布</td>
-<td>最小4年、最頻5年、最大7年</td>
-<td>遺伝子治療試験21件の実績</td>
+<td>全体の期間</td>
+<td data-label="AIの効き方">縮められない時間（細胞や動物の実験、病気の進行、安全性の観察）が残り、そこが全体を決める</td>
+<td data-label="根拠"><a href="https://arxiv.org/pdf/2508.16613">Hebenstreit ら、AIによる研究加速の限界の定式化</a></td>
 </tr>
 <tr>
-<td>Phase 1→2成功率</td>
-<td>ベータ分布</td>
-<td>α=25, β=4 (86.2%)</td>
-<td>25/29成功</td>
-</tr>
-<tr>
-<td>Phase 2→3成功率</td>
-<td>ベータ分布</td>
-<td>α=29, β=8 (78.4%)</td>
-<td>29/37成功</td>
-</tr>
-<tr>
-<td>Phase 3→承認成功率</td>
-<td>ベータ分布</td>
-<td>α=15, β=6 (71.4%)</td>
-<td>15/21成功</td>
-</tr>
-<tr>
-<td>規制審査期間</td>
-<td>正規分布</td>
-<td>平均12ヶ月、標準偏差3ヶ月</td>
-<td>FDA PDUFA目標</td>
+<td>規制</td>
+<td data-label="AIの効き方">FDAの2025年1月の指針案は、AIを試験短縮の手段としては位置づけず、用途のリスクに応じた信頼性の検証を求めている</td>
+<td data-label="根拠"><a href="https://www.federalregister.gov/documents/2025/01/07/2024-31542">Federal Register 2025-01-07</a></td>
 </tr>
 </tbody>
 </table>
-<h4>特別な考慮事項</h4>
+<p>網膜色素変性は進行がゆっくりなので、「遅らせた」と証明するには年単位の観察が要ります（NACの最終試験は45か月）。この部分は知能では縮みません。</p>
+<p>一方で、縮められる余地が残っている部分もあります。</p>
 <ul>
-<li><strong>Fast Track指定</strong>：審査期間を6ヶ月に短縮</li>
-<li><strong>RMAT指定</strong>：Phase期間を20%短縮</li>
-<li><strong>長期実施中試験</strong>：追加遅延リスク（+1-2年）</li>
-<li><strong>製造スケールアップ</strong>：遺伝子治療に+6-12ヶ月</li>
+<li><strong>評価の方法</strong>: 網膜の断層撮影で測る視細胞の層の幅など、変化を早く捉えられる指標を使う</li>
+<li><strong>試験の設計</strong>: 少ない人数・短い期間で効果を示せる設計にする</li>
+<li><strong>設計の前半</strong>: 大きすぎて運べない遺伝子（EYS、USH2A など）の運び方の設計</li>
 </ul>
-<h3>データソース</h3>
-<ul>
-<li><strong>ClinicalTrials.gov</strong>：API v2を使用、2025年7月20日時点</li>
-<li><strong>PubMed</strong>：E-utilities API、検索式: "retinitis pigmentosa"[MeSH] AND ("gene therapy"[MeSH] OR "cell therapy"[MeSH])</li>
-<li><strong>企業発表</strong>：各社IR資料、プレスリリース（2023-2025年）</li>
-</ul>
-</div>
-<!-- タブ3: AI影響分析 -->
-<div class="tab-content" id="ai-impact" role="tabpanel">
-<h2>AI活用による開発加速の可能性</h2>
-<div class="ai-impact-box">
-<h3>エグゼクティブサマリー</h3>
-<p>生成AIと機械学習技術により、網膜色素変性症（RP）の治療法開発が<strong class="highlight">最大50%短縮</strong>される可能性があります。現在の予測（最速2027年）は、AI活用で前倒しされる可能性がありますが、具体年は再シミュレーション結果を優先します。</p>
-</div>
-<h3>AIによる開発加速の実績</h3>
-<table>
-<thead>
-<tr>
-<th>プロセス</th>
-<th>従来期間</th>
-<th>AI活用後</th>
-<th>短縮率</th>
-<th>実例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>標的同定</td>
-<td>2-4年</td>
-<td>6-12ヶ月</td>
-<td>75%</td>
-<td>Insilico Medicine（21日で新規標的発見）</td>
-</tr>
-<tr>
-<td>リード最適化</td>
-<td>1-2年</td>
-<td>3-6ヶ月</td>
-<td>70%</td>
-<td>Atomwise（エボラ薬を数日で同定）</td>
-</tr>
-<tr>
-<td>患者選定</td>
-<td>12-18ヶ月</td>
-<td>3-6ヶ月</td>
-<td>67%</td>
-<td>MELLODDY（10社共同、予測精度向上）</td>
-</tr>
-<tr>
-<td>臨床試験デザイン</td>
-<td>6-12ヶ月</td>
-<td>1-3ヶ月</td>
-<td>75%</td>
-<td>Unlearn.AI（対照群サイズ削減）</td>
-</tr>
-</tbody>
-</table>
-<h3>RPへの具体的インパクト</h3>
-<div class="scenario-card">
-<h4>シナリオ1: 保守的予測（30%短縮）</h4>
-<ul>
-<li>OCU400: 2027年 → <strong>前倒しの可能性</strong></li>
-<li>総開発期間: 12年 → 8-9年</li>
-<li>実現可能性: <strong>高い（80%）</strong></li>
-</ul>
-</div>
-<div class="scenario-card">
-<h4>シナリオ2: 中間予測（40%短縮）</h4>
-<ul>
-<li>OCU400: 2027年 → <strong>前倒しの可能性</strong></li>
-<li>新規プログラム: 10年 → 6年</li>
-<li>実現可能性: <strong>中程度（50%）</strong></li>
-</ul>
-</div>
-<div class="scenario-card">
-<h4>シナリオ3: 楽観的予測（50%短縮）</h4>
-<ul>
-<li>ブレークスルー: 2025年内に最初の承認</li>
-<li>2030年までに10種類以上の治療法</li>
-<li>実現可能性: <strong>低い（20%）</strong></li>
-</ul>
-</div>
-<h3>実現のための必要条件</h3>
-<ol>
-<li><strong>規制対応</strong>
-<ul>
-<li>FDAのAI/ML医療機器ガイダンス活用</li>
-<li>リアルワールドエビデンスの受け入れ</li>
-<li>適応的試験デザインの承認</li>
-</ul>
-</li>
-<li><strong>データ基盤</strong>
-<ul>
-<li>RP患者レジストリの統合（現在約5,000例）</li>
-<li>ゲノム・臨床データの標準化</li>
-<li>国際的データシェアリング</li>
-</ul>
-</li>
-<li><strong>投資と人材</strong>
-<ul>
-<li>AI創薬への投資（年間100億ドル以上）</li>
-<li>計算生物学者の育成</li>
-<li>産学連携の強化</li>
-</ul>
-</li>
-</ol>
-</div>
-<!-- タブ4: 開発課題 -->
-<div class="tab-content" id="bottlenecks" role="tabpanel">
-<h2>開発ボトルネック分析</h2>
+<p>このサイトの予測は過去の成功率と所要年数を使っているため、AIで候補の数が増えたり設計が速くなったりすれば、実際は予測より良くなる可能性があります。その意味で予測は保守的です。</p>
+<h2>開発のボトルネック</h2>
 <p>網膜色素変性症治療開発における主要な課題と、その解決に向けた取り組みを分析します。</p>
 <div class="bottleneck-item">
 <h3>1. 患者募集の困難さ</h3>
@@ -639,17 +359,5 @@ for program in active_programs:
 <li><strong>データ共有基盤</strong>：競合前領域でのオープンイノベーション</li>
 <li><strong>人材育成</strong>：遺伝子治療専門家の養成</li>
 <li><strong>社会的理解</strong>：遺伝子治療への理解促進</li>
-</ol>
-</div>
-</div>
-</main>
-<footer>
-<p>© 2025 網膜色素変性症治療予測プロジェクト |
-            <a href="disclaimer.html">免責事項</a> |
-            <a href="index.html">ホームに戻る</a>
-</p>
-</footer>
-</div>
-<script src="js/common.js"></script>
-</body>
+</ol></main></div></body>
 </html>

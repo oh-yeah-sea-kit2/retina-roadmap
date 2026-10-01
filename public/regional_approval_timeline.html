@@ -219,12 +219,12 @@
         <main id="main-content" role="main">
             <h1 role="heading" aria-level="1">地域別承認予測タイムライン</h1>
 <p>⚠️ <strong>重要</strong>: 本ページは医学的助言ではありません。治療に関する決定は必ず医師と相談してください。</p>
-<p><a href="index.html">トップページに戻る</a> | <a href="report.html">詳細レポート</a> | <a href="patient_guide.html">患者・家族向けガイド</a></p>
-<hr />
+<p><a href="index.html">トップページに戻る</a> | <a href="ai_predictions.html">AI予測結果</a> | <a href="current_status_facts.html">現在の状況（事実）</a></p>
+<hr/>
 <h2 role="heading" aria-level="2">📍 地域による承認時期の違い</h2>
 <p>本プロジェクトのシミュレーション予測は主に<strong>米国FDA承認</strong>を基準としています。日本での利用可能時期は異なります。</p>
 <h3 role="heading" aria-level="3">🇺🇸 米国（FDA）承認予測</h3>
-<table>
+<table aria-label="データ表" class="card-layout">
 <thead>
 <tr>
 <th>治療法</th>
@@ -236,27 +236,27 @@
 <tbody>
 <tr>
 <td>MCO-010</td>
-<td>Nanoscope</td>
-<td><strong>2026年</strong></td>
-<td>2025-2027年</td>
+<td data-label="企業">Nanoscope</td>
+<td data-label="FDA承認予測（中央値）"><strong>2026年</strong></td>
+<td data-label="信頼区間">2025-2027年</td>
 </tr>
 <tr>
 <td>OCU400</td>
-<td>Ocugen</td>
-<td><strong>2027年</strong></td>
-<td>2026-2029年</td>
+<td data-label="企業">Ocugen</td>
+<td data-label="FDA承認予測（中央値）"><strong>2027年</strong></td>
+<td data-label="信頼区間">2026-2029年</td>
 </tr>
 <tr>
 <td>VP-001</td>
-<td>PYC Therapeutics</td>
-<td><strong>2029年</strong></td>
-<td>2028-2031年</td>
+<td data-label="企業">PYC Therapeutics</td>
+<td data-label="FDA承認予測（中央値）"><strong>2029年</strong></td>
+<td data-label="信頼区間">2028-2031年</td>
 </tr>
 <tr>
 <td>AGTC-501</td>
-<td>Beacon</td>
-<td><strong>2029年</strong></td>
-<td>2028-2031年</td>
+<td data-label="企業">Beacon</td>
+<td data-label="FDA承認予測（中央値）"><strong>2029年</strong></td>
+<td data-label="信頼区間">2028-2031年</td>
 </tr>
 </tbody>
 </table>
@@ -269,7 +269,7 @@
 <li><strong>遅延期間</strong>: <strong>5年6ヶ月</strong></li>
 </ul>
 <h4>日本での承認予測（推定）</h4>
-<table>
+<table aria-label="データ表" class="card-layout">
 <thead>
 <tr>
 <th>治療法</th>
@@ -282,31 +282,31 @@
 <tbody>
 <tr>
 <td>MCO-010</td>
-<td>2026年</td>
-<td><strong>2029年</strong>（+3年）</td>
-<td><strong>2031年</strong>（+5年）</td>
-<td><strong>2033年</strong>（+7年）</td>
+<td data-label="FDA承認予測">2026年</td>
+<td data-label="日本承認予測（早期）"><strong>2029年</strong>（+3年）</td>
+<td data-label="日本承認予測（標準）"><strong>2031年</strong>（+5年）</td>
+<td data-label="日本承認予測（遅延）"><strong>2033年</strong>（+7年）</td>
 </tr>
 <tr>
 <td>OCU400</td>
-<td>2027年</td>
-<td><strong>2030年</strong>（+3年）</td>
-<td><strong>2032年</strong>（+5年）</td>
-<td><strong>2034年</strong>（+7年）</td>
+<td data-label="FDA承認予測">2027年</td>
+<td data-label="日本承認予測（早期）"><strong>2030年</strong>（+3年）</td>
+<td data-label="日本承認予測（標準）"><strong>2032年</strong>（+5年）</td>
+<td data-label="日本承認予測（遅延）"><strong>2034年</strong>（+7年）</td>
 </tr>
 <tr>
 <td>VP-001</td>
-<td>2029年</td>
-<td><strong>2032年</strong>（+3年）</td>
-<td><strong>2034年</strong>（+5年）</td>
-<td><strong>2036年</strong>（+7年）</td>
+<td data-label="FDA承認予測">2029年</td>
+<td data-label="日本承認予測（早期）"><strong>2032年</strong>（+3年）</td>
+<td data-label="日本承認予測（標準）"><strong>2034年</strong>（+5年）</td>
+<td data-label="日本承認予測（遅延）"><strong>2036年</strong>（+7年）</td>
 </tr>
 <tr>
 <td>AGTC-501</td>
-<td>2029年</td>
-<td><strong>2032年</strong>（+3年）</td>
-<td><strong>2034年</strong>（+5年）</td>
-<td><strong>2036年</strong>（+7年）</td>
+<td data-label="FDA承認予測">2029年</td>
+<td data-label="日本承認予測（早期）"><strong>2032年</strong>（+3年）</td>
+<td data-label="日本承認予測（標準）"><strong>2034年</strong>（+5年）</td>
+<td data-label="日本承認予測（遅延）"><strong>2036年</strong>（+7年）</td>
 </tr>
 </tbody>
 </table>
@@ -314,7 +314,7 @@
 <h4>欧州（EMA）</h4>
 <ul>
 <li>通常FDA承認から1-2年後</li>
-<li>OCU400はEMAと並行申請予定（2026年）のため、FDAとほぼ同時期の可能性</li>
+<li>OCU400はPhase 3 liMeliGhTの米国試験データをEMA申請にも使える見込みとOcugenが発表しているため、欧州申請が大きく遅れない可能性がある。ただしトップラインは2027年Q1予定</li>
 </ul>
 <h4>アジア太平洋</h4>
 <ul>
@@ -322,7 +322,7 @@
 <li>中国：FDA承認から3-5年後</li>
 <li>オーストラリア：FDA承認から1-3年後</li>
 </ul>
-<hr />
+<hr/>
 <h2 role="heading" aria-level="2">🚀 日本での承認を早める可能性のある要因</h2>
 <h3 role="heading" aria-level="3">1. <strong>希少疾病用医薬品指定</strong></h3>
 <ul>
@@ -344,7 +344,7 @@
 <li>革新的医薬品を対象</li>
 <li>審査期間を6ヶ月に短縮（通常12ヶ月）</li>
 </ul>
-<hr />
+<hr/>
 <h2 role="heading" aria-level="2">📊 現実的な日本での利用可能時期</h2>
 <h3 role="heading" aria-level="3">最も楽観的なシナリオ</h3>
 <ul>
@@ -361,7 +361,7 @@
 <li>MCO-010: <strong>2033年</strong>（FDA承認の7年後）</li>
 <li>OCU400: <strong>2034年</strong>（FDA承認の7年後）</li>
 </ul>
-<hr />
+<hr/>
 <h2 role="heading" aria-level="2">⚠️ 重要な注意事項</h2>
 <ol>
 <li><strong>予測の不確実性</strong></li>
@@ -382,7 +382,7 @@
 <li>具体的な治療選択は必ず専門医と相談してください</li>
 <li>最新の情報は医療機関で確認してください</li>
 </ol>
-<hr />
+<hr/>
 <p><em>最終更新: 2026年10月1日</em></p>
         </main>
     </div>
