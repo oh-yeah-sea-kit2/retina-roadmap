@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+from datetime import datetime
 from pathlib import Path
 from typing import Any
 
@@ -446,7 +447,7 @@ def generate_html(site_metadata: dict[str, Any] | None = None) -> str:
             <section class="content-wrapper">
                 <h2>主なプログラムの読み方</h2>
                 <p>トップでは登録番号や統計の細部より、「何を期待する治療か」「自分が対象になりうるか」を先に見ます。詳細な登録番号と一次ソースは更新履歴と詳細レポートに格納しています。</p>
-                <table class="program-table card-layout">
+                <table class="program-table card-layout" aria-label="治療プログラム一覧表">
                     <thead>
                         <tr>
                             <th>プログラム</th>
@@ -502,7 +503,7 @@ def generate_html(site_metadata: dict[str, Any] | None = None) -> str:
         </main>
 
         <footer>
-            <p>&copy; 2025 網膜色素変性症治療予測プロジェクト |
+            <p>&copy; {datetime.now().year} 網膜色素変性症治療予測プロジェクト |
             <a href="disclaimer.html">免責事項</a> |
             <a href="https://github.com/oh-yeah-sea-kit2/retina-roadmap/issues" target="_blank" rel="noopener noreferrer">フィードバック</a>
             </p>

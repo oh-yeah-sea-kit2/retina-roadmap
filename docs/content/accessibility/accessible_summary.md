@@ -54,7 +54,7 @@ OCU400、MCO-010、RV-001のように、進行抑制、機能改善、光覚再�
 公式ソース:
 
 - 神戸市立神戸アイセンター病院 専門外来: https://kobe.eye.center.kcho.jp/outpatient/disease.html
-- 神戸アイセンター: https://www.kobe-eye-center.jp/
+- 神戸市立神戸アイセンター病院（公式）: https://kobe.eye.center.kcho.jp/
 - AMED IRUD: https://www.amed.go.jp/program/IRUD/
 
 ### ステップ2. 自然経過レジストリに登録できるか確認する
