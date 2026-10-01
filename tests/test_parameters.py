@@ -85,13 +85,13 @@ class TestCalculateSuccessRates:
     def test_phase1_uses_configured_historical_rate_with_cap(self, sample_trials_df):
         result = calculate_success_rates(sample_trials_df)
         rate = result["PHASE1"]["success_rate"]
-        assert rate == 0.85
-        assert result["PHASE1"]["raw_success_rate"] == 0.86
+        assert rate == 0.716
+        assert result["PHASE1"]["raw_success_rate"] == 0.716
         assert result["PHASE1"]["confidence"] == "configured_historical"
 
     def test_observed_counts_are_kept_separate(self, sample_trials_df):
         result = calculate_success_rates(sample_trials_df)
-        assert result["PHASE1"]["observed_success_count"] == 5
+        assert result["PHASE1"]["observed_completion_count"] == 5
         assert result["PHASE1"]["observed_total_count"] == 7
         assert abs(result["PHASE1"]["observed_completion_rate"] - 5 / 7) < 0.01
 

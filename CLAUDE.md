@@ -41,6 +41,16 @@ python src/ingest/parameters.py     # パラメータ推定
 python src/sim/timeline_sim.py      # シミュレーション実行
 python src/reporting/build_report.py # レポート生成
 
+# 公開全13ページ再生成（データ取得なし）
+PYTHONPATH=. .venv/bin/python src/reporting/build_report.py
+PYTHONPATH=. .venv/bin/python src/reporting/build_updates_page.py
+PYTHONPATH=. .venv/bin/python src/reporting/build_action_guide_html.py
+PYTHONPATH=. .venv/bin/python src/reporting/convert_md_to_html.py
+PYTHONPATH=. .venv/bin/python src/reporting/build_static_pages.py
+
+# NAC試験設計の検出力
+PYTHONPATH=. .venv/bin/python scripts/analysis/nac_attack_power.py
+
 # レポートのみ再生成（データ取得なし）
 python src/reporting/build_report.py
 
@@ -72,9 +82,18 @@ python scripts/update_latest_info.py
    - フェーズ遷移を含む医薬品開発タイムラインをモデル化
    - 不確実性の伝播を処理
 
+   - `src/sim/arrival_probability.py`: 知識ベースの `forecast` を唯一のプログラム入力として、20,000回・seed 20261002で2026〜2045年の各年末の到達確率を計算。同じ薬の複数試験は1プログラムに集約。
+   - 2026-10-02以降の成功率はBIO眼科の段階通過率（71.6% / 35.5% / 51.2%、申請→承認91.1%）。旧ClinicalTrials.govの完了率を効果確認の成功率として使わない。
+   - 眼科平均（general）とRP過去（rp_history: 進行抑制の第3相11.1%）の2シナリオ。相関0.5と遺伝子治療第3相×0.9は仮定。既存薬は最終試験陽性を到達点とし、承認・日本への遅れのゲートは不要。
+   - `results/forecasts.csv` はgeneral、`rp_history_cumulative_approval_probability`も保持。プログラム単位の両シナリオは`results/arrival_probability.json`。
+
 4. **出力層** (`src/viz/` と `src/reporting/`)
    - 異なる対象者向けの可視化を生成
    - 複数の形式（技術者向け、患者向け、一般向け）で自動レポートを作成
+   - `arrival_visualization.py` が到達確率のインラインSVGと同じ数値の表を生成し、トップ・レポートに組み込む。
+   - `build_simulation_methodology_html.py` は `docs/development/technical/simulation_methodology.md` から公開ページを生成。
+   - `build_static_pages.py` は従来の手書き4ページを `docs/content/main/{detailed_analysis,disclaimer,medical_info,patient_guide}.md` とPythonテンプレートから再生成。医療従事者ページには `for_doctor_checklist.md` を組み込む。公開HTMLは直接編集しない。
+   - `scripts/analysis/nac_attack_power.py`: NAC試験設計の検出力（numpy/scipy）。NACが効く確率を推定するものではない。
 
 ## 実装上の重要な考慮事項
 
@@ -153,7 +172,7 @@ python scripts/update_latest_info.py
 - `TASK_LIST.json`: 詳細な実装ロードマップ（完了済み）
 - `README.md`: 包括的なプロジェクト仕様と方法論
 - `SYSTEM.md`: Claude Code操作手順
-- `docs/public/index.html`: ランディングページ（手動編集）
+- `docs/public/index.html`: ランディングページ（build_landing_page.pyで生成）
 - `docs/public/report.html`: 自動生成されるシミュレーションレポート（build_report.pyで生成）
 - `docs/content/`: Markdownソースファイル
 - `docs/development/`: 開発ドキュメント
@@ -203,7 +222,7 @@ docs/
   - OCU400: 2032年（FDA承認の5年後）[90%信頼区間: 2031-2033年]
   - VP-001: 2035年（FDA承認の5年後）[90%信頼区間: 2034-2036年]
 - **全体中央値**: 2035年（FDA承認）
-- **Phase別成功率**: Phase 1: 86.7%, Phase 2: 78.4%, Phase 3: 71.4%（※限定的データに基づく）
+- **段階通過率（2026-10-02以降）**: Phase 1: 71.6%, Phase 2: 35.5%, Phase 3: 51.2%、申請→承認91.1%（BIO眼科）。RP進行抑制の過去シナリオはPhase 3が11.1%。
 - **アクティブな試験数**: 55件（重要な完了試験含む）
 
 ## 最近の更新履歴

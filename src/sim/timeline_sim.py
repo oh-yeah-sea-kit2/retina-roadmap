@@ -9,15 +9,20 @@ import numpy as np
 import yaml
 from pathlib import Path
 from datetime import datetime, timedelta
+import matplotlib
+matplotlib.use("Agg")  # ファイル生成専用。GUIのないCI・サンドボックスでも実行する。
 import matplotlib.pyplot as plt
 from typing import Dict, List, Tuple
 import logging
+from functools import lru_cache
+from src.reporting.message_design import load_clinical_programs, build_trial_program_index, program_for_forecast_row
+from src.sim.arrival_probability import run as run_arrival_probability, program_config
 
 logger = logging.getLogger(__name__)
 
 # プロジェクトルートディレクトリ
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
-DEFAULT_SUCCESS_RATE_CAP = 0.85
+DEFAULT_SUCCESS_RATE_CAP = 0.911
 DEFAULT_PHASE_SUCCESS_RATE = 0.5
 PHASE_ALIASES = {
     "EARLY_PHASE1": "PHASE1",
@@ -106,15 +111,58 @@ def get_phase_success_rate(phase: str, parameters: dict,
 
 def calculate_cumulative_approval_probability(phase: str, parameters: dict,
                                               is_gene_therapy: bool = False,
-                                              override_rate: float = None) -> float:
-    """残フェーズの成功率を掛け合わせ、プログラム累積承認確率を返す"""
+                                              override_rate: float = None,
+                                              *, generic: bool = False,
+                                              filed: bool = False,
+                                              skipped_controlled_phase2: bool = False,
+                                              slow: bool = False,
+                                              scenario: str = "general") -> float:
+    """臨床段階と審査を別ゲートで計算。既存薬は最終試験陽性まで。"""
+    regulatory = parameters.get("regulatory_approval_success_rate", 0.911)
+    if filed:
+        return _cap_probability(regulatory, parameters)
     if override_rate is not None:
-        return _cap_probability(override_rate, parameters)
-
+        return _cap_probability(override_rate * (1 if generic else regulatory), parameters)
     probability = 1.0
     for phase_name in get_remaining_phases(phase):
-        probability *= get_phase_success_rate(phase_name, parameters, is_gene_therapy)
+        rate = get_phase_success_rate(phase_name, parameters, False)
+        if phase_name == "PHASE3":
+            if skipped_controlled_phase2:
+                rate *= get_phase_success_rate("PHASE2", parameters)
+            if slow and scenario == "rp_history":
+                history = parameters.get("success_rate_scenarios", {}).get("rp_history", {}).get("slow_phase3_success_rate", .111)
+                rate = min(rate, history)
+            if is_gene_therapy:
+                rate *= .9
+        probability *= rate
+    if not generic:
+        probability *= regulatory
     return _cap_probability(probability, parameters)
+
+
+@lru_cache(maxsize=1)
+def _knowledge_index():
+    programs = load_clinical_programs()["programs"]
+    return programs, build_trial_program_index(programs)
+
+
+def trial_probability(trial: pd.Series, parameters: dict, config: dict,
+                      scenario: str = "general") -> float:
+    programs, index = _knowledge_index()
+    name = program_for_forecast_row(trial.to_dict(), programs, index)
+    program = programs.get(name, {})
+    cfg = program_config(name, config)
+    if not cfg:
+        cfg = next((c for c in config.get("programs", {}).values()
+                    if _match_program(trial, c.get("match_fields", {}))), {})
+    forecast = program.get("forecast", {})
+    return calculate_cumulative_approval_probability(
+        trial["Phase"], parameters, is_gene_therapy_trial(trial), cfg.get("success_rate"),
+        generic=forecast.get("generic", cfg.get("generic", False)),
+        filed=forecast.get("stage") == "filed" or cfg.get("filed", False),
+        skipped_controlled_phase2=forecast.get("skipped_controlled_phase2", cfg.get("skipped_controlled_phase2", False)),
+        slow=program.get("message_design", {}).get("axis") == "A",
+        scenario=scenario)
 
 
 def get_current_phase_historical_success_rate(phase: str, parameters: dict,
@@ -129,13 +177,8 @@ def simulate_program_success(phase: str, parameters: dict,
                              is_gene_therapy: bool = False,
                              override_rate: float = None) -> bool:
     """プログラムの承認到達可否を成功率ポリシーに基づいてサンプリング"""
-    if override_rate is not None:
-        return np.random.random() < _cap_probability(override_rate, parameters)
-
-    for phase_name in get_remaining_phases(phase):
-        if not simulate_phase_success(phase_name, parameters, is_gene_therapy):
-            return False
-    return True
+    probability = calculate_cumulative_approval_probability(phase, parameters, is_gene_therapy, override_rate)
+    return np.random.random() < probability
 
 
 def _failure_result(phase: str, reason: str = "Historical phase success gate") -> Dict:
@@ -259,6 +302,34 @@ def simulate_single_program(trial: pd.Series, parameters: dict,
     start_date = trial["StartDate"]
     is_gene_therapy = is_gene_therapy_trial(trial)
 
+    probability = trial.get("_approval_probability")
+    if probability is None:
+        probability = trial_probability(trial, parameters, sim_config)
+    if np.random.random() >= probability:
+        return _failure_result(phase, "Clinical and regulatory success gates")
+
+    generic_forecast = trial.get("_generic_forecast")
+    if generic_forecast is None:
+        programs, index = _knowledge_index()
+        name = program_for_forecast_row(trial.to_dict(), programs, index)
+        forecast = programs.get(name, {}).get("forecast", {})
+        generic_forecast = forecast if forecast.get("generic") else False
+    if generic_forecast:
+        # 既存薬は最終試験の陽性が到達点。募集前の候補は後ろ倒しする。
+        from src.sim.arrival_probability import month_end
+        readout = month_end(generic_forecast["readout"])
+        approval_date = max(current_date, datetime.combine(readout, datetime.min.time())) if readout else current_date
+        if generic_forecast.get("not_started") or readout is None:
+            duration = sim_config["stage_duration_years_bio"][generic_forecast["stage"]]
+            end = current_date + timedelta(days=duration * np.random.lognormal(0, .3) * 365.25)
+            approval_date = max(approval_date, end)
+        return {"success": True, "approval_date": approval_date,
+                "approval_year": approval_date.year,
+                "japan_approval_date": approval_date, "japan_approval_year": approval_date.year,
+                "japan_delay_years": 0.0,
+                "time_to_approval": (approval_date - current_date).days / 365.25,
+                "generic": True}
+
     # 経過時間を考慮
     time_in_current_phase = (current_date - start_date).days / 365.25
     time_in_current_phase = max(0, time_in_current_phase)
@@ -276,8 +347,6 @@ def simulate_single_program(trial: pd.Series, parameters: dict,
     mco_match = mco_cfg.get("match_fields", {})
     if _match_program(trial, mco_match) or \
        ("Nanoscope" in trial.get("SponsorName", "") and phase in ["PHASE2", "PHASE3"]):
-        if not simulate_program_success(phase, parameters, is_gene_therapy):
-            return _failure_result(phase, "MCO-010 gated by cumulative historical phase success")
 
         # BLA完全提出予定日（rolling submissionの完了）
         bla_complete_date = datetime.fromisoformat(mco_cfg.get("bla_complete_date", "2026-03-31"))
@@ -313,8 +382,6 @@ def simulate_single_program(trial: pd.Series, parameters: dict,
     ocu_match = ocu_cfg.get("match_fields", {})
     if _match_program(trial, ocu_match) or \
        ("Ocugen" in trial.get("SponsorName", "") and phase == "PHASE3"):
-        if not simulate_program_success(phase, parameters, is_gene_therapy):
-            return _failure_result(phase, "OCU400 gated by cumulative historical phase success")
 
         bla_submission_date = datetime.fromisoformat(ocu_cfg.get("submission_date", "2026-09-30"))
         time_to_submission = (bla_submission_date - current_date).days / 365.25
@@ -346,49 +413,32 @@ def simulate_single_program(trial: pd.Series, parameters: dict,
     bot_cfg = programs_cfg.get("Botaretigene", {})
     bot_match = bot_cfg.get("match_fields", {})
     if _match_program(trial, bot_match):
-        success_rate = bot_cfg.get("success_rate", 0.2)
-        if simulate_program_success(phase, parameters, is_gene_therapy, override_rate=success_rate):
-            submission_date = bot_cfg.get("submission_date")
-            if submission_date:
-                planned_submission = datetime.fromisoformat(submission_date)
-                total_time = max(0, (planned_submission - current_date).days / 365.25)
-            else:
-                total_time = _sample_triangular(bot_cfg.get("submission_time", {"min": 0.25, "median": 0.5, "max": 1.0}))
-
-            review_time = _sample_triangular(bot_cfg.get("review_time", {"min": 1.5, "median": 2.0, "max": 2.5}))
-            total_time += review_time
-
-            approval_date = current_date + timedelta(days=total_time * 365.25)
-            japan_delay = _simulate_japan_delay(japan_delay_years)
-            japan_approval_date = approval_date + timedelta(days=japan_delay * 365.25)
-
-            return {
-                "success": True,
-                "approval_date": approval_date,
-                "approval_year": approval_date.year,
-                "time_to_approval": total_time,
-                "program_name": bot_cfg.get("program_name", "Botaretigene sparoparvovec"),
-                "confidence": bot_cfg.get("confidence", "low"),
-                "japan_approval_date": japan_approval_date,
-                "japan_approval_year": japan_approval_date.year,
-                "japan_delay_years": japan_delay
-            }
+        submission_date = bot_cfg.get("submission_date")
+        if submission_date:
+            planned_submission = datetime.fromisoformat(submission_date)
+            total_time = max(0, (planned_submission - current_date).days / 365.25)
         else:
-            return {
-                "success": False,
-                "failed_at_phase": "PHASE3",
-                "time_to_failure": time_in_current_phase + 1.0,
-                "reason": "Botaretigene regulatory path not achieved in this simulation"
-            }
-    
+            total_time = _sample_triangular(bot_cfg["submission_time"])
+        total_time += _sample_triangular(bot_cfg["review_time"])
+        approval_date = current_date + timedelta(days=total_time * 365.25)
+        japan_delay = _simulate_japan_delay(japan_delay_years)
+        japan_approval_date = approval_date + timedelta(days=japan_delay * 365.25)
+        return {
+            "success": True, "approval_date": approval_date,
+            "approval_year": approval_date.year, "time_to_approval": total_time,
+            "program_name": bot_cfg["program_name"],
+            "japan_approval_date": japan_approval_date,
+            "japan_approval_year": japan_approval_date.year,
+            "japan_delay_years": japan_delay,
+        }
+
+
     # PYC VP-001の特別処理
     vp_cfg = programs_cfg.get("VP-001", {})
     vp_match = vp_cfg.get("match_fields", {})
     if _match_program(trial, vp_match) or \
        ("PYC" in trial.get("SponsorName", "") and "RP11" in trial.get("BriefTitle", "")):
         if phase in ["PHASE1", "PHASE1, PHASE2"]:
-            if not simulate_program_success(phase, parameters, is_gene_therapy):
-                return _failure_result(phase, "VP-001 gated by cumulative historical phase success")
 
             phase23_start = datetime.fromisoformat(vp_cfg.get("phase23_start_date", "2025-10-01"))
             time_to_phase23 = (phase23_start - current_date).days / 365.25
@@ -423,8 +473,6 @@ def simulate_single_program(trial: pd.Series, parameters: dict,
     if _match_program(trial, agtc_match) or \
        ("Beacon" in trial.get("SponsorName", "") and "XLRP" in trial.get("BriefTitle", "")):
         if phase in ["PHASE2", "PHASE3", "PHASE2, PHASE3"]:
-            if not simulate_program_success(phase, parameters, is_gene_therapy):
-                return _failure_result(phase, "AGTC-501 gated by cumulative historical phase success")
 
             phase23_duration = _sample_triangular(agtc_cfg.get("phase23_duration", {"min": 1.5, "median": 2.0, "max": 2.5}))
             analysis_time = _sample_triangular(agtc_cfg.get("analysis_time", {"min": 0.5, "median": 0.75, "max": 1.0}))
@@ -474,13 +522,6 @@ def simulate_single_program(trial: pd.Series, parameters: dict,
             phase_duration = simulate_phase_duration(phase_name, parameters)
             total_time += phase_duration
         
-        if not simulate_phase_success(phase_name, parameters, is_gene_therapy):
-            return {
-                "success": False,
-                "failed_at_phase": phase_name,
-                "time_to_failure": total_time
-            }
-    
     # 規制当局承認プロセス
     reg_params = parameters["regulatory_timelines_years"]
     
@@ -530,6 +571,12 @@ def run_monte_carlo_simulation(active_trials: pd.DataFrame,
     
     for idx, trial in active_trials.iterrows():
         program_results = []
+        trial = trial.copy()
+        trial["_approval_probability"] = trial_probability(trial, parameters, sim_config)
+        programs, index = _knowledge_index()
+        name = program_for_forecast_row(trial.to_dict(), programs, index)
+        forecast = programs.get(name, {}).get("forecast", {})
+        trial["_generic_forecast"] = forecast if forecast.get("generic") else False
         
         logger.info("Simulating %s: %s...", trial['NCTId'], trial['BriefTitle'][:50])
         
@@ -549,9 +596,8 @@ def run_monte_carlo_simulation(active_trials: pd.DataFrame,
         phase_historical_success_rate = get_current_phase_historical_success_rate(
             trial["Phase"], parameters, is_gene_therapy
         )
-        cumulative_approval_probability = calculate_cumulative_approval_probability(
-            trial["Phase"], parameters, is_gene_therapy, override_rate
-        )
+        cumulative_approval_probability = trial["_approval_probability"]
+        history_probability = trial_probability(trial, parameters, sim_config, "rp_history")
         simulated_success_rate = len(success_results) / n_simulations
         
         if success_results:
@@ -568,6 +614,7 @@ def run_monte_carlo_simulation(active_trials: pd.DataFrame,
                 "phase_historical_success_rate": phase_historical_success_rate,
                 "cumulative_approval_probability": cumulative_approval_probability,
                 "simulated_success_rate": simulated_success_rate,
+                "rp_history_cumulative_approval_probability": history_probability,
                 "median_approval_year": np.median(approval_years),
                 "mean_approval_year": np.mean(approval_years),
                 "pct10_approval_year": np.percentile(approval_years, 10),
@@ -964,6 +1011,8 @@ def main():
     if all_approval_years:
         overall_median = np.median(all_approval_years)
         logger.info("Overall median year for first approval: %.0f", overall_median)
+
+    run_arrival_probability(today=datetime.now().date())
 
 
 if __name__ == "__main__":

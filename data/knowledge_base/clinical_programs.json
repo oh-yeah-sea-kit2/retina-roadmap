@@ -113,7 +113,17 @@
           "label": "ClinicalTrials.gov RESTORE (NCT04945772)",
           "url": "https://clinicaltrials.gov/study/NCT04945772"
         }
-      ]
+      ],
+      "forecast": {
+        "stage": "filed",
+        "readout": null,
+        "generic": false,
+        "japan_lag": "sakigake",
+        "skipped_controlled_phase2": false,
+        "not_started": false,
+        "group": "restore"
+      },
+      "forecast_source": "rp-research/tracker/watchlist.json (2026-10-02); group: site message_design"
     },
     "OCU400": {
       "company": "Ocugen",
@@ -203,7 +213,17 @@
         "patient_summary": "改変遺伝子治療。進行抑制と機能改善の両方を狙うが、根治や完全な視力回復とは分けて読む。",
         "eligibility_hint": "liMeliGhTではRHOアームと広範RPアームがあり、実際の対象は承認ラベルで決まる。EAPは要問い合わせ。",
         "landing_milestone": "Phase 3組入れ完了、トップライン2027年Q1予定"
-      }
+      },
+      "forecast": {
+        "stage": "P3",
+        "readout": "2027-02",
+        "generic": false,
+        "japan_lag": "default",
+        "skipped_controlled_phase2": false,
+        "not_started": false,
+        "group": "slow"
+      },
+      "forecast_source": "rp-research/tracker/watchlist.json (2026-10-02); group: site message_design"
     },
     "VP-001": {
       "company": "PYC Therapeutics",
@@ -263,7 +283,17 @@
         "genotype_scope_key": "specific",
         "patient_summary": "PRPF31/RP11を対象にRNAレベルで機能回復を狙う。対象遺伝子が合う人向け。",
         "eligibility_hint": "PRPF31変異が前提。登録試験開始時期は遅れている。"
-      }
+      },
+      "forecast": {
+        "stage": "P2",
+        "readout": "2028-03",
+        "generic": false,
+        "japan_lag": "default",
+        "skipped_controlled_phase2": false,
+        "not_started": false,
+        "group": "gene"
+      },
+      "forecast_source": "rp-research/tracker/watchlist.json (2026-10-02); group: site message_design"
     },
     "AGTC-501": {
       "company": "Beacon Therapeutics",
@@ -361,7 +391,17 @@
         "patient_summary": "RPGR関連X連鎖性RPで、原因遺伝子を補う発想。対象は限定される。",
         "eligibility_hint": "RPGR変異、性別、年齢、視機能などの試験基準で対象が決まる。",
         "landing_milestone": "最終試験で主要評価項目を達成、承認申請へ"
-      }
+      },
+      "forecast": {
+        "stage": "P3",
+        "readout": "2026-06",
+        "generic": false,
+        "japan_lag": "default",
+        "skipped_controlled_phase2": false,
+        "not_started": false,
+        "group": "gene"
+      },
+      "forecast_source": "rp-research/tracker/watchlist.json (2026-10-02); group: site message_design"
     },
     "OpCT-001": {
       "company": "BlueRock Therapeutics (Bayer)",
@@ -408,7 +448,17 @@
         "genotype_scope_key": "agnostic",
         "patient_summary": "iPSC由来光受容体細胞で、失われた細胞を補うことを狙う長期目標。",
         "eligibility_hint": "遺伝子型より病期・網膜状態・手術適応が重要になる。"
-      }
+      },
+      "forecast": {
+        "stage": "P2",
+        "readout": "2029-10",
+        "generic": false,
+        "japan_lag": "default",
+        "skipped_controlled_phase2": false,
+        "not_started": false,
+        "group": "restore"
+      },
+      "forecast_source": "rp-research/tracker/watchlist.json (2026-10-02); group: site message_design"
     },
     "NPI-001": {
       "company": "Nacuity Pharmaceuticals",
@@ -490,14 +540,26 @@
         "patient_summary": "光受容体喪失を遅らせることを狙う経口薬。視力を取り戻す治療ではない。",
         "eligibility_hint": "現在の主データはUsher症候群関連RP。確認試験の対象条件を確認する必要がある。",
         "landing_milestone": "確認試験登録済み、未募集確認済み"
-      }
+      },
+      "forecast": {
+        "stage": "P3",
+        "readout": "2029-02",
+        "generic": false,
+        "japan_lag": "default",
+        "skipped_controlled_phase2": false,
+        "not_started": true,
+        "group": "slow"
+      },
+      "forecast_source": "rp-research/tracker/watchlist.json (2026-10-02); group: site message_design"
     },
     "GS030": {
       "company": "GenSight Biologics",
-      "current_phase": "Clinical development",
+      "current_phase": "Phase 1/2",
       "status": "Active",
       "key_dates": {},
-      "trial_ids": [],
+      "trial_ids": [
+        "NCT03326336"
+      ],
       "modality": "Gene therapy (optogenetics)",
       "target": "Gene-agnostic",
       "regulatory": [],
@@ -510,14 +572,26 @@
         "genotype_scope_key": "agnostic",
         "patient_summary": "光遺伝学で視覚再建を狙う。根治ではない。",
         "eligibility_hint": "進行期RPが主な想定。"
-      }
+      },
+      "forecast": {
+        "stage": "P2",
+        "readout": null,
+        "generic": false,
+        "japan_lag": "default",
+        "skipped_controlled_phase2": false,
+        "not_started": false,
+        "group": "restore"
+      },
+      "forecast_source": "current_phase / trial_ids / cached registry primaryCompletionDateStruct; full CompletionDate is not a primary readout"
     },
     "4D-125": {
       "company": "4D Molecular Therapeutics",
-      "current_phase": "Clinical development",
+      "current_phase": "Phase 1/2",
       "status": "Active",
       "key_dates": {},
-      "trial_ids": [],
+      "trial_ids": [
+        "NCT04517149"
+      ],
       "modality": "Gene therapy",
       "target": "Not specified",
       "regulatory": [],
@@ -530,7 +604,17 @@
         "genotype_scope_key": "specific",
         "patient_summary": "特定遺伝子を対象に原因側へ介入する治療。",
         "eligibility_hint": "対象遺伝子と試験基準の一致が必要。"
-      }
+      },
+      "forecast": {
+        "stage": "P2",
+        "readout": null,
+        "generic": false,
+        "japan_lag": "default",
+        "skipped_controlled_phase2": false,
+        "not_started": false,
+        "group": "gene"
+      },
+      "forecast_source": "current_phase / trial_ids / cached registry primaryCompletionDateStruct; full CompletionDate is not a primary readout"
     },
     "CTx-PDE6b": {
       "company": "Coave Therapeutics",
@@ -550,7 +634,17 @@
         "genotype_scope_key": "specific",
         "patient_summary": "PDE6B変異を対象にした原因遺伝子治療。",
         "eligibility_hint": "PDE6B変異が前提。"
-      }
+      },
+      "forecast": {
+        "stage": null,
+        "readout": null,
+        "generic": false,
+        "japan_lag": "default",
+        "skipped_controlled_phase2": false,
+        "not_started": null,
+        "group": "gene"
+      },
+      "forecast_source": "current_phase / trial_ids / cached registry primaryCompletionDateStruct; full CompletionDate is not a primary readout"
     },
     "AAV-mVChR1": {
       "company": "Astellas Pharma/Tohoku University",
@@ -637,7 +731,17 @@
         "patient_summary": "遺伝子型を問わず、残っている視細胞を守ることを狙う。視力を戻す治療ではない。",
         "eligibility_hint": "早期から中等度で残存視機能がある人ほど考えやすい。",
         "landing_milestone": "初回データ読出しは2027年予定"
-      }
+      },
+      "forecast": {
+        "stage": "P2",
+        "readout": "2027-02",
+        "generic": false,
+        "japan_lag": "default",
+        "skipped_controlled_phase2": false,
+        "not_started": false,
+        "group": "slow"
+      },
+      "forecast_source": "rp-research/tracker/watchlist.json (2026-10-02); group: site message_design"
     },
     "SPVN20": {
       "company": "SparingVision",
@@ -650,7 +754,8 @@
         "expected_initial_safety_data": "2026-H2"
       },
       "trial_ids": [
-        "NYRVANA"
+        "NYRVANA",
+        "NCT07807111"
       ],
       "modality": "Gene therapy",
       "target": "Gene-agnostic (dormant cone reactivation)",
@@ -670,7 +775,17 @@
         "genotype_scope_key": "agnostic",
         "patient_summary": "進行期RPで残存する錐体機能の再活性化を狙う。根治ではない。",
         "eligibility_hint": "病期と残存細胞の条件が重要。"
-      }
+      },
+      "forecast": {
+        "stage": "P2",
+        "readout": null,
+        "generic": false,
+        "japan_lag": "default",
+        "skipped_controlled_phase2": false,
+        "not_started": false,
+        "group": "restore"
+      },
+      "forecast_source": "current_phase / trial_ids / cached registry primaryCompletionDateStruct; full CompletionDate is not a primary readout"
     },
     "Ultevursen": {
       "company": "Sepul Bio / Théa",
@@ -725,7 +840,17 @@
           "label": "ClinicalTrials.gov LUNA (NCT06627179)",
           "url": "https://clinicaltrials.gov/study/NCT06627179"
         }
-      ]
+      ],
+      "forecast": {
+        "stage": "P2",
+        "readout": "2028-07",
+        "generic": false,
+        "japan_lag": "default",
+        "skipped_controlled_phase2": false,
+        "not_started": false,
+        "group": "gene"
+      },
+      "forecast_source": "rp-research/tracker/watchlist.json (2026-10-02); group: site message_design"
     },
     "Botaretigene sparoparvovec": {
       "company": "MeiraGTx (acquired from Johnson & Johnson)",
@@ -792,7 +917,17 @@
         "patient_summary": "RPGR関連X連鎖性RPを対象に原因遺伝子を補う。主要評価未達の不確実性は残る。",
         "eligibility_hint": "RPGR変異が前提。MeiraGTxが申請準備中だが承認は未確定。",
         "landing_milestone": "MeiraGTxが取得、米欧日で申請準備中"
-      }
+      },
+      "forecast": {
+        "stage": "P3",
+        "readout": "2027-06",
+        "generic": false,
+        "japan_lag": "default",
+        "skipped_controlled_phase2": false,
+        "not_started": false,
+        "group": "gene"
+      },
+      "forecast_source": "rp-research/tracker/watchlist.json (2026-10-02); group: site message_design"
     },
     "VG901": {
       "company": "VeonGen Therapeutics (formerly ViGeneron)",
@@ -849,7 +984,17 @@
         "genotype_scope_key": "specific",
         "patient_summary": "CNGA1変異を対象に原因遺伝子を補う。",
         "eligibility_hint": "CNGA1変異が前提。"
-      }
+      },
+      "forecast": {
+        "stage": "P1",
+        "readout": null,
+        "generic": false,
+        "japan_lag": "default",
+        "skipped_controlled_phase2": false,
+        "not_started": false,
+        "group": "gene"
+      },
+      "forecast_source": "current_phase / trial_ids / cached registry primaryCompletionDateStruct; full CompletionDate is not a primary readout"
     },
     "ZM-02": {
       "company": "Zhongmou Therapeutics",
@@ -911,7 +1056,17 @@
         "genotype_scope_key": "agnostic",
         "patient_summary": "光遺伝学で視覚再建を狙う。色覚回復の探索もあるが、根治ではない。",
         "eligibility_hint": "原因遺伝子より病期・網膜状態が重要。"
-      }
+      },
+      "forecast": {
+        "stage": "P2",
+        "readout": "2029-12",
+        "generic": false,
+        "japan_lag": "default",
+        "skipped_controlled_phase2": false,
+        "not_started": false,
+        "group": "restore"
+      },
+      "forecast_source": "current_phase / trial_ids / cached registry primaryCompletionDateStruct; full CompletionDate is not a primary readout"
     },
     "jCells": {
       "company": "jCyte",
@@ -969,7 +1124,17 @@
         "genotype_scope_key": "agnostic",
         "patient_summary": "網膜前駆細胞で視機能維持・改善を狙う。細胞置換による根治とは分けて読む。",
         "eligibility_hint": "遺伝子型を問わない設計だが病期と視機能基準がある。"
-      }
+      },
+      "forecast": {
+        "stage": "P2",
+        "readout": "2026-12",
+        "generic": false,
+        "japan_lag": "default",
+        "skipped_controlled_phase2": false,
+        "not_started": false,
+        "group": "restore"
+      },
+      "forecast_source": "rp-research/tracker/watchlist.json (2026-10-02); group: site message_design"
     },
     "DSP-3077": {
       "company": "Sumitomo Pharma America / Sumitomo Pharma / RACTHERA",
@@ -1045,7 +1210,17 @@
         "patient_summary": "失われた網膜細胞を補う再生医療。10〜20年スパンで見る治療。",
         "eligibility_hint": "遺伝子型より手術適応・病期・安全性確認が重要。",
         "landing_milestone": "最初の患者に移植を実施"
-      }
+      },
+      "forecast": {
+        "stage": "P2",
+        "readout": "2028-10",
+        "generic": false,
+        "japan_lag": "default",
+        "skipped_controlled_phase2": false,
+        "not_started": false,
+        "group": "restore"
+      },
+      "forecast_source": "rp-research/tracker/watchlist.json (2026-10-02); group: site message_design"
     },
     "RTx-015": {
       "company": "Ray Therapeutics",
@@ -1081,7 +1256,17 @@
         "genotype_scope_key": "agnostic",
         "patient_summary": "光遺伝学で視覚再建を狙う。根治ではない。",
         "eligibility_hint": "原因遺伝子を問わないが、病期・網膜状態で対象が決まる。"
-      }
+      },
+      "forecast": {
+        "stage": "P1",
+        "readout": null,
+        "generic": false,
+        "japan_lag": "default",
+        "skipped_controlled_phase2": false,
+        "not_started": false,
+        "group": "restore"
+      },
+      "forecast_source": "current_phase / trial_ids / cached registry primaryCompletionDateStruct; full CompletionDate is not a primary readout"
     },
     "NAC Attack": {
       "company": "Johns Hopkins University / National Eye Institute",
@@ -1135,7 +1320,17 @@
         "patient_summary": "進行を遅らせることを狙う内服薬。視力を取り戻す治療ではない。",
         "eligibility_hint": "広いRPを対象にするが、日本施設は掲載なし。",
         "landing_milestone": "組入れ目標到達、追跡中"
-      }
+      },
+      "forecast": {
+        "stage": "P3",
+        "readout": "2029-05",
+        "generic": true,
+        "japan_lag": "none",
+        "skipped_controlled_phase2": true,
+        "not_started": false,
+        "group": "slow"
+      },
+      "forecast_source": "rp-research/tracker/watchlist.json (2026-10-02); group: site message_design"
     },
     "RV-001": {
       "company": "Restore Vision / Keio University / Nagoya Institute of Technology",
@@ -1190,7 +1385,17 @@
         "patient_summary": "進行期RPで視覚再建を狙う日本発プログラム。根治ではなく、まだ早期データ。",
         "eligibility_hint": "国内jRCT試験。原因遺伝子を問わないが病期・視機能基準がある。",
         "landing_milestone": "国内Phase 1/2、初回ヒト中間結果発表済み"
-      }
+      },
+      "forecast": {
+        "stage": "P2",
+        "readout": null,
+        "generic": false,
+        "japan_lag": "none",
+        "skipped_controlled_phase2": false,
+        "not_started": false,
+        "group": "restore"
+      },
+      "forecast_source": "rp-research/tracker/watchlist.json (2026-10-02); group: site message_design"
     },
     "SENTAN-PVS-NP": {
       "company": "SENTAN Pharma / Kyushu University",
@@ -1257,7 +1462,17 @@
         "patient_summary": "ピタバスタチンナノ粒子で進行抑制を狙う日本発候補。視力回復ではない。",
         "eligibility_hint": "遺伝子診断不要。中心の視野感度が保たれた18〜70歳が対象。安全性確認が目的。募集開始は要確認。",
         "landing_milestone": "国内第1相、募集開始前（2026年10月時点）"
-      }
+      },
+      "forecast": {
+        "stage": "P1",
+        "readout": "2028-01",
+        "generic": false,
+        "japan_lag": "none",
+        "skipped_controlled_phase2": false,
+        "not_started": true,
+        "group": "slow"
+      },
+      "forecast_source": "rp-research/tracker/watchlist.json (2026-10-02); group: site message_design"
     },
     "Prime editing in vivo rescue": {
       "company": "Academic preclinical program",
@@ -1298,6 +1513,47 @@
         "patient_summary": "将来技術。マウスでの概念実証で、人で使える治療ではまだない。",
         "eligibility_hint": "前臨床段階。対象変異ごとに開発が必要。"
       }
+    },
+    "Minocycline": {
+      "company": "Wenzhou Medical University (China)",
+      "current_phase": "Phase 3",
+      "status": "NOT_YET_RECRUITING",
+      "key_dates": {
+        "primary_completion_registry": "2028-02"
+      },
+      "trial_ids": [
+        "NCT07082855"
+      ],
+      "modality": "Small molecule (oral minocycline)",
+      "target": "Gene-agnostic neuroprotection / oxidative stress",
+      "regulatory": [],
+      "primary_sources": [
+        {
+          "label": "ClinicalTrials.gov Minocycline",
+          "url": "https://clinicaltrials.gov/study/NCT07082855"
+        }
+      ],
+      "recent_updates": [],
+      "notes": "126人・偽薬対照・中国のみ・募集開始前・薬そのものは日本にある。",
+      "message_design": {
+        "axis": "A",
+        "axis_label": "A（抗炎症・神経保護）",
+        "genotype_scope": "型不問",
+        "genotype_scope_key": "agnostic",
+        "patient_summary": "進行を遅らせることを狙う既存の抗菌薬。中国のみ・募集開始前・薬そのものは日本にある。",
+        "eligibility_hint": "中国のみ。募集開始前。",
+        "landing_milestone": "第3相・募集開始前"
+      },
+      "forecast": {
+        "stage": "P3",
+        "readout": "2028-02",
+        "generic": true,
+        "japan_lag": "none",
+        "skipped_controlled_phase2": true,
+        "not_started": true,
+        "group": "slow"
+      },
+      "forecast_source": "rp-research/tracker/watchlist.json (2026-10-02); group: site message_design"
     }
   },
   "message_design": {

@@ -6,26 +6,44 @@
 # - success_rate: 表示・計算に使う上限キャップ適用後の値
 # - cumulative_approval_probability: 現在フェーズ以降のsuccess_rateを掛け合わせた値
 success_rate_policy:
-  display_cap: 0.85
-  source_label: "Project-calibrated RP phase historical rates from ClinicalTrials.gov status data"
-  source_url: "https://clinicaltrials.gov/search?cond=Retinitis%20Pigmentosa"
+  display_cap: 0.911
+  source_label: "BIO Clinical Development Success Rates 2011–2020 — Ophthalmology"
+  source_url: "https://go.bio.org/rs/490-EHZ-999/images/ClinicalDevelopmentSuccessRates2011_2020.pdf"
   methodology_sources:
     - label: "Wong, Siah & Lo, Biostatistics 2019 - phase-transition probability framework"
       url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6409418/"
     - label: "BIO/Informa/QLS Clinical Development Success Rates 2011-2020 - phase transition benchmark report"
       url: "https://www.bio.org/clinical-development-success-rates-and-contributing-factors-2011-2020"
-  note: "数値はRP関連試験スナップショットから算出したプロジェクト校正値。Wong et al.およびBIO/Informa/QLSのフェーズ遷移確率の考え方に合わせ、個別試験の承認確率ではなく残フェーズの累積確率として使う。100%表示を避けるため、表示・計算に使う値には上限を適用する。"
+  note: "眼科領域の段階通過率。試験の完了率ではない。未承認の新薬には申請→承認のゲートも掛ける。"
 
 phase_historical_success_rates:
   PHASE1:
-    success_rate: 0.86
+    success_rate: 0.716
     label: "Phase 1"
   PHASE2:
-    success_rate: 0.78
+    success_rate: 0.355
     label: "Phase 2"
   PHASE3:
-    success_rate: 0.71
+    success_rate: 0.512
     label: "Phase 3"
+
+regulatory_approval_success_rate: 0.911
+success_rate_scenarios:
+  general:
+    label: "眼科の薬全体の平均"
+  rp_history:
+    label: "網膜色素変性の過去の成績"
+    slow_phase3_success_rate: 0.111
+    source_url: "https://www.nichigan.or.jp/Portals/0/resources/member/guideline/nggz-2025-063.pdf"
+    note: "CQ1の進行抑制比較試験7系統、成功0。ラプラスの継起則 (0+1)/(7+2)。"
+slow_progression_correlation: 0.5  # 仮定値（潜在正規変数の相関）
+stage_duration_years_bio:
+  P1: 2.1
+  P2: 2.9
+  P3: 3.4
+  filed: 1.3
+arrival_simulations: 20000
+arrival_random_seed: 20261002
 
 # 日本承認遅延パラメータ（Luxturna実績: 5.5年に基づく）
 japan_delay_years:
@@ -49,6 +67,8 @@ programs:
       nct_ids: ["NCT04945772"]
       sponsor_keywords: ["Nanoscope"]
     # FDAがBLAを受理（2026-09-09報道）。優先審査の対象で、会社は2027年前半に結果の可能性と説明。
+    success_rate: 0.911
+    filed: true
     bla_complete_date: "2026-09-09"
     review_time:
       min: 0.5
@@ -59,6 +79,14 @@ programs:
     gene_agnostic: true
     japan_sakigake: true
     program_name: "MCO-010"
+
+  NAC Attack:
+    match_fields:
+      nct_ids: ["NCT05537220"]
+    skipped_controlled_phase2: true
+    generic: true
+    japan_lag: none
+    program_name: "NAC Attack"
 
   OCU400:
     match_fields:

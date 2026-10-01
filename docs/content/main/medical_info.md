@@ -1,0 +1,352 @@
+
+    <!-- スキップリンク -->
+    <a href="#main" class="skip-link">メインコンテンツへスキップ</a>
+
+    <!-- ナビゲーション -->
+    <nav>
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="patient_guide.html">患者ガイド</a></li>
+            <li><a href="medical_info.html" aria-current="page">医療従事者向け</a></li>
+            <li><a href="detailed_analysis.html">詳細分析</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main id="main">
+            <h1>医療従事者向け情報</h1>
+
+            <!-- エグゼクティブサマリー -->
+            <section class="content-wrapper">
+                <h2>エグゼクティブサマリー</h2>
+
+                <div class="evidence-box">
+                    <h3>研究概要</h3>
+                    <p>本予測は、ClinicalTrials.govに登録された網膜色素変性症（RP）関連の臨床試験データと、PubMed収載の関連論文を基に、モンテカルロシミュレーション（10,000回反復）を用いて治療承認時期を統計的に予測したものです。</p>
+
+                    <h4>主要な発見：</h4>
+                    <ul>
+                        <li>早い候補の中央値：詳細レポートの再シミュレーション結果を参照</li>
+                        <li>少なくとも1つ届く確率：詳細レポートの2シナリオの帯グラフを参照</li>
+                        <li>BIO眼科の段階通過率：第1相71.6%、第2相35.5%、第3相51.2%、申請→承認91.1%。RP過去シナリオは進行抑制の第3相11.1%。</li>
+                        <li>現在アクティブな試験：最新レポートの再集計値を参照</li>
+                    </ul>
+                </div>
+
+                <div class="data-source">
+                    <strong>データソース：</strong>
+                    <ul>
+                        <li>ClinicalTrials.gov API v2（最終更新：2026年10月2日）</li>
+                        <li>PubMed E-utilities API（検索期間：1993-2025年）</li>
+                        <li>各製薬会社のプレスリリース・投資家向け資料</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 主要な予測結果 -->
+            <section class="content-wrapper">
+                <h2>主要な予測結果（高確度プログラム）</h2>
+
+                <table class="evidence-table">
+                    <thead>
+                        <tr>
+                            <th>プログラム</th>
+                            <th>開発企業</th>
+                            <th>モダリティ</th>
+                            <th>現在Phase</th>
+                            <th>FDA承認予測</th>
+                            <th>信頼度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>MCO-010</strong></td>
+                            <td>Nanoscope Therapeutics</td>
+                            <td>光遺伝学治療（AAV2）</td>
+                            <td>BLA申請中</td>
+                            <td>2027年（再シミュレーション中央値）</td>
+                            <td>
+                                <div class="reliability-rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span>非常に高い</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>OCU400</strong></td>
+                            <td>Ocugen</td>
+                            <td>遺伝子治療（AAV5-NR2E3）</td>
+                            <td>Phase 3</td>
+                            <td>2027年（再シミュレーション中央値）</td>
+                            <td>
+                                <div class="reliability-rating">
+                                    <span class="stars">★★★★★</span>
+                                    <span>非常に高い</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>PYC-001 (VP-001)</td>
+                            <td>PYC Therapeutics</td>
+                            <td>RNA治療</td>
+                            <td>Phase 2/3準備中</td>
+                            <td>2030年（95% CI: 2029-2032）</td>
+                            <td>
+                                <div class="reliability-rating">
+                                    <span class="stars">★★★★☆</span>
+                                    <span>高い</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>AGTC-501</td>
+                            <td>Beacon/Astellas</td>
+                            <td>遺伝子治療（AAV-RPGR）</td>
+                            <td>Phase 2/3</td>
+                            <td>2029年（95% CI: 2028-2031）</td>
+                            <td>
+                                <div class="reliability-rating">
+                                    <span class="stars">★★★★☆</span>
+                                    <span>高い</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>予測の根拠</h3>
+                <ol>
+                    <li><strong>MCO-010</strong>：RESTORE試験完了、統計的有意な改善（p&lt;0.05）、Fast Track指定</li>
+                    <li><strong>OCU400</strong>：Phase 3組入れ完了、RMAT指定取得。EAPは新規アクセス可否を要確認</li>
+                    <li><strong>既承認薬の前例</strong>：Luxturna（2017年承認）の開発タイムラインを参考</li>
+                </ol>
+            </section>
+
+            <!-- 信頼性チェックリスト -->
+            <section class="content-wrapper">
+                <h2>予測の信頼性チェックリスト</h2>
+
+                <div class="checklist">
+                    <h3>データと方法論の確認</h3>
+                    <ul>
+                        <li>ClinicalTrials.govから取得した実際のRP臨床試験データを使用している</li>
+                        <li>段階通過率はBIO眼科の2011–2020年の実績。旧RP試験の完了率は効果確認の成功率ではない。</li>
+                        <li>10,000回のモンテカルロシミュレーションで統計的に検証</li>
+                        <li>FDA承認プロセスの標準的タイムラインを考慮</li>
+                        <li>製造・規制リスクを確率分布として組み込み</li>
+                    </ul>
+                </div>
+
+                <div class="checklist">
+                    <h3>重要な確認事項</h3>
+                    <ul>
+                        <li>予測は米国FDA承認基準（日本は+3-7年）</li>
+                        <li>個別患者の適応は遺伝子型に依存</li>
+                        <li>初期は高額（1-3億円/回）が予想される</li>
+                        <li>保険適用には追加で1-2年必要</li>
+                        <li>長期安全性データは限定的</li>
+                    </ul>
+                </div>
+
+                <div class="checklist">
+                    <h3>リスクと限界</h3>
+                    <ul>
+                        <li>予期せぬ安全性問題による開発中止リスク</li>
+                        <li>製造スケールアップの困難さ（特にAAVベクター）</li>
+                        <li>規制当局の追加要求による遅延可能性</li>
+                        <li>COVID-19類似の外的要因は予測不能</li>
+                        <li>競合他社の開発状況による影響</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 臨床的意義 -->
+            <section class="content-wrapper">
+                <h2>臨床的意義</h2>
+
+                <div class="clinical-significance">
+                    <h3>患者カウンセリングへの応用</h3>
+                    <ol>
+                        <li><strong>現実的な期待値の設定</strong>
+                            <ul>
+                                <li>最速でも2-3年後（米国）、7-8年後（日本）</li>
+                                <li>全患者が対象ではない（遺伝子型特異的）</li>
+                            </ul>
+                        </li>
+                        <li><strong>準備の重要性</strong>
+                            <ul>
+                                <li>遺伝子検査の実施を強く推奨</li>
+                                <li>臨床試験参加の可能性を提示</li>
+                            </ul>
+                        </li>
+                        <li><strong>現在の治療継続</strong>
+                            <ul>
+                                <li>視機能維持の重要性を強調</li>
+                                <li>補助具・リハビリの活用</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="clinical-significance">
+                    <h3>治療モダリティ別の特徴</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>モダリティ</th>
+                                <th>利点</th>
+                                <th>課題</th>
+                                <th>適応患者</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>遺伝子治療</strong></td>
+                                <td>単回投与、根本的治療</td>
+                                <td>高額、免疫反応リスク</td>
+                                <td>特定遺伝子変異</td>
+                            </tr>
+                            <tr>
+                                <td><strong>光遺伝学</strong></td>
+                                <td>変異非依存、即効性</td>
+                                <td>デバイス必要、新規技術</td>
+                                <td>進行期患者</td>
+                            </tr>
+                            <tr>
+                                <td><strong>細胞治療</strong></td>
+                                <td>再生医療、汎用性</td>
+                                <td>手術リスク、生着率</td>
+                                <td>重度視力障害</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RNA治療</strong></td>
+                                <td>調整可能、可逆的</td>
+                                <td>反復投与必要</td>
+                                <td>特定変異（スプライシング）</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 方法論の要約 -->
+            <section class="content-wrapper">
+                <h2>シミュレーション方法論（要約）</h2>
+
+                <div class="methodology-summary">
+                    <h3>モンテカルロシミュレーション</h3>
+                    <p>各治療プログラムに対して10,000回の試行を実施し、以下のパラメータを確率分布として組み込み：</p>
+
+                    <ul>
+                        <li><strong>Phase期間</strong>：過去実績から三角分布で推定
+                            <ul>
+                                <li>Phase 1: 1-3年（最頻値2年）</li>
+                                <li>Phase 2: 2-4年（最頻値3年）</li>
+                                <li>Phase 3: 4-7年（最頻値5年）</li>
+                            </ul>
+                        </li>
+                        <li><strong>成功率</strong>：BIO眼科の固定段階通過率とRP過去の2シナリオでモデル化
+                            <ul>
+                                <li>Phase 1→2: 71.6%（BIO眼科）</li>
+                                <li>Phase 2→3: 35.5%（BIO眼科）</li>
+                                <li>Phase 3→申請: 51.2%、申請→承認: 91.1%（BIO眼科）</li>
+                            </ul>
+                        </li>
+                        <li><strong>規制審査期間</strong>：正規分布（μ=12ヶ月, σ=3ヶ月）</li>
+                    </ul>
+
+                    <p><a href="detailed_analysis.html#methodology">詳細な方法論はこちら</a></p>
+                </div>
+
+                <div class="limitation-box">
+                    <h3>予測の限界</h3>
+                    <ul>
+                        <li>過去データに基づく予測（将来の技術革新は含まず）</li>
+                        <li>規制環境の変化は予測困難</li>
+                        <li>個別企業の財務状況・戦略変更は考慮外</li>
+                        <li>パンデミック等の外的ショックは予測不能</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- データ更新情報 -->
+            <section class="content-wrapper">
+                <h2>データ更新情報</h2>
+
+                <h3>最新アップデート（2025年7月20日）</h3>
+                <ul>
+                    <li><strong>MCO-010</strong>：2025年6月にFDA段階的BLA申請開始</li>
+                    <li><strong>OCU400</strong>：Phase 3組入れ完了、トップラインは2027年Q1予定</li>
+                    <li><strong>Botaretigene/bota-vec</strong>：MeiraGTxが取得し、申請準備中（主要評価未達の不確実性あり）</li>
+                    <li><strong>新規参入</strong>：Nacuity NPI-001がFDA Breakthrough Therapy指定取得</li>
+                </ul>
+
+                <h3>次回更新予定</h3>
+                <p>四半期ごと（次回：2025年10月）にClinicalTrials.govデータを更新し、予測を修正します。</p>
+            </section>
+
+            <!-- 参考文献 -->
+            <section class="content-wrapper">
+                <h2>主要参考文献</h2>
+
+                <div class="reference-list">
+                    <ol>
+                        <li>Nanoscope Therapeutics. "MCO-010 RESTORE Trial Results." Press Release, 2024.</li>
+                        <li>Ocugen Inc. "OCU400 Gene Therapy 2-Year Follow-up Data." Investor Presentation, 2025.</li>
+                        <li>FDA. "Guidance for Human Somatic Cell Therapy and Gene Therapy." CBER, 2020.</li>
+                        <li>Luxturna® (voretigene neparvovec-rzyl) Prescribing Information. Spark Therapeutics, 2017.</li>
+                        <li>Sahel JA, et al. "Partial recovery of visual function in a blind patient after optogenetic therapy." Nat Med. 2021;27(7):1223-1229.</li>
+                    </ol>
+                </div>
+
+                <h3>臨床試験登録</h3>
+                <ul>
+                    <li><a href="https://clinicaltrials.gov/study/NCT04945772" target="_blank">MCO-010 RESTORE試験</a></li>
+                    <li><a href="https://clinicaltrials.gov/study/NCT05203939" target="_blank">OCU400 Phase 1/2試験</a></li>
+                    <li><a href="https://clinicaltrials.gov/study/NCT06388200" target="_blank">OCU400 liMeliGhT Phase 3試験</a></li>
+                </ul>
+            </section>
+
+            <!-- アクションプラン -->
+            <section class="content-wrapper">
+                <h2>推奨アクションプラン</h2>
+
+                <div class="checklist">
+                    <h3>患者への推奨事項</h3>
+                    <ul>
+                        <li>遺伝子検査の実施（網膜疾患パネル推奨）</li>
+                        <li>臨床試験情報の定期的確認（3-6ヶ月毎）</li>
+                        <li>患者会への参加（最新情報入手）</li>
+                        <li>現在の視機能維持（定期受診、生活指導）</li>
+                        <li>治療費準備の開始（高額療養費制度の理解）</li>
+                    </ul>
+                </div>
+
+                <div class="checklist">
+                    <h3>医療機関として</h3>
+                    <ul>
+                        <li>遺伝子検査体制の整備</li>
+                        <li>臨床試験実施施設との連携構築</li>
+                        <li>患者レジストリへの参加検討</li>
+                        <li>最新治療情報のアップデート体制</li>
+                        <li>多職種連携（遺伝カウンセラー、MSW）</li>
+                    </ul>
+                </div>
+            </section>
+        <section class="content-wrapper">
+
+{doctor_checklist}
+
+</section>
+</main>
+
+        <footer>
+            <p>&copy; 2025 網膜色素変性症治療予測プロジェクト |
+            <a href="disclaimer.html">免責事項</a> |
+            <a href="index.html">ホームに戻る</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="js/common.js"></script>

@@ -209,6 +209,46 @@
           "日本眼科学会「網膜色素変性診療ガイドライン2026」公開"
         ]
       }
+    },
+    {
+      "date": "2026-10-02",
+      "type": "forecast_assumptions_changed",
+      "summary": "予測の前提を変更",
+      "changes": {
+        "new_programs": [
+          "Minocycline"
+        ],
+        "updated_programs": [
+          "MCO-010",
+          "OCU400",
+          "VP-001",
+          "AGTC-501",
+          "OpCT-001",
+          "NPI-001",
+          "GS030",
+          "4D-125",
+          "CTx-PDE6b",
+          "AAV-mVChR1",
+          "SPVN06",
+          "SPVN20",
+          "Ultevursen",
+          "Botaretigene sparoparvovec",
+          "VG901",
+          "ZM-02",
+          "jCells",
+          "DSP-3077",
+          "RTx-015",
+          "NAC Attack",
+          "RV-001",
+          "SENTAN-PVS-NP",
+          "Prime editing in vivo rescue",
+          "Minocycline"
+        ],
+        "key_events": [
+          "試験の完了率を成功率とする前提を撤回。BIO眼科の段階通過率とRP過去成績の2シナリオに変更。",
+          "プログラム単位・相関0.5（仮定）で日米の到達確率を計算。NACなど既存薬は最終試験陽性を到達とする。"
+        ]
+      }
     }
   ]
 }

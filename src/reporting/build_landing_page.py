@@ -16,6 +16,7 @@ from src.reporting.message_design import (
 )
 from src.reporting.site_metadata import load_build_metadata
 from src.reporting.timeline_visualization import render_timeline
+from src.reporting.arrival_visualization import render_arrival_probability, arrival_chart_css
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
@@ -64,6 +65,7 @@ def generate_html(site_metadata: dict[str, Any] | None = None) -> str:
 
     table_rows = program_table(kb)
     timeline_html = render_timeline(kb)
+    arrival_html = render_arrival_probability()
 
     html = f"""<!DOCTYPE html>
 <html lang="ja">
@@ -86,6 +88,7 @@ def generate_html(site_metadata: dict[str, Any] | None = None) -> str:
     <link rel="stylesheet" href="css/common.css">
     <script src="js/mobile-nav.js" defer></script>
     <style>
+        {arrival_chart_css()}
         .hero {{
             padding: 42px 24px;
             background: #ffffff;
@@ -421,6 +424,8 @@ def generate_html(site_metadata: dict[str, Any] | None = None) -> str:
                     <a class="btn btn-secondary" href="reality_and_actions.html">全体の行動ガイドを見る</a>
                 </p>
             </section>
+
+            {arrival_html}
 
             <section class="content-wrapper axis-forecast">
                 <h2>2軸で見る治療の見通し</h2>
