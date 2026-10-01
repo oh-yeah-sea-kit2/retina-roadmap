@@ -22,19 +22,19 @@
    - これは遺伝子治療技術の成熟と、希少疾患への規制緩和が要因
 
 2. **🎯 最も早い候補でも、承認時期は再シミュレーション結果で幅を持って見る**
-   - **MCO-010（Nanoscope社）**：有力候補の一つ。承認時期は申請・審査状況で変わるため、最新の予測年は詳細レポートを参照
+   - **MCO-010 / MOGENRY（Nanoscope社）**：日米で承認審査中。FDAが承認申請を受理（2026年9月）、日本でもPMDAが承認申請を受理し優先審査に（2026年10月1日発表）。会社は日米とも2027年前半に結果が出る可能性があるとしている。対象は重い視力低下のある人で、進行を止める治療ではなく視覚再建
      - RESTORE試験で統計的に有意な視力改善を達成（0.337-0.382 LogMAR改善）
      - Fast Track指定取得済み、患者の最大50%が3行以上の視力改善
      - 変異非特異的（mutation-agnostic）で幅広い患者に適用可能
-   - **OCU400（Ocugen社）**：Phase 3 liMeliGhTは140名の組入れ完了。トップラインは2027年Q1、rolling BLAは2026年Q3計画
+   - **OCU400（Ocugen社）**：Phase 3 liMeliGhTは140名の組入れ完了。トップラインは2027年Q1予定。段階的な承認申請（rolling BLA）の開始は、このトップライン結果が出てからになると会社が開示（2026年8月）
      - 米国EAPページは公開されているが、ClinicalTrials.govのEAP登録（NCT06574997）は2026年4月更新で「NO_LONGER_AVAILABLE」のため、実際のアクセス可否は直接確認が必要
      - FDA RMAT指定、EMA ATMP指定取得済み
      - 遺伝子非依存型アプローチ
    - **Botaretigene sparoparvovec（bota-vec）**：LUMEOSは主要評価項目未達だが、MeiraGTxが2026年4月にJ&Jから取得し、米国・EU・日本で申請を進める方針
      - 撤退扱いではなく、申請準備中。ただし主要評価未達の不確実性は残る
-   - **AGTC-501 / laru-zova（Beacon）**：VISTA（NCT04850118）は85名の組入れ完了。12ヶ月トップラインは2026年後半予定
+   - **AGTC-501 / laru-zova（Beacon）**：最終試験VISTA（NCT04850118、85名）が主要評価項目を達成（2026年9月21日発表）。低輝度視力が15文字以上改善した割合は高用量31.0%、低用量24.1%、無治療対照0%。年内に段階的な承認申請の開始を計画。対象はRPGR遺伝子によるX連鎖性RP
    - **NPI-001（Nacuity）**：FDA Breakthrough Therapy指定（2025年10月）。SLO-RP Phase 1/2で光受容体喪失をプラセボ比50%超抑制と会社発表
-   - **NAC Attack（Johns Hopkins）**：Phase 3（NCT05537220）は485名・31施設の組入れ目標に到達。日本施設は掲載なし
+   - **NAC Attack（Johns Hopkins）**：Phase 3（NCT05537220）は485名・31施設の組入れ目標に到達。日本施設は掲載なし。登録情報上の主要評価の完了予定は2029年5月
    - BIIB111/BIIB112（Biogen）：開発中断（Phase 2/3で主要評価項目未達成）
    - 類似の眼科遺伝子治療Luxturnaは2017年に承認済み（前例あり）
 
@@ -130,12 +130,12 @@
 
 </details>
 
-**期待される短縮効果**: 個人レベルで1-2年（適切な試験にすぐ参加可能）
+**集団レベルでの推定的な影響**: 遺伝子検査済みの患者が増えることで、治験候補者の特定や患者募集が進みやすくなる可能性があります（個人の行動が直接タイムラインを短縮するものではありません）
 
 <details>
-<summary>🔍 「なぜ1-2年短縮できるのか」詳細を見る</summary>
+<summary>🔍 「なぜ早めの準備が重要か」詳細を見る</summary>
 
-- **遺伝子検査をしていない場合**: 適合する試験を探すのに1-2年かかる
+- **遺伝子検査をしていない場合**: 適合する試験かどうかを判断できない
 - **検査済みの場合**: 直接該当試験に応募可能
 - **実例**: RPGR変異の患者はJanssen試験に直接応募可
 </details>
@@ -176,7 +176,7 @@
 - 視野検査結果はPDFで保存しておく
 - 家族の情報も可能な範囲で入力
 
-**期待される短縮効果**: 全体で6ヶ月-1年（患者募集期間の短縮）
+**集団レベルでの推定的な影響**: レジストリ登録が進むことで、試験設計や患者募集の見通しが改善する可能性があります（個人の行動が直接タイムラインを短縮するものではありません）
 
 <details>
 <summary>🔍 「患者数データがなぜ重要か」詳細を見る</summary>
@@ -223,7 +223,7 @@
 - **確定申告**で税金還付を受ける
 - **遺贈寄付**も検討（エンディングノートに記載）
 
-**期待される短縮効果**: 全体で1-2年（新規研究プログラムの立ち上げ）
+**集団レベルでの推定的な影響**: 継続的な研究支援は、基礎研究や若手研究者の活動を支える可能性があります（個人の行動が直接タイムラインを短縮するものではありません）
 
 <details>
 <summary>🔍 「寄付が研究を加速する仕組み」を見る</summary>
@@ -274,10 +274,10 @@
 - オンライン署名は数クリックで完了
 - 拡散も重要（1人でも多く）
 
-**期待される短縮効果**: 全体で1-3年（承認プロセスと保険適用）
+**集団レベルでの推定的な影響**: 患者コミュニティの声が制度設計や情報提供の改善につながる可能性があります（個人の行動が直接タイムラインを短縮するものではありません）
 
 ### 5. 🔬 可能なら：臨床試験への参加
-**なぜ重要か**: 参加者不足で試験が2-3年遅れることも
+**なぜ重要か**: 参加者不足は試験の遅延要因になりうるため
 
 **ステップ1: 試験を探す**（月1回、30分）
 
@@ -334,34 +334,37 @@
 - **家族同伴**が可能か確認
 - 「将来の試験」への事前登録も可能
 
-**期待される短縮効果**: 直接的に2-3年（試験期間の短縮）
+**集団レベルでの推定的な影響**: 条件に合う患者が適切に参加できると、患者募集の遅れを減らす可能性があります（個人の行動が直接タイムラインを短縮するものではありません）
 
 ## 現実的なタイムライン
 
-### ベストケース（全てがうまくいった場合）
-- 2027-2028年：最初の遺伝子治療承認（RPGR変異）
-- 2031年：3-5種類の治療法が利用可能
-- 2033年：主要な遺伝子型をカバー
+### モンテカルロシミュレーションに基づく予測（2026年10月時点）
 
-### 現実的ケース（予測の中央値）
-- 2028-2029年：最初の承認
-- 2032年：複数の選択肢
-- 2035年：広範な患者への適用
+> **注意**: 以下は確率的シミュレーションの結果です。規制審査の遅延・試験の失敗・制度変更により大きく変動しえます。特定年を保証するものではありません。詳細は[シミュレーションレポート](report.md)を参照してください。
 
-### 最悪ケース（大きな挫折があった場合）
-- 2035年：最初の承認
-- 2040年：限定的な治療オプション
+#### A. 進行を遅らせる治療（型不問・神経保護系）
+- **楽観シナリオ**: 2027〜2029年頃に最初の選択肢が登場しうる（OCU400の最終試験結果は2027年第1四半期、NACの最終試験の主要評価完了は2029年5月の予定。どちらも成功した場合の話で、結果はまだ出ていない）
+- **中央値シナリオ**: 2029〜2031年頃に複数の選択肢
+- **保守シナリオ**: 2033年以降
+
+#### B. 根治・視力回復を目指す治療（遺伝子補充・編集・細胞移植）
+- **直近の動き**: 視覚再建のMCO-010は日米で承認審査中（結果は2027年前半の可能性）。RPGR型の遺伝子補充AGTC-501は最終試験で主要評価項目を達成し、申請準備へ
+- **楽観シナリオ**: 2028〜2031年頃に特定遺伝子型で最初の承認
+- **中央値シナリオ**: 2032〜2035年頃
+- **保守シナリオ**: 2037年以降
+
+日本での承認は、FDA承認から通常3〜7年後（Luxturna実績: 約5.5年）です。
 
 ## 今すぐ始められる行動チェックリスト
 
 ### 今週中にやること
 - [ ] かかりつけ眼科に電話して「遺伝子検査の紹介状」を依頼
-- [ ] JRPS（https://jrps.org/）の入会申込
+- [ ] [JRPS（日本網膜色素変性症協会）に入会申込](https://jrps.org/)
 - [ ] スマホに「治験情報チェック」の月1リマインダー設定
 
 ### 今月中にやること
 - [ ] 遺伝子検査の予約を取る
-- [ ] My Retina Tracker（https://www.myretinatracker.org/）に登録
+- [ ] [My Retina Tracker に登録](https://www.myretinatracker.org/)
 - [ ] 寄付先を1つ決めて月額設定（1,000円でOK）
 
 ## 根拠資料とリンク集
@@ -387,13 +390,15 @@
 
 3. **その他の主要更新**
    - Botaretigene / bota-vec: https://investors.meiragtx.com/news-releases/news-release-details/meiragtx-announces-acquisition-botaretigene-sparoparvovec-bota
-   - AGTC-501 / laru-zova VISTA: https://www.beacontx.com/news-and-events/beacon-therapeutics-completes-enrollment-in-registrational-phase-2-3-vista-trial-of-laru-zova-for-patients-with-xlrp/
+   - AGTC-501 / laru-zova VISTA結果: https://www.beacontx.com/news-and-events/beacon-therapeutics-reports-positive-topline-data-from-the-pivotal-vista-trial-of-laru-zova-for-the-treatment-of-x-linked-retinitis-pigmentosa-xlrp/
+   - MCO-010 日本での申請受理: https://www.ophthalmologytimes.com/view/mogenry-japan-priority-review-inherited-retinal-dystrophies
+   - 網膜色素変性診療ガイドライン2026（日本眼科学会）: https://www.nichigan.or.jp/Portals/0/resources/member/guideline/nggz-2025-063.pdf
    - NAC Attack: https://www.hopkinsmedicine.org/wilmer/research/nac-attack
    - NPI-001: https://www.nacuity.com/news/nacuity-pharmaceuticals-granted-u-s-fda-breakthrough-therapy-designation-for-npi-001-n-acetylcysteine-amide-tablets-for-the-treatment-of-retinitis-pigmentosa/
    - DSP-3077: https://news.us.sumitomo-pharma.com/press-release-details/2026/Sumitomo-Pharma-America-Announces-that-its-Investigational-Therapy-DSP-3077-Has-Received-FDA-Orphan-Drug-Designation-for-the-Treatment-of-Retinitis-Pigmentosa/default.aspx
    - SPVN06: https://sparingvision.com/sparingvision-successfully-completes-prodygy-trial-patient-dosing-with-spvn06-its-novel-neuroprotective-gene-therapy/
    - RV-001: https://nanbyo-chiken.nibn.go.jp/detail/jRCT2033240611/
-   - SENTAN-PVS-NP: https://nanbyo-chiken.nibn.go.jp/detail/jRCT2071260006/
+   - SENTAN-PVS-NP: https://nanbyo-chiken.nibn.go.jp/detail/jRCT2071260006/ ／ https://clinicaltrials.gov/study/NCT07774975
    - Prime editing前臨床: https://www.nature.com/articles/s41467-025-57628-6
 
 4. **開発中止/遅延**
@@ -413,9 +418,9 @@
 
 ## まとめ：希望は「現実的」
 
-- **2028-2031年の承認は現実的**（既に最終段階の試験が複数）
+- **2028〜2031年頃に最初の承認が実現する可能性があります**（確率的予測であり保証ではありません）
 - **完全な治療ではなく進行抑制から始まる**（過度な期待は禁物）
-- **あなたの行動が1-2年の差を生む**（特に遺伝子検査とレジストリ登録）
+- **患者コミュニティ全体の参加が、研究の加速につながります**（特に遺伝子検査とレジストリ登録）
 - **複数の企業が競争している**（単一の失敗で終わらない）
 
 最も重要なのは「**今できることを今やる**」こと。特に遺伝子検査は、将来の治療機会を逃さないための必須事項です。
