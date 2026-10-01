@@ -28,6 +28,21 @@
 - AMED IRUD: https://www.amed.go.jp/program/IRUD/
 - IRUD公式: https://plaza.umin.ac.jp/irud/
 
+### 東京医療センターを使う場合（首都圏）
+
+国立病院機構東京医療センターの臨床遺伝センターは、遺伝性網膜疾患を主な対象の一つとしています。公式ページでは、診療は予約制で、本人からの連絡のほか、かかりつけ医師からの紹介でも受診できると案内されています。遺伝子検査は、保険適用検査・自費検査・研究的検査から提案されます。遺伝カウンセリングの費用は初診11,000円（1時間・税込）、遺伝子検査の費用は項目により異なります（2026年10月時点の公式ページ記載）。オンラインの遠隔遺伝カウンセリングも案内されています。
+
+一次ソース（公式URL）:
+
+- 東京医療センター 臨床遺伝センター: https://tokyo-mc.hosp.go.jp/section/clinical_genetic_center.html
+
+### 保険で検査を受けられる範囲
+
+日本眼科学会「網膜色素変性診療ガイドライン2026」によると、保険適用の遺伝学的検査（82遺伝子のパネル検査）は、RPE65関連が疑われる若年発症の患者に限られます。それ以外は、自費診療や研究ベースでの検査になります。保険収載の検査と専門家による診断を行う施設は全国12施設です。
+
+- ガイドライン: https://www.nichigan.or.jp/Portals/0/resources/member/guideline/nggz-2025-063.pdf
+- 実施12施設（日本網膜硝子体学会）: https://www.jrvs.jp/backnumber/20231201.html
+
 注意点:
 
 - 遺伝子検査は、検査前後の遺伝カウンセリングが重要です。
@@ -111,7 +126,8 @@ JRPSの公式ページでは、ロービジョンケアの専門職による電�
 | DSP-3077（住友ファーマ/RACTHERA） | 他家iPS細胞由来網膜シート。米国Phase 1/2（NCT06891885）で評価中、FDA Orphan Drug Designation取得。 | iPS細胞由来の眼科再生医療は日本発の強み。 | https://news.us.sumitomo-pharma.com/press-release-details/2026/Sumitomo-Pharma-America-Announces-that-its-Investigational-Therapy-DSP-3077-Has-Received-FDA-Orphan-Drug-Designation-for-the-Treatment-of-Retinitis-Pigmentosa/default.aspx |
 | RV-001（Restore Vision/慶應） | キメラロドプシン光遺伝学。慶應義塾大学病院で2025年2月に1例目投与。 | 日本発の視覚再生治療として国内で臨床段階。 | https://www.keio.ac.jp/ja/press-release/20250213-1/ |
 | RV-001 jRCT | 第I/II相、重症網膜色素変性を対象。難病治験ウェブでは募集中表示。 | 参加可否は実施施設・主治医に確認。 | https://nanbyo-chiken.nibn.go.jp/detail/jRCT2033240611/ |
-| SENTAN ピタバスタチンPLGAナノ粒子 | jRCT2071260006。九州大学病院で第I相医師主導治験、2026年7月開始予定。 | 国内で進行を抑える治療を検証する候補。 | https://nanbyo-chiken.nibn.go.jp/detail/jRCT2071260006/ |
+| SENTAN ピタバスタチンPLGAナノ粒子 | jRCT2071260006 / NCT07774975。九州大学病院で第I相医師主導治験（21名）。2026年10月時点で募集開始前。遺伝子診断は不要で、中心の視野感度が保たれた18〜70歳が対象。 | 国内で進行を抑える治療を検証する候補。目的は安全性の確認。 | https://clinicaltrials.gov/study/NCT07774975 |
+| MCO-010 / MOGENRY（Nanoscope） | 海外発の光遺伝学治療。日本でPMDAが承認申請を受理し、優先審査に（2026年10月1日発表）。対象は遺伝性網膜ジストロフィ全般。 | 承認されれば、日本で型を問わず使える初の視覚再建治療になりうる。重い視力低下のある人向け。 | https://www.ophthalmologytimes.com/view/mogenry-japan-priority-review-inherited-retinal-dystrophies |
 
 ## 主治医に見せる短いメモ
 

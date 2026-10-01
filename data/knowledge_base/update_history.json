@@ -182,6 +182,33 @@
           "Prime editing: Nature Communications 2025 preclinical mouse rescue"
         ]
       }
+    },
+    {
+      "date": "2026-10-02",
+      "type": "manual_primary_source_verification",
+      "summary": "6月以降の動きを一次情報で確認して反映。MCO-010は日米で承認審査入り、AGTC-501は最終試験で主要評価項目を達成。",
+      "changes": {
+        "new_programs": [],
+        "updated_programs": [
+          "MCO-010",
+          "AGTC-501",
+          "Ultevursen",
+          "NAC Attack",
+          "NPI-001",
+          "SENTAN-PVS-NP",
+          "OCU400",
+          "DSP-3077",
+          "ZM-02"
+        ],
+        "key_events": [
+          "MCO-010: FDAがBLAを受理（2026年9月）、日本PMDAが承認申請を受理・優先審査（2026年10月1日）。会社は日米とも2027年前半に結果の可能性と説明",
+          "AGTC-501: VISTA試験が主要評価項目を達成（2026年9月21日）。年内にrolling BLA開始を計画",
+          "Ultevursen: LUNA第2b相の組入れ完了（2026年7月16日）",
+          "SENTAN-PVS-NP: ClinicalTrials.govに登録（NCT07774975）、募集開始前",
+          "DSP-3077: 最初の患者に移植（2026年8月）",
+          "日本眼科学会「網膜色素変性診療ガイドライン2026」公開"
+        ]
+      }
     }
   ]
 }
