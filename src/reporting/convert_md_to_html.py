@@ -5,9 +5,9 @@ MarkdownファイルをHTMLに変換（ナビゲーション付き）
 
 import markdown
 from pathlib import Path
-from src.reporting.html_utils import convert_markdown_to_html, get_responsive_table_css
+from src.reporting.html_utils import convert_markdown_to_html, get_responsive_table_css, get_color_palette_css
 
-def convert_with_nav(md_file, title):
+def convert_with_nav(md_file, title, output_file=None):
     """Markdownファイルをナビゲーション付きHTMLに変換"""
     
     # Markdownファイルを読み込む
@@ -24,6 +24,7 @@ def convert_with_nav(md_file, title):
     <meta name="description" content="網膜色素変性症の治療法開発予測プロジェクトの関連資料">
     
     <style>
+{get_color_palette_css()}
         body {{
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.8;
@@ -41,17 +42,17 @@ def convert_with_nav(md_file, title):
         }}
         h1 {{
             color: #2c3e50;
-            border-bottom: 3px solid #3498db;
+            border-bottom: 3px solid var(--primary-color);
             padding-bottom: 10px;
         }}
         h2 {{
             color: #34495e;
             margin-top: 40px;
-            border-left: 5px solid #3498db;
+            border-left: 5px solid var(--primary-color);
             padding-left: 15px;
         }}
         h3 {{
-            color: #7f8c8d;
+            color: var(--muted-color);
             margin-top: 30px;
         }}
         nav {{
@@ -73,10 +74,11 @@ def convert_with_nav(md_file, title):
             margin: 5px 0;
         }}
         a {{
-            color: #3498db;
+            color: var(--primary-color);
             text-decoration: none;
         }}
-        a:hover {{
+        a:hover, a:focus {{
+            color: var(--primary-hover-color);
             text-decoration: underline;
         }}
         /* フォーカス時の視認性向上 */
@@ -155,7 +157,7 @@ def convert_with_nav(md_file, title):
     final_html = final_html.replace('<h3>', '<h3 role="heading" aria-level="3">')
     
     # 出力ファイル名を生成
-    output_file = md_file.with_suffix('.html')
+    output_file = output_file or md_file.with_suffix('.html')
     
     # HTMLファイルを保存
     with open(output_file, "w", encoding="utf-8") as f:
@@ -165,18 +167,18 @@ def convert_with_nav(md_file, title):
 
 def main():
     """メイン処理"""
-    docs_dir = Path("docs")
+    public_dir = Path("docs/public")
     
     # 変換するファイルのリスト（削除されたファイルは除外）
     files_to_convert = [
-        ("simulation_methodology.md", "シミュレーション方法論"),
-        ("regional_approval_timeline.md", "地域別承認予測タイムライン")
+        ("docs/development/technical/simulation_methodology.md", "シミュレーション方法論"),
+        ("docs/content/regional/regional_approval_timeline.md", "地域別承認予測タイムライン")
     ]
     
     for filename, title in files_to_convert:
-        md_file = docs_dir / filename
+        md_file = Path(filename)
         if md_file.exists():
-            convert_with_nav(md_file, title)
+            convert_with_nav(md_file, title, public_dir / md_file.with_suffix('.html').name)
         else:
             print(f"File not found: {md_file}")
 

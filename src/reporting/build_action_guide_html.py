@@ -5,7 +5,7 @@ reality_and_actions.mdをHTMLに変換
 
 import markdown
 from pathlib import Path
-from src.reporting.html_utils import convert_markdown_to_html, get_responsive_table_css
+from src.reporting.html_utils import convert_markdown_to_html, get_responsive_table_css, get_color_palette_css
 
 
 def convert_action_guide():
@@ -46,6 +46,7 @@ def convert_action_guide():
     <!-- ナビゲーション -->
     
     <style>
+{get_color_palette_css()}
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.8;
@@ -63,17 +64,17 @@ def convert_action_guide():
         }
         h1 {
             color: #2c3e50;
-            border-bottom: 3px solid #e74c3c;
+            border-bottom: 3px solid var(--accent-color);
             padding-bottom: 10px;
         }
         h2 {
             color: #34495e;
             margin-top: 40px;
-            border-left: 5px solid #3498db;
+            border-left: 5px solid var(--primary-color);
             padding-left: 15px;
         }
         h3 {
-            color: #7f8c8d;
+            color: var(--muted-color);
             margin-top: 30px;
         }
         .action-item {
@@ -83,13 +84,14 @@ def convert_action_guide():
             margin: 20px 0;
         }
         strong {
-            color: #e74c3c;
+            color: var(--accent-color);
         }
         a {
-            color: #3498db;
+            color: var(--primary-color);
             text-decoration: none;
         }
-        a:hover {
+        a:hover, a:focus {
+            color: var(--primary-hover-color);
             text-decoration: underline;
         }
         /* フォーカス時の視認性向上 */
@@ -168,7 +170,7 @@ def convert_action_guide():
         summary {
             cursor: pointer;
             font-weight: bold;
-            color: #3498db;
+            color: var(--primary-color);
         }
     </style>
 </head>
@@ -238,6 +240,7 @@ def convert_action_guide():
     
     # HTMLテンプレートに挿入
     final_html = html_template.replace("{content}", html_content)
+    final_html = final_html.replace("{get_color_palette_css()}", get_color_palette_css())
     
     # ファイルに保存
     html_file = Path("docs/public/reality_and_actions.html")
