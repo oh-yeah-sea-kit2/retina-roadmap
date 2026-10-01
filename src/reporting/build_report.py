@@ -10,7 +10,7 @@ from datetime import datetime
 import json
 import yaml
 import logging
-from src.reporting.html_utils import convert_markdown_to_html, get_responsive_table_css
+from src.reporting.html_utils import convert_markdown_to_html, get_responsive_table_css, get_color_palette_css
 from src.reporting.message_design import (
     build_trial_program_index,
     get_message_design,
@@ -379,6 +379,7 @@ def convert_to_html(markdown_content, output_file):
     <meta name="keywords" content="網膜色素変性症,RP,Retinitis Pigmentosa,遺伝子治療,臨床試験,MCO-010,OCU400,承認予測">
     <meta name="author" content="網膜色素変性症治療開発予測プロジェクト">
     <style>
+{get_color_palette_css()}
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
@@ -396,7 +397,7 @@ def convert_to_html(markdown_content, output_file):
         }
         h1 {
             color: #2c3e50;
-            border-bottom: 3px solid #3498db;
+            border-bottom: 3px solid var(--primary-color);
             padding-bottom: 10px;
         }
         h2 {
@@ -404,7 +405,7 @@ def convert_to_html(markdown_content, output_file):
             margin-top: 40px;
         }
         h3 {
-            color: #7f8c8d;
+            color: var(--muted-color);
         }
 {get_responsive_table_css()}
         img {
@@ -418,7 +419,7 @@ def convert_to_html(markdown_content, output_file):
         }
         .summary-box {
             background-color: #e8f4f8;
-            border-left: 5px solid #3498db;
+            border-left: 5px solid var(--primary-color);
             padding: 20px;
             margin: 20px 0;
         }
@@ -429,6 +430,12 @@ def convert_to_html(markdown_content, output_file):
         }
         strong {
             color: #2c3e50;
+        }
+        a {
+            color: var(--primary-color);
+        }
+        a:hover, a:focus {
+            color: var(--primary-hover-color);
         }
         /* フォーカス時の視認性向上 */
         a:focus, button:focus, input:focus, select:focus, textarea:focus {
@@ -486,6 +493,7 @@ def convert_to_html(markdown_content, output_file):
 
     # HTMLテンプレートに挿入
     final_html = html_template.replace("{content}", html_content)
+    final_html = final_html.replace("{get_color_palette_css()}", get_color_palette_css())
     final_html = final_html.replace("{get_responsive_table_css()}", get_responsive_table_css())
 
     # ファイルに保存

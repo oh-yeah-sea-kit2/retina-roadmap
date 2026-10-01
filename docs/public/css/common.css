@@ -9,12 +9,17 @@
    ======================================== */
 :root {
   /* メインカラー */
-  --primary-color: #3498db;      /* 青 - メインアクセント */
+  --primary-color: #2072a7;      /* 青 - メインアクセント */
   --secondary-color: #2c3e50;    /* 濃紺 - 見出し */
-  --accent-color: #e74c3c;       /* 赤 - 強調・警告 */
-  --success-color: #27ae60;      /* 緑 - 成功・完了 */
-  --warning-color: #f39c12;      /* オレンジ - 注意 */
+  --accent-color: #d13d2f;       /* 赤 - 強調・警告 */
+  --success-color: #24973e;      /* 緑 - 成功・完了 */
+  --warning-color: #a85e13;      /* オレンジ - 注意 */
   
+  /* リンク・白文字ボタン用の濃色 */
+  --primary-hover-color: #1b618e;
+  --muted-color: #687a7c;
+  --muted-hover-color: #58686a;
+
   /* 背景色 */
   --bg-color: #f5f5f5;           /* ページ背景 */
   --bg-white: #ffffff;           /* コンテンツ背景 */
@@ -24,7 +29,7 @@
   /* テキスト色 */
   --text-primary: #333333;       /* 本文 */
   --text-secondary: #666666;     /* 補助テキスト */
-  --text-light: #999999;         /* 薄いテキスト */
+  --text-light: #767676;         /* 薄いテキスト */
   --text-white: #ffffff;         /* 白文字 */
   
   /* その他 */
@@ -132,7 +137,7 @@ h3 {
 
 h4 {
   font-size: 1.25rem;
-  color: #7f8c8d;
+  color: var(--muted-color);
 }
 
 /* モバイルでの見出しサイズ調整 */
@@ -182,13 +187,13 @@ a::after {
 }
 
 a:hover, a:focus {
-  color: #2980b9;
+  color: var(--primary-hover-color);
   text-decoration: underline;
 }
 
 /* タッチデバイスでのアクティブ状態 */
 a:active {
-  opacity: 0.7;
+  opacity: 1;
   transform: scale(0.98);
 }
 
@@ -261,7 +266,8 @@ code {
 }
 
 .btn-primary:hover, .btn-primary:focus {
-  background-color: #2980b9;
+  color: var(--text-white);
+  background-color: var(--primary-hover-color);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
@@ -277,6 +283,7 @@ code {
 }
 
 .btn-secondary:hover, .btn-secondary:focus {
+  color: var(--text-white);
   background-color: #1a252f;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -288,12 +295,13 @@ code {
 }
 
 .btn-tertiary {
-  background-color: #95a5a6;
+  background-color: var(--muted-color);
   color: var(--text-white);
 }
 
 .btn-tertiary:hover, .btn-tertiary:focus {
-  background-color: #7f8c8d;
+  color: var(--text-white);
+  background-color: var(--muted-hover-color);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
@@ -681,7 +689,7 @@ footer {
   margin-top: 60px;
 }
 
-footer a {
+footer a, footer a:hover, footer a:focus {
   color: var(--text-white);
   text-decoration: underline;
 }
@@ -708,7 +716,7 @@ footer a {
 }
 
 /* スキップリンク */
-.skip-link {
+.skip-link, .skip-link:hover, .skip-link:focus {
   position: absolute;
   left: -9999px;
   top: 0;

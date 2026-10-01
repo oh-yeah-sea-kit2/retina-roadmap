@@ -93,7 +93,7 @@ def get_responsive_table_css():
         }
         
         th {
-            background-color: #3498db;
+            background-color: var(--primary-color);
             color: white;
             font-weight: bold;
         }
@@ -125,11 +125,11 @@ def get_responsive_table_css():
                 left: 0;
                 background-color: white;
                 z-index: 1;
-                border-right: 2px solid #3498db;
+                border-right: 2px solid var(--primary-color);
             }
             
             thead tr th:first-child {
-                background-color: #3498db;
+                background-color: var(--primary-color);
             }
             
             tbody tr:nth-child(even) td:first-child {
@@ -179,3 +179,13 @@ def convert_markdown_to_html(md_content, extensions=None):
     html_content = re.sub(r'\.md(?=["#])', '.html', html_content)
     
     return html_content
+
+
+def get_color_palette_css():
+    """Embed the common palette in legacy pages without importing layout rules."""
+    from pathlib import Path
+
+    css_path = Path(__file__).resolve().parents[2] / "docs/public/css/common.css"
+    css = css_path.read_text(encoding="utf-8")
+    palette = re.search(r":root\s*\{[^}]*\}", css).group(0)
+    return "\n".join(line.rstrip() for line in palette.splitlines())

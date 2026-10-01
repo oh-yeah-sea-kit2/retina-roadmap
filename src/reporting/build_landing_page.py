@@ -202,10 +202,10 @@ def generate_html(site_metadata: dict[str, Any] | None = None) -> str:
             margin-right: 8px;
         }}
         .legend-a {{
-            background: #2f80c4;
+            background: var(--primary-color);
         }}
         .legend-b {{
-            background: #d97918;
+            background: var(--warning-color);
         }}
         .timeline-scroll {{
             overflow-x: auto;
@@ -298,13 +298,14 @@ def generate_html(site_metadata: dict[str, Any] | None = None) -> str:
             text-overflow: ellipsis;
         }}
         .timeline-a {{
-            background: #2f80c4;
+            background: var(--primary-color);
         }}
         .timeline-b {{
-            background: #d97918;
+            background: var(--warning-color);
         }}
         .timeline-mid {{
-            background: linear-gradient(90deg, #2f80c4 0%, #d97918 100%);
+            background-color: var(--primary-color);
+            background-image: linear-gradient(90deg, var(--primary-color) 0%, var(--warning-color) 100%);
         }}
         .timeline-note {{
             color: var(--text-secondary);
