@@ -1,9 +1,3 @@
-# 日本の読者向けアクションガイド
-
-最終更新: {{ site_last_updated }}
-
-データ取得: ClinicalTrials.gov {{ clinical_trials_snapshot_date }} / PubMed {{ pubmed_snapshot_date }}
-
 このページは、日本にいる網膜色素変性症（RP）の患者・家族が「今日から何をすればよいか」を具体的な窓口に落とし込んだガイドです。治療の判断は必ず主治医と相談し、現在の治療や通院を自己判断で中断しないでください。
 
 ## 今日からできる3ステップ
@@ -27,12 +21,27 @@
 3. 専門外来で、網膜疾患パネル検査、遺伝カウンセリング、IRUDなどの研究連携の対象になるかを確認する
 4. 保険診療で難しい場合は、自費パネル検査や研究参加の選択肢があるかを主治医に確認する
 
-一次ソース:
+一次ソース（公式URL）:
 
 - 神戸市立神戸アイセンター病院 専門外来: https://kobe.eye.center.kcho.jp/outpatient/disease.html
-- 神戸アイセンター: https://www.kobe-eye-center.jp/
+- 神戸市立神戸アイセンター病院（公式）: https://kobe.eye.center.kcho.jp/
 - AMED IRUD: https://www.amed.go.jp/program/IRUD/
 - IRUD公式: https://plaza.umin.ac.jp/irud/
+
+### 東京医療センターを使う場合（首都圏）
+
+国立病院機構東京医療センターの臨床遺伝センターは、遺伝性網膜疾患を主な対象の一つとしています。公式ページでは、診療は予約制で、本人からの連絡のほか、かかりつけ医師からの紹介でも受診できると案内されています。遺伝子検査は、保険適用検査・自費検査・研究的検査から提案されます。遺伝カウンセリングの費用は初診11,000円（1時間・税込）、遺伝子検査の費用は項目により異なります（2026年10月時点の公式ページ記載）。オンラインの遠隔遺伝カウンセリングも案内されています。
+
+一次ソース（公式URL）:
+
+- 東京医療センター 臨床遺伝センター: https://tokyo-mc.hosp.go.jp/section/clinical_genetic_center.html
+
+### 保険で検査を受けられる範囲
+
+日本眼科学会「網膜色素変性診療ガイドライン2026」によると、保険適用の遺伝学的検査（82遺伝子のパネル検査）は、RPE65関連が疑われる若年発症の患者に限られます。それ以外は、自費診療や研究ベースでの検査になります。保険収載の検査と専門家による診断を行う施設は全国12施設です。
+
+- ガイドライン: https://www.nichigan.or.jp/Portals/0/resources/member/guideline/nggz-2025-063.pdf
+- 実施12施設（日本網膜硝子体学会）: https://www.jrvs.jp/backnumber/20231201.html
 
 注意点:
 
@@ -43,6 +52,8 @@
 ## アクション2: 自然経過レジストリに登録する
 
 自然経過レジストリは、治験候補者を探す基盤になります。すぐ治験に入るための仕組みではありませんが、「声がかかる側」に入るための重要な準備です。
+
+<!-- aria-label: 自然経過レジストリ一覧 -->
 
 | レジストリ | 何を確認するか | 公式ソース |
 |---|---|---|
@@ -64,7 +75,7 @@
 
 ### jRCTで探す
 
-現行のjRCTは厚生労働省ドメインです。2025年3月の管理移管後は、現行URL https://jrct.mhlw.go.jp/ を使います。
+現在のjRCTは厚生労働省ドメインです。2025年3月の管理移管後は、https://jrct.mhlw.go.jp/ を使います。
 
 手順:
 
@@ -74,11 +85,7 @@
 4. jRCT番号、対象年齢、実施施設、問い合わせ先を控える
 5. 参加可否は自分で判断せず、主治医と試験実施施設へ確認する
 
-一次ソース:
-
-- jRCT: https://jrct.mhlw.go.jp/
-- jRCT検索: https://jrct.mhlw.go.jp/search
-- URL変更の告知例: https://www.crea.hosp.keio.ac.jp/2025/04/url.html
+一次ソース: jRCT https://jrct.mhlw.go.jp/ / jRCT検索 https://jrct.mhlw.go.jp/search / URL変更の告知例 https://www.crea.hosp.keio.ac.jp/2025/04/url.html
 
 ### 難病治験ウェブで探す
 
@@ -92,10 +99,10 @@
 4. 実施地域、年齢、実施施設、問い合わせ先を控える
 5. 月次更新時に、前月から増えたjRCT番号がないか確認する
 
-一次ソース:
+一次ソース（公式URL）:
 
 - 難病治験ウェブ: https://nanbyo-chiken.nibn.go.jp/
-- 難病治験ウェブ公開情報: https://nanbyo.jp/2025/08/01/nanbyochiken/
+- 難病治験ウェブ公開情報（2025年の告知記事。将来リンクが変わる場合あり）: https://nanbyo.jp/2025/08/01/nanbyochiken/
 
 ## アクション4: 患者会・支援ネットワークにつながる
 
@@ -112,12 +119,15 @@ JRPSの公式ページでは、ロービジョンケアの専門職による電�
 
 「日本は海外より遅れる」だけではありません。iPS細胞、光遺伝学、国内医師主導治験など、日本発・日本主導のプログラムがあります。
 
+<!-- aria-label: 日本発・日本主導の治療プログラム一覧 -->
+
 | プログラム | 概要 | 一言 | 一次ソース |
 |---|---|---|---|
 | DSP-3077（住友ファーマ/RACTHERA） | 他家iPS細胞由来網膜シート。米国Phase 1/2（NCT06891885）で評価中、FDA Orphan Drug Designation取得。 | iPS細胞由来の眼科再生医療は日本発の強み。 | https://news.us.sumitomo-pharma.com/press-release-details/2026/Sumitomo-Pharma-America-Announces-that-its-Investigational-Therapy-DSP-3077-Has-Received-FDA-Orphan-Drug-Designation-for-the-Treatment-of-Retinitis-Pigmentosa/default.aspx |
 | RV-001（Restore Vision/慶應） | キメラロドプシン光遺伝学。慶應義塾大学病院で2025年2月に1例目投与。 | 日本発の視覚再生治療として国内で臨床段階。 | https://www.keio.ac.jp/ja/press-release/20250213-1/ |
 | RV-001 jRCT | 第I/II相、重症網膜色素変性を対象。難病治験ウェブでは募集中表示。 | 参加可否は実施施設・主治医に確認。 | https://nanbyo-chiken.nibn.go.jp/detail/jRCT2033240611/ |
-| SENTAN ピタバスタチンPLGAナノ粒子 | jRCT2071260006。九州大学病院で第I相医師主導治験、2026年7月開始予定。 | 国内で進行を抑える治療を検証する候補。 | https://nanbyo-chiken.nibn.go.jp/detail/jRCT2071260006/ |
+| SENTAN ピタバスタチンPLGAナノ粒子 | jRCT2071260006 / NCT07774975。九州大学病院で第I相医師主導治験（21名）。2026年10月時点で募集開始前。遺伝子診断は不要で、中心の視野感度が保たれた18〜70歳が対象。 | 国内で進行を抑える治療を検証する候補。目的は安全性の確認。 | https://clinicaltrials.gov/study/NCT07774975 |
+| MCO-010 / MOGENRY（Nanoscope） | 海外発の光遺伝学治療。日本でPMDAが承認申請を受理し、優先審査に（2026年10月1日発表）。対象は遺伝性網膜ジストロフィ全般。 | 承認されれば、日本で型を問わず使える初の視覚再建治療になりうる。重い視力低下のある人向け。 | https://www.ophthalmologytimes.com/view/mogenry-japan-priority-review-inherited-retinal-dystrophies |
 
 ## 主治医に見せる短いメモ
 

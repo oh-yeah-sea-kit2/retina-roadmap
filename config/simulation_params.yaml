@@ -33,12 +33,13 @@ japan_delay_years:
   median: 5.0    # 標準シナリオ
   max: 7.0       # 保守的シナリオ
 
-# MCO-010 日本承認遅延パラメータ（先駆け指定: 6ヶ月審査目標）
-# 先駆け指定取得により大幅に短縮される見込み
+# MCO-010 日本承認遅延パラメータ
+# 2026-10-01: PMDAが承認申請を受理し優先審査（先駆け指定）。会社は日米とも2027年前半に結果の可能性と説明。
+# 米国とほぼ同時審査のため、遅れは0〜1年に置く（審査が長引く場合を保守側に含める）。
 japan_delay_years_sakigake:
-  min: 1.0       # 先駆け+オーファンで最速
-  median: 2.0    # 先駆け指定による短縮
-  max: 3.5       # 保守的シナリオ
+  min: 0.0       # 日米同時期に結果が出る場合
+  median: 0.25   # 日本が少し遅れる場合
+  max: 1.0       # 保守的シナリオ
 
 # プログラム固有の設定
 programs:
@@ -47,8 +48,8 @@ programs:
       brief_title_keywords: ["MCO-010", "MCO010"]
       nct_ids: ["NCT04945772"]
       sponsor_keywords: ["Nanoscope"]
-    # BLA rolling submission完了予定日（2026年早期）
-    bla_complete_date: "2026-03-31"
+    # FDAがBLAを受理（2026-09-09報道）。優先審査の対象で、会社は2027年前半に結果の可能性と説明。
+    bla_complete_date: "2026-09-09"
     review_time:
       min: 0.5
       median: 0.67
@@ -64,12 +65,14 @@ programs:
       brief_title_keywords: ["OCU400", "OCU-400"]
       nct_ids: ["NCT05203939", "NCT06388200"]
       sponsor_keywords: ["Ocugen"]
-    submission_date: "2026-09-30"
+    # 2026年8月の会社開示: 段階的申請（rolling BLA）の開始は、2027年第1四半期予定のトップライン結果が出てからとFDAが確認。
+    # 申請完了は結果公表の後になるため、2027年半ばと仮定する（会社の確定日程ではない）。
+    submission_date: "2027-06-30"
     review_time:
       min: 0.83
       median: 1.0
       max: 1.17
-    confidence: "very_high"
+    confidence: "high"
     gene_agnostic: true
     rmat_designated: true
     program_name: "OCU400"
@@ -120,19 +123,23 @@ programs:
       brief_title_keywords: ["AGTC-501", "AGTC501"]
       nct_ids: ["NCT04850118", "NCT06275620", "NCT06333249", "NCT06646289"]
       sponsor_keywords: ["Beacon"]
+    # 2026-09-21: 最終試験VISTAが主要評価項目を達成。年内に段階的申請（rolling BLA）の開始を計画。
+    # 試験は終わっているので残り期間をほぼ0に置き、analysis_time を「申請完了までの期間」として使う。
+    # 残るリスクは申請・審査なので、成功確率は表示・計算上限の0.85に置く。
+    success_rate: 0.85
     phase23_duration:
-      min: 1.5
-      median: 2.0
-      max: 2.5
+      min: 0.0
+      median: 0.1
+      max: 0.25
     analysis_time:
       min: 0.5
       median: 0.75
       max: 1.0
     review_time:
-      min: 1.0
-      median: 1.25
+      min: 0.75
+      median: 1.0
       max: 1.5
-    confidence: "medium"
+    confidence: "high"
     xlrp_specific: true
     program_name: "AGTC-501"
 

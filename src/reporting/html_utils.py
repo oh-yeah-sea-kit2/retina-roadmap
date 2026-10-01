@@ -11,7 +11,7 @@ from src.reporting.site_metadata import render_metadata_placeholders
 def auto_link_urls(text):
     """テキスト内のURLを自動的にリンクに変換"""
     # URLパターン（http://またはhttps://で始まる）
-    url_pattern = r'(?<!href=")(?<!src=")(https?://[^\s<>"{}|\\^`\[\]]+)'
+    url_pattern = r'(?<!href=")(?<!src=")(https?://[^\s<>"{}|\\^`\[\]）。、」』）]+)'
     
     def replace_url(match):
         url = match.group(0)
@@ -25,7 +25,7 @@ def auto_link_urls(text):
 
 def make_tables_responsive(html_content):
     """テーブルをレスポンシブ対応にする（カード型レイアウト用のdata-label追加）"""
-    from bs4 import BeautifulSoup
+    from bs4 import BeautifulSoup, Comment
     
     # BeautifulSoupでHTMLをパース
     soup = BeautifulSoup(html_content, 'html.parser')
@@ -54,6 +54,24 @@ def make_tables_responsive(html_content):
                 for i, cell in enumerate(cells):
                     if i < len(headers) and i > 0:  # 最初のセルはラベル不要
                         cell['data-label'] = headers[i]
+
+        if not table.get('aria-label') and not table.find('caption'):
+            comment_label = None
+            for item in table.previous_siblings:
+                if isinstance(item, Comment) and 'aria-label:' in item:
+                    comment_label = item.split('aria-label:', 1)[1].strip()
+                    break
+
+            if comment_label:
+                table['aria-label'] = comment_label
+            else:
+                existing_class = ' '.join(table.get('class', []))
+                if 'program-table' in existing_class:
+                    table['aria-label'] = '治療プログラム一覧表'
+                elif 'forecast' in existing_class or 'simulation' in existing_class:
+                    table['aria-label'] = 'シミュレーション予測結果表'
+                else:
+                    table['aria-label'] = 'データ表'
     
     return str(soup)
 

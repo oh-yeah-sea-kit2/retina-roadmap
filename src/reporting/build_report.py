@@ -524,13 +524,15 @@ def main():
     logger.info("HTML report saved to: %s", html_file)
 
     # トップページとFAQも生成元から再生成
+    from src.reporting.build_accessible_summary_html import build_accessible_summary
     from src.reporting.build_landing_page import build_landing_page
     from src.reporting.build_faq_page import build_faq_page
     from src.reporting.build_japan_action_guide_html import build_japan_action_guide
     build_landing_page(site_metadata)
     build_faq_page(site_metadata)
     build_japan_action_guide(site_metadata)
-    logger.info("Landing page, FAQ, and Japan action guide regenerated")
+    build_accessible_summary(site_metadata)
+    logger.info("Landing page, FAQ, Japan action guide, and accessible summary regenerated")
 
     # 画像ファイルをコピー
     import shutil

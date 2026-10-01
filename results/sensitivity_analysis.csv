@@ -1,17 +1,17 @@
 parameter,change,base_value,modified_value,impact_years,impact_percent
-PHASE2 duration,decrease 20%,2039.4,2038.4,-1.0,-0.049034029616553884
-PHASE2 duration,increase 20%,2039.4,2040.4,1.0,0.049034029616553884
-PHASE3 duration,decrease 20%,2039.4,2038.4,-1.0,-0.049034029616553884
-PHASE3 duration,increase 20%,2039.4,2040.4,1.0,0.049034029616553884
-PHASE1 duration,increase 20%,2039.4,2040.0,0.599999999999909,0.029420417769927876
-PHASE1 duration,decrease 20%,2039.4,2039.0,-0.40000000000009095,-0.019613611846626015
-PHASE2 success rate,increase 20%,2039.4,2039.5,0.09999999999990905,0.004903402961650929
-PHASE1 success rate,decrease 20%,2039.4,2039.4,0.0,0.0
-PHASE1 success rate,increase 20%,2039.4,2039.4,0.0,0.0
-PHASE2 success rate,decrease 20%,2039.4,2039.4,0.0,0.0
-PHASE3 success rate,decrease 20%,2039.4,2039.4,0.0,0.0
-PHASE3 success rate,increase 20%,2039.4,2039.4,0.0,0.0
-BLA MAA submission,decrease 20%,2039.4,2039.4,0.0,0.0
-BLA MAA submission,increase 20%,2039.4,2039.4,0.0,0.0
-regulatory review,decrease 20%,2039.4,2039.4,0.0,0.0
-regulatory review,increase 20%,2039.4,2039.4,0.0,0.0
+PHASE2 duration,increase 20%,2031.0,2031.4,0.40000000000009095,0.01969473165928562
+PHASE3 duration,increase 20%,2031.0,2031.4,0.40000000000009095,0.01969473165928562
+PHASE2 duration,decrease 20%,2031.0,2030.8,-0.20000000000004547,-0.00984736582964281
+PHASE3 duration,decrease 20%,2031.0,2030.8,-0.20000000000004547,-0.00984736582964281
+BLA MAA submission,increase 20%,2031.0,2031.2,0.20000000000004547,0.00984736582964281
+regulatory review,increase 20%,2031.0,2031.2,0.20000000000004547,0.00984736582964281
+PHASE1 duration,decrease 20%,2031.0,2031.0,0.0,0.0
+PHASE1 duration,increase 20%,2031.0,2031.0,0.0,0.0
+PHASE1 success rate,decrease 20%,2031.0,2031.0,0.0,0.0
+PHASE1 success rate,increase 20%,2031.0,2031.0,0.0,0.0
+PHASE2 success rate,decrease 20%,2031.0,2031.0,0.0,0.0
+PHASE2 success rate,increase 20%,2031.0,2031.0,0.0,0.0
+PHASE3 success rate,decrease 20%,2031.0,2031.0,0.0,0.0
+PHASE3 success rate,increase 20%,2031.0,2031.0,0.0,0.0
+BLA MAA submission,decrease 20%,2031.0,2031.0,0.0,0.0
+regulatory review,decrease 20%,2031.0,2031.0,0.0,0.0

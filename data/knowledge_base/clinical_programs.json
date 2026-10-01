@@ -1,19 +1,22 @@
 {
-  "last_updated": "2026-06-11",
-  "update_notes": "2026-06-11(sprint2): OCU400, bota-vec, AGTC-501, NAC Attack, NPI-001, DSP-3077を一次ソースで更新。SPVN06, RV-001, SENTAN-PVS-NP, prime editing前臨床を追加/整理。bota-vecをMeiraGTx取得・申請準備ステータスへ修正し、OCU400 EAPはOcugenページとCT.govステータスの差分を明記。 2026-04-13(full): RTx-015（Ray Therapeutics）新規追加 - FDA RMAT指定（2026-04-01）・Fast Track、ENVISION Phase 1試験（NCT06460844）。MCO-010 BLA rolling submission継続中・Q2 2026パイプラインマイルストーンとして注目。jCells Q1 2026中間結果未発表・ARVO 2026（5月）での発表有力。重複Botaretigeneエントリ削除、2026-06-11にMeiraGTx取得後ステータスへ更新。2026-03-29(full): DSP-3077 FDA Orphan Drug Designation取得（2026-03-23）、MCO-010 BLA継続中・新US特許取得（2026-01-05）、jCells Frontiers誌査読論文・Nature記事掲載、VG901/VeonGen VG801 ARVO 2026口頭発表予定、SPVN06 Nature Gene Therapy誌前臨床安全性論文。2026-03-23(full): SPVN06 PRODYGY投与完了・初回データ読出し2027予定、NPI-001 Phase 2/3確認試験登録（NCT07290530、CT.govではNOT_YET_RECRUITING）、ZM-02 PRISM試験正式開始（2026-02-25）、DSP-3077 Trial ID追加（NCT06891885）・MEE観察研究完了、VG901社名変更（VeonGen Therapeutics）、jCells ARVO 2026発表見込み・Phase 3準備中。2026-03-12: OCU400 Phase 3 liMeliGhT登録完了（140名）・BLA Q3 2026、MCO-010スターガルトPhase 3計画追加、SPVN20新規追加",
+  "last_updated": "2026-10-02",
+  "update_notes": "2026-10-02: MCO-010（日米で承認審査入り）、AGTC-501（VISTA主要評価項目達成）、Ultevursen、OCU400（rolling BLA時期の修正）、NAC Attack、NPI-001、SENTAN-PVS-NP、DSP-3077、ZM-02を一次ソースで更新。 / 2026-06-11(sprint2): OCU400, bota-vec, AGTC-501, NAC Attack, NPI-001, DSP-3077を一次ソースで更新。SPVN06, RV-001, SENTAN-PVS-NP, prime editing前臨床を追加/整理。bota-vecをMeiraGTx取得・申請準備ステータスへ修正し、OCU400 EAPはOcugenページとCT.govステータスの差分を明記。 2026-04-13(full): RTx-015（Ray Therapeutics）新規追加 - FDA RMAT指定（2026-04-01）・Fast Track、ENVISION Phase 1試験（NCT06460844）。MCO-010 BLA rolling submission継続中・Q2 2026パイプラインマイルストーンとして注目。jCells Q1 2026中間結果未発表・ARVO 2026（5月）での発表有力。重複Botaretigeneエントリ削除、2026-06-11にMeiraGTx取得後ステータスへ更新。2026-03-29(full): DSP-3077 FDA Orphan Drug Designation取得（2026-03-23）、MCO-010 BLA継続中・新US特許取得（2026-01-05）、jCells Frontiers誌査読論文・Nature記事掲載、VG901/VeonGen VG801 ARVO 2026口頭発表予定、SPVN06 Nature Gene Therapy誌前臨床安全性論文。2026-03-23(full): SPVN06 PRODYGY投与完了・初回データ読出し2027予定、NPI-001 Phase 2/3確認試験登録（NCT07290530、CT.govではNOT_YET_RECRUITING）、ZM-02 PRISM試験正式開始（2026-02-25）、DSP-3077 Trial ID追加（NCT06891885）・MEE観察研究完了、VG901社名変更（VeonGen Therapeutics）、jCells ARVO 2026発表見込み・Phase 3準備中。2026-03-12: OCU400 Phase 3 liMeliGhT登録完了（140名）・BLA Q3 2026、MCO-010スターガルトPhase 3計画追加、SPVN20新規追加",
   "programs": {
     "MCO-010": {
       "company": "Nanoscope Therapeutics",
       "current_phase": "Phase 3",
-      "status": "BLA rolling submission in progress",
+      "status": "FDA BLA accepted (Sep 2026); Japan PMDA NDA accepted with priority review (Oct 1, 2026) - decisions possible in H1 2027",
       "key_dates": {
         "phase3_start": "2021-06",
         "phase3_completion": "2024-03",
         "bla_submission_start": "2025-07-14",
         "expected_bla_completion": "2026-early",
-        "pdufa_target_date": "TBD (after BLA acceptance)",
+        "pdufa_target_date": "未公表（会社は2027年前半の可能性と説明）",
         "us_patent_granted": "2026-01-05",
-        "japan_sakigake_designation": "2026-01-21"
+        "japan_sakigake_designation": "2026-01-21",
+        "bla_accepted_reported": "2026-09-09",
+        "japan_nda_accepted": "2026-10-01",
+        "expected_decision_us_japan": "2027-H1"
       },
       "trial_ids": [
         "NCT04945772"
@@ -29,6 +32,18 @@
         "Japan MHLW Orphan Drug Designation"
       ],
       "recent_updates": [
+        {
+          "date": "2026-10-02",
+          "event": "米国: FDAが承認申請(BLA)を受理（2026年9月9日報道）。日本: PMDAが遺伝性網膜ジストロフィ全般を対象とする承認申請を受理し、先駆け審査指定に基づく優先審査に（会社発表 2026年10月1日）。会社は日米とも2027年前半に審査結果が出る可能性があるとしている。日本の申請は米国（重い視力低下を伴うRP）より対象が広い。",
+          "source": "Ophthalmology Times（Nanoscope Therapeutics 発表に基づく）",
+          "source_url": "https://www.ophthalmologytimes.com/view/mogenry-japan-priority-review-inherited-retinal-dystrophies"
+        },
+        {
+          "date": "2026-10-02",
+          "event": "FDAがMOGENRY（sonpiretigene isteparvovec、旧MCO-010）のBLAを受理。対象は重い視力低下を伴う成人RP。",
+          "source": "Ophthalmology Times",
+          "source_url": "https://www.ophthalmologytimes.com/view/fda-accepts-bla-for-mogenry-in-retinitis-pigmentosa"
+        },
         {
           "date": "2026-04-13",
           "event": "BLA rolling submission継続中。Ophthalmology Times Q2 2026パイプラインマイルストーン記事で引き続き注目プログラムとして掲載。BLA完全提出は2026年初頭〜Q2目標。Fast Track指定によりPriority Review適格（BLA受理後6ヶ月審査）。承認されれば世界初の遺伝子非特異的網膜遺伝子治療となる。PDUFA日は未公式発表",
@@ -83,21 +98,36 @@
         "genotype_scope_key": "agnostic",
         "patient_summary": "重度視機能低下後に、光への反応や移動能力の再建を狙う。根治ではなく、元の視力を完全に戻す治療ではない。",
         "eligibility_hint": "原因遺伝子を問わない設計だが、病期・残存細胞・視機能基準で対象が絞られる。",
-        "landing_milestone": "BLA rolling submission進行中"
-      }
+        "landing_milestone": "日米で承認審査中（結果は2027年前半の可能性）"
+      },
+      "primary_sources": [
+        {
+          "label": "日本PMDA承認申請受理・優先審査（2026-10-01、Ophthalmology Times）",
+          "url": "https://www.ophthalmologytimes.com/view/mogenry-japan-priority-review-inherited-retinal-dystrophies"
+        },
+        {
+          "label": "FDA BLA受理（2026-09、Ophthalmology Times）",
+          "url": "https://www.ophthalmologytimes.com/view/fda-accepts-bla-for-mogenry-in-retinitis-pigmentosa"
+        },
+        {
+          "label": "ClinicalTrials.gov RESTORE (NCT04945772)",
+          "url": "https://clinicaltrials.gov/study/NCT04945772"
+        }
+      ]
     },
     "OCU400": {
       "company": "Ocugen",
       "current_phase": "Phase 3",
-      "status": "Enrollment completed - topline Phase 3 data expected Q1 2027; rolling BLA planned Q3 2026",
+      "status": "Enrollment completed - topline Phase 3 data expected Q1 2027; rolling BLA to follow topline data",
       "key_dates": {
         "phase3_first_patient": "2024-06",
         "phase3_enrollment_completed": "2026-03-02",
         "phase3_enrollment": 140,
         "topline_phase3_data": "2027-Q1",
-        "rolling_bla_planned": "2026-Q3",
-        "potential_approval": "2027",
-        "eap_status_check": "2026-06-11: Ocugen EAP page published; ClinicalTrials.gov NCT06574997 status NO_LONGER_AVAILABLE (last updated 2026-04-07)"
+        "rolling_bla_planned": "トップライン結果（2027-Q1予定）の後（2026年8月の会社開示。従来計画の2026-Q3から変更）",
+        "potential_approval": "2028年頃（申請完了を2027年半ばと仮定した場合。会社の確定日程ではない）",
+        "eap_status_check": "2026-06-11: Ocugen EAP page published; ClinicalTrials.gov NCT06574997 status NO_LONGER_AVAILABLE (last updated 2026-04-07)",
+        "primary_completion_registry": "2027-02"
       },
       "trial_ids": [
         "NCT06388200",
@@ -112,6 +142,18 @@
         "EMA ATMP"
       ],
       "recent_updates": [
+        {
+          "date": "2026-10-02",
+          "event": "段階的な承認申請（rolling BLA）の開始時期を修正。会社の2026年8月開示では、FDAとのやり取りの結果、rolling BLAの開始は2027年第1四半期予定のトップライン結果が出てからになる。従来の「2026年第3四半期に開始」は実現していない。",
+          "source": "Ocugen 8-K（SEC提出資料）",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/0001372299/000110465926091691/tm2622368d1_ex99-1.htm"
+        },
+        {
+          "date": "2026-10-02",
+          "event": "登録情報を再確認（2026年10月2日）。第3相liMeliGhTは「実施中・募集終了」、140名、主要評価の完了予定は2027年2月。トップライン結果は2027年第1四半期予定のまま変更なし。",
+          "source": "ClinicalTrials.gov",
+          "source_url": "https://clinicaltrials.gov/study/NCT06388200"
+        },
         {
           "date": "2026-06-11",
           "event": "Phase 3 liMeliGhTの組入れ完了（140名）。トップラインは2027年Q1予定、rolling BLAは2026年Q3計画。OCU400 EAPはOcugen公式ページに掲載されている一方、ClinicalTrials.govのNCT06574997は2026-04-07更新でNO_LONGER_AVAILABLEのため、実際のアクセス可否は直接確認が必要。",
@@ -226,13 +268,15 @@
     "AGTC-501": {
       "company": "Beacon Therapeutics",
       "current_phase": "Phase 2/3",
-      "status": "VISTA enrollment completed - 12-month topline data expected H2 2026",
+      "status": "VISTA met primary endpoint (Sep 21, 2026) - rolling BLA initiation planned later in 2026",
       "key_dates": {
         "phase2_3_start": "2024-06-12",
         "vista_enrollment_completed": "2025-07-08",
         "vista_enrollment": 85,
         "landscape_first_patient": "2025-12-16",
-        "expected_12m_data": "2026-H2"
+        "expected_12m_data": "発表済み（2026-09-21）",
+        "vista_topline": "2026-09-21",
+        "rolling_bla_planned": "2026年内"
       },
       "trial_ids": [
         "NCT04850118",
@@ -252,6 +296,12 @@
         "EMA Orphan Drug Designation"
       ],
       "recent_updates": [
+        {
+          "date": "2026-10-02",
+          "event": "ピボタル試験VISTAが主要評価項目を達成（2026年9月21日発表）。12ヶ月時点で低輝度視力が15文字以上改善した割合は、高用量群31.0%（p=0.0019）、低用量群24.1%（p=0.0106）、無治療対照群0%。安全性はこれまでの試験と同様。年内に段階的な承認申請（rolling BLA）の開始を計画。XLRPのピボタル試験で主要評価項目を達成した初の例と会社は説明。",
+          "source": "Beacon Therapeutics PR",
+          "source_url": "https://www.beacontx.com/news-and-events/beacon-therapeutics-reports-positive-topline-data-from-the-pivotal-vista-trial-of-laru-zova-for-the-treatment-of-x-linked-retinitis-pigmentosa-xlrp/"
+        },
         {
           "date": "2026-06-11",
           "event": "VISTA（NCT04850118）の組入れ完了（85名、12-50歳男性、RPGR関連XLRP）。12ヶ月トップラインデータは2026年後半予定。",
@@ -287,6 +337,10 @@
       "notes": "Targets X-linked RP caused by RPGR mutations (laru-zova/AGTC-501). VISTA completed enrollment with 85 male participants aged 12-50; 12-month topline data are expected in H2 2026. Data from VISTA, DAWN, HORIZON, and SKYLINE are intended to support U.S. and European regulatory submissions.",
       "primary_sources": [
         {
+          "label": "Beacon VISTA topline PR (2026-09-21)",
+          "url": "https://www.beacontx.com/news-and-events/beacon-therapeutics-reports-positive-topline-data-from-the-pivotal-vista-trial-of-laru-zova-for-the-treatment-of-x-linked-retinitis-pigmentosa-xlrp/"
+        },
+        {
           "label": "Beacon VISTA enrollment completion PR (2025-07-08)",
           "url": "https://www.beacontx.com/news-and-events/beacon-therapeutics-completes-enrollment-in-registrational-phase-2-3-vista-trial-of-laru-zova-for-patients-with-xlrp/"
         },
@@ -306,7 +360,7 @@
         "genotype_scope_key": "specific",
         "patient_summary": "RPGR関連X連鎖性RPで、原因遺伝子を補う発想。対象は限定される。",
         "eligibility_hint": "RPGR変異、性別、年齢、視機能などの試験基準で対象が決まる。",
-        "landing_milestone": "VISTA組入れ完了、トップライン2026年後半予定"
+        "landing_milestone": "最終試験で主要評価項目を達成、承認申請へ"
       }
     },
     "OpCT-001": {
@@ -365,11 +419,13 @@
         "fda_breakthrough_therapy": "2025-10-02",
         "confirmatory_trial_registered": "2025-12-16",
         "confirmatory_trial_status_check": "2026-06-11: NCT07290530 NOT_YET_RECRUITING on ClinicalTrials.gov",
-        "trial_duration_months": 24
+        "trial_duration_months": 24,
+        "phase3_primary_completion_registry": "2029-02 / 2029-07"
       },
       "trial_ids": [
         "NCT04355689",
-        "NCT07290530"
+        "NCT07290530",
+        "NCT07710196"
       ],
       "modality": "Small molecule (oral N-acetylcysteine amide)",
       "target": "Gene-agnostic neuroprotection / antioxidant",
@@ -379,6 +435,12 @@
         "FDA Breakthrough Therapy Designation"
       ],
       "recent_updates": [
+        {
+          "date": "2026-10-02",
+          "event": "第3相試験が2本登録されている（NCT07710196、NCT07290530。いずれもアッシャー症候群に伴うRPが対象、24ヶ月、偽薬対照）。登録情報上はどちらも「募集開始前」（2026年10月2日確認）。",
+          "source": "ClinicalTrials.gov",
+          "source_url": "https://clinicaltrials.gov/study/NCT07710196"
+        },
         {
           "date": "2026-06-11",
           "event": "FDA Breakthrough Therapy Designation取得（2025-10-02）。SLO-RP Phase 1/2ではUsher症候群関連RPで光受容体喪失を2年間で50%超抑制と会社発表。確認試験NCT07290530は登録済みだが、2026-06-11確認時点のClinicalTrials.govではNOT_YET_RECRUITING。",
@@ -613,10 +675,11 @@
     "Ultevursen": {
       "company": "Sepul Bio / Théa",
       "current_phase": "Phase 2b",
-      "status": "LUNA trial enrolling",
+      "status": "LUNA Phase 2b enrollment completed (Jul 16, 2026) - 2-year follow-up ongoing",
       "key_dates": {
         "phase2b_start": "2024-12",
-        "expected_study_completion": "2026-12"
+        "expected_study_completion": "2026-12",
+        "luna_enrollment_completed": "2026-07-16"
       },
       "trial_ids": [
         "LUNA",
@@ -626,6 +689,12 @@
       "target": "USH2A exon 13 mutations",
       "regulatory": [],
       "recent_updates": [
+        {
+          "date": "2026-10-02",
+          "event": "第2b相LUNA試験の組入れ完了（2026年7月16日発表）。対象はUSH2A遺伝子exon 13変異によるRP（アッシャー症候群2A型または非症候性）。2年間の追跡で安全性と有効性を評価する。",
+          "source": "Sepul Bio (Laboratoires Théa) PR",
+          "source_url": "https://thea.com/en_WW/news/sepul-bio-completes-luna-phase-2b-trial-enrollment-for-ultevursen"
+        },
         {
           "date": "2026-02-27",
           "event": "LUNA Phase 2b試験進行中。2年間の二重盲検、ランダム化、シャム対照試験。81名登録予定（8歳以上）。USH2A遺伝子エクソン13変異によるRP/Usher症候群2A型が対象。西洋で約16,000人が対象変異を持つと推定。米国・英国・オランダで実施",
@@ -644,8 +713,19 @@
         "genotype_scope": "型特異",
         "genotype_scope_key": "specific",
         "patient_summary": "USH2A exon 13変異を対象にRNA処理を調整する。対象はかなり限定される。",
-        "eligibility_hint": "USH2A exon 13変異が前提。"
-      }
+        "eligibility_hint": "USH2A exon 13変異が前提。",
+        "landing_milestone": "組入れ完了、2年間の追跡中"
+      },
+      "primary_sources": [
+        {
+          "label": "Sepul Bio LUNA enrollment completion PR (2026-07-16)",
+          "url": "https://thea.com/en_WW/news/sepul-bio-completes-luna-phase-2b-trial-enrollment-for-ultevursen"
+        },
+        {
+          "label": "ClinicalTrials.gov LUNA (NCT06627179)",
+          "url": "https://clinicaltrials.gov/study/NCT06627179"
+        }
+      ]
     },
     "Botaretigene sparoparvovec": {
       "company": "MeiraGTx (acquired from Johnson & Johnson)",
@@ -781,7 +861,8 @@
         "moon_trial_china": "2024",
         "prism_trial_start": "2026-02-25",
         "expected_primary_completion": "2029-12",
-        "expected_trial_completion": "2031-12"
+        "expected_trial_completion": "2031-12",
+        "prism_primary_completion_registry": "2029-12"
       },
       "trial_ids": [
         "PRISM",
@@ -795,6 +876,12 @@
         "FDA IND approval"
       ],
       "recent_updates": [
+        {
+          "date": "2026-10-02",
+          "event": "登録情報を再確認（2026年10月2日）。PRISM試験（NCT07282457）はClinicalTrials.gov上「募集開始前」、主要評価の完了予定は2029年12月。",
+          "source": "ClinicalTrials.gov",
+          "source_url": "https://clinicaltrials.gov/study/NCT07282457"
+        },
         {
           "date": "2026-03-23",
           "event": "PRISM試験が2026年2月25日に正式開始（ClinicalTrials.gov登録）。前向き・無作為化・シャム対照・用量漸増試験。米中複数施設で実施。成人および小児が対象。評価項目: 安全性、MLMT（多輝度移動テスト）、形状識別。主要完了2029年12月、全体完了2031年12月予定。色覚回復能力が他の光遺伝学療法との差別化要因",
@@ -887,14 +974,15 @@
     "DSP-3077": {
       "company": "Sumitomo Pharma America / Sumitomo Pharma / RACTHERA",
       "current_phase": "Phase 1/2",
-      "status": "Phase 1/2 recruiting - FDA Orphan Drug Designation granted",
+      "status": "Phase 1/2a - first patient treated (Aug 2026); FDA Orphan Drug Designation",
       "key_dates": {
         "ind_submission": "2024-10-25",
         "fda_ind_clearance": "2024-11",
         "racthera_operations_started": "2025-02-01",
         "fda_orphan_drug_designation": "2026-03-23",
         "ctgov_recruiting_check": "2026-06-11: NCT06891885 RECRUITING; last updated 2026-04-14",
-        "long_term_followup_years": 15
+        "long_term_followup_years": 15,
+        "first_patient_treated": "2026-08"
       },
       "trial_ids": [
         "NCT06891885",
@@ -906,6 +994,12 @@
         "FDA Orphan Drug Designation"
       ],
       "recent_updates": [
+        {
+          "date": "2026-10-02",
+          "event": "米国の第1/2a相試験で最初の患者に移植を実施（2026年8月発表）。計12名・3コホートの用量漸増試験。",
+          "source": "Sumitomo Pharma America PR",
+          "source_url": "https://news.us.sumitomo-pharma.com/press-release-details/2026/Sumitomo-Pharma-America-Announces-First-Patient-Receives-Treatment-in-Phase-12a-Study-for-its-Investigational-Therapy-DSP-3077-for-Retinitis-Pigmentosa/default.aspx"
+        },
         {
           "date": "2026-06-11",
           "event": "FDA Orphan Drug Designation取得（2026-03-23）。DSP-3077は他家iPS細胞由来3D網膜オルガノイド/網膜シートで、米Phase 1/2（NCT06891885）は2026-06-11確認時点でRECRUITING。",
@@ -950,7 +1044,7 @@
         "genotype_scope_key": "agnostic",
         "patient_summary": "失われた網膜細胞を補う再生医療。10〜20年スパンで見る治療。",
         "eligibility_hint": "遺伝子型より手術適応・病期・安全性確認が重要。",
-        "landing_milestone": "米Phase 1/2 recruiting、FDA orphan指定取得"
+        "landing_milestone": "最初の患者に移植を実施"
       }
     },
     "RTx-015": {
@@ -999,7 +1093,8 @@
         "enrollment": 485,
         "clinical_sites": 31,
         "interim_progression_readout": "2028-early",
-        "final_followup_completion": "2029-end"
+        "final_followup_completion": "2029-end",
+        "primary_completion_registry": "2029-05"
       },
       "trial_ids": [
         "NCT05537220"
@@ -1018,6 +1113,12 @@
         }
       ],
       "recent_updates": [
+        {
+          "date": "2026-10-02",
+          "event": "登録情報を再確認（2026年10月2日）。状態は「実施中・募集終了」、登録数485名、主要評価の完了予定は2029年5月。日本眼科学会「網膜色素変性診療ガイドライン2026」は、NACについて少数例で視力が少し改善したとの報告があり第III相が進行中、と記載（進行抑制が証明された内服薬・サプリ・点眼薬は現時点で無いという整理）。",
+          "source": "ClinicalTrials.gov / 日本眼科学会ガイドライン",
+          "source_url": "https://clinicaltrials.gov/study/NCT05537220"
+        },
         {
           "date": "2026-06-11",
           "event": "組入れ目標到達（485名、31施設、2025年8月末）。対象施設は米国・カナダ・欧州で、日本施設は掲載なし。45ヶ月追跡で、進行データの中間読出しは2028年初頭予定。",
@@ -1094,21 +1195,28 @@
     "SENTAN-PVS-NP": {
       "company": "SENTAN Pharma / Kyushu University",
       "current_phase": "Phase 1",
-      "status": "Domestic investigator-initiated Phase 1 registered - recruiting not yet open",
+      "status": "Domestic investigator-initiated Phase 1 registered (jRCT / NCT07774975) - not yet recruiting as of Oct 2, 2026",
       "key_dates": {
         "pmda_advice_completed": "2026-01",
         "jRCT_registered": "2026-04-13",
-        "planned_start": "2026-07-01",
+        "planned_start": "2026-09",
         "planned_end": "2028-03-01",
-        "target_enrollment": 21
+        "target_enrollment": 21,
+        "ctgov_posted": "2026-08-19",
+        "primary_completion_registry": "2028-01"
       },
       "trial_ids": [
-        "jRCT2071260006"
+        "jRCT2071260006",
+        "NCT07774975"
       ],
       "modality": "Nanoparticle drug (intravenous pitavastatin PLGA nanoparticles / ULREA-PVS-NP)",
       "target": "Gene-agnostic neuroprotection / inflammatory monocytes and macrophages",
       "regulatory": [],
       "primary_sources": [
+        {
+          "label": "ClinicalTrials.gov (NCT07774975)",
+          "url": "https://clinicaltrials.gov/study/NCT07774975"
+        },
         {
           "label": "難病治験ウェブ jRCT2071260006",
           "url": "https://nanbyo-chiken.nibn.go.jp/detail/jRCT2071260006/"
@@ -1128,6 +1236,12 @@
       ],
       "recent_updates": [
         {
+          "date": "2026-10-02",
+          "event": "ClinicalTrials.govにも登録された（NCT07774975、2026年8月19日公開）。九州大学の単施設・非盲検・第1相医師主導治験、21名。状態は「募集開始前」（開始予定2026年9月、主要評価完了予定2028年1月）。主な選択基準: 典型的なRP（遺伝子診断は行わない）、18〜70歳、ハンフリー10-2で中心4度の平均網膜感度10dB以上、中心窩網膜厚250µm以下。スタチン内服中・緑内障合併などは除外。前半は単回点滴（2/4/8mg）、後半は4週ごと3回。",
+          "source": "ClinicalTrials.gov",
+          "source_url": "https://clinicaltrials.gov/study/NCT07774975"
+        },
+        {
           "date": "2026-06-11",
           "event": "ピタバスタチンPLGAナノ粒子（ULREA-PVS-NP）の国内第1相医師主導治験がjRCT2071260006として登録。難病治験ウェブでは募集前、開始予定日は2026-07-01、九州大学病院で21名目標。",
           "source": "難病治験ウェブ / MHLW臨床研究情報ポータル / SENTAN Pharma",
@@ -1141,8 +1255,8 @@
         "genotype_scope": "型不問",
         "genotype_scope_key": "agnostic",
         "patient_summary": "ピタバスタチンナノ粒子で進行抑制を狙う日本発候補。視力回復ではない。",
-        "eligibility_hint": "国内第1相で安全性確認が中心。募集開始状況の確認が必要。",
-        "landing_milestone": "国内第1相、2026年7月開始予定"
+        "eligibility_hint": "遺伝子診断不要。中心の視野感度が保たれた18〜70歳が対象。安全性確認が目的。募集開始は要確認。",
+        "landing_milestone": "国内第1相、募集開始前（2026年10月時点）"
       }
     },
     "Prime editing in vivo rescue": {

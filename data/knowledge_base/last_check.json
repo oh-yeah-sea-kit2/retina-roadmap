@@ -1,36 +1,41 @@
 {
-  "last_check_date": "2026-06-11T00:00:00",
+  "last_check_date": "2026-10-02T00:00:00",
   "check_type": "manual_primary_source_verification",
   "programs_checked": [
+    "MCO-010",
     "OCU400",
-    "Botaretigene sparoparvovec",
     "AGTC-501",
-    "NAC Attack",
+    "VP-001",
     "NPI-001",
-    "DSP-3077",
+    "Botaretigene sparoparvovec",
+    "jCells",
+    "Ultevursen",
     "SPVN06",
+    "SPVN20",
+    "DSP-3077",
+    "OpCT-001",
+    "ZM-02",
+    "RTx-015",
+    "NAC Attack",
     "RV-001",
-    "SENTAN-PVS-NP",
-    "Prime editing in vivo rescue"
+    "SENTAN-PVS-NP"
   ],
   "sources_queried": [
-    "ClinicalTrials.gov NCT06388200 / NCT06574997 / NCT04850118 / NCT05537220 / NCT04355689 / NCT07290530 / NCT06891885 / NCT05748873",
-    "Ocugen, MeiraGTx, Beacon, Johns Hopkins, Nacuity, Sumitomo Pharma America, SparingVision, Restore Vision primary pages",
-    "jRCT / 難病治験ウェブ jRCT2033240611 and jRCT2071260006",
-    "Nature Communications / PubMed for prime editing and pitavastatin nanoparticles"
+    "ClinicalTrials.gov API v2（RP・アッシャー症候群の介入試験 213件、NCT05537220 / NCT06388200 / NCT07774975 / NCT07710196 / NCT07290530 / NCT07282457 ほか）",
+    "Beacon Therapeutics, Sepul Bio (Théa), Sumitomo Pharma America の発表、Ophthalmology Times（Nanoscope発表）",
+    "日本眼科学会 網膜色素変性診療ガイドライン2026",
+    "難病治験ウェブ jRCT2033240611"
   ],
   "new_findings": [
-    "NAC Attack",
-    "RV-001",
-    "SENTAN-PVS-NP",
-    "Prime editing in vivo rescue"
+    "日本眼科学会 網膜色素変性診療ガイドライン2026",
+    "ミノサイクリン第3相（中国、NCT07082855、募集開始前）"
   ],
   "updates_found": [
-    "OCU400 Phase 3 enrollment completed; topline Q1 2027; rolling BLA Q3 2026; EAP status caveat",
-    "Botaretigene acquired by MeiraGTx; filing plans in U.S./EU/Japan",
-    "AGTC-501 VISTA enrollment completed; H2 2026 topline expected",
-    "NPI-001 FDA Breakthrough Therapy Designation and >50% photoreceptor-loss slowing report",
-    "DSP-3077 FDA Orphan Drug Designation and NCT06891885 recruiting",
-    "SPVN06 PRODYGY dosing completed; initial readout expected 2027"
+    "MCO-010: FDA BLA受理、日本PMDA承認申請受理・優先審査、結果は2027年前半の可能性",
+    "AGTC-501: VISTA主要評価項目達成、年内rolling BLA計画",
+    "Ultevursen: LUNA組入れ完了",
+    "SENTAN-PVS-NP: NCT07774975登録、募集開始前",
+    "DSP-3077: 最初の患者に移植",
+    "NPI-001: 第3相2本登録、募集開始前"
   ]
 }

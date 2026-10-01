@@ -1,7 +1,7 @@
 metadata:
-  generated_date: '2026-06-11T16:09:18.846243'
+  generated_date: '2026-10-02T04:08:50.670136'
   data_source: ClinicalTrials.gov
-  total_trials_analyzed: 136
+  total_trials_analyzed: 141
   note: Parameters estimated from Retinitis Pigmentosa clinical trials
 success_rate_policy:
   display_cap: 0.85
@@ -17,33 +17,33 @@ success_rate_policy:
   note: 数値はRP関連試験スナップショットから算出したプロジェクト校正値。Wong et al.およびBIO/Informa/QLSのフェーズ遷移確率の考え方に合わせ、個別試験の承認確率ではなく残フェーズの累積確率として使う。100%表示を避けるため、表示・計算に使う値には上限を適用する。
 phase_durations_years:
   PHASE1:
-    min: 0.75564681724846
-    median: 2.3723477070499657
-    max: 8.24914442162902
-    mean: 3.190182849320426
-    std: 2.312286444337402
-    count: 14
+    min: 1.0
+    median: 2.0
+    max: 3.0
+    mean: 2.0
+    std: 0.5
+    count: 0
   PHASE2:
-    min: 1.5003422313483916
-    median: 2.0438056125941135
-    max: 10.078028747433265
-    mean: 4.028291124800364
-    std: 3.050934425174589
-    count: 12
+    min: 2.0
+    median: 3.0
+    max: 4.0
+    mean: 3.0
+    std: 0.5
+    count: 0
   PHASE3:
-    min: 3.082819986310746
-    median: 5.420944558521561
-    max: 6.335386721423682
-    mean: 4.946383755418663
-    std: 1.3695993473694066
-    count: 3
+    min: 3.0
+    median: 4.0
+    max: 5.0
+    mean: 4.0
+    std: 0.5
+    count: 0
   PHASE1, PHASE2:
-    min: 1.5003422313483916
-    median: 1.8316221765913758
-    max: 6.0013689253935665
-    mean: 2.650239561943874
-    std: 1.6858643860287152
-    count: 5
+    min: 2.0
+    median: 3.5
+    max: 5.0
+    mean: 3.5
+    std: 0.75
+    count: 0
   PHASE2, PHASE3:
     min: 3.0
     median: 4.5
@@ -56,11 +56,11 @@ phase_success_rates:
     success_rate: 0.85
     raw_success_rate: 0.86
     display_cap: 0.85
-    success_count: 26
-    total_count: 31
-    observed_success_count: 26
-    observed_total_count: 31
-    observed_completion_rate: 0.8387096774193549
+    success_count: 30
+    total_count: 35
+    observed_success_count: 30
+    observed_total_count: 35
+    observed_completion_rate: 0.8571428571428571
     confidence: configured_historical
     source_label: Project-calibrated RP phase historical rates from ClinicalTrials.gov
       status data
@@ -71,11 +71,11 @@ phase_success_rates:
     success_rate: 0.78
     raw_success_rate: 0.78
     display_cap: 0.85
-    success_count: 29
-    total_count: 38
-    observed_success_count: 29
-    observed_total_count: 38
-    observed_completion_rate: 0.7631578947368421
+    success_count: 32
+    total_count: 41
+    observed_success_count: 32
+    observed_total_count: 41
+    observed_completion_rate: 0.7804878048780488
     confidence: configured_historical
     source_label: Project-calibrated RP phase historical rates from ClinicalTrials.gov
       status data
@@ -86,11 +86,11 @@ phase_success_rates:
     success_rate: 0.71
     raw_success_rate: 0.71
     display_cap: 0.85
-    success_count: 10
-    total_count: 14
-    observed_success_count: 10
-    observed_total_count: 14
-    observed_completion_rate: 0.7142857142857143
+    success_count: 11
+    total_count: 15
+    observed_success_count: 11
+    observed_total_count: 15
+    observed_completion_rate: 0.7333333333333333
     confidence: configured_historical
     source_label: Project-calibrated RP phase historical rates from ClinicalTrials.gov
       status data

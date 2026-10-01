@@ -1,8 +1,8 @@
 # 網膜色素変性症（RP）治療開発ロードマップ
 
-最終更新（HTML生成）: 2026年06月11日 17:54
+最終更新（HTML生成）: 2026年10月02日 04:10
 
-データ取得: ClinicalTrials.gov 2026-04-13 / PubMed 2026-04-13
+データ取得: ClinicalTrials.gov 2026-10-02 / PubMed 2026-04-13
 
 ## エグゼクティブサマリー
 
@@ -29,7 +29,7 @@ OCU400や光遺伝学（MCO-010/RV-001など）は、進行抑制と機能改善
 
 - **早い候補の中央値**: 2027年（MCO-010を含む。視覚再建・中間分類の候補を含む）
 - **全体の中央値**: 2037年（複数の治療法が利用可能になる時期）
-- **現在アクティブな臨床試験**: 60件（重要な完了試験含む）
+- **現在アクティブな臨床試験**: 57件（重要な完了試験含む）
 - **フェーズ平均の過去成功率**: Phase 1: 85.0%, Phase 2: 78.0%, Phase 3: 71.0%（表示・計算上限 85%）
 
 ⚠️ **重要**: 上記の予測は**米国FDA承認**を基準としています。
@@ -41,9 +41,9 @@ OCU400や光遺伝学（MCO-010/RV-001など）は、進行抑制と機能改善
 
 ### 臨床試験データ
 - **データソース**: ClinicalTrials.gov
-- **総試験数**: 136件
-- **アクティブな試験**: 57件
-- **完了した試験**: 52件
+- **総試験数**: 141件
+- **アクティブな試験**: 54件
+- **完了した試験**: 57件
 
 ### 文献データ
 - **データソース**: PubMed
@@ -72,16 +72,16 @@ OCU400や光遺伝学（MCO-010/RV-001など）は、進行抑制と機能改善
 
 | 試験ID | 治療法名 | 治療の読み方 | 対象 | フェーズ | スポンサー | フェーズ平均の過去成功率 | 累積承認確率（残フェーズ） | FDA承認予測（中央値） | 日本承認予測（中央値） | 90%信頼区間（FDA） |
 |--------|----------|--------------|------|----------|------------|----------------------|---------------------------|---------------------|---------------------|------------------|
-| NCT04945772 | Efficacy and Safety of MCO-010 Optogenet... | B寄り/中間（光遺伝学による視覚再建） | 型不問 | PHASE2 | Nanoscope Therapeutics Inc. | 78.0% | 49.8% | 2027年 | 2029年 | [2027, 2027] |
-| NCT06388200 | A Phase 3 Study Of OCU400 Gene Therapy f... | A/B中間（進行抑制＋低照度視機能改善） | 型不問 | PHASE3 | Ocugen | 63.9% | 63.9% | 2027年 | 2032年 | [2027, 2027] |
-| NCT05203939 | Study to Assess the Safety and Efficacy ... | A/B中間（進行抑制＋低照度視機能改善） | 型不問 | PHASE1, PHASE2 | Ocugen | 85.0% | 42.4% | 2027年 | 2032年 | [2027, 2027] |
-| NCT04794101 | Follow-up Gene Therapy Trial for the Tre... | B（遺伝子補充） | 型特異 | PHASE3 | Janssen Research & Development, LLC | 63.9% | 50.0% | 2028年 | 2033年 | [2027, 2028] |
-| NCT06646289 | A Follow-on Study for Second-Eye Treatme... | B（遺伝子補充） | 型特異 | PHASE2 | Janssen Research & Development, LLC | 78.0% | 50.0% | 2028年 | 2033年 | [2027, 2028] |
-| NCT05926583 | A Study of AAV5-hRKp.RPGR for the Treatm... | B（遺伝子補充） | 型特異 | PHASE3 | Janssen Pharmaceutical K.K. | 63.9% | 50.0% | 2028年 | 2033年 | [2027, 2028] |
-| NCT00999609 | Safety and Efficacy Study in Subjects Wi... | 分類未設定 | 未分類 | PHASE3 | Spark Therapeutics, Inc. | 71.0% | 71.0% | 2030年 | 2035年 | [2029, 2031] |
-| NCT06275620 | A Study Comparing Two Doses of AGTC-501 ... | B（遺伝子補充） | 型特異 | PHASE2 | Beacon Therapeutics | 78.0% | 49.8% | 2030年 | 2035年 | [2030, 2030] |
-| NCT07174726 | A Phase 2 Open-label Study to Evaluate t... | B（遺伝子補充） | 型特異 | PHASE2 | Beacon Therapeutics | 78.0% | 49.8% | 2030年 | 2035年 | [2030, 2030] |
-| NCT06333249 | A Study Comparing Two Doses of AGTC-501 ... | B（遺伝子補充） | 型特異 | PHASE2 | Beacon Therapeutics | 78.0% | 49.8% | 2030年 | 2035年 | [2030, 2030] |
+| NCT04945772 | Efficacy and Safety of MCO-010 Optogenet... | B寄り/中間（光遺伝学による視覚再建） | 型不問 | PHASE2 | Nanoscope Therapeutics Inc. | 78.0% | 49.8% | 2027年 | 2027年 | [2027, 2027] |
+| NCT07174726 | A Phase 2 Open-label Study to Evaluate t... | B（遺伝子補充） | 型特異 | PHASE2 | Beacon Therapeutics | 78.0% | 85.0% | 2028年 | 2033年 | [2028, 2028] |
+| NCT06388200 | A Phase 3 Study Of OCU400 Gene Therapy f... | A/B中間（進行抑制＋低照度視機能改善） | 型不問 | PHASE3 | Ocugen | 63.9% | 63.9% | 2028年 | 2033年 | [2028, 2028] |
+| NCT04850118 | A Clinical Trial Evaluating the Safety a... | B（遺伝子補充） | 型特異 | PHASE2, PHASE3 | Beacon Therapeutics | 78.0% | 85.0% | 2028年 | 2033年 | [2028, 2028] |
+| NCT06333249 | A Study Comparing Two Doses of AGTC-501 ... | B（遺伝子補充） | 型特異 | PHASE2 | Beacon Therapeutics | 78.0% | 85.0% | 2028年 | 2033年 | [2028, 2028] |
+| NCT06646289 | A Follow-on Study for Second-Eye Treatme... | B（遺伝子補充） | 型特異 | PHASE2 | MeiraGTx Ocular UK Ltd | 78.0% | 50.0% | 2028年 | 2033年 | [2027, 2028] |
+| NCT05203939 | Study to Assess the Safety and Efficacy ... | A/B中間（進行抑制＋低照度視機能改善） | 型不問 | PHASE1, PHASE2 | Ocugen | 85.0% | 42.4% | 2028年 | 2033年 | [2028, 2028] |
+| NCT04794101 | Follow-up Gene Therapy Trial for the Tre... | B（遺伝子補充） | 型特異 | PHASE3 | MeiraGTx Ocular UK Ltd | 63.9% | 50.0% | 2028年 | 2033年 | [2027, 2028] |
+| NCT06275620 | A Study Comparing Two Doses of AGTC-501 ... | B（遺伝子補充） | 型特異 | PHASE2 | Beacon Therapeutics | 78.0% | 85.0% | 2028年 | 2033年 | [2028, 2028] |
+| NCT05926583 | A Study of AAV5-hRKp.RPGR for the Treatm... | B（遺伝子補充） | 型特異 | PHASE3 | MeiraGTx Ocular UK Ltd | 63.9% | 50.0% | 2028年 | 2033年 | [2027, 2028] |
 
 
 ### 日本での承認予測
@@ -90,16 +90,16 @@ OCU400や光遺伝学（MCO-010/RV-001など）は、進行抑制と機能改善
 
 | 治療法 | FDA承認予測 | 日本承認予測（中央値） | 日本承認90%信頼区間 | 遅延期間（中央値） |
 |--------|------------|---------------------|-------------------|---------------------|
-| NCT04945772 | 2027年 | **2029年** | [2028, 2030] | +2.1年 |
-| NCT06388200 | 2027年 | **2032年** | [2031, 2033] | +5.0年 |
-| NCT05203939 | 2027年 | **2032年** | [2031, 2033] | +5.0年 |
-| NCT04794101 | 2028年 | **2033年** | [2031, 2034] | +5.0年 |
+| NCT04945772 | 2027年 | **2027年** | [2027, 2028] | +0.4年 |
+| NCT07174726 | 2028年 | **2033年** | [2032, 2034] | +5.0年 |
+| NCT06388200 | 2028年 | **2033年** | [2032, 2034] | +5.0年 |
+| NCT04850118 | 2028年 | **2033年** | [2032, 2034] | +5.0年 |
+| NCT06333249 | 2028年 | **2033年** | [2032, 2034] | +5.0年 |
 | NCT06646289 | 2028年 | **2033年** | [2031, 2034] | +5.0年 |
+| NCT05203939 | 2028年 | **2033年** | [2032, 2034] | +5.0年 |
+| NCT04794101 | 2028年 | **2033年** | [2031, 2034] | +5.0年 |
+| NCT06275620 | 2028年 | **2033年** | [2032, 2034] | +5.0年 |
 | NCT05926583 | 2028年 | **2033年** | [2031, 2034] | +5.0年 |
-| NCT00999609 | 2030年 | **2035年** | [2034, 2036] | +5.0年 |
-| NCT06275620 | 2030年 | **2035年** | [2034, 2036] | +5.0年 |
-| NCT07174726 | 2030年 | **2035年** | [2034, 2036] | +5.0年 |
-| NCT06333249 | 2030年 | **2035年** | [2034, 2036] | +5.0年 |
 
 
 詳細は[地域別承認予測タイムライン](regional_approval_timeline.html)をご覧ください。
@@ -107,7 +107,7 @@ OCU400や光遺伝学（MCO-010/RV-001など）は、進行抑制と機能改善
 ### 治療モダリティ別の状況
 
 #### 遺伝子治療
-- **試験数**: 36件
+- **試験数**: 38件
 - **主要なターゲット遺伝子**: RPGR, RPE65, PDE6A, USH2A
 - **最速FDA承認予測**: 詳細表の再シミュレーション結果を参照
 
@@ -136,10 +136,10 @@ OCU400や光遺伝学（MCO-010/RV-001など）は、進行抑制と機能改善
 ![トルネード図](images/tornado.png)
 
 ### 主要な影響要因
-- **PHASE2 duration** (increase 20%): +1.0年の影響
-- **PHASE3 duration** (increase 20%): +1.0年の影響
-- **PHASE1 duration** (increase 20%): +0.6年の影響
-- **PHASE2 success rate** (increase 20%): +0.1年の影響
+- **PHASE2 duration** (increase 20%): +0.4年の影響
+- **PHASE3 duration** (increase 20%): +0.4年の影響
+- **BLA MAA submission** (increase 20%): +0.2年の影響
+- **regulatory review** (increase 20%): +0.2年の影響
 
 
 ## 4. 予測の可視化
@@ -191,7 +191,7 @@ OCU400や光遺伝学（MCO-010/RV-001など）は、進行抑制と機能改善
 ### データソース
 - **ClinicalTrials.gov**: https://clinicaltrials.gov/
 - **RP臨床試験検索**: https://clinicaltrials.gov/search?cond=Retinitis%20Pigmentosa
-- **データ取得日**: 2026-04-13
+- **データ取得日**: 2026-10-02
 
 ### 主要試験の詳細
 - **MCO-010（Nanoscope）**: https://clinicaltrials.gov/study/NCT04945772

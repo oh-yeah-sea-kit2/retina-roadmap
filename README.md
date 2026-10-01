@@ -1,7 +1,7 @@
 # 網膜色素変性症（RP）治療開発ロードマップ
 
 [![CI/CD Pipeline](https://github.com/oh-yeah-sea-kit2/retina-roadmap/actions/workflows/ci.yml/badge.svg)](https://github.com/oh-yeah-sea-kit2/retina-roadmap/actions/workflows/ci.yml)
-[![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--06--11-blue)](https://oh-yeah-sea-kit2.github.io/retina-roadmap/)
+[![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--10--02-blue)](https://oh-yeah-sea-kit2.github.io/retina-roadmap/)
 
 **[サイトを見る](https://oh-yeah-sea-kit2.github.io/retina-roadmap/docs/public/index.html)**
 

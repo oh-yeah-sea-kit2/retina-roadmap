@@ -17,6 +17,7 @@ def test_imports():
         import src.ingest.parameters
         import src.sim.timeline_sim
         import src.reporting.build_report
+        import src.reporting.build_accessible_summary_html
         import src.reporting.build_landing_page
         import src.reporting.build_faq_page
         import src.reporting.build_japan_action_guide_html
@@ -268,7 +269,7 @@ def test_sprint4_japan_action_guide_has_official_sources():
 
     required_urls = [
         "https://kobe.eye.center.kcho.jp/outpatient/disease.html",
-        "https://www.kobe-eye-center.jp/",
+        "https://kobe.eye.center.kcho.jp/",
         "https://www.amed.go.jp/program/IRUD/",
         "https://convention.jtbcom.co.jp/jrprp/",
         "https://rctportal.mhlw.go.jp/detail/um?trial_id=UMIN000049034",
@@ -426,3 +427,115 @@ def test_sprint6_stale_optimistic_phrases_removed_from_sources():
         assert not stale_year_pattern.search(content), f"stale year phrase in {path}"
         for pattern in stale_success_patterns:
             assert pattern not in content, f"{pattern} remains in {path}"
+
+
+def test_release_review_accessible_summary_refreshed():
+    """音声読み上げ対応版にSprint前の旧情報を残さない"""
+    html_path = Path("docs/public/accessible_summary.html")
+    md_path = Path("docs/content/accessibility/accessible_summary.md")
+    assert html_path.exists()
+    assert md_path.exists()
+
+    combined = (
+        html_path.read_text(encoding="utf-8")
+        + "\n"
+        + md_path.read_text(encoding="utf-8")
+    )
+    stale_patterns = [
+        "100パーセント",
+        "80パーセント以上",
+        "2025年初め",
+        "2030年までに5個から10個",
+        "研究支援の寄付",
+        "政策提言への参加",
+    ]
+    for pattern in stale_patterns:
+        assert pattern not in combined, f"{pattern} remains in accessible summary"
+
+    required_terms = [
+        "進行を止める、または遅らせる治療",
+        "失った視力を取り戻す、または根治を目指す治療",
+        "今日からできる3ステップ",
+        "https://jrct.mhlw.go.jp/",
+        "https://nanbyo-chiken.nibn.go.jp/",
+        "神戸アイセンター",
+        "JRPS",
+    ]
+    for term in required_terms:
+        assert term in combined, f"{term} missing from accessible summary"
+
+
+def test_release_review_placeholders_and_japan_guide_headings_removed():
+    """レビュー指摘のプレースホルダー、空ソース、H1重複を防ぐ"""
+    public_html = "\n".join(
+        path.read_text(encoding="utf-8") for path in Path("docs/public").glob("*.html")
+    )
+    source_text = "\n".join(
+        path.read_text(encoding="utf-8") for path in Path("docs/content").glob("**/*.md")
+    )
+    assert "現行URL" not in public_html
+    assert "現行URL" not in source_text
+
+    guide_html = Path("docs/public/japan_action_guide.html").read_text(encoding="utf-8")
+    assert guide_html.count("<h1>日本の読者向けアクションガイド</h1>") == 1
+    assert "一次ソース:</p>\n<ul>" not in guide_html
+    assert "一次ソース: jRCT" in guide_html
+    assert "https://jrct.mhlw.go.jp/" in guide_html
+
+
+def test_pr95_review_links_and_overclaims_removed():
+    """PR #95レビューで指摘された壊れたリンクと過断定を再発させない"""
+    reality_html = Path("docs/public/reality_and_actions.html").read_text(
+        encoding="utf-8"
+    )
+    reality_md = Path("docs/content/main/reality_and_actions.md").read_text(
+        encoding="utf-8"
+    )
+
+    assert 'href="https://jrps.org/"' in reality_html
+    assert 'href="https://www.myretinatracker.org/"' in reality_html
+    assert 'href="https://jrps.org/）' not in reality_html
+    assert 'href="https://www.myretinatracker.org/）' not in reality_html
+
+    stale_claims = [
+        "期待される短縮効果",
+        "なぜ1-2年短縮",
+        "あなたの行動が1-2年の差を生む",
+        "2028-2031年の承認は現実的",
+    ]
+    combined = reality_html + "\n" + reality_md
+    for claim in stale_claims:
+        assert claim not in combined, f"{claim} remains"
+
+
+def test_pr95_review_accessibility_and_link_risks_fixed():
+    """テーブルARIA、コピーライト年、神戸URLのリンク切れリスクを確認"""
+    checked_public = [
+        Path("docs/public/index.html"),
+        Path("docs/public/japan_action_guide.html"),
+        Path("docs/public/report.html"),
+        Path("docs/public/accessible_summary.html"),
+    ]
+    combined_public = "\n".join(
+        path.read_text(encoding="utf-8") for path in checked_public
+    )
+
+    assert "www.kobe-eye-center.jp" not in combined_public
+    assert "© 2025" not in Path("docs/public/index.html").read_text(encoding="utf-8")
+    updates_path = Path("docs/public/updates.html")
+    if updates_path.exists():
+        assert "© 2025" not in updates_path.read_text(encoding="utf-8")
+
+    from bs4 import BeautifulSoup
+
+    for html_file in [
+        Path("docs/public/index.html"),
+        Path("docs/public/japan_action_guide.html"),
+        Path("docs/public/report.html"),
+    ]:
+        content = html_file.read_text(encoding="utf-8")
+        soup = BeautifulSoup(content, "html.parser")
+        for table in soup.find_all("table"):
+            assert table.get("aria-label") or table.find("caption"), (
+                f"table missing accessible label in {html_file}"
+            )

@@ -447,7 +447,7 @@ def generate_html(kb, last_check):
         </main>
 
         <footer>
-            <p>&copy; 2025 網膜色素変性症治療予測プロジェクト |
+            <p>&copy; {datetime.now().year} 網膜色素変性症治療予測プロジェクト |
             <a href="disclaimer.html">免責事項</a> |
             <a href="https://github.com/oh-yeah-sea-kit2/retina-roadmap/issues" target="_blank" rel="noopener noreferrer">フィードバック</a>
             </p>
@@ -500,7 +500,7 @@ def generate_html(kb, last_check):
 </body>
 </html>"""
 
-    return html
+    return "\n".join(line.rstrip() for line in html.splitlines()) + "\n"
 
 
 def main():
